@@ -1,0 +1,40 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Conferences
+description: Browse recorded talks from established C++ conferences
+search_category: conferences
+layout: rail
+randomize: true
+cards:
+- type: channel_card
+  title: CppCon
+  channel_type: conference
+  channel_id: UCMlGfpWw-RUdWX_JbLCukXg
+- type: channel_card
+  title: C++Now
+  channel_type: conference
+  channel_id: UC5e__RG9K3cHrPotPABnrwg
+- type: channel_card
+  title: Meeting C++
+  channel_type: conference
+  channel_id: UCJpMLydEYA08vusDkq3FmjQ
+- type: channel_card
+  title: ACCU Conference
+  channel_type: conference
+  channel_id: UCJhay24LTpO1s4bIZxuIqKw
+- type: channel_card
+  title: C++ on Sea
+  channel_type: conference
+  channel_id: UCAczr0j6ZuiVaiGFZ4qxApw
+- type: channel_card
+  title: CppNorth
+  channel_type: conference
+  channel_id: UCGWAlXciy785Iog-X7247Hw
+- type: channel_card
+  title: C++Online
+  channel_type: conference
+  channel_id: UC9KMtRSOkJVCYwvm8TZipog
+- type: channel_card
+  title: Core C++
+  channel_type: conference
+  channel_id: UCE14XYFaK1fDTnOTqlOFrrQ

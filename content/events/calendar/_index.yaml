@@ -1,0 +1,6 @@
+$schema: ../../../schemas/pages/event-calendar.json
+title: C++ event calendar
+description: Dated conferences, meetups, and ISO C++ committee meetings from verified organizer sources.
+feed_url: https://cpp.social/events/calendar.ics
+events: !import '../events.yaml'
+imported_events: !import '../../../data/events-imported.yaml'

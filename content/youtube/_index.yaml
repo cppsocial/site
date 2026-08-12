@@ -1,0 +1,27 @@
+$schema: ../../schemas/pages/youtube.json
+title: YouTube
+description: Browse C++ creators, educators and conference archives
+provenance: !import '../../data/youtube/provenance.yaml'
+searchable: true
+search_placeholder: Search videos and channels...
+advanced_search: true
+search_fields:
+  title: Title
+  content: Description
+  source: Channel
+  tags: Tag
+search_categories:
+  videos: Latest videos
+  creators: Creators and educators
+  organizations: Organizations and shows
+  conferences: Conferences
+search_date_range: true
+search_relevance_filter: false
+cpp_relevance_threshold: 0.5
+channel_metadata: !import '../../data/youtube/channel-metadata.yaml'
+video_cache: !import '../../data/youtube/video-cache.yaml'
+latest_rows: 1
+body:
+  - !import 'channels.yaml'
+  - !import 'organizations.yaml'
+  - !import 'conferences.yaml'

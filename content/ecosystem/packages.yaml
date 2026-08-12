@@ -1,0 +1,85 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Package Managers
+description: Tools for managing C++ libraries and dependencies
+cards:
+- type: card
+  title: vcpkg
+  path: https://github.com/microsoft/vcpkg
+  description: Cross-platform source package manager with curated ports and strong CMake and Visual Studio integration.
+  metadata: {License: MIT}
+  links:
+  - {label: Documentation, path: https://learn.microsoft.com/en-us/vcpkg/}
+  - {label: Issues, path: https://github.com/microsoft/vcpkg/issues}
+  - {label: Source, path: https://github.com/microsoft/vcpkg}
+- type: card
+  title: Conan
+  path: https://conan.io/
+  icon: https://cdn.simpleicons.org/conan
+  description: Distributed binary package manager with lockfiles, profiles, private remotes, and broad build-system integration.
+  metadata: {License: MIT}
+  links:
+  - {label: Documentation, path: https://docs.conan.io/2/}
+  - {label: Issues, path: https://github.com/conan-io/conan/issues}
+  - {label: Source, path: https://github.com/conan-io/conan}
+- type: card
+  title: Meson
+  path: https://mesonbuild.com/
+  description: Build system whose Wrap dependency mechanism can consume subprojects and the WrapDB package catalog.
+  metadata: {License: Apache-2.0}
+  links:
+  - {label: Wrap guide, path: https://mesonbuild.com/Wrap-dependency-system-manual.html}
+  - {label: WrapDB, path: https://wrapdb.mesonbuild.com/}
+- type: card
+  title: C++ Package Manager (CPM)
+  path: https://github.com/cpm-cmake/cpm.cmake
+  icon: https://cdn.simpleicons.org/cmake
+  description: Small CMake module that fetches source dependencies with version pins and little project setup.
+  metadata: {License: MIT}
+  links:
+  - {label: Documentation, path: https://github.com/cpm-cmake/CPM.cmake#readme}
+  - {label: Issues, path: https://github.com/cpm-cmake/CPM.cmake/issues}
+  - {label: Source, path: https://github.com/cpm-cmake/CPM.cmake}
+- type: card
+  title: Hunter
+  path: https://hunter.readthedocs.io/
+  description: CMake-driven, cross-platform source package manager for C and C++ projects.
+  metadata: {License: BSD-2-Clause}
+  links:
+  - {label: Documentation, path: https://hunter.readthedocs.io/en/latest/}
+  - {label: Issues, path: https://github.com/cpp-pm/hunter/issues}
+  - {label: Source, path: https://github.com/cpp-pm/hunter}
+- type: card
+  title: Spack
+  path: https://spack.io/
+  description: Source and binary package manager built for HPC, combinatorial versioning, variants, and multiple compiler toolchains.
+  metadata: {License: Apache-2.0 or MIT}
+  links:
+  - {label: Documentation, path: https://spack.readthedocs.io/}
+  - {label: Packages, path: https://packages.spack.io/}
+  - {label: Issues, path: https://github.com/spack/spack/issues}
+  - {label: Source, path: https://github.com/spack/spack}
+- type: card
+  title: build2
+  path: https://cppget.org/
+  description: The build2 toolchain uses bpkg to consume packages; cppget.org is its central public package repository and registry.
+  metadata: {License: MIT}
+  links:
+  - {label: Package manager documentation, path: https://build2.org/bpkg/doc/bpkg.xhtml}
+  - {label: Toolchain source, path: https://github.com/build2}
+- type: card
+  title: Bazel
+  path: https://bazel.build/
+  description: Build system whose Bzlmod module system resolves external dependencies through registries such as the Bazel Central Registry.
+  metadata: {License: Apache-2.0}
+  links:
+  - {label: Packages, path: https://registry.bazel.build/}
+  - {label: Bzlmod documentation, path: https://bazel.build/external/overview}
+  - {label: Source, path: https://github.com/bazelbuild/bazel}
+- type: card
+  title: Xmake Packages
+  path: https://packages.xmake.io/
+  description: Package index used by Xmake's built-in package-management workflow.
+  links:
+  - {label: Package management documentation, path: https://xmake.io/#/package/remote_package}
+  - {label: Package recipes, path: https://github.com/xmake-io/xmake-repo}

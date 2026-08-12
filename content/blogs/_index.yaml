@@ -1,0 +1,21 @@
+$schema: ../../schemas/blogs/index.json
+title: Blogs
+description: Articles by renowned C++ experts and community voices
+provenance: !import '../../data/blogs/provenance.yaml'
+search_placeholder: Search blogs...
+advanced_search: true
+search_fields:
+  title: Title
+  content: Content
+  source: Blog
+  tags: Tag
+search_categories:
+  posts: Latest posts
+  blogs: Blog sources
+search_date_range: true
+search_relevance_filter: false
+cpp_relevance_threshold: 0.5
+sources: !import 'sources.yaml'
+blog_metadata: !import '../../data/blogs/metadata.yaml'
+post_cache: !import '../../data/blogs/post-cache.yaml'
+latest_rows: 1

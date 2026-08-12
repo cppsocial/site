@@ -1,0 +1,54 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: C++ guides & FAQs
+description: All sorts of resources to improve your code
+search_category: guides
+cards:
+  - type: card
+    title: C++ Patterns
+    path: https://cpppatterns.com/
+    description: Small modern C++ examples organized by pattern and language facility
+  - type: card
+    title: More C++ Idioms
+    path: https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms
+    description: A community-maintained catalog of established C++ idioms
+  - type: card
+    title: Microsoft modern C++ guide
+    path: https://learn.microsoft.com/en-us/cpp/cpp/welcome-back-to-cpp-modern-cpp
+    description: An overview of modern C++ language and library practices
+  - type: card
+    title: C++ Core Guidelines
+    path: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+    description: A living set of guidelines for modern, safe, and maintainable C++
+  - type: card
+    title: C++ Super-FAQ
+    path: https://isocpp.org/faq
+    description: The Standard C++ Foundation's consolidated answers to frequently asked questions
+  - type: card
+    title: C++ FAQ
+    path: https://www.parashift.com/c%2B%2B-faq/
+    description: The original Marshall Cline C++ FAQ
+  - type: card
+    title: Bjarne Stroustrup's C++ FAQ
+    path: https://www.stroustrup.com/bs_faq.html
+    description: Answers about C++ design, history, usage, and common misconceptions from its creator
+  - type: card
+    title: LearnCpp
+    path: https://www.learncpp.com/
+    description: Comprehensive, regularly updated tutorial covering C++ from fundamentals through modern language features and best practices
+  - type: card
+    title: Abseil C++ Tips of the Week
+    path: https://abseil.io/tips/
+    description: In-depth guidance from Google's C++ engineers on language subtleties, API design, readability, and modern C++ practices
+  - type: card
+    title: SEI CERT C++ Coding Standard
+    path: https://wiki.sei.cmu.edu/confluence/display/cplusplus/
+    description: Security-focused C++ coding rules with noncompliant examples, compliant solutions, and risk assessments
+  - type: card
+    title: C++ Best Practices
+    path: https://cppbestpractices.com/
+    description: Collaborative collection of practical recommendations for C++ code quality, tooling, safety, APIs, and project configuration
+  - type: card
+    title: Google C++ Style Guide
+    path: https://google.github.io/styleguide/cppguide.html
+    description: Google's detailed conventions and engineering guidelines for maintaining large C++ codebases

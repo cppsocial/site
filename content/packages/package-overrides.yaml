@@ -1,0 +1,16 @@
+$schema: ../../schemas/packages/overrides.json
+groups:
+  - id: nlohmann-json
+    name: nlohmann-json
+    reason: Historical package names distribute the same upstream project.
+    aliases:
+      - json
+      - jsonformoderncpp
+      - nlohmann_json
+    packages:
+      - conan:nlohmann_json
+      - conan:jsonformoderncpp
+      - meson:nlohmann_json
+      - meson:json
+      - spack:nlohmann-json
+      - vcpkg:nlohmann-json

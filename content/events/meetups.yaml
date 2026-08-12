@@ -1,0 +1,17 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: User Groups
+description: Local user groups and meetups
+randomize: true
+cards:
+- type: card
+  title: Munich C++ Meetup
+  path: https://www.meetup.com/MUCplusplus/
+  description: Regular meetup for C++ developers in Munich
+  metadata:
+    Location: Munich, Germany
+  links:
+  - label: RSS feed
+    path: https://www.meetup.com/MUCplusplus/events/rss/
+  - label: Calendar
+    path: https://www.meetup.com/MUCplusplus/events/ical/

@@ -1,0 +1,135 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: C++ Compilers and Toolchains
+description: Popular C++ compilers, compiler front ends, and toolchains across desktop, embedded and WebAssembly targets
+cards:
+- type: card
+  title: GCC
+  path: https://gcc.gnu.org/
+  icon: https://cdn.simpleicons.org/gnu
+  description: Mature open-source compiler collection with broad architecture and operating-system support and the libstdc++ C++ standard library.
+  metadata: {License: "GPL-3.0-or-later; runtime libraries use the GCC Runtime Library Exception", Targets: "Many architectures and operating systems"}
+  links:
+  - {label: Documentation, path: https://gcc.gnu.org/onlinedocs/}
+  - {label: Bugs, path: https://gcc.gnu.org/bugzilla/}
+  - {label: Source, path: https://gcc.gnu.org/git.html}
+- type: card
+  title: Clang
+  path: https://clang.llvm.org/
+  icon: https://cdn.simpleicons.org/llvm
+  description: LLVM's modular C-family compiler, known for diagnostics, tooling libraries, sanitizers, and broad cross-platform support.
+  metadata: {License: "Apache-2.0 WITH LLVM-exception", Targets: "Linux · macOS · Windows · many others"}
+  links:
+  - {label: Documentation, path: https://clang.llvm.org/docs/}
+  - {label: Issues, path: https://github.com/llvm/llvm-project/issues}
+  - {label: Source, path: https://github.com/llvm/llvm-project/tree/main/clang}
+- type: card
+  title: MSVC
+  path: https://visualstudio.microsoft.com/vs/features/cplusplus/
+  description: Microsoft's production C++ toolchain for Windows, integrated with Visual Studio and also available as standalone Build Tools.
+  metadata: {License: Proprietary, Targets: "Windows (x86, x64, Arm64)"}
+  links:
+  - {label: Documentation, path: https://learn.microsoft.com/en-us/cpp/}
+  - {label: Issues, path: https://developercommunity.visualstudio.com/cpp}
+  - {label: Conformance, path: https://learn.microsoft.com/en-us/cpp/overview/visual-cpp-language-conformance}
+- type: card
+  title: Intel oneAPI DPC++/C++ Compiler
+  path: https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html
+  description: LLVM-based C++ compiler with SYCL and OpenMP offload support, optimized for Intel CPUs and GPUs.
+  metadata: {License: "Intel software EULA", Targets: "Linux · Windows; x86-64 CPUs · Intel GPUs"}
+  links:
+  - {label: Documentation, path: https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler-documentation.html}
+  - {label: Release notes, path: https://www.intel.com/content/www/us/en/developer/articles/release-notes/oneapi-dpcpp/2026.html}
+- type: card
+  title: Embarcadero C++Builder
+  path: https://www.embarcadero.com/products/cbuilder
+  description: Windows C++ IDE and toolchain whose recommended modern Win64 compiler is based on Clang/LLVM.
+  metadata: {License: Proprietary, Targets: "Windows"}
+  links:
+  - {label: Compiler documentation, path: https://docwiki.embarcadero.com/RADStudio/Florence/en/Clang-enhanced_C%2B%2B_Compilers}
+  - {label: Modern Win64 compiler, path: https://docwiki.embarcadero.com/RADStudio/Florence/en/BCC64X}
+- type: card
+  title: MinGW-w64
+  path: https://mingw-w64.org/
+  description: Windows development environment providing Win32 headers, import libraries, and runtime components used by GCC and LLVM toolchains.
+  metadata: {License: "Multiple open-source licenses", Targets: "Windows x86 · x64 · ARM64"}
+  links:
+  - {label: Getting started with MSYS2, path: https://www.mingw-w64.org/getting-started/msys2/}
+  - {label: Bugs, path: https://sourceforge.net/p/mingw-w64/bugs/}
+  - {label: Source, path: https://www.mingw-w64.org/source/}
+- type: card
+  title: Emscripten
+  path: https://emscripten.org/
+  icon: https://cdn.simpleicons.org/webassembly
+  description: LLVM-based toolchain that compiles C and C++ to WebAssembly for the web, Node.js, and standalone WebAssembly environments.
+  metadata: {License: "MIT OR NCSA", Targets: "WebAssembly"}
+  links:
+  - {label: Documentation, path: https://emscripten.org/docs/}
+  - {label: Issues, path: https://github.com/emscripten-core/emscripten/issues}
+  - {label: Source, path: https://github.com/emscripten-core/emscripten}
+  - {label: License, path: https://emscripten.org/docs/introducing_emscripten/emscripten_license.html}
+- type: card
+  title: clang-cl
+  path: https://clang.llvm.org/docs/UsersManual.html#clang-cl
+  description: MSVC-compatible command-line interface to Clang, designed to accept cl.exe-style options and integrate with Visual Studio and MSBuild toolchains.
+  metadata: {License: "Apache-2.0 WITH LLVM-exception", Targets: "Windows / MSVC-compatible environments"}
+  links:
+  - {label: User manual, path: https://clang.llvm.org/docs/UsersManual.html#clang-cl}
+  - {label: MSVC compatibility, path: https://clang.llvm.org/docs/MSVCCompatibility.html}
+- type: card
+  title: Apple Clang
+  path: https://developer.apple.com/xcode/cpp/
+  description: Apple's Clang-based C++ compiler included with Xcode, paired with libc++ and regularly updated for Apple platforms.
+  metadata: {Targets: "Apple platforms"}
+  links:
+  - {label: C++ language support, path: https://developer.apple.com/xcode/cpp/}
+  - {label: Xcode, path: https://developer.apple.com/xcode/}
+- type: card
+  title: EDG C++ Front End
+  path: https://www.edg.com/c
+  description: Commercial, configurable C and C++ compiler front end intended for integration into compilers, source-analysis tools, and other language-processing products.
+  metadata: {License: Commercial, Targets: "Configurable host and target environments"}
+  links:
+  - {label: Language support, path: https://www.edg.com/c/features}
+- type: card
+  title: Green Hills C/C++ Compiler
+  path: https://www.ghs.com/products/compiler.html
+  description: Commercial optimizing C/C++ compiler family for embedded and real-time systems, with support for a wide range of processor architectures.
+  metadata: {License: Commercial, Targets: "Arm · RISC-V · Power Architecture · x86/x64 · RH850 · TriCore · MIPS · 68K/ColdFire"}
+  links:
+  - {label: Compiler overview, path: https://www.ghs.com/products/compiler.html}
+  - {label: MULTI IDE, path: https://www.ghs.com/products/MULTI_IDE.html}
+- type: card
+  title: nvcc (NVIDIA CUDA Compiler)
+  path: https://developer.nvidia.com/cuda-toolkit
+  icon: https://cdn.simpleicons.org/nvidia
+  description: CUDA compiler driver that separates GPU device code from host C++ code, invokes NVIDIA's device compiler, and coordinates a supported host compiler.
+  metadata: {License: "NVIDIA CUDA Toolkit EULA", Targets: "NVIDIA GPUs"}
+  links:
+  - {label: nvcc documentation, path: https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/}
+  - {label: CUDA C++ Programming Guide, path: https://docs.nvidia.com/cuda/cuda-programming-guide/}
+  - {label: License, path: https://docs.nvidia.com/cuda/eula/index.html}
+- type: card
+  title: AMD Optimizing C/C++ Compiler (AOCC)
+  path: https://www.amd.com/en/developer/aocc.html
+  description: LLVM/Clang-based optimizing C and C++ compiler for x86 targets, with optimizations focused on AMD Zen processors.
+  metadata: {Targets: "Linux · x86/x86-64"}
+  links:
+  - {label: Documentation, path: https://docs.amd.com/r/en-US/57222-AOCC-user-guide/Introduction}
+  - {label: Release notes, path: https://docs.amd.com/r/en-US/63854-AOCC-release-notes}
+- type: card
+  title: IAR C/C++ Compiler
+  path: https://www.iar.com/embedded-development-tools/iar-embedded-workbench
+  description: Commercial optimizing C/C++ compiler family for embedded development, integrated with IAR Embedded Workbench and Build Tools.
+  metadata: {Targets: "Arm · RISC-V · AVR · MSP430 · Renesas · others"}
+  links:
+  - {label: Build Tools, path: https://www.iar.com/embedded-development-tools/iar-build-tools}
+- type: card
+  title: NVC++ (NVIDIA HPC SDK)
+  path: https://docs.nvidia.com/hpc-sdk/
+  icon: https://cdn.simpleicons.org/nvidia
+  description: NVIDIA HPC C++ compiler supporting multicore CPUs and NVIDIA GPUs through standard C++ parallelism, OpenACC, and OpenMP.
+  metadata: {Targets: "Linux x86-64 · Arm Server · NVIDIA GPUs"}
+  links:
+  - {label: User guide, path: https://docs.nvidia.com/hpc-sdk/compilers/hpc-compilers-user-guide/}
+  - {label: Reference, path: https://docs.nvidia.com/hpc-sdk/compilers/hpc-compilers-ref-guide/}

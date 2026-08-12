@@ -1,0 +1,32 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Creators and educators
+description: Follow channels publishing tutorials, courses, code reviews and practical C++ guidance.
+search_category: creators
+layout: rail
+randomize: true
+cards:
+- type: channel_card
+  title: C++ Weekly
+  channel_type: creator
+  channel_id: UCxHAlbZQNFU2LgEtiqd2Maw
+- type: channel_card
+  title: The Cherno
+  channel_type: creator
+  channel_id: UCQ-W1KE9EYfdxhL6S4twUNw
+- type: channel_card
+  title: CodeVault
+  channel_type: creator
+  channel_id: UC6qj_bPq6tQ6hLwOBpBQ42Q
+- type: channel_card
+  title: Andreas Fertig
+  channel_type: creator
+  channel_id: UCxJfIsPGHFS3_nRDv1u-Q8g
+- type: channel_card
+  title: OneLoneCoder
+  channel_type: creator
+  channel_id: UC-yuWVUplUJZvieEligKBkA
+- type: channel_card
+  title: Mike Shah
+  channel_type: creator
+  channel_id: UCA64pZbN5Mz5NxC3SO4qpDg

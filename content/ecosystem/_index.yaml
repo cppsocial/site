@@ -1,0 +1,10 @@
+$schema: ../../schemas/pages/page.json
+title: Ecosystem
+description: Resources for the vast ecosystem behind C++
+searchable: true
+search_placeholder: Search ecosystem...
+body:
+  - !import 'compilers.yaml'
+  - !import 'libraries.yaml'
+  - !import 'packages.yaml'
+  - !import 'builds.yaml'

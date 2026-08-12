@@ -1,0 +1,92 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Standard Libraries
+description: Implementations of the C++ standard library and notable alternatives
+cards:
+- type: card
+  title: libstdc++
+  path: https://gcc.gnu.org/onlinedocs/libstdc++/
+  icon: https://cdn.simpleicons.org/gnu
+  description: GNU's standard-library implementation, normally paired with GCC and also usable with Clang
+  metadata: {License: GPLv3 with GCC Runtime Library Exception 3.1, Paired with: GCC}
+  links:
+  - {label: Documentation, path: https://gcc.gnu.org/onlinedocs/libstdc++/manual/}
+  - {label: Bugs, path: https://gcc.gnu.org/bugzilla/}
+  - {label: Source, path: "https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libstdc++-v3"}
+- type: card
+  title: LLVM libc++
+  path: https://libcxx.llvm.org/
+  icon: https://cdn.simpleicons.org/llvm
+  description: LLVM's portable C++ standard-library implementation, commonly paired with Clang
+  metadata: {License: Apache-2.0 with LLVM exception, Paired with: Clang}
+  links:
+  - {label: Documentation, path: https://libcxx.llvm.org/}
+  - {label: Issues, path: https://github.com/llvm/llvm-project/issues}
+  - {label: Source, path: https://github.com/llvm/llvm-project/tree/main/libcxx}
+- type: card
+  title: Microsoft STL
+  path: https://learn.microsoft.com/en-us/cpp/standard-library/cpp-standard-library-overview
+  description: Microsoft's open-source standard-library implementation shipped with the MSVC toolchain
+  metadata: {License: Apache-2.0 with LLVM exception, Paired with: MSVC}
+  links:
+  - {label: Documentation, path: https://learn.microsoft.com/en-us/cpp/standard-library/}
+  - {label: Issues, path: https://github.com/microsoft/STL/issues}
+  - {label: Source, path: https://github.com/microsoft/STL}
+- type: card
+  title: Apache C++ Standard Library (STDCXX)
+  path: https://attic.apache.org/projects/stdcxx.html
+  description: Retired open-source C++ standard library implementation from the Apache Software Foundation
+  metadata: {License: Apache-2.0, Status: Retired}
+  links:
+  - {label: Archived Website, path: https://stdcxx.apache.org/}
+  - {label: Source, path: https://svn.apache.org/repos/asf/stdcxx/trunk/}
+  - {label: Issues, path: https://issues.apache.org/jira/projects/STDCXX}
+- type: card
+  title: EASTL
+  path: https://github.com/electronicarts/EASTL
+  icon: https://media.contentapi.ea.com/content/dam/eacom/common/medallion-violet.png
+  description: EASTL stands for Electronic Arts Standard Template Library. It is an extensive and robust implementation that has an emphasis on high performance.
+  metadata: {License: BSD-3-Clause}
+  links:
+  - {label: Documentation, path: https://github.com/electronicarts/EASTL/tree/master/doc}
+  - {label: Issues, path: https://github.com/electronicarts/EASTL/issues}
+  - {label: Source, path: https://github.com/electronicarts/EASTL}
+- type: card
+  title: NVIDIA libcu++
+  path: https://nvidia.github.io/cccl/unstable/libcudacxx/
+  icon: https://cdn.simpleicons.org/nvidia
+  description: CUDA C++ standard-library implementation providing standard-library facilities for both host and device code, together with CUDA-specific extensions.
+  metadata: {License: Apache-2.0 WITH LLVM-exception}
+  links:
+  - {label: Documentation, path: https://nvidia.github.io/cccl/unstable/libcudacxx/}
+  - {label: Issues, path: https://github.com/NVIDIA/cccl/issues}
+  - {label: Source, path: https://github.com/NVIDIA/cccl/tree/main/libcudacxx}
+- type: card
+  title: Embedded Template Library (ETL)
+  path: https://www.etlcpp.com/
+  description: STL-like library for embedded systems with fixed-capacity containers, deterministic memory use, and backports of selected newer standard-library facilities.
+  metadata: {License: MIT}
+  links:
+  - {label: Documentation, path: https://www.etlcpp.com/docs/}
+  - {label: Issues, path: https://github.com/ETLCPP/etl/issues}
+  - {label: Source, path: https://github.com/ETLCPP/etl}
+
+- type: card
+  title: HPX
+  path: https://docs.hpx.dev/
+  description: Standards-oriented C++ library and runtime for concurrency and parallelism, implementing standard facilities alongside extensions for asynchronous and distributed execution.
+  metadata: {License: BSL-1.0}
+  links:
+  - {label: Documentation, path: https://docs.hpx.dev/}
+  - {label: Issues, path: https://github.com/TheHPXProject/hpx/issues}
+  - {label: Source, path: https://github.com/TheHPXProject/hpx}
+
+- type: card
+  title: oneAPI DPC++ Library (oneDPL)
+  path: https://uxlfoundation.github.io/oneDPL/index.html
+  description: Parallel-library implementation providing execution policies, parallel algorithms, iterators, and SYCL-oriented extensions for heterogeneous C++ applications.
+  metadata: {License: Apache-2.0 WITH LLVM-exception}
+  links:
+  - {label: Documentation, path: https://uxlfoundation.github.io/oneDPL/index.html}
+  - {label: Issues, path: https://github.com/uxlfoundation/oneDPL/issues}
+  - {label: Source, path: https://github.com/uxlfoundation/oneDPL}

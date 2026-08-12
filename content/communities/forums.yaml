@@ -1,0 +1,48 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Forums and Q&A
+description: Searchable, asynchronous discussions and answers
+randomize: true
+cards:
+  - type: community_card
+    community_id: reddit-cpp
+    title: r/cpp
+    platform: reddit
+    path: https://www.reddit.com/r/cpp/
+    description: C++ news, articles, proposals, and technical discussion.
+    metadata: {source: reddit, key: cpp}
+  - type: community_card
+    community_id: reddit-cpp-questions
+    title: r/cpp_questions
+    platform: reddit
+    path: https://www.reddit.com/r/cpp_questions/
+    description: Questions and answers for C++ programmers at all experience levels.
+    metadata: {source: reddit, key: cpp_questions}
+  - type: community_card
+    community_id: reddit-cplusplus
+    title: r/Cplusplus
+    platform: reddit
+    path: https://www.reddit.com/r/Cplusplus/
+    description: General C++ discussion, projects, and programming questions.
+    metadata: {source: reddit, key: Cplusplus}
+  - type: community_card
+    community_id: stack-overflow-cpp
+    title: Stack Overflow — C++
+    platform: forum
+    path: https://stackoverflow.com/questions/tagged/c%2b%2b
+    description: Technical questions and answers carrying the C++ tag.
+    metadata: {source: stackoverflow, key: c%2B%2B}
+  - type: community_card
+    community_id: llvm-discourse
+    title: LLVM Discourse
+    platform: forum
+    path: https://discourse.llvm.org/
+    description: Public design discussions, questions, RFCs, and project announcements for LLVM and Clang.
+    metadata: {source: web, key: https://discourse.llvm.org/}
+  - type: community_card
+    community_id: cplusplus-forum
+    title: cplusplus.com Forum
+    platform: forum
+    path: https://cplusplus.com/forum/
+    description: A traditional forum with beginner, general, Windows, and Unix C++ sections.
+    metadata: {source: web, key: https://cplusplus.com/forum/}

@@ -1,0 +1,22 @@
+$schema: ../../schemas/pages/resources.json
+title: Resources
+description: References, guides, and books for learning and working with C++.
+provenance: !import '../../data/books/provenance.yaml'
+searchable: true
+search_placeholder: Search resources...
+advanced_search: true
+search_fields:
+  title: Title
+  content: Description
+  source: Author
+  tags: Subject or tag
+  metadata: Metadata
+search_categories:
+  references: General resources
+  guides: C++ guides, FAQs and more
+  books: Books
+book_metadata: !import '../../data/books/metadata.yaml'
+body:
+  - !import 'general.yaml'
+  - !import 'guides.yaml'
+  - !import 'books.yaml'

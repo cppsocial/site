@@ -1,0 +1,10 @@
+$schema: ../../schemas/pages/communities.json
+title: Communities
+description: Connect with C++ communities around the world
+provenance: !import '../../data/communities/provenance.yaml'
+searchable: true
+search_placeholder: Search communities...
+community_metadata: !import '../../data/communities/metadata.yaml'
+body:
+  - !import 'im.yaml'
+  - !import 'forums.yaml'

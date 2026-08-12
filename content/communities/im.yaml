@@ -1,0 +1,50 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Instant messaging and chat
+description: Real-time conversation, questions, and community coordination
+randomize: true
+cards:
+  - type: community_card
+    community_id: better-cpp
+    title: Better C++
+    platform: discord
+    description: A welcoming C++ community for all skill levels - ask questions, share knowledge, and discuss everything C++.
+    path: https://discord.gg/YWfdM2tctt
+    metadata: {source: discord, key: YWfdM2tctt}
+  - type: community_card
+    community_id: cpp-discord
+    title: C++
+    platform: discord
+    path: https://discord.gg/uxuWKB2aNe
+    metadata: {source: discord, key: uxuWKB2aNe}
+  - type: community_card
+    community_id: include-cpp
+    title: "#include <C++>"
+    platform: discord
+    path: https://discord.gg/vSYgpmPrra
+    metadata: {source: discord, key: vSYgpmPrra}
+  - type: community_card
+    community_id: llvm-discord
+    title: LLVM Discord
+    platform: discord
+    path: https://discord.gg/2kQU7PCuys
+    metadata: {source: discord, key: 2kQU7PCuys}
+  - type: community_card
+    community_id: cpplang-slack
+    title: C++ Language Slack
+    platform: slack
+    path: https://cppalliance.org/slack/
+    description: A large multi-channel C++ workspace operated by the C++ Alliance.
+    metadata: {source: web, key: https://cppalliance.org/slack/}
+  - type: community_card
+    community_id: libera-cpp
+    title: "#c++ on Libera.Chat"
+    platform: irc
+    path: https://web.libera.chat/#c++
+    description: A long-running IRC channel for C++ discussion and help.
+    metadata: {source: web, key: https://libera.chat/}
+    links:
+      - label: Open web chat
+        path: https://web.libera.chat/#c++
+      - label: Connection guide
+        path: https://libera.chat/guides/connect

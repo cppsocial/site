@@ -1,0 +1,6 @@
+# Durable human corrections applied after ingest and before generated data is written.
+# Use the stable post/video ID as the key. Set hidden: true to suppress an item.
+# Supported blog fields: title, source_title, published, updated, description, tags.
+# Supported video fields: title, published, updated, description, thumbnail_url, tags.
+blog_posts: {}
+youtube_videos: {}

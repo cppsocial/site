@@ -2,7 +2,7 @@ $schema: ../../schemas/pages/events.json
 title: Events
 description: Find upcoming C++ conferences, meetups, committee meetings, and online events.
 searchable: true
-search_placeholder: Search events by name, location, format, or organizer
+search_placeholder: Search events...
 calendar_url: /events/calendar/
 feed_url: https://cpp.social/events/calendar.ics
 upcoming_count: 3

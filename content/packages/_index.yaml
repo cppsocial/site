@@ -1,6 +1,7 @@
 $schema: ../../schemas/pages/packages.json
 title: Packages & Libraries
 description: Search C++ packages across several package managers
+search_placeholder: Search packages...
 search_managers:
   conan: Conan
   vcpkg: vcpkg

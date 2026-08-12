@@ -2,7 +2,7 @@ $schema: ../../schemas/pages/page.json
 title: Standardization
 description: Search C++ standardization resources, ABI references, and related standards.
 searchable: true
-search_placeholder: Search standardization cards...
+search_placeholder: Search resources...
 advanced_search: true
 search_categories:
   resources: Resources

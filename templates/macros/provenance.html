@@ -1,0 +1,23 @@
+{% macro source_note(entry, label="Source information") %}
+{% if entry %}
+<details class="source-note">
+  <summary>{{ label }}</summary>
+  <div class="source-note__popover">
+    <p>Some of the information on this page is retrieved automatically from external sources:</p>
+    <ul>
+      {% if entry.get('source_urls') %}
+      {% for url in entry.get('source_urls') %}
+      <li><a href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ url }}</a></li>
+      {% endfor %}
+      {% else %}
+      {{ caller() }}
+      {% endif %}
+    </ul>
+    {% if entry.get('retrieved_at') %}
+    <br/>
+    <p>Retrieved at <time datetime="{{ entry.get('retrieved_at') }}">{{entry.get('retrieved_at') }}</time></p>
+    {% endif %}
+  </div>
+</details>
+{% endif %}
+{% endmacro %}

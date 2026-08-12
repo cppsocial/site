@@ -1,0 +1,25 @@
+<section class="standards" aria-labelledby="standards-title"{% if page.get('hide_non_cards_while_searching', false) %} data-search-context-hide{% endif %}>
+  <header class="standards__header">
+    <h2 id="standards-title">{{ this.title }}</h2>
+    {% if this.description %}<p>{{ this.description }}</p>{% endif %}
+  </header>
+  <ol class="standards__timeline">
+    {% for standard in this.standards %}
+      <li class="standard-release{% if loop.first %} standard-release--current{% endif %}">
+        <div class="standard-release__marker"><span>{{ standard.publication }}</span></div>
+        <article>
+          <header class="standard-release__heading">
+            <div><span class="standard-release__status">{{ standard.status }}</span><h3>{{ standard.title }}</h3></div>
+            <nav aria-label="{{ standard.title }} references">
+              <a href="{{ standard.cppstat }}">Features</a>
+              <a href="{{ standard.draft_pdf }}">{{ standard.draft_name }} PDF</a>
+              {% if standard.draft_html %}<a href="{{ standard.draft_html }}">HTML</a>{% endif %}
+            </nav>
+          </header>
+          <p>{{ standard.description }}</p>
+          {% if standard.features %}<ul class="standard-release__features">{% for feature in standard.features %}<li>{{ feature }}</li>{% endfor %}</ul>{% endif %}
+        </article>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    @media (prefers-color-scheme: dark) { path { fill: #66b3ff; } }
+  </style>
+  <!-- <path
+    fill="#0066cc"
+    d="M48.1 13.9A27 27 0 1 0 48.1 50.1L41.4 44A18 18 0 1 1 41.4 20ZM36 25h5v5h4v5h-4v5h-5v-5h-4v-5h4Zm16 0h5v5h4v5h-4v5h-5v-5h-4v-5h4Z"
+  /> -->
+
+  <path
+    fill="#0066cc"
+    d="m 47.3 15.4 a 27 27 0 1 0 0 33.2 l -7.1 -5.5 a 18 18 0 1 1 0 -22.2 Z m -13.3 8.1 h 6 v 6 h 6 v 6 h -6 v 6 h -6 v -6 h -6 v -6 h 6 Z m 20 0 h 6 v 6 h 6 v 6 h -6 v 6 h -6 v -6 h -6 v -6 h 6 Z"
+  />
+</svg>

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--directory{% endblock %}
+{% block body %}
+{% set all_events = (this.events + this.imported_events)|sort_events %}
+{% set upcoming = all_events|upcoming_events %}
+<article class="post">
+  {% include "components/directory_header.html" %}
+  <div class="directory-content" data-directory data-empty-message="{{ this.empty_message }}">
+    <section class="event-feature directory-section" data-directory-section data-page-rows="{{ this.upcoming_count }}" data-total="{{ upcoming|length }}">
+      <div class="event-feature__header">
+        <div>
+          <p class="event-feature__eyebrow">Next on the calendar</p>
+          <h2>Upcoming events</h2>
+          <p class="section-description">Confirmed events are selected automatically from the shared calendar.</p>
+        </div>
+        <nav class="calendar-actions" aria-label="Calendar options">
+          <a class="button-link" href="{{ this.calendar_url|url }}">Browse calendar</a>
+          <a class="button-link button-link--secondary" href="{{ this.feed_url }}">Subscribe (.ics)</a>
+          <a class="button-link button-link--secondary" href="https://calendar.google.com/calendar/r?cid=https%3A%2F%2Fcpp.social%2Fevents%2Fcalendar.ics" target="_blank" rel="noopener">Add to Google Calendar</a>
+        </nav>
+      </div>
+      {% if upcoming %}
+      <div data-directory-section-content>
+        <div class="event-stack" data-paged-grid>
+        {% for event in upcoming %}
+          {% set this = event %}
+          {% set paged_events = true %}
+          {% include "blocks/calendar_event.html" %}
+        {% endfor %}
+        </div>
+        <button class="directory-section__more" type="button" data-directory-more>Show more…</button>
+      </div>
+      {% else %}
+      <div class="calendar-empty">
+        <strong>No dated events are currently announced.</strong>
+        <span>Subscribe to the calendar and new entries will appear when organizers publish dates.</span>
+      </div>
+      {% endif %}
+    </section>
+
+    {% include "components/blocks.html" %}
+  </div>
+</article>
+{% endblock %}
+{% block scripts %}<script src="{{ '/static/directory-search.js'|url }}"></script>{% endblock %}

@@ -1,0 +1,31 @@
+{
+  "name": "cpp.social - Development",
+  "image": "python:3.13",
+  "remoteUser": "root",
+  "forwardPorts": [
+    1313
+  ],
+  "portsAttributes": {
+    "1313": {
+      "label": "Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
+        "ms-python.autopep8",
+        "ms-python.mypy-type-checker",
+        "ms-python.isort"
+      ],
+      "settings": {
+        "editor.formatOnSave": false,
+        "files.trimFinalNewlines": false,
+        "files.trimTrailingWhitespace": true
+      }
+    }
+  }
+}

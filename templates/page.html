@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}{% if this.searchable %}main--directory{% else %}main--page{% endif %}{% endblock %}
+{% block body %}
+  <article class="post">
+    {% set page = this %}
+    {% if this.searchable %}
+      {% include "components/directory_header.html" %}
+      <div class="directory-content" data-directory data-empty-message="{{ this.empty_message }}">
+    {% else %}
+      {% include "components/page_header.html" %}
+    {% endif %}
+      {% include "components/blocks.html" %}
+    {% if this.searchable %}</div>{% endif %}
+  </article>
+{% endblock %}
+{% block scripts %}
+  {% if this.searchable %}<script src="{{ '/static/directory-search.js'|url }}"></script>{% endif %}
+{% endblock %}

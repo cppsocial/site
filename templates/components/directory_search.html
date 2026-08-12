@@ -1,0 +1,54 @@
+<div class="directory-search" role="search">
+  <label class="visually-hidden" for="directory-search-input">Search {{ this.title|lower }}</label>
+  <div class="directory-search__row">
+    <svg class="directory-search__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="7"></circle>
+      <path d="m20 20-4-4"></path>
+    </svg>
+    <input
+      id="directory-search-input"
+      class="directory-search__input"
+      type="search"
+      placeholder="{{ this.search_placeholder }}"
+      autocomplete="off"
+      data-directory-input
+    >
+    {% if this.get("advanced_search", false) %}<button class="directory-search__advanced" type="button" data-search-advanced aria-label="Search filters" title="Search filters" aria-expanded="false" aria-haspopup="dialog" aria-controls="directory-search-options"><span aria-hidden="true">⚙︎</span></button>{% endif %}
+    <button class="directory-search__clear" type="button" data-directory-clear aria-label="Clear search" title="Clear search" hidden>×</button>
+  </div>
+  <div class="directory-search__tokens" data-search-tokens hidden></div>
+  {% if this.get("advanced_search", false) %}
+  <div class="directory-search__options" id="directory-search-options" data-search-options role="dialog" aria-label="Search filters" hidden>
+    {% if this.search_fields %}
+    <fieldset class="directory-search__fieldset directory-search__fields">
+      <legend>Search in</legend>
+      {% for value, label in this.search_fields.items() %}{% if value != "all" %}<label><input type="checkbox" value="{{ value }}" data-search-field checked> {{ label }}</label>{% endif %}{% endfor %}
+    </fieldset>
+    {% endif %}
+    {% if this.search_categories %}
+    <fieldset class="directory-search__fieldset directory-search__categories">
+      <legend>Categories</legend>
+      {% for value, label in this.search_categories.items() %}<label><input type="checkbox" value="{{ value }}" data-search-category checked> {{ label }}</label>{% endfor %}
+    </fieldset>
+    {% endif %}
+    {% if this.get("search_managers", {}) %}
+    <fieldset class="directory-search__fieldset directory-search__managers">
+      <legend>Package managers</legend>
+      {% for value, label in this.search_managers.items() %}<button type="button" value="{{ value }}" data-search-manager-choice aria-pressed="false">{{ label }}</button>{% endfor %}
+    </fieldset>
+    {% endif %}
+    {% if this.get("search_date_range", false) %}
+    <fieldset class="directory-search__fieldset directory-search__dates">
+      <legend>Published</legend>
+      <label>From <input type="date" data-search-after></label>
+      <span aria-hidden="true">–</span>
+      <label>Through <input type="date" data-search-before></label>
+    </fieldset>
+    {% endif %}
+    {% if this.get("search_relevance_filter", false) %}
+    <label class="directory-search__unrelated"><input type="checkbox" data-search-include-unrelated> Include possibly unrelated items</label>
+    {% endif %}
+  </div>
+  {% endif %}
+  <span class="directory-search__status" data-directory-status aria-live="polite"></span>
+</div>

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--directory main--resources{% endblock %}
+{% block body %}
+  {% set book_metadata = this.book_metadata %}
+  {% set provenance = this.provenance %}
+  <article class="post resources-catalog">
+    {% include "components/directory_header.html" %}
+    <div class="directory-content" data-directory data-empty-message="{{ this.empty_message }}">
+      {% include "components/blocks.html" %}
+    </div>
+  </article>
+  <dialog class="book-dialog" data-book-dialog aria-labelledby="book-detail-title">
+    <div class="book-dialog__content" data-book-dialog-content></div>
+  </dialog>
+{% endblock %}
+{% block scripts %}
+  <script src="{{ '/static/directory-search.js'|url }}"></script>
+  <script src="{{ '/static/book-dialog.js'|url }}"></script>
+{% endblock %}
+{% block provenance %}
+  {% from "macros/provenance.html" import source_note %}
+  {% call source_note(this.provenance, "External Sources") %}{% endcall %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% from "macros/search.html" import search_values %}
+{% set group = this %}
+<section class="directory-section directory-section--{{ group.layout }}" data-directory-section{% if group.get('randomize', false) %} data-randomize{% endif %}{% if group.get('page_rows', 0) %} data-page-rows="{{ group.page_rows }}" data-total="{{ group.cards|rejectattr('hidden')|list|length }}"{% endif %}{% if group.search_category %} data-search-category="{{ group.search_category }}"{% endif %} {{ search_values([group.title, group.description]) }}>
+<div class="directory-section__header">
+  <h2>{{ group.title }}</h2>
+  {% if group.description %}<p class="section-description">{{ group.description }}</p>{% endif %}
+</div>
+<div data-directory-section-content>
+<div class="directory-grid directory-grid--{{ group.layout }}"{% if group.get('page_rows', 0) %} data-paged-grid{% endif %}>
+  {% for card in group.cards %}
+    {% if not card.hidden %}
+    {% set cta  = group.default_cta %}
+    {% set this = card %}
+    {% set paged = group.get('page_rows', 0) %}
+    {% include "blocks/" ~ card.type ~ ".html" %}
+    {% endif %}
+  {% endfor %}
+</div>
+{% if group.get('page_rows', 0) %}<button class="directory-section__more" type="button" data-directory-more>Show more…</button>{% endif %}
+</div>
+</section>

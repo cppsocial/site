@@ -1,0 +1,21 @@
+{% from "macros/search.html" import search_values %}
+{% set metadata = community_metadata.get(this.community_id, {}) %}
+<article class="card community-card community-card--{{ this.platform }}" role="link" tabindex="0" data-card-href="{{ this.path }}" data-directory-item {{ search_values([this.title, this.description, metadata.description|default(''), this.platform] + this.tags) }}>
+  <a class="community-card__visual{% if not metadata.banner_url %} community-card__visual--graphic{% endif %}" href="{{ this.path }}" target="_blank" rel="noopener">
+    {% if metadata.banner_url %}<img class="community-card__banner" src="{{ metadata.banner_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer">{% endif %}
+    <span class="community-card__platform">{{ this.platform }}</span>
+    {% if metadata.avatar_url %}<img src="{{ metadata.avatar_url }}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">{% else %}<span class="community-card__monogram" aria-hidden="true">{% if this.platform == 'reddit' %}r/{% elif this.platform == 'slack' %}#_# {% elif this.platform == 'irc' %}/j{% else %}&lt;/&gt;{% endif %}</span>{% endif %}
+  </a>
+  <div class="community-card__body">
+    <h3><a href="{{ this.path }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a></h3>
+    <p class="card-description"><span class="card-description__text">{{ this.description or metadata.description|default('') }}</span></p>
+    {% if this.platform == 'reddit' and (metadata.weekly_visitors or metadata.weekly_contributions) %}
+      <dl class="community-card__activity">
+        {% if metadata.weekly_visitors %}<div><dt>Weekly visitors</dt><dd>{{ "{:,}".format(metadata.weekly_visitors) }}</dd></div>{% endif %}
+        {% if metadata.weekly_contributions %}<div><dt>Weekly contributions</dt><dd>{{ "{:,}".format(metadata.weekly_contributions) }}</dd></div>{% endif %}
+      </dl>
+    {% elif this.platform == 'discord' and metadata.member_count %}<span class="community-card__members">{{ "{:,}".format(metadata.member_count) }} members</span>{% endif %}
+    {% if this.tags %}<ul class="tag-list">{% for tag in this.tags %}<li><button type="button" data-search-tag="{{ tag }}">{{ tag }}</button></li>{% endfor %}</ul>{% endif %}
+    {% if this.links %}<div class="card__links">{% for link in this.links %}<a href="{{ link.path }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</div>{% endif %}
+  </div>
+</article>

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% from "macros/search.html" import search_values %}
+{% from "macros/provenance.html" import source_note %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--directory main--blogs{% endblock %}
+{% block body %}
+  <article class="post">
+    {% include "components/directory_header.html" %}
+    <div class="directory-content" data-directory data-empty-message="No matching blogs found." data-cpp-relevance-threshold="{{ this.cpp_relevance_threshold }}">
+      {% set visible_posts = this.post_cache|rejectattr("hidden")|list %}
+      {% if visible_posts %}
+      <section class="blog-latest directory-section" data-directory-section data-search-category="posts" data-relevance-filter data-date-filter data-page-rows="{{ this.latest_rows }}" data-deferred-index="{{ '/data/blog-posts/index.json'|url }}" data-deferred-kind="blog-post" data-total="{{ visible_posts|length }}" {{ search_values(["Latest posts", "Recent writing across the blogs we track."]) }}>
+        <header class="directory-section__header">
+          <h2>Latest posts</h2>
+          <p>Recent writing across the blogs we track.</p>
+        </header>
+        <div data-directory-section-content>
+          <div class="blog-latest__grid" data-paged-grid>
+            {% for post in visible_posts[:8] %}
+            <article class="blog-post-card" role="link" tabindex="0" data-card-href="{{ post.url }}" data-directory-item data-paged-item data-browse-item data-record-id="{{ post.post_id }}" {% if post.cpp_relevance is not none %}data-cpp-relevance="{{ post.cpp_relevance }}"{% endif %} data-search-title="{{ post.title|lower }}" data-search-content="{{ post.description|lower }}" data-search-source="{{ post.source_title|lower }}" data-search-tags="{{ post.tags|join(' ')|lower }}" {{ search_values([post.title, post.source_title, post.description, post.published]) }}>
+              <p class="blog-post-card__source">{{ post.source_title }} · <time datetime="{{ post.published }}">{{ post.published[:10] }}</time></p>
+              <h3><a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title|keep_cpp }}</a></h3>
+              {% if post.description %}<div class="blog-post-card__description">{{ post.description|markdown }}</div>{% endif %}
+            </article>
+            {% endfor %}
+          </div>
+          <button class="directory-section__more" type="button" data-directory-more>Show more…</button>
+        </div>
+      </section>
+      {% endif %}
+      <section class="directory-section" data-directory-section data-randomize data-search-category="blogs" {{ search_values(["Browse blogs", "Independent authors and publications with ongoing C++ coverage."]) }}>
+        <header class="directory-section__header">
+          <h2>Browse blogs</h2>
+          <p>Independent authors and publications with ongoing C++ coverage.</p>
+        </header>
+        <div class="blog-grid" data-directory-section-content>
+        {% for blog in this.sources|sort(attribute="title") %}
+          {% if not blog.hidden %}
+          {% set metadata = this.blog_metadata.get(blog.id, {}) %}
+          {% set description = blog.description or metadata.description|default("") %}
+          <article class="blog-card" role="link" tabindex="0" data-card-href="{{ blog.website_url }}" data-directory-item data-search-title="{{ blog.title|lower }}" data-search-content="{{ description|lower }}" data-search-source="{{ blog.author|lower }}" data-search-tags="{{ metadata.keywords|default([])|join(' ')|lower }}" {{ search_values([blog.title, blog.author, description, blog.website_url] + metadata.keywords|default([])) }}>
+            <header class="blog-card__header">
+              {% if metadata.avatar_url|default("") %}<img class="blog-card__avatar" src="{{ metadata.avatar_url }}" alt="" loading="lazy" decoding="async">{% endif %}
+              <div>
+                {% if blog.author %}<p class="blog-card__author">By {{ blog.author }}</p>{% endif %}
+                <h3><a href="{{ blog.website_url }}" target="_blank" rel="noopener">{{ blog.title|keep_cpp }}</a></h3>
+              </div>
+            </header>
+            {% if description %}<p class="blog-card__description card-description"><span class="card-description__text">{{ description }}</span></p>{% endif %}
+            <footer class="blog-card__footer">
+              <a href="{{ blog.website_url }}" target="_blank" rel="noopener">Read blog <span aria-hidden="true">→</span></a>
+              <a href="{{ blog.rss_url }}" target="_blank" rel="noopener">RSS</a>
+            </footer>
+          </article>
+          {% endif %}
+        {% endfor %}
+        </div>
+      </section>
+    </div>
+  </article>
+{% endblock %}
+{% block scripts %}<script src="{{ '/static/search-database.js'|url }}"></script>
+  <script src="{{ '/static/directory-search.js'|url }}"></script>{% endblock %}
+{% block provenance %}
+  {% call source_note(this.provenance, "External Sources") %}{% endcall %}
+{% endblock %}

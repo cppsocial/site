@@ -1,0 +1,35 @@
+{% from "macros/search.html" import search_values %}
+<article class="calendar-event calendar-event--{{ this.event_type }}{% if this.status != 'confirmed' %} calendar-event--{{ this.status }}{% endif %}"
+  data-directory-item{% if paged_events|default(false) %} data-paged-item data-browse-item{% endif %} {{ search_values([this.title, this.description, this.location, this.venue, this.format, this.organizer, this.event_type]) }}>
+  <div class="calendar-event__date">
+    <time datetime="{{ this.start_date }}">
+      <span class="calendar-event__month">{{ this.start_date|event_month_short }}</span>
+      <span class="calendar-event__day">{{ this.start_date[8:10] }}</span>
+    </time>
+  </div>
+  <div class="calendar-event__body">
+    <div class="calendar-event__heading">
+      <div>
+        <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != 'confirmed' %} · {{ this.status }}{% endif %}</p>
+        <h3>{% if this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a>{% else %}{{ this.title|keep_cpp }}{% endif %}</h3>
+      </div>
+      <p class="calendar-event__range">
+        <time datetime="{{ this.start_date }}">{{ this.start_date|date_label }}</time>
+        {% if this.end_date and this.end_date != this.start_date %}– <time datetime="{{ this.end_date }}">{{ this.end_date|date_label }}</time>{% endif %}
+        {% set time_label = this|event_time_label %}{% if time_label %}<span>{{ time_label }}</span>{% endif %}
+      </p>
+    </div>
+    {% if this.description %}<p class="calendar-event__description card-description"><span class="card-description__text">{{ this.description }}</span></p>{% endif %}
+    <dl class="calendar-event__facts">
+      {% if this.location %}<div><dt>Location</dt><dd>{% if this.venue %}{{ this.venue }}, {% endif %}{{ this.location }}</dd></div>{% endif %}
+      {% if this.organizer %}<div><dt>Organizer</dt><dd>{{ this.organizer }}</dd></div>{% endif %}
+      <div><dt>Format</dt><dd>{{ this.format|replace('_', ' ')|title }}</dd></div>
+    </dl>
+    <nav class="calendar-event__links" aria-label="{{ this.title }} links">
+      {% if this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">Event website</a>{% endif %}
+      {% if this.registration_url and this.registration_url != this.path %}<a href="{{ this.registration_url }}" target="_blank" rel="noopener">Registration</a>{% endif %}
+      <a href="{{ this|google_event_url }}" target="_blank" rel="noopener">Add to Google</a>
+      <a href="{{ this.source_url }}" target="_blank" rel="noopener">Source{% if this.last_verified %} · checked {{ this.last_verified }}{% endif %}</a>
+    </nav>
+  </div>
+</article>

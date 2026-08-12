@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% from "macros/provenance.html" import source_note %}
+{% block main_class %}main--directory main--packages{% endblock %}
+{% block body %}
+  <article class="post">
+    {% include "components/directory_header.html" %}
+    <div class="directory-content package-catalog" data-directory data-empty-message="{{ this.empty_message }}">
+      <section class="directory-section" data-directory-section data-page-rows="30" data-deferred-index="{{ '/data/packages/index.json'|url }}" data-package-details="{{ '/data/package-details/'|url }}" data-deferred-kind="package">
+        <header class="directory-section__header">
+          <h2>Package catalog</h2>
+          <p>Search the shared catalog, then expand a package to compare its distributions across package managers.</p>
+        </header>
+        <div data-directory-section-content>
+          <div class="package-list__header" aria-hidden="true">
+            <span>Package</span><span>Description</span><span>Package managers</span><span>License</span>
+          </div>
+          <div class="package-list" data-paged-grid></div>
+          <p class="package-list__matches" data-package-match-summary aria-live="polite"></p>
+          <button class="directory-section__more" type="button" data-directory-more>Show more</button>
+        </div>
+      </section>
+    </div>
+  </article>
+{% endblock %}
+{% block scripts %}
+  <script src="{{ '/static/search-database.js'|url }}"></script>
+  <script src="{{ '/static/directory-search.js'|url }}"></script>
+{% endblock %}
+{% block provenance %}
+  {% from "macros/provenance.html" import source_note %}
+  {% call source_note(this.provenance, "External Sources") %}{% endcall %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--wide{% endblock %}
+{% block body %}
+<article class="post post--home">
+  {% include "components/page_header.html" %}
+  <div class="category-grid">
+    {% for card in this.home_cards %}{% set this = card %}{% include "blocks/home_card.html" %}{% endfor %}
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% if this.cta %}{% set cta = this.cta %}{% endif %}
+{% from "macros/search.html" import card_search %}
+
+<article class="card"{% if this.path %} role="link" tabindex="0" data-card-href="{{ this.path|url }}"{% endif %} data-directory-item data-search-title="{{ this.title|lower }}" data-search-content="{{ this.description|lower }}" data-search-tags="{{ this.tags|join(' ')|lower }}" data-search-metadata="{{ (this.metadata.keys()|list + this.metadata.values()|list + this['items'])|join(' ')|lower }}" {{ card_search(this) }}>
+  <h3>
+    {% set card_icon = this.path|card_icon(this.icon) %}
+    {% if card_icon %}<img src="{{ card_icon|url }}" alt="" class="card-logo" loading="lazy" decoding="async" referrerpolicy="no-referrer" />{% endif %}
+    {% if this.path %}<a href="{{ this.path|url }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a>{% else %}{{ this.title|keep_cpp }}{% endif %}
+  </h3>
+  {% if this.description %}<p class="card-description"><span class="card-description__text">{{ this.description }}</span></p>{% endif %}
+  {% if this.metadata %}<dl class="card__metadata">{% for label, value in this.metadata.items() %}<div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>{% endfor %}</dl>{% endif %}
+  {% if this["items"] %}<ul>{% for item in this["items"] %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}
+  {% if this.links %}<nav class="card__links" aria-label="{{ this.title }} links">{% for link in this.links %}<a href="{{ link.path|url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</nav>{% endif %}
+  {% if cta %}
+  <div class="cta" style="text-align: center;">
+  <a href="{{ this.path|url }}" target="_blank" rel="noopener">
+      {{ cta }} →
+    </a>
+  </div>
+  {% endif %}
+</article>

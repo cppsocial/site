@@ -1,0 +1,23 @@
+{% from "macros/search.html" import card_search %}
+<article
+  class="card event-card"
+  {% if this.path %}role="link" tabindex="0" data-card-href="{{ this.path }}"{% endif %}
+  data-directory-item
+  {{ card_search(this, [this.location, this.format]) }}
+>
+  <div class="event-card__date">
+    <time datetime="{{ this.start_date }}">{{ this.start_date|date_label }}</time>
+    {% if this.end_date and this.end_date != this.start_date %}
+      <span aria-hidden="true">–</span>
+      <time datetime="{{ this.end_date }}">{{ this.end_date|date_label }}</time>
+    {% endif %}
+  </div>
+  <h3>{% if this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a>{% else %}{{ this.title }}{% endif %}</h3>
+  {% if this.description %}<p class="card-description"><span class="card-description__text">{{ this.description }}</span></p>{% endif %}
+  <dl class="event-card__details">
+    {% if this.location %}<div><dt>Location</dt><dd>{{ this.location }}</dd></div>{% endif %}
+    <div><dt>Format</dt><dd>{{ this.format|replace('_', ' ')|title }}</dd></div>
+  </dl>
+  {% if this.tags %}<ul class="tag-list" aria-label="Topics">{% for tag in this.tags %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  {% if this.path %}<a class="event-card__cta" href="{{ this.path }}" target="_blank" rel="noopener">Event website →</a>{% endif %}
+</article>

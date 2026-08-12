@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block title %}C++ event calendar{% endblock %}
+{% block main_class %}main--page{% endblock %}
+{% block body %}
+{% set all_events = (this.events + this.imported_events)|sort_events %}
+<article class="post event-calendar-page">
+  <header class="post-header calendar-page-header">
+    <div>
+      <p class="event-feature__eyebrow">C++ community calendar</p>
+      <h1>{{ this.title|keep_cpp }}</h1>
+      <p class="section-description">{{ this.description }}</p>
+    </div>
+    <nav class="calendar-actions" aria-label="Calendar options">
+      <a class="button-link" href="{{ this.feed_url }}">Subscribe (.ics)</a>
+      <a class="button-link button-link--secondary" href="https://calendar.google.com/calendar/r?cid=https%3A%2F%2Fcpp.social%2Fevents%2Fcalendar.ics" target="_blank" rel="noopener">Add to Google Calendar</a>
+      <a class="button-link button-link--secondary" href="{{ '/events/'|url }}">Event directory</a>
+    </nav>
+  </header>
+
+  <p class="calendar-note">The calendar opens on the current month. Events are drawn across every day they run; select one to visit its official page.</p>
+  <section class="month-calendar" data-event-calendar aria-labelledby="calendar-month-title">
+    <header class="month-calendar__toolbar">
+      <div class="month-calendar__navigation">
+        <button type="button" data-calendar-previous aria-label="Previous month">←</button>
+        <button type="button" data-calendar-today>Today</button>
+        <button type="button" data-calendar-next aria-label="Next month">→</button>
+      </div>
+      <h2 id="calendar-month-title" data-calendar-title aria-live="polite"></h2>
+    </header>
+    <div class="month-calendar__viewport" tabindex="0" aria-label="Monthly event calendar">
+      <div class="month-calendar__weekdays" data-calendar-weekdays role="row"></div>
+      <div class="month-calendar__grid" data-calendar-grid role="grid"></div>
+    </div>
+    <p class="month-calendar__status" data-calendar-status aria-live="polite"></p>
+    <script type="application/json" data-calendar-events>{{ all_events|tojson }}</script>
+  </section>
+
+  <noscript>
+    <div class="calendar-empty">
+      <strong>JavaScript is required for the month view.</strong>
+      <span>The same events remain available through the <a href="{{ this.feed_url }}">iCalendar feed</a>.</span>
+    </div>
+  </noscript>
+</article>
+{% endblock %}
+{% block scripts %}<script src="{{ '/static/event-calendar.js'|url }}"></script>{% endblock %}

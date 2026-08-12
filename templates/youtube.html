@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% from "macros/search.html" import search_values %}
+{% from "macros/provenance.html" import source_note %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--directory main--youtube{% endblock %}
+{% block body %}
+  {% set youtube_metadata = this.channel_metadata %}
+  {% set provenance = this.provenance %}
+  {% set youtube_video_cache = this.video_cache %}
+  {% set latest = namespace(items=[]) %}
+  {% for channel_id, videos in this.video_cache.items() %}
+    {% set identity = namespace(title=channel_id) %}
+    {% for block in this.body %}
+      {% for card in block.cards %}{% if card.channel_id == channel_id %}{% set identity.title = card.title %}{% endif %}{% endfor %}
+    {% endfor %}
+    {% for video in videos %}{% if not video.hidden %}{% set latest.items = latest.items + [{"video": video, "channel": identity.title}] %}{% endif %}{% endfor %}
+  {% endfor %}
+  <article class="post youtube-catalog">
+    {% include "components/directory_header.html" %}
+    <div class="directory-content youtube-catalog__shelves" data-directory data-empty-message="{{ this.empty_message }}" data-cpp-relevance-threshold="{{ this.cpp_relevance_threshold }}">
+      {% if latest.items %}
+      <section class="directory-section youtube-latest" data-directory-section data-search-category="videos" data-relevance-filter data-date-filter data-page-rows="{{ this.latest_rows }}" data-deferred-index="{{ '/data/youtube-videos/index.json'|url }}" data-deferred-kind="youtube-video" data-total="{{ latest.items|length }}" {{ search_values(["Latest videos", "Recent uploads across the channels we track."]) }}>
+        <header class="directory-section__header">
+          <h2>Latest videos</h2>
+          <p>Recent uploads across the channels we track.</p>
+        </header>
+        <div data-directory-section-content>
+          <div class="youtube-latest__grid" data-paged-grid>
+            {% for item in (latest.items|sort(attribute="video.published", reverse=true))[:8] %}
+            {% set video = item.video %}
+            <article class="card video-card" role="link" tabindex="0" data-card-href="{{ video.url }}" data-directory-item data-paged-item data-browse-item data-record-id="{{ video.video_id }}" {% if video.cpp_relevance is not none %}data-cpp-relevance="{{ video.cpp_relevance }}"{% endif %} data-search-title="{{ video.title|lower }}" data-search-content="{{ video.description[:500]|lower }}" data-search-source="{{ item.channel|lower }}" data-search-tags="{{ video.tags|join(' ')|lower }}" {{ search_values([video.title, item.channel, video.description[:500], video.published]) }}>
+              <a class="video-card__visual" href="{{ video.url }}" target="_blank" rel="noopener" aria-label="Watch {{ video.title }} on YouTube">
+                {% if video.thumbnail_url %}<img src="{{ video.thumbnail_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer">{% endif %}
+                <span class="video-card__play" aria-hidden="true">▶</span>
+              </a>
+              <div class="video-card__body">
+                <h3><a href="{{ video.url }}" target="_blank" rel="noopener">{{ video.title|keep_cpp }}</a></h3>
+                <p class="video-card__byline">{{ item.channel }} · <time datetime="{{ video.published }}">{{ video.published[:10]|date_label }}</time></p>
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+          <button class="directory-section__more" type="button" data-directory-more>Show more…</button>
+        </div>
+      </section>
+      {% endif %}
+      {% include "components/blocks.html" %}
+    </div>
+  </article>
+  <dialog class="channel-dialog" data-channel-dialog aria-labelledby="channel-detail-title">
+    <div class="channel-dialog__content" data-channel-dialog-content></div>
+  </dialog>
+{% endblock %}
+{% block scripts %}
+  <script src="{{ '/static/search-database.js'|url }}"></script>
+  <script src="{{ '/static/directory-search.js'|url }}"></script>
+  <script src="{{ '/static/channel-dialog.js'|url }}"></script>
+{% endblock %}
+
+{% block provenance %}
+  {% call source_note(this.provenance, "External Sources") %}{% endcall %}
+{% endblock %}

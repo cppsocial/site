@@ -1,0 +1,3 @@
+<div class="content-section"{% if page.get('hide_non_cards_while_searching', false) %} data-search-context-hide{% endif %}>
+  {{ this.content|markdown }}
+</div>

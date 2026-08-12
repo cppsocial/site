@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--directory main--communities{% endblock %}
+{% block body %}
+  {% set community_metadata = this.community_metadata %}
+  {% set provenance = this.provenance %}
+  <article class="post community-catalog">
+    {% include "components/directory_header.html" %}
+    <div class="directory-content" data-directory data-empty-message="{{ this.empty_message }}">
+      {% include "components/blocks.html" %}
+    </div>
+  </article>
+{% endblock %}
+{% block scripts %}<script src="{{ '/static/directory-search.js'|url }}"></script>{% endblock %}
+{% block provenance %}
+  {% from "macros/provenance.html" import source_note %}
+  {% call source_note(this.provenance, "Metadata Sources") %}{% endcall %}
+{% endblock %}

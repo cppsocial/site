@@ -1,0 +1,70 @@
+{% set page_title %}{% block title %}{% endblock %}{% endset %}
+{% set provenance_content %}{% block provenance %}{% endblock %}{% endset %}
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if this.get('description') %}
+  <meta name="description" content="{{ this.description }}">{% endif %}
+  {% if this.get('feed_url') %}
+  <link rel="alternate" type="text/calendar" title="C++ Community Events" href="{{ this.feed_url }}">{% endif %}
+  <link rel="icon" href="{{ '/favicon.svg'|url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+  <title>{{ page_title|trim ~ " — " if page_title|trim }}cpp.social</title>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("pref-theme");
+      if (savedTheme) {
+        document.documentElement.dataset.theme = savedTheme;
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-nav">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        🌓
+      </button>
+      <a class="logo" href="{{ '/'|url }}">cpp.social</a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="menu" aria-label="Primary">
+        {% set current_path = this._path|default('/') %}
+        <ul>
+          {% for item in main_menu %}
+          <li {% if current_path==item.path or current_path==item.path.rstrip('/') %} class="active" {% endif %}>
+            <a href="{{ item.path|url }}">{{ item.label }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main {% block main_class %}{% endblock %}">
+    {% block body %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      {% if provenance_content|trim %}{{ provenance_content }} · {% endif %}
+      {% for item in footer_menu %}
+      <a href="{{ item.path|url }}">{{ item.label }}</a>
+      ·
+      {% endfor %}
+      <a href="#" data-reset-local-cache>Reset local cache</a><span class="footer__cache-status" data-reset-local-cache-status role="status" aria-live="polite"></span>
+    </div>
+  </footer>
+
+  <script src="{{ '/static/site.js'|url }}" data-service-worker="{{ '/service-worker.js'|url }}"></script>
+  {% block scripts %}{% endblock %}
+</body>

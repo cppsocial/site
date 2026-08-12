@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <article class="post">
+    <header class="post-header">
+      <h1>{{ this.title }}</h1>
+      {% if this.website_url %}
+        <p><a href="{{ this.website_url }}" target="_blank" rel="noopener">Visit site</a></p>
+      {% endif %}
+      {% if this.rss_url %}
+        <p><a href="{{ this.rss_url }}" target="_blank" rel="noopener">RSS feed</a></p>
+      {% endif %}
+      {% if this.tags %}
+        <ul class="post-tags">
+          {% for tag in this.tags %}
+            <li><span>{{ tag }}</span></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </header>
+  </article>
+{% endblock %}

@@ -1,0 +1,4 @@
+{% if this.title or this.get('description') %}<header class="post-header">
+  {% if this.title %}<h1>{{ this.title }}</h1>{% endif %}
+  {% if this.get('description') %}<p class="section-description">{{ this.description }}</p>{% endif %}
+</header>{% endif %}

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:{{ this.product_id }}
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:{{ this.calendar_name|ical_escape }}
+X-WR-CALDESC:{{ this.description|ical_escape }}
+{% for event in (this.events + this.imported_events)|sort_events %}
+BEGIN:VEVENT
+UID:{{ event.ical_uid|ical_escape }}
+DTSTAMP:{{ (event.last_verified or event.start_date)|replace('-', '') }}T000000Z
+{{ event|ical_dtstart }}
+{% set dtend = event|ical_dtend %}{% if dtend %}{{ dtend }}{% endif %}
+SUMMARY:{{ event.title|ical_escape }}
+DESCRIPTION:{{ (event.description ~ ('\n\nOrganizer: ' ~ event.organizer if event.organizer else '') ~ '\n\nSource: ' ~ event.source_url)|ical_escape }}
+{% if event.location %}LOCATION:{{ (((event.venue ~ ', ') if event.venue else '') ~ event.location)|ical_escape }}{% endif %}
+{% if event.path %}URL:{{ event.path }}{% endif %}
+STATUS:{{ event.status|upper }}
+TRANSP:TRANSPARENT
+X-CPP-SOURCE:{{ event.source_url|ical_escape }}
+END:VEVENT
+{% endfor %}
+END:VCALENDAR

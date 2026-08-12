@@ -1,0 +1,9 @@
+[site]
+content = "content"
+schemas = "schemas"
+templates = "templates"
+assets = "assets"
+browser_data = "data/web"
+output = "build"
+schema_output = "schemas"
+minify = true

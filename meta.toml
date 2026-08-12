@@ -1,0 +1,8 @@
+[meta_updater]
+content = "content"
+data = "data"
+browser_data = "data/web"
+package_cache = "/tmp/cpp-social-packages"
+timeout = 30
+delay = 0.25
+package_threshold = 0.82

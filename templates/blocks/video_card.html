@@ -1,0 +1,12 @@
+{% from "macros/search.html" import card_search %}
+<article class="card video-card"{% if this.path %} role="link" tabindex="0" data-card-href="{{ this.path }}"{% endif %} data-directory-item {{ card_search(this, [this.channel]) }}>
+  {% if this.path %}<a class="video-card__visual" href="{{ this.path }}" target="_blank" rel="noopener" aria-label="Watch {{ this.title }} on YouTube">{% else %}<div class="video-card__visual">{% endif %}
+    {% if this.thumbnail %}<img src="{{ this.thumbnail }}" alt="" loading="lazy" referrerpolicy="no-referrer">{% endif %}
+    <span class="video-card__play" aria-hidden="true">▶</span>
+  {% if this.path %}</a>{% else %}</div>{% endif %}
+  <div class="video-card__body">
+    <h3>{% if this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a>{% else %}{{ this.title }}{% endif %}</h3>
+    <p class="video-card__byline">{{ this.channel }}{% if this.published %} · <time datetime="{{ this.published }}">{{ this.published[:10]|date_label }}</time>{% endif %}</p>
+    {% if this.tags %}<ul class="tag-list" aria-label="Topics">{% for tag in this.tags %}<li>{{ tag }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+</article>

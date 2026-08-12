@@ -1,0 +1,85 @@
+{% from "macros/search.html" import search_values %}
+{% from "macros/provenance.html" import source_note %}
+{% set book = book_metadata[this.isbn] %}
+<article
+  class="card book-card"
+  data-directory-item
+  {% if paged %}data-paged-item data-browse-item{% endif %}
+  data-book-card
+  data-search-title="{{ book.title|lower }}"
+  data-search-content="{{ ([book.subtitle, book.description]|join(' '))|lower }}"
+  data-search-source="{{ book.authors|join(' ')|lower }}"
+  data-search-tags="{{ book.subjects|join(' ')|lower }}"
+  data-search-metadata="{{ ([book.isbn_13, book.isbn_10, book.publisher, book.publish_date]|join(' '))|lower }}"
+  {{ search_values([book.title, book.subtitle, book.description, book.isbn_13, book.isbn_10, book.publisher, book.publish_date] + book.authors + book.subjects) }}
+>
+  <button class="book-card__expand" type="button" data-book-open aria-haspopup="dialog" aria-label="View details for {{ book.title }}"></button>
+  <p class="book-card__isbn">{{ book.isbn_13 }}</p>
+  <div class="book-card__cover">
+    {% set displayed_cover = this.cover_url or book.cover_url %}
+    {% if displayed_cover %}<img src="{{ displayed_cover }}" alt="Cover of {{ book.title }}" loading="lazy" decoding="async" referrerpolicy="no-referrer">{% else %}<span aria-hidden="true">No cover</span>{% endif %}
+  </div>
+  <div class="book-card__body">
+    <h3>{{ book.title|keep_cpp }}</h3>
+    <p class="book-card__authors">{{ book.authors|join(', ') }}</p>
+  </div>
+  <template data-book-details>
+    <article
+      class="book-detail"
+      data-work-key="{{ book.work_key }}"
+      data-isbn="{{ book.isbn_13 }}"
+      data-open-library-url="{{ book.url }}"
+      {% if book.rating is not none %}data-open-library-rating="{{ book.rating }}" data-open-library-count="{{ book.rating_count }}"{% endif %}
+    >
+      <button class="book-dialog__close" type="button" data-book-close aria-label="Close book details">×</button>
+      <section class="book-detail__visual">
+        {% if displayed_cover %}<img src="{{ displayed_cover }}" alt="Cover of {{ book.title }}" referrerpolicy="no-referrer">{% else %}<div class="book-detail__cover-fallback">Cover unavailable</div>{% endif %}
+      </section>
+      <div class="book-detail__body">
+        <header class="book-detail__header">
+          <h2 id="book-detail-title">{{ book.title|keep_cpp }}</h2>
+          {% if book.subtitle %}<p class="book-detail__subtitle">{{ book.subtitle }}</p>{% endif %}
+          <p class="book-detail__authors">By {{ book.authors|join(', ') }}</p>
+        </header>
+
+        <section aria-labelledby="book-detail-metadata-title">
+          <h3 class="book-detail__section-title" id="book-detail-metadata-title">Edition metadata</h3>
+          <dl class="book-detail__metadata">
+            <div><dt>ISBN-13</dt><dd>{{ book.isbn_13 }}</dd></div>
+            {% if book.isbn_10 %}<div><dt>ISBN-10</dt><dd>{{ book.isbn_10 }}</dd></div>{% endif %}
+            {% if book.publisher %}<div><dt>Publisher</dt><dd>{{ book.publisher }}</dd></div>{% endif %}
+            {% if book.publish_date %}<div><dt>Published</dt><dd>{{ book.publish_date }}</dd></div>{% endif %}
+            {% if book.pages %}<div><dt>Pages</dt><dd>{{ book.pages }}</dd></div>{% endif %}
+          </dl>
+          {% set entry = {"retrieved_at": provenance.retrieved_at} %}
+          {% call source_note(entry, "Book metadata") %}<li><a href="https://openlibrary.org/api/books?bibkeys=ISBN%3A{{ book.isbn_13 }}&jscmd=data&format=json" target="_blank" rel="noopener">https://openlibrary.org/api/books?bibkeys=ISBN%3A{{ book.isbn_13 }}&jscmd=data&format=json</a></li><li><a href="https://openlibrary.org/search.json?isbn={{ book.isbn_13 }}&fields=key%2Cratings_average%2Cratings_count%2Cauthor_name%2Csubject&limit=1" target="_blank" rel="noopener">https://openlibrary.org/search.json?isbn={{ book.isbn_13 }}&fields=key%2Cratings_average%2Cratings_count%2Cauthor_name%2Csubject&limit=1</a></li>{% if displayed_cover %}<li><a href="{{ displayed_cover }}" target="_blank" rel="noopener">{{ displayed_cover }}</a></li>{% endif %}{% endcall %}
+        </section>
+
+        <section class="book-detail__ratings" aria-labelledby="book-detail-ratings-title">
+          <h3 class="book-detail__section-title" id="book-detail-ratings-title">Ratings</h3>
+          <div class="book-rating__sources" data-book-rating-sources aria-busy="true">
+            <div>
+              <a href="{{ book.url }}" target="_blank" rel="noopener">Open Library ↗</a>
+              <span data-book-rating-value>Loading...</span>
+            </div>
+          </div>
+        </section>
+
+        {% if book.subjects %}<section aria-labelledby="book-detail-subjects-title"><h3 class="book-detail__section-title" id="book-detail-subjects-title">Subjects</h3><p class="book-detail__subjects">{{ book.subjects[:8]|join(', ') }}</p></section>{% endif %}
+
+        <section class="book-detail__buy" aria-labelledby="book-detail-buy-title">
+          <h3 class="book-detail__section-title" id="book-detail-buy-title">Find this edition</h3>
+          <p>Retailer searches are generated from the ISBN and are not stored per book.</p>
+          <nav class="book-detail__retailers" data-book-retailers aria-label="Places to find {{ book.title }}">
+            <a href="https://www.amazon.com/s?k={{ book.isbn_13 }}&i=stripbooks" target="_blank" rel="noopener">Amazon <span aria-hidden="true">↗</span></a>
+            <a href="https://bookshop.org/search?keywords={{ book.isbn_13 }}" target="_blank" rel="noopener">Bookshop.org <span aria-hidden="true">↗</span></a>
+            <a href="https://www.barnesandnoble.com/s/{{ book.isbn_13 }}" target="_blank" rel="noopener">Barnes &amp; Noble <span aria-hidden="true">↗</span></a>
+            <a href="https://www.abebooks.com/servlet/SearchResults?isbn={{ book.isbn_13 }}" target="_blank" rel="noopener">AbeBooks <span aria-hidden="true">↗</span></a>
+          </nav>
+        </section>
+
+        <a class="book-detail__catalog-link" href="{{ book.url }}" target="_blank" rel="noopener">Open Library edition record <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  </template>
+</article>

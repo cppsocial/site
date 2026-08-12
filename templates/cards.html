@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+
+<article class="post post--flush">
+  <div class="hero-section">
+    <p>{{ this.description }}</p>
+  </div>
+  <div class="category-grid">
+    {% for card in home_cards %}
+    <a href="{{ card.path|url }}" class="category-card">
+      <div class="icon">{{ card.icon }}</div>
+      <h2>{{ card.title }}</h2>
+      <p class="card-description"><span class="card-description__text">{{ card.description }}</span></p>
+      <div class="cta">{{ card.cta }} →</div>
+    </a>
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}

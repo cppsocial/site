@@ -1,0 +1,71 @@
+{% from "macros/search.html" import search_values %}
+{% set channel = youtube_metadata[this.channel_id] %}
+{% set recent_videos = youtube_video_cache.get(this.channel_id, []) %}
+<article
+  class="card channel-card channel-card--{{ this.channel_type }}"
+  data-directory-item
+  data-channel-card
+  data-search-title="{{ this.title|lower }}"
+  data-search-content="{{ channel.description|lower }}"
+  data-search-source="{{ this.title|lower }}"
+  data-search-tags="{{ ([this.channel_type] + this.tags + channel.keywords)|join(' ')|lower }}"
+  {{ search_values([this.title, channel.description, this.channel_type] + channel.keywords) }}
+>
+  <button class="channel-card__visual{% if channel.banner_url %} channel-card__visual--image{% endif %}" type="button" data-channel-open aria-haspopup="dialog" aria-label="View details for {{ this.title }}">
+    {% if channel.banner_url %}<img class="channel-card__background" src="{{ channel.banner_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer">{% endif %}
+    <span class="channel-card__eyebrow">{{ this.channel_type }} channel</span>
+    {% if channel.avatar_url %}<img class="channel-card__avatar" src="{{ channel.avatar_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer">{% else %}<span class="channel-card__monogram" aria-hidden="true">{{ this.title[:1] }}</span>{% endif %}
+  </button>
+  <div class="channel-card__body">
+    <button class="channel-card__expand" type="button" data-channel-open aria-haspopup="dialog" aria-label="View details for {{ this.title }}"></button>
+    <h3><a href="{{ channel.url }}" target="_blank" rel="noopener">{{ this.title }}</a></h3>
+    {% if channel.description %}<p class="card-description"><span class="card-description__text">{{ channel.description }}</span></p>{% endif %}
+    {% if channel.keywords %}<ul class="tag-list tag-list--compact" data-collapsible-tags aria-label="Channel keywords">{% for keyword in channel.keywords %}<li><button type="button" data-search-tag="{{ keyword }}">{{ keyword }}</button></li>{% endfor %}<li class="tag-list__more" data-tag-overflow hidden><span></span></li></ul>{% endif %}
+    <a class="channel-card__cta" href="{{ channel.url }}" target="_blank" rel="noopener">Watch on YouTube <span aria-hidden="true">↗</span></a>
+  </div>
+  <template data-channel-details>
+    <article class="channel-detail channel-detail--{{ this.channel_type }}">
+      <button class="channel-dialog__close" type="button" data-channel-close aria-label="Close channel details">×</button>
+      <section class="channel-detail__visual{% if not channel.banner_url %} channel-detail__visual--fallback{% endif %}">
+        {% if channel.banner_url %}<div class="channel-detail__banner"><img class="channel-detail__background" src="{{ channel.banner_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer"></div>{% endif %}
+        <header class="channel-detail__identity">
+          {% if channel.avatar_url %}<img class="channel-detail__avatar" src="{{ channel.avatar_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer">{% endif %}
+          <div>
+            <span class="channel-detail__eyebrow">{{ this.channel_type }} channel</span>
+            <h2 id="channel-detail-title">{{ this.title }}</h2>
+          </div>
+        </header>
+        <section class="channel-detail__recent" aria-labelledby="channel-detail-recent-title">
+          <h3 id="channel-detail-recent-title">Recent videos</h3>
+          {% if recent_videos %}
+            <ol class="channel-detail__video-list">
+              {% for video in recent_videos[:6] %}
+                <li>
+                  <a href="{{ video.url }}" target="_blank" rel="noopener">
+                    {% if video.thumbnail_url %}<img src="{{ video.thumbnail_url }}" alt="" loading="lazy" decoding="async" fetchpriority="low">{% endif %}
+                    <span><strong>{{ video.title }}</strong><time datetime="{{ video.published }}">{{ video.published[:10]|date_label }}</time></span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ol>
+          {% else %}
+            <p class="channel-detail__recent-empty">Recent uploads will appear here when the RSS cache is populated.</p>
+          {% endif %}
+        </section>
+      </section>
+      <div class="channel-detail__body">
+        <div>
+          <span class="channel-detail__section-label">About this channel</span>
+          {% if channel.description %}<p class="channel-detail__description">{{ channel.description }}</p>{% else %}<p class="channel-detail__description channel-detail__description--empty">This channel does not provide a description.</p>{% endif %}
+        </div>
+        {% if channel.keywords %}
+          <section class="channel-detail__topics" aria-labelledby="channel-detail-topics-title">
+            <h3 id="channel-detail-topics-title">Channel keywords</h3>
+            <ul class="tag-list">{% for keyword in channel.keywords %}<li><button type="button" data-search-tag="{{ keyword }}">{{ keyword }}</button></li>{% endfor %}</ul>
+          </section>
+        {% endif %}
+        <a class="channel-detail__cta" href="{{ channel.url }}" target="_blank" rel="noopener">Watch {{ this.title }} on YouTube <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  </template>
+</article>

@@ -1,0 +1,4 @@
+# Durable human labels used by both feed updaters and, later, classifier training.
+# Values are confidence that an item is C++ related: 0 = no, 1 = yes.
+blog_posts: {}
+youtube_videos: {}

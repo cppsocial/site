@@ -1,0 +1,56 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Conferences
+description: Major C++ conferences around the world
+randomize: true
+cards:
+- type: card
+  title: ACCU on Sea
+  path: https://accuonsea.uk/
+  description: ACCU on Sea is the international developer conference taking place by the sea, in the UK.
+  metadata:
+    Location: UK
+    Frequency: Annual
+- type: card
+  title: Meeting C++
+  path: https://meetingcpp.com/
+  description: Annual hybrid C++ conference in Berlin with onsite and online tracks and international speakers.
+  metadata:
+    Location: Berlin, Germany
+    Frequency: Annual
+- type: card
+  title: CppNorth
+  path: https://cppnorth.ca/
+  description: Toronto C++ conference held from 2022 through 2025; its organizers joined with NDC Conferences to create NDC Toronto in 2026.
+  metadata:
+    Location: Toronto, Canada
+    Status: Continued as NDC Toronto
+- type: card
+  title: NDC Toronto
+  path: https://ndctoronto.com/
+  description: NDC Toronto is a premier software development conference held annually in Toronto, covering a wide range of topics including .NET, C++, Rust, Embedded, Cybersecurity, Cloud, DevOps, frontend, AI, and software architecture, to mention a few.
+  metadata:
+    Location: Toronto, Canada
+    Frequency: Annual
+
+- type: card
+  title: CppCon
+  path: https://cppcon.org/
+  description: Annual, week-long, in-person gathering organized by the C++ community, with talks for experience levels from novice to expert.
+  metadata:
+    Location: Aurora, Colorado, USA
+    Frequency: Annual
+- type: card
+  title: C++Now
+  path: https://cppnow.org/
+  description: Five-day, in-person conference in Aspen focused on advanced C++, open-source libraries, and the language's future evolution.
+  metadata:
+    Location: Aspen, Colorado, USA
+    Frequency: Annual
+- type: card
+  title: C++Online
+  path: https://cpponline.uk/
+  description: Online-only international C++ conference designed for broad geographic and financial accessibility.
+  metadata:
+    Location: Online
+    Frequency: Annual

@@ -1,0 +1,112 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: ABIs
+description: Documentation of the C++ Application Binary Interface (ABI) and name mangling schemes used by various compilers and platforms
+search_category: abi
+cards:
+  - type: card
+    title: Itanium C++ ABI
+    path: https://itanium-cxx-abi.github.io/cxx-abi/
+    description: The C++ ABI used by GCC, Clang, and other toolchains on many non-Windows platforms
+  - type: card
+    title: Windows x64 ABI conventions
+    description: Documentation for the x64 ABI used by Windows toolchains such as MSVC
+    path: https://learn.microsoft.com/en-us/cpp/build/x64-software-conventions
+  - type: card
+    title: ARM 64-bit C++ ABI
+    path: https://github.com/ARM-software/abi-aa/blob/main/cppabi64/cppabi64.rst
+    icon: https://raw.githubusercontent.com/ARM-software/abi-aa/refs/heads/main/cppabi64/Arm_logo_blue_RGB.svg
+    description: C++ ABI requirements for the 64-bit ARM architecture
+  - type: card
+    title: Windows ARM ABI conventions
+    description: Documentation for the ARM ABI used by Windows toolchains such as MSVC
+    path: https://learn.microsoft.com/en-us/cpp/build/overview-of-arm-abi-conventions
+  - type: card
+    title: Windows ARM64 ABI conventions
+    description: Documentation for the ARM64 ABI used by Windows toolchains such as MSVC
+    path: https://learn.microsoft.com/en-us/cpp/build/arm64-windows-abi-conventions
+  - type: card
+    title: Windows ARM64EC ABI conventions
+    description: Documentation for the ARM64EC ABI used by Windows toolchains such as MSVC
+    path: https://learn.microsoft.com/en-us/cpp/build/arm64ec-windows-abi-conventions
+  - type: card
+    title: RISC-V ELF psABI v1.0
+    description: The ratified ABI specification for the RISC-V architecture
+    path: https://docs.riscv.org/reference/abi/v1.0/index.html
+  - type: card
+    title: RISC-V ELF psABI Latest
+    description: The latest development version of the RISC-V ABI specification
+    icon: https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://docs.riscv.org&size=128
+    path: https://riscv-non-isa.github.io/riscv-elf-psabi-doc/
+  - type: card
+    title: Visual C++ name mangling
+    description: Wiki article describing the mangling scheme used in MSVC
+    path: https://en.wikiversity.org/wiki/Visual_C%2B%2B_name_mangling
+  - type: card
+    title: ARM 32-bit C++ ABI
+    description: C++ ABI requirements for the 32-bit ARM architecture, derived from the Itanium C++ ABI
+    icon: https://raw.githubusercontent.com/ARM-software/abi-aa/refs/heads/main/cppabi64/Arm_logo_blue_RGB.svg
+    path: https://github.com/ARM-software/abi-aa/blob/main/cppabi32/cppabi32.rst
+  - type: card
+    title: ARM AAPCS32
+    description: Procedure call standard, data layout, and calling conventions for the 32-bit ARM architecture
+    icon: https://raw.githubusercontent.com/ARM-software/abi-aa/refs/heads/main/cppabi64/Arm_logo_blue_RGB.svg
+    path: https://github.com/ARM-software/abi-aa/blob/main/aapcs32/aapcs32.rst
+  - type: card
+    title: ARM AAPCS64
+    description: Procedure call standard, data layout, and calling conventions for the 64-bit ARM architecture
+    icon: https://raw.githubusercontent.com/ARM-software/abi-aa/refs/heads/main/cppabi64/Arm_logo_blue_RGB.svg
+    path: https://github.com/ARM-software/abi-aa/blob/main/aapcs64/aapcs64.rst
+  - type: card
+    title: System V x86-64 psABI
+    description: Processor ABI for x86-64 System V platforms, including calling conventions, data layout, ELF, and C++ conventions
+    path: https://gitlab.com/x86-psABIs/x86-64-ABI
+  - type: card
+    title: System V i386 psABI
+    description: Processor ABI for 32-bit x86 System V platforms
+    path: https://gitlab.com/x86-psABIs/i386-ABI
+  - type: card
+    title: Apple ARM64 ABI
+    description: Apple's ARM64 ABI, including Apple-specific differences from the generic ARM and C++ ABIs
+    path: https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms
+  - type: card
+    title: Apple x86-64 ABI
+    description: Calling conventions and ABI requirements for 64-bit Intel code on Apple platforms
+    path: https://developer.apple.com/documentation/xcode/writing-64-bit-intel-code-for-apple-platforms
+  - type: card
+    title: Apple ARMv7 ABI
+    description: ABI and calling conventions for ARMv7 code on legacy Apple platforms
+    path: https://developer.apple.com/documentation/xcode/writing-armv7-code-for-ios
+  - type: card
+    title: PowerPC64 ELFv1 ABI
+    icon: null
+    description: Original 64-bit PowerPC ELF ABI used primarily by big-endian PowerPC64 systems
+    path: https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi-1.9.html
+  - type: card
+    title: PowerPC64 ELFv2 ABI
+    icon: null
+    description: ELFv2 ABI for 64-bit Power Architecture systems, including calling and linkage conventions
+    path: https://openpowerfoundation.org/specifications/64bitelfabi/
+  - type: card
+    title: MIPS System V ABI
+    icon: null
+    description: System V processor ABI for MIPS, including data layout, calling conventions, ELF, and dynamic linking
+    path: https://refspecs.linuxfoundation.org/elf/mipsabi.pdf
+  - type: card
+    title: s390x ELF ABI
+    description: ELF ABI and calling conventions for IBM Z and LinuxONE 64-bit systems
+    path: https://ibm.github.io/s390x-abi/
+  - type: card
+    title: LoongArch ELF psABI
+    icon: null
+    description: ELF processor ABI and calling conventions for LoongArch
+    path: https://loongson.github.io/LoongArch-Documentation/LoongArch-ELF-ABI-EN.html
+  - type: card
+    title: WebAssembly Basic C ABI
+    description: ABI used by LLVM and Clang for interoperable C and C++ code targeting WebAssembly
+    icon: https://avatars.githubusercontent.com/u/11578470?s=60&v=4
+    path: https://github.com/WebAssembly/tool-conventions/blob/main/BasicCABI.md
+  - type: card
+    title: IBM XL C++ ABI compatibility
+    description: IBM documentation of the XL, libC, and libc++ C++ ABIs and their name mangling and binary compatibility
+    path: https://www.ibm.com/docs/en/openxl-c-and-cpp-aix/17.1.4?topic=compilers-binary-compatibility

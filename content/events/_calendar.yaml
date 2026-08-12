@@ -1,0 +1,6 @@
+$schema: ../../schemas/pages/event-calendar-feed.json
+$output: calendar.ics
+calendar_name: C++ Community Events
+description: Conferences, meetups, and WG21 meetings for the C++ community.
+events: !import 'events.yaml'
+imported_events: !import '../../data/events-imported.yaml'

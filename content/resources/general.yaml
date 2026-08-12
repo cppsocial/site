@@ -1,0 +1,42 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: General resources
+description: References, analysis tools, playgrounds, and other practical C++ utilities
+search_category: references
+cards:
+  - type: card
+    title: cppreference.com
+    path: https://en.cppreference.com/
+    description: Detailed language and standard-library reference with compiler-support tables
+  - type: card
+    title: cppstat.dev
+    path: https://cppstat.dev
+    description: A list of C and C++ features and their respective support by compilers and standard library implementations
+  - type: card
+    title: Compiler Explorer
+    path: https://godbolt.org/
+    description: Compile and inspect C++ across compilers, versions, architectures, and optimization levels
+  - type: card
+    title: Decompiler Explorer
+    path: https://dogbolt.org/
+    description: An interactive online decompiler which shows equivalent C-like output of decompiled programs from many popular decompilers
+  - type: card
+    title: C++ Insights
+    path: https://cppinsights.io/
+    description: Explore transformations performed by the compiler, including templates, lambdas, and coroutines
+  - type: card
+    title: Quick Bench
+    path: https://quick-bench.com/
+    description: Run and compare C++ microbenchmarks online using the Google Benchmark framework
+  - type: card
+    title: C++ Build Benchmark
+    path: https://build-bench.com/
+    description: A tool to quickly and simply compare the build time of code snippets with various compilers
+  - type: card
+    title: cdecl+
+    path: https://cdecl.plus/
+    description: Translate C and C++ declarations and printf/scanf format strings into prose
+  - type: card
+    title: uiCA
+    path: https://uica.uops.info/
+    description: Analyze basic-block throughput on supported x86 microarchitectures and compare predictions from several analysis tools

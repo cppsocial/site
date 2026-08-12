@@ -1,0 +1,81 @@
+- id: barrys_cpp_blog
+  title: Barry's C++ Blog
+  author: Barry Revzin
+  website_url: https://brevzin.github.io/
+  rss_url: https://brevzin.github.io/feed.xml
+- id: cpp_stories
+  title: C++ Stories
+  author: Bartłomiej Filipek
+  website_url: https://www.cppstories.com/
+  rss_url: https://www.cppstories.com/index.xml
+- id: modernes_cpp
+  title: Modernes C++
+  author: Rainer Grimm and contributors
+  website_url: https://www.modernescpp.com/
+  rss_url: https://www.modernescpp.com/index.php/feed/
+- id: quuxplusone
+  title: Arthur O'Dwyer's Blog
+  author: Arthur O'Dwyer
+  website_url: https://quuxplusone.github.io/blog/
+  rss_url: https://quuxplusone.github.io/blog/feed.xml
+  exclude_tags:
+    - poetry
+    - puzzles
+    - crosswords
+    - etymology
+    - us-politics
+    - morality
+    - adventure
+- id: sandor_dargo
+  title: Sandor Dargo's Blog
+  author: Sandor Dargo
+  website_url: https://www.sandordargo.com/
+  rss_url: https://www.sandordargo.com/feed.xml
+- id: vector_of_bool
+  title: Vector of Bool
+  website_url: https://vector-of-bool.github.io/
+  rss_url: https://vector-of-bool.github.io/feed.xml
+- id: pydong
+  title: Pydong
+  author: Matthias Wippich
+  website_url: https://pydong.org
+  rss_url: https://pydong.org/feed.xml
+- id: oldnewthing
+  title: The Old New Thing
+  author: Raymond Chen
+  website_url: https://devblogs.microsoft.com/oldnewthing/
+  rss_url: https://devblogs.microsoft.com/oldnewthing/feed
+- id: aaronballmanblog
+  title: Aaron Ballman's Blog # not the actual blog's title, but that makes it clearer
+  author: Aaron Ballman
+  website_url: https://blog.aaronballman.com/
+  rss_url: https://blog.aaronballman.com/?feed=rss
+- id: d34df00d
+  title: 0xd34df00d.me
+  website_url: https://0xd34df00d.me/
+  rss_url: https://0xd34df00d.me/rss.xml
+- id: cor3ntin
+  title: cor3ntin's blog
+  author: Corentin Jabot
+  description: cor3ntin's blog
+  website_url: https://cor3ntin.github.io/
+  rss_url: https://cor3ntin.github.io/index.xml
+- id: fluentcpp
+  title: Fluent C++
+  author: Jonathan Boccara
+  website_url: https://www.fluentcpp.com/
+  rss_url: https://www.fluentcpp.com/feed/
+- id: herbsutter
+  title: Sutter's Mill
+  author: Herb Sutter
+  website_url: https://herbsutter.com/
+  rss_url: https://herbsutter.com/feed
+- id: ryankeane
+  title: Ryan Keane's Blog
+  author: Ryan Keane
+  website_url: https://ryanjk5.github.io/
+  rss_url: https://ryanjk5.github.io/feed.xml
+- id: friedkeenan
+  title: fried-blog
+  website_url: https://friedkeenan.github.io/
+  rss_url: https://friedkeenan.github.io/feed.xml

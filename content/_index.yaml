@@ -1,0 +1,73 @@
+$schema: ../schemas/pages/article.json
+title: ''
+navigation:
+- label: Communities
+  path: /communities/
+- label: Events
+  path: /events/
+- label: Blogs
+  path: /blogs/
+- label: YouTube
+  path: /youtube/
+- label: Resources
+  path: /resources/
+- label: Ecosystem
+  path: /ecosystem/
+- label: Packages
+  path: /packages/
+- label: Standardization
+  path: /standardization/
+footer:
+- label: Contributing
+  path: /contributing/
+- label: About
+  path: /about/
+home_cards:
+  - type: home_card
+    title: Communities
+    description: Join C++ Discord servers, Reddit communities, IRC channels, forums, Slack workspaces and more
+    path: /communities/
+    icon: 👥
+    cta: Explore Communities
+  - type: home_card
+    title: Events
+    description: Discover major C++ conferences, user group meetups, standard committee meetings and virtual events happening around the world
+    path: /events/
+    icon: 📅
+    cta: View Events
+  - type: home_card
+    title: Blogs
+    description: Read the latest posts from renowned C++ experts and community voices. Stay informed about modern C++ practices and tricks
+    path: /blogs/
+    icon: 📝
+    cta: Read Blogs
+  - type: home_card
+    title: YouTube Channels
+    description: Watch tutorials, talks and educational content from C++ educators and conferences
+    path: /youtube/
+    icon: 📺
+    cta: Watch Videos
+  - type: home_card
+    title: Resources
+    description: Find general resources, documentation, books and tutorials
+    path: /resources/
+    icon: 📚
+    cta: Explore Resources
+  - type: home_card
+    title: Standardization
+    description: Learn how the sausage is made!
+    path: /standardization/
+    icon: ⚙️
+    cta: Learn More
+  - type: home_card
+    title: Ecosystem
+    description: Explore C++'s vast ecosystem of compilers, standard library implementations, package managers, build systems and more
+    path: /ecosystem/
+    icon: 🌐
+    cta: Explore Ecosystem
+  - type: home_card
+    title: Packages
+    description: Discover C++ libraries for various purposes across package managers
+    path: /packages/
+    icon: 📦
+    cta: Discover Packages

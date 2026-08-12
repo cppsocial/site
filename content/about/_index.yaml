@@ -1,0 +1,6 @@
+$schema: ../../schemas/pages/page.json
+title: About this site
+description: ""
+body:
+  - type: markdown
+    content: !include about.md

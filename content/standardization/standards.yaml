@@ -1,0 +1,132 @@
+$schema: ../../schemas/blocks/standards-timeline.json
+type: standards_timeline
+title: Standards timeline
+description: Key changes by language version. Drafts are public working documents close to each published edition; the ISO publications themselves may differ and are not freely distributed.
+standards:
+  - title: C++29
+    publication: Not published
+    status: In development
+    description: The version of C++ currently being worked on by the committee.
+    features: []
+    cppstat: https://cppstat.dev/?tags=cpp29
+    draft_name: N5054
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2026/n5054.pdf
+    draft_html: https://eel.is/c++draft/
+  - title: C++26
+    publication: Not published
+    status: Enquiry
+    description: The next C++ standard, with major additions for reflection, contracts, asynchronous execution and more
+    features:
+      - Reflection
+      - Contracts
+      - std::execution (senders and receivers)
+      - Pack indexing
+      - Library hardening
+      - std::inplace_vector and std::hive
+      - Hazard pointers and read-copy update (RCU)
+    cppstat: https://cppstat.dev/?tags=cpp26
+    draft_name: N5050
+    draft_pdf: https://open-std.org/jtc1/sc22/wg21/docs/papers/2026/n5050.pdf
+  - title: C++23
+    publication: October 2024
+    status: Published as ISO/IEC 14882:2024
+    description: A broad language and library update with explicit object parameters, more constexpr support, and substantial additions to ranges and general-purpose libraries
+    features:
+      - Explicit object parameters
+      - if consteval
+      - Multidimensional subscript operator
+      - std::expected
+      - std::print
+      - std::mdspan
+      - std::generator and additions to the ranges library
+    cppstat: https://cppstat.dev/?tags=cpp23
+    draft_name: N4950
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2023/n4950.pdf
+    draft_html: https://timsong-cpp.github.io/cppwp/n4950/
+  - title: C++20
+    publication: December 2020
+    status: Published as ISO/IEC 14882:2020
+    description: A major revision introducing concepts, ranges, coroutines and modules, alongside substantial standard-library additions
+    features:
+      - Concepts
+      - Ranges
+      - Coroutines
+      - Modules
+      - Three-way comparison
+      - std::format, std::source_location and std::span
+      - Designated initializers
+    cppstat: https://cppstat.dev/?tags=cpp20
+    draft_name: N4861
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/n4861.pdf
+    draft_html: https://timsong-cpp.github.io/cppwp/n4861/
+  - title: C++17
+    publication: December 2017
+    status: Published as ISO/IEC 14882:2017
+    description: A larger revision adding expressive language facilities, vocabulary types, filesystem support, and parallel algorithms
+    features:
+      - Structured bindings
+      - if constexpr
+      - Fold expressions
+      - Class template argument deduction
+      - std::filesystem
+      - std::optional, std::variant, and std::any
+      - Parallel algorithms
+    cppstat: https://cppstat.dev/?tags=cpp17
+    draft_name: N4659
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf
+    draft_html: https://timsong-cpp.github.io/cppwp/n4659/
+  - title: C++14
+    publication: December 2014
+    status: Published as ISO/IEC 14882:2014
+    description: A smaller revision refining C++11 with generic lambdas, relaxed constant evaluation, return-type deduction, and focused library additions
+    features:
+      - Generic lambdas
+      - Function return type deduction
+      - Variable templates
+      - Relaxed restrictions on constexpr functions
+      - Binary literals and digit separators
+      - std::make_unique
+    cppstat: https://cppstat.dev/?tags=cpp14
+    draft_name: N4140
+    draft_pdf: https://raw.githubusercontent.com/cplusplus/draft/main/papers/n4140.pdf
+    draft_html: https://timsong-cpp.github.io/cppwp/n4140/
+  - title: C++11
+    publication: September 2011
+    status: Published as ISO/IEC 14882:2011
+    description: A major revision that introduced move semantics, lambdas, variadic templates, constant expressions, and a standard concurrency model
+    features:
+      - Move semantics and rvalue references
+      - Lambdas and auto
+      - constexpr
+      - Variadic templates
+      - Range-based for
+      - Smart pointers
+      - Threads, atomics, and the memory model
+    cppstat: https://cppstat.dev/?tags=cpp11
+    draft_name: N3337
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf
+    draft_html: https://timsong-cpp.github.io/cppwp/n3337/
+  - title: C++03
+    publication: October 2003
+    status: Published as ISO/IEC 14882:2003
+    description: A corrective revision incorporating defect resolutions into C++98 rather than a feature-focused language release
+    features:
+      - Value initialization
+      - Core-language defect resolutions
+      - Standard-library defect resolutions
+    cppstat: https://cppstat.dev/?tags=cpp03
+    draft_name: N1804
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2005/n1804.pdf
+  - title: C++98
+    publication: September 1998
+    status: Published as ISO/IEC 14882:1998
+    description: The first international C++ standard, establishing the core language and standard library
+    features:
+      - Templates
+      - Standard Template Library
+      - Exceptions
+      - Runtime type information
+      - Namespaces
+    cppstat: https://cppstat.dev/?tags=cpp98
+    draft_name: N1146
+    draft_pdf: https://www.open-std.org/jtc1/sc22/wg21/docs/wp/pdf/nov97-2/body.pdf

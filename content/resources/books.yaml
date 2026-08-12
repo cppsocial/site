@@ -1,0 +1,17 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Books
+description: Curated editions identified by ISBN; metadata and default covers are generated from Open Library
+search_category: books
+layout: showcase
+page_rows: 2
+randomize: true
+cards:
+- {type: book_card, isbn: '9780321563842'}
+- {type: book_card, isbn: '9781491903995'}
+- {type: book_card, isbn: '9780321714114'}
+- {type: book_card, isbn: '9780321992789'}
+- {type: book_card, isbn: '9781617294693'}
+- {type: book_card, isbn: '9780321714121'}
+- {type: book_card, isbn: '9780321623218', cover_url: 'https://images-na.ssl-images-amazon.com/images/P/0321623215.01.L.jpg'}
+- {type: book_card, isbn: '9781593278885'}

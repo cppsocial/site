@@ -1,0 +1,6 @@
+$schema: ../../schemas/pages/page.json
+title: Contributing
+description: Suggest a resource, correct an entry, or improve cpp.social in other ways
+body:
+  - type: markdown
+    content: !include contributing.md

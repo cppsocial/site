@@ -1,0 +1,16 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Organizations and shows
+description: Podcasts and channels run by organizations
+search_category: organizations
+layout: rail
+randomize: true
+cards:
+- type: channel_card
+  title: KDAB
+  channel_type: organization
+  channel_id: UCjsJkTJSZ5G7ewH2uf08t0A
+- type: channel_card
+  title: CppCast
+  channel_type: show
+  channel_id: UCuCjADS4u3uJDTqUaG0H9dA

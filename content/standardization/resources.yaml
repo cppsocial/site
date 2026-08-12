@@ -1,0 +1,53 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+title: Resources
+description: Links to C++ standardization resources and documentation
+search_category: resources
+cards:
+
+- type: card
+  title: C++ Standards Committee (WG21)
+  path: https://isocpp.org/std/the-committee
+  description: Documentation of the committee's structure
+- type: card
+  title: Committee Meetings & Participation
+  path: https://isocpp.org/std/meetings-and-participation
+  description: Documentation of the committee process and ways to participate
+- type: card
+  title: C++ Draft Standard
+  icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
+  path: https://github.com/cplusplus/draft
+  description: Latest draft standard sources
+- type: card
+  title: Paper status
+  icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
+  path: https://github.com/cplusplus/papers
+  description: When papers progress through groups, the paper status is updated in this repository
+- type: card
+  title: CWG issues list
+  icon: null
+  path: https://cplusplus.github.io/CWG/issues/cwg_index.html
+  description: A list of all reported C++ core language issues.
+- type: card
+  title: LWG issues list
+  icon: null
+  path: https://cplusplus.github.io/LWG/lwg-index.html
+  description: A list of all reported C++ library issues.
+- type: card
+  title: open-std
+  path: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/
+  description: An archive of mailed WG21 papers and old X3J16 papers
+- type: card
+  title: wg21.org
+  path: https://wg21.org/
+  description: A volunteer resource for the C++ standards committee with improved mailing view
+- type: card
+  title: All papers
+  icon: null
+  path: https://wg21.link/index.html
+  description: A searchable index and stable short links for WG21 papers and status issues
+- type: card
+  title: cpp_working_drafts
+  icon: null
+  path: https://jhcarl0814.github.io/cpp_working_drafts/cpp_working_drafts.html?q=reflection
+  description: Fuzzy search for draft versions of the C++ standard

@@ -9,6 +9,9 @@
     if (!directory || !input || !clear || !status) return;
 
     const sections = Array.from(directory.querySelectorAll("[data-directory-section]"));
+    const hasPackageSection = sections.some(
+        (section) => section.dataset.deferredKind === "package",
+    );
     const deferred = new Map();
     const fieldInputs = Array.from(document.querySelectorAll("[data-search-field]"));
     const afterInput = document.querySelector("[data-search-after]");
@@ -1143,11 +1146,21 @@
         const tooShort = current.terms.some(
             (term) => term.length < minimumQueryLength
         );
-        status.textContent = tooShort
-            ? `${matches} ${noun} · type at least ${minimumQueryLength} characters`
-            : stateFlags.filtering && matches === 0 && !syncing
-                ? emptyMessage
-                : `${matches} ${noun}${syncing ? " · indexing…" : ""}`;
+        if (hasPackageSection && !stateFlags.filtering) {
+            const packageState = [...deferred.values()].find(
+                (state) => state.kind === "package",
+            );
+            const total = packageState?.index?.count;
+            status.textContent = total == null
+                ? ""
+                : `${new Intl.NumberFormat().format(total)} packages`;
+        } else {
+            status.textContent = tooShort
+                ? `${matches} ${noun} · type at least ${minimumQueryLength} characters`
+                : stateFlags.filtering && matches === 0 && !syncing
+                    ? emptyMessage
+                    : `${matches} ${noun}${syncing ? " · indexing…" : ""}`;
+        }
     }
 
     async function addDeferredMatches(current, generation) {
@@ -1208,9 +1221,13 @@
         removeSearchOnly();
         updateItems(current);
         for (const state of deferred.values()) {
-            if (!current.terms.length && !current.dateActive && !current.managers.size
-                && state.kind !== "package") {
-                loadIndex(state).then(() => renderPackageTotals(state)).catch(console.error);
+            if (!current.terms.length && !current.dateActive && !current.managers.size) {
+                loadIndex(state).then(() => {
+                    if (state.kind === "package") {
+                        renderPackageTotals(state);
+                        updateItems(filters());
+                    }
+                }).catch(console.error);
             } else if (current.terms.some(
                 (term) => term.length < minimumQueryLength
             ) && state.kind === "package" && packageMatchSummary) {
@@ -1235,8 +1252,9 @@
         if (!more) continue;
         more.addEventListener("click", async () => {
             const pageRows = Number(section.dataset.pageRows || 0);
+            const pageStep = Number(section.dataset.pageStep || 2);
             const visibleRows = Number(section.dataset.visibleRows || pageRows);
-            section.dataset.visibleRows = String(visibleRows + 2);
+            section.dataset.visibleRows = String(visibleRows + pageStep);
             delete section.dataset.visibleItems;
             const state = deferred.get(section);
             const nextLimit = pageLimit(section);

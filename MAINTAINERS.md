@@ -7,5 +7,6 @@ This document contains a list of maintainers of this repository. We use the role
 | Maintainer | GitHub | Email | Role |
 |------------|--------|-------|------|
 | Matthias Wippich | [Tsche](https://github.com/tsche) | mfwippich@gmail.com | Primary maintainer |
+| Daniel Hannon | [notdanhan](https://github.com/notdanhan) | | Curator |
 
 ## Emeritus

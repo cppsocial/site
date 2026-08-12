@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meta-updater"
+version = "0.0.1"
+description = "Metadata updater tool for cpp.social"
+requires-python = ">=3.13"
+dependencies = [
+    "markdown>=3.7",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "conan>=2.31.2"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+
+[project.optional-dependencies]
+dev = ["autopep8>=2.0.0", "mypy>=1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/tsche/cpp.social"
+Issues = "https://github.com/tsche/cpp.social/issues"
+
+[project.scripts]
+meta-updater = "meta_updater.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["meta_updater*"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.autopep8]
+max_line_length = 88
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+files = ["src"]
+python_version = "3.14"

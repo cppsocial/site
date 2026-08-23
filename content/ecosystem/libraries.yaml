@@ -56,7 +56,7 @@ cards:
   title: NVIDIA libcu++
   path: https://nvidia.github.io/cccl/unstable/libcudacxx/
   icon: https://cdn.simpleicons.org/nvidia
-  description: CUDA C++ standard-library implementation providing standard-library facilities for both host and device code, together with CUDA-specific extensions
+  description: libcu++ (libcudacxx) provides fundamental, idiomatic C++ abstractions that aim to make the lives of CUDA C++ developers easier.
   metadata: {License: Apache-2.0 WITH LLVM-exception}
   links:
   - {label: Documentation, path: https://nvidia.github.io/cccl/unstable/libcudacxx/}
@@ -65,7 +65,7 @@ cards:
 - type: card
   title: Embedded Template Library (ETL)
   path: https://www.etlcpp.com/
-  description: STL-like library for embedded systems with fixed-capacity containers, deterministic memory use, and backports of selected newer standard-library facilities
+  description: The Embedded Template Library (ETL) is not intended as a full replacement for the C++ Standard Template Library (STL), but rather as a complementary solution tailored specifically for embedded systems.
   metadata: {License: MIT}
   links:
   - {label: Documentation, path: https://www.etlcpp.com/docs/}

@@ -21,14 +21,10 @@ cards:
     path: https://www.unicode.org/versions/latest/
     description: The current Unicode specification, annexes, and character database
   - type: card
-    title: IEEE 754-2019
-    path: https://standards.ieee.org/ieee/754/6210/
-    description: The active IEEE standard for binary and decimal floating-point formats, arithmetic, exceptions, and reproducible numerical results
+    title: "ISO/IEC 60559"
+    path: https://www.iso.org/standard/80985.html
+    description: This standard specifies interchange and arithmetic formats and methods for binary and decimal floating-point arithmetic in computer programming environments
   - type: card
     title: "ISO 4217"
     path: https://www.iso.org/standard/64758.html
     description: ISO 4217:2015 specifies the structure for a three-letter alphabetic code and an equivalent three-digit numeric code for the representation of currencies
-  - type: card
-    title: "ISO/IEC TS 18661-3"
-    path: https://www.iso.org/standard/65615.html
-    description: ISO/IEC TS 18661-3:2015 extends programming language C to include types with the arithmetic interchange and extended floating-point formats specified in ISO/IEC/IEEE 60559:2011, and to include functions that support the non-arithmetic interchange formats in that standard

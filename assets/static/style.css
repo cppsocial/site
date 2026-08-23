@@ -1608,8 +1608,7 @@ h3 {
 
 .card p {
   font-size: .95rem;
-  line-height: 1.5;
-  flex-grow: 1
+  line-height: 1.5
 }
 
 .card-description__text {
@@ -1618,6 +1617,10 @@ h3 {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7;
+}
+
+.card__footer {
+  margin-top: auto;
 }
 
 .card h3,
@@ -1670,8 +1673,13 @@ h3 {
 .card__metadata {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: .55rem;
   margin: .25rem 0 0;
+}
+
+.card__metadata > div {
+  min-width: 0;
 }
 
 .card__metadata dt {
@@ -1685,12 +1693,14 @@ h3 {
 .card__metadata dd {
   margin: .12rem 0 0;
   font-size: .82rem;
+  overflow-wrap: anywhere;
 }
 
 .card__links {
   display: flex;
   flex-wrap: wrap;
   gap: .45rem .8rem;
+  margin-top: auto;
   padding-top: .7rem;
   border-top: 1px solid var(--border);
 }

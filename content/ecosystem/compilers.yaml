@@ -60,7 +60,7 @@ cards:
   description: Mingw-w64 is a collection of header files, import libraries, libraries and tools that, when combined with a compiler toolchain, such as GCC or LLVM, provides a complete development environment for building native Windows applications and libraries.
   metadata: {License: "Multiple open-source licenses", Targets: "Windows x86 · x64 · ARM64"}
   links:
-  - {label: Getting started with MSYS2, path: https://www.mingw-w64.org/getting-started/msys2/}
+  - {label: Getting started, path: https://www.mingw-w64.org/getting-started/msys2/}
   - {label: Bugs, path: https://sourceforge.net/p/mingw-w64/bugs/}
   - {label: Source, path: https://www.mingw-w64.org/source/}
 - type: card
@@ -73,7 +73,6 @@ cards:
   - {label: Documentation, path: https://emscripten.org/docs/}
   - {label: Issues, path: https://github.com/emscripten-core/emscripten/issues}
   - {label: Source, path: https://github.com/emscripten-core/emscripten}
-  - {label: License, path: https://emscripten.org/docs/introducing_emscripten/emscripten_license.html}
 - type: card
   title: clang-cl
   path: https://clang.llvm.org/docs/UsersManual.html#clang-cl
@@ -106,9 +105,8 @@ cards:
   description: CUDA compiler driver that separates GPU device code from host C++ code, invokes NVIDIA's device compiler, and coordinates a supported host compiler.
   metadata: {License: "NVIDIA CUDA Toolkit EULA", Targets: "NVIDIA GPUs"}
   links:
-  - {label: nvcc documentation, path: https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/}
-  - {label: CUDA C++ Programming Guide, path: https://docs.nvidia.com/cuda/cuda-programming-guide/}
-  - {label: License, path: https://docs.nvidia.com/cuda/eula/index.html}
+  - {label: Documentation, path: https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/}
+  - {label: CUDA Programming Guide, path: https://docs.nvidia.com/cuda/cuda-programming-guide/}
 - type: card
   title: AMD Optimizing C/C++ Compiler (AOCC)
   path: https://www.amd.com/en/developer/aocc.html

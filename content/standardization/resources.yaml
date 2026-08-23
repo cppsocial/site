@@ -26,12 +26,12 @@ cards:
   title: CWG issues list
   icon: null
   path: https://cplusplus.github.io/CWG/issues/cwg_index.html
-  description: A list of all reported C++ core language issues.
+  description: A list of all reported C++ core language issues
 - type: card
   title: LWG issues list
   icon: null
   path: https://cplusplus.github.io/LWG/lwg-index.html
-  description: A list of all reported C++ library issues.
+  description: A list of all reported C++ library issues
 - type: card
   title: open-std
   path: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/

@@ -1,12 +1,12 @@
 $schema: ../../schemas/blocks/standards-timeline.json
 type: standards_timeline
 title: Standards timeline
-description: Key changes by language version. Drafts are public working documents close to each published edition; the ISO publications themselves may differ and are not freely distributed.
+description: Key changes by language version. Drafts are public working documents close to each published edition; the ISO publications themselves may differ and are not freely distributed
 standards:
   - title: C++29
     publication: Not published
     status: In development
-    description: The version of C++ currently being worked on by the committee.
+    description: The version of C++ currently being worked on by the committee
     features: []
     cppstat: https://cppstat.dev/?tags=cpp29
     draft_name: N5054

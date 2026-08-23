@@ -1,6 +1,6 @@
 $schema: ../../schemas/pages/resources.json
 title: Resources
-description: References, guides, and books for learning and working with C++.
+description: References, guides, and books for learning and working with C++
 provenance: !import '../../data/books/provenance.yaml'
 searchable: true
 search_placeholder: Search resources

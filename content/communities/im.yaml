@@ -8,7 +8,7 @@ cards:
     community_id: better-cpp
     title: Better C++
     platform: discord
-    description: A welcoming C++ community for all skill levels - ask questions, share knowledge, and discuss everything C++.
+    description: A welcoming C++ community for all skill levels - ask questions, share knowledge, and discuss everything C++
     path: https://discord.gg/YWfdM2tctt
     metadata: {source: discord, key: YWfdM2tctt}
   - type: community_card
@@ -34,14 +34,14 @@ cards:
     title: C++ Language Slack
     platform: slack
     path: https://cppalliance.org/slack/
-    description: A large multi-channel C++ workspace operated by the C++ Alliance.
+    description: A large multi-channel C++ workspace operated by the C++ Alliance
     metadata: {source: web, key: https://cppalliance.org/slack/}
   - type: community_card
     community_id: libera-cpp
     title: "#c++ on Libera.Chat"
     platform: irc
     path: https://web.libera.chat/#c++
-    description: A long-running IRC channel for C++ discussion and help.
+    description: A long-running IRC channel for C++ discussion and help
     metadata: {source: web, key: https://libera.chat/}
     links:
       - label: Open web chat

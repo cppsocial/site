@@ -7,7 +7,7 @@ cards:
   title: GCC
   path: https://gcc.gnu.org/
   icon: https://cdn.simpleicons.org/gnu
-  description: Mature open-source compiler collection with broad architecture and operating-system support and the libstdc++ C++ standard library.
+  description: Mature open-source compiler collection with broad architecture and operating-system support and the libstdc++ C++ standard library
   metadata: {License: "GPL-3.0-or-later"}
   links:
   - {label: Documentation, path: https://gcc.gnu.org/onlinedocs/}
@@ -17,7 +17,7 @@ cards:
   title: Clang
   path: https://clang.llvm.org/
   icon: https://cdn.simpleicons.org/llvm
-  description: The Clang project provides a language front-end and tooling infrastructure for languages in the C language family (C, C++, Objective C/C++, OpenCL, and CUDA) for the LLVM project.
+  description: The Clang project provides a language front-end and tooling infrastructure for languages in the C language family (C, C++, Objective C/C++, OpenCL, and CUDA) for the LLVM project
   metadata: {License: "Apache-2.0 WITH LLVM-exception"}
   links:
   - {label: Documentation, path: https://clang.llvm.org/docs/}
@@ -26,7 +26,7 @@ cards:
 - type: card
   title: MSVC
   path: https://visualstudio.microsoft.com/vs/features/cplusplus/
-  description: Microsoft's proprietary C++ toolchain for Windows, integrated with Visual Studio and also available as standalone Build Tools.
+  description: Microsoft's proprietary C++ toolchain for Windows, integrated with Visual Studio and also available as standalone Build Tools
   metadata: {License: Proprietary, Targets: "Windows (x86, x64, Arm64)"}
   links:
   - {label: Documentation, path: https://learn.microsoft.com/en-us/cpp/}
@@ -35,21 +35,21 @@ cards:
 - type: card
   title: Green Hills C/C++ Compiler
   path: https://www.ghs.com/products/compiler.html
-  description: Commercial optimizing C/C++ compiler family for embedded and real-time systems, with support for a wide range of processor architectures.
+  description: Commercial optimizing C/C++ compiler family for embedded and real-time systems, with support for a wide range of processor architectures
   metadata: {License: Commercial}
   links:
   - {label: Compiler overview, path: https://www.ghs.com/products/compiler.html}
 - type: card
   title: Embarcadero C++Builder
   path: https://www.embarcadero.com/
-  description: Embarcadero's [BCC32C](https://docwiki.embarcadero.com/RADStudio/Florence/en/Win32_Clang-enhanced_Compilers), [BCC32X](https://docwiki.embarcadero.com/RADStudio/Florence/en/Win32_Clang-enhanced_Compilers), [BCC64](https://docwiki.embarcadero.com/RADStudio/Florence/en/BCC64), [BCCIOSARM64](https://docwiki.embarcadero.com/RADStudio/Florence/en/BCCIOSARM64) and [BCCAARM](https://docwiki.embarcadero.com/RADStudio/Florence/en/BCCAARM) compilers.
+  description: Embarcadero's [BCC32C](https://docwiki.embarcadero.com/RADStudio/Florence/en/Win32_Clang-enhanced_Compilers), [BCC32X](https://docwiki.embarcadero.com/RADStudio/Florence/en/Win32_Clang-enhanced_Compilers), [BCC64](https://docwiki.embarcadero.com/RADStudio/Florence/en/BCC64), [BCCIOSARM64](https://docwiki.embarcadero.com/RADStudio/Florence/en/BCCIOSARM64) and [BCCAARM](https://docwiki.embarcadero.com/RADStudio/Florence/en/BCCAARM) compilers
   metadata: {License: Proprietary, Targets: "Windows"}
   links:
   - {label: Documentation, path: https://docwiki.embarcadero.com/RADStudio/Florence/en/C%2B%2B_Compilers}
 - type: card
   title: Intel oneAPI DPC++/C++ Compiler
   path: https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html
-  description: LLVM-based C++ compiler with SYCL and OpenMP offload support, optimized for Intel CPUs and GPUs.
+  description: LLVM-based C++ compiler with SYCL and OpenMP offload support, optimized for Intel CPUs and GPUs
   metadata: {License: "Intel software EULA", Targets: "Linux · Windows; x86-64 CPUs · Intel GPUs"}
   links:
   - {label: Documentation, path: https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler-documentation.html}
@@ -57,7 +57,7 @@ cards:
 - type: card
   title: MinGW-w64
   path: https://mingw-w64.org/
-  description: Mingw-w64 is a collection of header files, import libraries, libraries and tools that, when combined with a compiler toolchain, such as GCC or LLVM, provides a complete development environment for building native Windows applications and libraries.
+  description: Mingw-w64 is a collection of header files, import libraries, libraries and tools that, when combined with a compiler toolchain, such as GCC or LLVM, provides a complete development environment for building native Windows applications and libraries
   metadata: {License: "Multiple open-source licenses", Targets: "Windows x86 · x64 · ARM64"}
   links:
   - {label: Getting started, path: https://www.mingw-w64.org/getting-started/msys2/}
@@ -67,7 +67,7 @@ cards:
   title: Emscripten
   path: https://emscripten.org/
   icon: https://raw.githubusercontent.com/emscripten-core/emscripten/93327152a04ced7889919a08d5255a4be84d200b/media/logo.svg
-  description: Emscripten is a complete compiler toolchain to WebAssembly, using LLVM, with a special focus on speed, size, and the Web platform.
+  description: Emscripten is a complete compiler toolchain to WebAssembly, using LLVM, with a special focus on speed, size, and the Web platform
   metadata: {License: "MIT OR NCSA", Targets: "WebAssembly"}
   links:
   - {label: Documentation, path: https://emscripten.org/docs/}
@@ -77,7 +77,7 @@ cards:
   title: clang-cl
   path: https://clang.llvm.org/docs/UsersManual.html#clang-cl
   icon: https://cdn.simpleicons.org/llvm
-  description: clang-cl is an alternative command-line interface to Clang, designed for compatibility with the Visual C++ compiler, cl.exe.
+  description: clang-cl is an alternative command-line interface to Clang, designed for compatibility with the Visual C++ compiler, cl.exe
   metadata: {License: "Apache-2.0 WITH LLVM-exception", Targets: "Windows / MSVC-compatible environments"}
   links:
   - {label: User manual, path: https://clang.llvm.org/docs/UsersManual.html#clang-cl}
@@ -85,7 +85,7 @@ cards:
 - type: card
   title: Apple Clang
   path: https://developer.apple.com/xcode/cpp/
-  description: Apple's Clang-based C++ compiler included with Xcode, paired with libc++ and regularly updated for Apple platforms.
+  description: Apple's Clang-based C++ compiler included with Xcode, paired with libc++ and regularly updated for Apple platforms
   metadata: {Targets: "Apple platforms"}
   links:
   - {label: C++ language support, path: https://developer.apple.com/xcode/cpp/}
@@ -93,7 +93,7 @@ cards:
 - type: card
   title: EDG C++ Front End
   path: https://www.edg.com/c
-  description: Commercial, configurable C and C++ compiler front end intended for integration into compilers, source-analysis tools, and other language-processing products.
+  description: Commercial, configurable C and C++ compiler front end intended for integration into compilers, source-analysis tools, and other language-processing products
   metadata: {License: Commercial, Targets: "Configurable host and target environments"}
   links:
   - {label: Language support, path: https://www.edg.com/c/features}
@@ -102,7 +102,7 @@ cards:
   title: nvcc (NVIDIA CUDA Compiler)
   path: https://developer.nvidia.com/cuda-toolkit
   icon: https://cdn.simpleicons.org/nvidia
-  description: CUDA compiler driver that separates GPU device code from host C++ code, invokes NVIDIA's device compiler, and coordinates a supported host compiler.
+  description: CUDA compiler driver that separates GPU device code from host C++ code, invokes NVIDIA's device compiler, and coordinates a supported host compiler
   metadata: {License: "NVIDIA CUDA Toolkit EULA", Targets: "NVIDIA GPUs"}
   links:
   - {label: Documentation, path: https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/}
@@ -110,7 +110,7 @@ cards:
 - type: card
   title: AMD Optimizing C/C++ Compiler (AOCC)
   path: https://www.amd.com/en/developer/aocc.html
-  description: LLVM/Clang-based optimizing C and C++ compiler for x86 targets, with optimizations focused on AMD Zen processors.
+  description: LLVM/Clang-based optimizing C and C++ compiler for x86 targets, with optimizations focused on AMD Zen processors
   metadata: {Targets: "Linux · x86/x86-64"}
   links:
   - {label: Documentation, path: https://docs.amd.com/r/en-US/57222-AOCC-user-guide/Introduction}
@@ -118,7 +118,7 @@ cards:
 - type: card
   title: IAR C/C++ Compiler
   path: https://www.iar.com/embedded-development-tools/iar-embedded-workbench
-  description: Commercial optimizing C/C++ compiler family for embedded development, integrated with IAR Embedded Workbench and Build Tools.
+  description: Commercial optimizing C/C++ compiler family for embedded development, integrated with IAR Embedded Workbench and Build Tools
   metadata: {Targets: "Arm · RISC-V · AVR · MSP430 · Renesas · others"}
   links:
   - {label: Build Tools, path: https://www.iar.com/embedded-development-tools/iar-build-tools}
@@ -126,7 +126,7 @@ cards:
   title: NVC++ (NVIDIA HPC SDK)
   path: https://docs.nvidia.com/hpc-sdk/
   icon: https://cdn.simpleicons.org/nvidia
-  description: NVIDIA HPC C++ compiler supporting multicore CPUs and NVIDIA GPUs through standard C++ parallelism, OpenACC, and OpenMP.
+  description: NVIDIA HPC C++ compiler supporting multicore CPUs and NVIDIA GPUs through standard C++ parallelism, OpenACC, and OpenMP
   metadata: {Targets: "Linux x86-64 · Arm Server · NVIDIA GPUs"}
   links:
   - {label: User guide, path: https://docs.nvidia.com/hpc-sdk/compilers/hpc-compilers-user-guide/}

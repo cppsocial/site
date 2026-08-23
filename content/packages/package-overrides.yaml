@@ -2,7 +2,7 @@ $schema: ../../schemas/packages/overrides.json
 groups:
   - id: nlohmann-json
     name: nlohmann-json
-    reason: Historical package names distribute the same upstream project.
+    reason: Historical package names distribute the same upstream project
     aliases:
       - json
       - jsonformoderncpp

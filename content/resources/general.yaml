@@ -23,15 +23,15 @@ cards:
   - type: card
     title: C++ Insights
     path: https://cppinsights.io/
-    description: Explore transformations performed by the compiler, including templates, lambdas, and coroutines
+    description: A clang-based tool that makes things visible, which normally and intentionally happen behind the scenes
   - type: card
     title: Quick Bench
     path: https://quick-bench.com/
-    description: Run and compare C++ microbenchmarks online using the Google Benchmark framework
+    description: A tool to quickly and simply compare the build time of code snippets with various compilers
   - type: card
     title: C++ Build Benchmark
     path: https://build-bench.com/
-    description: A tool to quickly and simply compare the build time of code snippets with various compilers
+    description: Build Bench is a tool to quickly and simply compare the build time of code snippets with various compilers.
   - type: card
     title: cdecl+
     path: https://cdecl.plus/
@@ -39,4 +39,4 @@ cards:
   - type: card
     title: uiCA
     path: https://uica.uops.info/
-    description: Analyze basic-block throughput on supported x86 microarchitectures and compare predictions from several analysis tools
+    description: Analyze instruction throughput on supported x86 microarchitectures and compare predictions from several analysis tools

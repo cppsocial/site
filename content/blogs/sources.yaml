@@ -13,19 +13,6 @@
   author: Rainer Grimm and contributors
   website_url: https://www.modernescpp.com/
   rss_url: https://www.modernescpp.com/index.php/feed/
-- id: quuxplusone
-  title: Arthur O'Dwyer's Blog
-  author: Arthur O'Dwyer
-  website_url: https://quuxplusone.github.io/blog/
-  rss_url: https://quuxplusone.github.io/blog/feed.xml
-  exclude_tags:
-    - poetry
-    - puzzles
-    - crosswords
-    - etymology
-    - us-politics
-    - morality
-    - adventure
 - id: sandor_dargo
   title: Sandor Dargo's Blog
   author: Sandor Dargo
@@ -46,7 +33,8 @@
   website_url: https://devblogs.microsoft.com/oldnewthing/
   rss_url: https://devblogs.microsoft.com/oldnewthing/feed
 - id: aaronballmanblog
-  title: Aaron Ballman's Blog # not the actual blog's title, but that makes it clearer
+  # not the actual blog's title, but that makes it clearer
+  title: Aaron Ballman's Blog
   author: Aaron Ballman
   website_url: https://blog.aaronballman.com/
   rss_url: https://blog.aaronballman.com/?feed=rss

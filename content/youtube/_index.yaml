@@ -3,7 +3,7 @@ title: YouTube
 description: Browse C++ creators, educators and conference archives
 provenance: !import '../../data/youtube/provenance.yaml'
 searchable: true
-search_placeholder: Search videos and channels...
+search_placeholder: Search videos and channels
 advanced_search: true
 search_fields:
   title: Title

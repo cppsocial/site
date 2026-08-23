@@ -2,7 +2,7 @@ $schema: ../../schemas/blogs/index.json
 title: Blogs
 description: Articles by renowned C++ experts and community voices
 provenance: !import '../../data/blogs/provenance.yaml'
-search_placeholder: Search blogs...
+search_placeholder: Search blogs
 advanced_search: true
 search_fields:
   title: Title

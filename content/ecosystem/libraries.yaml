@@ -35,6 +35,7 @@ cards:
 - type: card
   title: Apache C++ Standard Library (STDCXX)
   path: https://attic.apache.org/projects/stdcxx.html
+  icon: https://www.apache.org/foundation/press/kit/feather.svg
   description: Retired open-source C++ standard library implementation from the Apache Software Foundation
   metadata: {License: Apache-2.0, Status: Retired}
   links:
@@ -45,7 +46,7 @@ cards:
   title: EASTL
   path: https://github.com/electronicarts/EASTL
   icon: https://media.contentapi.ea.com/content/dam/eacom/common/medallion-violet.png
-  description: EASTL stands for Electronic Arts Standard Template Library. It is an extensive and robust implementation that has an emphasis on high performance.
+  description: EASTL stands for Electronic Arts Standard Template Library. It is an extensive and robust implementation that has an emphasis on high performance
   metadata: {License: BSD-3-Clause}
   links:
   - {label: Documentation, path: https://github.com/electronicarts/EASTL/tree/master/doc}
@@ -55,7 +56,7 @@ cards:
   title: NVIDIA libcu++
   path: https://nvidia.github.io/cccl/unstable/libcudacxx/
   icon: https://cdn.simpleicons.org/nvidia
-  description: CUDA C++ standard-library implementation providing standard-library facilities for both host and device code, together with CUDA-specific extensions.
+  description: CUDA C++ standard-library implementation providing standard-library facilities for both host and device code, together with CUDA-specific extensions
   metadata: {License: Apache-2.0 WITH LLVM-exception}
   links:
   - {label: Documentation, path: https://nvidia.github.io/cccl/unstable/libcudacxx/}
@@ -64,7 +65,7 @@ cards:
 - type: card
   title: Embedded Template Library (ETL)
   path: https://www.etlcpp.com/
-  description: STL-like library for embedded systems with fixed-capacity containers, deterministic memory use, and backports of selected newer standard-library facilities.
+  description: STL-like library for embedded systems with fixed-capacity containers, deterministic memory use, and backports of selected newer standard-library facilities
   metadata: {License: MIT}
   links:
   - {label: Documentation, path: https://www.etlcpp.com/docs/}
@@ -73,7 +74,7 @@ cards:
 - type: card
   title: HPX
   path: https://docs.hpx.dev/
-  description: Standards-oriented C++ library and runtime for concurrency and parallelism, implementing standard facilities alongside extensions for asynchronous and distributed execution.
+  description: HPX is a C++ Standard Library for Concurrency and Parallelism
   metadata: {License: BSL-1.0}
   links:
   - {label: Documentation, path: https://docs.hpx.dev/}
@@ -82,7 +83,8 @@ cards:
 - type: card
   title: oneAPI DPC++ Library (oneDPL)
   path: https://uxlfoundation.github.io/oneDPL/index.html
-  description: Parallel-library implementation providing execution policies, parallel algorithms, iterators, and SYCL-oriented extensions for heterogeneous C++ applications.
+  icon: https://uxlfoundation.github.io/oneDPL/_static/oneAPI-rgb-rev-100.png
+  description: Parallel-library implementation providing execution policies, parallel algorithms, iterators and SYCL-oriented extensions for heterogeneous C++ applications
   metadata: {License: Apache-2.0 WITH LLVM-exception}
   links:
   - {label: Documentation, path: https://uxlfoundation.github.io/oneDPL/index.html}

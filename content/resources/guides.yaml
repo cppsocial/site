@@ -35,19 +35,19 @@ cards:
   - type: card
     title: LearnCpp
     path: https://www.learncpp.com/
-    description: Comprehensive, regularly updated tutorial covering C++ from fundamentals through modern language features and best practices
+    description: LearnCpp.com is a free website devoted to teaching you how to program in modern C++.
   - type: card
     title: Abseil C++ Tips of the Week
     path: https://abseil.io/tips/
-    description: In-depth guidance from Google's C++ engineers on language subtleties, API design, readability, and modern C++ practices
+    description: Tips from Google's C++ engineers on language subtleties, API design, readability, and modern C++ practices
   - type: card
     title: SEI CERT C++ Coding Standard
-    path: https://wiki.sei.cmu.edu/confluence/display/cplusplus/
+    path: https://cmu-sei.github.io/secure-coding-standards/sei-cert-cpp-coding-standard/
     description: Security-focused C++ coding rules with noncompliant examples, compliant solutions, and risk assessments
   - type: card
     title: C++ Best Practices
-    path: https://cppbestpractices.com/
-    description: Collaborative collection of practical recommendations for C++ code quality, tooling, safety, APIs, and project configuration
+    path: https://lefticus.gitbooks.io/cpp-best-practices/content/
+    description: Collaborative collection of C++ Best Practices
   - type: card
     title: Google C++ Style Guide
     path: https://google.github.io/styleguide/cppguide.html

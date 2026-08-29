@@ -1153,6 +1153,10 @@ h3 {
   padding: 1rem;
 }
 
+.community-card__footer {
+  margin-top: auto;
+}
+
 .community-card__body h3,
 .community-card__body p,
 .community-card__body .tag-list {

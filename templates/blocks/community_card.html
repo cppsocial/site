@@ -9,6 +9,7 @@
   <div class="community-card__body">
     <h3><a href="{{ this.path }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a></h3>
     <p class="card-description"><span class="card-description__text">{{ this.description or metadata.description|default('') }}</span></p>
+    {% if (this.platform == 'reddit' and (metadata.weekly_visitors or metadata.weekly_contributions)) or (this.platform == 'discord' and metadata.member_count) or this.tags or this.links %}<div class="community-card__footer">
     {% if this.platform == 'reddit' and (metadata.weekly_visitors or metadata.weekly_contributions) %}
       <dl class="community-card__activity">
         {% if metadata.weekly_visitors %}<div><dt>Weekly visitors</dt><dd>{{ "{:,}".format(metadata.weekly_visitors) }}</dd></div>{% endif %}
@@ -17,5 +18,6 @@
     {% elif this.platform == 'discord' and metadata.member_count %}<span class="community-card__members">{{ "{:,}".format(metadata.member_count) }} members</span>{% endif %}
     {% if this.tags %}<ul class="tag-list">{% for tag in this.tags %}<li><button type="button" data-search-tag="{{ tag }}">{{ tag }}</button></li>{% endfor %}</ul>{% endif %}
     {% if this.links %}<div class="card__links">{% for link in this.links %}<a href="{{ link.path }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</div>{% endif %}
+    </div>{% endif %}
   </div>
 </article>

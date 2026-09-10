@@ -3,4 +3,10 @@ type: card_group
 id: conferences
 title: Conferences
 description: Major C++ conferences around the world
-cards: []
+cards:
+  - title: CppCon
+    path: https://cppcon.org/
+    description: Annual, week-long, in-person gathering organized by the C++ community, with talks for experience levels from novice to expert
+    metadata:
+      Location: Aurora, Colorado, USA
+      Frequency: Annual

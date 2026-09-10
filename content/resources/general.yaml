@@ -3,4 +3,7 @@ type: card_group
 id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
-cards: []
+cards:
+  - title: Quick Bench
+    path: https://quick-bench.com/
+    description: A tool to quickly and simply compare the build time of code snippets with various compilers

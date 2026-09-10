@@ -3,4 +3,10 @@ type: card_group
 id: conferences
 title: Conferences
 description: Major C++ conferences around the world
-cards: []
+cards:
+  - title: NDC Toronto
+    path: https://ndctoronto.com/
+    description: NDC Toronto is a premier software development conference held annually in Toronto, covering a wide range of topics including .NET, C++, Rust, Embedded, Cybersecurity, Cloud, DevOps, frontend, AI, and software architecture, to mention a few
+    metadata:
+      Location: Toronto, Canada
+      Frequency: Annual

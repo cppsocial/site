@@ -4,4 +4,7 @@ card_type: channel_card
 id: conferences
 title: Conferences
 description: Browse recorded talks from established C++ conferences
-cards: []
+cards:
+  - title: C++Online
+    channel_type: conference
+    channel_id: UC9KMtRSOkJVCYwvm8TZipog

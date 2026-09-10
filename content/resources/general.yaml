@@ -3,4 +3,7 @@ type: card_group
 id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
-cards: []
+cards:
+  - title: C++ Build Benchmark
+    path: https://build-bench.com/
+    description: Build Bench is a tool to quickly and simply compare the build time of code snippets with various compilers

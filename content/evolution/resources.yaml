@@ -3,4 +3,7 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: Committee Meetings & Participation
+    path: https://isocpp.org/std/meetings-and-participation
+    description: Documentation of the committee process and ways to participate

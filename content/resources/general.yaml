@@ -3,4 +3,7 @@ type: card_group
 id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
-cards: []
+cards:
+  - title: C++ Insights
+    path: https://cppinsights.io/
+    description: A clang-based tool that makes things visible, which normally and intentionally happen behind the scenes

@@ -1,4 +1,5 @@
 # Site runtime and metadata updater.
 -e ./updater
+brotli>=1.1.0
 # Keep production builds reproducible; update this commit deliberately.
 site-generator @ git+https://github.com/cppsocial/site-generator.git@cf12ba03542d97587db502d9d68332a7a3ce24dc

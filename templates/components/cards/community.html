@@ -1,5 +1,8 @@
 {% from "macros/search.html" import search_values %}
-{% set metadata = page.config.metadata.get(this.community_id, {}) %}
+{% set metadata = page.config.metadata.get(this.community_id) %}
+{% if not metadata %}
+    {% set metadata = namespace(description="", avatar_url="", banner_url="", member_count=none, weekly_visitors=none, weekly_contributions=none) %}
+{% endif %}
 {% set show_banner = metadata.banner_url and this.platform in ['discord', 'reddit'] %}
 <article class="card community-card community-card--{{ this.platform }}"
          role="link"

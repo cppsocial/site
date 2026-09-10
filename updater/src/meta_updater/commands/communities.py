@@ -88,7 +88,8 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
 
     changed = metadata_.update(metadata_result, args.check)
     source_urls = {
-        value.source_url if hasattr(value, "source_url") else value.get("source_url", "")
+        value.source_url if hasattr(
+            value, "source_url") else value.get("source_url", "")
         for value in metadata_result.values()
     }
     retain_provenance_urls({url for url in source_urls if url})

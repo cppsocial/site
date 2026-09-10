@@ -250,8 +250,15 @@ def _book_records(config: SiteConfig) -> list[dict[str, Any]]:
             continue
         isbn = str(card.get("isbn", ""))
         book = metadata.get(isbn)
-        if not isbn or not isinstance(book, dict):
-            raise ValueError(f"book metadata is missing for ISBN {isbn or '<empty>'}")
+        if not isinstance(book, dict):
+            # Curated entries can be merged before the metadata updater has run.
+            # Keep previews/builds useful with the fields already supplied by the
+            # card; a later updater run will enrich the same record.
+            book = {
+                "title": isbn,
+                "isbn_13": isbn,
+                "url": f"https://openlibrary.org/isbn/{isbn}",
+            }
         published_label = str(book.get("publish_date", ""))
         record = {
             **book,

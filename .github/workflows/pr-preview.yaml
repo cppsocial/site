@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Authorize preview and resolve PR
         id: authorize
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const owner = context.repo.owner;
@@ -52,16 +52,16 @@ jobs:
             core.setOutput('base-sha', response.data.base.sha);
 
       - name: Check out approved PR head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ steps.authorize.outputs.head-sha }}
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -80,7 +80,7 @@ jobs:
         run: site-generator build
 
       - name: Upload preview site
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pr-${{ steps.authorize.outputs.pr }}-site
           path: build
@@ -99,7 +99,7 @@ jobs:
       url: ${{ steps.deploy.outputs.preview-url }}
     steps:
       - name: Download preview site
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: pr-${{ needs.build.outputs.pr }}-site
           path: build

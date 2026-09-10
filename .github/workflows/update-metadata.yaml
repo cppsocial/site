@@ -12,6 +12,17 @@ on:
         description: File or directory owned by the updater
         required: true
         type: string
+  workflow_dispatch:
+    inputs:
+      updater:
+        description: meta-updater subcommand and PR category
+        required: true
+        type: string
+
+      output-path:
+        description: File or directory owned by the updater
+        required: true
+        type: string
 
 jobs:
   update:
@@ -22,11 +33,11 @@ jobs:
       cancel-in-progress: false
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
 

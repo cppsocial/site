@@ -1,5 +1,8 @@
 {% from "macros/search.html" import search_values %}
-{% set channel = page.config.channel_metadata[this.channel_id] %}
+{% set channel = page.config.channel_metadata.get(this.channel_id) %}
+{% if not channel %}
+    {% set channel = namespace(url="https://www.youtube.com/channel/" ~ this.channel_id, description="", keywords=[], avatar_url="", banner_url="") %}
+{% endif %}
 {% set recent_videos = page.config.video_cache.get(this.channel_id, []) %}
 <article class="card channel-card channel-card--{{ this.channel_type }}"
          data-directory-item

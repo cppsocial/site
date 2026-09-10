@@ -4,4 +4,9 @@ card_type: community_card
 id: instant-messaging
 title: Instant messaging and chat
 description: Real-time conversation, questions, and community coordination
-cards: []
+cards:
+  - community_id: llvm-discord
+    metadata_source: { source: discord, key: 2kQU7PCuys }
+    title: LLVM Discord
+    platform: discord
+    path: https://discord.gg/2kQU7PCuys

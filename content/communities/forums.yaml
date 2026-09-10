@@ -4,4 +4,11 @@ card_type: community_card
 id: forums
 title: Forums and Q&A
 description: Searchable, asynchronous discussions and answers
-cards: []
+cards:
+  - community_id: llvm-discourse
+    metadata_source: { source: web, key: "https://discourse.llvm.org/" }
+    title: LLVM Discourse
+    platform: forum
+    path: https://discourse.llvm.org/
+    icon: https://cdn.simpleicons.org/llvm
+    description: Public design discussions, questions, RFCs, and project announcements for LLVM and Clang

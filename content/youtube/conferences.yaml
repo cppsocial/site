@@ -4,4 +4,7 @@ card_type: channel_card
 id: conferences
 title: Conferences
 description: Browse recorded talks from established C++ conferences
-cards: []
+cards:
+  - title: C++ on Sea
+    channel_type: conference
+    channel_id: UCAczr0j6ZuiVaiGFZ4qxApw

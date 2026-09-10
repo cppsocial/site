@@ -1,0 +1,22 @@
+<footer class="footer">
+    {% set footer_description_item = footer_menu|selectattr('footer_description')|first %}
+    <div class="footer__content">
+        <div class="footer__brand">
+            <a class="logo" href="{{ '/'|url }}">
+            <img class="logo-mark" src="{{ '/favicon.svg'|url }}" alt=""><span>{{ this.config.common.site.name }}</span></a>
+            {% if footer_description_item %}<p>{{ footer_description_item.footer_description }}</p>{% endif %}
+        </div>
+        <nav class="footer__links"
+             aria-label="{{ this.config.common.ui.site.footer_label }}">
+            {% for group in (main_menu + footer_menu)|groupby('footer_group') %}
+                <section>
+                    <h2>{{ group.grouper }}</h2>
+                    {% for item in group.list %}<a href="{{ item.path|url }}">{{ item.label }}</a>{% endfor %}
+                    {% if group.grouper == this.config.common.ui.site.project_group_label %}
+                        <div class="footer__project-meta">{% if provenance_content|trim %}{{ provenance_content }}{% endif %}</div>
+                    {% endif %}
+                </section>
+            {% endfor %}
+        </nav>
+    </div>
+</footer>

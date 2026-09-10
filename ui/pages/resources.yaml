@@ -1,0 +1,11 @@
+search:
+  placeholder: Search resources
+  empty_message: No matching entries found.
+  fields:
+    title: Title
+    content: Description
+    tags: Subject or tag
+    metadata: Metadata
+  categories:
+    references: General resources
+    guides: C++ guides, FAQs and more

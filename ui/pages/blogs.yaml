@@ -1,0 +1,17 @@
+search:
+  placeholder: Search blogs
+  empty_message: No matching blogs found.
+  fields:
+    title: Title
+    content: Content
+    source: Blog
+    tags: Tag
+  categories:
+    posts: Latest posts
+    blogs: Blog sources
+latest:
+  continue_reading: Continue reading
+browse:
+  author_prefix: By
+  read_blog: Read blog
+  rss: RSS

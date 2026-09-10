@@ -1,0 +1,59 @@
+<template data-channel-details>
+    <article class="channel-detail channel-detail--{{ this.channel_type }}">
+        <button class="channel-dialog__close"
+                type="button"
+                data-channel-close
+                aria-label="{{ page.config.ui.dialog.close_label }}">×</button>
+        <section class="channel-detail__visual{% if not channel.banner_url %} channel-detail__visual--fallback{% endif %}">
+            {% if channel.banner_url %}
+                <div class="channel-detail__banner">
+                    <img class="channel-detail__background"
+                         src="{{ channel.banner_url }}"
+                         alt=""
+                         loading="lazy"
+                         decoding="async"
+                         fetchpriority="low"
+                         referrerpolicy="no-referrer">
+                </div>
+            {% endif %}
+            <header class="channel-detail__identity">
+                {% if channel.avatar_url %}
+                    <img class="channel-detail__avatar"
+                         src="{{ channel.avatar_url }}"
+                         alt=""
+                         loading="lazy"
+                         decoding="async"
+                         fetchpriority="low"
+                         referrerpolicy="no-referrer">
+                {% endif %}
+                <div>
+                    <span class="channel-detail__eyebrow">{{ this.channel_type }} {{ page.config.ui.dialog.channel_suffix }}</span>
+                    <h2 id="channel-detail-title">{{ this.title }}</h2>
+                </div>
+            </header>
+            <section class="channel-detail__recent"
+                     aria-labelledby="channel-detail-recent-title">
+                <h3 id="channel-detail-recent-title">{{ page.config.ui.dialog.recent_videos }}</h3>
+                {% if recent_videos %}
+                    <ol class="channel-detail__video-list">
+                        {% for video in recent_videos[:6] %}<li><a href="{{ video.url }}" target="_blank" rel="noopener">{% if video.thumbnail_url %}<img src="{{ video.thumbnail_url }}"
+     alt=""
+     loading="lazy"
+     decoding="async"
+     fetchpriority="low">{% endif %}<span><strong>{{ video.title }}</strong><time datetime="{{ video.published }}">{{ video.published[:10]|date_label }}</time></span></a></li>{% endfor %}
+                    </ol>
+                {% else %}<p class="channel-detail__recent-empty">{{ page.config.ui.dialog.recent_empty }}</p>{% endif %}
+            </section>
+        </section>
+        <div class="channel-detail__body">
+            <div><span class="channel-detail__section-label">{{ page.config.ui.dialog.about_label }}</span>{% if channel.description %}<p class="channel-detail__description">{{ channel.description }}</p>{% else %}<p class="channel-detail__description channel-detail__description--empty">{{ page.config.ui.dialog.missing_description }}</p>{% endif %}</div>
+            {% if channel.keywords %}<section class="channel-detail__topics"
+         aria-labelledby="channel-detail-topics-title"><h3 id="channel-detail-topics-title">{{ page.config.ui.dialog.keywords_label }}</h3>
+            <ul class="tag-list">{% for keyword in channel.keywords %}<li><button type="button" data-search-tag="{{ keyword }}">{{ keyword }}</button></li>{% endfor %}</ul></section>{% endif %}
+        <a class="channel-detail__cta"
+           href="{{ channel.url }}"
+           target="_blank"
+           rel="noopener">{{ page.config.ui.dialog.watch_on_youtube|replace('on YouTube', this.title ~ ' on YouTube') }} <span aria-hidden="true">↗</span></a>
+    </div>
+</article>
+</template>

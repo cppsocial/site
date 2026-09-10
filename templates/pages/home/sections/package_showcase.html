@@ -1,0 +1,16 @@
+<section class="landing-packages" id="{{ section.id }}">
+    <div class="package-panel landing-wrap">
+        <div class="package-copy">
+            <p class="eyebrow">{{ section.intro.eyebrow }}</p>
+            <h2>{{ section.intro.title }}</h2>
+            <p>{{ section.intro.description }}</p>
+            <a class="button-link" href="{{ section.action.path|url }}">{{ section.action.label }} <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="package-demo"><a class="package-search-preview"
+   href="{{ section.demo.search.path|url }}"><svg viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg><span>{{ section.demo.search.label }}</span><span aria-hidden="true">→</span></a><div class="package-preview-results">{% for package in section.demo.previews %}<div><span><strong>{{ package.title }}</strong><small>{{ package.description }}</small></span><span>{% for manager in package.managers %}<b>{{ manager }}</b>{% endfor %}</span></div>{% endfor %}</div><p>{{ section.demo.note }}</p></div>
+    </div>
+</section>

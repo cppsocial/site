@@ -1,0 +1,50 @@
+{% set visible_posts = namespace(items=[], sources=[]) %}
+{% for post in this.config.recent_posts %}
+    {% if not post.get('hidden', false) and post.source_id not in visible_posts.sources %}
+        {% set visible_posts.items = visible_posts.items + [post] %}{% set visible_posts.sources = visible_posts.sources + [post.source_id] %}
+    {% endif %}
+{% endfor %}
+{% set visible_sources = namespace(count=0) %}
+{% for source in this.config.blog_sources %}
+    {% if not source.get('hidden', false) %}
+        {% set visible_sources.count = visible_sources.count + 1 %}
+    {% endif %}
+{% endfor %}
+{% set video_sources = namespace(ids=[]) %}
+{% for group in this.config.video_groups %}
+    {% for card in group.cards %}
+        {% if not card.get('hidden', false) and card.channel_id not in video_sources.ids %}
+            {% set video_sources.ids = video_sources.ids + [card.channel_id] %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+{% set latest = namespace(items=[]) %}
+{% for channel_id, videos in this.config.video_cache.items() %}
+    {% set identity = namespace(title=channel_id) %}
+    {% for group in this.config.video_groups %}
+        {% for card in group.cards %}
+            {% if card.channel_id == channel_id %}
+                {% set identity.title = card.title %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% set channel_latest = namespace(found=false) %}
+    {% for video in videos %}
+        {% if not video.hidden and not channel_latest.found %}
+            {% set latest.items = latest.items + [{"video": video, "channel": identity.title}] %}{% set channel_latest.found = true %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+<section class="landing-signal" id="{{ section.id }}">
+    <div class="landing-wrap">
+        <header class="landing-section-head"><div><p class="eyebrow">{{ section.intro.eyebrow }}</p><h2>{{ section.intro.title }}</h2></div><div><p>{{ section.intro.description }}</p><div class="signal-stats">{% for feed in section.feeds %}<span><strong>{% if feed.source == "blogs" %}{{ visible_sources.count }}{% else %}{{ video_sources.ids|length }}{% endif %}</strong> {{ feed.count_label }}</span>{% endfor %}</div></div></header>
+        <div class="feed-grid">
+            {% for feed in section.feeds %}
+                <div class="landing-feed">
+                    <div class="landing-subhead">
+                        <h3>{{ feed.title }}</h3>
+                        <a href="{{ feed.link.path|url }}">{{ feed.link.label }} <span aria-hidden="true">→</span></a></div>{% if feed.source == "blogs" %}{% for post in visible_posts.items[:feed.limit] %}<a class="landing-story" href="{{ post.url }}"><span>{{ post.source_title }}<br><time datetime="{{ post.published }}">{{ post.published[:10]|date_label }}</time></span><strong>{{ post.title|keep_cpp }}</strong><b aria-hidden="true">↗</b></a>{% endfor %}{% else %}{% for item in (latest.items|sort(attribute='video.published', reverse=true))[:feed.limit] %}<a class="landing-story" href="{{ item.video.url }}"><span>{{ item.channel }}<br><time datetime="{{ item.video.published }}">{{ item.video.published[:10]|date_label }}</time></span><strong>{{ item.video.title|keep_cpp }}</strong><b aria-hidden="true">↗</b></a>{% endfor %}{% endif %}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

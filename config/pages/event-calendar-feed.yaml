@@ -1,0 +1,3 @@
+common: !import "config/common.yaml"
+events: !import "content/events/events.yaml"
+imported_events: !import "data/events-imported.yaml"

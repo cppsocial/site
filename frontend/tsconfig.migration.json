@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "useUnknownInCatchVariables": false
+  },
+  "exclude": [],
+  "include": [
+    "src/directory/search.ts",
+    "src/pages/directory.ts",
+    "src/pages/packages.ts"
+  ]
+}

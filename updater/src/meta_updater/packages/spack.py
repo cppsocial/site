@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import Any
 
+from ..shared.text import render_text
 from .common import (
     REPOSITORIES,
     _class_metadata,
@@ -13,7 +14,6 @@ from .common import (
     scalar_strings,
     source_checksums,
 )
-from ..shared.text import render_text
 
 
 def parse_spack(root: Path) -> list[dict[str, Any]]:
@@ -98,13 +98,6 @@ def parse_spack(root: Path) -> list[dict[str, Any]]:
             for args, keywords in calls.get("variant", [])
             if args and args[0]
         ]
-
-        # filter out unrelated packages
-        disallowed_prefixes = "py-", "perl-", "ruby-", "r-"
-        disallowed_deps = "py-setuptool"
-        if (any(name.startswith(p) for p in disallowed_prefixes)
-            or any(map(lambda v:v in disallowed_deps, dependencies))):
-            continue
 
         rendered_description = render_text(str(meta.get("description") or ""))
         records.append(

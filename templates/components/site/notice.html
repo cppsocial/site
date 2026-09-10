@@ -1,0 +1,5 @@
+{% if this.config.common.site.announcement %}
+    <aside class="site-notice">
+        <div class="site-shell">{{ this.config.common.site.announcement|markdown }}</div>
+    </aside>
+{% endif %}

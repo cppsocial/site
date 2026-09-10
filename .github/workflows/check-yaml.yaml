@@ -1,0 +1,32 @@
+name: Check - YAML
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "**/*.yaml"
+      - "!data/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".prettierignore"
+
+permissions:
+  contents: read
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Check formatting
+        run: |
+          npm run format:yaml
+          if ! git diff --exit-code -- ':(glob)**/*.yaml' ':(exclude)data/**'; then
+            echo "::error::YAML formatting differs. Run: npm run format:yaml"
+            exit 1
+          fi

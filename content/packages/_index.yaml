@@ -1,0 +1,8 @@
+$schema: ../../schemas/pages/packages.json
+title: Packages & Libraries
+seo_title: C++ Package and Library Search
+description: Search C++ packages across several package managers
+config: !import "config/pages/packages.yaml"
+catalog:
+  title: Package catalog
+  description: Search the shared catalog, then expand a package to compare its distributions across package managers.

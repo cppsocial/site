@@ -1,0 +1,21 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/blogs.yaml"
+search:
+  enabled: true
+  database: true
+  feed_cards: true
+  advanced: true
+  date_range: true
+  relevance_filter: false
+  cpp_relevance_threshold: 0.5
+sections:
+  latest:
+    page_rows: 5
+    search_category: posts
+  browse:
+    randomize: true
+    search_category: blogs
+blog_metadata: !import "data/blogs/metadata.yaml"
+post_cache: !import-list "data/blogs/posts"
+provenance: !import "data/blogs/provenance.yaml"

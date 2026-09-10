@@ -1,0 +1,12 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/communities.yaml"
+search:
+  enabled: true
+sections:
+  instant-messaging:
+    randomize: true
+  forums:
+    randomize: true
+metadata: !import "data/communities/metadata.yaml"
+provenance: !import "data/communities/provenance.yaml"

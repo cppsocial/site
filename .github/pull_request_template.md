@@ -1,17 +1,13 @@
-## Description
+## What changed
 
-Please describe your changes.
+<!-- Explain the change and why it belongs on cpp.social. -->
 
-## Related Issues
+Closes #
 
-Closes #[issue number]
+## Checks
 
-## Verification
-
-- [ ] I've tested these changes locally (`make dev`)
-- [ ] All links are working and verified
-- [ ] I've checked for duplicate entries
-
-## Additional Notes
-
-[Any additional information for reviewers]
+- [ ] I used the relevant checklist in `docs/contributing.md`
+- [ ] Any content added meets the eligibility requirements in `docs/contributing.md`
+- [ ] I ran `make build`
+- [ ] I ran any other checks relevant to this change
+- [ ] I did not include unrelated generated-file changes

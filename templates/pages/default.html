@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}{% if this.config.search.enabled %}main--directory{% else %}main--page{% endif %}{% endblock %}
+{% block body %}
+    <article class="post">
+        {% set page = this %}
+        {% set blocks = this.sections %}
+        {% if this.config.search.enabled %}
+            {% include "components/directory/header.html" %}
+            <div class="directory-content"
+                 data-directory
+                 data-empty-message="{{ this.config.ui.search.empty_message }}">
+                {% include "components/directory/client_config.html" %}
+        {% else %}
+            {% include "components/page_header.html" %}
+        {% endif %}
+        {% include "blocks/render.html" %}
+        {% if this.config.search.enabled %}</div>{% endif %}
+    </article>
+{% endblock %}
+{% block scripts %}
+    {% if this.config.search.enabled %}<script src="{{ '/assets/directory.js'|url }}"></script>{% endif %}
+{% endblock %}

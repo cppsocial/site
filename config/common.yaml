@@ -1,0 +1,12 @@
+site:
+  language: en
+  name: cpp.social
+  origin: https://cpp.social
+  logo_mark: C++
+  description: A community-maintained index of C++ resources, communities, events, tools, libraries, books, and standards information.
+  logo: /favicon.png
+  social_image: /static/images/social-preview.png
+  social_image_alt: cpp.social connects the C++ community, resources, events, and ecosystem.
+  title_separator: " — "
+  announcement: !include announcement.md
+ui: !import "ui/text.yaml"

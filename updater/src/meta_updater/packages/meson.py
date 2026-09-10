@@ -31,7 +31,7 @@ def parse_meson(root: Path) -> list[dict[str, Any]]:
         directory = section.get("directory", "")
         version = ""
         if directory.startswith(name + "-"):
-            version = directory[len(name) + 1 :]
+            version = directory[len(name) + 1:]
         release = releases.get(name, {})
         dependency_names = clean_list(release.get("dependency_names", []))
         program_names = clean_list(release.get("program_names", []))

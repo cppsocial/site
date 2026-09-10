@@ -11,6 +11,7 @@ from typing import Any
 from .feeds import fetch
 from .images import favicon, image_url, meta_values
 from .provenance import track_provenance
+from .text import sanitize_unicode
 
 HEADERS = {
     "User-Agent": "cpp.social metadata updater (+https://cpp.social/contributing/)",
@@ -26,7 +27,7 @@ def discord(key: str, timeout: float) -> dict[str, Any]:
     icon = guild.get("icon")
     banner = guild.get("banner")
     return {
-        "description": (guild.get("description") or "").strip(),
+        "description": sanitize_unicode(guild.get("description") or "").strip(),
         "avatar_url": f"https://cdn.discordapp.com/icons/{guild_id}/{icon}.png?size=512"
         if icon
         else "",
@@ -50,6 +51,25 @@ def _reddit_image(page: str, subreddit_id: str, name: str) -> str:
     return re.split(r"[\"' <>]", value, maxsplit=1)[0].rstrip(");")
 
 
+def _reddit_challenge_query(page: str) -> str:
+    challenge = re.search(r'\)\("([0-9a-f]+)"\)', page)
+    token = re.search(
+        r'name=["\'](?P<name>jsc_token|token)["\']\s+'
+        r'value=["\'](?P<value>[^"\']+)["\']',
+        page,
+    )
+    if not challenge or not token:
+        return ""
+    return urllib.parse.urlencode(
+        {
+            "solution": challenge.group(1) * 2,
+            "js_challenge": "1",
+            token.group("name"): token.group("value"),
+            "jsc_orig_r": "",
+        }
+    )
+
+
 def reddit(key: str, timeout: float) -> dict[str, Any]:
     url = f"https://www.reddit.com/r/{key}/"
     opener = urllib.request.build_opener(
@@ -62,18 +82,9 @@ def reddit(key: str, timeout: float) -> dict[str, Any]:
     page = opener.open(request(url), timeout=timeout).read().decode("utf-8", "replace")
     track_provenance(url)
     if 'name="js_challenge"' in page:
-        challenge = re.search(r'\)\("([0-9a-f]+)"\)', page)
-        token = re.search(r'name="token" value="([^"]+)"', page)
-        if not challenge or not token:
+        query = _reddit_challenge_query(page)
+        if not query:
             raise ValueError(f"could not solve Reddit verification for r/{key}")
-        query = urllib.parse.urlencode(
-            {
-                "solution": challenge.group(1) * 2,
-                "js_challenge": "1",
-                "token": token.group(1),
-                "jsc_orig_r": "",
-            }
-        )
         page = (
             opener.open(request(f"{url}?{query}"), timeout=timeout)
             .read()
@@ -98,7 +109,9 @@ def reddit(key: str, timeout: float) -> dict[str, Any]:
     )
 
     return {
-        "description": html.unescape(data.get("description", "")).strip(),
+        "description": sanitize_unicode(
+            html.unescape(data.get("description", ""))
+        ).strip(),
         "avatar_url": html.unescape(avatar),
         "banner_url": html.unescape(banner),
         "member_count": None,
@@ -112,8 +125,8 @@ def web(url: str, timeout: float) -> dict[str, Any]:
     page = fetch(url, timeout, HEADERS).decode("utf-8", "replace")
     values = meta_values(page)
     return {
-        "description": values.get(
-            "og:description", values.get("description", "")
+        "description": sanitize_unicode(
+            values.get("og:description", values.get("description", ""))
         ).strip(),
         "avatar_url": image_url(url, values.get("og:logo", "")) or favicon(page, url),
         "banner_url": image_url(url, values.get("og:image", "")),
@@ -128,7 +141,9 @@ def stackoverflow(key: str, timeout: float) -> dict[str, Any]:
     if not items:
         raise ValueError("Stack Overflow returned no tag metadata")
     return {
-        "description": items[0].get("excerpt", "").strip(),
+        "description": sanitize_unicode(
+            items[0].get("excerpt", "")
+        ).strip(),
         "avatar_url": "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png",
         "banner_url": "",
         "member_count": None,

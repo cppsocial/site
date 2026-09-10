@@ -1,0 +1,58 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block main_class %}main--docs{% endblock %}
+{% block body %}
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav aria-label="Contributing documentation">
+                <a class="docs-sidebar__title" href="#main-content">{{ this.title }}</a>
+                {% for group in this.groups %}
+                    <section class="docs-nav-group">
+                        <h2>{{ group.title }}</h2>
+                        <ul>
+                            {% for document in group.pages %}
+                                <li><a href="#{{ document.id }}">{{ document.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                {% endfor %}
+            </nav>
+        </aside>
+        <details class="docs-mobile-nav">
+            <summary>Browse this guide</summary>
+            <nav aria-label="Contributing documentation">
+                {% for group in this.groups %}
+                    <section class="docs-nav-group">
+                        <h2>{{ group.title }}</h2>
+                        <ul>
+                            {% for document in group.pages %}
+                                <li><a href="#{{ document.id }}">{{ document.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                {% endfor %}
+            </nav>
+        </details>
+        <article class="docs-content">
+            {% include "components/page_header.html" %}
+            {% for group in this.groups %}
+                {% for document in group.pages %}
+                    <section class="docs-page" id="{{ document.id }}" data-docs-page>
+                        <p class="docs-page__group">{{ group.title }}</p>
+                        <h2>{{ document.title }}</h2>
+                        {% if document.description %}<p class="docs-page__description">{{ document.description }}</p>{% endif %}
+                        <div class="docs-markdown">{{ document.rendered_content|safe }}</div>
+                    </section>
+                {% endfor %}
+            {% endfor %}
+        </article>
+        <aside class="docs-toc">
+            <nav aria-label="On this page">
+                <h2>On this page</h2>
+                <ol data-docs-toc>
+                </ol>
+            </nav>
+        </aside>
+    </div>
+{% endblock %}
+{% block scripts %}<script src="{{ '/assets/documentation.js'|url }}"></script>{% endblock %}

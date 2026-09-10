@@ -3,7 +3,15 @@ content = "content"
 schemas = "schemas"
 templates = "templates"
 assets = "assets"
-browser_data = "data/web"
+data = "data"
 output = "build"
 schema_output = "schemas"
 minify = true
+plugins = ["site_plugins.browser"]
+
+[site.frontend]
+source = "frontend"
+output = "."
+command = ["npm", "run", "build:frontend", "--", "--outdir={output}", "--mode={mode}"]
+artifacts = ["assets", "service-worker.js"]
+watch = ["package.json", "package-lock.json", "frontend/tsconfig.json"]

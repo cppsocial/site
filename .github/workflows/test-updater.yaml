@@ -1,0 +1,29 @@
+name: Test - updater
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "updater/**"
+      - "schemas/**"
+      - "site_plugins/**"
+      - "requirements*.txt"
+      - ".github/workflows/test-updater.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run updater tests
+        env:
+          PYTHONPATH: updater/src
+        run: python -m unittest discover -s updater/tests -v

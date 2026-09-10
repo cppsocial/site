@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit, urlunsplit
 
+from ..shared.text import excerpt_html, render_text, sanitize_unicode
+
 REPOSITORIES = {
     "conan": "https://github.com/conan-io/conan-center-index",
     "vcpkg": "https://github.com/microsoft/vcpkg",
@@ -18,6 +20,15 @@ REPOSITORIES = {
     "cppget": "https://pkg.cppget.org/1/",
     "hunter": "https://github.com/cpp-pm/hunter",
     "xmake": "https://github.com/xmake-io/xmake-repo",
+}
+
+INHERITED_RELEASE_FIELDS = {
+    "summary",
+    "description",
+    "licenses",
+    "homepage",
+    "repository_url",
+    "documentation_url",
 }
 
 
@@ -121,7 +132,28 @@ def normalize_package_record(package: dict[str, Any]) -> dict[str, Any]:
     representation. Empty optional values are omitted to keep YAML and JSON
     payloads compact.
     """
-    result = dict(package)
+    def sanitized(value: Any) -> Any:
+        if isinstance(value, str):
+            return sanitize_unicode(value)
+        if isinstance(value, list):
+            return [sanitized(item) for item in value]
+        if isinstance(value, dict):
+            return {key: sanitized(item) for key, item in value.items()}
+        return value
+
+    result = sanitized(dict(package))
+    if result.get("topics"):
+        result["topics"] = clean_list(result["topics"])
+    if summary := result.get("summary"):
+        result["summary"] = render_text(summary).summary_text
+    if not result.get("summary"):
+        result.pop("summary", None)
+    if description := result.get("description"):
+        result["description"] = excerpt_html(description).body_html
+        if result["description"] == result.get("summary"):
+            result.pop("description")
+    if not result.get("description"):
+        result.pop("description_format", None)
     registry = str(result.get("registry") or "")
     artifact_kind = (
         "registry_package"
@@ -131,6 +163,20 @@ def normalize_package_record(package: dict[str, Any]) -> dict[str, Any]:
     normalized_versions = []
     for raw in result.get("versions") or []:
         version = dict(raw)
+        if summary := version.get("summary"):
+            version["summary"] = render_text(summary).summary_text
+        if not version.get("summary"):
+            version.pop("summary", None)
+        if description := version.get("description"):
+            version["description"] = excerpt_html(description).body_html
+            if version["description"] == version.get("summary"):
+                version.pop("description")
+        for field_name in INHERITED_RELEASE_FIELDS:
+            if (
+                field_name in version
+                and version[field_name] == result.get(field_name)
+            ):
+                version.pop(field_name)
         exact_version = str(version.get("version") or "")
         upstream, inferred_revision = version_identity(registry, exact_version)
         if upstream and upstream != exact_version and not version.get("upstream_version"):
@@ -138,6 +184,8 @@ def normalize_package_record(package: dict[str, Any]) -> dict[str, Any]:
         if inferred_revision and not version.get("packaging_revision"):
             version["packaging_revision"] = inferred_revision
         artifacts = [dict(item) for item in version.get("artifacts") or []]
+        for artifact in artifacts:
+            artifact.setdefault("kind", "upstream_source")
         urls = clean_list(version.pop("source_urls", []) or [])
         checksums = clean_list(version.pop("checksums", []) or [])
         known_urls = {str(item.get("url") or "") for item in artifacts}

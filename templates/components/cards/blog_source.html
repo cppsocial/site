@@ -1,0 +1,28 @@
+{% from "macros/search.html" import search_values %}
+<article class="blog-card"
+         role="link"
+         tabindex="0"
+         data-card-href="{{ blog.website_url }}"
+         data-blog-avatar-source="{{ blog.title }}"
+         data-blog-avatar="{{ metadata.avatar_url|default('') }}"
+         data-directory-item
+         data-search-title="{{ blog.title|lower }}"
+         data-search-content="{{ description|lower }}"
+         data-search-source="{{ blog.author|lower }}"
+         data-search-tags="{{ metadata.keywords|default([]) |join(' ')|lower }}"
+         {{ search_values([blog.title, blog.author, description, blog.website_url] + metadata.keywords|default([])) }}>
+    <header class="blog-card__header">
+        {% if metadata.avatar_url|default("") %}
+            <img class="blog-card__avatar"
+                 src="{{ metadata.avatar_url }}"
+                 alt=""
+                 loading="lazy"
+                 decoding="async">
+        {% endif %}
+        <div>{% if blog.author %}<p class="blog-card__author">{{ page.config.ui.browse.author_prefix }} {{ blog.author }}</p>{% endif %}<h3><a href="{{ blog.website_url }}" target="_blank" rel="noopener">{{ blog.title|keep_cpp }}</a></h3></div>
+    </header>
+    {% if description %}<p class="blog-card__description card-description"><span class="card-description__text">{{ description }}</span></p>{% endif %}
+    <footer class="blog-card__footer">
+        <a href="{{ blog.website_url }}" target="_blank" rel="noopener">{{ page.config.ui.browse.read_blog }} <span aria-hidden="true">→</span></a><a href="{{ blog.rss_url }}" target="_blank" rel="noopener">{{ page.config.ui.browse.rss }}</a>
+    </footer>
+</article>

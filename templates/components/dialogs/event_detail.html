@@ -1,0 +1,44 @@
+<template data-event-details>
+    <article class="event-detail">
+        <button class="book-dialog__close"
+                type="button"
+                data-event-close
+                aria-label="{{ page.config.ui.calendar.close_label }}">×</button>
+        <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != 'confirmed' %} · {{ this.status }}{% endif %}</p>
+        <h2 id="event-dialog-title">{{ this.title|keep_cpp }}</h2>
+        {% if this.description %}<p class="event-detail__description">{{ this.description }}</p>{% endif %}
+        {% if not this.get('public', true) %}
+            <aside class="event-detail__notice">
+                <strong>{{ page.config.ui.calendar.non_public_note }}</strong>
+                <a href="{{ page.config.ui.calendar.participation_url }}"
+                   target="_blank"
+                   rel="noopener">{{ page.config.ui.calendar.participation_label }}</a>
+            </aside>
+        {% endif %}
+        <dl class="event-detail__facts">
+            <div>
+                <dt>{{ page.config.ui.calendar.date_label }}</dt>
+                <dd>
+                    <time datetime="{{ this.start_date }}">{{ this.start_date|date_label }}</time>
+                    {% if this.end_date and this.end_date != this.start_date %}– <time datetime="{{ this.end_date }}">{{ this.end_date|date_label }}</time>{% endif %}
+                    {% set time_label = this|event_time_label %}{% if time_label %}<span>{{ time_label }}</span>{% endif %}
+                </dd>
+            </div>
+            {% if this.location %}<div><dt>{{ page.config.common.ui.cards.location_label }}</dt><dd>{% if this.venue %}{{ this.venue }}, {% endif %}{{ this.location }}</dd></div>{% endif %}
+            {% if this.organizer %}<div><dt>{{ page.config.common.ui.cards.organizer_label }}</dt><dd>{{ this.organizer }}</dd></div>{% endif %}
+            <div>
+                <dt>{{ page.config.common.ui.cards.format_label }}</dt>
+                <dd>
+                    {{ this.format|replace('_', ' ') |title }}
+                </dd>
+            </div>
+        </dl>
+        <nav class="event-detail__links"
+             aria-label="{{ this.title }} {{ page.config.common.ui.cards.links_suffix }}">
+            {% if this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.event_website_label }}</a>{% endif %}
+            {% if this.registration_url and this.registration_url != this.path %}<a href="{{ this.registration_url }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.registration_label }}</a>{% endif %}
+            <a href="{{ this|google_event_url }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.add_to_google_label }}</a>
+            <a href="{{ this.source_url }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.source_label }}{% if this.last_verified %} · {{ page.config.common.ui.cards.checked_label }} {{ this.last_verified }}{% endif %}</a>
+        </nav>
+    </article>
+</template>

@@ -1,0 +1,17 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/events.yaml"
+search:
+  enabled: true
+feed_url: https://cpp.social/events/calendar.ics
+sections:
+  upcoming:
+    page_rows: 5
+  conferences:
+    randomize: true
+  past-conferences:
+    randomize: true
+  meetups:
+    randomize: true
+events: !import "content/events/events.yaml"
+imported_events: !import "data/events-imported.yaml"

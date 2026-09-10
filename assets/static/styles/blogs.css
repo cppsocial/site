@@ -1,0 +1,209 @@
+.blog-card {
+  position: relative;
+  gap: 0.85rem;
+  min-height: 15rem;
+  padding: 1.35rem;
+}
+
+.blog-card__header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.blog-card .blog-card__author {
+  margin: 0 0 0.2rem;
+  color: var(--secondary);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.blog-card .blog-card__description {
+  margin: 0;
+  color: var(--secondary);
+  flex-grow: 1;
+}
+
+.blog-card .tag-list {
+  margin: 0;
+}
+
+.blog-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.blog-card__footer a {
+  text-decoration: none;
+}
+
+.blog-card__footer a:last-child {
+  margin-left: auto;
+  color: var(--secondary);
+}
+
+.blog-latest {
+  margin-bottom: 2.75rem;
+}
+
+.blog-latest__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: 0.9rem;
+  margin-left: var(--directory-inset);
+}
+
+.blog-post-card {
+  min-width: 0;
+  padding: 1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.blog-post-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.blog-post-card__source {
+  margin: 0 0 0.35rem;
+  color: var(--secondary);
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.blog-post-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.blog-post-card h3 a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.blog-post-card h3 a:hover {
+  color: var(--accent);
+}
+
+.blog-post-card__description {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--secondary);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.blog-post-card__description > :last-child {
+  margin-bottom: 0;
+}
+
+.directory-section__toggle {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 4.5rem;
+  height: 2.1rem;
+  padding: 0 0.65rem;
+  color: var(--secondary);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.directory-section__toggle:hover,
+.directory-section__toggle:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.directory-section__toggle-icon {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(0.15rem) rotate(225deg);
+  transition: transform 0.2s ease;
+}
+
+[data-directory-section][data-collapsed="true"]
+  .directory-section__toggle-icon {
+  transform: translateY(-0.1rem) rotate(45deg);
+}
+
+[data-directory-section][data-collapsed="true"]
+  > [data-directory-section-content] {
+  display: none;
+}
+
+.directory-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 1.25rem;
+}
+
+.directory-pagination button {
+  min-width: 2.2rem;
+  min-height: 2.2rem;
+  padding: 0.35rem 0.6rem;
+  color: var(--secondary);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font: 650 0.72rem/1 inherit;
+}
+
+.directory-pagination button:hover,
+.directory-pagination button:focus-visible,
+.directory-pagination button[aria-current="page"] {
+  color: var(--primary);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.directory-pagination button[aria-current="page"] {
+  color: #fff;
+  background: var(--accent);
+}
+
+.directory-pagination button:disabled {
+  color: var(--secondary);
+  border-color: var(--border);
+  background: var(--soft);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.directory-pagination__gap {
+  min-width: 1.15rem;
+  color: var(--secondary);
+  text-align: center;
+}

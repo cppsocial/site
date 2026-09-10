@@ -13,7 +13,6 @@ from typing import Any
 import yaml
 
 from ..shared.text import render_text
-
 from .common import (
     REPOSITORIES,
     _class_metadata,

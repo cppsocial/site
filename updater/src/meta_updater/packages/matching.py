@@ -9,6 +9,11 @@ from urllib.parse import urlsplit
 from .common import clean_licenses, clean_list, repository_identity
 
 
+def _package_prose(package: dict[str, Any]) -> str:
+    """Return the concise prose retained for identity comparison."""
+    return str(package.get("summary") or package.get("description") or "")
+
+
 def _spelling_name(value: str) -> str:
     return re.sub(r"[-_.+]", "", value.casefold())
 
@@ -38,8 +43,10 @@ def _identity(package: dict[str, Any]) -> str:
 def _identities(package: dict[str, Any]) -> set[str]:
     values = {
         package.get("repository_url", ""),
-        *(release.get("repository_url", "") for release in package.get("versions") or []),
-        *(artifact.get("url", "") for artifact in _artifacts(package, "upstream_source")),
+        *(release.get("repository_url", "")
+          for release in package.get("versions") or []),
+        *(artifact.get("url", "")
+          for artifact in _artifacts(package, "upstream_source")),
     }
     return {
         identity for value in values if (identity := repository_identity(str(value)))
@@ -132,7 +139,7 @@ def compare_packages(
     elif left_licenses and right_licenses:
         evidence.append({"signal": "conflicting licenses", "weight": -0.12})
     certain = any(item["weight"] == 1.0 for item in evidence)
-    descriptions = (left.get("description", ""), right.get("description", ""))
+    descriptions = (_package_prose(left), _package_prose(right))
     if all(descriptions):
         similarity = SequenceMatcher(
             None, *[value.casefold() for value in descriptions]
@@ -226,7 +233,7 @@ def _same_code_identity(left: dict[str, Any], right: dict[str, Any]) -> bool:
     ) & _package_checksums(right):
         return True
     repositories = _identities(left) & _identities(right)
-    descriptions = (left.get("description", ""), right.get("description", ""))
+    descriptions = (_package_prose(left), _package_prose(right))
     return bool(
         repositories
         and all(descriptions)
@@ -254,8 +261,8 @@ def _alias_groups_compatible(
             if not _same_code_identity(left_package, right_package):
                 return False
             descriptions = (
-                left_package.get("description", ""),
-                right_package.get("description", ""),
+                _package_prose(left_package),
+                _package_prose(right_package),
             )
             if (
                 all(descriptions)
@@ -360,11 +367,6 @@ def amalgamate(
             raise ValueError(
                 f"package override references unknown IDs: {', '.join(missing)}"
             )
-        package_ids.extend(
-            package_id
-            for package_id in override.get("optional_packages") or []
-            if package_id in packages_by_id and package_id not in package_ids
-        )
         if not package_ids:
             raise ValueError("package override groups require at least one package ID")
         for package_id in package_ids:
@@ -384,7 +386,7 @@ def amalgamate(
             )
     for values in blocks.values():
         for index, left in enumerate(values):
-            for right in values[index + 1 :]:
+            for right in values[index + 1:]:
                 pair = tuple(sorted((left["id"], right["id"])))
                 if pair in seen:
                     continue
@@ -482,10 +484,12 @@ def amalgamate(
     for package in master:
         if curated_id := package.pop("curated_id", None):
             if curated_id in assigned and package.get("id") != curated_id:
-                raise ValueError(f"curated package entity ID is not unique: {curated_id}")
+                raise ValueError(
+                    f"curated package entity ID is not unique: {curated_id}")
             package["id"] = curated_id
             assigned.add(curated_id)
-    id_counts = Counter(_master_id(package["name"]) for package in master if "id" not in package)
+    id_counts = Counter(_master_id(package["name"])
+                        for package in master if "id" not in package)
     for package in master:
         if "id" in package:
             continue

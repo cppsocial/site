@@ -1,0 +1,8 @@
+$schema: ../../schemas/pages/communities.json
+title: Communities
+seo_title: C++ Communities, Forums and Chat Groups
+description: Connect with C++ communities around the world
+config: !import "config/pages/communities.yaml"
+sections:
+  - !import "im.yaml"
+  - !import "forums.yaml"

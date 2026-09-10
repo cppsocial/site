@@ -1,0 +1,9 @@
+$schema: ../../schemas/pages/youtube.json
+title: YouTube
+seo_title: C++ YouTube Channels and Conference Videos
+description: Browse C++ creators, educators and conference archives
+config: !import "config/pages/youtube.yaml"
+latest:
+  title: Latest videos
+  description: Recent uploads across the channels we track.
+sections: !import "groups.yaml"

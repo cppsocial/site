@@ -1,13 +1,11 @@
-import tempfile
 import unittest
 from datetime import UTC, datetime
-from pathlib import Path
 
 from pydantic import ValidationError
 from schemas.blocks import CachedVideo
 
 from meta_updater.shared.blogs import post_id, render_description
-from meta_updater.shared.relevance import load_relevance_labels, merge_records
+from meta_updater.shared.recent import merge_records
 
 
 class RelevanceTests(unittest.TestCase):
@@ -23,7 +21,7 @@ class RelevanceTests(unittest.TestCase):
         self.assertEqual(render_description("C++ & tools"), "C++ &amp; tools")
         self.assertEqual(
             render_description("First\n\nSecond"),
-            "<p>First</p>\n<p>Second</p>",
+            "<p>First</p><p>Second</p>",
         )
 
     def test_refresh_preserves_existing_relevance(self) -> None:
@@ -33,17 +31,6 @@ class RelevanceTests(unittest.TestCase):
             current, updates, id_field="id", normalize=lambda item: dict(item)
         )
         self.assertEqual(values, [{"id": "one", "title": "new", "cpp_relevance": 0.0}])
-
-    def test_labels_are_bounded_numbers(self) -> None:
-        with tempfile.TemporaryDirectory() as temporary:
-            path = Path(temporary) / "labels.yaml"
-            path.write_text("youtube_videos:\n  abc: 1\n")
-            self.assertEqual(
-                load_relevance_labels(path, "youtube_videos"), {"abc": 1.0}
-            )
-            path.write_text("youtube_videos:\n  abc: 1.1\n")
-            with self.assertRaises(ValueError):
-                load_relevance_labels(path, "youtube_videos")
 
     def test_schema_rejects_out_of_range_relevance(self) -> None:
         with self.assertRaises(ValidationError):

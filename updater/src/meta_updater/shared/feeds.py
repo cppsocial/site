@@ -3,7 +3,9 @@ import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from typing import Any
+
 from .provenance import track_provenance
+from .text import sanitize_unicode
 
 ATOM = "http://www.w3.org/2005/Atom"
 MEDIA = "http://search.yahoo.com/mrss/"
@@ -21,7 +23,7 @@ def _entry_tags(element: ET.Element, media: ET.Element | None = None) -> list[st
         if "schemas.google.com/g/2005#kind" in scheme or term.endswith("#video"):
             continue
         value = child.get("label") or term or child.text or ""
-        value = " ".join(value.split())
+        value = " ".join(sanitize_unicode(value).split())
         if value:
             values.append(value)
     if media is not None:
@@ -36,13 +38,22 @@ def _entry_tags(element: ET.Element, media: ET.Element | None = None) -> list[st
     return list(dict.fromkeys(value for value in values if value))
 
 
-def fetch(url: str, timeout: float, headers: dict[str, str], retries: int = 4) -> bytes:
+def fetch(
+    url: str,
+    timeout: float,
+    headers: dict[str, str],
+    retries: int = 4,
+    *,
+    track: bool = True,
+) -> bytes:
     request = urllib.request.Request(url, headers=headers)
-    track_provenance(url)
     for attempt in range(retries):
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
-                return response.read()
+                document = response.read()
+            if track:
+                track_provenance(url)
+            return document
         except urllib.error.HTTPError as error:
             if error.code != 429 and error.code < 500:
                 raise

@@ -3,6 +3,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from ..shared.text import render_text
 from .common import (
     REPOSITORIES,
     clean_licenses,
@@ -12,7 +13,6 @@ from .common import (
     repository_revision,
     scalar_strings,
 )
-from ..shared.text import render_text
 
 
 def _dependencies(values: object) -> list[str]:
@@ -65,13 +65,67 @@ def _first_cmake_source(text: str) -> tuple[str, str]:
             elif character == ")":
                 depth -= 1
                 if depth == 0:
-                    return match.group(1).casefold(), text[match.end() : index]
+                    return match.group(1).casefold(), text[match.end(): index]
     return "", ""
 
 
-def _vcpkg_upstream(text: str, homepage: str) -> tuple[str, list[str], list[str]]:
+_CMAKE_VARIABLE = re.compile(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}")
+
+
+def _expand_cmake(value: str, variables: dict[str, str]) -> str:
+    for _ in range(10):
+        expanded = _CMAKE_VARIABLE.sub(
+            lambda match: variables.get(match.group(1), match.group(0)), value
+        )
+        if expanded == value:
+            return expanded
+        value = expanded
+    return value
+
+
+def _vcpkg_variables(text: str, version: str) -> dict[str, str]:
+    variables = {"VERSION": version}
+    for match in re.finditer(
+        r"\bset\s*\(\s*([A-Za-z_][A-Za-z0-9_]*)\s+"
+        r'(?:"([^"]*)"|([^\s)]+))\s*\)',
+        text,
+        re.IGNORECASE,
+    ):
+        variables[match.group(1)] = _expand_cmake(
+            next(value for value in match.groups()[1:] if value is not None),
+            variables,
+        )
+    for match in re.finditer(
+        r'\bstring\s*\(\s*REGEX\s+REPLACE\s+"([^"]*)"\s+"([^"]*)"\s+'
+        r'([A-Za-z_][A-Za-z0-9_]*)\s+"([^"]*)"\s*\)',
+        text,
+        re.IGNORECASE,
+    ):
+        pattern, replacement, name, value = match.groups()
+        pattern = pattern.replace(r"\$", "$").replace(r"\\", "\\")
+        replacement = replacement.replace(r"\\", "\\")
+        try:
+            variables[name] = re.sub(
+                pattern,
+                replacement,
+                _expand_cmake(value, variables),
+            )
+        except re.error:
+            continue
+    return variables
+
+
+def _vcpkg_upstream(
+    text: str, homepage: str, version: str
+) -> tuple[str, list[str], list[str]]:
     function, body = _first_cmake_source(text)
-    source_urls = clean_list(re.findall(r"https?://[^\s\")]+", body))
+    variables = _vcpkg_variables(text, version)
+    body = _expand_cmake(body, variables)
+    source_urls = clean_list(
+        url
+        for url in re.findall(r"https?://[^\s\")]+", body)
+        if not _CMAKE_VARIABLE.search(url)
+    )
     checksums = [
         f"{algorithm.casefold()}:{digest.casefold()}"
         for algorithm, digest in re.findall(
@@ -91,7 +145,8 @@ def _vcpkg_upstream(text: str, homepage: str) -> tuple[str, list[str], list[str]
         ref_match = re.search(r"\bREF\s+(?:\"([^\"]+)\"|([^\s)]+))", body)
         if ref_match and function == "vcpkg_from_github":
             reference = next(value for value in ref_match.groups() if value)
-            source_urls.append(f"{repository}/archive/{reference}.tar.gz")
+            if not _CMAKE_VARIABLE.search(reference):
+                source_urls.append(f"{repository}/archive/{reference}.tar.gz")
     if not repository:
         repository = repository_identity(homepage)
     if not repository:
@@ -120,12 +175,7 @@ def parse_vcpkg(root: Path) -> list[dict[str, Any]]:
                         {
                             "version": version,
                             "packaging_revision": port_revision or None,
-                            "recipe_url": (
-                                f"https://github.com/microsoft/vcpkg/tree/"
-                                f"{item['git-tree']}/ports/{name}"
-                            )
-                            if item.get("git-tree")
-                            else None,
+                            "recipe_revision": item.get("git-tree") or None,
                         }
                     )
         if not versions and (version := _version_value(data)):
@@ -137,8 +187,10 @@ def parse_vcpkg(root: Path) -> list[dict[str, Any]]:
             else ""
         )
         homepage = str(data.get("homepage", ""))
-        repository, source_urls, checksums = _vcpkg_upstream(text, homepage)
         current_version = _version_value(data)
+        repository, source_urls, checksums = _vcpkg_upstream(
+            text, homepage, current_version
+        )
         for version in versions:
             if version["version"] == current_version:
                 version["artifacts"] = [

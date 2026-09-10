@@ -7,7 +7,6 @@ from pathlib import Path
 from ..shared.provenance import track_provenance
 from .common import REPOSITORIES, repository_revision
 
-
 CPPGET_BASE_URL = "https://pkg.cppget.org/1"
 CPPGET_CHANNELS = ("stable", "testing", "beta", "alpha")
 

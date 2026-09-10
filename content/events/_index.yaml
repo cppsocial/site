@@ -1,0 +1,12 @@
+$schema: ../../schemas/pages/events.json
+title: Events
+seo_title: C++ Conferences, Meetups and Events
+description: Find upcoming C++ conferences, meetups, committee meetings, and online events
+config: !import "config/pages/events.yaml"
+upcoming:
+  title: Upcoming events
+  description: Confirmed events are selected automatically from the shared calendar.
+sections:
+  - !import "conferences.yaml"
+  - !import "past-conferences.yaml"
+  - !import "meetups.yaml"

@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %} {% from "macros/provenance.html" import
+    source_note %} {% block title %}{{ this.title }}{% endblock %} {% block
+    main_class %}main--directory{% endblock %} {% block body %} {% set page = this %}
+<article class="post{% block directory_article_class %}{% endblock %}"
+         {% block directory_article_attributes %}
+         {% endblock %}>
+    {% include "components/directory/header.html" %}
+    <div class="directory-content{% block directory_content_class %}{% endblock %}"
+         data-directory
+         data-search-worker="{{ '/assets/search-worker.js'|url }}"
+         data-empty-message="{{ this.config.ui.search.empty_message }}"
+         {% block directory_attributes %}
+         {% endblock %}>
+        {% include "components/directory/client_config.html" %} {% block
+            directory_content %} {% set page = this %} {% set blocks = this.sections %}
+            {% include "blocks/render.html" %}
+        {% endblock %}
+    </div>
+</article>
+{% block directory_after %}{% endblock %}
+{% endblock %}
+{% block scripts %}
+    <script src="{{ '/assets/directory.js'|url }}"></script>
+    {% block directory_scripts %}{% endblock %} {% endblock %} {% block provenance
+    %} {% if this.config.get('provenance') %} {% set label = this.config.ui.provenance_label or
+        this.config.common.ui.provenance.external_label %} {% call
+            source_note(this.config.provenance, label, this.config.common.ui.provenance) %}
+        {% endcall %}
+    {% endif %}
+{% endblock %}

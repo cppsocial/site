@@ -1,0 +1,86 @@
+{% from "macros/search.html" import search_values %}
+<article class="calendar-event calendar-event--{{ this.event_type }} calendar-event--format-{{ this.format }}{% if this.status != 'confirmed' %} calendar-event--{{ this.status }}{% endif %}{% if compact_event|default(false) %} calendar-event--compact{% endif %}"
+         {% if event_dialog|default(false) %}data-event-card{% endif %}
+         data-directory-item{% if paged_events|default(false) %}
+         data-paged-item
+         data-browse-item{% endif %}
+         {{ search_values([this.title, this.description, this.location, this.venue, this.format, this.organizer, this.event_type]) }}>
+    {% if event_dialog|default(false) %}
+        <button class="calendar-event__open"
+                type="button"
+                data-event-open
+                aria-haspopup="dialog"
+                aria-label="{{ page.config.ui.calendar.open_label }} {{ this.title }}"></button>
+    {% endif %}
+    <div class="calendar-event__date">
+        <time datetime="{{ this.start_date }}"
+              {% if this.end_date and this.end_date != this.start_date %}aria-label="{{ this.start_date|date_label }} through {{ this.end_date|date_label }}"{% endif %}>
+            <span class="calendar-event__date-segment">
+                <span class="calendar-event__month">{{ this.start_date|event_month_short }}</span>
+                <span class="calendar-event__day">{{ this.start_date[8:10] }}</span>
+            </span>
+            {% if compact_event|default(false) and this.end_date and this.end_date != this.start_date %}
+                <span class="calendar-event__date-separator" aria-hidden="true">–</span>
+                <span class="calendar-event__date-segment">
+                    <span class="calendar-event__month{% if this.end_date[5:7] == this.start_date[5:7] %} calendar-event__month--placeholder{% endif %}">{{ this.end_date|event_month_short }}</span>
+                    <span class="calendar-event__day">{{ this.end_date[8:10] }}</span>
+                </span>
+            {% endif %}
+            {% if compact_event|default(false) %}<span class="calendar-event__year">{{ this.start_date[0:4] }}</span>{% endif %}
+        </time>
+    </div>
+    <div class="calendar-event__body">
+        <div class="calendar-event__heading">
+            <div>
+                <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != 'confirmed' %} · {{ this.status }}{% endif %}</p>
+                {% if compact_event|default(false) and event_dialog|default(false) %}
+                    <div class="calendar-event__title-line">
+                        <h3>{{ this.title|keep_cpp }}</h3>
+                        <span class="calendar-event__format-badge">{{ this.format|replace('_', ' ') |title }}</span>
+                    </div>
+                    {% if this.organizer %}<p class="calendar-event__host"><span class="calendar-event__summary-label">{{ page.config.common.ui.cards.organizer_label }}</span> {{ this.organizer }}</p>{% endif %}
+                {% else %}
+                    <h3>{% if event_dialog|default(false) %}{{ this.title|keep_cpp }}{% elif this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">{{ this.title|keep_cpp }}</a>{% else %}{{ this.title|keep_cpp }}{% endif %}</h3>
+                {% endif %}
+            </div>
+            {% if compact_event|default(false) and event_dialog|default(false) and this.path %}
+                <a class="calendar-event__website"
+                   href="{{ this.path }}"
+                   target="_blank"
+                   rel="noopener">{{ page.config.common.ui.cards.event_website_label }} <span aria-hidden="true">↗</span></a>
+            {% else %}
+                <p class="calendar-event__range">
+                    <span class="calendar-event__range-label">{{ page.config.ui.calendar.date_label }}</span>
+                    <span class="calendar-event__range-dates">
+                        <time datetime="{{ this.start_date }}">{{ this.start_date|date_label }}</time>
+                        {% if this.end_date and this.end_date != this.start_date %}– <time datetime="{{ this.end_date }}">{{ this.end_date|date_label }}</time>{% endif %}
+                    </span>
+                    {% set time_label = this|event_time_label %}{% if time_label %}<span class="calendar-event__time">{{ time_label }}</span>{% endif %}
+                </p>
+            {% endif %}
+        </div>
+        {% if this.description and not compact_event|default(false) %}<p class="calendar-event__description card-description"><span class="card-description__text">{{ this.description }}</span></p>{% endif %}
+        <dl class="calendar-event__facts">
+            {% if this.location %}<div class="calendar-event__fact calendar-event__fact--location"><dt>{{ page.config.common.ui.cards.location_label }}</dt><dd>{% if this.venue %}{{ this.venue }}, {% endif %}{{ this.location }}</dd></div>{% endif %}
+            {% if this.organizer %}<div class="calendar-event__fact calendar-event__fact--organizer"><dt>{{ page.config.common.ui.cards.organizer_label }}</dt><dd>{{ this.organizer }}</dd></div>{% endif %}
+            <div class="calendar-event__fact calendar-event__fact--format">
+                <dt>{{ page.config.common.ui.cards.format_label }}</dt>
+                <dd>
+                    {{ this.format|replace('_', ' ') |title }}
+                </dd>
+            </div>
+        </dl>
+        {% if not compact_event|default(false) %}
+            <nav class="calendar-event__links"
+                 aria-label="{{ this.title }} {{ page.config.common.ui.cards.links_suffix }}">
+                {% if this.path %}<a href="{{ this.path }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.event_website_label }}</a>{% endif %}
+                {% if this.registration_url and this.registration_url != this.path %}<a href="{{ this.registration_url }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.registration_label }}</a>{% endif %}
+                <a href="{{ this|google_event_url }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.add_to_google_label }}</a>
+                <a href="{{ this.source_url }}" target="_blank" rel="noopener">{{ page.config.common.ui.cards.source_label }}{% if this.last_verified %} · {{ page.config.common.ui.cards.checked_label }} {{ this.last_verified }}{% endif %}</a>
+            </nav>
+        {% endif %}
+    </div>
+    {% if event_dialog|default(false) %}
+        {% include "components/dialogs/event_detail.html" %}
+    {% endif %}
+</article>

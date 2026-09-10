@@ -1,0 +1,59 @@
+name: Add a dated event
+description: Suggest a conference, meetup event, workshop, or WG21 meeting
+title: "Add event: "
+labels: ["type: addition", "area: event"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Event name
+    validations:
+      required: true
+  - type: input
+    id: dates
+    attributes:
+      label: Date and time
+      description: Use ISO dates. Include the IANA timezone when times are relevant.
+      placeholder: 2097-04-12 to 2097-04-14, 09:00 Europe/Paris
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options: [In person, Online, Hybrid]
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location and venue
+      description: Enter Online if there is no physical venue.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical event URL
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Description and organizer
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: First-party source
+      description: Link directly to the page confirming the dates and location.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that this event is not already listed.
+          required: true

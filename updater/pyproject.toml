@@ -20,7 +20,13 @@ classifiers = [
 license = "MIT"
 
 [project.optional-dependencies]
-dev = ["autopep8>=2.0.0", "mypy>=1.0.0"]
+dev = [
+    "autopep8>=2.0.0",
+    "djlint>=1.36.0",
+    "mbake>=1.4.0",
+    "mypy>=1.0.0",
+    "ruff>=0.12.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/tsche/cpp.social"
@@ -39,6 +45,7 @@ line-length = 88
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
 
 [tool.autopep8]
 max_line_length = 88

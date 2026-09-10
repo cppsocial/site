@@ -2,6 +2,8 @@ import argparse
 import html
 import json
 import re
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -12,8 +14,23 @@ from schemas.blocks import BookMetadata
 
 from ..config import MetaUpdaterConfig
 from ..shared.dataset import YamlDataset
-from ..shared.provenance import finish_provenance_tracking, start_provenance_tracking, track_provenance
-from ..shared.runtime import add_network_options, delayed, finish, network_values
+from ..shared.provenance import (
+    cancel_provenance_tracking,
+    finish_provenance_tracking,
+    provenance_transaction,
+    start_provenance_tracking,
+    track_provenance,
+)
+from ..shared.runtime import (
+    add_id_option,
+    add_network_options,
+    delayed,
+    finish,
+    log_operation_error,
+    network_values,
+    selected,
+)
+from ..shared.text import render_text, sanitize_unicode
 
 DESCRIPTION = "Refresh book metadata from Open Library."
 OPEN_LIBRARY = "https://openlibrary.org"
@@ -22,6 +39,7 @@ ISBN_PATTERN = re.compile(r"(?:97[89])?\d{9}[\dX]")
 
 def configure(parser: argparse.ArgumentParser) -> None:
     add_network_options(parser)
+    add_id_option(parser)
     parser.set_defaults(handler=run)
 
 
@@ -68,7 +86,7 @@ def isbns(source: Path) -> list[str]:
     return values
 
 
-def request_json(path: str, timeout: float) -> Any:
+def request_json(path: str, timeout: float, retries: int = 4) -> Any:
     url = f"{OPEN_LIBRARY}{path}"
     request = urllib.request.Request(
         url,
@@ -76,15 +94,34 @@ def request_json(path: str, timeout: float) -> Any:
             "User-Agent": "cpp.social metadata updater (https://cpp.social/contributing/)"
         },
     )
-    track_provenance(url)
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return json.load(response)
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                result = json.load(response)
+            track_provenance(url)
+            return result
+        except urllib.error.HTTPError as error:
+            if error.code != 429 and error.code < 500:
+                raise
+            if attempt == retries - 1:
+                raise
+            retry_after = error.headers.get("Retry-After")
+            time.sleep(float(retry_after) if retry_after else 2**attempt)
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            if attempt == retries - 1:
+                raise
+            time.sleep(2**attempt)
+    raise RuntimeError(f"failed to fetch {url}")
 
 
 def text(value: Any) -> str:
     if isinstance(value, dict):
         value = value.get("value", "")
-    return html.unescape(value).strip() if isinstance(value, str) else ""
+    return (
+        sanitize_unicode(html.unescape(value)).strip()
+        if isinstance(value, str)
+        else ""
+    )
 
 
 def split_title(title_value: Any, subtitle_value: Any = "") -> tuple[str, str]:
@@ -110,13 +147,32 @@ def edition(isbn: str, timeout: float) -> dict[str, Any]:
 
 def work(isbn: str, timeout: float) -> dict[str, Any]:
     fields = ",".join(
-        ("key", "ratings_average", "ratings_count", "author_name", "subject")
+        (
+            "key",
+            "ratings_average",
+            "ratings_count",
+            "author_name",
+            "subject",
+            "description",
+            "first_sentence",
+        )
     )
     query = urllib.parse.urlencode({"isbn": isbn, "fields": fields, "limit": 1})
     result = request_json(f"/search.json?{query}", timeout).get("docs", [])
     if not result:
         raise ValueError(f"Open Library has no work for ISBN {isbn}")
     return result[0]
+
+
+def description_text(*values: Any) -> str:
+    for value in values:
+        candidates = value if isinstance(value, list) else [value]
+        for candidate in candidates:
+            if source := text(candidate):
+                return render_text(
+                    source, summary_limit=600, body_limit=4_000
+                ).summary_text
+    return ""
 
 
 def clean_subjects(values: list[Any]) -> list[str]:
@@ -151,7 +207,9 @@ def metadata(isbn: str, timeout: float) -> dict[str, Any]:
         "title": title,
         "authors": authors,
         "subtitle": subtitle,
-        "description": "",
+        "description": description_text(
+            summary.get("description"), summary.get("first_sentence")
+        ),
         "isbn_13": isbn_13,
         "isbn_10": isbn_10,
         "publisher": ", ".join(
@@ -180,16 +238,33 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
         config.data / "books" / "metadata.yaml",
         dict[str, BookMetadata],
         "meta-updater books",
-        "Edition metadata, covers, and ratings come from Open Library.",
+        "Edition metadata, descriptions, covers, and ratings come from Open Library.",
         exclude_none=True,
         exclude_defaults=True,
     )
-    start_provenance_tracking(config.data / "books" / "provenance.yaml")
-    values = {}
-    for isbn in delayed(isbns(config.content / "resources" / "books.yaml"), delay):
-        values[isbn] = metadata(isbn, timeout)
+    start_provenance_tracking(
+        config.data / "books" / "provenance.yaml",
+        retain_existing=bool(args.ids),
+    )
+    curated = isbns(config.content / "books" / "books.yaml")
+    curated = selected(curated, args.ids, lambda value: value, "ISBN")
+    # Retain the last good record when a remote source is temporarily unavailable.
+    values = dataset.load({})
+    wanted = set(curated)
+    if not args.ids:
+        values = {isbn: value for isbn, value in values.items() if isbn in wanted}
+    for isbn in delayed(curated, delay):
+        try:
+            with provenance_transaction():
+                value = metadata(isbn, timeout)
+        except Exception as error:
+            log_operation_error("book metadata", error, isbn=isbn)
+            continue
+        values[isbn] = value
         print(f"metadata {isbn}: {values[isbn]['title']}")
     changed = dataset.update(values, args.check)
-    if changed:
+    if args.check:
+        cancel_provenance_tracking()
+    else:
         finish_provenance_tracking()
     return finish(changed, args.check, "book")

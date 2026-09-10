@@ -5,13 +5,19 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
-from meta_updater.shared.provenance import finish_provenance_tracking, start_provenance_tracking, track_provenance
 import yaml
 from schemas.blocks import CalendarEvent
+
+from meta_updater.shared.provenance import (
+    finish_provenance_tracking,
+    start_provenance_tracking,
+    track_provenance,
+)
 
 from ..config import MetaUpdaterConfig
 from ..shared.dataset import YamlDataset
 from ..shared.runtime import add_network_options, finish, network_values
+from ..shared.text import sanitize_unicode
 
 DESCRIPTION = "Refresh dated events from public iCalendar feeds."
 
@@ -34,13 +40,41 @@ def fetch(url: str, timeout: float) -> str:
         return response.read().decode("utf-8-sig", errors="replace")
 
 
-def source_records(source_path: Path) -> list[dict]:
-    values = yaml.safe_load(source_path.read_text(encoding="utf-8"))
-    if not isinstance(values, list):
-        raise ValueError(f"{source_path}: expected a list")
+def source_records(meetups_path: Path) -> list[dict]:
+    group = yaml.safe_load(meetups_path.read_text(encoding="utf-8"))
+    cards = group.get("cards", []) if isinstance(group, dict) else []
+    values = []
+    for card in cards:
+        if card.get("type") != "meetup_card":
+            continue
+        calendar_links = [
+            link["path"]
+            for link in card.get("links", [])
+            if link.get("path", "").rstrip("/").endswith("/events/ical")
+        ]
+        if len(calendar_links) != 1:
+            raise ValueError(
+                f"{meetups_path}: {card.get('source_id', card.get('title'))} "
+                "must have exactly one iCalendar event link"
+            )
+        location = card.get("metadata", {}).get("Location", "")
+        values.append(
+            {
+                "id": card["source_id"],
+                "kind": "meetup_ical",
+                "url": calendar_links[0],
+                "homepage": card.get("path", ""),
+                "organizer": card["title"],
+                "source_name": "Meetup",
+                "event_type": "meetup",
+                "format": "online" if location.casefold() == "online" else "in_person",
+                "timezone": card.get("timezone", ""),
+                "default_location": location,
+            }
+        )
     ids = [value["id"] for value in values]
     if len(ids) != len(set(ids)):
-        raise ValueError(f"{source_path}: duplicate source id")
+        raise ValueError(f"{meetups_path}: duplicate source id")
     return values
 
 
@@ -55,7 +89,7 @@ def unfold_ical(document: str) -> list[str]:
 
 
 def ical_unescape(value: str) -> str:
-    return (
+    return sanitize_unicode(
         value.replace("\\N", "\n")
         .replace("\\n", "\n")
         .replace("\\,", ",")
@@ -136,15 +170,23 @@ def meetup_events(source: dict, document: str, checked: date) -> list[dict]:
         status = raw.get("STATUS", ({}, "CONFIRMED"))[1].lower()
         if status not in {"confirmed", "tentative", "cancelled"}:
             status = "confirmed"
-        event_url = raw.get("URL", ({}, source.get("homepage", "")))[1]
-        organizer = source["organizer"]
+        event_url = sanitize_unicode(
+            raw.get("URL", ({}, source.get("homepage", "")))[1]
+        ).strip()
+        organizer = sanitize_unicode(source["organizer"]).strip()
         if "ORGANIZER" in raw:
-            organizer = raw["ORGANIZER"][0].get("CN", organizer)
-        location = raw.get("LOCATION", ({}, source.get("default_location", "")))[1]
+            organizer = sanitize_unicode(
+                raw["ORGANIZER"][0].get("CN", organizer)
+            ).strip()
+        location = sanitize_unicode(
+            raw.get("LOCATION", ({}, source.get("default_location", "")))[1]
+        ).strip()
         event = {
             "ical_uid": stable_meetup_id(source["id"], raw, start_date),
-            "title": raw["SUMMARY"][1],
-            "description": raw.get("DESCRIPTION", ({}, ""))[1],
+            "title": sanitize_unicode(raw["SUMMARY"][1]).strip(),
+            "description": sanitize_unicode(
+                raw.get("DESCRIPTION", ({}, ""))[1]
+            ).strip(),
             "start_date": start_date,
             "end_date": end_date,
             "timezone": zone_name,
@@ -191,7 +233,7 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
     )
     start_provenance_tracking(config.data / "events" / "provenance.yaml")
     changed = dataset.update(
-        refresh(config.content / "events" / "sources.yaml", timeout), args.check
+        refresh(config.content / "events" / "meetups.yaml", timeout), args.check
     )
     if changed:
         finish_provenance_tracking()

@@ -1,0 +1,6 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+id: abi
+title: ABIs
+description: Documentation of the C++ Application Binary Interface (ABI) and name mangling schemes used by various compilers and platforms
+cards: []

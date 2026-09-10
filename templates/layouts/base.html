@@ -1,0 +1,167 @@
+{% set page_title %}{% block title %}{% endblock %}{% endset %}
+{% set provenance_content %}{% block provenance %}{% endblock %}{% endset %}
+{% set canonical_path = '/' if not page_path.parts else '/' ~ page_path.as_posix() ~ '/' %}
+{% set canonical_url = this.config.common.site.origin ~ canonical_path %}
+{% set seo_title = this.get('seo_title') or page_title|trim %}
+{% set document_title = seo_title ~ this.config.common.site.title_separator ~ this.config.common.site.name if seo_title else this.config.common.site.name %}
+{% set social_image_url = this.config.common.site.origin ~ this.config.common.site.social_image %}
+<!DOCTYPE html>
+<html lang="{{ this.config.common.site.language }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if this.get('description') %}
+            <meta name="description" content="{{ this.description }}">
+            <meta property="og:description" content="{{ this.description }}">
+        {% endif %}
+        <link rel="canonical" href="{{ canonical_url }}">
+        <meta property="og:title" content="{{ document_title }}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ canonical_url }}">
+        <meta property="og:site_name" content="{{ this.config.common.site.name }}">
+        <meta property="og:image" content="{{ social_image_url }}">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt"
+              content="{{ this.config.common.site.social_image_alt }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ document_title }}">
+        {% if this.get('description') %}<meta name="twitter:description" content="{{ this.description }}">{% endif %}
+        <meta name="twitter:image" content="{{ social_image_url }}">
+        <meta name="twitter:image:alt"
+              content="{{ this.config.common.site.social_image_alt }}">
+        {% if this.config.get('feed_url') %}
+            <link rel="alternate"
+                  type="text/calendar"
+                  title="{{ this.config.common.ui.site.calendar_feed_title }}"
+                  href="{{ this.config.feed_url }}">
+        {% endif %}
+        <link rel="icon" href="{{ '/favicon.svg'|url }}" type="image/svg+xml">
+        <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+        {% block head %}{% endblock %}
+        <title>{{ document_title }}</title>
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": {{ (this.config.common.site.origin ~ '/#organization')|tojson }},
+                  "name": {{ this.config.common.site.name|tojson }},
+                  "url": {{ (this.config.common.site.origin ~ '/')|tojson }},
+                  "description": {{ this.config.common.site.description|tojson }},
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": {{ (this.config.common.site.origin ~ this.config.common.site.logo)|tojson }},
+                    "width": 512,
+                    "height": 512
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": {{ (this.config.common.site.origin ~ '/#website')|tojson }},
+                  "url": {{ (this.config.common.site.origin ~ '/')|tojson }},
+                  "name": {{ this.config.common.site.name|tojson }},
+                  "description": {{ this.config.common.site.description|tojson }},
+                  "publisher": { "@id": {{ (this.config.common.site.origin ~ '/#organization')|tojson }} },
+                  "inLanguage": {{ this.config.common.site.language|tojson }}
+                },
+                {
+                  "@type": {{ this.config.structured_data_type|tojson }},
+                  "@id": {{ (canonical_url ~ '#webpage')|tojson }},
+                  "url": {{ canonical_url|tojson }},
+                  "name": {{ document_title|tojson }},
+                  {% if this.get('description') %}"description": {{ this.description|tojson }},{% endif %}
+                  "isPartOf": { "@id": {{ (this.config.common.site.origin ~ '/#website')|tojson }} },
+                  "about": { "@id": {{ (this.config.common.site.origin ~ '/#organization')|tojson }} },
+                  "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": {{ social_image_url|tojson }},
+                    "width": 1200,
+                    "height": 630
+                  },
+                  "inLanguage": {{ this.config.common.site.language|tojson }}{% if canonical_path != '/' %},
+                  "breadcrumb": { "@id": {{ (canonical_url ~ '#breadcrumb')|tojson }} }{% endif %}
+                }{% if canonical_path != '/' %},
+                {
+                  "@type": "BreadcrumbList",
+                  "@id": {{ (canonical_url ~ '#breadcrumb')|tojson }},
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": {{ (this.config.common.site.origin ~ '/')|tojson }}
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": {{ page_title|trim|tojson }},
+                      "item": {{ canonical_url|tojson }}
+                    }
+                  ]
+                }{% endif %}
+              ]
+            }
+        </script>
+        <script>
+    (function () {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("pref-theme");
+      } catch (_) {}
+      document.documentElement.dataset.theme = savedTheme
+        || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    })();
+        </script>
+        <script defer
+                src="https://cloud.umami.is/script.js"
+                data-website-id="0fde35b2-acef-4218-ac6c-1c2f5959aa68"></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">{{ this.config.common.ui.site.skip_link }}</a>
+        {% include "components/site/notice.html" %}
+        {% include "components/site/header.html" %}
+        <main id="main-content" class="main {% block main_class %}{% endblock %}">
+            {% block body %}{% endblock %}
+        </main>
+        {% include "components/site/footer.html" %}
+        <script src="{{ '/assets/site.js'|url }}"
+                data-service-worker="{{ '/service-worker.js'|url }}"></script>
+        <script>
+            (() => {
+                const eventName = "outbound-link-click";
+
+                const trackOutboundLink = (link) => {
+                    if (link.host !== window.location.host
+                        && !link.hasAttribute("data-umami-event")) {
+                        link.setAttribute("data-umami-event", eventName);
+                        link.setAttribute("data-umami-event-url", link.href);
+                    }
+                };
+
+                document.querySelectorAll("a[href]").forEach(trackOutboundLink);
+                new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.type === "attributes") {
+                            trackOutboundLink(mutation.target);
+                            return;
+                        }
+                        mutation.addedNodes.forEach((node) => {
+                            if (node.nodeType !== Node.ELEMENT_NODE) return;
+                            if (node.matches("a[href]")) trackOutboundLink(node);
+                            node.querySelectorAll("a[href]").forEach(trackOutboundLink);
+                        });
+                    });
+                }).observe(document.body, {
+                    attributes: true,
+                    attributeFilter: ["href"],
+                    childList: true,
+                    subtree: true,
+                });
+            })();
+        </script>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

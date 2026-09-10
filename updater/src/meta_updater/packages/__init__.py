@@ -2,16 +2,16 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+from .bazel import parse_bazel as _parse_bazel
+from .common import normalize_package_record
 from .conan import parse_conan as _parse_conan
+from .cppget import parse_cppget as _parse_cppget
+from .hunter import parse_hunter as _parse_hunter
 from .matching import amalgamate, compare_packages
 from .meson import parse_meson as _parse_meson
 from .spack import parse_spack as _parse_spack
 from .vcpkg import parse_vcpkg as _parse_vcpkg
-from .bazel import parse_bazel as _parse_bazel
-from .cppget import parse_cppget as _parse_cppget
-from .hunter import parse_hunter as _parse_hunter
 from .xmake import parse_xmake as _parse_xmake
-from .common import normalize_package_record
 
 
 def _normalized(parser: Callable[..., list[dict[str, Any]]]):

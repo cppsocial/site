@@ -1,0 +1,23 @@
+search:
+  placeholder: Search videos and channels
+  empty_message: No matching videos or channels found.
+  fields:
+    title: Title
+    content: Description
+    source: Channel
+    tags: Tag
+  categories:
+    videos: Latest videos
+    creators: Creators and educators
+    organizations: Organizations and shows
+    conferences: Conferences
+dialog:
+  view_details_prefix: View details for
+  channel_suffix: channel
+  keywords_label: Channel keywords
+  watch_on_youtube: Watch on YouTube
+  close_label: Close channel details
+  recent_videos: Recent videos
+  recent_empty: Recent uploads will appear here when the RSS cache is populated.
+  about_label: About this channel
+  missing_description: This channel does not provide a description.

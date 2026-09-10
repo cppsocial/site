@@ -154,7 +154,7 @@ def _hunter_versions(path: Path):
             raise ValueError(
                 f"invalid hunter_add_version in {path}: {arguments!r}")
 
-        values = dict(zip(arguments[::2], arguments[1::2]))
+        values = dict(zip(arguments[::2], arguments[1::2], strict=True))
 
         try:
             yield {

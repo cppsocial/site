@@ -1,0 +1,3 @@
+$schema: ../schemas/pages/sitemap.json
+$output: sitemap.xml
+config: !import "config/sitemap.yaml"

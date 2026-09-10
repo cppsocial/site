@@ -1,0 +1,31 @@
+name: Correct existing content
+description: Report a dead link, stale date, duplicate, or inaccurate entry
+title: "Correction: "
+labels: ["type: correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or entry
+      description: Link to the affected cpp.social page.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Verification source
+      description: Link to a first-party source that supports the correction.
+    validations:
+      required: true

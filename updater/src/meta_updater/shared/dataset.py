@@ -1,10 +1,10 @@
-import os
-import tempfile
 from pathlib import Path
 from typing import Any
 
 import yaml
 from pydantic import TypeAdapter
+
+from .files import update_bytes
 
 
 class YamlDataset[T]:
@@ -45,16 +45,4 @@ class YamlDataset[T]:
         text = header + yaml.safe_dump(
             data, allow_unicode=True, sort_keys=False, width=1000
         )
-        current = self.path.read_text(encoding="utf-8") if self.path.exists() else ""
-        if current == text:
-            return False
-        if check:
-            return True
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        with tempfile.NamedTemporaryFile(
-            "w", encoding="utf-8", dir=self.path.parent, delete=False
-        ) as file:
-            file.write(text)
-            temporary = Path(file.name)
-        os.replace(temporary, self.path)
-        return True
+        return update_bytes(self.path, text.encode(), check=check)

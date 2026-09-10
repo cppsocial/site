@@ -1,14 +1,11 @@
 {% macro search_values(values) -%}
-data-search="{{ values|join(' ')|lower }}"
+    data-search="{{ values|join(" ") |lower }}"
 {%- endmacro %}
-
 {% macro card_search(card, extra=[]) -%}
-{{ search_values(
-  [card.title, card.description]
-  + card.tags
-  + card.metadata.keys()|list
-  + card.metadata.values()|list
-  + card['items']
-  + extra
-) }}
+    {{ search_values([card.title, card.description]
+        + card.tags
+        + card.metadata.keys()|list
+        + card.metadata.values()|list
+        + card['items']
+        + extra) }}
 {%- endmacro %}

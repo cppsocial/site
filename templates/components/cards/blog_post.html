@@ -1,0 +1,29 @@
+{% from "macros/search.html" import search_values %}
+<article class="blog-post-card"
+         role="link"
+         tabindex="0"
+         data-card-href="{{ post.url }}"
+         data-directory-item
+         data-paged-item
+         data-browse-item
+         data-record-id="{{ post.post_id }}"
+         {% if post.cpp_relevance is not none %} data-cpp-relevance="{{ post.cpp_relevance }}"{% endif %}
+         data-search-title="{{ post.title|lower }}"
+         data-search-content="{{ post.description|lower }}"
+         data-search-source="{{ post.source_title|lower }}"
+         data-search-tags="{{ post.tags|join(' ') |lower }}"
+         {{ search_values([post.title, post.source_title, post.description, post.published]) }}>
+    <div class="blog-post-card__source">{% if post_metadata.avatar_url|default("") %}<img class="blog-post-card__avatar"
+     src="{{ post_metadata.avatar_url }}"
+     alt=""
+     loading="lazy"
+     decoding="async"
+     referrerpolicy="no-referrer">{% else %}<span class="blog-post-card__avatar blog-post-card__avatar--monogram"
+      aria-hidden="true">{{ post.source_title[:1] }}</span>{% endif %}<p><strong>{{ post.source_title }}</strong><time datetime="{{ post.published }}">{{ post.published[:10]|date_label }}</time></p></div>
+    <h3><a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title|keep_cpp }}</a></h3>
+    {% if post.description %}<div class="blog-post-card__description">{{ post.description|markdown }}</div>{% endif %}
+    <a class="blog-post-card__more"
+       href="{{ post.url }}"
+       target="_blank"
+       rel="noopener">{{ page.config.ui.latest.continue_reading }} <span aria-hidden="true">↗</span></a>
+</article>

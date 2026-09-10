@@ -1,0 +1,11 @@
+$schema: ../../schemas/pages/page.json
+title: Ecosystem
+seo_title: C++ Compilers, Libraries and Build Tools
+description: Resources for the vast ecosystem behind C++
+config: !import "config/pages/ecosystem.yaml"
+sections:
+  - !import "compilers.yaml"
+  - !import "libraries.yaml"
+  - !import "packages.yaml"
+  - !import "builds.yaml"
+  - !import "abi.yaml"

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">cpp.social</title>
+  <desc id="description">The C++ index for resources, communities, events, and tools.</desc>
+  <rect width="1200" height="630" fill="#f6f8fa"/>
+  <rect width="18" height="630" fill="#075e9d"/>
+  <path fill="none" stroke="#cbd7df" d="M18 74h1182M18 556h1182"/>
+  <g transform="translate(94 155) scale(5)" fill="#075e9d">
+    <path d="m48.3 15.4a27 27 0 1 0 0 33.2l-7.1-5.5a18 18 0 1 1 0-22.2Zm-16.5 8.1h6v6h6v6h-6v6h-6v-6h-6v-6h6Zm20 0h6v6h6v6h-6v6h-6v-6h-6v-6h6Z"/>
+  </g>
+  <g font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="500" y="285" fill="#142330" font-size="82" font-weight="700">cpp.social</text>
+    <text x="505" y="349" fill="#5a6d7b" font-size="26" font-weight="560" letter-spacing="0.5">THE C++ INDEX</text>
+    <path stroke="#cbd7df" d="M505 391h550"/>
+    <text x="505" y="444" fill="#142330" font-size="25">Resources · Communities · Events · Tools</text>
+  </g>
+</svg>

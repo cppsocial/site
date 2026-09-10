@@ -1,0 +1,16 @@
+<section class="home-hero">
+    <div class="home-hero__copy">
+        <p class="eyebrow">{{ this.hero.eyebrow }}</p>
+        <h1>{{ this.title|keep_cpp }}</h1>
+        <p class="home-hero__description">{{ this.description }}</p>
+        <div class="home-hero__actions">
+            {% for action in this.hero.actions %}<a class="button-link{% if not loop.first %} button-link--secondary{% endif %}"
+   href="{{ action.path|url }}">{{ action.label }}</a>{% endfor %}
+        </div>
+    </div>
+    <div class="home-codeblock">
+        <codeblock data-watermark="{{ this.config.common.site.logo_mark }}" compiler="{{ this.config.code_editor.compiler }}" compiler-args="{{ this.config.code_editor.args }}" height="{{ this.config.code_editor.height }}" min-height="{{ this.config.code_editor.min_height }}">
+        {% for tab in this.hero.tabs %}<codeblock-tab name="{{ tab.name }}"><pre>{{ tab.code }}</pre></codeblock-tab>{% endfor %}
+        </codeblock>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+{% from "macros/search.html" import search_values %}
+<article class="card video-card"
+         role="link"
+         tabindex="0"
+         data-card-href="{{ video.url }}"
+         data-directory-item
+         data-paged-item
+         data-browse-item
+         data-record-id="{{ video.video_id }}"
+         {% if video.cpp_relevance is not none %} data-cpp-relevance="{{ video.cpp_relevance }}"{% endif %}
+         data-search-title="{{ video.title|lower }}"
+         data-search-content="{{ video.description[:500]|lower }}"
+         data-search-source="{{ channel_title|lower }}"
+         data-search-tags="{{ video.tags|join(' ') |lower }}"
+         {{ search_values([video.title, channel_title, video.description[:500], video.published]) }}>
+    <a class="video-card__visual"
+       href="{{ video.url }}"
+       target="_blank"
+       rel="noopener"
+       aria-label="{{ page.config.common.ui.cards.watch_prefix }} {{ video.title }} {{ page.config.common.ui.cards.youtube_suffix }}">
+        {% if video.thumbnail_url %}<img src="{{ video.thumbnail_url }}"
+     alt=""
+     loading="lazy"
+     decoding="async"
+     fetchpriority="low"
+     referrerpolicy="no-referrer">{% endif %}<span class="video-card__play" aria-hidden="true">▶</span>
+    </a>
+    <div class="video-card__body">
+        <h3><a href="{{ video.url }}" target="_blank" rel="noopener">{{ video.title|keep_cpp }}</a></h3>
+        <p class="video-card__byline">{{ channel_title }} · <time datetime="{{ video.published }}">{{ video.published[:10]|date_label }}</time></p>
+    </div>
+</article>

@@ -1,0 +1,58 @@
+$schema: ../../schemas/pages/documentation.json
+title: Contributing
+seo_title: Contribute to cpp.social
+description: Add or correct content, improve the site, and maintain its generated metadata
+config:
+  common: !import "config/common.yaml"
+  structured_data_type: WebPage
+groups:
+  - title: Contributor guide
+    pages:
+      - id: start
+        title: Start here
+        description: What we welcome, how to send it, and how content is reviewed
+        content: !include "docs/contributing/index.md"
+      - id: directory-entries
+        title: Directory entries
+        description: Resources, guides, ecosystem tools, standards links, and recurring conferences
+        content: !include "docs/contributing/adding/directory-entries.md"
+      - id: style
+        title: Stylistic conventions
+        description: The conventions that apply across repository content
+        content: !include "docs/contributing/style.md"
+      - id: communities
+        title: Communities
+        description: Discord, Slack, IRC, Reddit, forums, and meetup groups
+        content: !include "docs/contributing/adding/communities.md"
+      - id: publications
+        title: Blogs, books, and YouTube
+        description: Sources whose metadata is fetched after review
+        content: !include "docs/contributing/adding/publications.md"
+      - id: events
+        title: Events
+        description: Conferences, workshops, committee meetings, and individual meetup events
+        content: !include "docs/contributing/adding/events.md"
+      - id: packages
+        title: Packages
+        description: Missing registry packages, metadata corrections, and package matching
+        content: !include "docs/contributing/adding/packages.md"
+      - id: code-and-ui
+        title: Code, UI, and docs
+        description: Templates, styles, browser code, updater changes, and documentation
+        content: !include "docs/contributing/code-and-ui.md"
+  - title: Maintainer guide
+    pages:
+      - id: maintaining
+        title: Content maintenance
+        description: Content review guidelines and manual update and override procedures
+        content: !include "docs/maintenance/index.md"
+      - id: github-setup
+        title: Triage
+        description: Issue forms, types, and labels used to route repository work
+        content: !include "docs/maintenance/github-labels.md"
+  - title: Admin guide
+    pages:
+      - id: admin
+        title: Site administration
+        description: Documentation for administration of the site and the Github organization
+        content: !include "docs/administration/index.md"

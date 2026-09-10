@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ '/assets/codeblocks/codeblocks.css'|url }}">
+{% endblock %}
+{% block main_class %}main--wide{% endblock %}
+{% block body %}
+    {% set page = this %}
+    <article class="post home-page">
+        {% include "pages/home/hero.html" %}
+        {% for section in this.sections %}
+            {% include "pages/home/sections/" ~ section.type ~ ".html" %}
+        {% endfor %}
+    </article>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ '/assets/codeblocks/codeblocks.js'|url }}"
+            data-coi-serviceworker="{{ '/service-worker.js'|url }}"></script>
+    <script src="{{ '/assets/home.js'|url }}"></script>
+{% endblock %}

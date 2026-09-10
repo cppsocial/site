@@ -1,0 +1,12 @@
+$schema: ../../schemas/blogs/index.json
+title: Blogs
+seo_title: C++ Blogs and Technical Articles
+description: Articles by renowned C++ experts and community voices
+config: !import "config/pages/blogs.yaml"
+latest:
+  title: Latest posts
+  description: Recent writing across the blogs we track.
+browse:
+  title: Browse blogs
+  description: Independent authors and publications with ongoing C++ coverage.
+  sources: !import "sources.yaml"

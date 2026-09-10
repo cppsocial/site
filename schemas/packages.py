@@ -2,6 +2,8 @@ from typing import Any, Literal
 
 from site_generator import Schema, field, schema
 
+from schemas.pages import Page, PagePresentation, SectionHeading
+
 
 class PackageArtifact(Schema):
     kind: Literal[
@@ -10,7 +12,7 @@ class PackageArtifact(Schema):
         "binary_package",
         "patch",
         "documentation",
-    ]
+    ] = "upstream_source"
     url: str | None = None
     checksums: list[str] | None = None
     filename: str | None = None
@@ -62,6 +64,7 @@ class PackageVersion(Schema):
     compatibility: list[str] | None = None
     capabilities: list[str] | None = None
     artifacts: list[PackageArtifact] | None = None
+    recipe_revision: str | None = None
     recipe_url: str | None = None
 
 
@@ -117,7 +120,6 @@ class PackageGroupOverride(Schema):
     name: str | None = None
     aliases: list[str] | None = None
     packages: list[str]
-    optional_packages: list[str] | None = None
     reason: str | None = None
 
 
@@ -128,7 +130,8 @@ class PackageNeverMerge(Schema):
 
 class PackageFieldPreference(Schema):
     package: str
-    field: Literal["summary", "licenses", "homepage", "repository_url", "documentation_url"]
+    field: Literal["summary", "licenses", "homepage",
+                   "repository_url", "documentation_url"]
     source: str
     reason: str | None = None
 
@@ -140,12 +143,12 @@ class PackageFieldCorrection(Schema):
     value: Any | None = None
     version: str | None = None
     reason: str
-    evidence_url: str | None = None
-    expires: str | None = None
 
 
 @schema("packages/overrides")
 class PackageOverrides(Schema):
+    ignored: list[str] = field(default_factory=list)
+    ignored_prefixes: list[str] = field(default_factory=list)
     groups: list[PackageGroupOverride] | None = None
     never_merge: list[PackageNeverMerge] | None = None
     preferences: list[PackageFieldPreference] | None = None
@@ -154,6 +157,8 @@ class PackageOverrides(Schema):
 
 class PackageEntityIdentity(Schema):
     id: str
+    name: str | None = None
+    aliases: list[str] | None = None
     packages: list[str]
 
 
@@ -186,19 +191,16 @@ class MatchCatalog(Schema):
     matches: list[PackageMatch] = field(default_factory=list)
 
 
-@schema("pages/packages", template="packages.html")
-class PackagesPage(Schema):
-    title: str = "Packages"
-    description: str = ""
-    search_placeholder: str = "Search packages by name or description"
-    empty_message: str = "No matching packages found."
-    advanced_search: bool = True
-    search_fields: dict[str, str] = field(
-        default_factory=lambda: {
-            "title": "Name",
-            "content": "Description",
-        }
-    )
-    search_categories: dict[str, str] = field(default_factory=dict)
-    search_managers: dict[str, str] = field(default_factory=dict)
+class PackagesConfig(PagePresentation):
+    package_view_toggle: bool = False
     provenance: dict[str, Any] = field(default_factory=dict)
+
+
+class PackageCatalogContent(SectionHeading):
+    pass
+
+
+@schema("pages/packages", template="pages/packages.html")
+class PackagesPage(Page):
+    config: PackagesConfig
+    catalog: PackageCatalogContent

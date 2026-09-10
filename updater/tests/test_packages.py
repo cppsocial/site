@@ -1,19 +1,26 @@
 import json
 import tempfile
 import unittest
+from argparse import Namespace
 from pathlib import Path
 from unittest.mock import patch
 
 import yaml
-from schemas.packages import RegistryPackage
-
-from meta_updater.commands.packages import (
-    apply_corrections,
+from pydantic import ValidationError
+from schemas.packages import PackageOverrides, RegistryPackage
+from site_plugins.catalog import (
     browser_records,
     browser_versions,
     compact_release_metadata,
     without_empty,
 )
+
+from meta_updater.commands.packages import (
+    apply_corrections,
+    filter_ignored,
+    run,
+)
+from meta_updater.config import MetaUpdaterConfig
 from meta_updater.packages import (
     amalgamate,
     compare_packages,
@@ -26,6 +33,124 @@ from meta_updater.packages.common import normalize_package_record, version_ident
 
 
 class PackageParserTests(unittest.TestCase):
+    def test_refresh_does_not_write_ignored_packages(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package_root = root / "packages"
+            package_root.mkdir()
+            catalog = package_root / "conan.yaml"
+            catalog.write_text(
+                "registry: conan\nrepository: https://example.test\npackages: []\n",
+                encoding="utf-8",
+            )
+            (package_root / "overrides.yaml").write_text(
+                "ignored:\n- conan:hidden\n", encoding="utf-8"
+            )
+            args = Namespace(
+                action="ingest",
+                manager=["conan"],
+                source=[],
+                refresh=False,
+                threshold=None,
+                check=False,
+                compact=False,
+            )
+            refreshed = [
+                {
+                    "id": "conan:hidden",
+                    "registry": "conan",
+                    "name": "hidden",
+                    "summary": "Should not return",
+                },
+                {"id": "conan:visible", "registry": "conan", "name": "visible"},
+            ]
+            with (
+                patch(
+                    "meta_updater.commands.packages.source_paths",
+                    return_value={"conan": root},
+                ),
+                patch.dict(
+                    "meta_updater.commands.packages.PARSERS",
+                    {"conan": lambda _path: refreshed},
+                    clear=True,
+                ),
+                patch(
+                    "meta_updater.commands.packages.source_revision",
+                    return_value="revision",
+                ),
+            ):
+                self.assertEqual(
+                    run(
+                        args,
+                        MetaUpdaterConfig(data=root, package_managers=["conan"]),
+                    ),
+                    0,
+                )
+            written = yaml.safe_load(catalog.read_text(encoding="utf-8"))
+            self.assertEqual(
+                written["packages"],
+                [
+                    {
+                        "id": "conan:visible",
+                        "registry": "conan",
+                        "name": "visible",
+                    },
+                ],
+            )
+
+    def test_ignored_packages_are_removed_by_stable_id(self) -> None:
+        packages = [
+            {"id": "conan:keep"},
+            {"id": "conan:ignore"},
+            {"id": "spack:py-example"},
+        ]
+        self.assertEqual(
+            filter_ignored(
+                packages,
+                {"conan:ignore"},
+                ("spack:py-",),
+            ),
+            [{"id": "conan:keep"}],
+        )
+
+    def test_spack_parser_does_not_apply_catalog_filters(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            recipe = (
+                root
+                / "repos/spack_repo/builtin/packages/py_example/package.py"
+            )
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text("class Package:\n    pass\n")
+
+            self.assertEqual(parse_spack(root)[0]["id"], "spack:py-example")
+
+    @patch("meta_updater.commands.packages.source_paths", side_effect=OSError("offline"))
+    def test_failed_refresh_leaves_saved_catalog_untouched(self, _source_paths) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package_root = root / "packages"
+            package_root.mkdir()
+            catalog = package_root / "conan.yaml"
+            original = "registry: conan\nrepository: https://example.test\npackages: []\n"
+            catalog.write_text(original, encoding="utf-8")
+            (package_root / "overrides.yaml").write_text("ignored: []\n", encoding="utf-8")
+            args = Namespace(
+                action=None,
+                manager=["conan"],
+                source=[],
+                refresh=True,
+                threshold=None,
+                check=False,
+                compact=False,
+            )
+            status = run(
+                args,
+                MetaUpdaterConfig(data=root, package_managers=["conan"]),
+            )
+            self.assertEqual(status, 2)
+            self.assertEqual(catalog.read_text(encoding="utf-8"), original)
+
     def test_version_identity_preserves_manager_release_spelling(self) -> None:
         self.assertEqual(version_identity("xmake", "v2.2.1"), ("2.2.1", ""))
         self.assertEqual(version_identity("cppget", "2.2.1+1"), ("2.2.1", "1"))
@@ -59,6 +184,52 @@ class PackageParserTests(unittest.TestCase):
                 },
             ],
         )
+
+    def test_normalization_bounds_descriptions_and_inherits_release_prose(self) -> None:
+        description = "<p>First.</p><p>Second.</p><p>Third.</p>"
+        package = normalize_package_record(
+            {
+                "id": "conan:example",
+                "registry": "conan",
+                "name": "example",
+                "summary": "First.",
+                "description": description,
+                "versions": [
+                    {
+                        "version": "1.0",
+                        "summary": "First.",
+                        "description": description,
+                    }
+                ],
+            }
+        )
+        self.assertEqual(
+            package["description"], "<p>First.</p><p>Second.</p>"
+        )
+        self.assertEqual(package["versions"], [{"version": "1.0"}])
+
+    def test_normalization_omits_placeholder_descriptions(self) -> None:
+        package = normalize_package_record({
+            "id": "cppget:stb_image",
+            "registry": "cppget",
+            "name": "stb_image",
+            "summary": "Public Domain Image Loader",
+            "description": (
+                "<p>&lt;!-- generated, do not edit --&gt;</p><p>stb ===</p>"
+            ),
+            "description_format": "html",
+        })
+        self.assertNotIn("description", package)
+        self.assertNotIn("description_format", package)
+
+    def test_normalization_sanitizes_summary_markup(self) -> None:
+        package = normalize_package_record({
+            "id": "spack:example",
+            "registry": "spack",
+            "name": "example",
+            "summary": "Useful ** emphasized summary ** <!-- generated -->",
+        })
+        self.assertEqual(package["summary"], "Useful emphasized summary")
 
     def test_browser_version_does_not_duplicate_embedded_revision(self) -> None:
         self.assertEqual(
@@ -186,7 +357,9 @@ class PackageParserTests(unittest.TestCase):
                 )
             )
             (port / "portfile.cmake").write_text(
-                "vcpkg_from_github(REPO zlib-ng/zlib-ng REF 2.3.3 "
+                'string(REGEX REPLACE "[.]([0-9])\\$" ".0\\\\1" '
+                'upstream_version "${VERSION}")\n'
+                'vcpkg_from_github(REPO zlib-ng/zlib-ng REF "${upstream_version}" '
                 f"SHA512 {'a' * 128})\n"
                 "vcpkg_download_distfile(PATCH URLS "
                 "https://github.com/unrelated/tools/archive/1.0.tar.gz "
@@ -204,6 +377,10 @@ class PackageParserTests(unittest.TestCase):
             )
             self.assertEqual(
                 package["repository_url"], "https://github.com/zlib-ng/zlib-ng"
+            )
+            self.assertEqual(
+                package["versions"][0]["artifacts"][0]["url"],
+                "https://github.com/zlib-ng/zlib-ng/archive/2.3.03.tar.gz",
             )
             self.assertNotIn("source_urls", package)
             self.assertEqual(package["options"], ["compat"])
@@ -332,6 +509,32 @@ class PackageMatchingTests(unittest.TestCase):
         app = next(item for item in details if item["id"] == "conan:app")
         self.assertEqual(app["dependency_links"], [{"id": "zlib"}])
 
+        summaries, _ = browser_records(master, catalogs)
+        app_summary = next(item for item in summaries if item["id"] == "app")
+        self.assertEqual(app_summary["dependencies"], ["zlib"])
+
+    def test_browser_search_supports_description_only_and_prose_free_packages(
+        self,
+    ) -> None:
+        described = self.package("conan", "described", "")
+        described.update(
+            {
+                "description": "<p>Useful compression tools.</p>",
+                "description_format": "html",
+                "topics": ["compression", "archives"],
+            }
+        )
+        unnamed = self.package("conan", "identity-only", "")
+        catalogs = {"conan": [described, unnamed]}
+        master, _ = amalgamate(catalogs)
+        summaries, _ = browser_records(master, catalogs)
+        by_id = {item["id"]: item for item in summaries}
+        self.assertEqual(by_id["described"]["content"], "Useful compression tools.")
+        self.assertEqual(
+            by_id["described"]["topics"], ["compression", "archives"]
+        )
+        self.assertNotIn("content", by_id["identity-only"])
+
     def test_browser_details_excerpt_description_without_mutating_catalog(self) -> None:
         package = self.package("conan", "verbose", "")
         package["description"] = (
@@ -347,6 +550,31 @@ class PackageMatchingTests(unittest.TestCase):
         )
         self.assertIn("Third paragraph", package["description"])
 
+    def test_browser_details_omit_unresolved_source_urls(self) -> None:
+        package = self.package(
+            "vcpkg", "example", "https://github.com/example/example"
+        )
+        package["versions"] = [
+            {
+                "version": "1.2.3",
+                "artifacts": [
+                    {
+                        "kind": "upstream_source",
+                        "url": "https://example.test/${VERSION}.tar.gz",
+                        "checksums": ["sha256:abcdef"],
+                    }
+                ],
+            }
+        ]
+        catalogs = {"vcpkg": [package]}
+        master, _ = amalgamate(catalogs)
+
+        _, details = browser_records(master, catalogs)
+
+        artifact = details[0]["versions"]["1.2.3"]["artifacts"][0]
+        self.assertNotIn("url", artifact)
+        self.assertEqual(artifact["checksums"], ["sha256:abcdef"])
+
     def test_global_fields_are_ranked_without_unioning_licenses(self) -> None:
         conan = self.package("conan", "fmt", "")
         conan.update({"summary": "Conan summary", "licenses": ["MIT"]})
@@ -356,7 +584,6 @@ class PackageMatchingTests(unittest.TestCase):
         summaries, _ = browser_records(master, {"conan": [conan], "vcpkg": [vcpkg]})
         self.assertEqual(summaries[0]["content"], "vcpkg summary")
         self.assertEqual(summaries[0]["licenses"], ["Apache-2.0"])
-        self.assertEqual(summaries[0]["field_sources"]["licenses"], "vcpkg:fmt")
 
     def test_field_preference_overrides_default_ranking(self) -> None:
         conan = self.package("conan", "fmt", "")
@@ -376,7 +603,6 @@ class PackageMatchingTests(unittest.TestCase):
             ],
         )
         self.assertEqual(summaries[0]["content"], "Preferred Conan summary")
-        self.assertEqual(summaries[0]["summary_source"], "conan:fmt")
 
     def test_upstream_repository_is_certain(self) -> None:
         left = self.package("conan", "llvm", "https://github.com/llvm/llvm-project")
@@ -695,22 +921,28 @@ class PackageMatchingTests(unittest.TestCase):
         reverse = {"spack": [spack], "vcpkg": [vcpkg], "conan": [conan]}
         self.assertEqual(amalgamate(forward), amalgamate(reverse))
 
-    def test_optional_override_member_may_be_absent(self) -> None:
-        left = self.package("conan", "fmt", "")
-        right = self.package("vcpkg", "fmt", "")
-        master, _ = amalgamate(
-            {"conan": [left], "vcpkg": [right]},
-            overrides={
-                "groups": [
-                    {
-                        "id": "fmt",
-                        "packages": [left["id"], right["id"]],
-                        "optional_packages": ["hunter:fmt"],
-                    }
-                ]
-            },
+    def test_group_rejects_missing_package(self) -> None:
+        package = self.package("conan", "fmt", "")
+        with self.assertRaisesRegex(ValueError, "unknown IDs: hunter:fmt"):
+            amalgamate(
+                {"conan": [package]},
+                overrides={
+                    "groups": [{"packages": [package["id"], "hunter:fmt"]}]
+                },
+            )
+
+    def test_override_schema_rejects_optional_packages(self) -> None:
+        with self.assertRaises(ValidationError) as error:
+            PackageOverrides.model_validate({
+                "groups": [{
+                    "packages": ["conan:fmt"],
+                    "optional_packages": ["hunter:fmt"],
+                }]
+            })
+        self.assertIn(
+            ("groups", 0, "optional_packages"),
+            [item["loc"] for item in error.exception.errors()],
         )
-        self.assertEqual(master[0]["id"], "fmt")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,18 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/books.yaml"
+search:
+  enabled: true
+  advanced: true
+  options_expanded: true
+  date_range: true
+  date_histogram: true
+book_view_toggle: true
+sections:
+  books:
+    layout: showcase
+    page_rows: 12
+    collapsible: false
+    deferred_index: /data/books/index.json
+metadata: !import "data/books/metadata.yaml"
+provenance: !import "data/books/provenance.yaml"

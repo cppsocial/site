@@ -1,0 +1,7 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+card_type: meetup_card
+id: meetups
+title: User Groups
+description: Local user groups and meetups
+cards: []

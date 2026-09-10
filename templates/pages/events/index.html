@@ -1,0 +1,67 @@
+{% extends "layouts/directory.html" %}
+{% block directory_content %}
+    {% set page = this %}
+    {% set all_events = (this.config.events + this.config.imported_events)|sort_events %}
+    {% set upcoming = all_events|upcoming_events %}
+    {% set upcoming_settings = this.config.sections.upcoming %}
+    <section class="event-feature directory-section"
+             data-directory-section
+             data-page-rows="{{ upcoming_settings.page_rows }}"
+             data-total="{{ upcoming|length }}">
+        <header class="event-feature__header directory-section__header">
+            <div>
+                <p class="event-feature__eyebrow">{{ this.config.ui.upcoming.eyebrow }}</p>
+                <h2>{{ this.upcoming.title }}</h2>
+                <p class="section-description">{{ this.upcoming.description }}</p>
+            </div>
+            <div class="event-feature__controls">
+                <nav class="calendar-actions"
+                     aria-label="{{ this.config.ui.upcoming.calendar_options }}">
+                    <a class="button-link button-link--secondary"
+                       href="{{ this.config.feed_url }}">{{ this.config.ui.upcoming.subscribe }}</a>
+                    <a class="button-link button-link--secondary"
+                       href="https://calendar.google.com/calendar/r?cid=https%3A%2F%2Fcpp.social%2Fevents%2Fcalendar.ics"
+                       target="_blank"
+                       rel="noopener">{{ this.config.ui.upcoming.add_to_google_calendar }}</a>
+                </nav>
+                <div class="directory-view-toggle event-view-toggle"
+                     role="group"
+                     aria-label="{{ this.config.ui.upcoming.view_label }}">
+                    <button type="button" data-event-view="upcoming" aria-pressed="true">{{ this.config.ui.upcoming.upcoming_view }}</button>
+                    <button type="button" data-event-view="calendar" aria-pressed="false">{{ this.config.ui.upcoming.calendar_view }}</button>
+                </div>
+            </div>
+        </header>
+        <div data-event-upcoming-view>
+            {% if upcoming %}
+                <div data-directory-section-content>
+                    <div class="event-stack" data-paged-grid>
+                        {% for event in upcoming %}
+                            {% set this = event %}
+                            {% set paged_events = true %}
+                            {% set compact_event = true %}
+                            {% set event_dialog = true %}
+                            {% include "components/cards/calendar_event.html" %}
+                        {% endfor %}
+                    </div>
+                    {% include "components/directory/pagination.html" %}
+                </div>
+            {% else %}
+                <div class="calendar-empty">
+                    <strong>{{ this.config.ui.upcoming.empty_title }}</strong>
+                    <span>{{ this.config.ui.upcoming.empty_description }}</span>
+                </div>
+            {% endif %}
+        </div>
+        <div data-event-calendar-view hidden>
+            <p class="calendar-note">{{ this.config.ui.calendar.note }}</p>
+            {% include "components/events/month_calendar.html" %}
+        </div>
+    </section>
+    {% include "components/dialogs/event_shell.html" %}
+    {% set blocks = this.sections %}
+    {% include "blocks/render.html" %}
+{% endblock %}
+{% block directory_scripts %}
+    <script src="{{ '/assets/event-calendar.js'|url }}"></script>
+{% endblock %}

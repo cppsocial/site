@@ -1,0 +1,5 @@
+common: !import "config/common.yaml"
+navigation: !import "ui/navigation.yaml"
+footer: !import "ui/footer.yaml"
+additional_paths:
+  - /

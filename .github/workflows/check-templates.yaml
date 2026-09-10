@@ -1,0 +1,28 @@
+name: Check - templates
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "templates/**"
+      - "Makefile"
+      - "updater/pyproject.toml"
+      - ".github/workflows/check-templates.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  jinja:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install djLint
+        run: python -m pip install 'djlint>=1.36.0'
+      - name: Check formatting
+        run: make check-format-templates
+      - name: Lint
+        run: make lint-templates

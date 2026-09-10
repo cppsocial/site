@@ -1,0 +1,5 @@
+$schema: ../schemas/pages/article.json
+title: Under construction
+config: !import "config/pages/home.yaml"
+navigation: !import "ui/navigation.yaml"
+footer: !import "ui/footer.yaml"

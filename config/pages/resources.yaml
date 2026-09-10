@@ -1,0 +1,11 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/resources.yaml"
+search:
+  enabled: true
+  advanced: true
+sections:
+  general:
+    search_category: references
+  guides:
+    search_category: guides

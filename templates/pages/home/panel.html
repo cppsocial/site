@@ -1,0 +1,36 @@
+{% if panel.type == "event_list" %}
+    {% set all_events = (this.config.events + this.config.imported_events)|sort_events %}
+    {% set upcoming = all_events|upcoming_events %}
+    <div class="landing-events">
+        <div class="landing-subhead">
+            <h3>{{ panel.title }}</h3>
+            <a href="{{ panel.link.path|url }}">{{ panel.link.label }} <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="landing-event-list">
+            {% for event in upcoming[:3] %}
+                {% set this = event %}{% set compact_event = true %}
+                {% include "components/cards/calendar_event.html" %}
+            {% endfor %}
+        </div>
+    </div>
+{% elif panel.type == "text_list" %}
+    <div class="landing-platforms">
+        <div class="landing-subhead">
+            <h3>{{ panel.title }}</h3>
+            <a href="{{ panel.link.path|url }}">{{ panel.link.label }} <span aria-hidden="true">→</span></a>
+        </div>
+        <p>{{ panel.description }}</p>
+        <ul>{% for item in panel["items"] %}<li><span>{{ item }}</span><span aria-hidden="true">→</span></li>{% endfor %}</ul>
+    </div>
+{% elif panel.type == "metric_bars" %}
+    <div class="landing-tooling">
+        {% set metric_bars = panel.content %}
+        {% include "components/metric_bars.html" %}
+    </div>
+{% elif panel.type == "link_grid" %}
+    <div class="landing-guides">
+        <h3>{{ panel.title }}</h3>
+        <p>{{ panel.description }}</p>
+        <div class="landing-destinations">{% for item in panel["items"] %}<a href="{{ item.path|url }}"><small>{{ item.label }}</small><strong>{{ item.title }}</strong><span aria-hidden="true">→</span></a>{% endfor %}</div>
+    </div>
+{% endif %}

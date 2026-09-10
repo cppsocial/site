@@ -1,0 +1,54 @@
+{% extends "layouts/directory.html" %}
+{% from "macros/search.html" import search_values %}
+{% block directory_attributes %}data-continue-reading-label="{{ this.config.ui.latest.continue_reading }}" data-cpp-relevance-threshold="{{ this.config.search.cpp_relevance_threshold }}"{% endblock %}
+{% block directory_content %}
+    {% set page = this %}
+    {% set latest_settings = this.config.sections.latest %}
+    {% set browse_settings = this.config.sections.browse %}
+    {% set visible_posts = this.config.post_cache|rejectattr("hidden")|list %}
+    {% if visible_posts %}
+        <section class="blog-latest directory-section"
+                 data-directory-section
+                 data-search-category="{{ latest_settings.search_category }}"
+                 data-relevance-filter
+                 data-date-filter
+                 data-page-rows="{{ latest_settings.page_rows }}"
+                 data-deferred-index="{{ '/data/blog-posts/index.json'|url }}"
+                 data-deferred-kind="blog-post"
+                 data-total="{{ visible_posts|length }}"
+                 {{ search_values([this.latest.title, this.latest.description]) }}>
+            <header class="directory-section__header">
+                <h2>{{ this.latest.title }}</h2>
+                <p>{{ this.latest.description }}</p>
+            </header>
+            <div data-directory-section-content>
+                <div class="blog-latest__grid" data-paged-grid>
+                    {% for post in visible_posts[:5] %}
+                        {% set post_metadata = this.config.blog_metadata.get(post.source_id, {}) %}
+                        {% include "components/cards/blog_post.html" %}
+                    {% endfor %}
+                </div>
+                {% include "components/directory/pagination.html" %}
+            </div>
+        </section>
+    {% endif %}
+    <section class="directory-section"
+             data-directory-section{% if browse_settings.randomize %}
+             data-randomize{% endif %}
+             data-search-category="{{ browse_settings.search_category }}"
+             {{ search_values([this.browse.title, this.browse.description]) }}>
+        <header class="directory-section__header">
+            <h2>{{ this.browse.title }}</h2>
+            <p>{{ this.browse.description }}</p>
+        </header>
+        <div class="blog-grid" data-directory-section-content>
+            {% for blog in this.browse.sources|sort(attribute="title") %}
+                {% if not blog.hidden %}
+                    {% set metadata = this.config.blog_metadata.get(blog.id, {}) %}
+                    {% set description = blog.description or metadata.description|default("") %}
+                    {% include "components/cards/blog_source.html" %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

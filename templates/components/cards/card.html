@@ -1,0 +1,43 @@
+{% if this.cta %}
+    {% set cta = this.cta %}
+{% endif %}
+{% from "macros/search.html" import card_search %}
+{% set internal_path = this.path and this.path.startswith('/') %}
+<article class="card"
+         {% if this.path %} role="link" tabindex="0" data-card-href="{{ this.path|url }}" data-card-target="{{ '_self' if internal_path else '_blank' }}"{% endif %}
+         data-directory-item
+         data-search-title="{{ this.title|lower }}"
+         data-search-content="{{ this.description|lower }}"
+         data-search-tags="{{ this.tags|join(' ') |lower }}"
+         data-search-metadata="{{ (this.metadata.keys() |list + this.metadata.values()|list + this['items'])|join(' ')|lower }}"
+         {{ card_search(this) }}>
+    <h3>
+        {% set card_icon = this.path|card_icon(this.icon) %}
+        {% if card_icon %}
+            <img src="{{ card_icon|url }}"
+                 alt=""
+                 class="card-logo"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer"
+                 onerror="this.remove()" />
+        {% endif %}
+        {% if this.path %}<a href="{{ this.path|url }}"
+   {% if not internal_path %} target="_blank" rel="noopener"{% endif %}>{{ this.title|keep_cpp }}</a>{% else %}{{ this.title|keep_cpp }}{% endif %}
+    </h3>
+    {% if this.description %}<p class="card-description"><span class="card-description__text">{{ this.description|markdown }}</span></p>{% endif %}
+    {% if this.metadata or this["items"] or this.links or cta %}
+        <div class="card__footer{% if this.metadata or this["items"] %} card__footer--details{% endif %}{% if this.links or cta %} card__footer--pinned{% endif %}">
+            {% if this.metadata %}<dl class="card__metadata">{% for label, value in this.metadata.items() %}<div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>{% endfor %}</dl>{% endif %}
+            {% if this["items"] %}<ul>{% for item in this["items"] %}<li>{{ item }}</li>{% endfor %}</ul>{% endif %}
+            {% if this.links %}<nav class="card__links"
+     aria-label="{{ this.title }} {{ page.config.common.ui.cards.links_suffix }}">{% for link in this.links %}<a href="{{ link.path|url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</nav>{% endif %}
+            {% if cta %}
+                <div class="cta">
+                    <a href="{{ this.path|url }}"
+                       {% if not internal_path %} target="_blank" rel="noopener"{% endif %}>{{ cta }} →</a>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</article>

@@ -1,0 +1,21 @@
+<section class="metric-bars">
+    {% if metric_bars.title %}<h3>{{ metric_bars.title }}</h3>{% endif %}
+    {% if metric_bars.description %}<p class="metric-bars__description">{{ metric_bars.description }}</p>{% endif %}
+    <div class="metric-bars__groups">
+        {% for group in metric_bars.groups %}
+            <section class="metric-bars__group">
+                {% if group.title %}<h4>{{ group.title }}</h4>{% endif %}
+                <div class="metric-bars__rows">
+                    {% for bar in group.bars %}
+                        <div class="metric-bar">
+                            <span>{{ bar.label }}</span>
+                            <span class="metric-bar__track" aria-hidden="true"><i style="width:{{ bar.percent }}%"></i></span>
+                            {% if bar.value %}<strong>{{ bar.value }}</strong>{% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+    {% if metric_bars.note %}<div class="metric-bars__note">{{ metric_bars.note|markdown }}</div>{% endif %}
+</section>

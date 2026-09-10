@@ -1,0 +1,67 @@
+{% extends "layouts/directory.html" %}
+{% block directory_content_class %}{{ " package-catalog" }}{% endblock %}
+{% block directory_content %}
+    {% set page = this %}
+    {% set catalog_settings = this.config.sections.catalog %}
+    <script type="application/json" data-package-copy>{{ this.config.ui.details|tojson }}</script>
+    <section class="directory-section"
+             data-directory-section
+             data-directory-collapsible="false"
+             data-page-rows="{{ catalog_settings.page_rows }}"
+             data-page-step="{{ catalog_settings.page_step }}"
+             data-deferred-index="{{ '/data/packages/index.json'|url }}"
+             data-package-details="{{ '/data/package-details/'|url }}"
+             data-deferred-kind="package">
+        <div data-directory-section-content>
+            <div data-package-list-view>
+                <div class="package-list__loading"
+                     data-package-matches-loading
+                     role="status"
+                     hidden>
+                    <span class="package-list__loading-spinner" aria-hidden="true"></span>
+                    {{ this.config.common.ui.search.reloading_matches }}
+                </div>
+                <div class="package-list__header" aria-hidden="true">
+                    <span>{{ this.config.ui.catalog.package }}</span><span>{{ this.config.ui.catalog.description }}</span><span>{{ this.config.ui.catalog.managers }}</span><span>{{ this.config.ui.catalog.license }}</span>
+                </div>
+                <div class="package-list" data-paged-grid></div>
+                {% include "components/directory/pagination.html" %}
+            </div>
+            <section class="package-graph"
+                     data-package-graph
+                     data-graph-source="{{ '/data/package-graph.json'|url }}"
+                     aria-label="{{ this.config.ui.graph.title }}"
+                     hidden>
+                <canvas data-package-graph-canvas></canvas>
+                <div class="package-list__loading package-graph__loading"
+                     data-package-matches-loading
+                     role="status"
+                     hidden>
+                    <span class="package-list__loading-spinner" aria-hidden="true"></span>
+                    {{ this.config.common.ui.search.reloading_matches }}
+                </div>
+                <button type="button"
+                        class="package-graph__fullscreen"
+                        data-package-graph-fullscreen
+                        data-enter-label="{{ this.config.ui.graph.fullscreen }}"
+                        data-exit-label="{{ this.config.ui.graph.exit_fullscreen }}"
+                        aria-label="{{ this.config.ui.graph.fullscreen }}"
+                        title="{{ this.config.ui.graph.fullscreen }}"><span aria-hidden="true">⛶</span></button>
+                <div class="package-graph__hud">
+                    <p class="package-graph__eyebrow">{{ this.config.ui.graph.eyebrow }}</p>
+                    <h3>{{ this.config.ui.graph.title }}</h3>
+                    <p data-package-graph-status>{{ this.config.ui.graph.loading }}</p>
+                </div>
+                <div class="package-graph__legend" data-package-graph-legend></div>
+                <div class="package-graph__tooltip" data-package-graph-tooltip hidden></div>
+                <p class="package-graph__hint">{{ this.config.ui.graph.hint }}</p>
+            </section>
+            <p class="package-list__matches"
+               data-package-match-summary
+               aria-live="polite"></p>
+        </div>
+    </section>
+{% endblock %}
+{% block directory_scripts %}
+    <script src="{{ '/assets/packages.js'|url }}"></script>
+{% endblock %}

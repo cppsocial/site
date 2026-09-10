@@ -1,0 +1,8 @@
+$schema: ../../schemas/pages/page.json
+title: Resources
+seo_title: C++ Resources, References and Learning Guides
+description: Resources, references and guides for learning and working with C++
+config: !import "config/pages/resources.yaml"
+sections:
+  - !import "general.yaml"
+  - !import "guides.yaml"

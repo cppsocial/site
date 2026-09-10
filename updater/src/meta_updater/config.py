@@ -10,7 +10,6 @@ class MetaUpdaterConfig(BaseModel):
 
     content: Path = Path("content")
     data: Path = Path("data")
-    browser_data: Path = Path("data/web")
     package_cache: Path = Field(
         default_factory=lambda: Path(
             os.environ.get("CPP_SOCIAL_PACKAGE_CACHE",
@@ -33,7 +32,7 @@ def load_config(path: Path) -> MetaUpdaterConfig:
         values.get("meta_updater", values))
     base = path.parent.resolve()
     resolved = config.model_dump()
-    for name in ("content", "data", "browser_data", "package_cache"):
+    for name in ("content", "data", "package_cache"):
         value = resolved[name]
         resolved[name] = value if value.is_absolute() else (base /
                                                             value).resolve()

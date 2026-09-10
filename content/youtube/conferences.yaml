@@ -1,0 +1,7 @@
+$schema: ../../schemas/blocks/card-group.json
+type: card_group
+card_type: channel_card
+id: conferences
+title: Conferences
+description: Browse recorded talks from established C++ conferences
+cards: []

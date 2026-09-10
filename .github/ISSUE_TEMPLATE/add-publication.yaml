@@ -1,0 +1,55 @@
+name: Add a publication source
+description: Suggest a C++ blog, book, or YouTube channel
+title: "Add publication: "
+labels: ["type: addition", "area: publication"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Content type
+      options:
+        [
+          Blog,
+          Book,
+          YouTube creator,
+          YouTube conference,
+          YouTube organization,
+          YouTube show,
+        ]
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title or channel name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+    validations:
+      required: true
+  - type: textarea
+    id: identifiers
+    attributes:
+      label: Identifier or feed
+      description: Give the ISBN-13, the YouTube UC channel ID, or the working RSS/Atom feed URL.
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: C++ relevance
+      description: Briefly describe the source's C++ coverage.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that this source is not already listed.
+          required: true
+        - label: This book, blog, or YouTube source contains substantive human-created work and is not purely AI-generated.
+          required: true

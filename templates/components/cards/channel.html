@@ -1,0 +1,53 @@
+{% from "macros/search.html" import search_values %}
+{% set channel = page.config.channel_metadata[this.channel_id] %}
+{% set recent_videos = page.config.video_cache.get(this.channel_id, []) %}
+<article class="card channel-card channel-card--{{ this.channel_type }}"
+         data-directory-item
+         data-channel-card
+         data-search-title="{{ this.title|lower }}"
+         data-search-content="{{ channel.description|lower }}"
+         data-search-source="{{ this.title|lower }}"
+         data-search-tags="{{ ([this.channel_type] + this.tags + channel.keywords)|join(' ') |lower }}"
+         {{ search_values([this.title, channel.description, this.channel_type] + channel.keywords) }}>
+    <button class="channel-card__visual{% if channel.banner_url %} channel-card__visual--image{% endif %}"
+            type="button"
+            data-channel-open
+            data-watermark="{{ page.config.common.site.logo_mark }}"
+            aria-haspopup="dialog"
+            aria-label="{{ page.config.ui.dialog.view_details_prefix }} {{ this.title }}">
+        {% if channel.banner_url %}
+            <img class="channel-card__background"
+                 src="{{ channel.banner_url }}"
+                 alt=""
+                 loading="lazy"
+                 decoding="async"
+                 fetchpriority="low"
+                 referrerpolicy="no-referrer">
+        {% endif %}
+        <span class="channel-card__eyebrow">{{ this.channel_type }} {{ page.config.ui.dialog.channel_suffix }}</span>
+        {% if channel.avatar_url %}<img class="channel-card__avatar"
+     src="{{ channel.avatar_url }}"
+     alt=""
+     loading="lazy"
+     decoding="async"
+     fetchpriority="low"
+     referrerpolicy="no-referrer">{% else %}<span class="channel-card__monogram" aria-hidden="true">{{ this.title[:1] }}</span>{% endif %}
+    </button>
+    <div class="channel-card__body">
+        <button class="channel-card__expand"
+                type="button"
+                data-channel-open
+                aria-haspopup="dialog"
+                aria-label="{{ page.config.ui.dialog.view_details_prefix }} {{ this.title }}"></button>
+        <h3><a href="{{ channel.url }}" target="_blank" rel="noopener">{{ this.title }}</a></h3>
+        {% if channel.description %}<p class="card-description"><span class="card-description__text">{{ channel.description }}</span></p>{% endif %}
+        {% if channel.keywords %}<ul class="tag-list tag-list--compact"
+    data-collapsible-tags
+    aria-label="{{ page.config.ui.dialog.keywords_label }}">{% for keyword in channel.keywords %}<li><button type="button" data-search-tag="{{ keyword }}">{{ keyword }}</button></li>{% endfor %}<li class="tag-list__more" data-tag-overflow hidden>{# djlint:off #}<span></span>{# djlint:on #}</li></ul>{% endif %}
+        <a class="channel-card__cta"
+           href="{{ channel.url }}"
+           target="_blank"
+           rel="noopener">{{ page.config.ui.dialog.watch_on_youtube }} <span aria-hidden="true">↗</span></a>
+    </div>
+    {% include "components/dialogs/channel_detail.html" %}
+</article>

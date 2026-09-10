@@ -1,0 +1,57 @@
+{% extends "layouts/directory.html" %}
+{% from "macros/search.html" import search_values %}
+{% block directory_article_class %}youtube-catalog{% endblock %}
+{% block directory_content_class %}youtube-catalog__shelves{% endblock %}
+{% block directory_attributes %}data-cpp-relevance-threshold="{{ this.config.search.cpp_relevance_threshold }}"{% endblock %}
+{% block directory_content %}
+    {% set page = this %}
+    {% set blocks = this.sections %}
+    {% set latest_settings = this.config.sections.latest %}
+    {% set latest = namespace(items=[]) %}
+    {% for channel_id, videos in this.config.video_cache.items() %}
+        {% set identity = namespace(title=channel_id) %}
+        {% for block in this.sections %}
+            {% for card in block.cards %}
+                {% if card.channel_id == channel_id %}
+                    {% set identity.title = card.title %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        {% for video in videos %}
+            {% if not video.hidden %}
+                {% set latest.items = latest.items + [{"video": video, "channel": identity.title}] %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% if latest.items %}
+        <section class="directory-section youtube-latest"
+                 data-directory-section
+                 data-search-category="{{ latest_settings.search_category }}"
+                 data-relevance-filter
+                 data-date-filter
+                 data-page-rows="{{ latest_settings.page_rows }}"
+                 data-deferred-index="{{ '/data/youtube-videos/index.json'|url }}"
+                 data-deferred-kind="youtube-video"
+                 data-total="{{ latest.items|length }}"
+                 {{ search_values([this.latest.title, this.latest.description]) }}>
+            <header class="directory-section__header">
+                <h2>{{ this.latest.title }}</h2>
+                <p>{{ this.latest.description }}</p>
+            </header>
+            <div data-directory-section-content>
+                <div class="youtube-latest__grid" data-paged-grid>
+                    {% for item in (latest.items|sort(attribute="video.published", reverse=true))[:8] %}
+                        {% set video = item.video %}
+                        {% set channel_title = item.channel %}
+                        {% include "components/cards/video_record.html" %}
+                    {% endfor %}
+                </div>
+                {% include "components/directory/pagination.html" %}
+            </div>
+        </section>
+    {% endif %}
+    {% include "blocks/render.html" %}
+{% endblock %}
+{% block directory_after %}
+    {% include "components/dialogs/channel_shell.html" %}
+{% endblock %}

@@ -1,0 +1,13 @@
+common: !import "config/common.yaml"
+structured_data_type: WebPage
+code_editor:
+  compiler: clang2110
+  args: -std=c++23 -Wall -Wextra -pedantic-errors
+  height: 350px
+  min_height: 240px
+events: !import "content/events/events.yaml"
+imported_events: !import "data/events-imported.yaml"
+blog_sources: !import "content/blogs/sources.yaml"
+recent_posts: !import-list "data/blogs/posts"
+video_groups: !import "content/youtube/groups.yaml"
+video_cache: !import-map "data/youtube/videos"

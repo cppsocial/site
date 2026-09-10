@@ -1,0 +1,15 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/packages.yaml"
+search:
+  enabled: true
+  database: true
+  package_catalog: true
+  advanced: true
+  options_expanded: true
+package_view_toggle: true
+sections:
+  catalog:
+    page_rows: 30
+    page_step: 10
+provenance: !import "data/packages/provenance.yaml"

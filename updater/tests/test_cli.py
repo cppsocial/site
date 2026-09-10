@@ -17,10 +17,22 @@ class CliTests(unittest.TestCase):
         self.assertEqual(after.timeout, 5)
 
     def test_network_options_work_after_youtube_action(self) -> None:
-        args = self.parse("youtube", "videos", "--delay", "0")
+        before = self.parse("youtube", "--id", "first", "videos")
+        args = self.parse(
+            "youtube", "videos", "--delay", "0", "--id", "first", "--id", "second"
+        )
 
+        self.assertEqual(before.ids, ["first"])
         self.assertEqual(args.command, "videos")
         self.assertEqual(args.delay, 0)
+        self.assertEqual(args.ids, ["first", "second"])
+
+    def test_id_option_is_available_to_single_action_updaters(self) -> None:
+        book = self.parse("books", "--id", "9780321563842")
+        community = self.parse("communities", "--id", "cpp-discord")
+
+        self.assertEqual(book.ids, ["9780321563842"])
+        self.assertEqual(community.ids, ["cpp-discord"])
 
     def test_package_options_work_after_action(self) -> None:
         args = self.parse(

@@ -1,0 +1,7 @@
+$schema: ../../schemas/pages/books.json
+title: Books
+seo_title: C++ Books for Learning and Reference
+description: Curated books about C++ and its vast ecosystem
+config: !import "config/pages/books.yaml"
+sections:
+  - !import "books.yaml"

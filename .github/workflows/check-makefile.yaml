@@ -1,0 +1,32 @@
+name: Check - Makefile
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - "Makefile"
+      - "updater/pyproject.toml"
+      - ".github/workflows/check-makefile.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  makefile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install mbake
+        run: python -m pip install 'mbake>=1.4.0'
+      - name: Validate
+        run: mbake validate Makefile
+      - name: Check formatting
+        run: |
+          mbake format Makefile
+          if ! git diff --exit-code -- Makefile; then
+            echo "::error::Makefile formatting differs. Run: mbake format Makefile"
+            exit 1
+          fi

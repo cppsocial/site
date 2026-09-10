@@ -3,9 +3,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urljoin
 
-from .common import clean_licenses, clean_list, repository_identity
 from ..shared.text import render_text
-
+from .common import clean_licenses, clean_list, repository_identity
 
 CPPGET_BASE_URL = "https://pkg.cppget.org/1/"
 CPPGET_WEBSITE = "https://cppget.org/"

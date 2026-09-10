@@ -1,0 +1,116 @@
+<div class="directory-search" role="search">
+    <label class="visually-hidden" for="directory-search-input">
+        {{ this.config.common.ui.search.label_prefix }} {{ this.title|lower
+        }}
+    </label>
+    <div class="directory-search__row">
+        <svg class="directory-search__icon"
+             aria-hidden="true"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+        </svg>
+        <div class="directory-search__highlight"
+             data-search-highlight
+             aria-hidden="true"></div>
+        <input id="directory-search-input"
+               class="directory-search__input"
+               type="search"
+               placeholder="{{ this.config.ui.search.placeholder }}"
+               autocomplete="off"
+               aria-describedby="directory-search-status"
+               data-directory-input />
+        {% if this.config.search.advanced and not
+            this.config.search.options_expanded %}
+            <button class="directory-search__advanced"
+                    type="button"
+                    data-search-advanced
+                    aria-label="{{ this.config.common.ui.search.filters_label }}"
+                    title="{{ this.config.common.ui.search.filters_label }}"
+                    data-active-label="{{ this.config.common.ui.search.active_filters_label }}"
+                    aria-expanded="false"
+                    aria-haspopup="dialog"
+                    aria-controls="directory-search-options">
+                <span aria-hidden="true">⚙︎</span></button>{% endif %}
+            <button class="directory-search__clear"
+                    type="button"
+                    data-directory-clear
+                    aria-label="{{ this.config.common.ui.search.clear_label }}"
+                    title="{{ this.config.common.ui.search.clear_label }}"
+                    hidden>×</button>
+        </div>
+        {% if this.config.search.advanced %}
+            <div class="directory-search__options{% if this.config.search.options_expanded %} directory-search__options--inline{% endif %}"
+                 id="directory-search-options"
+                 role="{{ 'group' if this.config.search.options_expanded else 'dialog' }}"
+                 data-search-options{% if this.config.search.options_expanded %}
+                 data-search-inline
+                 {% else %}
+                 hidden{% endif %}
+                 aria-label="{{ this.config.common.ui.search.filters_label }}">
+                {% if this.config.ui.search.fields %}
+                    <fieldset class="directory-search__fieldset directory-search__fields">
+                        <legend>{{ this.config.common.ui.search.fields_legend }}</legend>
+                        {% for value, label in this.config.ui.search.fields.items() %}{% if value
+                            != "all" %}
+                            <label>
+                                <input type="checkbox" value="{{ value }}" data-search-field checked />
+                                {{ label }}</label>{% endif %}{% endfor %}
+                </fieldset>
+        {% endif %}
+        {% if this.config.ui.search.categories %}
+            <fieldset class="directory-search__fieldset directory-search__categories">
+                <legend>{{ this.config.common.ui.search.categories_legend }}</legend>
+                {% for value, label in this.config.ui.search.categories.items() %}
+                    <label>
+                        <input type="checkbox" value="{{ value }}" data-search-category checked />
+                        {{ label }}</label>{% endfor %}
+            </fieldset>
+        {% endif %}
+        {% if this.config.ui.search.managers %}
+            <fieldset class="directory-search__fieldset directory-search__managers">
+                <legend>{{ this.config.common.ui.search.managers_legend }}</legend>
+                {% for value, label in this.config.ui.search.managers.items() %}
+                    <button type="button"
+                            value="{{ value }}"
+                            data-search-manager-choice
+                            aria-pressed="false">{{ label }}</button>{% endfor %}
+            </fieldset>
+        {% endif %}
+        {% if this.config.search.date_range %}
+            <fieldset class="directory-search__fieldset directory-search__dates">
+                <legend>{{ this.config.common.ui.search.published_legend }}</legend>
+                <label>
+                    {{ this.config.common.ui.search.from_label }}
+                    <input type="date" data-search-after />
+                </label>
+                <span aria-hidden="true">–</span>
+                <label>
+                    {{ this.config.common.ui.search.through_label }}
+                    <input type="date" data-search-before />
+                </label>
+            </fieldset>
+            {% if this.config.search.date_histogram %}
+                <div class="directory-search__timeline"
+                     data-publication-timeline
+                     aria-label="{{ this.config.common.ui.search.publication_timeline_label }}"></div>
+            {% endif %}
+        {% endif %}
+        {% if this.config.search.relevance_filter %}
+            <label class="directory-search__unrelated">
+                <input type="checkbox" data-search-include-unrelated />
+                {{ this.config.common.ui.search.include_unrelated_label }}
+            </label>
+        {% endif %}
+    </div>
+{% endif %}
+<span id="directory-search-status"
+      class="directory-search__status"
+      data-directory-status
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"></span>
+</div>

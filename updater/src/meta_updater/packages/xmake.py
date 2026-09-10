@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+from ..shared.text import render_text
 from .common import (
     REPOSITORIES,
     clean_licenses,
@@ -13,7 +14,6 @@ from .common import (
     repository_identity,
     repository_revision,
 )
-from ..shared.text import render_text
 
 
 def _xmake_url(url: str) -> str:
@@ -39,8 +39,7 @@ def parse_xmake(root: Path) -> list[dict[str, Any]]:
                     f"--out={output}",
                 ],
                 check=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                capture_output=True,
                 text=True,
                 env=environment,
             )

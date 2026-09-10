@@ -1,0 +1,28 @@
+<section class="month-calendar"
+         data-event-calendar
+         aria-labelledby="calendar-month-title">
+    <script type="application/json" data-calendar-copy>{{ page.config.ui.calendar|tojson }}</script>
+    <script type="application/json" data-calendar-labels>{{ page.config.common.ui.cards|tojson }}</script>
+    <header class="month-calendar__toolbar">
+        <div class="month-calendar__navigation">
+            <button type="button"
+                    data-calendar-previous
+                    aria-label="{{ page.config.ui.calendar.previous_month_label }}">←</button>
+            <button type="button" data-calendar-today>{{ page.config.ui.calendar.today_label }}</button>
+            <button type="button"
+                    data-calendar-next
+                    aria-label="{{ page.config.ui.calendar.next_month_label }}">→</button>
+        </div>
+        <h2 id="calendar-month-title" data-calendar-title aria-live="polite"></h2>
+    </header>
+    <div class="month-calendar__viewport"
+         tabindex="0"
+         aria-label="{{ page.config.ui.calendar.viewport_label }}">
+        <div class="month-calendar__weekdays" data-calendar-weekdays role="row"></div>
+        <div class="month-calendar__grid" data-calendar-grid role="grid"></div>
+    </div>
+    <p class="month-calendar__status"
+       data-calendar-status
+       aria-live="polite"></p>
+    <script type="application/json" data-calendar-events>{{ all_events|tojson }}</script>
+</section>

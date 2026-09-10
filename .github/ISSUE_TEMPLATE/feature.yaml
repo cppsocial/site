@@ -1,0 +1,23 @@
+name: Suggest an improvement
+description: Propose a site, UI, or updater improvement
+title: "Proposal: "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is difficult or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and alternatives
+      description: Note affected pages, data, or commands and any simpler alternatives considered.

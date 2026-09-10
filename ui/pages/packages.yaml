@@ -1,0 +1,82 @@
+search:
+  placeholder: Search packages
+  empty_message: No matching packages found.
+  fields:
+    title: Name
+    content: Description
+    tags: Topics
+  managers:
+    conan: Conan
+    vcpkg: vcpkg
+    spack: Spack
+    meson: Meson
+    bazel: Bazel
+    cppget: build2
+    hunter: Hunter
+    xmake: xmake
+catalog:
+  package: Package
+  description: Description
+  managers: Package managers
+  license: License
+graph:
+  view_label: Package catalog view
+  list: List
+  graph: Graph
+  eyebrow: Dependency atlas
+  title: The C++ package universe
+  loading: Mapping package relationships…
+  fullscreen: View graph fullscreen
+  exit_fullscreen: Exit fullscreen
+  hint: Scroll to zoom · drag to explore · double-click a package to open it
+details:
+  dependencies: Dependencies
+  license: License
+  releases: Releases
+  version: Version
+  release_metadata: Release metadata
+  release_details: Release details
+  preferred: Preferred
+  deprecated: Deprecated
+  lifecycle: Status
+  capabilities: Capabilities
+  artifacts: Artifacts
+  channel_prefix: "channel:"
+  revision_prefix: "revision:"
+  requires_prefix: requires
+  artifact_fallback: Upstream source
+  verify: Verify
+  consumer_config: consumer config
+  consumer_declaration: Consumer declaration
+  reference_version: Reference version
+  copy_declaration: Copy dependency declaration
+  declaration_copied: Dependency declaration copied
+  version_availability: Version availability
+  description: Description
+  options: Options
+  option: Option
+  default: Default
+  details: Details
+  values: Values
+  condition: Condition
+  components: Components
+  platforms: Platforms
+  authors: Authors
+  maintainers: Maintainers
+  topics: Topics
+  documentation: Documentation
+  source: Source
+  languages: Languages
+  package_type: Package type
+  package_links_suffix: package links
+  open_on_prefix: Open on
+  recipe: Recipe
+  homepage: Homepage
+  upstream_source: Upstream source
+  also_packaged_as: Also packaged as
+  no_description: No description available
+  show_available_prefix: Show packages available in
+  unspecified: Unspecified
+  loading_metadata: Loading metadata...
+  record_failure_suffix: package-manager record could not be loaded.
+  metadata_failure: Package metadata could not be loaded.

@@ -1,0 +1,31 @@
+{% extends "layouts/directory.html" %}
+{% block directory_article_class %}{{ " books-catalog" }}{% endblock %}
+{% block directory_article_attributes %}data-book-layout="cards"{% endblock %}
+{% block directory_content %}
+    {% set page = this %}
+    {% set group = this.sections[0] %}
+    {% set settings = this.config.sections.books %}
+    <section class="directory-section directory-section--showcase"
+             data-directory-section
+             data-directory-collapsible="false"
+             data-deferred-index="{{ settings.deferred_index|url }}"
+             data-deferred-kind="book"
+             data-date-filter
+             data-page-rows="{{ settings.page_rows }}"
+             data-total="{{ group.cards|rejectattr('hidden') |list|length }}">
+        <header class="directory-section__header">
+            <h2>{{ group.title }}</h2>
+            <p class="section-description">{{ group.description }}</p>
+        </header>
+        <div data-directory-section-content>
+            <div class="directory-grid directory-grid--showcase" data-paged-grid></div>
+            {% include "components/directory/pagination.html" %}
+        </div>
+    </section>
+{% endblock %}
+{% block directory_after %}
+    {% set page = this %}
+    {% include "components/cards/book_deferred.html" %}
+    {% include "components/dialogs/book_shell.html" %}
+    <script type="application/json" data-book-copy>{{ this.config.ui.dialog|tojson }}</script>
+{% endblock %}

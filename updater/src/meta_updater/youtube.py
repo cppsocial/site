@@ -8,6 +8,7 @@ from typing import Any
 from urllib.error import HTTPError
 
 from .shared.feeds import atom_entries, fetch
+from .shared.text import sanitize_unicode
 
 YT = "http://www.youtube.com/xml/schemas/2015"
 HEADERS = {
@@ -58,8 +59,8 @@ def channel_metadata(channel_id: str, timeout: float) -> dict[str, Any]:
         "channelUrl") or page_url
     return {
         "url": url,
-        "description": metadata.get("description", "").strip(),
-        "keywords": keywords,
+        "description": sanitize_unicode(metadata.get("description", "")).strip(),
+        "keywords": [sanitize_unicode(value) for value in keywords],
         "avatar_url": _image(
             metadata.get("avatar", {}).get("thumbnails", []), 900
         ),
@@ -92,7 +93,7 @@ def channel_videos(channel_id: str, timeout: float) -> list[dict[str, Any]]:
         result.append(
             {
                 "video_id": entry["video_id"],
-                "title": entry["title"],
+                "title": sanitize_unicode(entry["title"]),
                 "url": entry["url"] or f"https://youtu.be/{entry['video_id']}",
                 "published": datetime.fromisoformat(
                     entry["published"].replace("Z", "+00:00")
@@ -102,9 +103,9 @@ def channel_videos(channel_id: str, timeout: float) -> list[dict[str, Any]]:
                 ).astimezone(UTC)
                 if entry["updated"]
                 else None,
-                "description": entry["description"],
+                "description": sanitize_unicode(entry["description"]),
                 "thumbnail_url": entry["thumbnail_url"],
-                "tags": entry["tags"],
+                "tags": [sanitize_unicode(value) for value in entry["tags"]],
             }
         )
     return result
@@ -112,6 +113,10 @@ def channel_videos(channel_id: str, timeout: float) -> list[dict[str, Any]]:
 
 def normalize_video(item: Any) -> dict[str, Any]:
     data = item.model_dump() if hasattr(item, "model_dump") else dict(item)
+    for field_name in ("title", "description"):
+        if field_name in data:
+            data[field_name] = sanitize_unicode(data[field_name])
+    data["tags"] = [sanitize_unicode(value) for value in data.get("tags", [])]
     for name in ("published", "updated"):
         value = data.get(name)
         if isinstance(value, date) and not isinstance(value, datetime):

@@ -1,0 +1,12 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/evolution.yaml"
+search:
+  enabled: true
+  advanced: true
+sections:
+  resources:
+    search_category: resources
+  related-standards:
+    search_category: related
+hide_non_cards_while_searching: true

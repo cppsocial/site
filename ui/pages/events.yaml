@@ -1,0 +1,33 @@
+search:
+  placeholder: Search events
+  empty_message: No matching events or event communities found.
+upcoming:
+  eyebrow: Next on the calendar
+  calendar_options: Calendar options
+  view_label: Event view
+  upcoming_view: Upcoming
+  calendar_view: Calendar
+  subscribe: Subscribe (.ics)
+  add_to_google_calendar: Add to Google Calendar
+  empty_title: No dated events are currently announced.
+  empty_description: Subscribe to the calendar and new entries will appear when organizers publish dates.
+calendar:
+  note: The calendar opens on the current month. Events are drawn across every day they run; select one to visit its official page.
+  previous_month_label: Previous month
+  today_label: Today
+  next_month_label: Next month
+  viewport_label: Monthly event calendar
+  javascript_required: JavaScript is required for the month view.
+  feed_fallback: The same events remain available through the [iCalendar feed]({{ this.config.feed_url }}).
+  open_label: View details for
+  close_label: Close event details
+  non_public_note: This is not a public drop-in meeting. Guests who want to participate must arrange attendance in advance.
+  participation_label: Learn how to participate in WG21
+  participation_url: https://isocpp.org/std/meetings-and-participation
+  date_label: Date
+  event_singular: event
+  event_plural: events
+  in_label: in
+  no_events_prefix: No events in
+  next_prefix: "Next:"
+  on_label: "on"

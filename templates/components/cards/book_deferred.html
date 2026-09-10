@@ -1,0 +1,121 @@
+<template data-book-card-template>
+    <article class="card book-card" data-book-card>
+        <button class="book-card__expand"
+                type="button"
+                data-book-open
+                data-label="{{ page.config.ui.dialog.view_details_prefix }}"
+                aria-haspopup="dialog"></button>
+        <div class="book-card__cover">
+            <img data-book-card-cover
+                 data-label="{{ page.config.ui.dialog.cover_prefix }}"
+                 alt=""
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer" />
+            <span data-book-no-cover aria-hidden="true">{{ page.config.ui.dialog.no_cover }}</span>
+        </div>
+        <div class="book-card__body">
+            <h3 data-book-title></h3>
+            <p class="book-card__authors" data-book-authors></p>
+            <p class="book-card__subtitle" data-book-subtitle></p>
+            <p class="book-card__description" data-book-description></p>
+            <dl class="book-card__metadata">
+                <div data-book-card-publisher>
+                    <dt>{{ page.config.ui.dialog.publisher }}</dt>
+                    <dd>
+                    </dd>
+                </div>
+                <div data-book-card-published>
+                    <dt>{{ page.config.ui.dialog.published }}</dt>
+                    <dd>
+                        <time><!-- Populated from the deferred record. --></time>
+                    </dd>
+                </div>
+            </dl>
+            <p class="book-card__isbn" data-book-isbn>{{ page.config.ui.dialog.isbn }}</p>
+        </div>
+        <template data-book-details>
+            <article class="book-detail">
+                <button class="book-dialog__close"
+                        type="button"
+                        data-book-close
+                        aria-label="{{ page.config.ui.dialog.close_label }}">×</button>
+                <section class="book-detail__visual">
+                    <img data-book-detail-cover
+                         data-label="{{ page.config.ui.dialog.cover_prefix }}"
+                         alt=""
+                         referrerpolicy="no-referrer" />
+                    <div class="book-detail__cover-fallback" data-book-cover-fallback>{{ page.config.ui.dialog.cover_unavailable }}</div>
+                </section>
+                <div class="book-detail__body">
+                    <header class="book-detail__header">
+                        <h2 id="book-detail-title" data-book-detail-title></h2>
+                        <p class="book-detail__subtitle" data-book-detail-subtitle></p>
+                        <p class="book-detail__authors" data-book-detail-authors>{{ page.config.ui.dialog.author_prefix }}</p>
+                    </header>
+                    <section>
+                        <h3 class="book-detail__section-title">{{ page.config.ui.dialog.metadata_title }}</h3>
+                        <dl class="book-detail__metadata">
+                            <div>
+                                <dt>{{ page.config.ui.dialog.isbn_13 }}</dt>
+                                <dd data-book-detail-isbn>
+                                </dd>
+                            </div>
+                            <div data-book-detail-isbn-10>
+                                <dt>{{ page.config.ui.dialog.isbn_10 }}</dt>
+                                <dd>
+                                </dd>
+                            </div>
+                            <div data-book-detail-publisher>
+                                <dt>{{ page.config.ui.dialog.publisher }}</dt>
+                                <dd>
+                                </dd>
+                            </div>
+                            <div data-book-detail-published>
+                                <dt>{{ page.config.ui.dialog.published }}</dt>
+                                <dd>
+                                </dd>
+                            </div>
+                            <div data-book-detail-pages>
+                                <dt>{{ page.config.ui.dialog.pages }}</dt>
+                                <dd>
+                                </dd>
+                            </div>
+                        </dl>
+                    </section>
+                    <section class="book-detail__ratings">
+                        <h3 class="book-detail__section-title">{{ page.config.ui.dialog.ratings_title }}</h3>
+                        <div class="book-rating__sources"
+                             data-book-rating-sources
+                             aria-busy="true">
+                            <div>
+                                <a data-book-url target="_blank" rel="noopener">{{ page.config.ui.dialog.open_library }} ↗</a><span data-book-rating-value>{{ page.config.ui.dialog.loading }}</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-book-detail-subjects>
+                        <h3 class="book-detail__section-title">{{ page.config.ui.dialog.subjects_title }}</h3>
+                        <p class="book-detail__subjects"></p>
+                    </section>
+                    <section class="book-detail__buy">
+                        <h3 class="book-detail__section-title">{{ page.config.ui.dialog.find_title }}</h3>
+                        <p>{{ page.config.ui.dialog.find_description }}</p>
+                        <nav class="book-detail__retailers"
+                             data-book-retailers
+                             data-label="{{ page.config.ui.dialog.places_prefix }}">
+                            <a data-retailer="amazon" target="_blank" rel="noopener">{{ page.config.ui.dialog.retailers.amazon }} ↗</a>
+                            <a data-retailer="bookshop" target="_blank" rel="noopener">{{ page.config.ui.dialog.retailers.bookshop }} ↗</a>
+                            <a data-retailer="barnesNoble" target="_blank" rel="noopener">{{ page.config.ui.dialog.retailers.barnes_noble }} ↗</a>
+                            <a data-retailer="abebooks" target="_blank" rel="noopener">{{ page.config.ui.dialog.retailers.abebooks }} ↗</a>
+                        </nav>
+                    </section>
+                    <a class="book-detail__catalog-link"
+                       data-book-url
+                       target="_blank"
+                       rel="noopener">{{ page.config.ui.dialog.catalog_record }}
+                        <span aria-hidden="true">↗</span></a>
+                </div>
+            </article>
+        </template>
+    </article>
+</template>

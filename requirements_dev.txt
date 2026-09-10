@@ -1,0 +1,8 @@
+-r requirements.txt
+
+# Python formatting, linting, and type checking used by the Makefile.
+autopep8>=2.0.0
+djlint>=1.36.0
+mbake>=1.4.0
+mypy>=1.0.0
+ruff>=0.12.0

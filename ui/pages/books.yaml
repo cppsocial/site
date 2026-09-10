@@ -1,0 +1,46 @@
+search:
+  placeholder: Search books by title, author, subject, publisher, or ISBN
+  empty_message: No matching books found.
+  fields:
+    title: Title
+    content: Description
+    source: Author
+    tags: Subject
+    metadata: Publisher, date, or ISBN
+  labels:
+    cards: Cards
+    list: List
+dialog:
+  layout_label: Book layout
+  view_details_prefix: View details for
+  cover_prefix: Cover of
+  no_cover: No cover
+  publisher: Publisher
+  published: Published
+  isbn: ISBN
+  close_label: Close book details
+  cover_unavailable: Cover unavailable
+  author_prefix: By
+  metadata_title: Edition metadata
+  isbn_13: ISBN-13
+  isbn_10: ISBN-10
+  pages: Pages
+  metadata_source: Book metadata
+  ratings_title: Ratings
+  open_library: Open Library
+  loading: Loading...
+  subjects_title: Subjects
+  find_title: Find this edition
+  find_description: Retailer searches are generated from the ISBN and are not stored per book.
+  places_prefix: Places to find
+  retailers:
+    amazon: Amazon
+    bookshop: Bookshop.org
+    barnes_noble: Barnes & Noble
+    abebooks: AbeBooks
+  catalog_record: Open Library edition record
+  ratings_suffix: ratings
+  retrieved_live: Retrieved live
+  cached_rating: Cached rating
+  unavailable: Unavailable
+  no_public_ratings: No public ratings

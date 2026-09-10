@@ -1,0 +1,8 @@
+$schema: ../../schemas/pages/page.json
+title: Evolution
+seo_title: C++ Standards, WG21 and Language Evolution
+description: Everything related to standardization and evolution of C++
+config: !import "config/pages/evolution.yaml"
+sections:
+  - !import "resources.yaml"
+  - !import "related-standards.yaml"

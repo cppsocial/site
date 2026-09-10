@@ -1,0 +1,61 @@
+name: Add a resource
+description: Suggest a tool, guide, library, compiler, build tool, or similar listing
+title: "Add resource: "
+labels: ["type: addition", "area: resource"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Resource type
+      options:
+        [
+          General resource,
+          Guide or learning material,
+          Library,
+          Compiler or toolchain,
+          Build tool,
+          Package manager,
+          ABI resource,
+          Standardization resource,
+          Recurring conference,
+          Other,
+        ]
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description and C++ relevance
+      description: State what it does and who it is useful to; avoid marketing copy.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Supporting source
+      description: Link to first-party documentation or the project repository.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that this resource is not already listed.
+          required: true
+        - label: This is not a guide or other learning material, or it is freely accessible.
+          required: true
+        - label: This is relevant to C++ developers and has real users.
+          required: true

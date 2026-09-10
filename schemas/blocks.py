@@ -1,8 +1,11 @@
 from datetime import date, datetime, time
-from typing import Annotated, Literal
+from typing import Annotated, Any, Literal
 
+import markdown
+from pydantic import model_validator
 from site_generator import Schema, field, schema
 
+from schemas.markdown import select_sections
 from schemas.relevance import CppRelevance
 
 
@@ -16,6 +19,38 @@ class Link(Schema):
 class Markdown(Schema):
     type: Literal["markdown"] = "markdown"
     content: str = ""
+    include_headings: list[str] = field(default_factory=list)
+    markdown_extensions: list[str] = field(default_factory=list)
+
+    @model_validator(mode="after")
+    def select_headings(self) -> "Markdown":
+        if self.include_headings:
+            self.content = select_sections(self.content, self.include_headings)
+        if self.markdown_extensions:
+            self.content = markdown.markdown(
+                self.content, extensions=self.markdown_extensions
+            )
+        return self
+
+
+class MetricBar(Schema):
+    label: str
+    value: str = ""
+    percent: int = 0
+
+
+class MetricBarGroup(Schema):
+    title: str = ""
+    bars: list[MetricBar] = field(default_factory=list)
+
+
+@schema("blocks/metric-bars")
+class MetricBars(Schema):
+    type: Literal["metric_bars"] = "metric_bars"
+    title: str = ""
+    description: str = ""
+    groups: list[MetricBarGroup] = field(default_factory=list)
+    note: str = ""
 
 
 @schema("blocks/card")
@@ -61,9 +96,9 @@ class BookMetadata(Schema):
     rating_count: int = 0
 
 
-@schema("blocks/discord-card")
-class DiscordCard(Card):
-    type: Literal["discord_card"] = "discord_card"
+class CommunityMetadataSource(Schema):
+    source: Literal["discord", "web", "reddit", "stackoverflow"]
+    key: str
 
 
 @schema("blocks/community-card")
@@ -71,6 +106,14 @@ class CommunityCard(Card):
     type: Literal["community_card"] = "community_card"
     community_id: str
     platform: Literal["discord", "slack", "irc", "reddit", "forum"]
+    metadata_source: CommunityMetadataSource
+
+
+@schema("blocks/meetup-card")
+class MeetupCard(Card):
+    type: Literal["meetup_card"] = "meetup_card"
+    source_id: str
+    timezone: str = ""
 
 
 @schema("communities/metadata")
@@ -83,18 +126,11 @@ class CommunityMetadata(Schema):
     weekly_contributions: int | None = None
     source_url: str = ""
 
+
 @schema("provenance")
 class Provenance(Schema):
     retrieved_at: str = ""
     source_urls: list[str] = field(default_factory=list)
-
-@schema("blocks/event-card")
-class EventCard(Card):
-    type: Literal["event_card"] = "event_card"
-    start_date: date
-    end_date: date | None = None
-    location: str = ""
-    format: Literal["in_person", "online", "hybrid"] = "in_person"
 
 
 class CalendarEvent(Schema):
@@ -112,6 +148,7 @@ class CalendarEvent(Schema):
     venue: str = ""
     format: Literal["in_person", "online", "hybrid"] = "in_person"
     event_type: Literal["conference", "meetup", "committee", "workshop"]
+    public: bool = True
     organizer: str = ""
     status: Literal["confirmed", "tentative", "cancelled"] = "confirmed"
     path: str = ""
@@ -141,9 +178,9 @@ class ChannelMetadata(Schema):
 @schema("youtube/cached-video")
 class CachedVideo(Schema):
     video_id: str
-    title: str
-    url: str
-    published: datetime
+    title: str = ""
+    url: str = ""
+    published: datetime | None = None
     updated: datetime | None = None
     description: str = ""
     thumbnail_url: str = ""
@@ -151,32 +188,44 @@ class CachedVideo(Schema):
     cpp_relevance: CppRelevance | None = None
     hidden: bool = False
 
-
-@schema("blocks/video-card")
-class VideoCard(Card):
-    type: Literal["video_card"] = "video_card"
-    channel: str
-    published: date | None = None
-    thumbnail: str = ""
+    @model_validator(mode="after")
+    def complete_unless_hidden(self) -> "CachedVideo":
+        if not self.hidden and not all((self.title, self.url, self.published)):
+            raise ValueError("visible cached videos require title, URL, and date")
+        return self
 
 
 GroupCard = Annotated[
-    Card | BookCard | DiscordCard | CommunityCard | EventCard | ChannelCard | VideoCard,
+    Card | BookCard | CommunityCard | MeetupCard | ChannelCard,
     field(discriminator="type"),
+]
+GroupCardType = Literal[
+    "card", "book_card", "community_card", "meetup_card", "channel_card"
 ]
 
 
 @schema("blocks/card-group")
 class CardGroup(Schema):
     type: Literal["card_group"] = "card_group"
-    title: str
+    card_type: GroupCardType = "card"
+    id: str
+    title: str = ""
     description: str = ""
-    search_category: str = ""
-    layout: Literal["grid", "showcase", "rail"] = "grid"
     default_cta: str = ""
-    page_rows: int = 0
-    randomize: bool = False
     cards: list[GroupCard] = field(default_factory=list)
+
+    @model_validator(mode="before")
+    @classmethod
+    def apply_default_card_type(cls, value: Any) -> Any:
+        if not isinstance(value, dict) or not isinstance(value.get("cards"), list):
+            return value
+
+        card_type = value.get("card_type", "card")
+        cards = [
+            {"type": card_type, **card} if isinstance(card, dict) else card
+            for card in value["cards"]
+        ]
+        return {**value, "cards": cards}
 
 
 class StandardRelease(Schema):
@@ -200,7 +249,10 @@ class StandardsTimeline(Schema):
 
 
 ContentBlock = (
-    Annotated[Markdown | CardGroup | StandardsTimeline, field(discriminator="type")]
+    Annotated[
+        Markdown | CardGroup | MetricBars | StandardsTimeline,
+        field(discriminator="type"),
+    ]
     | str
 )
 
@@ -209,14 +261,5 @@ ContentBlock = (
 class NavigationItem(Schema):
     path: str
     label: str
-
-
-@schema("blocks/home-card")
-class HomeCard(Schema):
-    type: Literal["home_card"] = "home_card"
-    title: str
-    description: str = ""
-    path: str = ""
-    icon: str = ""
-    icon_type: Literal["File", "Unicode"] = "File"
-    cta: str = ""
+    footer_group: str = ""
+    footer_description: str = ""

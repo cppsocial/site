@@ -1,0 +1,10 @@
+$schema: ../../schemas/pages/page.json
+title: About cpp.social
+seo_title: About the cpp.social C++ Community Index
+description: A community-maintained index of everything C++
+config:
+  common: !import "config/common.yaml"
+  structured_data_type: AboutPage
+sections:
+  - type: markdown
+    content: !include "about.md"

@@ -1,0 +1,4 @@
+{% for block in blocks %}
+    {% set this = block %}
+    {% include "blocks/" ~ block.type ~ ".html" %}
+{% endfor %}

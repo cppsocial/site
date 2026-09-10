@@ -1,0 +1,10 @@
+<section class="landing-{{ section.id }}" id="{{ section.id }}">
+    <div class="landing-wrap">
+        {% include "pages/home/section_intro.html" %}
+        <div class="{{ section.id }}-layout">
+            {% for panel in section.panels %}
+                {% include "pages/home/panel.html" %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

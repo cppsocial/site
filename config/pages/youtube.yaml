@@ -1,0 +1,30 @@
+common: !import "config/common.yaml"
+structured_data_type: CollectionPage
+ui: !import "ui/pages/youtube.yaml"
+search:
+  enabled: true
+  database: true
+  feed_cards: true
+  advanced: true
+  date_range: true
+  relevance_filter: false
+  cpp_relevance_threshold: 0.5
+sections:
+  latest:
+    page_rows: 2
+    search_category: videos
+  creators:
+    layout: rail
+    randomize: true
+    search_category: creators
+  organizations:
+    layout: rail
+    randomize: true
+    search_category: organizations
+  conferences:
+    layout: rail
+    randomize: true
+    search_category: conferences
+channel_metadata: !import "data/youtube/channel-metadata.yaml"
+video_cache: !import-map "data/youtube/videos"
+provenance: !import "data/youtube/provenance.yaml"

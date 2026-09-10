@@ -1,0 +1,69 @@
+site:
+  skip_link: Skip to content
+  menu_label: Menu
+  primary_navigation_label: Primary
+  theme_toggle_label: Toggle theme
+  footer_label: Footer
+  project_group_label: Project
+  calendar_feed_title: C++ Community Events
+
+search:
+  label_prefix: Search
+  filters_label: Search filters
+  active_filters_label: Search filters (active)
+  clear_label: Clear search
+  fields_legend: Search in
+  categories_legend: Categories
+  managers_legend: Package managers
+  published_legend: Published
+  from_label: From
+  through_label: Through
+  publication_timeline_label: Book publication timeline
+  all_years_label: All years
+  include_unrelated_label: Include possibly unrelated items
+  pagination_label: Pagination
+  previous_label: Previous
+  next_label: Next
+  entry_singular: entry
+  entry_plural: entries
+  packages_plural: packages
+  package_singular: package
+  minimum_query: type at least {count} characters
+  indexing: indexing…
+  unavailable: Search data is unavailable.
+  remove_prefix: Remove
+  requirement_suffix: requirement
+  remove_packages_prefix: Remove packages available in
+  open_to_load: Open to load package-manager metadata.
+  continue_reading: Continue reading
+  hide_label: Hide
+  show_label: Show
+  section_fallback: section
+  matched_suffix: matched
+  count_matches_prompt: Type at least {count} characters to count matches.
+  counting_matches: Counting matching packages...
+  reloading_matches: Reloading package matches…
+
+provenance:
+  default_label: Source information
+  external_label: External Sources
+  description: "Some of the information on this page is retrieved automatically from external sources:"
+  retrieved_prefix: Retrieved at
+
+cards:
+  location_label: Location
+  organizer_label: Organizer
+  format_label: Format
+  topics_label: Topics
+  event_website_label: Event website
+  registration_label: Registration
+  add_to_google_label: Add to Google
+  source_label: Source
+  checked_label: checked
+  weekly_visitors_label: Weekly visitors
+  weekly_contributions_label: Weekly contributions
+  members_suffix: members
+  watch_prefix: Watch
+  youtube_suffix: on YouTube
+  links_suffix: links
+  references_suffix: references

@@ -1,0 +1,9 @@
+- { label: Communities, path: /communities/, footer_group: Community }
+- { label: Events, path: /events/, footer_group: Community }
+- { label: Blogs, path: /blogs/, footer_group: Community }
+- { label: YouTube, path: /youtube/, footer_group: Community }
+- { label: Resources, path: /resources/, footer_group: Discover }
+- { label: Ecosystem, path: /ecosystem/, footer_group: Discover }
+- { label: Evolution, path: /evolution/, footer_group: Discover }
+- { label: Books, path: /books/, footer_group: Discover }
+- { label: Packages, path: /packages/, footer_group: Discover }

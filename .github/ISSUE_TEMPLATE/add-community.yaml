@@ -1,0 +1,41 @@
+name: Add a community
+description: Suggest a chat, forum, Slack, IRC channel, or meetup group
+title: "Add community: "
+labels: ["type: addition", "area: community"]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Discord, Slack, IRC, Reddit, Forum or Q&A, Meetup, Other]
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Community name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+      description: A link or invite to the community.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description and C++ relevance
+      description: Two or three factual sentences are enough.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I checked that this community is not already listed.
+          required: true
+        - label: This is not a Discord community, or the invite is permanent and is not a vanity link.
+          required: true

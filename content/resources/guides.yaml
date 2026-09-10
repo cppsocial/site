@@ -3,4 +3,8 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: C++ Best Practices
+    path: https://lefticus.gitbooks.io/cpp-best-practices/content/
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
+    description: Collaborative collection of C++ Best Practices

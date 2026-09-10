@@ -1,0 +1,75 @@
+name: Check - Frontend
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+    paths:
+      - "frontend/**"
+      - "scripts/**/*.cjs"
+      - "eslint.config.js"
+      - ".prettierignore"
+      - "package.json"
+      - "package-lock.json"
+      - "vitest.config.ts"
+      - ".github/workflows/check-frontend.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Check formatting
+        id: formatting
+        run: |
+          npm run format:frontend
+          git diff -- frontend/ scripts/ vitest.config.ts \
+            > formatting.diff
+          if [[ -s formatting.diff ]]; then
+            cat formatting.diff
+            echo "::error::Frontend formatting differs. Run: make format-frontend"
+            exit 1
+          fi
+      - name: Upload formatting diff
+        if: failure() && steps.formatting.outcome == 'failure'
+        uses: actions/upload-artifact@v7
+        with:
+          name: formatting-diff-${{ github.event.number }}-frontend
+          path: formatting.diff
+          if-no-files-found: error
+          retention-days: 7
+      - name: Lint
+        if: always() && !cancelled()
+        run: npm run lint:frontend
+      - name: Type check
+        if: always() && !cancelled()
+        run: npm run typecheck:frontend
+      - name: Test with coverage
+        if: always() && !cancelled()
+        run: npm run coverage:frontend
+      - name: Upload coverage summary
+        if: always() && hashFiles('coverage/coverage-summary.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-summary-${{ github.event.number }}-frontend
+          path: coverage/coverage-summary.json
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload coverage report
+        if: always() && hashFiles('coverage/index.html') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report-${{ github.event.number }}-frontend
+          path: coverage/
+          if-no-files-found: error
+          retention-days: 7

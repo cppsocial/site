@@ -1,3 +1,5 @@
+"""Tests for browser plugin data normalization."""
+
 import tempfile
 import unittest
 from pathlib import Path

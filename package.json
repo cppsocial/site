@@ -2,11 +2,12 @@
   "type": "module",
   "scripts": {
     "build:frontend": "node frontend/build.mjs",
-    "format:frontend": "prettier --write \"frontend/**/*.{ts,mjs,json}\" \"vitest.config.ts\"",
-    "check:frontend": "prettier --check \"frontend/**/*.{ts,mjs,json}\" \"vitest.config.ts\"",
-    "lint:frontend": "eslint \"frontend/**/*.{ts,mjs}\" \"vitest.config.ts\"",
+    "format:frontend": "prettier --write \"frontend/**/*.{ts,mjs,json}\" \"scripts/**/*.cjs\" \"vitest.config.ts\"",
+    "check:frontend": "prettier --check \"frontend/**/*.{ts,mjs,json}\" \"scripts/**/*.cjs\" \"vitest.config.ts\"",
+    "lint:frontend": "eslint \"frontend/**/*.{ts,mjs}\" \"scripts/**/*.cjs\" \"vitest.config.ts\"",
     "typecheck:frontend": "tsc --noEmit -p frontend/tsconfig.json && tsc --noEmit -p frontend/tsconfig.migration.json && tsc --noEmit -p frontend/tsconfig.worker.json",
     "test:frontend": "vitest run",
+    "coverage:frontend": "vitest run --coverage",
     "check:assets": "prettier --check \"assets/**/*.{css,html}\"",
     "format:assets": "prettier --write \"assets/**/*.{css,html}\"",
     "check:yaml": "prettier --check \"**/*.yaml\"",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "24.13.3",
+    "@vitest/coverage-v8": "4.1.11",
     "esbuild": "0.28.2",
     "eslint": "^10.10.0",
     "jsdom": "26.1.0",

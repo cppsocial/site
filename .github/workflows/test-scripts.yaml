@@ -1,14 +1,20 @@
-name: Test - scripts
+name: Test - Scripts
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
+    paths:
+      - "scripts/**/*.py"
+      - ".github/workflows/test-scripts.yaml"
 
 permissions:
   contents: read
 
 jobs:
   tests:
+    name: Scripts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -16,6 +22,27 @@ jobs:
         with:
           python-version: "3.13"
       - name: Install test dependencies
-        run: python -m pip install -r requirements.txt
-      - name: Run script tests
-        run: python -m unittest discover -s scripts/tests -v
+        run: python -m pip install 'coverage>=7.6.0' 'pyyaml>=6.0'
+      - name: Run script tests with coverage
+        run: |
+          python -m coverage run --source=scripts --omit='scripts/tests/*' \
+            -m unittest discover -s scripts/tests -v
+          python -m coverage report
+          python -m coverage json -o coverage-summary.json
+          python -m coverage html -d coverage-html
+      - name: Upload coverage summary
+        if: always() && hashFiles('coverage-summary.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-summary-${{ github.event.number }}-scripts
+          path: coverage-summary.json
+          if-no-files-found: error
+          retention-days: 7
+      - name: Upload coverage report
+        if: always() && hashFiles('coverage-html/index.html') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-report-${{ github.event.number }}-scripts
+          path: coverage-html/
+          if-no-files-found: error
+          retention-days: 7

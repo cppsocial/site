@@ -25,7 +25,10 @@ jobs:
       - name: Authorize preview and resolve PR
         id: authorize
         uses: actions/github-script@v9
+        env:
+          GH_TOKEN: ${{ github.token }}
         with:
+          github-token: ${{ env.GH_TOKEN }}
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
@@ -93,7 +96,7 @@ jobs:
     permissions:
       contents: read
       issues: write
-      pull-requests: write
+      pull-requests: read
     environment:
       name: netlify-preview
       url: ${{ steps.deploy.outputs.preview-url }}
@@ -126,11 +129,10 @@ jobs:
 
       - name: Comment on PR
         env:
-          GH_TOKEN: ${{ github.token }}
-          PR: ${{ needs.build.outputs.pr }}
           PREVIEW_URL: ${{ steps.deploy.outputs.preview-url }}
         run: |
           {
+            echo "<!-- cppsocial:pr-preview -->"
             echo "Preview deployed: [$PREVIEW_URL]($PREVIEW_URL)"
             echo
             echo "<details><summary>Netlify deploy and log links</summary>"
@@ -139,4 +141,51 @@ jobs:
             echo
             echo "</details>"
           } > preview-comment.md
-          gh pr comment "$PR" --repo "$GITHUB_REPOSITORY" --body-file preview-comment.md
+
+      - name: Create or update preview comment as github-actions[bot]
+        uses: actions/github-script@v9
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ needs.build.outputs.pr }}
+        with:
+          github-token: ${{ env.GH_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- cppsocial:pr-preview -->';
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue_number = Number(process.env.PR);
+            if (!Number.isInteger(issue_number)) {
+              core.setFailed(`Invalid PR number: ${process.env.PR}`);
+              return;
+            }
+            const body = fs.readFileSync('preview-comment.md', 'utf8');
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            // Bot PR comments are sticky: identify ours by marker and update it.
+            const existing = comments.toReversed().find(
+              ({ body, user }) =>
+                user?.id === 41898282 &&
+                user.login === 'github-actions[bot]' &&
+                (body?.includes(marker) || body?.startsWith('Preview deployed:')),
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              });
+            }

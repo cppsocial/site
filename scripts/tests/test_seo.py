@@ -1,3 +1,5 @@
+"""Site-wide SEO and discovery-file integrity tests run during builds."""
+
 import re
 import struct
 import unittest

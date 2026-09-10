@@ -1,0 +1,50 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      upload-pages-artifact:
+        description: Package the build for a subsequent Pages deployment
+        required: false
+        default: false
+        type: boolean
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: python -m pip install -r requirements.txt
+      - name: Run site integrity tests
+        run: python -m unittest scripts.tests.test_seo -v
+      - run: site-generator build
+      - name: Upload PR site
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          name: pr-${{ github.event.number }}-site
+          path: build
+          if-no-files-found: error
+          retention-days: 7
+      - if: inputs.upload-pages-artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build

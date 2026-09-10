@@ -1,11 +1,12 @@
 name: Check - Makefile
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
     paths:
       - "Makefile"
-      - "updater/pyproject.toml"
       - ".github/workflows/check-makefile.yaml"
 
 permissions:
@@ -13,6 +14,7 @@ permissions:
 
 jobs:
   makefile:
+    name: Makefile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -24,9 +26,20 @@ jobs:
       - name: Validate
         run: mbake validate Makefile
       - name: Check formatting
+        id: formatting
         run: |
           mbake format Makefile
-          if ! git diff --exit-code -- Makefile; then
+          git diff -- Makefile > formatting.diff
+          if [[ -s formatting.diff ]]; then
+            cat formatting.diff
             echo "::error::Makefile formatting differs. Run: mbake format Makefile"
             exit 1
           fi
+      - name: Upload formatting diff
+        if: failure() && steps.formatting.outcome == 'failure'
+        uses: actions/upload-artifact@v7
+        with:
+          name: formatting-diff-${{ github.event.number }}-makefile
+          path: formatting.diff
+          if-no-files-found: error
+          retention-days: 7

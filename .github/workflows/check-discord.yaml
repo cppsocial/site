@@ -1,16 +1,21 @@
 name: Check - Discord
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
     paths:
       - "content/communities/im.yaml"
+      - "scripts/check_discord_invites.py"
+      - ".github/workflows/check-discord.yaml"
 
 permissions:
   contents: read
 
 jobs:
   invites:
+    name: Discord Invites
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -23,7 +28,7 @@ jobs:
         run: python -m pip install pyyaml
       - name: Validate changed Discord invites
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: >-
           python scripts/check_discord_invites.py
           --base "$BASE_SHA"

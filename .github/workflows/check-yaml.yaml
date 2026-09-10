@@ -1,20 +1,20 @@
 name: Check - YAML
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
     paths:
       - "**/*.yaml"
       - "!data/**"
-      - "package.json"
-      - "package-lock.json"
-      - ".prettierignore"
 
 permissions:
   contents: read
 
 jobs:
   prettier:
+    name: YAML
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -24,9 +24,20 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Check formatting
+        id: formatting
         run: |
           npm run format:yaml
-          if ! git diff --exit-code -- ':(glob)**/*.yaml' ':(exclude)data/**'; then
+          git diff -- ':(glob)**/*.yaml' ':(exclude)data/**' > formatting.diff
+          if [[ -s formatting.diff ]]; then
+            cat formatting.diff
             echo "::error::YAML formatting differs. Run: npm run format:yaml"
             exit 1
           fi
+      - name: Upload formatting diff
+        if: failure() && steps.formatting.outcome == 'failure'
+        uses: actions/upload-artifact@v7
+        with:
+          name: formatting-diff-${{ github.event.number }}-yaml
+          path: formatting.diff
+          if-no-files-found: error
+          retention-days: 7

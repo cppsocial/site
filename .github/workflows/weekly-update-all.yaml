@@ -11,7 +11,16 @@ permissions:
 
 jobs:
   update:
+    strategy:
+      fail-fast: false
+      matrix:
+        updater:
+          - blogs
+          - books
+          - communities
+          - events
+          - packages
+          - youtube
     uses: ./.github/workflows/update-metadata.yaml
     with:
-      updater: update-all
-      output-path: data/
+      updater: ${{ matrix.updater }}

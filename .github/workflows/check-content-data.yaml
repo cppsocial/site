@@ -1,61 +1,37 @@
-name: Check - content/data
+name: Check - Content and Data
 
 on:
+  push:
+    branches: [master]
   pull_request:
     branches: [master]
     paths:
       - "content/**"
-      - "data/**"
+      - "scripts/check_data_scope.py"
+      - "scripts/check_content_rules.py"
+      - ".github/workflows/check-content-data.yaml"
 
 permissions:
   contents: read
 
 jobs:
   data-scope:
+    name: Data Scope
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
       - name: Warn about generated data unrelated to changed content
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: |
-          declare -A changed_content
-          has_content=false
-
-          while IFS= read -r -d '' path; do
-            case "$path" in
-              content/blogs/*) changed_content[blogs]=1; has_content=true ;;
-              content/books/*) changed_content[books]=1; has_content=true ;;
-              content/communities/*) changed_content[communities]=1; has_content=true ;;
-              content/events/*) changed_content[events]=1; has_content=true ;;
-              content/packages/*) changed_content[packages]=1; has_content=true ;;
-              content/youtube/*) changed_content[youtube]=1; has_content=true ;;
-              content/*) has_content=true ;;
-            esac
-          done < <(git diff --name-only -z "$BASE_SHA...HEAD")
-
-          "$has_content" || exit 0
-
-          while IFS= read -r -d '' path; do
-            family=""
-            case "$path" in
-              data/blogs/*) family=blogs ;;
-              data/books/*) family=books ;;
-              data/communities/*) family=communities ;;
-              data/events/*|data/events-imported.yaml) family=events ;;
-              data/packages/*) family=packages ;;
-              data/youtube/*) family=youtube ;;
-              data/*) family=unknown ;;
-            esac
-
-            if [[ -n "$family" && -z "${changed_content[$family]:-}" ]]; then
-              echo "::warning file=$path::Generated data is not associated with a changed content family in this PR. Keep only related updater output, or split this data maintenance into its own PR."
-            fi
-          done < <(git diff --name-only -z "$BASE_SHA...HEAD")
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python scripts/check_data_scope.py --base "$BASE_SHA"
 
   rules:
+    name: Content Rules
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -68,5 +44,5 @@ jobs:
         run: python -m pip install pyyaml
       - name: Validate machine-checkable content rules
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: python scripts/check_content_rules.py --base "$BASE_SHA"

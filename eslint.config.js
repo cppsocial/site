@@ -17,6 +17,19 @@ export default tseslint.config(
   },
 
   {
+    files: ["scripts/**/*.cjs"],
+    extends: [eslint.configs.recommended],
+    languageOptions: {
+      sourceType: "commonjs",
+      globals: {
+        module: "readonly",
+        process: "readonly",
+        require: "readonly",
+      },
+    },
+  },
+
+  {
     files: ["frontend/**/*.ts", "vitest.config.ts"],
     ignores: ["frontend/src/workers/**/*.ts"],
     extends: [

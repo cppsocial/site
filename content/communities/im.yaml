@@ -4,4 +4,15 @@ card_type: community_card
 id: instant-messaging
 title: Instant messaging and chat
 description: Real-time conversation, questions, and community coordination
-cards: []
+cards:
+  - community_id: libera-cpp
+    metadata_source: { source: web, key: "https://libera.chat/" }
+    title: "#c++ on Libera.Chat"
+    platform: irc
+    path: https://web.libera.chat/#c++
+    description: A long-running IRC channel for C++ discussion and help
+    links:
+      - label: Open web chat
+        path: https://web.libera.chat/#c++
+      - label: Connection guide
+        path: https://libera.chat/guides/connect

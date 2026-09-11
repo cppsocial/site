@@ -4,4 +4,7 @@ card_type: channel_card
 id: creators
 title: Creators and educators
 description: Follow channels publishing tutorials, courses, code reviews and practical C++ guidance
-cards: []
+cards:
+  - title: Andreas Fertig
+    channel_type: creator
+    channel_id: UCxJfIsPGHFS3_nRDv1u-Q8g

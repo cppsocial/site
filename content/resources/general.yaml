@@ -3,4 +3,8 @@ type: card_group
 id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
-cards: []
+cards:
+  - title: cppreference.com
+    path: https://en.cppreference.com/
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
+    description: Detailed language and standard-library reference with compiler-support tables

@@ -3,4 +3,8 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: C++ Core Guidelines
+    path: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_core_guidelines/cpp_core_guidelines_logo.svg
+    description: A living set of guidelines for modern, safe, and maintainable C++

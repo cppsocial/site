@@ -3,4 +3,8 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: cpp_working_drafts
+    icon: null
+    path: https://jhcarl0814.github.io/cpp_working_drafts/cpp_working_drafts.html?q=reflection
+    description: Fuzzy search for draft versions of the C++ standard

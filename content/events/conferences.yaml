@@ -3,4 +3,10 @@ type: card_group
 id: conferences
 title: Conferences
 description: Major C++ conferences around the world
-cards: []
+cards:
+  - title: C++Online
+    path: https://cpponline.uk/
+    description: Online-only international C++ conference designed for broad geographic and financial accessibility
+    metadata:
+      Location: Online
+      Frequency: Annual

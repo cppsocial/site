@@ -3,4 +3,7 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: wg21.org
+    path: https://wg21.org/
+    description: A volunteer resource for the C++ standards committee with improved mailing view

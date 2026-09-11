@@ -3,4 +3,10 @@ type: card_group
 id: conferences
 title: Conferences
 description: Major C++ conferences around the world
-cards: []
+cards:
+  - title: C++Now
+    path: https://cppnow.org/
+    description: Five-day, in-person conference in Aspen focused on advanced C++, open-source libraries, and the language's future evolution
+    metadata:
+      Location: Aspen, Colorado, USA
+      Frequency: Annual

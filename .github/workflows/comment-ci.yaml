@@ -16,16 +16,15 @@ on:
       - Test - Updater
     types: [completed]
 
-permissions:
-  actions: read
-  contents: read
-  issues: write
-  pull-requests: write
-
 jobs:
   comment:
     if: github.event.workflow_run.event == 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      issues: write
+      pull-requests: write
     concurrency:
       group: >-
         ci-comment-${{ github.event.workflow_run.pull_requests[0].number ||
@@ -41,10 +40,8 @@ jobs:
           sparse-checkout-cone-mode: false
       - name: Create or update CI comment as github-actions[bot]
         uses: actions/github-script@v9
-        env:
-          GH_TOKEN: ${{ secrets.CI_COMMENT_TOKEN || github.token }}
         with:
-          github-token: ${{ env.GH_TOKEN }}
+          github-token: ${{ github.token }}
           script: |
             const report = require(
               `${process.env.GITHUB_WORKSPACE}/scripts/report_ci.cjs`

@@ -3,4 +3,8 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: All papers
+    icon: null
+    path: https://wg21.link/index.html
+    description: A searchable index and stable short links for WG21 papers and status issues

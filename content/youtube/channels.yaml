@@ -4,4 +4,7 @@ card_type: channel_card
 id: creators
 title: Creators and educators
 description: Follow channels publishing tutorials, courses, code reviews and practical C++ guidance
-cards: []
+cards:
+  - title: The Cherno
+    channel_type: creator
+    channel_id: UCQ-W1KE9EYfdxhL6S4twUNw

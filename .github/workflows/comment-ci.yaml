@@ -20,7 +20,7 @@ permissions:
   actions: read
   contents: read
   issues: write
-  pull-requests: read
+  pull-requests: write
 
 jobs:
   comment:
@@ -42,7 +42,7 @@ jobs:
       - name: Create or update CI comment as github-actions[bot]
         uses: actions/github-script@v9
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.CI_COMMENT_TOKEN || github.token }}
         with:
           github-token: ${{ env.GH_TOKEN }}
           script: |

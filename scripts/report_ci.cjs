@@ -336,11 +336,12 @@ module.exports = async function reportCi({ core, context, github }) {
     issue_number: pull.number,
     per_page: 100,
   });
-  // Bot PR comments are sticky: identify ours by marker and update it.
+  const authenticatedUser = (await github.rest.users.getAuthenticated()).data;
+  // Reporter comments are sticky: identify ours by author and marker.
   const existing = comments.find(
     ({ body, user }) =>
-      user?.id === 41898282 &&
-      user.login === "github-actions[bot]" &&
+      user?.id === authenticatedUser.id &&
+      user.login === authenticatedUser.login &&
       body?.includes(MARKER),
   );
   if (existing) {

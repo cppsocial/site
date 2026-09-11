@@ -3,4 +3,8 @@ type: card_group
 id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
-cards: []
+cards:
+  - title: uiCA
+    path: https://uica.uops.info/
+    icon: null
+    description: Analyze instruction throughput on supported x86 microarchitectures and compare predictions from several analysis tools

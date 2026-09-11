@@ -4,4 +4,7 @@ card_type: channel_card
 id: organizations
 title: Organizations and shows
 description: Podcasts and channels run by organizations
-cards: []
+cards:
+  - title: CppCast
+    channel_type: show
+    channel_id: UCuCjADS4u3uJDTqUaG0H9dA

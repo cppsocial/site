@@ -4,4 +4,10 @@ card_type: community_card
 id: forums
 title: Forums and Q&A
 description: Searchable, asynchronous discussions and answers
-cards: []
+cards:
+  - community_id: stack-overflow-cpp
+    metadata_source: { source: stackoverflow, key: c%2B%2B }
+    title: Stack Overflow — C++
+    platform: forum
+    path: https://stackoverflow.com/questions/tagged/c%2b%2b
+    description: Technical questions and answers carrying the C++ tag

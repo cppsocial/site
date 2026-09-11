@@ -3,4 +3,7 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: C++ Super-FAQ
+    path: https://isocpp.org/faq
+    description: The Standard C++ Foundation's consolidated answers to frequently asked questions

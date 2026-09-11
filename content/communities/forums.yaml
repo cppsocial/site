@@ -4,4 +4,11 @@ card_type: community_card
 id: forums
 title: Forums and Q&A
 description: Searchable, asynchronous discussions and answers
-cards: []
+cards:
+  - community_id: cplusplus-forum
+    metadata_source: { source: web, key: "https://cplusplus.com/forum/" }
+    title: cplusplus.com Forum
+    platform: forum
+    path: https://cplusplus.com/forum/
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
+    description: A traditional forum with beginner, general, Windows, and Unix C++ sections

@@ -3,4 +3,8 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: Bjarne Stroustrup's C++ FAQ
+    path: https://www.stroustrup.com/bs_faq.html
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
+    description: Answers about C++ design, history, usage, and common misconceptions from its creator

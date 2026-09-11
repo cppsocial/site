@@ -3,4 +3,8 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: LWG issues list
+    icon: null
+    path: https://cplusplus.github.io/LWG/lwg-index.html
+    description: A list of all reported C++ library issues

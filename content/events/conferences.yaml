@@ -3,4 +3,10 @@ type: card_group
 id: conferences
 title: Conferences
 description: Major C++ conferences around the world
-cards: []
+cards:
+  - title: Meeting C++
+    path: https://meetingcpp.com/
+    description: Annual hybrid C++ conference in Berlin with onsite and online tracks and international speakers
+    metadata:
+      Location: Berlin, Germany
+      Frequency: Annual

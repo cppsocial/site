@@ -4,4 +4,10 @@ card_type: community_card
 id: forums
 title: Forums and Q&A
 description: Searchable, asynchronous discussions and answers
-cards: []
+cards:
+  - community_id: reddit-cpp
+    metadata_source: { source: reddit, key: cpp }
+    title: r/cpp
+    platform: reddit
+    path: https://www.reddit.com/r/cpp/
+    description: C++ news, articles, proposals, and technical discussion

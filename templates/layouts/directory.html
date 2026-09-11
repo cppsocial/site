@@ -22,7 +22,7 @@
 {% block scripts %}
     <script src="{{ '/assets/directory.js'|url }}"></script>
     {% block directory_scripts %}{% endblock %} {% endblock %} {% block provenance
-    %} {% if this.config.get('provenance') %} {% set label = this.config.ui.provenance_label or
+    %} {% if this.config.get("provenance") %} {% set label = this.config.ui.provenance_label or
         this.config.common.ui.provenance.external_label %} {% call
             source_note(this.config.provenance, label, this.config.common.ui.provenance) %}
         {% endcall %}

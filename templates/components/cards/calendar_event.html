@@ -32,7 +32,7 @@
     <div class="calendar-event__body">
         <div class="calendar-event__heading">
             <div>
-                <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != 'confirmed' %} · {{ this.status }}{% endif %}</p>
+                <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != "confirmed" %} · {{ this.status }}{% endif %}</p>
                 {% if compact_event|default(false) and event_dialog|default(false) %}
                     <div class="calendar-event__title-line">
                         <h3>{{ this.title|keep_cpp }}</h3>

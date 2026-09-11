@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% if this.get('description') %}
+        {% if this.get("description") %}
             <meta name="description" content="{{ this.description }}">
             <meta property="og:description" content="{{ this.description }}">
         {% endif %}
@@ -27,11 +27,11 @@
               content="{{ this.config.common.site.social_image_alt }}">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="{{ document_title }}">
-        {% if this.get('description') %}<meta name="twitter:description" content="{{ this.description }}">{% endif %}
+        {% if this.get("description") %}<meta name="twitter:description" content="{{ this.description }}">{% endif %}
         <meta name="twitter:image" content="{{ social_image_url }}">
         <meta name="twitter:image:alt"
               content="{{ this.config.common.site.social_image_alt }}">
-        {% if this.config.get('feed_url') %}
+        {% if this.config.get("feed_url") %}
             <link rel="alternate"
                   type="text/calendar"
                   title="{{ this.config.common.ui.site.calendar_feed_title }}"

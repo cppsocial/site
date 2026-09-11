@@ -25,7 +25,7 @@
      alt=""
      loading="lazy"
      decoding="async"
-     referrerpolicy="no-referrer">{% else %}<span class="community-card__fallback-monogram" aria-hidden="true">{% if this.platform == 'reddit' %}r/{% elif this.platform == 'slack' %}#_# {% elif this.platform == 'irc' %}/j{% else %}&lt;/&gt;{% endif %}</span>{% endif %}
+     referrerpolicy="no-referrer">{% else %}<span class="community-card__fallback-monogram" aria-hidden="true">{% if this.platform == "reddit" %}r/{% elif this.platform == "slack" %}#_# {% elif this.platform == "irc" %}/j{% else %}&lt;/&gt;{% endif %}</span>{% endif %}
     </a>
     <div class="community-card__body">
         <header class="community-card__header">
@@ -39,7 +39,7 @@
      alt=""
      loading="lazy"
      decoding="async"
-     referrerpolicy="no-referrer">{% else %}<span class="community-card__monogram" aria-hidden="true">{% if this.platform == 'reddit' %}r/{% elif this.platform == 'slack' %}#_# {% elif this.platform == 'irc' %}/j{% else %}&lt;/&gt;{% endif %}</span>{% endif %}
+     referrerpolicy="no-referrer">{% else %}<span class="community-card__monogram" aria-hidden="true">{% if this.platform == "reddit" %}r/{% elif this.platform == "slack" %}#_# {% elif this.platform == "irc" %}/j{% else %}&lt;/&gt;{% endif %}</span>{% endif %}
                 </a>
             {% endif %}
             <div class="community-card__identity">
@@ -48,14 +48,14 @@
             </div>
         </header>
         <p class="card-description"><span class="card-description__text">{{ this.description or metadata.description|default("") }}</span></p>
-        {% if (this.platform == 'reddit' and (metadata.weekly_visitors or metadata.weekly_contributions)) or (this.platform == 'discord' and metadata.member_count) or this.tags or this.links %}
+        {% if (this.platform == "reddit" and (metadata.weekly_visitors or metadata.weekly_contributions)) or (this.platform == "discord" and metadata.member_count) or this.tags or this.links %}
             <div class="community-card__footer">
-                {% if this.platform == 'reddit' and (metadata.weekly_visitors or metadata.weekly_contributions) %}
+                {% if this.platform == "reddit" and (metadata.weekly_visitors or metadata.weekly_contributions) %}
                     <dl class="community-card__activity">
                         {% if metadata.weekly_visitors %}<div><dt>{{ page.config.common.ui.cards.weekly_visitors_label }}</dt><dd>{{ "{:,}".format(metadata.weekly_visitors) }}</dd></div>{% endif %}
                         {% if metadata.weekly_contributions %}<div><dt>{{ page.config.common.ui.cards.weekly_contributions_label }}</dt><dd>{{ "{:,}".format(metadata.weekly_contributions) }}</dd></div>{% endif %}
                     </dl>
-        {% elif this.platform == 'discord' and metadata.member_count %}<span class="community-card__members">{{ "{:,}".format(metadata.member_count) }} {{ page.config.common.ui.cards.members_suffix }}</span>{% endif %}
+        {% elif this.platform == "discord" and metadata.member_count %}<span class="community-card__members">{{ "{:,}".format(metadata.member_count) }} {{ page.config.common.ui.cards.members_suffix }}</span>{% endif %}
         {% if this.tags %}<ul class="tag-list">{% for tag in this.tags %}<li><button type="button" data-search-tag="{{ tag }}">{{ tag }}</button></li>{% endfor %}</ul>{% endif %}
         {% if this.links %}<div class="card__links">{% for link in this.links %}<a href="{{ link.path }}" target="_blank" rel="noopener">{{ link.label }}</a>{% endfor %}</div>{% endif %}
             </div>

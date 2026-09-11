@@ -4,10 +4,10 @@
                 type="button"
                 data-event-close
                 aria-label="{{ page.config.ui.calendar.close_label }}">×</button>
-        <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != 'confirmed' %} · {{ this.status }}{% endif %}</p>
+        <p class="calendar-event__kind">{{ this.event_type|replace('_', ' ') }}{% if this.status != "confirmed" %} · {{ this.status }}{% endif %}</p>
         <h2 id="event-dialog-title">{{ this.title|keep_cpp }}</h2>
         {% if this.description %}<p class="event-detail__description">{{ this.description }}</p>{% endif %}
-        {% if not this.get('public', true) %}
+        {% if not this.get("public", true) %}
             <aside class="event-detail__notice">
                 <strong>{{ page.config.ui.calendar.non_public_note }}</strong>
                 <a href="{{ page.config.ui.calendar.participation_url }}"

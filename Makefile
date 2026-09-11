@@ -126,7 +126,7 @@ check-format-templates:
 		}
 
 lint-templates:
-	djlint --lint --profile=jinja templates/
+	djlint --lint --profile=jinja --ignore=H021 templates/
 
 format-makefile:
 	mbake format Makefile

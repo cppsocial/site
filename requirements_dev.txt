@@ -3,7 +3,7 @@
 # Python formatting, linting, and type checking used by the Makefile.
 autopep8>=2.0.0
 coverage>=7.6.0
-djlint>=1.36.0
+djlint==1.44.2
 mbake>=1.4.0
 mypy>=1.0.0
 ruff>=0.12.0

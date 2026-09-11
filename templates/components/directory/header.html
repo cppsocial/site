@@ -1,7 +1,7 @@
 <header class="directory-header{% if this.config.search.options_expanded %} directory-header--expanded-search{% endif %}">
     <div class="directory-header__intro">
         <h1>{{ this.title }}</h1>
-        {% if this.get('description') %}<p class="section-description">{{ this.description }}</p>{% endif %}
+        {% if this.get("description") %}<p class="section-description">{{ this.description }}</p>{% endif %}
     </div>
     {% if not this.config.search.options_expanded %}
         {% include "components/directory/search.html" %}

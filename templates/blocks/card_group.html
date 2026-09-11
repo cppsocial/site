@@ -24,11 +24,11 @@
                     {% set cta = group.default_cta %}
                     {% set this = card %}
                     {% set paged = settings.get('page_rows', 0) %}
-                    {% include ["components/cards/" ~ card.type|replace('_card', '') ~ ".html", "components/cards/card.html"] %}
+                    {% include ["components/cards/" ~ card.type|replace("_card", "") ~ ".html", "components/cards/card.html"] %}
                 {% endif %}
             {% endfor %}
         </div>
-        {% if settings.get('page_rows', 0) %}
+        {% if settings.get("page_rows", 0) %}
             {% include "components/directory/pagination.html" %}
         {% endif %}
     </div>

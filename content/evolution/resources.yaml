@@ -3,4 +3,7 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: open-std
+    path: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/
+    description: An archive of mailed WG21 papers and old X3J16 papers

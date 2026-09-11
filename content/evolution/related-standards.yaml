@@ -3,4 +3,7 @@ type: card_group
 id: related-standards
 title: Related standards
 description: Other standards and specifications referenced by the C++ standard or related to it
-cards: []
+cards:
+  - title: "ISO/IEC 60559"
+    path: https://www.iso.org/standard/80985.html
+    description: This standard specifies interchange and arithmetic formats and methods for binary and decimal floating-point arithmetic in computer programming environments

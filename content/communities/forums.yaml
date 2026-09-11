@@ -4,4 +4,10 @@ card_type: community_card
 id: forums
 title: Forums and Q&A
 description: Searchable, asynchronous discussions and answers
-cards: []
+cards:
+  - community_id: reddit-cplusplus
+    metadata_source: { source: reddit, key: Cplusplus }
+    title: r/Cplusplus
+    platform: reddit
+    path: https://www.reddit.com/r/Cplusplus/
+    description: General C++ discussion, projects, and programming questions

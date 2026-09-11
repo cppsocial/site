@@ -3,4 +3,8 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: SEI CERT C++ Coding Standard
+    path: https://cmu-sei.github.io/secure-coding-standards/sei-cert-cpp-coding-standard/
+    icon: https://avatars.githubusercontent.com/u/12465755?s=128
+    description: Security-focused C++ coding rules with noncompliant examples, compliant solutions, and risk assessments

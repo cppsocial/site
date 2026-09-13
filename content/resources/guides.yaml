@@ -3,4 +3,7 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: More C++ Idioms
+    path: https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms
+    description: A community-maintained catalog of established C++ idioms

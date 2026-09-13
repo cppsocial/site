@@ -3,4 +3,7 @@ type: card_group
 id: related-standards
 title: Related standards
 description: Other standards and specifications referenced by the C++ standard or related to it
-cards: []
+cards:
+  - title: "ISO/IEC 9899:2024 (C23)"
+    path: https://www.iso.org/standard/82075.html
+    description: The current international standard for the C programming language, published in October 2024

@@ -3,4 +3,7 @@ type: card_group
 id: related-standards
 title: Related standards
 description: Other standards and specifications referenced by the C++ standard or related to it
-cards: []
+cards:
+  - title: POSIX.1-2024
+    path: https://pubs.opengroup.org/onlinepubs/9799919799/
+    description: The Open Group Base Specifications for portable operating-system interfaces and utilities

@@ -3,4 +3,8 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: Google C++ Style Guide
+    path: https://google.github.io/styleguide/cppguide.html
+    icon: https://cdn.simpleicons.org/google
+    description: Google's detailed conventions and engineering guidelines for maintaining large C++ codebases

@@ -4,4 +4,10 @@ card_type: community_card
 id: instant-messaging
 title: Instant messaging and chat
 description: Real-time conversation, questions, and community coordination
-cards: []
+cards:
+  - community_id: better-cpp
+    metadata_source: { source: discord, key: YWfdM2tctt }
+    title: Better C++
+    platform: discord
+    description: A welcoming C++ community for all skill levels - ask questions, share knowledge and discuss everything C++
+    path: https://discord.gg/YWfdM2tctt

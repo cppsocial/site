@@ -46,6 +46,12 @@ jobs:
       - name: Install tools
         run: python -m pip install -r requirements.txt
 
+      - name: Install xmake
+        if: inputs.updater == 'packages'
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+
       - name: Prepare fresh branch
         id: branch
         env:

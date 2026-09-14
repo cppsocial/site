@@ -336,14 +336,15 @@ module.exports = async function reportCi({ core, context, github }) {
     issue_number: pull.number,
     per_page: 100,
   });
-  const authenticatedUser = (await github.rest.users.getAuthenticated()).data;
-  // Reporter comments are sticky: identify ours by author and marker.
-  const existing = comments.find(
-    ({ body, user }) =>
-      user?.id === authenticatedUser.id &&
-      user.login === authenticatedUser.login &&
-      body?.includes(MARKER),
+
+  // Reporter comments are sticky: identify them by the stable marker rather
+  // than by the identity of the current credential. GITHUB_TOKEN is a GitHub
+  // App installation token, so users.getAuthenticated() is not available.
+  const reports = comments.filter(({ body }) => body?.includes(MARKER));
+  const existing = reports.find(
+    ({ user }) => user?.login === "github-actions[bot]",
   );
+
   if (existing) {
     await github.rest.issues.updateComment({
       owner,
@@ -352,11 +353,32 @@ module.exports = async function reportCi({ core, context, github }) {
       body,
     });
   } else {
+    // A legacy report may have been created with a user's PAT. Its author
+    // cannot be changed, so create the correctly attributed bot comment first.
     await github.rest.issues.createComment({
       owner,
       repo,
       issue_number: pull.number,
       body,
     });
+  }
+
+  // Remove legacy PAT-authored reports and any duplicate bot reports. Cleanup
+  // is best-effort so a permission edge case cannot break future CI reporting.
+  for (const duplicate of reports) {
+    if (duplicate.id === existing?.id) {
+      continue;
+    }
+    try {
+      await github.rest.issues.deleteComment({
+        owner,
+        repo,
+        comment_id: duplicate.id,
+      });
+    } catch (error) {
+      core.warning(
+        `Could not remove legacy CI report comment ${duplicate.id}: ${error.message}`,
+      );
+    }
   }
 };

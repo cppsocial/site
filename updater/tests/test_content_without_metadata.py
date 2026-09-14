@@ -41,6 +41,10 @@ class ContentWithoutMetadataTests(unittest.TestCase):
                 'path': 'https://discord.gg/example',
                 'metadata_source': {'source': 'discord', 'key': 'example'},
             })
+            # Keep the book fixture independent of the curated catalog.
+            books_document = yaml.safe_load((root / 'content/books/books.yaml').read_text())
+            books_document['cards'] = []
+            write('content/books/books.yaml', books_document)
             add_card('content/books/books.yaml', {
                 'type': 'book_card', 'isbn': '9781593278885',
                 'cover_url': 'https://example.com/cover.jpg',

@@ -11,3 +11,9 @@ cards:
     platform: reddit
     path: https://www.reddit.com/r/cpp/
     description: C++ news, articles, proposals, and technical discussion
+  - community_id: reddit-cpp-questions
+    metadata_source: { source: reddit, key: cpp_questions }
+    title: r/cpp_questions
+    platform: reddit
+    path: https://www.reddit.com/r/cpp_questions/
+    description: Questions and answers for C++ programmers at all experience levels

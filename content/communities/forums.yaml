@@ -17,3 +17,9 @@ cards:
     platform: reddit
     path: https://www.reddit.com/r/cpp_questions/
     description: Questions and answers for C++ programmers at all experience levels
+  - community_id: reddit-cplusplus
+    metadata_source: { source: reddit, key: Cplusplus }
+    title: r/Cplusplus
+    platform: reddit
+    path: https://www.reddit.com/r/Cplusplus/
+    description: General C++ discussion, projects, and programming questions

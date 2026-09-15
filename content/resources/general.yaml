@@ -4,7 +4,13 @@ id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
 cards:
+  - title: Compiler Explorer
+    path: https://godbolt.org/
+    description: Compile and inspect C++ across compilers, versions, architectures, and optimization levels
   - title: cppreference.com
     path: https://cppreference.com/
     icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
     description: Detailed language and standard-library reference with compiler-support tables
+  - title: cppstat.dev
+    path: https://cppstat.dev
+    description: A list of C and C++ features and their respective support by compilers and standard library implementations

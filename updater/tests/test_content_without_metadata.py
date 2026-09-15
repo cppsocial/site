@@ -4,6 +4,7 @@ import json
 import shutil
 import tempfile
 import unittest
+from datetime import UTC, datetime
 from pathlib import Path
 
 import yaml
@@ -67,6 +68,13 @@ class ContentWithoutMetadataTests(unittest.TestCase):
             for path in ('youtube/videos', 'blogs/posts'):
                 shutil.rmtree(root / 'data' / path)
                 (root / 'data' / path).mkdir()
+            write('data/blogs/posts/new-blog.yaml', [{
+                'post_id': 'recent-post', 'source_id': 'new-blog',
+                'source_title': 'New blog', 'title': 'Recent post',
+                'url': 'https://example.com/blog/recent',
+                'published': datetime(2099, 1, 1, tzinfo=UTC),
+                'description': 'Use **vector** <Debug> without breaking the page.',
+            }])
             write('data/events-imported.yaml', [])
 
             config = load_config(root / 'site.toml', {'minify': False})
@@ -82,6 +90,11 @@ class ContentWithoutMetadataTests(unittest.TestCase):
             self.assertIn('community description', communities)
             blogs = (config.output / 'blogs/index.html').read_text()
             self.assertIn('blog description', blogs)
+            self.assertIn(
+                'Use <strong>vector</strong> &lt;Debug&gt; without breaking the page.',
+                blogs,
+            )
+            self.assertIn('Browse blogs', blogs)
             events = (config.output / 'events/index.html').read_text()
             self.assertIn('New event', events)
             books = json.loads((config.output / 'data/books/index.json').read_text())

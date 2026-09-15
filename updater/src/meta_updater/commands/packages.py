@@ -13,7 +13,11 @@ from schemas.packages import (
 
 from ..config import MetaUpdaterConfig
 from ..packages import PARSERS, amalgamate
-from ..packages.common import REPOSITORIES, normalize_package_record
+from ..packages.common import (
+    REPOSITORIES,
+    canonicalize_package_metadata,
+    normalize_package_record,
+)
 from ..packages.conan import inspect_recipes
 from ..packages.sources import source_paths as manager_source_paths
 from ..packages.sources import source_revision
@@ -106,12 +110,19 @@ def dataset(path: Path, schema: object) -> YamlDataset:
     )
 
 
+def canonical_packages(packages: list[dict]) -> list[dict]:
+    """Normalize package records and sort the complete catalog recursively."""
+    return canonicalize_package_metadata(
+        [normalize_package_record(package) for package in packages]
+    )
+
+
 def load_catalog(path: Path) -> list[dict]:
     value = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     packages = RegistryCatalog.model_validate(value).model_dump(
         exclude_none=True, exclude_defaults=True
     ).get("packages", [])
-    return [normalize_package_record(package) for package in packages]
+    return canonical_packages(packages)
 
 
 def load_overrides(path: Path) -> dict:
@@ -292,10 +303,7 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
             catalog_path = package_data / f"{manager}.yaml"
             try:
                 path = source_paths(args, config, [manager])[manager]
-                packages = [
-                    normalize_package_record(package)
-                    for package in PARSERS[manager](path)
-                ]
+                packages = canonical_packages(PARSERS[manager](path))
                 if not packages:
                     raise ValueError("refreshed catalog contained no packages")
                 packages = filter_ignored(packages, ignored, ignored_prefixes)

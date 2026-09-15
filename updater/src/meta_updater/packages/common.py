@@ -269,10 +269,6 @@ def _without_empty(values: dict[str, Any]) -> dict[str, Any]:
     return result
 
 
-def github_url(repository: str, revision: str, relative: Path) -> str:
-    return f"{repository}/blob/{revision or 'HEAD'}/{relative.as_posix()}"
-
-
 def _literal(node: ast.AST) -> Any:
     try:
         return ast.literal_eval(node)

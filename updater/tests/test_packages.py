@@ -164,7 +164,13 @@ class PackageParserTests(unittest.TestCase):
             recipe.parent.mkdir(parents=True)
             recipe.write_text("class Package:\n    pass\n")
 
-            self.assertEqual(parse_spack(root)[0]["id"], "spack:py-example")
+            package = parse_spack(root)[0]
+            self.assertEqual(package["id"], "spack:py-example")
+            self.assertEqual(
+                package["recipe_path"],
+                "repos/spack_repo/builtin/packages/py_example/package.py",
+            )
+            self.assertNotIn("recipe_url", package)
 
     @patch("meta_updater.commands.packages.source_paths", side_effect=OSError("offline"))
     def test_failed_refresh_leaves_saved_catalog_untouched(self, _source_paths) -> None:

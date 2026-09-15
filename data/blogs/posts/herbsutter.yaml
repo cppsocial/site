@@ -1,0 +1,557 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: AguFED67tEtJHppA
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Gor Nishanov (1971-2026)
+  url: https://herbsutter.com/2026/06/28/gor-nishanov-1971-2026/
+  published: 2026-06-29 06:44:34+00:00
+  description: 'I am deeply saddened to report that this weekend, far too soon, we lost Gor Nishanov: a friend and colleague, an extraordinary software engineer, and a long-serving member of the C++ standards committee. Gor was always intelligent and witty, but above all he was kind and generou…'
+  tags:
+  - C++
+- post_id: uDugSmxEI1Z0oy6n
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: New York panel video is now online
+  url: https://herbsutter.com/2026/06/28/new-york-panel-video-is-now-online/
+  published: 2026-06-28 21:36:34+00:00
+  description: 'Four weeks ago I was in downtown Manhattan for the world premiere event for C++: The Documentary. It was great to see two theaters full of enthusiastic C++ developers, and getting to mingle with them all before and after the film. Afterwards we had a live panel: Bjarne Stroustru…'
+  tags:
+  - C++
+- post_id: lAELmTX8sq9vQ9F3
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: June 2026 ISO C++ standards meeting (Brno, Czechia)'
+  url: https://herbsutter.com/2026/06/13/brno-trip-report/
+  published: 2026-06-13 08:01:49+00:00
+  description: 'Adopted this week in draft C++29: Complete catalog of all undefined behavior in C++. Contract pre/post support for virtual functions. Defaulting (=default) for postfix increment/decrement. Designated initializers for base classes. Python-style .lookup(key) for associative contai…'
+  tags:
+  - C++
+  - c26
+  - c29
+  - wg21
+- post_id: GUOIW7ji-KG-sNWw
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'C++: The Documentary released today'
+  url: https://herbsutter.com/2026/06/04/c-the-documentary-released-today/
+  published: 2026-06-05 03:16:24+00:00
+  description: 'C++: The Documentary premiered today on YouTube, and it was great to be on the live chat with Bjarne and many other key folks who participated in C++’s history. I’m honored to have been one of hundreds of people who have played a part in advancing Bjarne’s wonderful project over…'
+  tags:
+  - C++
+- post_id: Y9d2ioyyM-c5_Klg
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Poll: Have you observed AI agents doing harm?'
+  url: https://herbsutter.com/2026/04/30/poll-ai-agents/
+  published: 2026-04-30 22:17:56+00:00
+  description: 'Back in October, I wrote “Schneier on LLM vulnerabilities, agentic AI, and ‘trusting trust''” about fundamental architectural weaknesses in current LLMs and agents, and why I personally don’t yet trust AI agents with my credentials. At the end, I wrote: I love AI and LLMs. I use…'
+  tags:
+  - agentic-ai
+  - ai
+  - claude
+  - codex
+  - copilot
+  - cursor
+  - cybersecurity
+  - llm
+  - security
+- post_id: d6wpzeNUh2kzw-Wx
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My 7-min “lightning talk” is online: Why C++ is growing, and why C++26 will likely be adopted quickly'
+  url: https://herbsutter.com/2026/04/29/london-meetup/
+  published: 2026-04-29 20:09:40+00:00
+  description: 'At the London C++ meetup last month, I participated on a panel where each panelist gave a short introductory presentation. My 7-minute intro (aka “lightning talk”) just got posted — you can view it here. The one-sentence blurb: “C++ is accelerating, and C++26 is built for what d…'
+  tags:
+  - C++
+- post_id: 1af4TKbAv02rn6zm
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My BeCPP talk video posted: “C++ — Growing in a world of competition, safety, and AI”'
+  url: https://herbsutter.com/2026/04/19/becpp/
+  published: 2026-04-20 05:04:00+00:00
+  description: BeCPP just posted this video of my talk at their March 30 Symposium. This is the first time I’ve given this material on camera — it’s extension of themes in my New Year’s Eve blog post, with major updates because some big industry changes happened in the first quarter of 2026. T…
+  tags:
+  - C++
+  - ai
+  - anthropic
+  - artificial intelligence
+  - block
+  - cybersecurity
+  - dorsey
+  - programming
+  - safety
+  - security
+  - square
+  - technology
+  - twitter
+- post_id: SrYenMCx3LTJQAh0
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'C++26 is done! — Trip report: March 2026 ISO C++ standards meeting (London Croydon, UK)'
+  url: https://herbsutter.com/2026/03/29/c26-is-done-trip-report-march-2026-iso-c-standards-meeting-london-croydon-uk/
+  published: 2026-03-29 16:24:16+00:00
+  description: 'News flash: C++26 is done! 🎉 On Saturday, the ISO C++ committee completed technical work on C++26 in (partly) sunny London Croydon, UK. We resolved the remaining international comments on the C++26 draft, and are now producing the final document to be sent out for its internatio…'
+  tags:
+  - C++
+  - c26
+  - contracts
+  - reflection
+  - safety
+  - security
+  - stdexecution
+- post_id: r_xVc31PhcFUVQcD
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Software taketh away faster than hardware giveth: Why C++ programmers keep growing fast despite competition, safety, and AI'
+  url: https://herbsutter.com/2025/12/30/software-taketh-away-faster-than-hardware-giveth-why-c-programmers-keep-growing-fast-despite-competition-safety-and-ai/
+  published: 2025-12-31 00:49:51+00:00
+  description: '2025 was another great year for C++. It shows in the numbers Before we dive into the data below, let’s put the most important question up front: Why have C++ and Rust been the fastest-growing major programming languages from 2022 to 2025? Primarily, it’s because throughout the h…'
+  tags:
+  - C++
+  - ai
+  - artificial-intelligence
+  - aws
+  - c26
+  - chatgpt
+  - cpu
+  - gpu
+  - microsoft
+  - nvidia
+  - performance
+  - power
+  - programming
+  - rust
+  - safety
+  - security
+  - technology
+- post_id: MYMIFlQCnaE0Bme3
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Speaking in Singapore (Thursday 20 November) and Sydney (Sunday 23 November)
+  url: https://herbsutter.com/2025/11/16/speaking-in-singapore-thursday-20-november-and-sydney-sunday-23-november/
+  published: 2025-11-16 17:43:44+00:00
+  description: In the next week, I will be giving talks on C++ reflection in Singapore (Thursday night) and Sydney (Sunday night). If you’re local, please RSVP! I look forward to seeing many of you there. Singapore C++ Users Group November Meetup Thursday November 20, 6:30pm to 9:30pmClifford…
+  tags:
+  - C++
+- post_id: BgDlgSuo7cu_8aqh
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: November 2025 ISO C++ standards meeting (Kona, USA)'
+  url: https://herbsutter.com/2025/11/10/trip-report-november-2025-iso-c-standards-meeting-kona-usa/
+  published: 2025-11-10 21:59:07+00:00
+  description: On Saturday, the ISO C++ committee completed the first of two final fit-and-finish meetings for C++26, in our meeting in Kona, USA. What we have in the C++26 working draft represents exactly the set of features we have consensus on so far; the goal of these last two meetings is…
+  tags:
+  - C++
+- post_id: QDh2gmaGHWIHyYtf
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Schneier on LLM vulnerabilities, agentic AI, and “trusting trust”
+  url: https://herbsutter.com/2025/10/23/schneier-on-llm-vulnerabilities-agentic-ai-and-trusting-trust/
+  published: 2025-10-23 18:36:04+00:00
+  description: Last month, I was having dinner with a group and someone at the table was excitedly sharing how they were using agentic AI to create and merge PRs for them, with some review but with a lot of trust and automation. I admitted that I could be comfortable with some limited uses for…
+  tags:
+  - C++
+  - agentic-ai
+  - ai
+  - artificial-intelligence
+  - llm
+  - security
+  - trusting-trust
+  - vulnerabilities
+- post_id: arCZLNLPco9wW1Yk
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Poll: Does your project use terminating assertions in production?'
+  url: https://herbsutter.com/2025/10/13/poll-does-your-project-use-terminating-assertions-in-production/
+  published: 2025-10-13 20:46:25+00:00
+  description: I’m running this poll to gather data, both for myself and for other interested C++ committee members. I’m curious to see what you all report! Please let us know what your current project is doing, and thank you for participating. The poll will close on Friday night.
+  tags:
+  - C++
+- post_id: loWsnb4iwcyZGtib
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Speaking on October 21 at PDXCPP: Portland OR C++ meetup'
+  url: https://herbsutter.com/2025/10/08/speaking-on-october-21-at-pdxcpp-portland-or-meetup/
+  published: 2025-10-08 16:07:56+00:00
+  description: 'In two weeks I’ll be giving a talk at the local C++ meetup here in peaceful, quirky, dog-walking, frisbee-throwing, family-friendly Portland, Oregon, USA. PDXCPP – Monthly MeetupOctober 21, 2025 @ 7:00pmLocation: Siemens EDA in Wilsonville Which talk will I give? That’s a great…'
+  tags:
+  - C++
+- post_id: DTULBrGff5bUfe4P
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My other CppCon talk video is now available: The Joy of C++26 Contracts (and Some Myth-Conceptions)'
+  url: https://herbsutter.com/2025/10/01/my-other-cppcon-talk-video-is-now-available-the-joy-of-c26-contracts-and-some-myth-conceptions/
+  published: 2025-10-02 00:37:15+00:00
+  description: 'I usually only give one new talk a year, but this year I volunteered to give a second new talk at CppCon on a topic I haven’t spoken on before: draft C++26 contracts. Thank you to all the experts, including the actual implementers and people who are for and against having contra…'
+  tags:
+  - C++
+- post_id: bHmPrbl-5Un9d5SI
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Yesterday’s talk video posted: Reflection — C++’s decade-defining rocket engine'
+  url: https://herbsutter.com/2025/09/18/yesterdays-talk-video-posted-reflection-cs-decade-defining-rocket-engine/
+  published: 2025-09-18 18:15:14+00:00
+  description: 'My CppCon keynote video is now online. Thanks to Bash Films for turning around the keynotes in under 24 hours! C++ has just reached a true watershed moment: Barely three months ago, at our Sofia meeting, static reflection became part of draft standard C++. This talk is entirely…'
+  tags:
+  - C++
+  - ai
+  - programming
+  - reflection
+- post_id: RltGboL5OqfA18eE
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My C++ on Sea talk video posted: “Three Cool Things in C++26”'
+  url: https://herbsutter.com/2025/08/19/my-c-on-sea-talk-video-posted-three-cool-things-in-c26/
+  published: 2025-08-19 16:19:51+00:00
+  description: 'Thanks to C++ on Sea for inviting me to speak in June! The talk video is now live, linked below. It was recorded just 48 hours after the Sofia meeting ended, with key updates hot off the press. Note: Next month at CppCon, I will be going even deeper and broader on reflection. Th…'
+  tags:
+  - C++
+- post_id: ywYmCoNP04_91ofl
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: June 2025 ISO C++ standards meeting (Sofia, Bulgaria)'
+  url: https://herbsutter.com/2025/06/21/trip-report-june-2025-iso-c-standards-meeting-sofia-bulgaria/
+  published: 2025-06-21 09:10:47+00:00
+  description: 'A unique milestone: “Whole new language” Today marks a turning point in C++: A few minutes ago, the C++ committee voted the first seven (7) papers for compile-time reflection into draft C++26 to several sustained rounds of applause in the room. I think Hana “Ms. Constexpr” Dusík…'
+  tags:
+  - C++
+- post_id: JZPcTCtV4sTZuymn
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Living in the future: Using C++26 at work'
+  url: https://herbsutter.com/2025/04/23/living-in-the-future-using-c26-at-work/
+  published: 2025-04-23 23:35:25+00:00
+  description: 'I recently contributed a guest post on my employer’s blog about the importance of the almost-feature-complete C++26 draft standard: “Sea change in C++: Why opportunities abound” It starts by summarizing a talk I gave recently, about how C++26 is poised to do what C++11 did over…'
+  tags:
+  - C++
+  - Concurrency
+- post_id: GCfumxIs4XTXpnY4
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Crate-training Tiamat, un-calling Cthulhu:Taming the UB monsters in C++
+  url: https://herbsutter.com/2025/03/30/crate-training-tiamat-un-calling-cthulhutaming-the-ub-monsters-in-c/
+  published: 2025-03-31 06:39:36+00:00
+  description: For more background on safety and security issues related to C++, including definitions of “language safety” and “software security” and similar terms, see my March 2024 essay “C++ safety, in context.” This essay picks up our story where that one left off to bring us up to date…
+  tags:
+  - C++
+- post_id: NqQ6v7OHoRKaR1H6
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: February 2025 ISO C++ standards meeting (Hagenberg, Austria)'
+  url: https://herbsutter.com/2025/02/17/trip-report-february-2025-iso-c-standards-meeting-hagenberg-austria/
+  published: 2025-02-18 07:01:15+00:00
+  description: On Saturday, the ISO C++ committee completed the second-last design meeting of C++26, held in Hagenberg, Austria. There is just one meeting left before the C++26 feature set is finalized in June 2025 and draft C++26 is sent out for its international comment ballot (aka “Committe…
+  tags:
+  - C++
+- post_id: ls_Hl8weyYerNUa-
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: code::dive 2024 interview video posted
+  url: https://herbsutter.com/2025/01/16/codedive-2024-interview-video-posted/
+  published: 2025-01-17 05:08:46+00:00
+  description: 'After my code::dive talk in November, the organizers also recorded an extra 9-minute interview that covered these questions: Here it is…'
+  tags:
+  - C++
+- post_id: 2Z3XzxFE71HLjdDl
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: New U.S. executive order on cybersecurity
+  url: https://herbsutter.com/2025/01/16/new-u-s-executive-order-on-cybersecurity/
+  published: 2025-01-17 04:51:56+00:00
+  description: The Biden administration just issued another executive order (EO) on hardening U.S. cybersecurity. This is all great stuff. (*) (**) A lot of this EO is repeating the same things I urged in my essay nearly a year ago, “C++ safety — in context”… here’s a cut-and-paste of my “Call…
+  tags:
+  - C++
+  - ai
+  - cyber-security
+  - cybersecurity
+  - infrastructure
+  - safety
+  - security
+  - technology
+- post_id: OONCP4RtUtE7ddKG
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Speaking at University of Waterloo on January 15
+  url: https://herbsutter.com/2025/01/07/speaking-at-university-of-waterloo-on-january-15/
+  published: 2025-01-07 18:55:07+00:00
+  description: Next week, on January 15, I’ll be speaking at the University of Waterloo, my alma mater. There’ll be a tech talk on key developments in C++ and why I think the language’s future over the next decade will be exciting, with lots of time allocated to a “fireside chat / interview” s…
+  tags:
+  - C++
+  - reflection
+  - safety
+  - security
+  - speaking
+  - waterloo
+- post_id: hXrJyNTM-OfNyYC8
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Speaking at New York C++ meetup on January 13
+  url: https://herbsutter.com/2025/01/02/speaking-at-new-york-c-meetup-on-january-13/
+  published: 2025-01-02 23:17:21+00:00
+  description: 'Less than two weeks from now, on January 13 I’ll be speaking at the New York C++ meetup in Midtown East (Clinton Hall at 230 E 51st Street). I’ll be giving a condensed update of my recent “Peering forward: C++’s next decade” talk, so that there’ll be plenty of time for Q&A — ple…'
+  tags:
+  - C++
+- post_id: HRkcwR4wQZp7gt0G
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: My little New Year’s Week project (and maybe one for you?)
+  url: https://herbsutter.com/2025/01/02/my-little-new-years-week-project-and-maybe-one-for-you/
+  published: 2025-01-02 08:30:40+00:00
+  description: '[Updates: Clarified that an intrusive discriminator would be far beyond what most people mean by “C++ ABI break.” Mentioned unique addresses and common initial sequences. Added “unknown” state for passing to opaque functions.] Here is my little New Year’s Week project: Trying to…'
+  tags:
+  - C++
+  - Concurrency
+  - Cpp2, cppfront
+  - lock-free
+  - safety
+  - scalable
+  - union
+  - wait-free
+- post_id: HYuCnzEAMwYyXif3
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My code::dive talk video is available: New Q&A'
+  url: https://herbsutter.com/2024/12/11/my-codedive-talk-video-is-available-new-qa/
+  published: 2024-12-11 16:26:25+00:00
+  description: Two weeks ago, Bjarne and I and lots of ISO committee members had a blast at the code::dive C++ conference held on November 25, just two days after the end of the Wrocław ISO C++ meeting. Thanks again to Nokia for hosting the ISO meeting, and for inviting us all to speak at thei…
+  tags:
+  - C++
+  - reflection
+  - safety
+  - security
+- post_id: rp33I0wPsR0PJU_W
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: November 2024 ISO C++ standards meeting (Wrocław, Poland)'
+  url: https://herbsutter.com/2024/11/24/wg21-2024-11/
+  published: 2024-11-25 06:00:00+00:00
+  description: On Saturday, the ISO C++ committee completed the third-last design meeting of C++26, held in Wrocław, Poland. There are just two meetings left before the C++26 feature freeze in June 2025, and C++26 is on track to be completed two more meetings after that in early 2026. Implemen…
+  tags:
+  - C++
+- post_id: WyYlhhszOF4AwRaF
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: A new chapter, and thoughts on a pivotal year for C++
+  url: https://herbsutter.com/2024/11/11/a-new-chapter-and-a-pivotal-year-for-cpp/
+  published: 2024-11-11 12:15:11+00:00
+  description: Starting today I’m excited to be working on a new team, with my C++ standards and community roles unchanged. I also wanted to write a few words about why I’m excited about continuing to invest my time heavily in C++’s standardization and evolution especially now, because I think…
+  tags:
+  - C++
+  - c26
+  - programming
+  - reflection
+  - safety
+  - security
+  - software-development
+  - technology
+- post_id: 92SsA__b-un0mLQW
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Podcast interview: Rust and C++'
+  url: https://herbsutter.com/2024/10/23/podcast-interview-rust-and-c/
+  published: 2024-10-23 23:48:47+00:00
+  description: 'In early September I had a very enjoyable technical chat with Steve Klabnik of Rust fame and interviewer Kevin Ball of Software Engineering Daily, and the podcast is now available. Update: I asked them to please change the “Rust vs C++” title to “Rust and C++” and they kindly di…'
+  tags:
+  - C++
+  - coding
+  - programming
+  - rust
+- post_id: jdzWK5C-c78CWkjx
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: My AMA yesterday is up on YouTube
+  url: https://herbsutter.com/2024/10/12/my-ama-yesterday-is-up-on-youtube/
+  published: 2024-10-12 20:14:47+00:00
+  description: Boy, Jens Weller turns these things around quickly! Thanks again, Jens, for having me on your Meeting C++ Live show. I’ve put a list of the questions, with timestamped links, below… All the questions and answers, with links 00:19 What are you up to with C++ currently / what keep…
+  tags:
+  - C++
+  - Cpp2
+  - abi
+  - networking
+  - safety
+- post_id: oUxoORyQa0YaRAUg
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Live AMA tomorrow (Friday): Meeting C++ Online'
+  url: https://herbsutter.com/2024/10/10/live-ama-tomorrow-friday-meeting-c-online/
+  published: 2024-10-10 16:36:13+00:00
+  description: 'Tomorrow I’ll be joining Jens Weller for a live AMA on “Meeting C++ online.” The coordinates are: I’m looking forward to your technical questions about C++26 evolution, cppfront, Rust, reflection, safety and security, concurrency and parallelism, and software in general… and opt…'
+  tags:
+  - C++
+- post_id: XLCZDrrEOcvqS-YA
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: My CppCon keynote yesterday is available on YouTube
+  url: https://herbsutter.com/2024/09/17/my-cppcon-keynote-yesterday-is-available-on-youtube/
+  published: 2024-09-17 23:07:38+00:00
+  description: 'Yesterday I gave the opening talk at CppCon 2024 here in Aurora, CO, USA, on “Peering Forward: C++’s Next Decade.” Thanks to the wonderful folks at Bash Films and DigitalMedium pulling out all the stops overnight to edit and post the keynote videos as fast as possible, it’s alre…'
+  tags:
+  - C++
+  - Cpp2, cppfront
+  - cppcon
+  - keynote
+- post_id: yd2fXAgy0w5kqPyS
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Reader Q&A: What’s the best way to pass an istream parameter?'
+  url: https://herbsutter.com/2024/09/03/reader-qa-whats-the-best-way-to-pass-an-istream-parameter/
+  published: 2024-09-03 17:48:12+00:00
+  description: 'Here’s a super simple question: “How do I write a parameter that accepts any non-const std::istream argument? I just want an istream I can read from.” (This question isn’t limited to streams, but includes any similar type you have to modify/traverse to use.) Hopefully the answer…'
+  tags:
+  - C++
+  - Cpp2, cppfront
+- post_id: 8-bNOpvFzOxDyvGl
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Reader Q&A: What does it mean to initialize an int?'
+  url: https://herbsutter.com/2024/08/07/reader-qa-what-does-it-mean-to-initialize-an-int/
+  published: 2024-08-08 05:09:36+00:00
+  description: 'Acknowledgments: Thanks to Davis Herring, Jens Maurer, Richard Smith, Krystian Stasiowski, and Ville Voutilainen, who are all ISO C++ committee core language experts, for helping make my answer below correct and precise. I recently got this question in email from Sam Johnson. Sa…'
+  tags:
+  - C++
+- post_id: NO0tnDUpjd0k-aDF
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'cppfront: Midsummer update'
+  url: https://herbsutter.com/2024/07/28/cppfront-midsummer-update/
+  published: 2024-07-29 07:42:00+00:00
+  description: Over the winter and spring I spent a bunch of time building my essay “C++ safety, in context” and the related ACCU 2024 safety keynote, and on behind-the-scenes work toward improving C++ memory safety that you’ll be hearing more about in the coming months (including a lock-free…
+  tags:
+  - C++
+- post_id: q9IOe73RyZ_FRZ86
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: Summer ISO C++ standards meeting (St Louis, MO, USA)'
+  url: https://herbsutter.com/2024/07/02/trip-report-summer-iso-c-standards-meeting-st-louis-mo-usa/
+  published: 2024-07-03 01:26:32+00:00
+  description: On Saturday, the ISO C++ committee completed its fourth meeting of C++26, held in St Louis, MO, USA. Our host, Bill Seymour, arranged for high-quality facilities for our six-day meeting from Monday through Saturday. We had over 180 attendees, about two-thirds in-person and the o…
+  tags:
+  - C++
+- post_id: hjgM4te2IM4iHTxz
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Podcast: Interview with Software Engineering Daily'
+  url: https://herbsutter.com/2024/06/07/podcast-interview-with-software-engineering-daily/
+  published: 2024-06-07 17:41:46+00:00
+  description: Also in April, I was interviewed by Jordi Mon Companys for Software Engineering Daily, and that interview was just published on the SE Daily podcast. Here is a copy of the page’s additional details, including a transcript link at bottom. The U.S. government recently released a r…
+  tags:
+  - C++
+- post_id: gHGDaKSdr7xIwZf6
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'April talk video posted: “Safety, Security, Safety[sic] and C/C++[sic]”'
+  url: https://herbsutter.com/2024/06/03/april-talk-video-posted-safety-security-safetysic-and-c-csic/
+  published: 2024-06-04 07:07:00+00:00
+  description: Many thanks to ACCU for inviting me back again this April. It was my first time back to ACCU (and only my second trip to Europe) since the pandemic began, and it was a delight to see many ACCUers in person again for the first time in a few years. I gave this talk, which … Contin…
+  tags:
+  - C++
+  - Cpp2, cppfront
+- post_id: 4VS_QLZ9GmUFqy-y
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Pre-ACCU interview video is live
+  url: https://herbsutter.com/2024/04/03/pre-accu-interview-video-is-live/
+  published: 2024-04-04 00:55:09+00:00
+  description: 'On Friday, I sat down with Kevin Carpenter to do a short (12-min) interview about my ACCU talk coming up on April 17, and other topics. Apologies in advance for my voice quality: I’ve been sick with some bug since just after the Tokyo ISO meeting, and right after this interview…'
+  tags:
+  - C++
+  - Cpp2, cppfront
+- post_id: flBMcRjg6gwd8tk3
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: Effective Concurrency course & upcoming talks
+  url: https://herbsutter.com/2024/03/25/effective-concurrency-course-upcoming-talks/
+  published: 2024-03-26 06:35:00+00:00
+  description: With the winter ISO meeting behind us, it’s onward into spring conference season! ACCU Conference 2024. On April 17, I’ll be giving a talk on C++’s current and future evolution, where I plan to talk about safety based on my recent essay “C++ safety, in context,” and progress upd…
+  tags:
+  - C++
+  - Concurrency
+  - Cpp2, cppfront
+- post_id: Qo6qnXJjKOrUQZ90
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: Winter ISO C++ standards meeting (Tokyo, Japan)'
+  url: https://herbsutter.com/2024/03/22/trip-report-winter-iso-c-standards-meeting-tokyo-japan/
+  published: 2024-03-23 01:15:46+00:00
+  description: Moments ago, the ISO C++ committee completed its third meeting of C++26, held in Tokyo, Japan. Our hosts, Woven by Toyota, arranged for high-quality facilities for our six-day meeting from Monday through Saturday. We had over 220 attendees, about two-thirds in-person and the oth…
+  tags:
+  - C++
+- post_id: S8aAiss4lg2LkUsl
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: C++ safety, in context
+  url: https://herbsutter.com/2024/03/11/safety-in-context/
+  published: 2024-03-12 06:01:13+00:00
+  description: Scope. To talk about C++’s current safety problems and solutions well, I need to include the context of the broad landscape of security and safety threats facing all software. I chair the ISO C++ standards committee and I work for Microsoft, but these are my personal opinions an…
+  tags:
+  - C++
+  - coding
+  - cybersecurity
+  - programming
+  - security
+  - technology
+- post_id: RWTWAyX9uPLkCEa6
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Effective Concurrency: Live online course in April'
+  url: https://herbsutter.com/2024/02/12/effective-concurrency-live-online-course-in-april/
+  published: 2024-02-12 15:04:48+00:00
+  description: I generally give one or two courses a year on C++ and related technologies. This year, on April 22-25, I’ll be giving a live online public course for four half-days, on the topic of high-performance low-latency coding in C++ — and the early registration discount is available for…
+  tags:
+  - C++
+- post_id: zEU2b6VerY3fKpHj
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: Autumn ISO C++ standards meeting (Kona, HI, USA)'
+  url: https://herbsutter.com/2023/11/11/trip-report-autumn-iso-c-standards-meeting-kona-hi-usa/
+  published: 2023-11-12 00:40:25+00:00
+  description: Today, the ISO C++ committee completed its second meeting of C++26, held in Kona, HI, USA. Our hosts, Standard C++ Foundation and WorldQuant, arranged for high-quality facilities for our six-day meeting from Monday through Saturday. We had over 170 attendees, about two-thirds in…
+  tags:
+  - C++
+- post_id: 2dnr5s8q1OYoAypP
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My new CppCon talk is on YouTube: “Cooperative C++ Evolution – Toward a TypeScript for C++”'
+  url: https://herbsutter.com/2023/10/09/my-new-cppcon-talk-is-on-youtube-cooperative-c-evolution-toward-a-typescript-for-c/
+  published: 2023-10-09 17:09:57+00:00
+  description: 'My Thursday CppCon talk is now online. Note: There’s already a Reddit thread for it, so if you want to comment on the video I suggest you use that thread instead of creating a new one. At CppCon 2022, I argued for why we should try to make C++ 10x simpler and 50x safer, and this…'
+  tags:
+  - C++
+- post_id: qkRYotj7gNRc39rc
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'cppfront: Autumn update'
+  url: https://herbsutter.com/2023/09/28/cppfront-autumn-update/
+  published: 2023-09-28 15:40:06+00:00
+  description: Since the 2022-12-31 year-end mini-update and the 2023-04-30 spring update, progress has continued on cppfront. (If you don’t know what this personal project is, please see the CppCon 2022 talk on YouTube for an overview, and the CppNow 2023 talk on YouTube for an interim update…
+  tags:
+  - C++
+- post_id: IhGvLjwxMrPMrrWC
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'My C++ Now 2023 talk is online: “A TypeScript for C++”'
+  url: https://herbsutter.com/2023/08/13/my-c-now-2023-talk-is-online-a-typescript-for-c/
+  published: 2023-08-14 06:26:55+00:00
+  description: 'Thanks again to C++ Now for inviting me to speak this year in glorious Aspen, Colorado, USA! It was nice to see many old friends again there and make a few new ones too. The talk I gave there was just posted on YouTube, you can find it here: At CppCon 2022, I argued for … Contin…'
+  tags:
+  - C++
+- post_id: gVfV_44KEm8B14-R
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'Trip report: Summer ISO C++ standards meeting (Varna, Bulgaria)'
+  url: https://herbsutter.com/2023/06/16/trip-report-summer-iso-c-standards-meeting-varna-bulgaria/
+  published: 2023-06-17 07:17:41+00:00
+  description: Minutes ago, the ISO C++ committee finished its meeting in-person in Varna, Bulgaria and online via Zoom, where we formally began adopting features into C++26. Our hosts, VMware and Chaos, arranged for high-quality facilities for our six-day meeting from Monday through Saturday.…
+  tags:
+  - C++
+- post_id: H5Xyzacq4IwNN0mY
+  source_id: herbsutter
+  source_title: Sutter's Mill
+  title: 'cppfront: Spring update'
+  url: https://herbsutter.com/2023/04/30/cppfront-spring-update/
+  published: 2023-05-01 07:50:00+00:00
+  description: Since the year-end mini-update, progress has continued on cppfront. (If you don’t know what this personal project is, please see the CppCon 2022 talk on YouTube.) This update covers Acknowledgments, and highlights of what’s new in the compiler and language since last time, inclu…
+  tags:
+  - C++

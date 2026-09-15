@@ -5,12 +5,9 @@ from typing import Any
 
 from ..shared.text import render_text
 from .common import (
-    REPOSITORIES,
     clean_licenses,
     clean_list,
-    github_url,
     repository_identity,
-    repository_revision,
     scalar_strings,
 )
 
@@ -158,7 +155,6 @@ def _vcpkg_upstream(
 
 
 def parse_vcpkg(root: Path) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     records = []
     for manifest in sorted((root / "ports").glob("*/vcpkg.json")):
         data = json.loads(manifest.read_text(encoding="utf-8"))
@@ -262,7 +258,7 @@ def parse_vcpkg(root: Path) -> list[dict[str, Any]]:
                     name: "enabled" for name in default_feature_names if name
                 },
                 "versions": versions,
-                "recipe_url": github_url(REPOSITORIES["vcpkg"], revision, relative),
+                "recipe_path": relative.as_posix(),
             }
         )
     return records

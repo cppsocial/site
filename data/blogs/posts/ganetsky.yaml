@@ -1,0 +1,107 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: OeII_uz46xNGKvK2
+  source_id: ganetsky
+  source_title: Braden++
+  title: Break MSVC and Clang with this one weird trick!
+  url: https://blog.ganets.ky/BreakMsvcAndClang/
+  published: 2026-07-05 00:00:00+00:00
+  updated: 2026-07-05 00:00:00+00:00
+  description: A few weeks ago I came across some code that MSVC and Clang both rejected, but GCC accepted. The error messages are different in MSVC and Clang, so clearly I must have done something wrong, and GCC falsely accepts the code, right? I mostly minimized the code, and ended up with t…
+  tags:
+  - tok3n
+  - k3tchup
+- post_id: mfG788kXvuhkZ6wO
+  source_id: ganetsky
+  source_title: Braden++
+  title: I wrote a GitHub Action to select an MSVC version
+  url: https://blog.ganets.ky/MsvcGha/
+  published: 2025-12-28 00:00:00+00:00
+  updated: 2025-12-28 00:00:00+00:00
+  description: Alright, I’m not breaking new ground here, but this is a difficulty I’ve had, and maybe it’s a difficulty you’ve had too. It’s not common, but if you want to compile your code with a particular version of MSVC, it’s already fairly finicky on your own machine. It’s even worse wit…
+  tags:
+  - misc
+- post_id: 8z5kAk8Uid403-SR
+  source_id: ganetsky
+  source_title: Braden++
+  title: buffalo::buffalo::buffalo…
+  url: https://blog.ganets.ky/Buffalo/
+  published: 2025-10-05 00:00:00+00:00
+  updated: 2025-10-05 00:00:00+00:00
+  description: This is a quick post about something I can’t get out of my head. This came up in a “hallway track” at CppCon 2025 last month, as a spin-off of a conversation about Clang’s -Wdtor-name error. The following is real code that actually compiles. struct buffalo { buffalo(); }; buffal…
+  tags:
+  - misc
+- post_id: QX1tkXEssKmDTjFB
+  source_id: ganetsky
+  source_title: Braden++
+  title: How to use the libc++ GDB pretty-printers
+  url: https://blog.ganets.ky/LibcxxPrettyPrinters/
+  published: 2025-08-28 00:00:00+00:00
+  updated: 2025-08-28 00:00:00+00:00
+  description: 'Last year I wrote an article about my attempt so far at a system for testing Natvis files automatically. Here, I wanted to write the equivalent article but for GDB pretty-printers, for which I have an earlier article. As I said in the Natvis testing article: I want the CI to fai…'
+  tags:
+  - pretty-print
+- post_id: 3jMEn1iR54zc53VP
+  source_id: ganetsky
+  source_title: Braden++
+  title: How and why to std::forward inside a concept
+  url: https://blog.ganets.ky/ForwardInConcept/
+  published: 2025-01-04 00:00:00+00:00
+  updated: 2025-01-04 00:00:00+00:00
+  description: I thought I had a solid understanding of how std::forward works, but it turns out I was wrong. In a concept definition where I originally used std::forward, it turned out to give the incorrect behaviour. It seems like std::forward should only be used in cases of type deduction,…
+  tags:
+  - misc
+- post_id: Echr0aV5NILziYvj
+  source_id: ganetsky
+  source_title: Braden++
+  title: I want to write automated Natvis testing
+  url: https://blog.ganets.ky/NatvisTesting/
+  published: 2024-10-13 00:00:00+00:00
+  updated: 2024-10-13 00:00:00+00:00
+  description: Since writing the Natvis visualizers for Boost.Unordered, I’ve been thinking about how to test them. So far, I’ve only written semi-automatic testing. Run the “visualizer_tests.cpp” file in Visual Studio, break on the label called “break_here”, then inspect the Locals window. Si…
+  tags:
+  - boost
+  - natvis
+- post_id: aIoMiM39Gh7yIf4p
+  source_id: ganetsky
+  source_title: Braden++
+  title: A single-function SFINAE-friendly std::apply
+  url: https://blog.ganets.ky/SfinaeApply/
+  published: 2024-09-14 00:00:00+00:00
+  updated: 2024-09-14 00:00:00+00:00
+  description: There’s this issue I’ve had when using std::apply, and I’m sure if you’ve written enough generic code, then you’ve experienced it too. If not, don’t worry, I’ll go through it fully. As specified in the standard, you can’t check whether a call to std::apply is semantically valid…
+  tags:
+  - misc
+- post_id: Hyoj4HCuytbXRR-B
+  source_id: ganetsky
+  source_title: Braden++
+  title: Visualizing boost::unordered_map in GDB, with pretty-printer customization points
+  url: https://blog.ganets.ky/PrettyPrinter/
+  published: 2024-08-16 00:00:00+00:00
+  updated: 2024-08-16 00:00:00+00:00
+  description: This article is about my experience implementing GDB pretty-printers for the Boost.Unordered containers. You can read my related pair of articles on the Visual Studio natvis implementation here and here. Importantly, in this article I’ll outline the techniques I used so that use…
+  tags:
+  - boost
+  - pretty-print
+- post_id: ah2ILRSKvz7TIhgm
+  source_id: ganetsky
+  source_title: Braden++
+  title: Natvis for boost::concurrent_flat_map, and why fancy pointers are hard
+  url: https://blog.ganets.ky/NatvisForUnordered2/
+  published: 2024-07-15 00:00:00+00:00
+  updated: 2024-07-15 00:00:00+00:00
+  description: This is the 2nd article about my experience implementing custom visualizations for the Boost.Unordered containers in the Visual Studio Natvis framework. You can read the 1st article here. This 2nd article is about the open-addressing containers, which all have shared internals.…
+  tags:
+  - boost
+  - natvis
+- post_id: FIwF7ZPbhXmwcs-p
+  source_id: ganetsky
+  source_title: Braden++
+  title: Natvis for boost::unordered_map, and how to use <Intrinsic> elements
+  url: https://blog.ganets.ky/NatvisForUnordered/
+  published: 2024-06-02 00:00:00+00:00
+  updated: 2024-06-02 00:00:00+00:00
+  description: Recently I’ve been working on implementing custom visualizations for the Boost.Unordered containers in the Visual Studio Natvis framework, to provide an identical debugging experience in the Boost.Unordered containers to what we get for the STL containers. Here is the file. This…
+  tags:
+  - boost
+  - natvis

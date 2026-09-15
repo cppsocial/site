@@ -15,7 +15,6 @@ from ..config import MetaUpdaterConfig
 from ..packages import PARSERS, amalgamate
 from ..packages.common import (
     REPOSITORIES,
-    canonicalize_package_metadata,
     normalize_package_record,
 )
 from ..packages.conan import inspect_recipes
@@ -112,8 +111,10 @@ def dataset(path: Path, schema: object) -> YamlDataset:
 
 def canonical_packages(packages: list[dict]) -> list[dict]:
     """Normalize package records and sort the complete catalog recursively."""
-    return canonicalize_package_metadata(
-        [normalize_package_record(package) for package in packages]
+    normalized = [normalize_package_record(package) for package in packages]
+    return sorted(
+        normalized,
+        key=lambda package: (package["name"], package["id"]),
     )
 
 

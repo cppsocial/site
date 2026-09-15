@@ -38,12 +38,12 @@ class PackageParserTests(unittest.TestCase):
         packages = canonical_packages(
             [
                 {
-                    "id": "spack:zlib",
+                    "id": "spack:aaa-id",
                     "registry": "spack",
                     "name": "zlib",
                 },
                 {
-                    "id": "spack:fmt",
+                    "id": "spack:zzz-id",
                     "registry": "spack",
                     "name": "fmt",
                     "maintainers": ["zoe", "amy"],
@@ -59,7 +59,10 @@ class PackageParserTests(unittest.TestCase):
             ]
         )
 
-        self.assertEqual([item["id"] for item in packages], ["spack:fmt", "spack:zlib"])
+        self.assertEqual(
+            [item["id"] for item in packages],
+            ["spack:zzz-id", "spack:aaa-id"],
+        )
         self.assertEqual(packages[0]["maintainers"], ["amy", "zoe"])
         self.assertEqual(list(packages[0]["default_options"]), ["alpha", "zeta"])
         self.assertEqual(

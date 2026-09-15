@@ -1,3 +1,855 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
-[]
+- video_id: gFynjahe-bg
+  title: Dangerous Optimizations! in C++ - Part Deux - Robert C. Seacord - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=gFynjahe-bg
+  published: 2026-09-14 12:00:17+00:00
+  updated: 2026-09-14 12:02:31+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nDangerous Optimizations! - Part Deux - Robert C. Seacord - ACCU on Sea 2026\n---\n\nIncreasingly, compiler writers are taking advantage of undefined behaviors in the C and C++ programming languages to improve optimizations. Frequently, these optimizations are interfering with the ability of developers to perform cause-effect analysis on their source code, that is, analyzing the dependence of downstream results on prior results. Consequently, these optimizations are eliminating causality in software and are increasing the probability of software faults, defects, and vulnerabilities. I will continue where I left off last year and present common optimizations, how these can lead to software vulnerabilities, and applicable and practical mitigation strategies. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nRobert C. Seacord\n\nRobert C. Seacord is standardization lead at Woven by Toyota, where\
+    \ he helps standardize software development practices. Robert is an expert on ISO/IEC JTC1/SC22/WG14, the international standardization working group for the C programming language. He is the author of seven books, including Effective C (No Starch, 2020), The CERT C Coding Standard, Second Edition (Addison-Wesley, 2014), Secure Coding in C and C++, Second Edition (Addison-Wesley, 2013), and Java Coding Guidelines: 75 Recommendations for Reliable and Secure Programs (Addison-Wesley, 2014). He has also published more than 50 papers on software security, component-based software engineering, web-based system design, legacy-system modernization, component repositories and search engines, and user interface design and development.\n\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures\
+    \ the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\
+    \n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i4.ytimg.com/vi/gFynjahe-bg/hqdefault.jpg
+- video_id: OF4Id8085s0
+  title: Mastering the unordered_map in C++ - Kevin B. Carpenter - ACCU 2026
+  url: https://www.youtube.com/watch?v=OF4Id8085s0
+  published: 2026-09-12 12:00:38+00:00
+  updated: 2026-09-13 20:37:52+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    O(1) or O(no-no-no) - Mastering the unordered_map - Kevin B. Carpenter - ACCU on Sea 2026
+
+    ---
+
+
+    In modern C++, std::vector is king. We justifiably reach for it as our default, cache-friendly, contiguous sequence. But what happens when your problem doesn''t fit a simple array? What is the second container you should reach for?
+
+
+    This talk dives deep into the data that proves std::unordered_map is the undisputed #2 container in modern C++ codebases. Its dominance signifies a fundamental shift in application design: the overwhelming, performance-critical need for average-case key-value lookups.
+
+
+    Join this session as we move beyond "just use a hash map" and explore the critical, real-world implications of this choice. We''ll start by benchmarking the classic std::map (red-black tree) against std::unordered_map (hash table) to understand precisely what you gain—and what you might lose.
+
+
+    But this power comes with pitfalls. An "average-case" can quickly degrade to a catastrophic without warning. We will profile and dissect the true costs of using a hash map:
+
+
+    - The Hash: What makes a good hash function? We''ll go beyond std::hash and learn how to write effective, fast hashers for your custom types.
+
+    - The Collision: How do different collision-handling strategies impact performance and memory?
+
+    - The Re-hash: What is the "load factor," and when does the hidden cost of a full table re-hash destroy your performance gains?
+
+
+    We''ll conclude with a practical decision-making framework for when to choose std::unordered_map, when to fall back on the ordered std::map, and how std::string—the container we often forget is a container—fits into this modern landscape.
+
+
+    You will leave this session with the ability to stop guessing and start knowing precisely which data structure to deploy for maximum performance.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Kevin B. Carpenter
+
+
+    Kevin Carpenter, an experienced Software Engineer, excels in crafting high-availability C++ solutions for Linux and Windows, with expertise in transaction software, financial modelling, and system integration. As a Lead Project Engineer, he ensures secure, high-speed credit card transactions. In his prior position, he played a lead role in developing an interest rate risk model for large credit unions, enhancing legacy code, and optimizing ERP data integration.
+
+
+    Kevin actively engages in the C++ community, volunteering at conferences like ACCU, CppCon, C++ on Sea, and SwiftCraft, where he holds key positions such as Speaker Liaison and Volunteer Coordinator/Chair. His diverse contributions to the C++ community showcase his commitment to excellence and drive for collaborative growth, leaving a lasting impact in the tech world.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU on Sea Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/OF4Id8085s0/hqdefault.jpg
+- video_id: IVee1JXbrQE
+  title: Taming C++23 - The Things About C++23 You Do Not Know - Nicolai M. Josuttis - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=IVee1JXbrQE
+  published: 2026-09-10 12:00:29+00:00
+  updated: 2026-09-12 01:08:50+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nTaming C++23 - The Things About C++23 You Do Not Know - Nicolai M. Josuttis - ACCU on Sea 2026\n---\n\nC++23 is now fully available by major C++ compilers so that more and more projects and companies are using it. And we have first experience how to use it right. However, C++ would not be C++ if the would not be unexpected aspects in both the language and its library. This talk will cover the ones that might hit you but are not often told or widely known. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nNicolai M. Josuttis\n\nNicolai Josuttis (www.josuttis.com) is well-known in the community for his authoritative books and talks. For more than 25 years he has been a member of the C++ Standard Committee. He is the author of several worldwide best-sellers, including:\n\n- C++23: The Complete Guide\n- C++20: The Complete Guide\n- C++17: The Complete Guide\n- C++ Move Semantics: The Complete Guide\n\
+    - The C++ Standard Library: A tutorial and Reference\n- C++ Templates: The Complete Guide (w/ David Vandevoorde & Doug Gregor)\n\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program:\
+    \ https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i2.ytimg.com/vi/IVee1JXbrQE/hqdefault.jpg
+- video_id: 2hf0PHcpKBI
+  title: Rust for The Curious C++ Developers - Victor Ciura - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=2hf0PHcpKBI
+  published: 2026-09-07 12:00:09+00:00
+  updated: 2026-09-13 13:54:32+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Rust for The Curious C++ Developers - Victor Ciura - ACCU on Sea 2026
+
+    ---
+
+
+    What is it like to come to Rust from C++? What are the gaps, the needs, the gems and the tools you should know about? Where is my favorite C++ feature in Rust? What are the idiomatic parallels between various successful strategies and features in both these languages? What are their respective strengths?
+
+
+    From guidelines, to opinionated best practices, to established idioms, there’s a lot of good information easily available. Mixed up with all of this there are also a bunch of myths. In this presentation, I will dissect a few impactful ones for the audience.
+
+
+    What have we learned and can bring back to day-to-day C++?
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Victor Ciura
+
+
+    Victor Ciura is a Principal Engineer on the Rust team in Microsoft DevDiv, building the compiler toolchain and libraries needed for the broader 🦀Oxidizer effort across the organization and Rust open-source community.
+
+
+    Spent the last 20+ years doing systems programming in C++ on various teams, such as: Visual C++ (DevDiv), Advanced Installer, Clang Power Tools.
+
+
+    He’s a regular guest at Computer Science Department of his Alma Mater, University of Craiova, where he gives student lectures & workshops on algorithms and optimization techniques, using modern C++, Rust, Haskell.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU on Sea Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/2hf0PHcpKBI/hqdefault.jpg
+- video_id: -RWdevA0gWI
+  title: Software Abstraction in the Age of AI-Generated Code - Andrei Alexandrescu - ACCU 2026
+  url: https://www.youtube.com/watch?v=-RWdevA0gWI
+  published: 2026-09-05 12:59:55+00:00
+  updated: 2026-09-10 01:36:28+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Software Abstraction in the Age of AI-Generated Code: Languages, Compilers, and Systems Engineering - Andrei Alexandrescu - ACCU 2026
+
+    ---
+
+
+    For a long time, programming was limited by our ability to produce code. That constraint is changing quickly. AI systems can now generate large amounts of code with ease, while inspection and validation remain hard.
+
+
+    This shift changes the balance of the field. Code is easier to produce than to reason about, and judgment is in a short supply compared to specialized intelligence. The pressure moves from writing programs to understanding systems, their structure, and their behavior over time.
+
+
+    The talk looks at this transition through a mix of history, language design, and recent developments. It argues that the core challenges ahead are less about generation and more about managing complexity at scale.
+
+
+    AI will change how we build software. As before, the outcome depends on how we adapt.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Andrei Alexandrescu
+
+
+    Andrei joined NVIDIA in 2022 as a member of the Programming Systems & Applications research group. His past work has focused on a broad range of topics, including both the design of the C++ and D programming languages as well as machine learning and natural language processing. His book Modern C++ Design was particularly influential in revitalizing the field of C++ library design. Currently, Andrei is looking into developing new ways of expressing efficient parallel algorithms and the intersection of these tools with machine learning.
+
+
+    Andrei holds a PhD in Computer Science and Engineering from University of Washington and a BSc in Electrical Engineering from University "Politehnica" Bucharest.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/-RWdevA0gWI/hqdefault.jpg
+- video_id: W0vAsaL_svY
+  title: What, What? - When We Think We Understand - Nara Morrison  - ACCU 2025 Short Talks
+  url: https://www.youtube.com/watch?v=W0vAsaL_svY
+  published: 2026-02-01 15:01:01+00:00
+  updated: 2026-09-11 00:45:53+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    What, What? - When We Think We Understand - Nara Morrison  - ACCU 2025 Short Talks
+
+    ---
+
+
+    Communication in tech can be surprisingly tricky. In this lightning talk from ACCU 2025, Nara Morrison explores how misunderstandings in programming often stem from shared words with different meanings. Whether it’s “containers,” “reflections,” or even a “lightning” charger, technical jargon can quickly create confusion if not clarified.
+
+
+    Software developer soft skills are more important than ever. Misunderstandings in programming teams can lead to friction, conflict, or even project failure. Nara illustrates how shared understanding in teams — especially in cross-functional environments — is critical to effective collaboration and healthy developer communication.
+
+
+    Through personal anecdotes and real-world examples from conferences, Nara brings to life how language in software development can be interpreted in radically different ways. From the humorous to the enlightening, these moments reveal just how often emotional intelligence for developers and curiosity are overlooked in technical conversations.
+
+
+    This talk encourages developers to slow down, ask clarifying questions, and understand how assumptions can lead to communication breakdowns in tech. By taking a moment to check in, teams can avoid coding misunderstandings, reduce tension, and improve communication skills across the board.
+
+
+    Whether you''re working on a distributed team, mentoring junior engineers, or simply trying to connect better with your peers, this talk delivers powerful insight into how empathy in programming environments leads to stronger teams and happier developers.
+
+
+    Don’t miss this engaging and thoughtful session from ACCU 2025 — a must-watch for developers aiming to strengthen their communication in tech and create a more understanding, collaborative coding culture.
+
+
+    Chapters
+
+
+    0:00 - Intro: The Wait, What? Moment
+
+    0:30 - Miscommunication Over “Lightning”
+
+    1:20 - Reflections: Code vs Meditation
+
+    1:50 - Containers Confusion
+
+    2:20 - Language Differences in Tech
+
+    2:50 - Why Shared Understanding Matters
+
+    3:20 - Misunderstanding in Developer Teams
+
+    3:50 - Simple Fixes: Ask, Clarify, Connect
+
+    4:00 - Closing Thoughts on Communication
+
+
+    Slides: https://accu.org/conf-previous/accu2025/
+
+
+    Join think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career
+
+    ---
+
+
+    Nara Morrison
+
+
+    I am a stress and imposter syndrome coach and a workshop facilitator who is at the conference as a safety and inclusion lead. I share my knowledge around wellbeing, stress and imposter syndrome through public speaking and engaging workshops.
+
+
+    Video Sponsored By JetBrains
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2025 Program: https://accu.org/conf-previous/accu2025/
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #accuconf #communication #communicationskills #softwareengineering  #conflictresolutionskills #communicationtechnology #programming #softwaredevelopment #softwareengineer #programmingconcepts #coding #programmingtutorial #softwaredeveloper #softskillsdevelopment'
+  thumbnail_url: https://i4.ytimg.com/vi/W0vAsaL_svY/hqdefault.jpg
+- video_id: 62EltmSbqro
+  title: A Sixth Seam in TDD? - Python Testing, Test Doubles & Legacy Code at Kosli - Jon Jagger - ACCU 2025
+  url: https://www.youtube.com/watch?v=62EltmSbqro
+  published: 2026-01-30 15:00:23+00:00
+  updated: 2026-09-10 20:50:05+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nA Sixth Seam in TDD? - Python Testing, Test Doubles & Legacy Code at Kosli - Jon Jagger - ACCU 2025 Short Talks\n---\n\nWhat if there's a sixth seam in test-driven development (TDD) that we’ve overlooked?\n\nIn this lightning talk from ACCU 2025, Jon Jagger—creator of Cyber-Dojo and co-founder at Kosli—explores a novel idea in Python testing: an auto cache seam that enhances test performance and stability. This talk dives into Python unit testing techniques using pytest, exploring how to leverage a cache generated at the seam to replay test results, reducing flaky tests and improving CI feedback speed.\n\nIf you're familiar with test doubles—dummy, stub, spy, mock, and fake—you’ll appreciate this perspective on introducing what might be a sixth test double. By using test seams (as described by Michael Feathers in Working Effectively with Legacy Code), Jon introduces a caching mechanism that acts like a combination of stub\
+    \ and spy, enabling tests to either replay results from cache or regenerate them only when necessary.\n\nThe implementation uses pytest fixtures with autouse=True and a clever use of `pickle` files to cache the data. This approach addresses the growing complexity in legacy code and is especially useful for dealing with flaky tests. Runtime failures are handled gracefully using the runtime-failures library, ensuring reliability even when the system under test is unstable.\n\nLearn how Kosli integrates this strategy into its real-world pipelines and discover how you can adopt similar patterns in your own test driven development workflow. Whether you're working on legacy systems, refactoring large Python codebases, or trying to reduce CI runtime, this talk is packed with valuable, actionable insights.\n\nKeywords: python testing, unit testing, test doubles, tdd, test driven development, pytest, legacy code, flaky tests, runtime failures python, seam in unit testing, kosli, jon jagger, accu\
+    \ 2025\n\nChapters\n\n0:00 - Introduction and talk title correction  \n0:21 - Dylan Thomas reference and personal intro  \n0:59 - The idea: caching at seams in test code  \n1:14 - What is a seam? (Michael Feathers definition)  \n1:50 - Test doubles overview: dummy, stub, spy, mock, fake  \n2:38 - The sixth seam: auto cache concept  \n3:00 - Python implementation at Kosli  \n3:44 - pytest fixture with autouse  \n4:26 - Using the cache at the seam  \n4:47 - Replay vs rebuild logic  \n5:05 - Handling flaky tests with runtime-failures  \n\nSlides: https://accu.org/conf-previous/accu2025/\n\nJoin think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career\n---\n\nJon Jagger\n\nHusband, Dad, Grandad. Coding and Testing for 30 years (hex). Built cyber-dojo. Love fishing. Head\
+    \ of Software at Kosli.\n\nVideo Sponsored By JetBrains\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2025 Program: https://accu.org/conf-previous/accu2025/\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\n\
+    https://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#accuconf #python #pythonprogramming #pythonprogramminglanguage #code #programming #softwaredevelopment #softwareengineer #programmingconcepts #coding #programmingtutorial #software #softwareengineering #learnpython"
+  thumbnail_url: https://i3.ytimg.com/vi/62EltmSbqro/hqdefault.jpg
+- video_id: wXQE_Upqbms
+  title: 'The Beman Project: Testing C++ Library Proposals Before Standardization - Dietmar Kühl - ACCU 2025'
+  url: https://www.youtube.com/watch?v=wXQE_Upqbms
+  published: 2026-01-28 15:01:43+00:00
+  updated: 2026-05-24 03:59:29+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    The Beman Project: Testing C++ Library Proposals Before Standardization - Dietmar Kühl - ACCU 2025 Short Talks
+
+    ---
+
+
+    How do C++ library proposals mature before becoming part of the C++ standard library? In this ACCU 2025 lightning talk, Dietmar Kühl introduces the Beman Project — a community-driven initiative to test and validate C++ standard library proposals before they’re accepted into the standard.
+
+
+    The Beman Project acts as a proving ground for experimental libraries intended for the C++ standardization process. Inspired by the spirit of Boost, but designed for today’s evolving language and library ecosystem, Beman provides structured implementations of proposals such as `optional＜T&＞`, range-based extensions, execution libraries, and views and iterators.
+
+
+    Dietmar Kühl outlines how the Beman Project helps ensure proposals are viable, usable, and buildable — with consistent layout and integration patterns — before they reach the C++ committee. This approach increases the likelihood that proposals reflect real-world needs and are ready for inclusion in the standard library.
+
+
+    The talk also emphasizes community involvement, encouraging contributors to test these libraries, provide feedback, and help guide the future of C++ through open source collaboration. Whether you''re involved in the C++ standardization process, part of WG21, or just passionate about the future of C++ libraries, this session is a must-watch.
+
+
+    Learn how you can participate in the Beman Project and shape the future of C++ — one library at a time.
+
+
+    Chapters
+
+
+    00:00 - Introduction to the Beman Project
+
+    00:11 - Audience familiarity and context
+
+    00:22 - Origins and goals of the Beman Project
+
+    00:36 - Comparison with Boost and design philosophy
+
+    00:49 - Supporting C++ standard library proposals
+
+    01:12 - Layout and structure of Beman projects
+
+    01:36 - Examples: optional＜T&＞, execution, views
+
+    01:55 - Encouraging participation and community
+
+    02:10 - Beman Project t-shirts and wrap-up
+
+
+
+    Join think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career
+
+    ---
+
+
+    Dietmar Kühl
+
+
+    Dietmar Kühl is a senior software developer at Bloomberg, where he works on the data distribution environment used both internally and by enterprise installations at clients. Before joining Bloomberg, he did consulting for software projects mainly in the finance sector. He is a regular attendee of the ANSI/ISO C++ standards committee (WG21) and presents at conferences. He used to be a moderator of the newsgroup comp.lang.c++.moderated and frequently answers questions on Stack Overflow.
+
+
+    Video Sponsored By JetBrains
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2025 Program: https://accu.org/conf-previous/accu2025/
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+
+    #accuconf #stl #cpp #cplusplus #beman #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #programming #programmer #software'
+  thumbnail_url: https://i4.ytimg.com/vi/wXQE_Upqbms/hqdefault.jpg
+- video_id: _3fh8CJPtxs
+  title: What I Learned at My First Tech Conference - Peer Pressure & Developer Soft Skills - Joshua Gawley
+  url: https://www.youtube.com/watch?v=_3fh8CJPtxs
+  published: 2026-01-25 17:03:13+00:00
+  updated: 2026-05-04 17:42:44+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nWhat I Learned at My First Tech Conference - Peer Pressure & Developer Soft Skills - Joshua Gawley - ACCU 2025 Short Talks\n---\n\nAttending your first tech conference can be overwhelming, especially when imposter syndrome in tech is real. In this lightning talk from ACCU 2025, Joshua Gawley, a final-year computer science student, shares his first tech conference experience and reflects on what it’s like to be a junior developer surrounded by seasoned professionals.\n\nThis talk, titled \"What I Learned at My First Tech Conference - Peer Pressure and Developer Soft Skills,\" offers a fresh perspective on software engineering soft skills, peer pressure in engineering culture, and the unexpected importance of people skills in technical careers. With humor and humility, Joshua discusses the real pressures of attending a programming conference for the first time, and how developer communication skills can be just as critical\
+    \ as technical know-how.\n\nHe also touches on prompt engineering and the growing relevance of AI tools like Claude, along with how future software engineers will need to adapt. From dealing with peer pressure to finding your place in a team, this talk is ideal for any computer science student, junior developer, or new grad software engineer preparing for the tech industry.\n\nWhether you're attending your first coding conference or mentoring someone who is, this talk explores what to expect at a developer conference and how to grow from the experience. For anyone seeking tech career advice or insights into the balance between technical vs people skills, Joshua’s reflections are honest, helpful, and surprisingly relatable.\n\nDon’t forget to like, subscribe, and share if you found this helpful — and drop a comment with your own first-time tech conference stories!\n\nChapters\n\n00:00 - Introduction: Who Am I?\n00:11 - What Is “Pre-epression”?\n00:26 - First-Time Conference Nerves & Imposter\
+    \ Syndrome\n00:58 - Observing Peer Pressure in Engineering Culture\n01:28 - Lessons Learned from Conversations & Talks\n02:14 - The Two Pillars: Technical Skills and People Skills\n02:56 - AI, Prompt Engineering & Future Careers\n03:08 - Final Takeaway & Shameless Self-Promotion\n\nSlides: https://accu.org/conf-previous/accu2025/\n\nJoin think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career\n---\n\nJoshua Gawley\n\nFinal year student studying Maths and Computer Science at the University of Bristol. \n \nVideo Sponsored By JetBrains\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming\
+    \ languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2025 Program: https://accu.org/conf-previous/accu2025/\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#accuconf #impostersyndrome\
+    \ #techcareers #techcareer #techconference #ai #promptengineering #juniordeveloper #programming #softwaredevelopment #softwareengineer #softwareengineering  #softwareengineers #engineeringlife"
+  thumbnail_url: https://i4.ytimg.com/vi/_3fh8CJPtxs/hqdefault.jpg
+- video_id: 2eoVJJz1zLs
+  title: It Takes Two - Charles Tolman - ACCU 2025 Short Talks
+  url: https://www.youtube.com/watch?v=2eoVJJz1zLs
+  published: 2026-01-23 15:12:47+00:00
+  updated: 2026-04-21 18:20:31+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    It Takes Two - Charles Tolman - ACCU 2025 Short Talks
+
+    ---
+
+
+    In this ACCU 2025 lightning talk, Charles Tolman explores the intersection of agile mindset, technical leadership, and Argentine tango in software development. Titled "It Takes Two," this engaging session blends personal experience, team dynamics, and artistic insight to highlight the deeper human aspects of programming and software engineering.
+
+
+    Drawing from over 45 years of experience, Tolman compares the roles of lead and follow in tango with the dynamics of technical leadership and collaboration in agile development teams. He emphasizes the importance of attention in software teams, noting that good leaders must also be good followers—an idea that resonates deeply with principles of dual-role collaboration, clean code, and modern system design.
+
+
+    This talk challenges developers to cultivate engineering soft skills alongside technical intuition. By integrating concepts from Argentine tango and programming, Tolman shows how empathy, improvisation, and aesthetic perception can enhance the way we build and think about software systems. These themes support a broader developer mindset that values flexibility, presence, and human connection.
+
+
+    Whether you''re an architect, software engineer, or Agile coach, "It Takes Two" offers a unique lens through which to view software architecture, agile practices, and leadership in tech. Delivered at one of the premier developer conferences, this technical talk is both thought-provoking and practical, calling us to be more attentive, adaptable, and aware of the collaborative nature of our work.
+
+
+    Relevant to anyone interested in programming, software engineering, developer conferences, and team collaboration, this video bridges the gap between code and creativity.
+
+
+    Watch now to learn how the elegance of tango can inform your approach to software development.
+
+
+    Chapters
+
+
+    0:00 - Introduction by Charles Tolman
+
+    0:18 - Coding since 1979 and ACM background
+
+    0:35 - The role of Argentine tango in life and work
+
+    1:01 - Artistic vs analytical perception in system design
+
+    1:30 - The 2016 talk and the impromptu tango demo
+
+    2:13 - Connection to Kevlin Henney’s talk on agility and attention
+
+    2:46 - The importance of attentiveness in leadership and teams
+
+    3:08 - Lead and follow dynamics in dancing and software
+
+    3:23 - Non-gender roles and dual-role collaboration
+
+    3:27 - Invitation to tango workshop at ACCU 2025
+
+
+    Slides: https://accu.org/conf-previous/accu2025/
+
+
+    Join think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career
+
+    ---
+
+
+    Charles Tolman
+
+
+    Long time ACCU member
+
+
+    Video Sponsored By JetBrains
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2025 Program: https://accu.org/conf-previous/accu2025/
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #accuconf #agile #agileframework #argentinetango #softwaredeveloper  #learncpp #softwarengineering #programming #softwaredevelopment #softwareengineer #programmingconcepts #tangoargentino  #programmingtutorial #tango'
+  thumbnail_url: https://i3.ytimg.com/vi/2eoVJJz1zLs/hqdefault.jpg
+- video_id: mF2YMIKZUMg
+  title: Immediately Invoked Coroutine Lambdas in C++23 - Lifetime Pitfalls & Best Practices  Jonathan Müller
+  url: https://www.youtube.com/watch?v=mF2YMIKZUMg
+  published: 2026-01-21 15:02:48+00:00
+  updated: 2026-09-11 00:28:27+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Immediately Invoked Coroutine Lambdas in C++23 - Lifetime Pitfalls and Best Practices - Jonathan Müller - ACCU 2025 Short Talks
+
+    ---
+
+
+    Learn how to use immediately invoked coroutine lambdas safely and effectively in modern C++!
+
+
+    In this ACCU 2025 lightning talk, C++ expert Jonathan Müller explores the powerful but dangerous pattern of immediately invoked coroutine lambdas in C++. Coroutines allow asynchronous execution in C++ using constructs like `co_await`, `co_return`, and `co_yield`, but subtle lifetime issues can lead to undefined behavior when using capturing lambdas. This talk dives into how coroutine frames work, what happens when you `co_await` inside an immediately invoked lambda, and how to avoid crashes due to premature destruction of captures.
+
+
+    Using examples from real-world C++ coroutine usage, you''ll learn why capturing lambdas in coroutine contexts must be carefully constructed. Jonathan demonstrates how C++23''s *deducing this* feature can be used to safely pass `this` by value into a coroutine frame, avoiding dangling references. You''ll also see a macro-based trick that simulates a language feature for creating coroutine scopes inline, making your asynchronous C++ code safer and more readable.
+
+
+    Whether you''re a C++ developer working with thread pools, async tasks, or just starting with coroutines, this talk provides crucial insight into coroutine lambda usage and C++23 language features that help.
+
+
+    Key topics:
+
+    - C++ coroutines and co_await
+
+    - Lambda capture and coroutine frames
+
+    - Lifetime issues in immediately invoked coroutine lambdas
+
+    - Using deducing this in C++23
+
+    - Coroutine macros and async patterns
+
+    - Core guidelines for coroutine safety
+
+
+    Ideal for modern C++ developers and anyone using concurrency, async, or lambdas in C++ projects.
+
+
+    Watch now to master coroutine lambdas and avoid the common pitfalls!
+
+
+    Chapters
+
+
+    0:00 - Introduction to Coroutine Lambdas
+
+    0:15 - Why Use Coroutines in C++
+
+    0:30 - The Problem with Awaitables and Handles
+
+    0:58 - Building an Immediately Invoked Coroutine Lambda
+
+    1:24 - Lifetime Issues and Crashes
+
+    2:01 - Compiler Lowering and Dangling Captures
+
+    2:46 - The Solution: Pass by Value with Deducing This
+
+    3:23 - Using ''this auto'' in Lambdas
+
+    3:54 - Cleaner Syntax with Lambda Invoker and Macros
+
+    4:47 - Final Advice and Best Practices
+
+
+    Slides: https://accu.org/conf-previous/accu2025/
+
+
+    Join think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career
+
+    ---
+
+
+    Jonathan Müller
+
+
+    Jonathan is a Software Engineer at think-cell. There, he is responsible for maintaining think-cell''s core libraries, which include a custom range library, a fast and convenient JSON parser, and many other utilities and data structures to write elegant C++ code. Before working at think-cell, he wrote many useful open-source C++ libraries. Jonathan is also a member of the C++ standardization committee, where he serves as the assistant chair for std::ranges and is a frequent conference speaker.
+
+
+    Video Sponsored By JetBrains
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2025 Program: https://accu.org/conf-previous/accu2025/
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #accuconf #lambda #cppprogramming #cpp #cplusplus #cplusplusprogramming #learncpp #softwareengineering #programming #softwaredevelopment #softwareengineer #programmingconcepts #coding #programmingtutorial'
+  thumbnail_url: https://i2.ytimg.com/vi/mF2YMIKZUMg/hqdefault.jpg
+- video_id: cfHwHp4EN8g
+  title: 'Notation in Programming: Exploring BQN, Symbolic Manipulation, and Expressive Syntax - Cheery Chen'
+  url: https://www.youtube.com/watch?v=cfHwHp4EN8g
+  published: 2026-01-18 15:03:05+00:00
+  updated: 2026-04-30 06:44:15+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Notation in Programming: Exploring BQN, Symbolic Manipulation, and Expressive Syntax - Cheery Chen - ACCU 2025 Short Talks
+
+    ---
+
+
+    How can good notation unlock new ideas in programming? In this ACCU 2025 lightning talk, Cheery Chen explores the power of notation in programming, mathematics, and computational thinking. Focusing on symbolic notation and its role in expressing ideas clearly and beautifully, this talk introduces the BQN language and compares it with familiar C++ syntax to highlight the expressive potential of alternative programming languages.
+
+
+    Chen starts by showing the historical roots of algebraic notation, Arabic numerals, and the very word “algorithm,” then dives into how symbolic manipulation in programming—like calculating the arithmetic mean and quadratic mean—reveals underlying mathematical structures. Through examples from BQN, a modern array programming language, she demonstrates how computational notation can be concise, expressive, and visually intuitive.
+
+
+    The talk emphasizes that good programming notation isn’t just about brevity—it’s about helping developers reason about problems, discover analogies, and even invent new techniques. From notation design to symbolic notation and from expressive programming to functional programming practices, viewers will gain insight into how computational notation helps shape thought and supports creativity in code.
+
+
+    Whether you''re a C++ developer curious about alternative languages like BQN or simply interested in how notation affects the way we think and code, this session offers both technical depth and philosophical insight.
+
+
+    Keywords: notation in programming, BQN language, symbolic notation, programming notation, computational notation, arithmetic mean, quadratic mean, symbolic manipulation, functional programming, notation for computation, C++ vs BQN, history of notation, mathematical notation, programming syntax, expressive notation, concise notation, notation design, notation in computer science
+
+
+    Chapters
+
+
+    0:00 - Introduction to Notation and Clarity
+
+    0:19 - Algebra vs Symbolic Confusion
+
+    0:45 - Historical Roots: Algebra and Arabic Numerals
+
+    1:20 - Why Good Notation Matters
+
+    1:59 - Juggling, Crosswords, and Discovery
+
+    2:12 - Introducing BQN Notation
+
+    2:36 - BQN vs C++: Visual Comparison
+
+    2:57 - Arithmetic and Quadratic Means in BQN
+
+    3:34 - Symbolic Manipulation and Simplification
+
+    4:16 - Benefits of Expressive Notation
+
+    4:31 - Final Thoughts on Notation in Programming
+
+
+    Slides: https://accu.org/conf-previous/accu2025/
+
+
+    Join think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career
+
+    ---
+
+
+    Cheery Chen
+
+
+    Functional programming enthusiast who found their way into the wrong conference.
+
+
+    Video Sponsored By JetBrains
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2025 Program: https://accu.org/conf-previous/accu2025/
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #accuconf #bqn #notation #notations #cppprogramming #cpp #cplusplus #cplusplusprogramming #programming #softwaredevelopment #softwareengineer #programmingconcepts #coding #programmingtutorial'
+  thumbnail_url: https://i4.ytimg.com/vi/cfHwHp4EN8g/hqdefault.jpg
+- video_id: ZegbMqW-rvk
+  title: The Half-Life of Facts - Why Scientific Truths Keep Changing - Francis Glassborow - ACCU Short Talks
+  url: https://www.youtube.com/watch?v=ZegbMqW-rvk
+  published: 2026-01-17 13:29:23+00:00
+  updated: 2026-09-10 06:57:00+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nThe Half-Life of Facts - Why Scientific Truths Keep Changing - Francis Glassborow - ACCU 2025 Short Talks\n---\n\nCan you trust what you know today to still be true tomorrow? In this lightning talk from ACCU 2025, Francis Glassborow explores the half-life of facts - how scientific facts evolve, why our knowledge is constantly being revised, and what this means for critical thinking in a rapidly changing world.\n\nFrom flat Earth theories and outdated chromosome counts to the redefinition of planets and surprising reversals in medical advice, this talk challenges the assumption that facts are fixed. Glassborow weaves together historical examples and scientific milestones to show that mutable facts and scientific uncertainty are not flaws, but features of how human knowledge grows.\n\nThrough engaging anecdotes - like the changing number of human chromosomes, the evolving status of Pluto, and the re-evaluation of Neanderthals\
+    \ - we are reminded that scientific facts are provisional. This talk raises important questions: What is a fact? How do definitions shape science? And how can we better navigate a world where \"truth\" is often temporary?\n\nWhether you're a science enthusiast, educator, or someone passionate about knowledge, this talk encourages scientific literacy and a deeper understanding of the half-life of facts.\n\nPresented by Francis Glassborow at ACCU 2025, this talk is a must-watch for anyone curious about how knowledge evolves and why staying intellectually humble is more important than ever.\n\nKeywords: scientific facts, mutable facts, how facts change, outdated science, changing scientific knowledge, science misconceptions, flat Earth belief, what is a fact, facts vs beliefs, changing definitions in science, how knowledge evolves, evolving science, temporary truths, scientific knowledge, science changes over time, facts that changed, history of science, scientific uncertainty, scientific\
+    \ literacy\n\nChapters\n\n0:00 - Introduction: The Nature of Facts\n0:12 - Historical “Facts” We Got Wrong\n0:49 - Counting Chromosomes: A Surprising Correction\n1:16 - Outdated Medical Advice and Smoking\n1:33 - Noble Gases Are Not Inert?\n2:02 - Personal Anecdote: Timekeeping and DST\n2:39 - The Case of the Ninth Planet\n2:56 - Facts Defined by Definitions\n3:07 - Aging: A Temporary Fact\n3:10 - Dinosaurs and Birds\n3:19 - Misunderstanding Neanderthals\n3:35 - The Medical World and Shifting Truths\n4:04 - Even the Speed of Light Can Change\n4:27 - Book Recommendation: The Half-Life of Facts\n\nSlides: https://accu.org/conf-previous/accu2025/\n\nJoin think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career\n---\n\nFrancis Glassborow\n\nFrancis Glassborow is a long\
+    \ retired octogenarian mathematics teacher and computer programming enthusiast. He has used a multitude of computer languages and has a lifetime fascination with natural languages. In both cases he is interested in the contrast between languages and the way they express ideas. In the late 1980s he was influential in taking the then C User Group(UK) into the long lived ACCU that many know and love. As well as being the editor of CVu for over a decade he has also been a regular contributor to that publication. In the late 1990s he founded the ACCU Conference which has continued to flourish since he stepped aside as its Chair some time in the noughties. \n\nVideo Sponsored By JetBrains\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft.\
+    \ While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2025 Program: https://accu.org/conf-previous/accu2025/\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#accuconf #scientificfacts #scientificknowledge #scientifictruth \n#historyofscience #softwareengineer\
+    \ #programmingconcepts #softwaredeveloper"
+  thumbnail_url: https://i3.ytimg.com/vi/ZegbMqW-rvk/hqdefault.jpg
+- video_id: h5u3tDSdMOg
+  title: 'Printf Debugging at 1ns: High-Performance C++ Logging Without Locks - Greg Law  ACCU 2025 Short Talk'
+  url: https://www.youtube.com/watch?v=h5u3tDSdMOg
+  published: 2026-01-14 15:01:33+00:00
+  updated: 2026-05-21 01:37:34+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nPrintf Debugging at 1ns: High-Performance C++ Logging Without Locks - Greg Law - ACCU 2025 Short Talks\n---\n\nC++ debugging often starts with printf statements—but what if you could make printf run in just 1ns? In this lightning talk from ACCU 2025, Greg Law (founder of Undo and long-time debugging tool expert) takes you on a journey to reinvent printf debugging for high-performance, multithreaded systems.\n\nTraditional printf debugging is notoriously intrusive and slow, especially in concurrent C++ applications. Lock contention, system call overhead, and thread perturbation all contribute to poor performance and unreliable results. Greg explains why standard logging functions like `fprintf` and `sprintf` fall short, particularly in debugging concurrency issues like race conditions and Heisenbugs.\n\nTo address this, Greg presents a new approach: the L3 logging library—a lock-free, system call-free, mmap-backed logging\
+    \ system that achieves performance as fast as 1 nanosecond per log entry. By using atomic operations, post-processing logs, and pointer-based string capture, this method offers a truly low-overhead logging strategy tailored for C++ developers working with multithreaded code.\n\nYou'll learn how logging performance scales across cores, why `mmap` and RO data sections play a critical role, and how you can avoid common pitfalls in C++ debugging. Whether you're working on high-performance systems, debugging concurrency issues, or simply want a better way to printf debug, this talk delivers insights you can apply immediately.\n\nTopics covered include: printf debugging, lock free logging, logging performance, mmap logging, sprintf logging, debugging concurrency, high performance debugging, and C++ performance optimization.\n\nFor developers who care about debugging performance and clean logging architecture in C++, this talk is a must-watch.\n\nWatch now and explore how to debug multithreaded\
+    \ C++ code smarter and faster-with printf at 1ns.\n\nFull source code and documentation are available on GitHub.\n\nChapters\n\n00:00 - Why printf debugging is problematic  \n00:36 - Limitations of standard printf and fprintf  \n01:16 - Performance bottlenecks in multithreaded logging  \n01:59 - Exploring alternatives: speedlog and sprintf  \n02:30 - Designing a lock-free logging buffer  \n03:10 - Using mmap to eliminate system calls  \n03:50 - Optimizing further: pointer-based logging  \n04:36 - Post-processing logs from RO data sections  \n05:00 - Final thoughts and future improvements  \n\nSlides: https://accu.org/conf-previous/accu2025/\n\nJoin think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career\n---\n\nGreg Law\n\nGreg is the founder of undo.io. He is a\
+    \ coder at heart, but likes to bridge the gap between the business and software worlds.\n\nGreg has 25 years’ experience in the software industry and has held development and management roles at companies including the pioneering British computer firm Acorn, as well as fast-growing start ups, NexWave and Solarflare. It was at Acorn that Greg met Julian and on evenings and weekends, they invented the time-travel technology that would become the basis of Undo that is used today by developers at the world's leading tech companies to help them understand and root cause the most complex bugs -- as well as the day-to-day stuff.\n\nVideo Sponsored By JetBrains\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core\
+    \ of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2025 Program: https://accu.org/conf-previous/accu2025/\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#accuconf #printf #debugging #cppprogramming #cpp #cplusplus #cplusplusprogramming #programming #debug #softwaredevelopment\
+    \ #softwareengineer #programmingconcepts #coding #programmingtutorial"
+  thumbnail_url: https://i1.ytimg.com/vi/h5u3tDSdMOg/hqdefault.jpg
+- video_id: l3RbE5JmTLU
+  title: 'The U-Word: Why Software Developers Should Talk About Unions - Mathieu Ropert  ACCU 2025 Short Talks'
+  url: https://www.youtube.com/watch?v=l3RbE5JmTLU
+  published: 2026-01-11 15:01:20+00:00
+  updated: 2026-04-22 23:40:29+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nThe U-Word: Why Software Developers Should Talk About Unions - Mathieu Ropert - ACCU 2025 Short Talks\n---\n\nIn this ACCU 2025 lightning talk, Mathieu Ropert dives into a topic rarely discussed in software engineering: unions. Titled The U-Word, this fast-paced and thought-provoking session explores why software developers should be talking about unionization in tech - and why they often don’t.\n\nDrawing from his experience as a union representative and seasoned engineer, Mathieu reflects on workplace advocacy for engineers, the silence around organizing software engineers, and the cultural differences between union-friendly countries like Sweden and more hesitant tech environments. The talk confronts developer workplace issues such as unmanaged technical debt, developer burnout, and a lack of engineering voice in decision-making. \n\nWhat happens when software developer rights are ignored? Why does technical neglect\
+    \ persist despite repeated calls for change? And more importantly — what if software developers, as a professional collective, spoke with one voice?\n\nWith humor and insight, Mathieu connects the dots between developer frustration, engineering workplace culture, and collective action. Whether you're facing mounting technical debt, burnout, or feeling unheard in your engineering team, this talk encourages devs and tech workers to consider organizing as a legitimate, constructive way forward.\n\nThis session is especially relevant to anyone interested in unionizing tech workers, software engineering unions, or improving dev team collective action. If you've ever felt alone in your efforts to improve your company’s engineering culture — you're not. And maybe it's time to talk about the U-word.\n\nKey topics covered:\n- Software engineering unions  \n- Unionization in tech  \n- Technical debt and technical neglect  \n- Developer workplace issues and burnout  \n- Workplace advocacy for software\
+    \ developers  \n- Collective action in dev teams  \n\nWatch to challenge your assumptions, learn some history, and consider a future where software developers are not just builders — but changemakers.\n\nChapters\n\n00:00 - Introduction: What Is the U-Word?\n00:55 - The Silence Around Unionization in Tech\n01:56 - Technical Debt and Developer Frustration\n02:40 - The Power of Collective Engineering Voices\n03:01 - Why Aren’t We Talking About Unions?\n03:46 - Historical Context of Unions\n04:47 - Sweden, Unionization, and the Tech Workplace\n05:14 - Closing: Speaking with One Voice\n\nSlides: https://accu.org/conf-previous/accu2025/\n\nJoin think-cell as a C++ Developer and work on cutting-edge challenges with a focus on code excellence, innovation, and working alongside an international team of experts — apply now to be part of a team shaping the future of business presentations. https://www.think-cell.com/en/career\n---\n\nMathieu Ropert\n\nFrench C++ expert working on (somewhat) historical\
+    \ video games. Has a love/hate relationship with build systems but lately mostly focuses on performance and multithreading. Past speaker at CppCon, Meeting C++, code::dive and ACCU. Used to run the Paris C++ User Group. Currently lives in Sweden.\n\nVideo Sponsored By JetBrains\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted\
+    \ rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2025 Program: https://accu.org/conf-previous/accu2025/\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#accuconf #union #unions #unionism #softwaredeveloper #softwaredevelopers #softwaredevelopment #softwareengineer #softwareengineering #unionize #technicaldebt #softwareengineers"
+  thumbnail_url: https://i1.ytimg.com/vi/l3RbE5JmTLU/hqdefault.jpg

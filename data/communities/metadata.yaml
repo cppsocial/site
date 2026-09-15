@@ -16,14 +16,6 @@ cpp-discord:
   weekly_visitors: null
   weekly_contributions: null
   source_url: https://discord.com/api/v10/invites/uxuWKB2aNe?with_counts=true
-llvm-discord:
-  description: LLVM Project Discord Server
-  avatar_url: https://cdn.discordapp.com/icons/636084430946959380/39c76d2feed66d4360e7311378539a7e.png?size=512
-  banner_url: ''
-  member_count: 17370
-  weekly_visitors: null
-  weekly_contributions: null
-  source_url: https://discord.com/api/v10/invites/2kQU7PCuys?with_counts=true
 include-cpp:
   description: ''
   avatar_url: https://cdn.discordapp.com/icons/400588936151433218/150153a93667a8d9058b554bdf8ac146.png?size=512
@@ -32,3 +24,35 @@ include-cpp:
   weekly_visitors: null
   weekly_contributions: null
   source_url: https://discord.com/api/v10/invites/vSYgpmPrra?with_counts=true
+llvm-discord:
+  description: LLVM Project Discord Server
+  avatar_url: https://cdn.discordapp.com/icons/636084430946959380/39c76d2feed66d4360e7311378539a7e.png?size=512
+  banner_url: ''
+  member_count: 17371
+  weekly_visitors: null
+  weekly_contributions: null
+  source_url: https://discord.com/api/v10/invites/2kQU7PCuys?with_counts=true
+reddit-cplusplus:
+  description: C++ is a high-level, general-purpose programming language first released in 1985. Modern C++ has object-oriented, generic, and functional features, in addition to facilities for low-level memory manipulation.
+  avatar_url: https://styles.redditmedia.com/t5_2qh6x/styles/communityIcon_xgorujtjrj571.png?width=128&frame=1&auto=webp&s=7b2c7806dea8429143c497a987f313256024beb2
+  banner_url: https://styles.redditmedia.com/t5_2qh6x/styles/bannerBackgroundImage_mvwz9ov3hl571.png?width=1448&frame=1&auto=webp&s=982177cce33ef09f9e0149454ce6fd05bb6291e8
+  member_count: null
+  weekly_visitors: 10871
+  weekly_contributions: 122
+  source_url: https://www.reddit.com/r/Cplusplus/
+reddit-cpp:
+  description: Discussions, articles and news about the C++ programming language or programming in C++.
+  avatar_url: https://styles.redditmedia.com/t5_2qi27/styles/communityIcon_69pewkisd4xf1.png?width=128&frame=1&auto=webp&s=4c0c207d5e3ac0bc4a2d5f53829706fecd998886
+  banner_url: ''
+  member_count: null
+  weekly_visitors: 63849
+  weekly_contributions: 811
+  source_url: https://www.reddit.com/r/cpp/
+reddit-cpp-questions:
+  description: a subreddit for c++ questions and answers
+  avatar_url: https://styles.redditmedia.com/t5_2tdbd/styles/communityIcon_mzujny4mcmne1.png?width=128&frame=1&auto=webp&s=40aa9353334423b10fff3167fa50c993d34522dc
+  banner_url: ''
+  member_count: null
+  weekly_visitors: 60536
+  weekly_contributions: 984
+  source_url: https://www.reddit.com/r/cpp_questions/

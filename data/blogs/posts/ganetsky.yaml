@@ -9,8 +9,8 @@
   updated: 2026-07-05 00:00:00+00:00
   description: A few weeks ago I came across some code that MSVC and Clang both rejected, but GCC accepted. The error messages are different in MSVC and Clang, so clearly I must have done something wrong, and GCC falsely accepts the code, right? I mostly minimized the code, and ended up with t…
   tags:
-  - tok3n
   - k3tchup
+  - tok3n
 - post_id: mfG788kXvuhkZ6wO
   source_id: ganetsky
   source_title: Braden++

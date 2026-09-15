@@ -68689,6 +68689,8 @@ matches:
     weight: -0.3
   - signal: same homepage
     weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: shared distributed version
     weight: 0.12
 - left: conan:xz_utils
@@ -110014,6 +110016,8 @@ matches:
     weight: -0.3
   - signal: same homepage
     weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: shared distributed version
     weight: 0.12
 - left: vcpkg:libmariadb
@@ -145778,13 +145782,6 @@ matches:
   evidence:
   - signal: library-prefix alias
     weight: 0.6
-- left: spack:lzma
-  right: vcpkg:liblzma
-  confidence: 0.6
-  decision: none
-  evidence:
-  - signal: library-prefix alias
-    weight: 0.6
 - left: spack:mysql
   right: vcpkg:libmysql
   confidence: 0.6
@@ -146441,6 +146438,15 @@ matches:
     weight: -0.12
 - left: spack:libproxy
   right: vcpkg:proxy
+  confidence: 0.528
+  decision: none
+  evidence:
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: conflicting licenses
+    weight: -0.12
+- left: spack:lzma
+  right: vcpkg:liblzma
   confidence: 0.528
   decision: none
   evidence:

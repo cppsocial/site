@@ -3578,7 +3578,7 @@ packages:
       filename: abseil-cpp-20250814.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/abseil-cpp_20250814.1-1/abseil-cpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/abseil-cpp.wrap
+  recipe_path: subprojects/abseil-cpp.wrap
 - id: meson:adamyaxley-obfuscate
   registry: meson
   name: adamyaxley-obfuscate
@@ -3593,7 +3593,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/adamyaxley-obfuscate_1.0.0-1/adamyaxley-obfuscate.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/adamyaxley-obfuscate.wrap
+  recipe_path: subprojects/adamyaxley-obfuscate.wrap
 - id: meson:aklomp-base64
   registry: meson
   name: aklomp-base64
@@ -3608,7 +3608,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/aklomp-base64_0.5.2-1/aklomp-base64.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/aklomp-base64.wrap
+  recipe_path: subprojects/aklomp-base64.wrap
 - id: meson:apache-orc
   registry: meson
   name: apache-orc
@@ -3650,7 +3650,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/apache-orc_2.3.1-1/apache-orc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/apache-orc.wrap
+  recipe_path: subprojects/apache-orc.wrap
 - id: meson:arduinocore-avr
   registry: meson
   name: arduinocore-avr
@@ -3728,7 +3728,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/arduinocore-avr_1.8.7-1/arduinocore-avr.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/arduinocore-avr.wrap
+  recipe_path: subprojects/arduinocore-avr.wrap
 - id: meson:argparse
   registry: meson
   name: argparse
@@ -3814,7 +3814,7 @@ packages:
       filename: argparse-3.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/argparse_3.2-1/argparse.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/argparse.wrap
+  recipe_path: subprojects/argparse.wrap
 - id: meson:argtable3
   registry: meson
   name: argtable3
@@ -3843,7 +3843,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/argtable3_3.3.1-1/argtable3.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/argtable3.wrap
+  recipe_path: subprojects/argtable3.wrap
 - id: meson:argu-parser
   registry: meson
   name: argu-parser
@@ -3862,7 +3862,7 @@ packages:
       filename: argu-parser-0.0.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/argu-parser_0.0.1-1/argu-parser.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/argu-parser.wrap
+  recipe_path: subprojects/argu-parser.wrap
 - id: meson:argus
   registry: meson
   name: argus
@@ -3884,7 +3884,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/argus_0.2.1-1/argus.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/argus.wrap
+  recipe_path: subprojects/argus.wrap
 - id: meson:arrow-cpp
   registry: meson
   name: arrow-cpp
@@ -3900,7 +3900,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/arrow-cpp_21.0.0-1/arrow-cpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/arrow-cpp.wrap
+  recipe_path: subprojects/arrow-cpp.wrap
 - id: meson:asio
   registry: meson
   name: asio
@@ -3960,7 +3960,7 @@ packages:
       filename: asio-1.38.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/asio_1.38.2-1/asio.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/asio.wrap
+  recipe_path: subprojects/asio.wrap
 - id: meson:atomic_queue
   registry: meson
   name: atomic_queue
@@ -4014,7 +4014,7 @@ packages:
       filename: atomic_queue-1.9.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/atomic_queue_1.9.2-1/atomic_queue.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/atomic_queue.wrap
+  recipe_path: subprojects/atomic_queue.wrap
 - id: meson:au
   registry: meson
   name: au
@@ -4040,7 +4040,7 @@ packages:
       filename: au-0.5.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/au_0.5.0-1/au.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/au.wrap
+  recipe_path: subprojects/au.wrap
 - id: meson:aws-c-cal
   registry: meson
   name: aws-c-cal
@@ -4059,7 +4059,7 @@ packages:
       filename: aws-c-cal-0.9.10.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/aws-c-cal_0.9.10-1/aws-c-cal.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/aws-c-cal.wrap
+  recipe_path: subprojects/aws-c-cal.wrap
 - id: meson:aws-c-common
   registry: meson
   name: aws-c-common
@@ -4099,7 +4099,7 @@ packages:
       filename: aws-c-common-0.12.6.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/aws-c-common_0.12.6-1/aws-c-common.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/aws-c-common.wrap
+  recipe_path: subprojects/aws-c-common.wrap
 - id: meson:aws-c-compression
   registry: meson
   name: aws-c-compression
@@ -4120,7 +4120,7 @@ packages:
       filename: aws-c-compression-0.3.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/aws-c-compression_0.3.1-1/aws-c-compression.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/aws-c-compression.wrap
+  recipe_path: subprojects/aws-c-compression.wrap
 - id: meson:backward-cpp
   registry: meson
   name: backward-cpp
@@ -4201,7 +4201,7 @@ packages:
       filename: backward-cpp-1.6.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/backward-cpp_1.6-1/backward-cpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/backward-cpp.wrap
+  recipe_path: subprojects/backward-cpp.wrap
 - id: meson:bdwgc
   registry: meson
   name: bdwgc
@@ -4244,7 +4244,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/bdwgc_8.2.8-1/bdwgc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/bdwgc.wrap
+  recipe_path: subprojects/bdwgc.wrap
 - id: meson:blueprint-compiler
   registry: meson
   name: blueprint-compiler
@@ -4287,7 +4287,7 @@ packages:
       filename: blueprint-compiler-0.18.0.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/blueprint-compiler_0.18.0-1/blueprint-compiler.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/blueprint-compiler.wrap
+  recipe_path: subprojects/blueprint-compiler.wrap
 - id: meson:boost-mp11
   registry: meson
   name: boost-mp11
@@ -4309,7 +4309,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/boost-mp11_1.88.0-1/boost-mp11.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/boost-mp11.wrap
+  recipe_path: subprojects/boost-mp11.wrap
 - id: meson:boost-pfr
   registry: meson
   name: boost-pfr
@@ -4324,7 +4324,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/boost-pfr_1.88.0-1/boost-pfr.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/boost-pfr.wrap
+  recipe_path: subprojects/boost-pfr.wrap
 - id: meson:box2d
   registry: meson
   name: box2d
@@ -4404,7 +4404,7 @@ packages:
       filename: box2d-2.4.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/box2d_2.4.1-1/box2d.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/box2d.wrap
+  recipe_path: subprojects/box2d.wrap
 - id: meson:bshoshany-thread-pool
   registry: meson
   name: bshoshany-thread-pool
@@ -4468,7 +4468,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/bshoshany-thread-pool_5.1.0-1/bshoshany-thread-pool.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/bshoshany-thread-pool.wrap
+  recipe_path: subprojects/bshoshany-thread-pool.wrap
 - id: meson:bzip2
   registry: meson
   name: bzip2
@@ -4497,7 +4497,7 @@ packages:
       filename: bzip2-1.0.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/bzip2_1.0.8-1/bzip2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/bzip2.wrap
+  recipe_path: subprojects/bzip2.wrap
 - id: meson:c-ares
   registry: meson
   name: c-ares
@@ -4565,7 +4565,7 @@ packages:
       filename: c-ares-1.34.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/c-ares_1.34.8-1/c-ares.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/c-ares.wrap
+  recipe_path: subprojects/c-ares.wrap
 - id: meson:c-flags
   registry: meson
   name: c-flags
@@ -4598,7 +4598,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/c-flags_1.5.8-1/c-flags.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/c-flags.wrap
+  recipe_path: subprojects/c-flags.wrap
 - id: meson:cairo
   registry: meson
   name: cairo
@@ -4660,7 +4660,7 @@ packages:
       filename: cairo-1.18.4.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cairo_1.18.4-1/cairo.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cairo.wrap
+  recipe_path: subprojects/cairo.wrap
 - id: meson:cairomm
   registry: meson
   name: cairomm
@@ -4678,7 +4678,7 @@ packages:
       filename: cairomm-1.18.0.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cairomm_1.18.0-1/cairomm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cairomm.wrap
+  recipe_path: subprojects/cairomm.wrap
 - id: meson:catch
   registry: meson
   name: catch
@@ -4699,7 +4699,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/catch_2.2.2-1/catch.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/catch.wrap
+  recipe_path: subprojects/catch.wrap
 - id: meson:catch2
   registry: meson
   name: catch2
@@ -4956,7 +4956,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/catch2_3.9.1-1/catch2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/catch2.wrap
+  recipe_path: subprojects/catch2.wrap
 - id: meson:catchorg-clara
   registry: meson
   name: catchorg-clara
@@ -4967,7 +4967,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/catchorg-clara_1.1.5-1/catchorg-clara.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/catchorg-clara.wrap
+  recipe_path: subprojects/catchorg-clara.wrap
 - id: meson:centurion
   registry: meson
   name: centurion
@@ -4993,7 +4993,7 @@ packages:
       filename: centurion-7.3.0.zip
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/centurion_7.3.0-1/centurion.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/centurion.wrap
+  recipe_path: subprojects/centurion.wrap
 - id: meson:cereal
   registry: meson
   name: cereal
@@ -5026,7 +5026,7 @@ packages:
       filename: cereal-1.3.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cereal_1.3.2-1/cereal.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cereal.wrap
+  recipe_path: subprojects/cereal.wrap
 - id: meson:cexception
   registry: meson
   name: cexception
@@ -5048,7 +5048,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cexception_1.3.4-1/cexception.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cexception.wrap
+  recipe_path: subprojects/cexception.wrap
 - id: meson:cglm
   registry: meson
   name: cglm
@@ -5081,7 +5081,7 @@ packages:
       filename: cglm-0.9.6.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cglm_0.9.6-1/cglm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cglm.wrap
+  recipe_path: subprojects/cglm.wrap
 - id: meson:check
   registry: meson
   name: check
@@ -5162,7 +5162,7 @@ packages:
       filename: check-0.15.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/check_0.15.2-1/check.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/check.wrap
+  recipe_path: subprojects/check.wrap
 - id: meson:chipmunk
   registry: meson
   name: chipmunk
@@ -5191,7 +5191,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/chipmunk_7.0.3-1/chipmunk.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/chipmunk.wrap
+  recipe_path: subprojects/chipmunk.wrap
 - id: meson:cjson
   registry: meson
   name: cjson
@@ -5304,7 +5304,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cjson_1.7.19-1/cjson.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cjson.wrap
+  recipe_path: subprojects/cjson.wrap
 - id: meson:cli11
   registry: meson
   name: cli11
@@ -5403,7 +5403,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cli11_2.7.2-1/cli11.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cli11.wrap
+  recipe_path: subprojects/cli11.wrap
 - id: meson:cmark-gfm
   registry: meson
   name: cmark-gfm
@@ -5436,7 +5436,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cmark-gfm_0.29.0.gfm.6-1/cmark-gfm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cmark-gfm.wrap
+  recipe_path: subprojects/cmark-gfm.wrap
 - id: meson:cmock
   registry: meson
   name: cmock
@@ -5458,7 +5458,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cmock_2.6.0-1/cmock.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cmock.wrap
+  recipe_path: subprojects/cmock.wrap
 - id: meson:cmocka
   registry: meson
   name: cmocka
@@ -5560,7 +5560,7 @@ packages:
       filename: cmocka-1.1.8.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cmocka_1.1.8-1/cmocka.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cmocka.wrap
+  recipe_path: subprojects/cmocka.wrap
 - id: meson:concurrentqueue
   registry: meson
   name: concurrentqueue
@@ -5586,7 +5586,7 @@ packages:
       filename: concurrentqueue-1.0.4.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/concurrentqueue_1.0.4-1/concurrentqueue.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/concurrentqueue.wrap
+  recipe_path: subprojects/concurrentqueue.wrap
 - id: meson:cpp-httplib
   registry: meson
   name: cpp-httplib
@@ -6018,7 +6018,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.8.9-1/cpp-httplib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cpp-httplib.wrap
+  recipe_path: subprojects/cpp-httplib.wrap
 - id: meson:cpp-semver
   registry: meson
   name: cpp-semver
@@ -6037,7 +6037,7 @@ packages:
       filename: cpp-semver-0.3.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-semver_0.3.3-1/cpp-semver.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cpp-semver.wrap
+  recipe_path: subprojects/cpp-semver.wrap
 - id: meson:cpputest
   registry: meson
   name: cpputest
@@ -6089,7 +6089,7 @@ packages:
       filename: cpputest-4.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpputest_4.0-1/cpputest.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cpputest.wrap
+  recipe_path: subprojects/cpputest.wrap
 - id: meson:cppzmq
   registry: meson
   name: cppzmq
@@ -6168,7 +6168,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cppzmq_4.9.0-1/cppzmq.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cppzmq.wrap
+  recipe_path: subprojects/cppzmq.wrap
 - id: meson:cpr
   registry: meson
   name: cpr
@@ -6292,7 +6292,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpr_1.9.6-1/cpr.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cpr.wrap
+  recipe_path: subprojects/cpr.wrap
 - id: meson:croaring
   registry: meson
   name: croaring
@@ -6321,7 +6321,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/croaring_4.3.11-1/croaring.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/croaring.wrap
+  recipe_path: subprojects/croaring.wrap
 - id: meson:crow
   registry: meson
   name: crow
@@ -6336,7 +6336,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/crow_1.3.0-1/crow.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/crow.wrap
+  recipe_path: subprojects/crow.wrap
 - id: meson:csfml
   registry: meson
   name: csfml
@@ -6351,7 +6351,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/csfml_3.0.0-1/csfml.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/csfml.wrap
+  recipe_path: subprojects/csfml.wrap
 - id: meson:ctre
   registry: meson
   name: ctre
@@ -6373,7 +6373,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/ctre_3.9.0-1/ctre.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/ctre.wrap
+  recipe_path: subprojects/ctre.wrap
 - id: meson:curl
   registry: meson
   name: curl
@@ -6501,7 +6501,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/curl_8.9.1-1/curl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/curl.wrap
+  recipe_path: subprojects/curl.wrap
 - id: meson:cwalk
   registry: meson
   name: cwalk
@@ -6531,7 +6531,7 @@ packages:
       filename: cwalk-1.2.9.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cwalk_1.2.9-1/cwalk.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cwalk.wrap
+  recipe_path: subprojects/cwalk.wrap
 - id: meson:cxxopts
   registry: meson
   name: cxxopts
@@ -6585,7 +6585,7 @@ packages:
       filename: cxxopts-3.2.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cxxopts_3.2.0-1/cxxopts.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/cxxopts.wrap
+  recipe_path: subprojects/cxxopts.wrap
 - id: meson:debug_assert
   registry: meson
   name: debug_assert
@@ -6611,7 +6611,7 @@ packages:
       filename: debug_assert-1.3.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/debug_assert_1.3.4-1/debug_assert.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/debug_assert.wrap
+  recipe_path: subprojects/debug_assert.wrap
 - id: meson:directxmath
   registry: meson
   name: directxmath
@@ -6640,7 +6640,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/directxmath_3.1.9-1/directxmath.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/directxmath.wrap
+  recipe_path: subprojects/directxmath.wrap
 - id: meson:dlfcn-win32
   registry: meson
   name: dlfcn-win32
@@ -6673,7 +6673,7 @@ packages:
       filename: dlfcn-win32-1.4.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/dlfcn-win32_1.4.2-1/dlfcn-win32.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/dlfcn-win32.wrap
+  recipe_path: subprojects/dlfcn-win32.wrap
 - id: meson:docopt
   registry: meson
   name: docopt
@@ -6716,7 +6716,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/docopt_0.6.3-1/docopt.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/docopt.wrap
+  recipe_path: subprojects/docopt.wrap
 - id: meson:doctest
   registry: meson
   name: doctest
@@ -6784,7 +6784,7 @@ packages:
       filename: doctest-2.5.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/doctest_2.5.3-1/doctest.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/doctest.wrap
+  recipe_path: subprojects/doctest.wrap
 - id: meson:dragonbox
   registry: meson
   name: dragonbox
@@ -6803,7 +6803,7 @@ packages:
       filename: dragonbox-1.1.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/dragonbox_1.1.2-1/dragonbox.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/dragonbox.wrap
+  recipe_path: subprojects/dragonbox.wrap
 - id: meson:dyninst
   registry: meson
   name: dyninst
@@ -6833,7 +6833,7 @@ packages:
       filename: dyninst-13.0.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/dyninst_13.0.0-1/dyninst.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/dyninst.wrap
+  recipe_path: subprojects/dyninst.wrap
 - id: meson:eigen
   registry: meson
   name: eigen
@@ -6922,7 +6922,7 @@ packages:
       filename: eigen-5.0.1.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/eigen_5.0.1-1/eigen.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/eigen.wrap
+  recipe_path: subprojects/eigen.wrap
 - id: meson:emilk-loguru
   registry: meson
   name: emilk-loguru
@@ -7000,7 +7000,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/emilk-loguru_2.1.0-1/emilk-loguru.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/emilk-loguru.wrap
+  recipe_path: subprojects/emilk-loguru.wrap
 - id: meson:enet
   registry: meson
   name: enet
@@ -7057,7 +7057,7 @@ packages:
       filename: enet-1.3.18.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/enet_1.3.18-1/enet.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/enet.wrap
+  recipe_path: subprojects/enet.wrap
 - id: meson:enlog
   registry: meson
   name: enlog
@@ -7079,7 +7079,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/enlog_1.8-1/enlog.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/enlog.wrap
+  recipe_path: subprojects/enlog.wrap
 - id: meson:entt
   registry: meson
   name: entt
@@ -7120,7 +7120,7 @@ packages:
       filename: entt-3.11.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/entt_3.11.0-1/entt.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/entt.wrap
+  recipe_path: subprojects/entt.wrap
 - id: meson:epoxy
   registry: meson
   name: epoxy
@@ -7149,7 +7149,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/epoxy_1.5.9-1/epoxy.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/epoxy.wrap
+  recipe_path: subprojects/epoxy.wrap
 - id: meson:exiv2
   registry: meson
   name: exiv2
@@ -7217,7 +7217,7 @@ packages:
       filename: exiv2-0.28.9.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/exiv2_0.28.9-1/exiv2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/exiv2.wrap
+  recipe_path: subprojects/exiv2.wrap
 - id: meson:expat
   registry: meson
   name: expat
@@ -7418,7 +7418,7 @@ packages:
       filename: expat-2.8.4.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/expat_2.8.4-1/expat.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/expat.wrap
+  recipe_path: subprojects/expat.wrap
 - id: meson:eyalroz-printf
   registry: meson
   name: eyalroz-printf
@@ -7433,7 +7433,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/eyalroz-printf_6.2.0-1/eyalroz-printf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/eyalroz-printf.wrap
+  recipe_path: subprojects/eyalroz-printf.wrap
 - id: meson:facil
   registry: meson
   name: facil
@@ -7483,7 +7483,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/facil_0.7.6-1/facil.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/facil.wrap
+  recipe_path: subprojects/facil.wrap
 - id: meson:fast_float
   registry: meson
   name: fast_float
@@ -7502,7 +7502,7 @@ packages:
       filename: fast_float-8.2.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fast_float_8.2.4-1/fast_float.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fast_float.wrap
+  recipe_path: subprojects/fast_float.wrap
 - id: meson:fdk-aac
   registry: meson
   name: fdk-aac
@@ -7538,7 +7538,7 @@ packages:
       filename: fdk-aac-2.0.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fdk-aac_2.0.3-1/fdk-aac.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fdk-aac.wrap
+  recipe_path: subprojects/fdk-aac.wrap
 - id: meson:ff-nvcodec-headers
   registry: meson
   name: ff-nvcodec-headers
@@ -7553,7 +7553,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/ff-nvcodec-headers_11.1.5.1-0/ff-nvcodec-headers.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/ff-nvcodec-headers.wrap
+  recipe_path: subprojects/ff-nvcodec-headers.wrap
 - id: meson:flac
   registry: meson
   name: flac
@@ -7685,7 +7685,7 @@ packages:
       filename: flac-1.5.0.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/flac_1.5.0-1/flac.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/flac.wrap
+  recipe_path: subprojects/flac.wrap
 - id: meson:flatbuffers
   registry: meson
   name: flatbuffers
@@ -7780,7 +7780,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/flatbuffers_24.3.6-1/flatbuffers.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/flatbuffers.wrap
+  recipe_path: subprojects/flatbuffers.wrap
 - id: meson:fluidsynth
   registry: meson
   name: fluidsynth
@@ -7916,7 +7916,7 @@ packages:
       filename: fluidsynth-2.3.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fluidsynth_2.3.3-1/fluidsynth.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fluidsynth.wrap
+  recipe_path: subprojects/fluidsynth.wrap
 - id: meson:fmt
   registry: meson
   name: fmt
@@ -8110,7 +8110,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fmt_9.1.0-1/fmt.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fmt.wrap
+  recipe_path: subprojects/fmt.wrap
 - id: meson:fontconfig
   registry: meson
   name: fontconfig
@@ -8163,7 +8163,7 @@ packages:
       filename: fontconfig-2.18.3.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fontconfig_2.18.3-1/fontconfig.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fontconfig.wrap
+  recipe_path: subprojects/fontconfig.wrap
 - id: meson:freeglut
   registry: meson
   name: freeglut
@@ -8227,7 +8227,7 @@ packages:
       filename: freeglut-3.8.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/freeglut_3.8.0-1/freeglut.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/freeglut.wrap
+  recipe_path: subprojects/freeglut.wrap
 - id: meson:freetype2
   registry: meson
   name: freetype2
@@ -8346,7 +8346,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/freetype2_2.9.1-1/freetype2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/freetype2.wrap
+  recipe_path: subprojects/freetype2.wrap
 - id: meson:fribidi
   registry: meson
   name: fribidi
@@ -8379,7 +8379,7 @@ packages:
       filename: fribidi-1.0.16.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fribidi_1.0.16-1/fribidi.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fribidi.wrap
+  recipe_path: subprojects/fribidi.wrap
 - id: meson:frozen
   registry: meson
   name: frozen
@@ -8419,7 +8419,7 @@ packages:
       filename: frozen-1.2.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/frozen_1.2.0-1/frozen.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/frozen.wrap
+  recipe_path: subprojects/frozen.wrap
 - id: meson:ftxui
   registry: meson
   name: ftxui
@@ -8501,7 +8501,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/ftxui_6.1.9-1/ftxui.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/ftxui.wrap
+  recipe_path: subprojects/ftxui.wrap
 - id: meson:fuse
   registry: meson
   name: fuse
@@ -8537,7 +8537,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fuse_2.9.9-1/fuse.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/fuse.wrap
+  recipe_path: subprojects/fuse.wrap
 - id: meson:gdbm
   registry: meson
   name: gdbm
@@ -8601,7 +8601,7 @@ packages:
       filename: gdbm-1.26.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gdbm_1.26-1/gdbm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gdbm.wrap
+  recipe_path: subprojects/gdbm.wrap
 - id: meson:gdk-pixbuf
   registry: meson
   name: gdk-pixbuf
@@ -8696,7 +8696,7 @@ packages:
       filename: gdk-pixbuf-2.44.8.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gdk-pixbuf_2.44.8-1/gdk-pixbuf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gdk-pixbuf.wrap
+  recipe_path: subprojects/gdk-pixbuf.wrap
 - id: meson:gee
   registry: meson
   name: gee
@@ -8717,7 +8717,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gee_0.20.8-1/gee.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gee.wrap
+  recipe_path: subprojects/gee.wrap
 - id: meson:gflags
   registry: meson
   name: gflags
@@ -8736,7 +8736,7 @@ packages:
       filename: gflags-2.2.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gflags_2.2.2-1/gflags.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gflags.wrap
+  recipe_path: subprojects/gflags.wrap
 - id: meson:giflib
   registry: meson
   name: giflib
@@ -8796,7 +8796,7 @@ packages:
       filename: giflib-6.1.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/giflib_6.1.3-1/giflib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/giflib.wrap
+  recipe_path: subprojects/giflib.wrap
 - id: meson:glbinding
   registry: meson
   name: glbinding
@@ -8825,7 +8825,7 @@ packages:
       filename: glbinding-3.5.0.zip
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glbinding_3.5.0-1/glbinding.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glbinding.wrap
+  recipe_path: subprojects/glbinding.wrap
 - id: meson:glew
   registry: meson
   name: glew
@@ -8886,7 +8886,7 @@ packages:
       filename: glew-2.3.1.tgz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glew_2.3.1-1/glew.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glew.wrap
+  recipe_path: subprojects/glew.wrap
 - id: meson:glfw
   registry: meson
   name: glfw
@@ -8958,7 +8958,7 @@ packages:
       filename: glfw-3.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glfw_3.4-1/glfw.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glfw.wrap
+  recipe_path: subprojects/glfw.wrap
 - id: meson:glib
   registry: meson
   name: glib
@@ -9949,7 +9949,7 @@ packages:
       filename: glib-2.90.0.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glib_2.90.0-1/glib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glib.wrap
+  recipe_path: subprojects/glib.wrap
 - id: meson:glib-networking
   registry: meson
   name: glib-networking
@@ -9973,7 +9973,7 @@ packages:
       filename: glib-networking-2.80.1.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glib-networking_2.80.1-1/glib-networking.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glib-networking.wrap
+  recipe_path: subprojects/glib-networking.wrap
 - id: meson:glm
   registry: meson
   name: glm
@@ -10020,7 +10020,7 @@ packages:
       filename: glm-1.0.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glm_1.0.3-1/glm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glm.wrap
+  recipe_path: subprojects/glm.wrap
 - id: meson:glpk
   registry: meson
   name: glpk
@@ -10049,7 +10049,7 @@ packages:
       filename: glpk-5.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/glpk_5.0-1/glpk.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/glpk.wrap
+  recipe_path: subprojects/glpk.wrap
 - id: meson:gobject-introspection
   registry: meson
   name: gobject-introspection
@@ -10079,7 +10079,7 @@ packages:
       filename: gobject-introspection-1.86.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gobject-introspection_1.86.0-1/gobject-introspection.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gobject-introspection.wrap
+  recipe_path: subprojects/gobject-introspection.wrap
 - id: meson:godot-cpp
   registry: meson
   name: godot-cpp
@@ -10122,7 +10122,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/godot-cpp_4.5-1/godot-cpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/godot-cpp.wrap
+  recipe_path: subprojects/godot-cpp.wrap
 - id: meson:google-benchmark
   registry: meson
   name: google-benchmark
@@ -10227,7 +10227,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/google-benchmark_1.8.4-1/google-benchmark.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/google-benchmark.wrap
+  recipe_path: subprojects/google-benchmark.wrap
 - id: meson:google-brotli
   registry: meson
   name: google-brotli
@@ -10298,7 +10298,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/google-brotli_1.1.0-1/google-brotli.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/google-brotli.wrap
+  recipe_path: subprojects/google-brotli.wrap
 - id: meson:google-snappy
   registry: meson
   name: google-snappy
@@ -10341,7 +10341,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/google-snappy_1.2.2-1/google-snappy.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/google-snappy.wrap
+  recipe_path: subprojects/google-snappy.wrap
 - id: meson:google-woff2
   registry: meson
   name: google-woff2
@@ -10402,7 +10402,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/google-woff2_1.0.2-1/google-woff2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/google-woff2.wrap
+  recipe_path: subprojects/google-woff2.wrap
 - id: meson:graphite2
   registry: meson
   name: graphite2
@@ -10421,7 +10421,7 @@ packages:
       filename: graphite2-1.3.14.tgz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/graphite2_1.3.14-1/graphite2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/graphite2.wrap
+  recipe_path: subprojects/graphite2.wrap
 - id: meson:grpc
   registry: meson
   name: grpc
@@ -10456,7 +10456,7 @@ packages:
       filename: grpc-1.59.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/grpc_1.59.1-1/grpc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/grpc.wrap
+  recipe_path: subprojects/grpc.wrap
 - id: meson:gtest
   registry: meson
   name: gtest
@@ -10717,7 +10717,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gtest_1.8.1-1/gtest.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gtest.wrap
+  recipe_path: subprojects/gtest.wrap
 - id: meson:gumbo-parser
   registry: meson
   name: gumbo-parser
@@ -10746,7 +10746,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/gumbo-parser_0.12.1-1/gumbo-parser.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/gumbo-parser.wrap
+  recipe_path: subprojects/gumbo-parser.wrap
 - id: meson:harfbuzz
   registry: meson
   name: harfbuzz
@@ -11114,7 +11114,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/harfbuzz_9.0.0-1/harfbuzz.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/harfbuzz.wrap
+  recipe_path: subprojects/harfbuzz.wrap
 - id: meson:hedley
   registry: meson
   name: hedley
@@ -11139,7 +11139,7 @@ packages:
       filename: hedley-15.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/hedley_15-1/hedley.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/hedley.wrap
+  recipe_path: subprojects/hedley.wrap
 - id: meson:hinnant-date
   registry: meson
   name: hinnant-date
@@ -11188,7 +11188,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/hinnant-date_3.0.3-1/hinnant-date.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/hinnant-date.wrap
+  recipe_path: subprojects/hinnant-date.wrap
 - id: meson:htslib
   registry: meson
   name: htslib
@@ -11305,7 +11305,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/htslib_1.9-1/htslib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/htslib.wrap
+  recipe_path: subprojects/htslib.wrap
 - id: meson:icu
   registry: meson
   name: icu
@@ -11618,7 +11618,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/icu_78.2-1/icu.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/icu.wrap
+  recipe_path: subprojects/icu.wrap
 - id: meson:id3tag
   registry: meson
   name: id3tag
@@ -11633,7 +11633,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/id3tag_0.16.4-1/id3tag.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/id3tag.wrap
+  recipe_path: subprojects/id3tag.wrap
 - id: meson:iir
   registry: meson
   name: iir
@@ -11669,7 +11669,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/iir_1.9.3-1/iir.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/iir.wrap
+  recipe_path: subprojects/iir.wrap
 - id: meson:imgui
   registry: meson
   name: imgui
@@ -11877,7 +11877,7 @@ packages:
       filename: imgui-1.92.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/imgui_1.92.8-1/imgui.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/imgui.wrap
+  recipe_path: subprojects/imgui.wrap
 - id: meson:imgui-docking
   registry: meson
   name: imgui-docking
@@ -11934,7 +11934,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/imgui-docking_1.92.8-1/imgui-docking.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/imgui-docking.wrap
+  recipe_path: subprojects/imgui-docking.wrap
 - id: meson:imgui-sfml
   registry: meson
   name: imgui-sfml
@@ -12023,7 +12023,7 @@ packages:
       filename: imgui-sfml-3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/imgui-sfml_3.0-1/imgui-sfml.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/imgui-sfml.wrap
+  recipe_path: subprojects/imgui-sfml.wrap
 - id: meson:imguizmo
   registry: meson
   name: imguizmo
@@ -12038,7 +12038,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/imguizmo_1.83-1/imguizmo.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/imguizmo.wrap
+  recipe_path: subprojects/imguizmo.wrap
 - id: meson:implot
   registry: meson
   name: implot
@@ -12064,7 +12064,7 @@ packages:
       filename: implot-0.17.zip
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/implot_0.17-1/implot.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/implot.wrap
+  recipe_path: subprojects/implot.wrap
 - id: meson:indicators
   registry: meson
   name: indicators
@@ -12097,7 +12097,7 @@ packages:
       filename: indicators-2.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/indicators_2.3-1/indicators.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/indicators.wrap
+  recipe_path: subprojects/indicators.wrap
 - id: meson:inih
   registry: meson
   name: inih
@@ -12190,7 +12190,7 @@ packages:
       filename: inih-r62.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/inih_r62-1/inih.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/inih.wrap
+  recipe_path: subprojects/inih.wrap
 - id: meson:irepeat
   registry: meson
   name: irepeat
@@ -12205,7 +12205,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/irepeat_0.6-1/irepeat.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/irepeat.wrap
+  recipe_path: subprojects/irepeat.wrap
 - id: meson:jansson
   registry: meson
   name: jansson
@@ -12273,7 +12273,7 @@ packages:
       filename: jansson-2.14.1.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/jansson_2.14.1-1/jansson.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/jansson.wrap
+  recipe_path: subprojects/jansson.wrap
 - id: meson:jbig2dec
   registry: meson
   name: jbig2dec
@@ -12292,7 +12292,7 @@ packages:
       filename: jbig2dec-0.20.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/jbig2dec_0.20-1/jbig2dec.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/jbig2dec.wrap
+  recipe_path: subprojects/jbig2dec.wrap
 - id: meson:jbigkit
   registry: meson
   name: jbigkit
@@ -12336,7 +12336,7 @@ packages:
       filename: jbigkit-2.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/jbigkit_2.1-1/jbigkit.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/jbigkit.wrap
+  recipe_path: subprojects/jbigkit.wrap
 - id: meson:jitterentropy
   registry: meson
   name: jitterentropy
@@ -12358,7 +12358,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/jitterentropy_3.6.3-1/jitterentropy.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/jitterentropy.wrap
+  recipe_path: subprojects/jitterentropy.wrap
 - id: meson:json
   registry: meson
   name: json
@@ -12388,7 +12388,7 @@ packages:
       filename: json-3.2.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/json_3.2.0-1/json.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/json.wrap
+  recipe_path: subprojects/json.wrap
 - id: meson:json-c
   registry: meson
   name: json-c
@@ -12480,7 +12480,7 @@ packages:
       filename: json-c-0.18.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/json-c_0.18-1/json-c.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/json-c.wrap
+  recipe_path: subprojects/json-c.wrap
 - id: meson:json-glib
   registry: meson
   name: json-glib
@@ -12526,7 +12526,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/json-glib_1.6.6-1/json-glib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/json-glib.wrap
+  recipe_path: subprojects/json-glib.wrap
 - id: meson:jsoncpp
   registry: meson
   name: jsoncpp
@@ -12580,7 +12580,7 @@ packages:
       filename: jsoncpp-1.9.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/jsoncpp_1.9.8-1/jsoncpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/jsoncpp.wrap
+  recipe_path: subprojects/jsoncpp.wrap
 - id: meson:kafel
   registry: meson
   name: kafel
@@ -12601,7 +12601,7 @@ packages:
       filename: kafel-20231004.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/kafel_20231004-1/kafel.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/kafel.wrap
+  recipe_path: subprojects/kafel.wrap
 - id: meson:kraken-engine
   registry: meson
   name: kraken-engine
@@ -12679,7 +12679,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/kraken-engine_0.0.9-1/kraken-engine.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/kraken-engine.wrap
+  recipe_path: subprojects/kraken-engine.wrap
 - id: meson:lame
   registry: meson
   name: lame
@@ -12827,7 +12827,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lame_3.99.5-1/lame.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lame.wrap
+  recipe_path: subprojects/lame.wrap
 - id: meson:lcms2
   registry: meson
   name: lcms2
@@ -12902,7 +12902,7 @@ packages:
       filename: lcms2-2.19.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lcms2_2.19.1-1/lcms2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lcms2.wrap
+  recipe_path: subprojects/lcms2.wrap
 - id: meson:leptonica
   registry: meson
   name: leptonica
@@ -12956,7 +12956,7 @@ packages:
       filename: leptonica-1.87.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/leptonica_1.87.0-1/leptonica.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/leptonica.wrap
+  recipe_path: subprojects/leptonica.wrap
 - id: meson:libaegis
   registry: meson
   name: libaegis
@@ -12975,7 +12975,7 @@ packages:
       filename: libaegis-0.4.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libaegis_0.4.0-1/libaegis.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libaegis.wrap
+  recipe_path: subprojects/libaegis.wrap
 - id: meson:libarchive
   registry: meson
   name: libarchive
@@ -13270,7 +13270,7 @@ packages:
       filename: libarchive-3.8.9.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libarchive_3.8.9-1/libarchive.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libarchive.wrap
+  recipe_path: subprojects/libarchive.wrap
 - id: meson:libcap
   registry: meson
   name: libcap
@@ -13316,7 +13316,7 @@ packages:
       filename: libcap-2.78.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libcap_2.78-1/libcap.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libcap.wrap
+  recipe_path: subprojects/libcap.wrap
 - id: meson:libcbor
   registry: meson
   name: libcbor
@@ -13335,7 +13335,7 @@ packages:
       filename: libcbor-0.13.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libcbor_0.13.0-1/libcbor.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libcbor.wrap
+  recipe_path: subprojects/libcbor.wrap
 - id: meson:libccp4c
   registry: meson
   name: libccp4c
@@ -13377,7 +13377,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libccp4c_8.0.0-1/libccp4c.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libccp4c.wrap
+  recipe_path: subprojects/libccp4c.wrap
 - id: meson:libdicom
   registry: meson
   name: libdicom
@@ -13438,7 +13438,7 @@ packages:
       filename: libdicom-1.3.0.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libdicom_1.3.0-1/libdicom.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libdicom.wrap
+  recipe_path: subprojects/libdicom.wrap
 - id: meson:libdrm
   registry: meson
   name: libdrm
@@ -13714,7 +13714,7 @@ packages:
       filename: libdrm-2.4.134.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libdrm_2.4.134-1/libdrm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libdrm.wrap
+  recipe_path: subprojects/libdrm.wrap
 - id: meson:libebml
   registry: meson
   name: libebml
@@ -13771,7 +13771,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libebml_1.4.5-1/libebml.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libebml.wrap
+  recipe_path: subprojects/libebml.wrap
 - id: meson:libexif
   registry: meson
   name: libexif
@@ -13839,7 +13839,7 @@ packages:
       filename: libexif-0.6.26.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libexif_0.6.26-1/libexif.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libexif.wrap
+  recipe_path: subprojects/libexif.wrap
 - id: meson:libffi
   registry: meson
   name: libffi
@@ -13956,7 +13956,7 @@ packages:
       filename: libffi-3.8.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libffi_3.8.0-1/libffi.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libffi.wrap
+  recipe_path: subprojects/libffi.wrap
 - id: meson:libffmpegthumbnailer
   registry: meson
   name: libffmpegthumbnailer
@@ -14013,7 +14013,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libffmpegthumbnailer_2.2.4-1/libffmpegthumbnailer.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libffmpegthumbnailer.wrap
+  recipe_path: subprojects/libffmpegthumbnailer.wrap
 - id: meson:libgpiod
   registry: meson
   name: libgpiod
@@ -14085,7 +14085,7 @@ packages:
       filename: libgpiod-1.6.5.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libgpiod_1.6.5-1/libgpiod.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libgpiod.wrap
+  recipe_path: subprojects/libgpiod.wrap
 - id: meson:libgrapheme
   registry: meson
   name: libgrapheme
@@ -14114,7 +14114,7 @@ packages:
       filename: libgrapheme-2.0.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libgrapheme_2.0.2-1/libgrapheme.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libgrapheme.wrap
+  recipe_path: subprojects/libgrapheme.wrap
 - id: meson:libjpeg-turbo
   registry: meson
   name: libjpeg-turbo
@@ -14335,7 +14335,7 @@ packages:
       filename: libjpeg-turbo-3.2.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libjpeg-turbo_3.2.0-1/libjpeg-turbo.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libjpeg-turbo.wrap
+  recipe_path: subprojects/libjpeg-turbo.wrap
 - id: meson:libkqueue
   registry: meson
   name: libkqueue
@@ -14389,7 +14389,7 @@ packages:
       filename: libkqueue-2.6.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libkqueue_2.6.3-1/libkqueue.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libkqueue.wrap
+  recipe_path: subprojects/libkqueue.wrap
 - id: meson:liblangtag
   registry: meson
   name: liblangtag
@@ -14429,7 +14429,7 @@ packages:
       filename: liblangtag-0.6.7.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/liblangtag_0.6.7-1/liblangtag.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/liblangtag.wrap
+  recipe_path: subprojects/liblangtag.wrap
 - id: meson:liblastfm
   registry: meson
   name: liblastfm
@@ -14444,7 +14444,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/liblastfm_1.0.1-1/liblastfm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/liblastfm.wrap
+  recipe_path: subprojects/liblastfm.wrap
 - id: meson:liblbfgs
   registry: meson
   name: liblbfgs
@@ -14485,7 +14485,7 @@ packages:
       filename: liblbfgs-1.10.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/liblbfgs_1.10-1/liblbfgs.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/liblbfgs.wrap
+  recipe_path: subprojects/liblbfgs.wrap
 - id: meson:libliftoff
   registry: meson
   name: libliftoff
@@ -14506,7 +14506,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libliftoff_0.5.0-1/libliftoff.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libliftoff.wrap
+  recipe_path: subprojects/libliftoff.wrap
 - id: meson:liblzma
   registry: meson
   name: liblzma
@@ -14639,7 +14639,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/liblzma_5.2.8-1/liblzma.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/liblzma.wrap
+  recipe_path: subprojects/liblzma.wrap
 - id: meson:libmatroska
   registry: meson
   name: libmatroska
@@ -14696,7 +14696,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libmatroska_1.7.1-1/libmatroska.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libmatroska.wrap
+  recipe_path: subprojects/libmatroska.wrap
 - id: meson:libmicrohttpd
   registry: meson
   name: libmicrohttpd
@@ -14779,7 +14779,7 @@ packages:
       filename: libmicrohttpd-0.9.77.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libmicrohttpd_0.9.77-1/libmicrohttpd.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libmicrohttpd.wrap
+  recipe_path: subprojects/libmicrohttpd.wrap
 - id: meson:libmysofa
   registry: meson
   name: libmysofa
@@ -14798,7 +14798,7 @@ packages:
       filename: libmysofa-1.3.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libmysofa_1.3.2-1/libmysofa.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libmysofa.wrap
+  recipe_path: subprojects/libmysofa.wrap
 - id: meson:libnpupnp
   registry: meson
   name: libnpupnp
@@ -14921,7 +14921,7 @@ packages:
       filename: libnpupnp-6.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libnpupnp_6.3.0-1/libnpupnp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libnpupnp.wrap
+  recipe_path: subprojects/libnpupnp.wrap
 - id: meson:libobsd
   registry: meson
   name: libobsd
@@ -14958,7 +14958,7 @@ packages:
       filename: libobsd-1.1.1.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libobsd_1.1.1-1/libobsd.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libobsd.wrap
+  recipe_path: subprojects/libobsd.wrap
 - id: meson:libopenjp2
   registry: meson
   name: libopenjp2
@@ -15103,7 +15103,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libopenjp2_2.5.4-1/libopenjp2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libopenjp2.wrap
+  recipe_path: subprojects/libopenjp2.wrap
 - id: meson:libpfm
   registry: meson
   name: libpfm
@@ -15132,7 +15132,7 @@ packages:
       filename: libpfm-4.13.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libpfm_4.13.0-1/libpfm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libpfm.wrap
+  recipe_path: subprojects/libpfm.wrap
 - id: meson:libpng
   registry: meson
   name: libpng
@@ -15438,7 +15438,7 @@ packages:
       filename: libpng-1.6.58.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libpng_1.6.58-1/libpng.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libpng.wrap
+  recipe_path: subprojects/libpng.wrap
 - id: meson:libportal
   registry: meson
   name: libportal
@@ -15476,7 +15476,7 @@ packages:
       filename: libportal-0.11.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libportal_0.11.0-1/libportal.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libportal.wrap
+  recipe_path: subprojects/libportal.wrap
 - id: meson:libpsl
   registry: meson
   name: libpsl
@@ -15544,7 +15544,7 @@ packages:
       filename: libpsl-0.23.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libpsl_0.23.3-1/libpsl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libpsl.wrap
+  recipe_path: subprojects/libpsl.wrap
 - id: meson:libsass
   registry: meson
   name: libsass
@@ -15574,7 +15574,7 @@ packages:
       filename: libsass-3.6.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libsass_3.6.4-1/libsass.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libsass.wrap
+  recipe_path: subprojects/libsass.wrap
 - id: meson:libserialport
   registry: meson
   name: libserialport
@@ -15592,7 +15592,7 @@ packages:
       filename: libserialport-0.1.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libserialport_0.1.2-1/libserialport.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libserialport.wrap
+  recipe_path: subprojects/libserialport.wrap
 - id: meson:libsigcplusplus-3
   registry: meson
   name: libsigcplusplus-3
@@ -15607,7 +15607,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libsigcplusplus-3_3.6.0-1/libsigcplusplus-3.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libsigcplusplus-3.wrap
+  recipe_path: subprojects/libsigcplusplus-3.wrap
 - id: meson:libsignal-protocol-c
   registry: meson
   name: libsignal-protocol-c
@@ -15626,7 +15626,7 @@ packages:
       filename: libsignal-protocol-c-2.3.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libsignal-protocol-c_2.3.3-1/libsignal-protocol-c.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libsignal-protocol-c.wrap
+  recipe_path: subprojects/libsignal-protocol-c.wrap
 - id: meson:libsndfile
   registry: meson
   name: libsndfile
@@ -15705,7 +15705,7 @@ packages:
       filename: libsndfile-1.2.2.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libsndfile_1.2.2-1/libsndfile.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libsndfile.wrap
+  recipe_path: subprojects/libsndfile.wrap
 - id: meson:libsrtp2
   registry: meson
   name: libsrtp2
@@ -15762,7 +15762,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libsrtp2_2.8.0-1/libsrtp2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libsrtp2.wrap
+  recipe_path: subprojects/libsrtp2.wrap
 - id: meson:libssh2
   registry: meson
   name: libssh2
@@ -15826,7 +15826,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libssh2_1.11.1-1/libssh2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libssh2.wrap
+  recipe_path: subprojects/libssh2.wrap
 - id: meson:libtiff
   registry: meson
   name: libtiff
@@ -15973,7 +15973,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libtiff_4.7.2-1/libtiff.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libtiff.wrap
+  recipe_path: subprojects/libtiff.wrap
 - id: meson:libtirpc
   registry: meson
   name: libtirpc
@@ -15998,7 +15998,7 @@ packages:
       filename: libtirpc-1.3.7.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libtirpc_1.3.7-1/libtirpc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libtirpc.wrap
+  recipe_path: subprojects/libtirpc.wrap
 - id: meson:libtomcrypt
   registry: meson
   name: libtomcrypt
@@ -16024,7 +16024,7 @@ packages:
       filename: crypt-1.18.2.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libtomcrypt_1.18.2-1/libtomcrypt.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libtomcrypt.wrap
+  recipe_path: subprojects/libtomcrypt.wrap
 - id: meson:libunibreak
   registry: meson
   name: libunibreak
@@ -16064,7 +16064,7 @@ packages:
       filename: libunibreak-6.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libunibreak_6.1-1/libunibreak.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libunibreak.wrap
+  recipe_path: subprojects/libunibreak.wrap
 - id: meson:libupnp
   registry: meson
   name: libupnp
@@ -16195,7 +16195,7 @@ packages:
       filename: libupnp-1.14.27.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libupnp_1.14.27-1/libupnp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libupnp.wrap
+  recipe_path: subprojects/libupnp.wrap
 - id: meson:liburing
   registry: meson
   name: liburing
@@ -16294,7 +16294,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/liburing_2.5-1/liburing.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/liburing.wrap
+  recipe_path: subprojects/liburing.wrap
 - id: meson:libusb
   registry: meson
   name: libusb
@@ -16390,7 +16390,7 @@ packages:
       filename: libusb-1.0.30.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libusb_1.0.30-1/libusb.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libusb.wrap
+  recipe_path: subprojects/libusb.wrap
 - id: meson:libuv
   registry: meson
   name: libuv
@@ -16495,7 +16495,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libuv_1.51.0-1/libuv.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libuv.wrap
+  recipe_path: subprojects/libuv.wrap
 - id: meson:libvmaf
   registry: meson
   name: libvmaf
@@ -16510,7 +16510,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libvmaf_3.2.0-1/libvmaf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libvmaf.wrap
+  recipe_path: subprojects/libvmaf.wrap
 - id: meson:libwebp
   registry: meson
   name: libwebp
@@ -16619,7 +16619,7 @@ packages:
       filename: libwebp-1.6.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libwebp_1.6.0-1/libwebp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libwebp.wrap
+  recipe_path: subprojects/libwebp.wrap
 - id: meson:libwebsockets
   registry: meson
   name: libwebsockets
@@ -16694,7 +16694,7 @@ packages:
       filename: libwebsockets-4.3.6.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libwebsockets_4.3.6-1/libwebsockets.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libwebsockets.wrap
+  recipe_path: subprojects/libwebsockets.wrap
 - id: meson:libxcursor
   registry: meson
   name: libxcursor
@@ -16715,7 +16715,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxcursor_1.2.3-1/libxcursor.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxcursor.wrap
+  recipe_path: subprojects/libxcursor.wrap
 - id: meson:libxext
   registry: meson
   name: libxext
@@ -16750,7 +16750,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxext_1.3.7-1/libxext.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxext.wrap
+  recipe_path: subprojects/libxext.wrap
 - id: meson:libxinerama
   registry: meson
   name: libxinerama
@@ -16778,7 +16778,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxinerama_1.1.6-1/libxinerama.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxinerama.wrap
+  recipe_path: subprojects/libxinerama.wrap
 - id: meson:libxkbcommon
   registry: meson
   name: libxkbcommon
@@ -16851,7 +16851,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxkbcommon_1.9.2-1/libxkbcommon.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxkbcommon.wrap
+  recipe_path: subprojects/libxkbcommon.wrap
 - id: meson:libxml2
   registry: meson
   name: libxml2
@@ -17233,7 +17233,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxml2_2.9.7-1/libxml2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxml2.wrap
+  recipe_path: subprojects/libxml2.wrap
 - id: meson:libxmlpp
   registry: meson
   name: libxmlpp
@@ -17318,7 +17318,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxmlpp_5.6.1-1/libxmlpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxmlpp.wrap
+  recipe_path: subprojects/libxmlpp.wrap
 - id: meson:libxrandr
   registry: meson
   name: libxrandr
@@ -17346,7 +17346,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxrandr_1.5.5-1/libxrandr.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxrandr.wrap
+  recipe_path: subprojects/libxrandr.wrap
 - id: meson:libxrender
   registry: meson
   name: libxrender
@@ -17367,7 +17367,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxrender_0.9.12-1/libxrender.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxrender.wrap
+  recipe_path: subprojects/libxrender.wrap
 - id: meson:libxslt
   registry: meson
   name: libxslt
@@ -17497,7 +17497,7 @@ packages:
       filename: libxslt-1.1.45.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxslt_1.1.45-1/libxslt.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxslt.wrap
+  recipe_path: subprojects/libxslt.wrap
 - id: meson:libxv
   registry: meson
   name: libxv
@@ -17518,7 +17518,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxv_1.0.13-1/libxv.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxv.wrap
+  recipe_path: subprojects/libxv.wrap
 - id: meson:libxxf86vm
   registry: meson
   name: libxxf86vm
@@ -17546,7 +17546,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libxxf86vm_1.1.7-1/libxxf86vm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libxxf86vm.wrap
+  recipe_path: subprojects/libxxf86vm.wrap
 - id: meson:libyaml
   registry: meson
   name: libyaml
@@ -17560,7 +17560,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libyaml_0.2.5-1/libyaml.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/libyaml.wrap
+  recipe_path: subprojects/libyaml.wrap
 - id: meson:littlefs
   registry: meson
   name: littlefs
@@ -17621,7 +17621,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/littlefs_2.9.3-1/littlefs.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/littlefs.wrap
+  recipe_path: subprojects/littlefs.wrap
 - id: meson:lmdb
   registry: meson
   name: lmdb
@@ -17676,7 +17676,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lmdb_0.9.33-1/lmdb.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lmdb.wrap
+  recipe_path: subprojects/lmdb.wrap
 - id: meson:lua
   registry: meson
   name: lua
@@ -17816,7 +17816,7 @@ packages:
       filename: lua-5.5.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lua_5.5.0-1/lua.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lua.wrap
+  recipe_path: subprojects/lua.wrap
 - id: meson:luajit
   registry: meson
   name: luajit
@@ -17857,7 +17857,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/luajit_2.1.1720049189-1/luajit.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/luajit.wrap
+  recipe_path: subprojects/luajit.wrap
 - id: meson:ludocode-mpack
   registry: meson
   name: ludocode-mpack
@@ -17886,7 +17886,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/ludocode-mpack_1.1.1-1/ludocode-mpack.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/ludocode-mpack.wrap
+  recipe_path: subprojects/ludocode-mpack.wrap
 - id: meson:lvgl
   registry: meson
   name: lvgl
@@ -17951,7 +17951,7 @@ packages:
       filename: lvgl-9.5.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lvgl_9.5.0-1/lvgl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lvgl.wrap
+  recipe_path: subprojects/lvgl.wrap
 - id: meson:lz4
   registry: meson
   name: lz4
@@ -18009,7 +18009,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lz4_1.9.4-1/lz4.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lz4.wrap
+  recipe_path: subprojects/lz4.wrap
 - id: meson:lzo2
   registry: meson
   name: lzo2
@@ -18044,7 +18044,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lzo2_2.10-1/lzo2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/lzo2.wrap
+  recipe_path: subprojects/lzo2.wrap
 - id: meson:m4
   registry: meson
   name: m4
@@ -18073,7 +18073,7 @@ packages:
       filename: m4-1.4.19.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/m4_1.4.19-1/m4.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/m4.wrap
+  recipe_path: subprojects/m4.wrap
 - id: meson:magic_enum
   registry: meson
   name: magic_enum
@@ -18141,7 +18141,7 @@ packages:
       filename: magic_enum-0.9.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/magic_enum_0.9.8-1/magic_enum.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/magic_enum.wrap
+  recipe_path: subprojects/magic_enum.wrap
 - id: meson:mdds
   registry: meson
   name: mdds
@@ -18181,7 +18181,7 @@ packages:
       filename: mdds-2.1.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mdds_2.1.1-1/mdds.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mdds.wrap
+  recipe_path: subprojects/mdds.wrap
 - id: meson:microsoft-gsl
   registry: meson
   name: microsoft-gsl
@@ -18231,7 +18231,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/microsoft-gsl_4.2.2-1/microsoft-gsl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/microsoft-gsl.wrap
+  recipe_path: subprojects/microsoft-gsl.wrap
 - id: meson:mimalloc
   registry: meson
   name: mimalloc
@@ -18271,7 +18271,7 @@ packages:
       filename: mimalloc-3.5.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mimalloc_3.5.1-1/mimalloc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mimalloc.wrap
+  recipe_path: subprojects/mimalloc.wrap
 - id: meson:miniaudio
   registry: meson
   name: miniaudio
@@ -18315,7 +18315,7 @@ packages:
       filename: miniaudio-0.11.22.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/miniaudio_0.11.22-1/miniaudio.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/miniaudio.wrap
+  recipe_path: subprojects/miniaudio.wrap
 - id: meson:minifycpp
   registry: meson
   name: minifycpp
@@ -18337,7 +18337,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/minifycpp_0.2.4-1/minifycpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/minifycpp.wrap
+  recipe_path: subprojects/minifycpp.wrap
 - id: meson:miniz
   registry: meson
   name: miniz
@@ -18398,7 +18398,7 @@ packages:
       filename: miniz-3.1.2.zip
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/miniz_3.1.2-1/miniz.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/miniz.wrap
+  recipe_path: subprojects/miniz.wrap
 - id: meson:minizip-ng
   registry: meson
   name: minizip-ng
@@ -18523,7 +18523,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/minizip-ng_4.0.9-1/minizip-ng.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/minizip-ng.wrap
+  recipe_path: subprojects/minizip-ng.wrap
 - id: meson:mldsa-native
   registry: meson
   name: mldsa-native
@@ -18538,7 +18538,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mldsa-native_1.0.0-1/mldsa-native.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mldsa-native.wrap
+  recipe_path: subprojects/mldsa-native.wrap
 - id: meson:mocklibc
   registry: meson
   name: mocklibc
@@ -18552,7 +18552,7 @@ packages:
       filename: mocklibc-1.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mocklibc_1.0-2/mocklibc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mocklibc.wrap
+  recipe_path: subprojects/mocklibc.wrap
 - id: meson:mpark-patterns
   registry: meson
   name: mpark-patterns
@@ -18567,7 +18567,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mpark-patterns_0.3.0-1/mpark-patterns.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mpark-patterns.wrap
+  recipe_path: subprojects/mpark-patterns.wrap
 - id: meson:mpdecimal
   registry: meson
   name: mpdecimal
@@ -18639,7 +18639,7 @@ packages:
       filename: mpdecimal-2.5.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mpdecimal_2.5.1-1/mpdecimal.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mpdecimal.wrap
+  recipe_path: subprojects/mpdecimal.wrap
 - id: meson:msgpackc-cxx
   registry: meson
   name: msgpackc-cxx
@@ -18696,7 +18696,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/msgpackc-cxx_8.0.0-1/msgpackc-cxx.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/msgpackc-cxx.wrap
+  recipe_path: subprojects/msgpackc-cxx.wrap
 - id: meson:mt32emu
   registry: meson
   name: mt32emu
@@ -18760,7 +18760,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mt32emu_2.7.2-1/mt32emu.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mt32emu.wrap
+  recipe_path: subprojects/mt32emu.wrap
 - id: meson:muellan-clipp
   registry: meson
   name: muellan-clipp
@@ -18771,7 +18771,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/muellan-clipp_1.2.3-1/muellan-clipp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/muellan-clipp.wrap
+  recipe_path: subprojects/muellan-clipp.wrap
 - id: meson:mujs
   registry: meson
   name: mujs
@@ -18821,7 +18821,7 @@ packages:
       filename: mujs-1.3.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mujs_1.3.8-1/mujs.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/mujs.wrap
+  recipe_path: subprojects/mujs.wrap
 - id: meson:nanoarrow
   registry: meson
   name: nanoarrow
@@ -18869,7 +18869,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nanoarrow_0.9.0-1/nanoarrow.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nanoarrow.wrap
+  recipe_path: subprojects/nanoarrow.wrap
 - id: meson:nanobind
   registry: meson
   name: nanobind
@@ -19000,7 +19000,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nanobind_2.9.2-1/nanobind.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nanobind.wrap
+  recipe_path: subprojects/nanobind.wrap
 - id: meson:nativefiledialog-extended
   registry: meson
   name: nativefiledialog-extended
@@ -19033,7 +19033,7 @@ packages:
       filename: nativefiledialog-extended-1.2.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nativefiledialog-extended_1.2.1-1/nativefiledialog-extended.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nativefiledialog-extended.wrap
+  recipe_path: subprojects/nativefiledialog-extended.wrap
 - id: meson:netstring-c
   registry: meson
   name: netstring-c
@@ -19069,7 +19069,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/netstring-c_0.0.0-1/netstring-c.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/netstring-c.wrap
+  recipe_path: subprojects/netstring-c.wrap
 - id: meson:nghttp2
   registry: meson
   name: nghttp2
@@ -19124,7 +19124,7 @@ packages:
       filename: nghttp2-1.62.1.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nghttp2_1.62.1-1/nghttp2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nghttp2.wrap
+  recipe_path: subprojects/nghttp2.wrap
 - id: meson:nlohmann_json
   registry: meson
   name: nlohmann_json
@@ -19199,7 +19199,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nlohmann_json_3.9.1-1/nlohmann_json.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nlohmann_json.wrap
+  recipe_path: subprojects/nlohmann_json.wrap
 - id: meson:nng
   registry: meson
   name: nng
@@ -19260,7 +19260,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nng_1.5.2-1/nng.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nng.wrap
+  recipe_path: subprojects/nng.wrap
 - id: meson:nonstd-any-lite
   registry: meson
   name: nonstd-any-lite
@@ -19270,7 +19270,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-any-lite_0.2.0-1/nonstd-any-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-any-lite.wrap
+  recipe_path: subprojects/nonstd-any-lite.wrap
 - id: meson:nonstd-byte-lite
   registry: meson
   name: nonstd-byte-lite
@@ -19280,7 +19280,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-byte-lite_0.2.0-1/nonstd-byte-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-byte-lite.wrap
+  recipe_path: subprojects/nonstd-byte-lite.wrap
 - id: meson:nonstd-expected-lite
   registry: meson
   name: nonstd-expected-lite
@@ -19301,7 +19301,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-expected-lite_0.3.0-1/nonstd-expected-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-expected-lite.wrap
+  recipe_path: subprojects/nonstd-expected-lite.wrap
 - id: meson:nonstd-observer-ptr-lite
   registry: meson
   name: nonstd-observer-ptr-lite
@@ -19311,7 +19311,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-observer-ptr-lite_0.4.0-1/nonstd-observer-ptr-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-observer-ptr-lite.wrap
+  recipe_path: subprojects/nonstd-observer-ptr-lite.wrap
 - id: meson:nonstd-optional-lite
   registry: meson
   name: nonstd-optional-lite
@@ -19321,7 +19321,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-optional-lite_3.2.0-1/nonstd-optional-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-optional-lite.wrap
+  recipe_path: subprojects/nonstd-optional-lite.wrap
 - id: meson:nonstd-span-lite
   registry: meson
   name: nonstd-span-lite
@@ -19331,7 +19331,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-span-lite_0.5.0-1/nonstd-span-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-span-lite.wrap
+  recipe_path: subprojects/nonstd-span-lite.wrap
 - id: meson:nonstd-status-value-lite
   registry: meson
   name: nonstd-status-value-lite
@@ -19341,7 +19341,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-status-value-lite_1.1.0-1/nonstd-status-value-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-status-value-lite.wrap
+  recipe_path: subprojects/nonstd-status-value-lite.wrap
 - id: meson:nonstd-string-view-lite
   registry: meson
   name: nonstd-string-view-lite
@@ -19351,7 +19351,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nonstd-string-view-lite_1.3.0-1/nonstd-string-view-lite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nonstd-string-view-lite.wrap
+  recipe_path: subprojects/nonstd-string-view-lite.wrap
 - id: meson:nowide
   registry: meson
   name: nowide
@@ -19373,7 +19373,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nowide_11.3.0-1/nowide.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/nowide.wrap
+  recipe_path: subprojects/nowide.wrap
 - id: meson:oatpp
   registry: meson
   name: oatpp
@@ -19422,7 +19422,7 @@ packages:
       filename: oatpp-1.3.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/oatpp_1.3.1-1/oatpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/oatpp.wrap
+  recipe_path: subprojects/oatpp.wrap
 - id: meson:oatpp-openssl
   registry: meson
   name: oatpp-openssl
@@ -19452,7 +19452,7 @@ packages:
       filename: oatpp-openssl-1.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/oatpp-openssl_1.3.0-1/oatpp-openssl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/oatpp-openssl.wrap
+  recipe_path: subprojects/oatpp-openssl.wrap
 - id: meson:oatpp-sqlite
   registry: meson
   name: oatpp-sqlite
@@ -19471,7 +19471,7 @@ packages:
       filename: oatpp-sqlite-1.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/oatpp-sqlite_1.3.0-1/oatpp-sqlite.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/oatpp-sqlite.wrap
+  recipe_path: subprojects/oatpp-sqlite.wrap
 - id: meson:oatpp-swagger
   registry: meson
   name: oatpp-swagger
@@ -19490,7 +19490,7 @@ packages:
       filename: oatpp-swagger-1.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/oatpp-swagger_1.3.0-1/oatpp-swagger.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/oatpp-swagger.wrap
+  recipe_path: subprojects/oatpp-swagger.wrap
 - id: meson:oatpp-websocket
   registry: meson
   name: oatpp-websocket
@@ -19509,7 +19509,7 @@ packages:
       filename: oatpp-websocket-1.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/oatpp-websocket_1.3.0-1/oatpp-websocket.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/oatpp-websocket.wrap
+  recipe_path: subprojects/oatpp-websocket.wrap
 - id: meson:oatpp-zlib
   registry: meson
   name: oatpp-zlib
@@ -19528,7 +19528,7 @@ packages:
       filename: oatpp-zlib-1.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/oatpp-zlib_1.3.0-1/oatpp-zlib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/oatpp-zlib.wrap
+  recipe_path: subprojects/oatpp-zlib.wrap
 - id: meson:ogg
   registry: meson
   name: ogg
@@ -19619,7 +19619,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/ogg_1.3.6-1/ogg.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/ogg.wrap
+  recipe_path: subprojects/ogg.wrap
 - id: meson:onqtam-doctest
   registry: meson
   name: onqtam-doctest
@@ -19635,7 +19635,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/onqtam-doctest_2.4.0-1/onqtam-doctest.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/onqtam-doctest.wrap
+  recipe_path: subprojects/onqtam-doctest.wrap
 - id: meson:openal-soft
   registry: meson
   name: openal-soft
@@ -19777,7 +19777,7 @@ packages:
       filename: openal-soft-1.24.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/openal-soft_1.24.3-1/openal-soft.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/openal-soft.wrap
+  recipe_path: subprojects/openal-soft.wrap
 - id: meson:openblas
   registry: meson
   name: openblas
@@ -19799,7 +19799,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/openblas_0.3.28-1/openblas.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/openblas.wrap
+  recipe_path: subprojects/openblas.wrap
 - id: meson:opencl-headers
   registry: meson
   name: opencl-headers
@@ -19835,7 +19835,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/opencl-headers_2024.10.24-1/opencl-headers.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/opencl-headers.wrap
+  recipe_path: subprojects/opencl-headers.wrap
 - id: meson:openh264
   registry: meson
   name: openh264
@@ -19882,7 +19882,7 @@ packages:
       filename: openh264-2.6.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/openh264_2.6.0-1/openh264.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/openh264.wrap
+  recipe_path: subprojects/openh264.wrap
 - id: meson:openssl
   registry: meson
   name: openssl
@@ -20003,7 +20003,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/openssl_3.0.8-1/openssl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/openssl.wrap
+  recipe_path: subprojects/openssl.wrap
 - id: meson:opus
   registry: meson
   name: opus
@@ -20042,7 +20042,7 @@ packages:
       filename: opus-1.6.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/opus_1.6.1-1/opus.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/opus.wrap
+  recipe_path: subprojects/opus.wrap
 - id: meson:orcus
   registry: meson
   name: orcus
@@ -20077,7 +20077,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/orcus_0.19.2-1/orcus.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/orcus.wrap
+  recipe_path: subprojects/orcus.wrap
 - id: meson:orocos_kdl
   registry: meson
   name: orocos_kdl
@@ -20092,7 +20092,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/orocos_kdl_1.5.1-1/orocos_kdl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/orocos_kdl.wrap
+  recipe_path: subprojects/orocos_kdl.wrap
 - id: meson:pango
   registry: meson
   name: pango
@@ -20184,7 +20184,7 @@ packages:
       filename: pango-1.56.4.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pango_1.56.4-1/pango.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pango.wrap
+  recipe_path: subprojects/pango.wrap
 - id: meson:pcg
   registry: meson
   name: pcg
@@ -20200,7 +20200,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pcg_0.98.1-1/pcg.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pcg.wrap
+  recipe_path: subprojects/pcg.wrap
 - id: meson:pciaccess
   registry: meson
   name: pciaccess
@@ -20235,7 +20235,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pciaccess_0.19-1/pciaccess.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pciaccess.wrap
+  recipe_path: subprojects/pciaccess.wrap
 - id: meson:pcre
   registry: meson
   name: pcre
@@ -20335,7 +20335,7 @@ packages:
       filename: pcre-8.45.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pcre_8.45-1/pcre.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pcre.wrap
+  recipe_path: subprojects/pcre.wrap
 - id: meson:pcre2
   registry: meson
   name: pcre2
@@ -20590,7 +20590,7 @@ packages:
       filename: pcre2-10.48.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pcre2_10.48-1/pcre2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pcre2.wrap
+  recipe_path: subprojects/pcre2.wrap
 - id: meson:pegtl
   registry: meson
   name: pegtl
@@ -20612,7 +20612,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pegtl_3.2.8-1/pegtl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pegtl.wrap
+  recipe_path: subprojects/pegtl.wrap
 - id: meson:physfs
   registry: meson
   name: physfs
@@ -20634,7 +20634,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/physfs_3.2.0-1/physfs.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/physfs.wrap
+  recipe_path: subprojects/physfs.wrap
 - id: meson:picohttpparser
   registry: meson
   name: picohttpparser
@@ -20653,7 +20653,7 @@ packages:
       filename: picohttpparser-1.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/picohttpparser_1.2-1/picohttpparser.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/picohttpparser.wrap
+  recipe_path: subprojects/picohttpparser.wrap
 - id: meson:pixman
   registry: meson
   name: pixman
@@ -20720,7 +20720,7 @@ packages:
       filename: pixman-0.46.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pixman_0.46.4-1/pixman.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pixman.wrap
+  recipe_path: subprojects/pixman.wrap
 - id: meson:pkgconf
   registry: meson
   name: pkgconf
@@ -20836,7 +20836,7 @@ packages:
       filename: pkgconf-3.0.7.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.7-1/pkgconf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pkgconf.wrap
+  recipe_path: subprojects/pkgconf.wrap
 - id: meson:protobuf
   registry: meson
   name: protobuf
@@ -21053,7 +21053,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/protobuf_3.5.1-2/protobuf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/protobuf.wrap
+  recipe_path: subprojects/protobuf.wrap
 - id: meson:protobuf-c
   registry: meson
   name: protobuf-c
@@ -21100,7 +21100,7 @@ packages:
       filename: protobuf-c-1.5.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/protobuf-c_1.5.0-1/protobuf-c.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/protobuf-c.wrap
+  recipe_path: subprojects/protobuf-c.wrap
 - id: meson:proxy-libintl
   registry: meson
   name: proxy-libintl
@@ -21126,7 +21126,7 @@ packages:
       filename: proxy-libintl-0.5.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/proxy-libintl_0.5-1/proxy-libintl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/proxy-libintl.wrap
+  recipe_path: subprojects/proxy-libintl.wrap
 - id: meson:pugixml
   registry: meson
   name: pugixml
@@ -21194,7 +21194,7 @@ packages:
       filename: pugixml-1.15.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pugixml_1.15-1/pugixml.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pugixml.wrap
+  recipe_path: subprojects/pugixml.wrap
 - id: meson:pv
   registry: meson
   name: pv
@@ -21290,7 +21290,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pv_1.9.34-1/pv.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pv.wrap
+  recipe_path: subprojects/pv.wrap
 - id: meson:pybind11
   registry: meson
   name: pybind11
@@ -21421,7 +21421,7 @@ packages:
       filename: pybind11-3.0.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pybind11_3.0.0-1/pybind11.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/pybind11.wrap
+  recipe_path: subprojects/pybind11.wrap
 - id: meson:qarchive
   registry: meson
   name: qarchive
@@ -21492,7 +21492,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/qarchive_2.2.7-1/qarchive.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/qarchive.wrap
+  recipe_path: subprojects/qarchive.wrap
 - id: meson:qrencode
   registry: meson
   name: qrencode
@@ -21521,7 +21521,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/qrencode_4.1.1-1/qrencode.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/qrencode.wrap
+  recipe_path: subprojects/qrencode.wrap
 - id: meson:quazip
   registry: meson
   name: quazip
@@ -21554,7 +21554,7 @@ packages:
       filename: quazip-1.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/quazip_1.4-1/quazip.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/quazip.wrap
+  recipe_path: subprojects/quazip.wrap
 - id: meson:quickjs-ng
   registry: meson
   name: quickjs-ng
@@ -21681,7 +21681,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/quickjs-ng_0.9.0-1/quickjs-ng.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/quickjs-ng.wrap
+  recipe_path: subprojects/quickjs-ng.wrap
 - id: meson:quill
   registry: meson
   name: quill
@@ -21889,7 +21889,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/quill_9.0.3-1/quill.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/quill.wrap
+  recipe_path: subprojects/quill.wrap
 - id: meson:rang
   registry: meson
   name: rang
@@ -21915,7 +21915,7 @@ packages:
       filename: rang-3.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/rang_3.2-1/rang.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/rang.wrap
+  recipe_path: subprojects/rang.wrap
 - id: meson:range-v3
   registry: meson
   name: range-v3
@@ -21966,7 +21966,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/range-v3_0.3.6-1/range-v3.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/range-v3.wrap
+  recipe_path: subprojects/range-v3.wrap
 - id: meson:rapidjson
   registry: meson
   name: rapidjson
@@ -21996,7 +21996,7 @@ packages:
       filename: rapidjson-1.1.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/rapidjson_1.1.0-1/rapidjson.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/rapidjson.wrap
+  recipe_path: subprojects/rapidjson.wrap
 - id: meson:rdkafka
   registry: meson
   name: rdkafka
@@ -22149,7 +22149,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/rdkafka_2.5.3-1/rdkafka.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/rdkafka.wrap
+  recipe_path: subprojects/rdkafka.wrap
 - id: meson:re2
   registry: meson
   name: re2
@@ -22192,7 +22192,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/re2_20230301-1/re2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/re2.wrap
+  recipe_path: subprojects/re2.wrap
 - id: meson:reflex
   registry: meson
   name: reflex
@@ -22281,7 +22281,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/reflex_5.1.1-1/reflex.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/reflex.wrap
+  recipe_path: subprojects/reflex.wrap
 - id: meson:robin-map
   registry: meson
   name: robin-map
@@ -22321,7 +22321,7 @@ packages:
       filename: robin-map-1.4.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/robin-map_1.4.1-1/robin-map.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/robin-map.wrap
+  recipe_path: subprojects/robin-map.wrap
 - id: meson:rtaudio
   registry: meson
   name: rtaudio
@@ -22346,7 +22346,7 @@ packages:
       filename: rtaudio-6.0.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/rtaudio_6.0.1-1/rtaudio.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/rtaudio.wrap
+  recipe_path: subprojects/rtaudio.wrap
 - id: meson:rubberband
   registry: meson
   name: rubberband
@@ -22378,7 +22378,7 @@ packages:
       filename: rubberband-4.0.0.tar.bz2
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/rubberband_4.0.0-1/rubberband.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/rubberband.wrap
+  recipe_path: subprojects/rubberband.wrap
 - id: meson:rxcpp
   registry: meson
   name: rxcpp
@@ -22400,7 +22400,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/rxcpp_4.1.1-1/rxcpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/rxcpp.wrap
+  recipe_path: subprojects/rxcpp.wrap
 - id: meson:s2n-tls
   registry: meson
   name: s2n-tls
@@ -22419,7 +22419,7 @@ packages:
       filename: s2n-tls-1.5.27.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/s2n-tls_1.5.27-1/s2n-tls.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/s2n-tls.wrap
+  recipe_path: subprojects/s2n-tls.wrap
 - id: meson:sassc
   registry: meson
   name: sassc
@@ -22449,7 +22449,7 @@ packages:
       filename: sassc-3.6.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sassc_3.6.2-1/sassc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sassc.wrap
+  recipe_path: subprojects/sassc.wrap
 - id: meson:scdoc
   registry: meson
   name: scdoc
@@ -22467,7 +22467,7 @@ packages:
       filename: scdoc-1.11.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/scdoc_1.11.4-1/scdoc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/scdoc.wrap
+  recipe_path: subprojects/scdoc.wrap
 - id: meson:sdl2
   registry: meson
   name: sdl2
@@ -22846,7 +22846,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl2_2.32.8-1/sdl2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl2.wrap
+  recipe_path: subprojects/sdl2.wrap
 - id: meson:sdl2_image
   registry: meson
   name: sdl2_image
@@ -22902,7 +22902,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl2_image_2.6.3-1/sdl2_image.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl2_image.wrap
+  recipe_path: subprojects/sdl2_image.wrap
 - id: meson:sdl2_mixer
   registry: meson
   name: sdl2_mixer
@@ -22958,7 +22958,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl2_mixer_2.6.2-1/sdl2_mixer.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl2_mixer.wrap
+  recipe_path: subprojects/sdl2_mixer.wrap
 - id: meson:sdl2_net
   registry: meson
   name: sdl2_net
@@ -23014,7 +23014,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl2_net_2.2.0-1/sdl2_net.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl2_net.wrap
+  recipe_path: subprojects/sdl2_net.wrap
 - id: meson:sdl2_ttf
   registry: meson
   name: sdl2_ttf
@@ -23070,7 +23070,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl2_ttf_2.20.1-1/sdl2_ttf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl2_ttf.wrap
+  recipe_path: subprojects/sdl2_ttf.wrap
 - id: meson:sdl3
   registry: meson
   name: sdl3
@@ -23134,7 +23134,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl3_3.4.2-1/sdl3.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl3.wrap
+  recipe_path: subprojects/sdl3.wrap
 - id: meson:sdl3_image
   registry: meson
   name: sdl3_image
@@ -23149,7 +23149,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl3_image_3.2.4-1/sdl3_image.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl3_image.wrap
+  recipe_path: subprojects/sdl3_image.wrap
 - id: meson:sdl3_ttf
   registry: meson
   name: sdl3_ttf
@@ -23164,7 +23164,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl3_ttf_3.2.2-2/sdl3_ttf.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sdl3_ttf.wrap
+  recipe_path: subprojects/sdl3_ttf.wrap
 - id: meson:sds
   registry: meson
   name: sds
@@ -23194,7 +23194,7 @@ packages:
       filename: sds-2.0.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sds_2.0.0-1/sds.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sds.wrap
+  recipe_path: subprojects/sds.wrap
 - id: meson:sergiusthebest-plog
   registry: meson
   name: sergiusthebest-plog
@@ -23223,7 +23223,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sergiusthebest-plog_1.1.4-1/sergiusthebest-plog.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sergiusthebest-plog.wrap
+  recipe_path: subprojects/sergiusthebest-plog.wrap
 - id: meson:sfml
   registry: meson
   name: sfml
@@ -23320,7 +23320,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sfml_3.0.2-1/sfml.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sfml.wrap
+  recipe_path: subprojects/sfml.wrap
 - id: meson:simdjson
   registry: meson
   name: simdjson
@@ -23395,7 +23395,7 @@ packages:
       filename: simdjson-4.2.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/simdjson_4.2.2-1/simdjson.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/simdjson.wrap
+  recipe_path: subprojects/simdjson.wrap
 - id: meson:slirp
   registry: meson
   name: slirp
@@ -23458,7 +23458,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/slirp_4.9.4-1/slirp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/slirp.wrap
+  recipe_path: subprojects/slirp.wrap
 - id: meson:snitch
   registry: meson
   name: snitch
@@ -23477,7 +23477,7 @@ packages:
       filename: snitch-1.3.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/snitch_1.3.2-1/snitch.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/snitch.wrap
+  recipe_path: subprojects/snitch.wrap
 - id: meson:soundtouch
   registry: meson
   name: soundtouch
@@ -23534,7 +23534,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/soundtouch_2.4.1-1/soundtouch.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/soundtouch.wrap
+  recipe_path: subprojects/soundtouch.wrap
 - id: meson:sparkcli
   registry: meson
   name: sparkcli
@@ -23574,7 +23574,7 @@ packages:
       filename: sparkcli-0.0.7.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sparkcli_0.0.7-1/sparkcli.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sparkcli.wrap
+  recipe_path: subprojects/sparkcli.wrap
 - id: meson:sparrow
   registry: meson
   name: sparrow
@@ -23593,7 +23593,7 @@ packages:
       filename: sparrow-0.0.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sparrow_0.0.2-1/sparrow.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sparrow.wrap
+  recipe_path: subprojects/sparrow.wrap
 - id: meson:sparsehash-c11
   registry: meson
   name: sparsehash-c11
@@ -23612,7 +23612,7 @@ packages:
       filename: sparsehash-c11-2.11.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sparsehash-c11_2.11.1-1/sparsehash-c11.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sparsehash-c11.wrap
+  recipe_path: subprojects/sparsehash-c11.wrap
 - id: meson:spdlog
   registry: meson
   name: spdlog
@@ -23894,7 +23894,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/spdlog_1.9.2-1/spdlog.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/spdlog.wrap
+  recipe_path: subprojects/spdlog.wrap
 - id: meson:speexdsp
   registry: meson
   name: speexdsp
@@ -23996,7 +23996,7 @@ packages:
       filename: speexdsp-1.2.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/speexdsp_1.2.1-1/speexdsp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/speexdsp.wrap
+  recipe_path: subprojects/speexdsp.wrap
 - id: meson:spng
   registry: meson
   name: spng
@@ -24067,7 +24067,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/spng_0.7.4-1/spng.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/spng.wrap
+  recipe_path: subprojects/spng.wrap
 - id: meson:sqlite3
   registry: meson
   name: sqlite3
@@ -24410,7 +24410,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sqlite3_3.53.4-1/sqlite3.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sqlite3.wrap
+  recipe_path: subprojects/sqlite3.wrap
 - id: meson:sqlitecpp
   registry: meson
   name: sqlitecpp
@@ -24432,7 +24432,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sqlitecpp_3.3.2-1/sqlitecpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sqlitecpp.wrap
+  recipe_path: subprojects/sqlitecpp.wrap
 - id: meson:sqlpp11
   registry: meson
   name: sqlpp11
@@ -24453,7 +24453,7 @@ packages:
       filename: sqlpp11-0.64.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sqlpp11_0.64-1/sqlpp11.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/sqlpp11.wrap
+  recipe_path: subprojects/sqlpp11.wrap
 - id: meson:stc
   registry: meson
   name: stc
@@ -24478,7 +24478,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/stc_5.0-1/stc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/stc.wrap
+  recipe_path: subprojects/stc.wrap
 - id: meson:stduuid
   registry: meson
   name: stduuid
@@ -24508,7 +24508,7 @@ packages:
       filename: stduuid-1.2.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/stduuid_1.2.3-1/stduuid.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/stduuid.wrap
+  recipe_path: subprojects/stduuid.wrap
 - id: meson:svtjpegxs
   registry: meson
   name: svtjpegxs
@@ -24530,7 +24530,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/svtjpegxs_0.9.0-1/svtjpegxs.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/svtjpegxs.wrap
+  recipe_path: subprojects/svtjpegxs.wrap
 - id: meson:tabulate
   registry: meson
   name: tabulate
@@ -24563,7 +24563,7 @@ packages:
       filename: tabulate-1.5.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tabulate_1.5-1/tabulate.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tabulate.wrap
+  recipe_path: subprojects/tabulate.wrap
 - id: meson:taglib
   registry: meson
   name: taglib
@@ -24652,7 +24652,7 @@ packages:
       filename: taglib-2.1.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/taglib_2.1.1-1/taglib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/taglib.wrap
+  recipe_path: subprojects/taglib.wrap
 - id: meson:tclap
   registry: meson
   name: tclap
@@ -24695,7 +24695,7 @@ packages:
       filename: tclap-1.2.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tclap_1.2.4-1/tclap.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tclap.wrap
+  recipe_path: subprojects/tclap.wrap
 - id: meson:termbox
   registry: meson
   name: termbox
@@ -24725,7 +24725,7 @@ packages:
       filename: termbox-1.1.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/termbox_1.1.2-1/termbox.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/termbox.wrap
+  recipe_path: subprojects/termbox.wrap
 - id: meson:termbox2
   registry: meson
   name: termbox2
@@ -24755,7 +24755,7 @@ packages:
       filename: termbox2-2.5.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/termbox2_2.5.0-1/termbox2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/termbox2.wrap
+  recipe_path: subprojects/termbox2.wrap
 - id: meson:theora
   registry: meson
   name: theora
@@ -24827,7 +24827,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/theora_1.2.0-1/theora.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/theora.wrap
+  recipe_path: subprojects/theora.wrap
 - id: meson:tinyfsm
   registry: meson
   name: tinyfsm
@@ -24857,7 +24857,7 @@ packages:
       filename: tinyfsm-0.3.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tinyfsm_0.3.3-1/tinyfsm.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tinyfsm.wrap
+  recipe_path: subprojects/tinyfsm.wrap
 - id: meson:tinyply
   registry: meson
   name: tinyply
@@ -24911,7 +24911,7 @@ packages:
       filename: tinyply-2.3.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tinyply_2.3.4-1/tinyply.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tinyply.wrap
+  recipe_path: subprojects/tinyply.wrap
 - id: meson:tinyxml2
   registry: meson
   name: tinyxml2
@@ -24969,7 +24969,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tinyxml2_9.0.0-1/tinyxml2.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tinyxml2.wrap
+  recipe_path: subprojects/tinyxml2.wrap
 - id: meson:tkrzw
   registry: meson
   name: tkrzw
@@ -24993,7 +24993,7 @@ packages:
       filename: tkrzw-1.0.32.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tkrzw_1.0.32-1/tkrzw.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tkrzw.wrap
+  recipe_path: subprojects/tkrzw.wrap
 - id: meson:tl-expected
   registry: meson
   name: tl-expected
@@ -25022,7 +25022,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tl-expected_1.3.1-1/tl-expected.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tl-expected.wrap
+  recipe_path: subprojects/tl-expected.wrap
 - id: meson:tl-optional
   registry: meson
   name: tl-optional
@@ -25044,7 +25044,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tl-optional_1.1.0-1/tl-optional.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tl-optional.wrap
+  recipe_path: subprojects/tl-optional.wrap
 - id: meson:tomlplusplus
   registry: meson
   name: tomlplusplus
@@ -25098,7 +25098,7 @@ packages:
       filename: tomlplusplus-3.4.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tomlplusplus_3.4.0-1/tomlplusplus.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tomlplusplus.wrap
+  recipe_path: subprojects/tomlplusplus.wrap
 - id: meson:tracy
   registry: meson
   name: tracy
@@ -25173,7 +25173,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tracy_0.9.1-1/tracy.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tracy.wrap
+  recipe_path: subprojects/tracy.wrap
 - id: meson:tree-sitter
   registry: meson
   name: tree-sitter
@@ -25213,7 +25213,7 @@ packages:
       filename: tree-sitter-0.26.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tree-sitter_0.26.3-1/tree-sitter.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tree-sitter.wrap
+  recipe_path: subprojects/tree-sitter.wrap
 - id: meson:trompeloeil
   registry: meson
   name: trompeloeil
@@ -25260,7 +25260,7 @@ packages:
       filename: trompeloeil-49.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/trompeloeil_49-1/trompeloeil.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/trompeloeil.wrap
+  recipe_path: subprojects/trompeloeil.wrap
 - id: meson:tronkko-dirent
   registry: meson
   name: tronkko-dirent
@@ -25271,7 +25271,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/tronkko-dirent_1.23.2-1/tronkko-dirent.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/tronkko-dirent.wrap
+  recipe_path: subprojects/tronkko-dirent.wrap
 - id: meson:turtle
   registry: meson
   name: turtle
@@ -25291,7 +25291,7 @@ packages:
       filename: turtle-1.3.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/turtle_1.3.2-1/turtle.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/turtle.wrap
+  recipe_path: subprojects/turtle.wrap
 - id: meson:type_safe
   registry: meson
   name: type_safe
@@ -25331,7 +25331,7 @@ packages:
       filename: type_safe-0.2.4.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/type_safe_0.2.4-1/type_safe.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/type_safe.wrap
+  recipe_path: subprojects/type_safe.wrap
 - id: meson:uchardet
   registry: meson
   name: uchardet
@@ -25370,7 +25370,7 @@ packages:
       filename: uchardet-0.0.8.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/uchardet_0.0.8-1/uchardet.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/uchardet.wrap
+  recipe_path: subprojects/uchardet.wrap
 - id: meson:unit-system
   registry: meson
   name: unit-system
@@ -25417,7 +25417,7 @@ packages:
       filename: unit-system-0.7.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/unit-system_0.7.1-1/unit-system.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/unit-system.wrap
+  recipe_path: subprojects/unit-system.wrap
 - id: meson:unittest-cpp
   registry: meson
   name: unittest-cpp
@@ -25447,7 +25447,7 @@ packages:
       filename: unittest-cpp-2.0.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/unittest-cpp_2.0.0-1/unittest-cpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/unittest-cpp.wrap
+  recipe_path: subprojects/unittest-cpp.wrap
 - id: meson:unity
   registry: meson
   name: unity
@@ -25476,7 +25476,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/unity_2.7.0-1/unity.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/unity.wrap
+  recipe_path: subprojects/unity.wrap
 - id: meson:usbbluetooth
   registry: meson
   name: usbbluetooth
@@ -25495,7 +25495,7 @@ packages:
       filename: usbbluetooth-0.0.9.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/usbbluetooth_0.0.9-1/usbbluetooth.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/usbbluetooth.wrap
+  recipe_path: subprojects/usbbluetooth.wrap
 - id: meson:utf8proc
   registry: meson
   name: utf8proc
@@ -25542,7 +25542,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/utf8proc_2.9.0-1/utf8proc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/utf8proc.wrap
+  recipe_path: subprojects/utf8proc.wrap
 - id: meson:utfcpp
   registry: meson
   name: utfcpp
@@ -25610,7 +25610,7 @@ packages:
       filename: utfcpp-4.0.8.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/utfcpp_4.0.8-1/utfcpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/utfcpp.wrap
+  recipe_path: subprojects/utfcpp.wrap
 - id: meson:uthash
   registry: meson
   name: uthash
@@ -25643,7 +25643,7 @@ packages:
       filename: uthash-2.4.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/uthash_2.4.0-1/uthash.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/uthash.wrap
+  recipe_path: subprojects/uthash.wrap
 - id: meson:vo-aacenc
   registry: meson
   name: vo-aacenc
@@ -25672,7 +25672,7 @@ packages:
       filename: vo-aacenc-0.1.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/vo-aacenc_0.1.3-1/vo-aacenc.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/vo-aacenc.wrap
+  recipe_path: subprojects/vo-aacenc.wrap
 - id: meson:vorbis
   registry: meson
   name: vorbis
@@ -25780,7 +25780,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/vorbis_1.3.7-0/vorbis.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/vorbis.wrap
+  recipe_path: subprojects/vorbis.wrap
 - id: meson:vulkan-headers
   registry: meson
   name: vulkan-headers
@@ -25837,7 +25837,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/vulkan-headers_1.4.346-1/vulkan-headers.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/vulkan-headers.wrap
+  recipe_path: subprojects/vulkan-headers.wrap
 - id: meson:vulkan-memory-allocator
   registry: meson
   name: vulkan-memory-allocator
@@ -25866,7 +25866,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/vulkan-memory-allocator_3.3.0-1/vulkan-memory-allocator.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/vulkan-memory-allocator.wrap
+  recipe_path: subprojects/vulkan-memory-allocator.wrap
 - id: meson:vulkan-validationlayers
   registry: meson
   name: vulkan-validationlayers
@@ -25882,7 +25882,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/vulkan-validationlayers_1.2.158-1/vulkan-validationlayers.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/vulkan-validationlayers.wrap
+  recipe_path: subprojects/vulkan-validationlayers.wrap
 - id: meson:wayland
   registry: meson
   name: wayland
@@ -25974,7 +25974,7 @@ packages:
       filename: wayland-1.26.0.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/wayland_1.26.0-1/wayland.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/wayland.wrap
+  recipe_path: subprojects/wayland.wrap
 - id: meson:wayland-protocols
   registry: meson
   name: wayland-protocols
@@ -26097,7 +26097,7 @@ packages:
       filename: wayland-protocols-1.49.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/wayland-protocols_1.49-1/wayland-protocols.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/wayland-protocols.wrap
+  recipe_path: subprojects/wayland-protocols.wrap
 - id: meson:websocketpp
   registry: meson
   name: websocketpp
@@ -26127,7 +26127,7 @@ packages:
       filename: websocketpp-0.8.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/websocketpp_0.8.2-1/websocketpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/websocketpp.wrap
+  recipe_path: subprojects/websocketpp.wrap
 - id: meson:win-iconv
   registry: meson
   name: win-iconv
@@ -26156,7 +26156,7 @@ packages:
       filename: win-iconv-0.0.9.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/win-iconv_0.0.9-1/win-iconv.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/win-iconv.wrap
+  recipe_path: subprojects/win-iconv.wrap
 - id: meson:wren
   registry: meson
   name: wren
@@ -26204,7 +26204,7 @@ packages:
       filename: wren-0.4.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/wren_0.4.0-1/wren.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/wren.wrap
+  recipe_path: subprojects/wren.wrap
 - id: meson:x-plane-sdk
   registry: meson
   name: x-plane-sdk
@@ -26235,7 +26235,7 @@ packages:
       filename: x-plane-sdk-4.2.0.zip
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/x-plane-sdk_4.2.0-1/x-plane-sdk.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/x-plane-sdk.wrap
+  recipe_path: subprojects/x-plane-sdk.wrap
 - id: meson:xdelta3
   registry: meson
   name: xdelta3
@@ -26261,7 +26261,7 @@ packages:
       filename: xdelta3-3.2.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/xdelta3_3.2.0-1/xdelta3.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/xdelta3.wrap
+  recipe_path: subprojects/xdelta3.wrap
 - id: meson:xsimd
   registry: meson
   name: xsimd
@@ -26280,7 +26280,7 @@ packages:
       filename: xsimd-14.2.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/xsimd_14.2.0-1/xsimd.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/xsimd.wrap
+  recipe_path: subprojects/xsimd.wrap
 - id: meson:xtensor
   registry: meson
   name: xtensor
@@ -26299,7 +26299,7 @@ packages:
       filename: xtensor-0.21.5.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/xtensor_0.21.5-1/xtensor.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/xtensor.wrap
+  recipe_path: subprojects/xtensor.wrap
 - id: meson:xtl
   registry: meson
   name: xtl
@@ -26325,7 +26325,7 @@ packages:
       filename: xtl-0.8.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/xtl_0.8.0-1/xtl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/xtl.wrap
+  recipe_path: subprojects/xtl.wrap
 - id: meson:xvidcore
   registry: meson
   name: xvidcore
@@ -26339,7 +26339,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/xvidcore_1.3.7-1/xvidcore.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/xvidcore.wrap
+  recipe_path: subprojects/xvidcore.wrap
 - id: meson:xxhash
   registry: meson
   name: xxhash
@@ -26403,7 +26403,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/xxhash_0.8.3-1/xxhash.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/xxhash.wrap
+  recipe_path: subprojects/xxhash.wrap
 - id: meson:yajl
   registry: meson
   name: yajl
@@ -26466,7 +26466,7 @@ packages:
       filename: yajl-2.1.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/yajl_2.1.0-1/yajl.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/yajl.wrap
+  recipe_path: subprojects/yajl.wrap
 - id: meson:yaml-cpp
   registry: meson
   name: yaml-cpp
@@ -26496,7 +26496,7 @@ packages:
       filename: yaml-cpp-0.8.0.zip
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/yaml-cpp_0.8.0-1/yaml-cpp.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/yaml-cpp.wrap
+  recipe_path: subprojects/yaml-cpp.wrap
 - id: meson:yyjson
   registry: meson
   name: yyjson
@@ -26515,7 +26515,7 @@ packages:
       filename: yyjson-0.12.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/yyjson_0.12.0-1/yyjson.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/yyjson.wrap
+  recipe_path: subprojects/yyjson.wrap
 - id: meson:zlib
   registry: meson
   name: zlib
@@ -26701,7 +26701,7 @@ packages:
       filename: zlib-1.3.2.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/zlib_1.3.2-1/zlib.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/zlib.wrap
+  recipe_path: subprojects/zlib.wrap
 - id: meson:zlib-ng
   registry: meson
   name: zlib-ng
@@ -26776,7 +26776,7 @@ packages:
       filename: zlib-ng-2.3.3.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/zlib-ng_2.3.3-1/zlib-ng.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/zlib-ng.wrap
+  recipe_path: subprojects/zlib-ng.wrap
 - id: meson:zpp_bits
   registry: meson
   name: zpp_bits
@@ -26816,7 +26816,7 @@ packages:
       filename: zpp_bits-4.5.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/zpp_bits_4.5.1-1/zpp_bits.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/zpp_bits.wrap
+  recipe_path: subprojects/zpp_bits.wrap
 - id: meson:zstd
   registry: meson
   name: zstd
@@ -26906,7 +26906,7 @@ packages:
       filename: zstd-1.5.7.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/zstd_1.5.7-1/zstd.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/zstd.wrap
+  recipe_path: subprojects/zstd.wrap
 - id: meson:zycore
   registry: meson
   name: zycore
@@ -26928,7 +26928,7 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/zycore_1.5.2-1/zycore.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/zycore.wrap
+  recipe_path: subprojects/zycore.wrap
 - id: meson:zydis
   registry: meson
   name: zydis
@@ -26943,4 +26943,4 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/zydis_4.1.1-1/zydis.wrap
-  recipe_url: https://github.com/mesonbuild/wrapdb/blob/01d8f59d3689e00eb65f78a42e5c5a02456d7004/subprojects/zydis.wrap
+  recipe_path: subprojects/zydis.wrap

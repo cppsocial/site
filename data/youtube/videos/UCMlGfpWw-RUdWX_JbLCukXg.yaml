@@ -1,3 +1,540 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
-[]
+- video_id: lv8dazZ6hsM
+  title: 'Master Linux Debugging: Essential GDB & System Tools'
+  url: https://www.youtube.com/shorts/lv8dazZ6hsM
+  published: 2026-07-03 16:00:00+00:00
+  updated: 2026-09-08 15:59:43+00:00
+  description: 'https://cppcon.org/class-2026-essential-gdb/
+
+    ---
+
+    Course Description
+
+    Developers spend more of their time debugging code, than actually writing code. So why do we not spend as much time learning debugging tools and associated utilities to help get us out of trouble? Part of the answer is that debugging is often not taught as a subject — but this workshop is here to fix that!
+
+
+    In this workshop you will learn how to use a debugger (GDB) and associated tools (valgrind, sanitizers, code coverage tools, objdump, dwarfdump, etc.) to help debug and understand what your software is doing. In the age of AI generated code, legacy code, and massive code bases, understanding how to use tools is of critical importance.
+
+
+    In this workshop we’ll do interactive exercises to help ramp you up, and get you ready to tackle any project with tools in hand to help you understand how to write correct code, read code, and develop software with confidence.
+
+
+    Prerequisites
+
+    Attendees should have basic C++ programming experience.
+
+
+    Course Topics
+
+    Part 1 – Introduction to Debugging
+
+
+    Part 2 – Debugging Essentials with GDB — The Bare Minimum
+
+
+    Part 3 – GDB Essentials Exercises
+
+
+    Part 4 – Stack, Heap, and catching memory leaks
+
+
+    Part 5 – Debug Information and Binary Inspection
+
+
+    Part 6 – More GDB Debugging Essentials
+
+
+    Part 7 – GDB For Understanding of Large CodeBases
+
+
+    Part 8 – Multiprocess and Time Travel
+
+
+    Part 9 – Challenge Exercise (Take Home or together if time)
+
+
+    Part 10 – Closing
+
+
+    More Info + To Register: https://cppcon.org/class-2026-essential-gdb/
+
+
+    Course Instructor - Mike Shah
+
+
+    Mike Shah is currently teaching faculty at Yale University in the Computer Sciences department. My primary teaching interests are in computer systems, computer graphics, and software engineering. My research interests are related to performance engineering (dynamic analysis), software visualization, and computer graphics.
+
+
+    Along with teaching and research work, I have juggled occasional consulting work as a 3D Senior Graphics Engineer in C++.
+
+    __
+
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    Registration for CppCon: https://cppcon.org/registration/
+
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i1.ytimg.com/vi/lv8dazZ6hsM/hqdefault.jpg
+- video_id: zMYZ5MFQAho
+  title: Inside C++'s Biggest Challenge | Panel Discussion with Bjarne Stroustrup, Herb Sutter & More
+  url: https://www.youtube.com/watch?v=zMYZ5MFQAho
+  published: 2026-06-27 19:00:06+00:00
+  updated: 2026-09-08 15:49:30+00:00
+  description: "https://cppcon.org/\n---\nC++ The Documentary: Live Panel Discussion with Bjarne Stroustrup, Herb Sutter & More\n\nWatch C++: The Documentary: https://www.youtube.com/watch?v=lI7tMxzSJ7w\n\nFollowing the New York City premiere at Metrograph, Matt Godbolt moderates a panel discussion featuring Bjarne Stroustrup, Herb Sutter, Gabriel Dos Reis, Nina Ranns, and Eric Lubow.\n\nJoin Bjarne Stroustrup, Herb Sutter, and other renowned experts in the field of C++ coding for a comprehensive panel discussion that delves into the biggest challenges facing the C++ language. As the creator of C++, Bjarne Stroustrup provides unique insights into the history of the language, while Herb Sutter shares his expertise on the future of C++ and its role in software development. The discussion covers a wide range of topics, including the importance of static reflection, API design, and the potential impact of AI on the C++ ecosystem. With a focus on C++ safety, the panel explores ways to develop\
+    \ secure and reliable software using the C++ language. \n\nWhether you're a seasoned C++ developer or just starting out with C++ coding, this panel discussion offers a wealth of knowledge and perspectives on the current state and future of the language. Learn from the experts about the latest developments in C++ and how they are shaping the world of software engineering and computer programming. Get ready to gain a deeper understanding of the C++ language and its applications in software development, and discover the exciting possibilities that the future of C++ holds.\n\nFurther topics include the impact of C++11, compile-time programming with constexpr, concepts, modules, static reflection, safety initiatives, interoperability with Python, and the role of standardization in maintaining a language used across industries worldwide.\n\nThe discussion also examines how the C++ community attracts new developers, balances innovation with stability, and prepares for emerging challenges such\
+    \ as AI-assisted development and increasingly complex software systems. Featuring both the creator of C++ and several of the language's leading contributors, this conversation offers a unique perspective on where C++ has been—and where it is heading next.\n\nPanelists:\n• Bjarne Stroustrup — Creator of C++; Professor of Computer Science, Columbia University\n• Herb Sutter — Technical Fellow, Citadel Securities; Chair, Standard C++ Foundation & CppCon\n• Gabriel Dos Reis — Principal Software Architect, Microsoft\n• Nina Ranns — Vice Convener, ISO C++ Standards Committee\n• Eric Lubin — Software Engineering Lead, Hudson River Trading\n\nModerator:\n• Matt Godbolt — Creator of Compiler Explorer; HRT Software Engineer\n\nC++: The Documentary was produced by Cult.Repo ( @cultrepo ) and sponsored by Hudson River Trading ( @Hudson-River-Trading )\n__\n\nYouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\nRegistration for CppCon: https://cppcon.org/registration/\n\
+    \n#cpp #cplusplus #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer #ai"
+  thumbnail_url: https://i3.ytimg.com/vi/zMYZ5MFQAho/hqdefault.jpg
+- video_id: TSrymTXw5w8
+  title: 'Instrumenting the Stack: Strategies for End-to-end Sanitizer Adoption - Damien Buhl - CppCon 2025'
+  url: https://www.youtube.com/watch?v=TSrymTXw5w8
+  published: 2026-06-05 15:32:50+00:00
+  updated: 2026-09-06 20:17:41+00:00
+  description: "https://cppcon.org\n---\n\nInstrumenting the Stack: Strategies for End-to-end Sanitizer Adoption - Damien Buhl - CppCon 2025\n---\n\nSanitizers like UBSanitizer, MemorySanitizer, AddressSanitizer, ThreadSanitizer, and Clang’s Thread Safety Analysis are powerful tools for making C++ code safer, but their effectiveness hinges on full-stack instrumentation and proper debug info, even in optimized builds.\n\nMigrating to such setups is rarely straightforward, especially when dealing with prebuilt libraries or diverse build systems like CMake, Bazel, GN, or Autotools.\n\nIn this talk, we’ll walk through practical approaches for enabling sanitizers across complex codebases. We’ll share CMake modules that facilitate transitioning to full-source builds, explore workarounds for closed-source dependencies, and discuss techniques like debug fission to manage symbol bloat from modern C++ metaprogramming.\n\nExpect examples and tips and techniques for robust, debuggable, end-to-end instrumentation\
+    \ with instrumentation performance benchmarks.\n\n---\n\nSlides: https://github.com/CppCon/CppCon2025/blob/main/Presentations/Instrumenting_the_Stack.pdf\n\nWork at Hudson River Trading (HRT): https://tinyurl.com/safxfctf\n---\n\nDamien Buhl\n \nDamien (aka daminetreg), co-founder tipi.build by EngFlow is an enthusiast C++ developer. Opensource entrepreneur, CppCon Speaker, GameMaker.fr community founder, Qt for Android contributor and Boost.Fusion maintainer since 2014.\n---\n\nCppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.\nAnnual\
+    \ CppCon Conference - https://www.cppcon.org\nhttps://www.linkedin.com/company/cppcon\nhttps://x.com/cppcon\nhttps://www.facebook.com/CppConference\nhttps://www.reddit.com/r/cppcon/\nhttps://mastodon.social/@CppCon\n---\n\nVideos Filmed & Edited by Bash Films: http://www.BashFilms.com\nYouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer"
+  thumbnail_url: https://i1.ytimg.com/vi/TSrymTXw5w8/hqdefault.jpg
+- video_id: gNPhJrXLiIs
+  title: 'Lightning Talk: Eight Consteval Queens and Compile-Time Printing - Sagnik Bhattacharya - CppCon 2025'
+  url: https://www.youtube.com/watch?v=gNPhJrXLiIs
+  published: 2026-06-02 15:02:09+00:00
+  updated: 2026-09-07 20:37:37+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: Eight Consteval Queens and Compile-Time Printing - Sagnik Bhattacharya - CppCon 2025
+
+    ---
+
+
+    In this talk we will first convert a template metaprogram that solves the 8-queen problem into a consteval compile-time program. Then we will explore ways to make gcc and clang print at compile time.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    Sagnik is a software engineer at IMC Trading, where they contribute to the hardware team’s low-latency systems and networking solutions. Their work focuses mainly on C++ with some Python. Sagnik earned both a Bachelor’s and Master’s degree in EECS/CS from UC Berkeley.
+
+    ---
+
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i4.ytimg.com/vi/gNPhJrXLiIs/hqdefault.jpg
+- video_id: zygtgvHp_MM
+  title: 'Lightning Talk: Navigating Code Reviews as a Code Author - Ben Deane - CppCon 2025'
+  url: https://www.youtube.com/watch?v=zygtgvHp_MM
+  published: 2026-06-01 15:02:46+00:00
+  updated: 2026-09-07 00:30:05+00:00
+  description: "https://cppcon.org\n---\n\nLightning Talk: Navigating Code Reviews as a Code Author - Ben Deane - CppCon 2025\n---\n\nAs authors of code, we want our work to get into the main line quickly and with a mininum of fuss. We can influence this process to a large extent! This lighting talk highlights some of the things we can do to make reviewers' jobs easier and make the process go more smoothly for everyone.\n---\n\nSlides: https://github.com/CppCon/CppCon2025/blob/main/Presentations/Navigating_Code_Reviews.pdf\n\nWork at Hudson River Trading (HRT): https://tinyurl.com/safxfctf\n---\n\nBen Deane\n \nBen has been programming in C++ for this whole millennium. He spent just over 20 years in the games industry working for companies like EA and Blizzard; many of the games he worked on used to be fondly remembered but now he's accepted that they are probably mostly forgotten. After getting more interested in modern C++, in the teens he started giving internal company talks and then\
+    \ talks at various conferences, spreading ideas about types, algorithms and declarative and functional techniques.\n\n In 2018 he left the games industry and worked in finance for a short spell, writing high-frequency trading platforms using the most modern C++ that compilers could support. Now he is a Principal Engineer at Intel where he puts monads inside your CPU.\n---\n\n\nCppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.\nAnnual CppCon Conference - https://www.cppcon.org\nhttps://www.linkedin.com/company/cppcon\nhttps://x.com/cppcon\n\
+    https://www.facebook.com/CppConference\nhttps://www.reddit.com/r/cppcon/\nhttps://mastodon.social/@CppCon\n---\n\nVideos Filmed & Edited by Bash Films: http://www.BashFilms.com\nYouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer"
+  thumbnail_url: https://i3.ytimg.com/vi/zygtgvHp_MM/hqdefault.jpg
+- video_id: Poz2Prh1N7g
+  title: 'Lightning Talk: But I was doing the right thing! - Andrei Zissu - CppCon 2025'
+  url: https://www.youtube.com/watch?v=Poz2Prh1N7g
+  published: 2026-05-29 15:02:09+00:00
+  updated: 2026-09-09 03:17:00+00:00
+  description: "https://cppcon.org\n---\n\nLightning Talk: But I was doing the right thing! - Andrei Zissu - CppCon 2025\n---\n\n2 recent short stories where doing the right thing nevertheless ended up as a C++ footgun\n---\n\nWork at Hudson River Trading (HRT): https://tinyurl.com/safxfctf\n---\n\nAndrei Zissu\n \nAndrei Zissu is a veteran cross-industry C++ developer, notably having worked on low-level reverse engineering systems employing API hooking, DLL injection and other advanced techniques. He has been a member of the WG21 C++ Standards Committee since early 2022, and as such is actively involved in the contracts study group (SG21) and is also keeping a keen eye on reflection work in SG7. He is currently employed as Windows Tech Lead at Morphisec, a revolutionary Israeli cybersecurity company.\n---\n\nCppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational\
+    \ talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.\nAnnual CppCon Conference - https://www.cppcon.org\nhttps://www.linkedin.com/company/cppcon\nhttps://x.com/cppcon\nhttps://www.facebook.com/CppConference\nhttps://www.reddit.com/r/cppcon/\nhttps://mastodon.social/@CppCon\n---\n\nVideos Filmed & Edited by Bash Films: http://www.BashFilms.com\nYouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer"
+  thumbnail_url: https://i1.ytimg.com/vi/Poz2Prh1N7g/hqdefault.jpg
+- video_id: t2A2lfHe-xM
+  title: 'Lightning Talk: Trust Nothing, Complain About Something, Want Everything - Jonathan Stein - CppCon'
+  url: https://www.youtube.com/watch?v=t2A2lfHe-xM
+  published: 2026-05-28 15:02:06+00:00
+  updated: 2026-06-21 18:13:03+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: Trust Nothing, Complain About Something, Want Everything - Jonathan Stein - CppCon 2025
+
+    ---
+
+
+    In performance-critical C++ development, assumptions, folklore, and “gut feelings” are everywhere—and they’re often wrong. I argue for radical skepticism: trust nothing unless it’s been measured, tested, and understood. Through a series of real-world examples—from misused benchmarking tools and meaningless performance claims to counterproductive compiler advice, misleading attributes, and even outright compiler bugs—I will show how easily misinformation creeps into everyday engineering decisions. The talk is a fast-paced reminder that everybody lies (sometimes unintentionally), compilers aren’t infallible, and performance myths can do real damage. The takeaway: complain more, demand evidence, and be unapologetically selfish about wanting correct tools, correct measurements, and correct explanations.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i1.ytimg.com/vi/t2A2lfHe-xM/hqdefault.jpg
+- video_id: T-jWHKTygUM
+  title: 'Lightning Talk: The BS Principle - John Pavan - CppCon 2025'
+  url: https://www.youtube.com/watch?v=T-jWHKTygUM
+  published: 2026-05-27 15:02:05+00:00
+  updated: 2026-09-07 11:44:03+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: The BS Principle - John Pavan - CppCon 2025
+
+    ---
+
+
+    The BS principle explains how to overcome differences in specialized knowledge and is the best piece of advice I’ve ever been given. If you need to understand a complex topic quickly, it provides a framework to integrate an expert and gain the necessary information, or discover that their answer was just BS. Additionally, you can apply the principle to explaining a topic and convince others that your idea or proposal is the one that should be accepted. The BS principle will be demonstrated to (hopefully) explain a concept from Nuclear Physics to the audience.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    John Pavan
+
+
+    John Pavan is an Engineering Team Lead at Bloomberg. He has been developing software for more than 25 years. His primary interests are in distributed systems, such as service-oriented and microservice architectures, and he has most recently been writing software using C++ and Python. John’s prior experience includes work on search engines, UI frameworks, data visualization, and algorithm design.
+
+    ---
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i1.ytimg.com/vi/T-jWHKTygUM/hqdefault.jpg
+- video_id: ZNgCXB9veWc
+  title: 'Lightning Talk: Execution Policies: Not a Forward Progress Guarantee - Ruslan Arutyunyan'
+  url: https://www.youtube.com/watch?v=ZNgCXB9veWc
+  published: 2026-05-26 15:02:08+00:00
+  updated: 2026-09-07 13:27:29+00:00
+  description: "https://cppcon.org\n---\n\nLightning Talk: Execution Policies: Not a Forward Progress Guarantee - Ruslan Arutyunyan - CppCon 2025\n---\n\nExecution Policies seem to create a lot of confusion in C++ community. Some people think that they are hard prescription what algorithms should do, others think this is a hint. \n\nThis talk aims to give a short and actually useful summary about Execution Policies:\n- What they are and what they are for\n- What it means to pass an execution policy to a parallel algorithm\n---\n\nWork at Hudson River Trading (HRT): https://tinyurl.com/safxfctf\n---\n\nRuslan Arutyunyan\n \nRuslan is a Senior Middleware Development Engineer specializing in parallel and threading runtimes. He joined Intel in 2017 and has experience in the autonomous driving domain, where he led the development of two libraries. Currently, Ruslan is the lead developer of oneAPI DPC++ library (oneDPL) while also contributing to other Intel products, including oneAPI Threading\
+    \ Building Blocks (oneTBB). He is an active member of the C++ Standard Committee (WG21), focusing on the C++ standard library, concurrency, and parallelism, with several accepted proposals. His current priorities are standardizing std::simd enhancements, extending C++ parallel algorithms, and contributing to Senders/Receivers. Ruslan recently stepped into the role of SG1 (Concurrency and Parallelism) co-chair in the C++ Standard Committee.\n---\n\nCppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.\nAnnual CppCon Conference - https://www.cppcon.org\n\
+    https://www.linkedin.com/company/cppcon\nhttps://x.com/cppcon\nhttps://www.facebook.com/CppConference\nhttps://www.reddit.com/r/cppcon/\nhttps://mastodon.social/@CppCon\n---\n\nVideos Filmed & Edited by Bash Films: http://www.BashFilms.com\nYouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer"
+  thumbnail_url: https://i3.ytimg.com/vi/ZNgCXB9veWc/hqdefault.jpg
+- video_id: bP5eplaxG7o
+  title: 'Lightning Talk: Can `set_value` Actually Throw? - Robert Leahy - CppCon 2025'
+  url: https://www.youtube.com/watch?v=bP5eplaxG7o
+  published: 2026-05-25 15:38:36+00:00
+  updated: 2026-09-08 09:39:06+00:00
+  description: "https://cppcon.org\n---\n\nLightning Talk: Can `set_value` Actually Throw? - Robert Leahy - CppCon 2025\n---\n\n`std::execution::set_value` must not throw. Asio can deliver actual completion signatures which disagree with the value category it advertises. When bridging the two conversions can therefore become a hidden throw site. This lightning talk demonstrates this problem and reveals a solution, delivering those otherwise-hidden exceptions via `set_error` while delivering the promised value categories to `set_value`.\n---\n\nWork at Hudson River Trading (HRT): https://tinyurl.com/safxfctf\n---\n\nRobert Leahy\n \nRobert is a graduate of the University of Victoria where he specialized in graphics, gaming, and digital geometry processing. After spending 4.5 years in full stack web development he pivoted to financial infrastructure in late 2016 whereafter he spent nearly nine years at a start up working on next generation financial market data storage and retrieval mechanisms.\
+    \ In 2019 he became involved in the ISO C++ committee with a particular focus on library evolution. Since summer 2025 he has worked as a core developer at Hudson River Trading.\n---\n\nCppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.\nAnnual CppCon Conference - https://www.cppcon.org\nhttps://www.linkedin.com/company/cppcon\nhttps://x.com/cppcon\nhttps://www.facebook.com/CppConference\nhttps://www.reddit.com/r/cppcon/\nhttps://mastodon.social/@CppCon\n---\n\nVideos Filmed & Edited by Bash Films: http://www.BashFilms.com\nYouTube Channel\
+    \ Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer"
+  thumbnail_url: https://i3.ytimg.com/vi/bP5eplaxG7o/hqdefault.jpg
+- video_id: hIx4HpWBoKE
+  title: 'Lightning Talk: Crafting CUDA Compatible C++ Code - Jon White - CppCon 2025'
+  url: https://www.youtube.com/watch?v=hIx4HpWBoKE
+  published: 2026-05-22 15:02:06+00:00
+  updated: 2026-09-07 03:18:17+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: Crafting CUDA Compatible C++ Code - Jon White - CppCon 2025
+
+    ---
+
+
+    An annoying part of writing CUDA code is needing to repeat program logic in CUDA kernels. C++ 20 provides a way to write this code in a single location accessible from both the host and device.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i1.ytimg.com/vi/hIx4HpWBoKE/hqdefault.jpg
+- video_id: 84qXqMMDS3I
+  title: 'Lightning Talk: A C++20 Modules Performance Field Report - Tyler Drake - CppCon 2025'
+  url: https://www.youtube.com/watch?v=84qXqMMDS3I
+  published: 2026-05-21 15:02:12+00:00
+  updated: 2026-09-08 01:07:24+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: A C++20 Modules Performance Field Report - Tyler Drake - CppCon 2025
+
+    ---
+
+
+    C++ modules work, and they increase build performance. This is especially true when modularizing dependencies.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    Tyler Drake
+
+
+    I do simulation/game programming. I consider fundamentals to be important, and I consider trade-offs to be non-universal, so I frequently build things that seem like they already exist.
+
+    ---
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i1.ytimg.com/vi/84qXqMMDS3I/hqdefault.jpg
+- video_id: 9bq1gEw6OzY
+  title: 'Lambdas, Ranges and trivially_copyable: Why This Matters for Parallel Algorithms - Ruslan Arutyunyan'
+  url: https://www.youtube.com/watch?v=9bq1gEw6OzY
+  published: 2026-05-20 15:02:10+00:00
+  updated: 2026-09-08 01:59:52+00:00
+  description: "https://cppcon.org\n---\n\nLightning Talk: Lambdas, Ranges and trivially_copyable: Why This Matters for Parallel Algorithms - Ruslan Arutyunyan - CppCon 2025\n---\n\nThis talk is going to explore the trivial copyability of the ranges (based on `transform_view`) in combination with lambdas and explain why it matters for Parallel Algorithms.\n\nWe are going to look at the problems, possible workarounds and a potential solution that I have in mind.\n---\n\nWork at Hudson River Trading (HRT): https://tinyurl.com/safxfctf\n---\n\nRuslan Arutyunyan\n \nRuslan is a Senior Middleware Development Engineer specializing in parallel and threading runtimes. He joined Intel in 2017 and has experience in the autonomous driving domain, where he led the development of two libraries. Currently, Ruslan is the lead developer of oneAPI DPC++ library (oneDPL) while also contributing to other Intel products, including oneAPI Threading Building Blocks (oneTBB). He is an active member of the C++\
+    \ Standard Committee (WG21), focusing on the C++ standard library, concurrency, and parallelism, with several accepted proposals. His current priorities are standardizing std::simd enhancements, extending C++ parallel algorithms, and contributing to Senders/Receivers. Ruslan recently stepped into the role of SG1 (Concurrency and Parallelism) co-chair in the C++ Standard Committee.\n---\n\nCppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.\nAnnual CppCon Conference - https://www.cppcon.org\nhttps://www.linkedin.com/company/cppcon\nhttps://x.com/cppcon\n\
+    https://www.facebook.com/CppConference\nhttps://www.reddit.com/r/cppcon/\nhttps://mastodon.social/@CppCon\n---\n\nVideos Filmed & Edited by Bash Films: http://www.BashFilms.com\nYouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer"
+  thumbnail_url: https://i2.ytimg.com/vi/9bq1gEw6OzY/hqdefault.jpg
+- video_id: eMnz158Y0Ok
+  title: 'Lightning Talk: Understanding Data Dependency Chains - Makar Kuznietsov - CppCon 2025'
+  url: https://www.youtube.com/watch?v=eMnz158Y0Ok
+  published: 2026-05-19 15:02:55+00:00
+  updated: 2026-09-08 19:00:33+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: Understanding Data Dependency Chains - Makar Kuznietsov - CppCon 2025
+
+    ---
+
+
+    Long dependency chains in your code might completely nuke the performance. Even on the high-end systems there will be a significant slow-down, as the more threads or more cache will not improve performance in this case. To find a solution it is crucial to be able to differentiate between primary and secondary dependency chains, see what data is the dependency over, and know whether to focus on latency or throughput of instructions. In this talk I will introduce a mental framework to quickly spot and fix long dependency chains, and characterize them with specific quantifiable metrics.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    Makar Kuznietsov
+
+
+    Makar Kuznietsov, MIT ''25 graduate, and incoming MIT masters student is a co-founder of Functio, which creates LLMs to find and fix performance bottlenecks in software projects. In his prior research project he developed robust electrostatic motor control solution in C++ on ESP32 platform. Additionally, he worked on GPU design at NVIDIA, and led team in designing electronics for autonomous boats at MIT Arcturus team.
+
+    ---
+
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i2.ytimg.com/vi/eMnz158Y0Ok/hqdefault.jpg
+- video_id: rmfuWQXojtY
+  title: 'Lightning Talk: How Fast Isn’t You Constexpr? - Hossein GhahramanzadehAnigh - CppCon 2025'
+  url: https://www.youtube.com/watch?v=rmfuWQXojtY
+  published: 2026-05-18 15:02:21+00:00
+  updated: 2026-06-16 04:55:04+00:00
+  description: 'https://cppcon.org
+
+    ---
+
+
+    Lightning Talk: How Fast Isn’t You Constexpr? - Hossein GhahramanzadehAnigh - CppCon 2025
+
+    ---
+
+
+    I investigate the compile time + run time of running an algorithm in an effort to compare how much it takes the compiler to run the same algorithm at compile time vs how much it takes to run the algorithm natively. With the findings at the end I hand roll a constexpr alternative that strikes a balance between compile-time and run-time performance.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    I am C++ developer currently working at IMC Trading. I have been a C++ enthusiast ever since I was 15. I do a lot of compile time stuff.
+
+    ---
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i3.ytimg.com/vi/rmfuWQXojtY/hqdefault.jpg

@@ -7,4 +7,11 @@ config:
   structured_data_type: AboutPage
 sections:
   - type: markdown
-    content: !include "about.md"
+    content: !include about.md
+  - type: markdown
+    content: !include MAINTAINERS.md
+    include_headings:
+      - Current Maintainers
+      - Emeritus
+    markdown_extensions:
+      - tables

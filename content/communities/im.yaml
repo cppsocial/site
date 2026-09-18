@@ -27,3 +27,9 @@ cards:
     platform: discord
     description: "#include <C++> is a global, inclusive, and diverse community for developers interested in C++"
     path: https://discord.gg/vSYgpmPrra
+  - community_id: cpplang-slack
+    metadata_source: { source: web, key: "https://cppalliance.org/slack/" }
+    title: C++ Language Slack
+    platform: slack
+    path: https://cppalliance.org/slack/
+    description: A large multi-channel C++ workspace operated by the C++ Alliance

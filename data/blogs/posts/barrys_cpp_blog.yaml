@@ -1,0 +1,82 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: s9ANKPrsQGAUep0c
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Push-based vs Pull-based Customization
+  url: https://brevzin.github.io/c++/2026/09/14/push-vs-pull/
+  published: 2026-09-14 05:00:00+00:00
+  updated: 2026-09-14 05:00:00+00:00
+  description: 'Almost two years ago now, I wrote the post Rust Attributes vs C++ Annotations. That post, I walked through how in standard C++26 we could get this code: struct [[=derive<Debug>]] Point { int x; int y; }; To have similar behavior and effect to this standard Rust code: #[derive(De…'
+  tags:
+  - c++
+- post_id: SoXGS0ulo9NucxCw
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Behold the power of meta::substitute
+  url: https://brevzin.github.io/c++/2026/03/02/power-of-substitute/
+  published: 2026-03-02 06:00:00+00:00
+  updated: 2026-03-10 02:46:53+00:00
+  description: My CppCon 2025 talk, Practical Reflection, is now online. Check it out! Over winter break, I started working on proposal for string interpolation. It was a lot of fun to work through implementing, basically an hour a day during my daughter’s nap time. The design itself is motiva…
+  tags:
+  - c++
+- post_id: yAsB5YrzkXc2mxBj
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: A Library Approach to Constant Template Parameters
+  url: https://brevzin.github.io/c++/2025/08/02/ctp-reflection/
+  published: 2025-08-02 05:00:00+00:00
+  updated: 2026-01-06 04:27:42+00:00
+  description: C++26 Status Quo I’d previously written about how difficult it is to extend support for using class types as constant template parameters. These are the template parameters formerly known as non-type template parameters. But it turns out that since C++98, we had three kinds of t…
+  tags:
+  - c++
+- post_id: Jxn18vMm5qB8l2KD
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Reflecting JSON into C++ Objects
+  url: https://brevzin.github.io/c++/2025/06/26/json-reflection/
+  published: 2025-06-26 05:00:00+00:00
+  updated: 2025-10-12 20:50:32+00:00
+  description: 'Last week, C++26 was finalized in Sofia, Bulgaria — and C++26 will include all of the reflection papers that we were pushing for: P2996R13: Reflection for C++26 P3394R4: Annotations for Reflection P3293R3: Splicing a Base Class Subobject P3491R3: define_static_{string,object,arr…'
+  tags:
+  - c++
+- post_id: cswvD2ce2wd5Mbxa
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Type-based vs Value-based Reflection
+  url: https://brevzin.github.io/c++/2025/06/09/reflection-ts/
+  published: 2025-06-09 05:00:00+00:00
+  updated: 2025-06-09 23:06:46+00:00
+  description: Frequently, whenever the topic of Reflection comes up, I see a lot of complains specifically about the new syntax being added to support Reflection in C++26. I’ve always thought of that as being largely driven by unfamiliarity — this syntax is new, unfamiliar, and thus bad. I th…
+  tags:
+  - c++
+- post_id: PsZN8oLo32EVGXGB
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Implementing a Struct of Arrays
+  url: https://brevzin.github.io/c++/2025/05/02/soa/
+  published: 2025-05-02 05:00:00+00:00
+  updated: 2026-03-05 15:25:51+00:00
+  description: My CppCon 2025 talk, Practical Reflection, is now online, and goes over this example in more detail and more digressions. Check it out! Recently, I watched Andrew Kelley’s talk on Practical Data Oriented Design. It goes into some of the architectural changes he’s been making to…
+  tags:
+  - c++
+- post_id: CHXEyimSFzeGNhag
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Using Token Sequences to Iterate Ranges
+  url: https://brevzin.github.io/c++/2025/04/03/token-sequence-for/
+  published: 2025-04-03 05:00:00+00:00
+  updated: 2025-04-07 03:20:19+00:00
+  description: There was a StackOverflow question recently that led me to want to write a new post about Ranges. Specifically, I wanted to write about some situations in which Ranges do more work than it seems like they should have to. And then what we can do to avoid doing that extra work. I’…
+  tags:
+  - c++
+- post_id: s5HWw8jJo_rR1SMi
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: On the Ignorability of Attributes
+  url: https://brevzin.github.io/c++/2025/03/25/attributes/
+  published: 2025-03-25 05:00:00+00:00
+  updated: 2025-03-25 14:11:01+00:00
+  description: 'I was reading through the latest mailing, and a sentence caught my eye in P3661 (“Attributes, annotations, labels”), emphasis mine: Attributes turned out to be unsuitable for the role of “small features”, “small modifications to bigger features” or annotations from other languag…'
+  tags:
+  - c++

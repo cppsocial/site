@@ -3,4 +3,10 @@ type: card_group
 id: conferences
 title: Conferences
 description: Major C++ conferences around the world
-cards: []
+cards:
+  - title: ACCU on Sea
+    path: https://accuonsea.uk/
+    description: ACCU on Sea is the international developer conference taking place by the sea, in the UK
+    metadata:
+      Location: UK
+      Frequency: Annual

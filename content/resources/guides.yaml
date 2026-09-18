@@ -3,4 +3,8 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: C++ FAQ
+    path: https://www.parashift.com/c%2B%2B-faq/
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
+    description: The original Marshall Cline C++ FAQ

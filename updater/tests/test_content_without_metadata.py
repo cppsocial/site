@@ -22,6 +22,9 @@ class ContentWithoutMetadataTests(unittest.TestCase):
                 shutil.copytree(ROOT / name, root / name)
             shutil.copy(ROOT / 'site.toml', root / 'site.toml')
 
+            # depended on by about/_index.yaml
+            shutil.copy(ROOT / 'MAINTAINERS.md', root / 'MAINTAINERS.md')
+
             def write(path, value):
                 (root / path).write_text(yaml.safe_dump(value), encoding='utf-8')
 

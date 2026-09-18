@@ -452,7 +452,7 @@ def amalgamate(
                 "registry": package["registry"],
                 "package_id": package["id"],
                 "metadata_file": f"/data/packages/{package['registry']}.yaml",
-                "recipe_url": package["recipe_url"],
+                "recipe_url": package.get("recipe_url"),
             }
             for package in sorted(
                 values, key=lambda item: (item["registry"], item["id"])

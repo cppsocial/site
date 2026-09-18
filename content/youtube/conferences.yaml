@@ -5,6 +5,9 @@ id: conferences
 title: Conferences
 description: Browse recorded talks from established C++ conferences
 cards:
+  - title: C++Now
+    channel_type: conference
+    channel_id: UC5e__RG9K3cHrPotPABnrwg
   - title: Core C++
     channel_type: conference
     channel_id: UCE14XYFaK1fDTnOTqlOFrrQ
@@ -26,4 +29,3 @@ cards:
   - title: C++Online
     channel_type: conference
     channel_id: UC9KMtRSOkJVCYwvm8TZipog
-

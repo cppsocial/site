@@ -21,7 +21,7 @@
      referrerpolicy="no-referrer">{% else %}<span class="blog-post-card__avatar blog-post-card__avatar--monogram"
       aria-hidden="true">{{ post.source_title[:1] }}</span>{% endif %}<p><strong>{{ post.source_title }}</strong><time datetime="{{ post.published }}">{{ post.published[:10]|date_label }}</time></p></div>
     <h3><a href="{{ post.url }}" target="_blank" rel="noopener">{{ post.title|keep_cpp }}</a></h3>
-    {% if post.description %}<div class="blog-post-card__description">{{ post.description|markdown }}</div>{% endif %}
+    {% if post.description %}<div class="blog-post-card__description">{{ post.description|e|markdown }}</div>{% endif %}
     <a class="blog-post-card__more"
        href="{{ post.url }}"
        target="_blank"

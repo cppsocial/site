@@ -2,5 +2,5 @@ $schema: ../../schemas/pages/event-calendar-feed.json
 $output: calendar.ics
 config: !import "config/pages/event-calendar-feed.yaml"
 calendar_name: C++ Community Events
-description: ""
+description: Conferences, meetups, and WG21 meetings for the C++ community
 product_id: -//cpp.social//C++ Community Events//EN

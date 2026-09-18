@@ -1,0 +1,72 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: Ab4WH52_uyvY1r0u
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: Destructuring Lambda Expression Parameters
+  url: https://vector-of-bool.github.io/2024/06/13/lambda-destructure.html
+  published: 2024-06-13 00:00:00+00:00
+  description: 'C++17 added a feature known as structured bindings , which look like this: auto [ a , b , c ] = some_aggregate ; in this case, the names a , b , and c are bound to members of the initializer. The particular details on how this occurs are not important here, but we can consider t…'
+- post_id: KGldWD1K4OCvW2I8
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: Mysterious Memset
+  url: https://vector-of-bool.github.io/2022/05/11/char8-memset.html
+  published: 2022-05-11 00:00:00+00:00
+  description: 'Consider this simple function chop : void chop ( int * count , std :: string & str ) { for ( int i = 0 ; i < * count ; ++ i ) { str [ i ] = 0 ; } } This sets the first *count leading characters in str to zero. Very simple. If we feed this program to an optimizing compiler, the m…'
+- post_id: DGieVOI0s_gs96gK
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: 'co_resource : An RAII coroutine'
+  url: https://vector-of-bool.github.io/2021/12/30/co_resource.html
+  published: 2021-12-30 00:00:00+00:00
+  description: 'Python has a syntactic construct known as a with statement: with open ( ''some-file.txt'' ) as f : ... # code goes here Code within the with block will execute as normal, but if the with block is exited for any reason , then some cleanup occurs. It works like this: The operand to…'
+- post_id: Z3Y5z8D87rQdMLLd
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: Using Catch2 v3 in CMake with DDS and PMM
+  url: https://vector-of-bool.github.io/2021/11/13/dds-catch2-v3.html
+  published: 2021-11-13 00:00:00+00:00
+  description: 'When the maintainers of Catch2 announced that the next major version (v3) would be migrating away from its long-standing header-only approach to distribution, there was much uproar about how this would hurt adoption and migration. After all: What can be easier than just dropping…'
+- post_id: g_tmR2zb8VBq4cGy
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: Stringy Templates
+  url: https://vector-of-bool.github.io/2021/10/22/string-templates.html
+  published: 2021-10-22 00:00:00+00:00
+  description: 'C++20 introduces many new features, but I want to focus on one in particular in this post. Non-Type Template Parameters C++ has long supported non-type template parameters: template < int I > struct foo {}; We can then instantiate this class with any int : foo < 1729 > f ; This…'
+- post_id: SrORvJaIItW40Czk
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: A Macro-Based Terse Lambda Expression
+  url: https://vector-of-bool.github.io/2021/04/20/terse-lambda-macro.html
+  published: 2021-04-20 00:00:00+00:00
+  description: 'If you’ve read my past post, Now I Am Become Perl , you know that my wildest dream feature for C++ would be an expression-lambda expression: That is: A concise lambda expression that consists of a single expression that is used as the return value of that lambda expression, plus…'
+- post_id: 1_ORTJIa54DJUSdh
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: 'Fun with Concepts: Do You Even Lift, Bool?'
+  url: https://vector-of-bool.github.io/2020/10/26/strong-bool.html
+  published: 2020-10-26 00:00:00+00:00
+  description: 'Sorry to anyone expecting another novel-length blog post. This one will be “relatively short” (Read: Still very long). Arthur O’Dwyer recently wrote a blog post about function overloading in C++ . I recommend giving it a read, as it can spell out some of the pitfalls involved wi…'
+- post_id: 4cD5PRjRCg3UcN7e
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: A New Approach to Build-Time Library Configuration
+  url: https://vector-of-bool.github.io/2020/10/04/lib-configuration.html
+  published: 2020-10-04 00:00:00+00:00
+  description: Pain If you’ve been around the block of C and C++ libraries for more than a brief glance, you have inevitably seen a tweakme.h or two. Maybe a configure script with a few dozen command-line flags? Or maybe you’ve been told to pop open ccmake and flip some switches? Have you ever…
+- post_id: VQIQ6yPVQzftXZet
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: 'A Buffers Library for C++20: Part 1'
+  url: https://vector-of-bool.github.io/2020/08/29/buffers-1.html
+  published: 2020-08-29 00:00:00+00:00
+  description: 'In this modern day and age of high-falutin’ fancy-pantsy things like C++ Ranges, C++ Coroutines, C++ Modules, and this newfangled “rap music” that all the kids are into, we mustn’t forget our roots: The humble memcpy and void* ! After all, isn’t most of programming just copying…'
+- post_id: FgcIk_iNTzqOcuIW
+  source_id: vector_of_bool
+  source_title: Vector of Bool
+  title: An iterator_facade in C++20
+  url: https://vector-of-bool.github.io/2020/06/13/cpp20-iter-facade.html
+  published: 2020-06-13 00:00:00+00:00
+  description: 'The Boost distribution ships a very useful library known as Boost.Iterator . Inside of which, it contains a class template iterator_facade : template < typename Derived , typename Value , typename CategoryOrTraversal , typename Reference = Value & , typename Difference = std ::…'

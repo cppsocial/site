@@ -1,0 +1,52 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: cC1Cu11__fUcO4cD
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26: Module improvements'
+  url: https://www.sandordargo.com/blog/2026/09/09/cpp26-modules
+  published: 2026-09-08 22:00:00+00:00
+  updated: 2026-09-08 22:00:00+00:00
+  description: C++20 introduced modules as a - potential - fundamental shift in how we organize and consume C++ code. Sadly, the adoption has been slow — build system support lagged, compiler implementations were incomplete and diverging, and some of the original design decisions created unnec…
+  tags:
+  - dev
+- post_id: OeFmS8tnqJprcC5C
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: C++ Concepts is now a Leanpub course
+  url: https://www.sandordargo.com/blog/2026/09/04/cpp-concepts-course
+  published: 2026-09-03 22:00:00+00:00
+  updated: 2026-09-03 22:00:00+00:00
+  description: When I published C++ Concepts as a book back in 2022, I was happy with how it turned out. It covered the right material at the right depth, and the feedback from readers was positive. But a book is a passive experience — you read, you nod, you move on. I recently learned about L…
+  tags:
+  - books
+- post_id: w-ydVqNh0-DqlC8e
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26: std::hive'
+  url: https://www.sandordargo.com/blog/2026/09/02/cpp26-hive
+  published: 2026-09-01 22:00:00+00:00
+  updated: 2026-09-06 07:12:27+00:00
+  description: 'In a recent article on std::inplace_vector, I mentioned that C++26 is generous with new containers. Here’s the other one: std::hive. Consider a game engine managing thousands of entities. Each entity is stored in a container, and other subsystems hold pointers to those entities.…'
+  tags:
+  - dev
+- post_id: x2_v4rYN-9bYO95U
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: I helped to build GetCracked's Intermediate C++ Roadmap
+  url: https://www.sandordargo.com/blog/2026/08/28/getcracked-intermediate-cpp-roadmap
+  published: 2026-08-27 22:00:00+00:00
+  updated: 2026-08-27 22:00:00+00:00
+  description: 'A few months ago, Coding Jesus reached out to me about collaborating on content for GetCracked, his C++ learning platform. The pitch was simple: he was building an interactive roadmap for intermediate C++ developers and wanted someone to help with building the technical content…'
+  tags:
+  - dev
+- post_id: OyaHBVTBtTf4kEWn
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26: std::inplace_vector'
+  url: https://www.sandordargo.com/blog/2026/08/26/cpp26-inplace-vector
+  published: 2026-08-25 22:00:00+00:00
+  updated: 2026-08-25 22:00:00+00:00
+  description: C++26 is generous with new containers — we’re getting both std::hive and std::inplace_vector. In this post, we’ll look at the latter. Until C++26, the standard library had no vector-like container with compile-time fixed capacity whose element storage is guaranteed to live insid…
+  tags:
+  - dev

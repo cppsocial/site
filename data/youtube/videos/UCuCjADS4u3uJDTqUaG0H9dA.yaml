@@ -1,0 +1,128 @@
+# Maintained by meta-updater youtube. Manual edits are preserved.
+# Set hidden: true and retain only video_id to suppress an item.
+- video_id: NWQEsSjE6Xg
+  title: 'CppCast Episode 349: Podcast News and Updates with Rob and Jason'
+  url: https://www.youtube.com/watch?v=NWQEsSjE6Xg
+  published: 2022-05-14 13:56:15+00:00
+  updated: 2026-08-05 18:45:14+00:00
+  description: "Rob and Jason discuss various news articles, libraries and announcements. \n\nFull show notes available at: https://cppcast.com/podcast-news/"
+  thumbnail_url: https://i3.ytimg.com/vi/NWQEsSjE6Xg/hqdefault.jpg
+- video_id: oRo_EFdxmv4
+  title: 'CppCast Episode 348: Elements GUI Library with Joel de Guzman'
+  url: https://www.youtube.com/watch?v=oRo_EFdxmv4
+  published: 2022-05-14 13:41:37+00:00
+  updated: 2026-05-20 23:07:54+00:00
+  description: "Joel de Guzman joins Rob and Jason. They first talk about new features in GCC 12 and the latest ISO papers. Then they talk to Joel de Guzman about his history with Open Source and the Boost community, the Elements GUI library and his work with audio software and hardware. \n\nFull show notes available at: https://cppcast.com/elements-gui/"
+  thumbnail_url: https://i4.ytimg.com/vi/oRo_EFdxmv4/hqdefault.jpg
+- video_id: hOgmvv8ePvc
+  title: 'CppCast Episode 347: Linear Algebra Standardization with Mark Hoemmen'
+  url: https://www.youtube.com/watch?v=hOgmvv8ePvc
+  published: 2022-05-14 02:53:33+00:00
+  updated: 2026-05-21 00:14:03+00:00
+  description: 'Mark Hoemmen joins Rob and Jason. They first talk about an debugging improvements in VS Code and C++20/23 features going into MSVC. Then they talk to Mark Hoemmen about his past work on linear algebra libraries Tpetra and Kokkos, and current efforts to get linear algebra into the standard.
+
+
+    Full show notes available at: https://cppcast.com/linear-algebra-iso/'
+  thumbnail_url: https://i1.ytimg.com/vi/hOgmvv8ePvc/hqdefault.jpg
+- video_id: Ght0A0-KsrA
+  title: 'CppCast Episode 346: Rcpp with Dirk Eddelbuettel'
+  url: https://www.youtube.com/watch?v=Ght0A0-KsrA
+  published: 2022-05-08 16:32:01+00:00
+  updated: 2026-04-27 09:42:15+00:00
+  description: 'Dirk Eddelbuettel joins Rob and Jason. They first talk about an updated C++ web framework, and whether C should be considered a programming language or a protocol. Then they talk to Dirk about the R programming language, and RCPP the R/C++ interop library.
+
+
+    Full show notes available at: https://cppcast.com/rcpp/'
+  thumbnail_url: https://i4.ytimg.com/vi/Ght0A0-KsrA/hqdefault.jpg
+- video_id: 3oiqx52q0LU
+  title: 'CppCast Episode 345: CppNorth with Diana Ojeda and Stephanie Brenham'
+  url: https://www.youtube.com/watch?v=3oiqx52q0LU
+  published: 2022-05-08 15:27:02+00:00
+  updated: 2026-05-08 11:08:21+00:00
+  description: 'Diana Ojeda from Intel and Stephanie Brenham from Ubisoft join Rob and Jason. They first talk about the upcoming Pure Virtual C++ conference, an update to WxWidgets and Apple''s release of a Metal interface for C++. Then they talk to Diana and Stephanie about the upcoming CppNorth conference, how they got involved and much more.
+
+
+    Full show notes available at: https://cppcast.com/cppnorth/'
+  thumbnail_url: https://i4.ytimg.com/vi/3oiqx52q0LU/hqdefault.jpg
+- video_id: i_VkVed1MMY
+  title: 'CppCast Episode 344: Mentorship with Rainier Grimm'
+  url: https://www.youtube.com/watch?v=i_VkVed1MMY
+  published: 2022-05-04 22:22:48+00:00
+  updated: 2026-05-30 02:11:20+00:00
+  description: "Rainer Grimm joins Rob and Jason. They first talk about a new implementation of the ninja build system and updates to Qt Creator and CMake. Then they talk to Rainer Grimm about his mentorship program, and history of teaching C++. \n\nFull show notes available at: https://cppcast.com/mentorship-program/"
+  thumbnail_url: https://i2.ytimg.com/vi/i_VkVed1MMY/hqdefault.jpg
+- video_id: 8jP1D5rSCN0
+  title: 'CppCast Episode 343: Julia with Logan Kilpatrick'
+  url: https://www.youtube.com/watch?v=8jP1D5rSCN0
+  published: 2022-05-04 12:36:42+00:00
+  updated: 2026-05-05 01:54:18+00:00
+  description: 'Logan Kilpatrick joins Rob and Jason. They first talk about a GDB frontend and an IDE like autocompletion tool for the terminal. Then they talk to Logan Kilpatrick about the Julia programming language. They discuss the origin of the language, and where it fits in today amongst other languages in the scientific computing domain.
+
+
+    Full show notes available at: https://cppcast.com/julia/'
+  thumbnail_url: https://i1.ytimg.com/vi/8jP1D5rSCN0/hqdefault.jpg
+- video_id: AdP6seB4sp4
+  title: 'CppCast Episode 342: Zig with Andrew Kelley'
+  url: https://www.youtube.com/watch?v=AdP6seB4sp4
+  published: 2022-04-25 13:41:48+00:00
+  updated: 2026-06-19 18:45:56+00:00
+  description: "Andrew Kelley joins Rob and Jason. They first say Happy 25th Birthday to Visual Studio and discuss a tool for parsing GCC error logs. Then they talk to Andrew Kelley, the president of the Zig Software Foundation. He talks about the Zig language, upcoming changes to its build tooling, and how Zig can be used with C and C++. \n\nFull show notes available at: https://cppcast.com/zig/"
+  thumbnail_url: https://i2.ytimg.com/vi/AdP6seB4sp4/hqdefault.jpg
+- video_id: KKJLw79g_8Y
+  title: 'CppCast Episode 341: Swift and C++ Interoperability with Dave Abrahams'
+  url: https://www.youtube.com/watch?v=KKJLw79g_8Y
+  published: 2022-04-24 15:27:43+00:00
+  updated: 2026-04-22 00:28:22+00:00
+  description: "Dave Abrahams joins Rob and Jason. They first talk about JeanHeyd Meneid’s blog post on saving C’s ABI. Then they talk to Dave about his history as a founding contributor of boost and the current workgroup he is a part of to enable bidirectional interop between swift and C++. \n\nFull show notes available at: https://cppcast.com/swift-cpp-interop/"
+  thumbnail_url: https://i4.ytimg.com/vi/KKJLw79g_8Y/hqdefault.jpg
+- video_id: kWUdnvhm8P0
+  title: 'CppCast Episode 340: New C++ Scope and Debugging Support with René Ferdinand Rivera Morell'
+  url: https://www.youtube.com/watch?v=kWUdnvhm8P0
+  published: 2022-03-28 00:23:12+00:00
+  updated: 2026-05-08 05:56:36+00:00
+  description: "René Ferdinand Rivera Morell joins Rob and Jason. They first talk about a new cmake initialization project and some projects in the C++ show and tell. Then they talk to René about his open letter to the C++ committee about expanding its scope to include tooling and other related technologies. \n\nFull show notes available at: https://cppcast.com/standard-tooling-debugging/"
+  thumbnail_url: https://i4.ytimg.com/vi/kWUdnvhm8P0/hqdefault.jpg
+- video_id: 54xKWdainfM
+  title: 'CppCast Episode 339: Secure Coding and Integers with Robert Seacord'
+  url: https://www.youtube.com/watch?v=54xKWdainfM
+  published: 2022-03-21 00:07:19+00:00
+  updated: 2026-04-28 17:05:03+00:00
+  description: 'Robert Seacord joins Rob and Jason. They first talk about a constexpr wordle game and constexpr unique_ptr being added to the standard. Then they talk to Robert Seacord about secure coding and his thoughts on integers.
+
+
+    Full show notes available at: https://cppcast.com/secure-coding-integers/'
+  thumbnail_url: https://i2.ytimg.com/vi/54xKWdainfM/hqdefault.jpg
+- video_id: fAEqZrq5LhE
+  title: 'CppCast Episode 338: Teaching Embedded Development with Khalil Estell'
+  url: https://www.youtube.com/watch?v=fAEqZrq5LhE
+  published: 2022-03-13 22:45:06+00:00
+  updated: 2026-06-02 02:16:37+00:00
+  description: 'Khalil Estell joins Rob and Jason. They first talk about Matt Godbolt’s recent keynote at CPPP on C++’s Superpower. Then they talk to Khalil about teaching C++ embedded development and some of his thoughts on embedded development, including why not to avoid runtime polymorphism.
+
+
+    Full show notes available at: https://cppcast.com/teaching-embedded-dev/'
+  thumbnail_url: https://i3.ytimg.com/vi/fAEqZrq5LhE/hqdefault.jpg
+- video_id: cazi_EzU7Dc
+  title: 'CppCast Episode 337: GDAL and PDAL with Howard Butler'
+  url: https://www.youtube.com/watch?v=cazi_EzU7Dc
+  published: 2022-03-13 18:17:24+00:00
+  updated: 2026-04-29 22:10:38+00:00
+  description: "Howard Butler joins Rob and Jason. They first talk about an announcement from Swift on a C++ interoperability workgroup. Then they talk to Howard Butler about the C++ Geospatial libraries GDAL and PDAL, and his involvement with geospatial development. \n\nFull show notes available at: https://cppcast.com/gdal-pdal/"
+  thumbnail_url: https://i4.ytimg.com/vi/cazi_EzU7Dc/hqdefault.jpg
+- video_id: rW2VgSlnCsU
+  title: 'CppCast Episode 336: 5G Network Computing with Yacob Cohen-Arazi'
+  url: https://www.youtube.com/watch?v=rW2VgSlnCsU
+  published: 2022-02-27 02:31:50+00:00
+  updated: 2026-04-13 19:08:18+00:00
+  description: "Yacob Cohen-Arazi joins Rob and Jason. They first talk about an update to Microsoft’s GSL library and the upcoming LLVM v14. Then they talk to Kobi about work he’s done at Qualcomm with 5G networks and how 5G is about a lot more then just bandwidth improvements. \n\nFull show notes available at: https://cppcast.com/5g-networks/"
+  thumbnail_url: https://i3.ytimg.com/vi/rW2VgSlnCsU/hqdefault.jpg
+- video_id: nVopyIjNcH4
+  title: 'CppCast Episode 335: Unix and C History'
+  url: https://www.youtube.com/watch?v=nVopyIjNcH4
+  published: 2022-02-21 01:06:11+00:00
+  updated: 2026-04-22 23:51:52+00:00
+  description: 'Brian Kernighan joins Rob and Jason. They first talk about the pros and cons of virtual teaching and training during COVID times, and the news that BOLT has been merged into LLVM. Then they talk to Brian about the history of UNIX and C development at Bell Labs.
+
+
+    Full show notes available at: https://cppcast.com/unix-history/'
+  thumbnail_url: https://i3.ytimg.com/vi/nVopyIjNcH4/hqdefault.jpg

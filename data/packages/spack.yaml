@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: b9de13f9bde2543adb270ebeb1700f5639837745
+revision: d00acb55ee9b53f7f0d57550cb07d35de9994848
 packages:
 - id: spack:3dtk
   registry: spack
@@ -41712,8 +41712,12 @@ packages:
   maintainers:
   - qoelet
   dependencies:
+  - c
   - cxx
   dependency_details:
+  - name: c
+    constraint: c
+    kind: build
   - name: cxx
     constraint: cxx
     kind: build
@@ -41730,6 +41734,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:d01733552ca4a18ab501ae8b8be878131baa32e89090fafdeef018ebfa4c6e46
+  - version: '3.2'
+    artifacts:
+    - checksums:
+      - sha256:9dcb3d8ce0a41b2a48ac8baa54b51a9f1b6a2c52dd374e28cc713bab0568ec98
   recipe_path: repos/spack_repo/builtin/packages/cpp_argparse/package.py
 - id: spack:cpp-httplib
   registry: spack
@@ -52336,6 +52344,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:25155576f1b1a9e3753cc033b610b0e1eb809acf7e76b85cbadc769ff046913a
+  - version: 3.8.0
+    artifacts:
+    - checksums:
+      - sha256:4359842926e41fe782bb8970f0e27b1f2bd4d75faa67c141c0820dcd459ef12a
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/dlb/package.py
 - id: spack:dlib
@@ -59890,154 +59902,18 @@ packages:
     default: 'true'
     condition: '@5.0:'
   versions:
-  - version: 3.2.10
+  - version: 4.5.4
     artifacts:
     - checksums:
-      - sha256:fb05c82a83477805a1d97737a9f0ca0db23f69b7bce504f1609ba99477b03955
-  - version: 4.0.0
+      - sha256:28b2dfcd53dc9c1b121851a9aae2fb1d1dc3519918fd1cddc7af8593d58116d0
+  - version: 5.3.2
     artifacts:
     - checksums:
-      - sha256:f0ab7f6a747863cb980681a904a3c9380e2e52de6eb046cfa285e5e225f9ac47
-  - version: 4.1.0
+      - sha256:132ace718fa97183508c02bc77a5f7fef33d9edf28d9dc207ae4da0823172b3b
+  - version: 5.6.2
     artifacts:
     - checksums:
-      - sha256:d98aa369219bf0a4ec41efe7cb8d1127d34cb07666088dd79da6b424196d4cfd
-  - version: 4.1.1
-    artifacts:
-    - checksums:
-      - sha256:998e9cc936045b4e84f28ca60c4680c08385a210d6bb95fc31c28a7d634a9357
-  - version: 4.1.2
-    artifacts:
-    - checksums:
-      - sha256:d1f54f639d1946aa1d7ae8ae03752f8ac464a879c14bc35e63b6a87b8a0b7522
-  - version: 4.1.3
-    artifacts:
-    - checksums:
-      - sha256:dab82c5bc20ccea284b042d6af4bd6eaba95f4eaadd495a75413115d33a3151f
-  - version: 4.1.4
-    artifacts:
-    - checksums:
-      - sha256:965b6056ea6b72b87d9352d4c1db1d7a7f9f358b9408df2689d823b932d6aa7f
-  - version: 4.2.0
-    artifacts:
-    - checksums:
-      - sha256:d439dfa579a633108c4f06574ed9bc3b91b8610d2ce3a6eb803bf377d0284be7
-  - version: 4.2.1
-    artifacts:
-    - checksums:
-      - sha256:c796ea6a03e22d63886ca9ec6b1bef821e8cb09f186bd007f63653e31e9cb595
-  - version: 4.2.2
-    artifacts:
-    - checksums:
-      - sha256:481fe8d03eec6806c1b401d764536edc2c233ac9d82091a10094de6101867afc
-  - version: 4.2.3
-    artifacts:
-    - checksums:
-      - sha256:f667134cca8e2c75e12a00b50b5605d0d8068efa5b821f5b3c3f0df06fd79411
-  - version: 4.2.4
-    artifacts:
-    - checksums:
-      - sha256:416dda94141e4778356e2aa9ba8687e6522a1eb197b3caf00a82e5fa2707709a
-  - version: 4.2.5
-    artifacts:
-    - checksums:
-      - sha256:3375b454568e7bbec7748cd6173516ef9f30a3d8e13c3e99c02794a6a3bc3c8c
-  - version: 4.3.0
-    artifacts:
-    - checksums:
-      - sha256:231f059c4109a2d3028c771f483f6c92f1f3689eb0033648ce00060dad00e103
-  - version: 4.3.1
-    artifacts:
-    - checksums:
-      - sha256:979efb5b3d3c8df2c3c364aaba61f97a459456fc5bbc092dfc02677da63e5654
-  - version: 4.4.0
-    artifacts:
-    - checksums:
-      - sha256:4dd55ad6cc684905e891ad1ba9e3c542e79eea0a9cd9a0e99cd77abe6ed63fab
-  - version: 4.4.1
-    artifacts:
-    - checksums:
-      - sha256:3c20cfb2ff8a4d74ac6d566e7b5fa9dd220d96d17e6d8a4ae29b1ec0107ee407
-  - version: 4.5.0
-    artifacts:
-    - checksums:
-      - sha256:5f46336f612553af5553d99347f387f733de0aaa0d80d4572e67615289382ec8
-  - version: 4.5.1
-    artifacts:
-    - checksums:
-      - sha256:7d4bcc8559e7fbbc52e526fc86a15b161ff4422aa49eee37897ee7a48eb64ac2
-  - version: 4.5.2
-    artifacts:
-    - checksums:
-      - sha256:74ccc9ab0fea0064ff3f4c5841435cef13cc6d9869b3c2b25e5ca4efa64a69a1
-  - version: 4.5.3
-    artifacts:
-    - checksums:
-      - sha256:7cbd9c61e6dcd82a3f81b5ced92c3cf84ecc5489639bdfc94869256383a2c915
-  - version: 4.6.0
-    artifacts:
-    - checksums:
-      - sha256:b42b14bb696bf1075ade1ecaefe7735dbe411db4c29031a1dae549435eafa946
-  - version: 4.6.1
-    artifacts:
-    - checksums:
-      - sha256:3445df39abe5838b94552b53e7dbff56ada8347b9fdc6c04a72297d5b04af76f
-  - version: 4.7.0
-    artifacts:
-    - checksums:
-      - sha256:3ab0a649e23b4dd00963e4cae60e573b449194ecb4035c5ce487330b272b4d06
-  - version: 4.7.1
-    artifacts:
-    - checksums:
-      - sha256:ee7ecd62bbbde6d51e30788a97800c39e72515b6a910839fb84041b35ba42b4d
-  - version: 4.8.0
-    artifacts:
-    - checksums:
-      - sha256:d6b45cadc2146ed5e0b25a96d44643ad516054eb7745acb14a1dc7bf30744f6e
-  - version: 5.0.0
-    artifacts:
-    - checksums:
-      - sha256:428e23ac51a6006605de65ed9114d544a5506cb4b6bfb03d8522778f13e4f7ea
-  - version: 5.0.1
-    artifacts:
-    - checksums:
-      - sha256:33a598eaff0713de09e479c2636ecde188b982584e56377f234e5065a61be7ba
-  - version: 5.1.0
-    artifacts:
-    - checksums:
-      - sha256:1ab1e859b9c8bca8a8d332945366567fae4cf8dd7e312a689daaff46e7ffa949
-  - version: 5.1.1
-    artifacts:
-    - checksums:
-      - sha256:1985f79e0337f63d6564b08db0238cf96a276a4184def822bb8ad37996dc8295
-  - version: 5.2.0
-    artifacts:
-    - checksums:
-      - sha256:48f9f10864303df628a48cab17074820a6251ad8cd7d66dd62aa7798af479254
-  - version: 5.3.0
-    artifacts:
-    - checksums:
-      - sha256:21b8daa0181044ef65097a1e3517af1f24e7c7343cc5bdaf70be11e3cb0edb51
-  - version: 5.3.1
-    artifacts:
-    - checksums:
-      - sha256:d02f9ce4f8baf6c99edceb7c73bfdd1e97d77bcc4725810b86efed9f58dda962
-  - version: 5.4.0
-    artifacts:
-    - checksums:
-      - sha256:586245cbf9420866078d8c28fce8ef4f192530c69a0f368f51e848340dcf3b90
-  - version: 5.5.0
-    artifacts:
-    - checksums:
-      - sha256:ad0e360c7adc2515a99836863d98499b3ad89cd7548625499b20293845b040cb
-  - version: 5.6.0
-    artifacts:
-    - checksums:
-      - sha256:9dd78f1543012acd3a1a14ba86dc1dca8f7d176396ea3f0027a92dcf5ff2057c
-  - version: 5.6.1
-    artifacts:
-    - checksums:
-      - sha256:b175e57860e62d87b6118a79cc2d76e857e5774a9ff78558d6726122760b0034
+      - sha256:a06dd0001aef2722564bba3ec7ff62bc52fb560565af8522728ac8296f98fd69
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/environment_modules/package.py
 - id: spack:enzo
@@ -72056,6 +71932,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e7c5a48045a0574aa330f9bf94cad0a5de47f88c206f66387bfe8fd062c21a1c
+  - version: 0.89.0
+    artifacts:
+    - checksums:
+      - sha256:322cb1f7460cf3844d0c974bbfd6c93aee07761f799f1745f15b2214ba10cb24
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/flux_core/package.py
 - id: spack:flux-pmix
@@ -72500,6 +72380,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:de8edcc3b3cb637939bd0fe7b25870fae2bcb0326629e2e3ad4efcb9da77b96a
+  - version: 0.55.0
+    artifacts:
+    - checksums:
+      - sha256:28fdc059b1750438481c551d07f011d7c85ada4395e0e244d06dc07f8bd3f89b
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/flux_sched/package.py
 - id: spack:flux-security
@@ -96633,6 +96517,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4682d8a60260321b92555760be3b9caab60e2a71f95eddbdfb91e557ee93302a
+  - version: 1.1.1
+    artifacts:
+    - checksums:
+      - sha256:6746753379b00a8148c3b0714a3a9c2bc84735f0cfa82077f2f3b36f8d330a24
   recipe_path: repos/spack_repo/builtin/packages/gsl_lite/package.py
 - id: spack:gslib
   registry: spack
@@ -123529,6 +123417,26 @@ packages:
   - version: 1.2.7
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/kripke/package.py
+- id: spack:krona
+  registry: spack
+  name: krona
+  summary: Interactively explore metagenomes and more from a web browser.
+  licenses:
+  - BSD-3-Clause
+  homepage: https://github.com/marbl/Krona
+  repository_url: https://github.com/marbl/krona
+  dependencies:
+  - perl
+  dependency_details:
+  - name: perl
+    constraint: perl
+    kind: build,run
+  versions:
+  - version: 2.8.1
+    artifacts:
+    - checksums:
+      - sha256:f3ab44bf172e1f846e8977c7443d2e0c9676b421b26c50e91fa996d70a6bfd10
+  recipe_path: repos/spack_repo/builtin/packages/krona/package.py
 - id: spack:kubectl
   registry: spack
   name: kubectl
@@ -146480,6 +146388,93 @@ packages:
       - sha256:853e843824ee8b20b0192d45bf9837c860ef41cce4a10bd14c59860753e5fa0b
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/libwhich/package.py
+- id: spack:libwignernj
+  registry: spack
+  name: libwignernj
+  summary: Exact evaluation of Wigner 3j, 6j, and 9j symbols, Clebsch-Gordan coefficients, Racah W-coefficients, Fano X-coefficients, and Gaunt coefficients
+  licenses:
+  - BSD-3-Clause
+  homepage: https://github.com/susilehtola/libwignernj
+  repository_url: https://github.com/susilehtola/libwignernj
+  maintainers:
+  - RMeli
+  dependencies:
+  - c
+  - cmake
+  - cxx
+  - flint
+  - fortran
+  - mpfr
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: cmake
+    constraint: 'cmake@3.16:'
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+    condition: +cxx-tests
+  - name: flint
+    constraint: flint
+    condition: +flint
+  - name: fortran
+    constraint: fortran
+    kind: build
+    condition: +fortran
+  - name: mpfr
+    constraint: mpfr
+    condition: +mpfr
+  options:
+  - cxx-tests
+  - examples
+  - flint
+  - fortran
+  - mpfr
+  - quadmath
+  - shared
+  - tests
+  default_options:
+    cxx-tests: 'false'
+    examples: 'false'
+    flint: 'false'
+    fortran: 'true'
+    mpfr: 'false'
+    quadmath: 'false'
+    shared: 'true'
+    tests: 'false'
+  features:
+  - name: cxx-tests
+    description: Build C++ header tests
+    default: 'false'
+  - name: examples
+    description: Build test suite
+    default: 'false'
+  - name: flint
+    description: Use FLINT/GMP/MPFR for bigint backend
+    default: 'false'
+  - name: fortran
+    description: Build Fortran interface
+    default: 'true'
+  - name: mpfr
+    description: Build MPFR arbitrary-precision interface
+    default: 'false'
+  - name: quadmath
+    description: Build libquadmath/__float128 interface
+    default: 'false'
+  - name: shared
+    description: Build shared library
+    default: 'true'
+  - name: tests
+    description: Build test suite
+    default: 'false'
+  versions:
+  - version: 0.8.0
+    artifacts:
+    - checksums:
+      - sha256:7220cea92652040d6456aba92ff151124d9c69ce8695840490c18dd25a0da80c
+  recipe_path: repos/spack_repo/builtin/packages/libwignernj/package.py
 - id: spack:libwindowswm
   registry: spack
   name: libwindowswm
@@ -187909,6 +187904,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b93ac6d12651c060e65086396d85191dabecfbc01f30eb1f139c6dd56bf6e34c
+  - version: '3.13'
+    artifacts:
+    - checksums:
+      - sha256:f90a34cc3f1a5af511570d72f4437205efdf97e1d28c576418daa7ef1a34daaa
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/onednn/package.py
 - id: spack:oniguruma
@@ -227090,6 +227089,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:a83103b7ed3afaeedee9a212c8f65825444f58144f5e075b73c83f2b4ff27b62
+  - version: '35.1'
+    artifacts:
+    - checksums:
+      - sha256:22775f9376938295efa2d59a59bde4cd075a42df5a9b4d27aa9b99fa6a413bd2
+  - version: '36.1'
+    artifacts:
+    - checksums:
+      - sha256:7a7baff8207a57f3fe5c233d432a09eba67bdfb55a3145839d0817cae8e807a4
   recipe_path: repos/spack_repo/builtin/packages/protobuf/package.py
 - id: spack:protobuf-c
   registry: spack
@@ -243256,6 +243263,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3bda2096e663dc1cb6f90f51b394da0838b9be5164a44370c134ce5b3b2a4dd3
+  - version: 2.1.17
+    artifacts:
+    - checksums:
+      - sha256:8e3fa07a432b3f6d5c3cad491ef1f27b18d10fc151ca2d223761be4f0b050479
   - version: 2.1.6
     artifacts:
     - checksums:
@@ -246814,6 +246825,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:55f1a390e5f3f075b221c7d91fb10258ad978db786c7930eba06eb45d28753fe
+  - version: 0.26.0
+    artifacts:
+    - checksums:
+      - sha256:b87a35835f30333760cc46194bd90b6a4958d12f488f50131d4c4c0962ad9c3c
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_cartopy/package.py
 - id: spack:py-casadi
@@ -254988,26 +255003,10 @@ packages:
   homepage: https://github.com/common-workflow-language/cwl-upgrader
   repository_url: https://github.com/common-workflow-language/cwl-upgrader
   dependencies:
-  - py-ruamel-yaml
   - py-schema-salad
   - py-setuptools
   - python
   dependency_details:
-  - name: py-ruamel-yaml
-    constraint: py-ruamel-yaml@0.16.0:0.17.21
-    kind: build,run
-    condition: '^python@3.10:'
-  - name: py-ruamel-yaml
-    constraint: py-ruamel-yaml@0.15.98:0.17.21
-    kind: build,run
-    condition: '^python@3.9:'
-  - name: py-ruamel-yaml
-    constraint: py-ruamel-yaml@0.15.78:0.17.21
-    kind: build,run
-    condition: '^python@3.8:'
-  - name: py-ruamel-yaml
-    constraint: py-ruamel-yaml@0.15.71:0.17.21
-    kind: build,run
   - name: py-schema-salad
     constraint: py-schema-salad
     kind: build,run
@@ -255070,7 +255069,7 @@ packages:
   - name: py-ruamel-yaml
     constraint: py-ruamel-yaml@0.17.6:0.18
     kind: build,run
-    condition: '@0.30:'
+    condition: '@0.30:0.41'
   - name: py-ruamel-yaml
     constraint: py-ruamel-yaml@0.17.6:0.19
     kind: build,run
@@ -261796,6 +261795,54 @@ packages:
     - checksums:
       - sha256:34f7e630dc55ea3f219e555726f5da4b4b25f2200319c8e6902c394258dd6a3e
   recipe_path: repos/spack_repo/builtin/packages/py_dpath/package.py
+- id: spack:py-dram-bio
+  registry: spack
+  name: py-dram-bio
+  summary: 'Distilled and Refined Annotation of Metabolism: A tool for the annotation and curation of function for microbial and viral genomes.'
+  licenses:
+  - GPL-3.0
+  homepage: https://github.com/WrightonLabCSU/DRAM
+  repository_url: https://github.com/wrightonlabcsu/dram
+  dependencies:
+  - py-altair
+  - py-networkx
+  - py-numpy
+  - py-openpyxl
+  - py-pandas
+  - py-scikit-bio
+  - py-setuptools
+  - py-sqlalchemy
+  dependency_details:
+  - name: py-altair
+    constraint: py-altair
+    kind: build,run
+  - name: py-networkx
+    constraint: py-networkx
+    kind: build,run
+  - name: py-numpy
+    constraint: py-numpy
+    kind: build,run
+  - name: py-openpyxl
+    constraint: py-openpyxl
+    kind: build,run
+  - name: py-pandas
+    constraint: py-pandas
+    kind: build,run
+  - name: py-scikit-bio
+    constraint: py-scikit-bio
+    kind: build,run
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build,run
+  - name: py-sqlalchemy
+    constraint: py-sqlalchemy
+    kind: build,run
+  versions:
+  - version: 1.5.0
+    artifacts:
+    - checksums:
+      - sha256:2d4a503fa806e33b580afb6d21879b2399178e48ba3b05ada882449fee571889
+  recipe_path: repos/spack_repo/builtin/packages/py_dram_bio/package.py
 - id: spack:py-drep
   registry: spack
   name: py-drep
@@ -277415,6 +277462,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b989e8b09489478c2d19fecc744a298930f40d8b27c3638afbfe84d22f36ce4e
+  - version: 1.78.0
+    artifacts:
+    - checksums:
+      - sha256:7382b95189546f375c174f53a5fa873cef91c4b8005faa05cc5b3beea9c4f1c5
   - version: 1.78.1
     artifacts:
     - checksums:
@@ -303295,37 +303346,16 @@ packages:
   repository_url: https://github.com/mpi4jax/mpi4jax
   maintainers:
   - bhaveshshrimali
-  dependencies:
-  - py-cython
-  - py-jax
-  - py-mpi4py
-  - py-numpy
-  - py-setuptools
-  - python
-  dependency_details:
-  - name: py-cython
-    constraint: 'py-cython@0.21:'
-    kind: build
-  - name: py-jax
-    constraint: 'py-jax@0.3.25:'
-    kind: build,run
-  - name: py-mpi4py
-    constraint: 'py-mpi4py@3.0.1:'
-    kind: build,run
-  - name: py-numpy
-    constraint: py-numpy
-    kind: build,run
-  - name: py-setuptools
-    constraint: 'py-setuptools@42:'
-    kind: build
-  - name: python
-    constraint: python
-    kind: build,link,run
   versions:
   - version: 0.3.11.post3
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:ad4c5840c81ead40b68f4885d705c06eeca22cd4e998790de589c6566db75a75
+  - version: 0.9.1
+    artifacts:
+    - checksums:
+      - sha256:dc72ba69cc70250ef097f1ba62b2bfeabc2b328943f3b4e2fc27238915bebe34
   recipe_path: repos/spack_repo/builtin/packages/py_mpi4jax/package.py
 - id: spack:py-mpi4py
   registry: spack
@@ -305268,6 +305298,10 @@ packages:
     kind: build
     condition: '@2.0'
   - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+    condition: '@3:'
+  - name: python
     constraint: 'python@3.8:'
     kind: build,run
   versions:
@@ -305346,6 +305380,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e7608472de99d375759814cab3e2c94aba3f9ec80e62cfef8ced495ca5c27d6e
+  - version: 3.0.1
+    artifacts:
+    - checksums:
+      - sha256:f7f0a889c8fb80deaacb95e918d88e05148850a32d2b8eda28446291b2bf7c35
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_nanobind/package.py
 - id: spack:py-nanoget
@@ -328036,9 +328074,13 @@ packages:
     kind: build
     condition: '@2'
   - name: py-pydantic-core
+    constraint: py-pydantic-core@2.46.4
+    kind: build,run
+    condition: '@2.13.4:'
+  - name: py-pydantic-core
     constraint: py-pydantic-core@2.41.5
     kind: build,run
-    condition: '@2.12.4:'
+    condition: '@2.12'
   - name: py-pydantic-core
     constraint: py-pydantic-core@2.27.1
     kind: build,run
@@ -328147,6 +328189,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4d351024c75c0f085a9febbb665ce8c0c6ec5d30e903bdb6394b7ede26aebb49
+  - version: 2.13.4
+    artifacts:
+    - checksums:
+      - sha256:c40756b57adaa8b1efeeced5c196f3f3b7c435f90e84ea7f443901bec8099ef6
   - version: 2.7.4
     artifacts:
     - checksums:
@@ -331275,10 +331321,8 @@ packages:
     kind: build
   - name: hdf
     constraint: hdf@4.2
-    kind: build,run
   - name: jpeg
     constraint: jpeg
-    kind: build,run
   - name: py-numpy
     constraint: py-numpy
     kind: build,run
@@ -331291,7 +331335,6 @@ packages:
     kind: build
   - name: zlib-api
     constraint: zlib-api
-    kind: build,run
   versions:
   - version: 0.10.4
     artifacts:
@@ -351480,7 +351523,7 @@ packages:
   - name: py-setuptools-scm
     constraint: py-setuptools-scm@8.0.4:8+toml
     kind: build
-    condition: '@8.4.20231024070348:'
+    condition: '@8.4.20231024070348:8.8'
   - name: py-setuptools-scm
     constraint: py-setuptools-scm@8.0.4:10+toml
     kind: build
@@ -351684,6 +351727,33 @@ packages:
       - sha256:016556573a05d2bebb983017c41427d906df870633d23e5bd9d68af8d4b81de2
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_scifem/package.py
+- id: spack:py-scikit-bio
+  registry: spack
+  name: py-scikit-bio
+  summary: Data structures, algorithms and educational resources for bioinformatics.
+  licenses:
+  - BSD-3-Clause
+  homepage: https://scikit.bio/
+  dependencies:
+  - py-setuptools
+  - py-wheel
+  - python
+  dependency_details:
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+  - name: py-wheel
+    constraint: py-wheel
+    kind: build
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+  versions:
+  - version: 0.7.3
+    artifacts:
+    - checksums:
+      - sha256:2492ebf2f6432d24c1030a0cd96d7708c2b57bc31b097a5ec838881792401ec5
+  recipe_path: repos/spack_repo/builtin/packages/py_scikit_bio/package.py
 - id: spack:py-scikit-build
   registry: spack
   name: py-scikit-build
@@ -358432,6 +358502,7 @@ packages:
   - name: py-blis
     constraint: py-blis@0.4.0:0.4
     kind: build,run
+    condition: '@:2.3.6'
   - name: py-blis
     constraint: py-blis@0.4.0:0.7
     kind: build,run
@@ -364002,34 +364073,6 @@ packages:
     artifacts:
     - checksums:
       - sha256:e2cfde8f79420f6deeffdeda9aaec3b6bc5abce947655d17ac662b126e48a60d
-  - version: 0.7.7
-    artifacts:
-    - checksums:
-      - sha256:83a0b8e17c09f012090a50e1e97ae897300a72b35e0c86c0b53d3bd2ae86d8c6
-  - version: 0.8.10
-    artifacts:
-    - checksums:
-      - sha256:6c57f3f3dd7ac2782770155f3adb2db0b1a269637e42f27599925e64b114f519
-  - version: 0.8.3
-    artifacts:
-    - checksums:
-      - sha256:8af07a39377cee1103a5c8b3330a421c2d99b9141e9cc5ddd2e3263fea416943
-  - version: 0.8.5
-    artifacts:
-    - checksums:
-      - sha256:d0097023658d4dea848d6ae73af84532d1e86617ac0925d1adf1dd903985dac3
-  - version: 0.8.6
-    artifacts:
-    - checksums:
-      - sha256:5470cc6687a091c7042cee89b2946d9235fe9f6d49c193a4ae2ac7bf386737c8
-  - version: 0.8.7
-    artifacts:
-    - checksums:
-      - sha256:db2723a20d04bcda8522165c73eea7c300eda74e0ce852d9022e0159d7895007
-  - version: 0.8.9
-    artifacts:
-    - checksums:
-      - sha256:eb1d13f25760052e8931f2ef80aaf6045a6cceb47514db8beab24cded16f13a7
   - version: 0.9.0
     artifacts:
     - checksums:
@@ -364614,6 +364657,7 @@ packages:
   repository_url: https://github.com/tensorflow/tensorflow
   maintainers:
   - adamjstewart
+  - afzpatel
   - aweits
   topics:
   - e4s
@@ -367492,6 +367536,7 @@ packages:
   repository_url: https://github.com/pytorch/pytorch
   maintainers:
   - adamjstewart
+  - renjithravindrankannath
   topics:
   - e4s
   dependencies:
@@ -438252,6 +438297,26 @@ packages:
     - checksums:
       - sha256:adcc74537337582153d5b11d281e391e91a7f3afae116aa1b9a034ffd11b0252
   recipe_path: repos/spack_repo/builtin/packages/r_rviennacl/package.py
+- id: spack:r-rwiener
+  registry: spack
+  name: r-rwiener
+  summary: Provides Wiener process distribution functions, namely the Wiener first passage time density, CDF, quantile and random functions. Additionally supplies a...
+  description: Provides Wiener process distribution functions, namely the Wiener first passage time density, CDF, quantile and random functions. Additionally supplies a modelling function (wdm) and further methods for the resulting object.
+  description_format: html
+  licenses:
+  - GPL-2.0-or-later
+  dependencies:
+  - c
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  versions:
+  - version: 1.3-3
+    artifacts:
+    - checksums:
+      - sha256:f8ae38071aef62928355aafbcd3f194933f23f394d41022a96644be7a97bd929
+  recipe_path: repos/spack_repo/builtin/packages/r_rwiener/package.py
 - id: spack:r-rzmq
   registry: spack
   name: r-rzmq
@@ -452569,7 +452634,7 @@ packages:
     constraint: 'java@6:'
   - name: java
     constraint: java@8:11
-    condition: '@1.0.1:'
+    condition: '@1.0.1:1.0.4'
   - name: java
     constraint: java@8:17
     condition: '@1.0.5:'
@@ -474119,6 +474184,7 @@ packages:
   - adios2
   - applications
   - aws
+  - cgns
   - faodel
   - fortran
   - legacy
@@ -474136,6 +474202,7 @@ packages:
     adios2: 'false'
     applications: 'true'
     aws: 'false'
+    cgns: 'true'
     faodel: 'false'
     legacy: 'true'
     libcatalyst: 'false'
@@ -474159,6 +474226,9 @@ packages:
     description: Enable support for S3 compatible storage using AWS SDK's S3 module
     default: 'false'
     condition: '@2025-10-14:'
+  - name: cgns
+    description: Enable CGNS.
+    default: 'true'
   - name: faodel
     description: Enable Faodel. See https://github.com/sandialabs/faodel
     default: 'false'
@@ -507758,7 +507828,7 @@ packages:
     condition: '@2.11.0'
   - name: py-jsonschema
     constraint: py-jsonschema@4.17:4.25
-    condition: '@2.12:'
+    condition: '@2.12:2.13'
   - name: py-jsonschema
     constraint: py-jsonschema@4.17:4.26
     condition: '@2.14.0:'
@@ -513697,6 +513767,7 @@ packages:
   description_format: html
   licenses:
   - GPL-2.0-or-later
+  - LGPL-2.1-or-later
   homepage: https://wannier.org
   repository_url: https://github.com/wannier-developers/wannier90
   topics:
@@ -513704,6 +513775,7 @@ packages:
   dependencies:
   - blas
   - c
+  - cmake
   - fortran
   - lapack
   - mpi
@@ -513713,6 +513785,10 @@ packages:
   - name: c
     constraint: c
     kind: build
+  - name: cmake
+    constraint: 'cmake@3.25:'
+    kind: build
+    condition: build_system=cmake
   - name: fortran
     constraint: fortran
     kind: build
@@ -513723,14 +513799,20 @@ packages:
     condition: +mpi
   options:
   - mpi
+  - pic
   - shared
   default_options:
     mpi: 'true'
+    pic: 'true'
     shared: 'true'
   features:
   - name: mpi
     description: Build parallel version of Wannier90
     default: 'true'
+  - name: pic
+    description: Build position independent code
+    default: 'true'
+    condition: build_system=cmake
   - name: shared
     description: Builds a shared version of the library
     default: 'true'
@@ -513751,6 +513833,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:40651a9832eb93dec20a8360dd535262c261c34e13c41b6755fa6915c936b254
+  - version: 4.0.2
+    artifacts:
+    - checksums:
+      - sha256:2d48b371eefa8b58a6c8088c1bdffc13fe3e761111e15c8566e2ee055d8bcdb0
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/wannier90/package.py
 - id: spack:warpx
@@ -524583,6 +524669,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:39032fe866f44724b104468038dc9ac4ff2c00a4b18c9a1e2c27064ab1f1143d
+  - version: 9.2.1054
+    artifacts:
+    - checksums:
+      - sha256:b0ad7bba02f4de81cf3ecbf23ef1ef3f69e9e9029203d6c9f7858e18d0669470
   recipe_path: repos/spack_repo/builtin/packages/xxd_standalone/package.py
 - id: spack:xxdiff
   registry: spack

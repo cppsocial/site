@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: 13f43b85aa952e2e9df4702e9ad49509e68f1da0
+revision: a47a9e08fd70f5342a2660be9ea65353b2904aa6
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -3358,6 +3358,10 @@ packages:
     artifacts:
     - url: https://github.com/aurora-opensource/au.git
     - url: https://github.com/aurora-opensource/au/archive/refs/tags/0.5.1.tar.gz
+  - version: 0.6.0
+    artifacts:
+    - url: https://github.com/aurora-opensource/au.git
+    - url: https://github.com/aurora-opensource/au/archive/refs/tags/0.6.0.tar.gz
   recipe_path: packages/a/aurora-au/xmake.lua
 - id: xmake:autoconf
   registry: xmake
@@ -9219,6 +9223,16 @@ packages:
     artifacts:
     - url: https://github.com/Blosc/c-blosc2.git
     - url: https://github.com/Blosc/c-blosc2/archive/refs/tags/v3.2.3.tar.gz
+  - version: v3.3.3
+    upstream_version: 3.3.3
+    artifacts:
+    - url: https://github.com/Blosc/c-blosc2.git
+    - url: https://github.com/Blosc/c-blosc2/archive/refs/tags/v3.3.3.tar.gz
+  - version: v3.3.4
+    upstream_version: 3.3.4
+    artifacts:
+    - url: https://github.com/Blosc/c-blosc2.git
+    - url: https://github.com/Blosc/c-blosc2/archive/refs/tags/v3.3.4.tar.gz
   recipe_path: packages/c/c-blosc2/xmake.lua
 - id: xmake:c-vector
   registry: xmake
@@ -13737,6 +13751,10 @@ packages:
     artifacts:
     - url: https://github.com/yhirose/cpp-peglib.git
     - url: https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.10.3.tar.gz
+  - version: 1.17.0
+    artifacts:
+    - url: https://github.com/yhirose/cpp-peglib.git
+    - url: https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.17.0.tar.gz
   - version: 1.8.3
     artifacts:
     - url: https://github.com/yhirose/cpp-peglib.git
@@ -15966,7 +15984,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x560419463aa0'
+    default: 'table: 0x55577cb90a00'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -22046,6 +22064,11 @@ packages:
     - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_1/expat-2.8.1.tar.bz2
       checksums:
       - sha256:f5833dd2e1cd7739ec9182804a1a29c4f0cc7c2f26b633d3a2188b7766a88ecb
+  - version: 2.8.4
+    artifacts:
+    - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_4/expat-2.8.4.tar.bz2
+      checksums:
+      - sha256:963250a823c16a498582b4ad82ad0f88926be0769675d3b6956be4d769a1cd8f
   recipe_path: packages/e/expat/xmake.lua
 - id: xmake:expected-lite
   registry: xmake
@@ -23662,7 +23685,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x560418fe2b40'
+    default: 'table: 0x55578007a120'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -23672,7 +23695,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x560418e27c30'
+    default: 'table: 0x55578007b780'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -26545,6 +26568,11 @@ packages:
     - url: https://github.com/OSGeo/gdal/releases/download/v3.13.2/gdal-3.13.2.tar.gz
       checksums:
       - sha256:1051c33db1d9e6a05907ac07cd06f5ce8ac0658f317c3229774cc2198a6c1252
+  - version: 3.13.3
+    artifacts:
+    - url: https://github.com/OSGeo/gdal/releases/download/v3.13.3/gdal-3.13.3.tar.gz
+      checksums:
+      - sha256:5e0c388d83da2d686cc00a40272882432cdb54edff43d4af173e532844a0a0ea
   - version: 3.5.1
     artifacts:
     - url: https://github.com/OSGeo/gdal/releases/download/v3.5.1/gdal-3.5.1.tar.gz
@@ -29448,7 +29476,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x560417c7a8c0'
+    default: 'table: 0x55577c1e8630'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -29692,19 +29720,19 @@ packages:
   - version: 0.57.0
     artifacts:
     - url: https://github.com/sciapp/gr/releases/download/v0.57.0/gr-0.57.0-Darwin-x86_64.tar.gz
-    - url: https://github.com/sciapp/gr/releases/download/v0.57.0/gr-0.57.0-Debian-x86_64.tar.gz
+    - url: https://github.com/sciapp/gr/releases/download/v0.57.0/gr-0.57.0-Ubuntu-x86_64.tar.gz
   - version: 0.58.0
     artifacts:
     - url: https://github.com/sciapp/gr/releases/download/v0.58.0/gr-0.58.0-Darwin-x86_64.tar.gz
-    - url: https://github.com/sciapp/gr/releases/download/v0.58.0/gr-0.58.0-Debian-x86_64.tar.gz
+    - url: https://github.com/sciapp/gr/releases/download/v0.58.0/gr-0.58.0-Ubuntu-x86_64.tar.gz
   - version: 0.62.0
     artifacts:
     - url: https://github.com/sciapp/gr/releases/download/v0.62.0/gr-0.62.0-Darwin-x86_64.tar.gz
-    - url: https://github.com/sciapp/gr/releases/download/v0.62.0/gr-0.62.0-Debian-x86_64.tar.gz
+    - url: https://github.com/sciapp/gr/releases/download/v0.62.0/gr-0.62.0-Ubuntu-x86_64.tar.gz
   - version: 0.64.0
     artifacts:
     - url: https://github.com/sciapp/gr/releases/download/v0.64.0/gr-0.64.0-Darwin-x86_64.tar.gz
-    - url: https://github.com/sciapp/gr/releases/download/v0.64.0/gr-0.64.0-Debian-x86_64.tar.gz
+    - url: https://github.com/sciapp/gr/releases/download/v0.64.0/gr-0.64.0-Ubuntu-x86_64.tar.gz
   recipe_path: packages/g/gr/xmake.lua
 - id: xmake:graaf
   registry: xmake
@@ -31887,7 +31915,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x560418077990'
+    default: 'table: 0x55578023bcb0'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -32341,6 +32369,11 @@ packages:
     artifacts:
     - url: https://github.com/hypre-space/hypre.git
     - url: https://github.com/hypre-space/hypre/archive/refs/tags/v3.1.0.tar.gz
+  - version: v3.2.0
+    upstream_version: 3.2.0
+    artifacts:
+    - url: https://github.com/hypre-space/hypre.git
+    - url: https://github.com/hypre-space/hypre/archive/refs/tags/v3.2.0.tar.gz
   recipe_path: packages/h/hypre/xmake.lua
 - id: xmake:hyprwayland-scanner
   registry: xmake
@@ -34981,6 +35014,11 @@ packages:
     artifacts:
     - url: https://github.com/intel/ittapi.git
     - url: https://github.com/intel/ittapi/archive/refs/tags/v3.28.0.tar.gz
+  - version: v3.28.4
+    upstream_version: 3.28.4
+    artifacts:
+    - url: https://github.com/intel/ittapi.git
+    - url: https://github.com/intel/ittapi/archive/refs/tags/v3.28.4.tar.gz
   recipe_path: packages/i/ittapi/xmake.lua
 - id: xmake:iverilog
   registry: xmake
@@ -45204,6 +45242,11 @@ packages:
     artifacts:
     - url: https://github.com/confluentinc/librdkafka.git
     - url: https://github.com/confluentinc/librdkafka/archive/refs/tags/v2.14.2.tar.gz
+  - version: v2.15.1
+    upstream_version: 2.15.1
+    artifacts:
+    - url: https://github.com/confluentinc/librdkafka.git
+    - url: https://github.com/confluentinc/librdkafka/archive/refs/tags/v2.15.1.tar.gz
   recipe_path: packages/l/librdkafka/xmake.lua
 - id: xmake:librealsense
   registry: xmake
@@ -57236,10 +57279,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x5604180f7280'
+    default: 'table: 0x55578ea3cce0'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x560417affae0'
+    default: 'table: 0x55578ea3d760'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -57700,6 +57743,10 @@ packages:
     artifacts:
     - url: https://github.com/zlib-ng/minizip-ng.git
     - url: https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.2.1.tar.gz
+  - version: 4.2.2
+    artifacts:
+    - url: https://github.com/zlib-ng/minizip-ng.git
+    - url: https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.2.2.tar.gz
   recipe_path: packages/m/minizip-ng/xmake.lua
 - id: xmake:minja
   registry: xmake
@@ -60487,6 +60534,10 @@ packages:
     artifacts:
     - url: https://github.com/nanopb/nanopb.git
     - url: https://github.com/nanopb/nanopb/archive/refs/tags/0.4.9.tar.gz
+  - version: 0.4.92
+    artifacts:
+    - url: https://github.com/nanopb/nanopb.git
+    - url: https://github.com/nanopb/nanopb/archive/refs/tags/0.4.92.tar.gz
   recipe_path: packages/n/nanopb/xmake.lua
 - id: xmake:nanosvg
   registry: xmake
@@ -78587,6 +78638,10 @@ packages:
     artifacts:
     - url: https://github.com/getsentry/sentry-native.git
     - url: https://github.com/getsentry/sentry-native/releases/download/0.16.5/sentry-native.zip
+  - version: 0.16.6
+    artifacts:
+    - url: https://github.com/getsentry/sentry-native.git
+    - url: https://github.com/getsentry/sentry-native/releases/download/0.16.6/sentry-native.zip
   - version: 0.6.3
     artifacts:
     - url: https://github.com/getsentry/sentry-native.git
@@ -85978,7 +86033,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x56041846e490'
+    default: 'table: 0x5557795ec370'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -88955,7 +89010,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x560418d75900'
+    default: 'table: 0x55577b912a90'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -92529,7 +92584,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x560418c42270'
+    default: 'table: 0x555773513330'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -97142,7 +97197,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x560417f08a80'
+    default: 'table: 0x55576decd6f0'
   versions:
   - version: 0.23.93
     artifacts:

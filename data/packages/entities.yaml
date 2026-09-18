@@ -2811,12 +2811,10 @@ entities:
   - spack:baurmc
 - id: bazel
   name: bazel
-  aliases:
-  - vcpkg-tool-bazel
+  aliases: []
   packages:
   - conan:bazel
   - spack:bazel
-  - vcpkg:vcpkg-tool-bazel
   - xmake:bazel
 - id: bazel-diff
   name: bazel-diff
@@ -8103,6 +8101,11 @@ entities:
   aliases: []
   packages:
   - xmake:cpp-tbox
+- id: cpp-unicodelib
+  name: cpp-unicodelib
+  aliases: []
+  packages:
+  - vcpkg:cpp-unicodelib
 - id: cpp-validator
   name: cpp-validator
   aliases: []
@@ -19471,6 +19474,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:kdstatemachineeditor
+- id: kdtreepp
+  name: kdtreepp
+  aliases: []
+  packages:
+  - bazel:kdtreepp
 - id: kdutils
   name: kdutils
   aliases: []
@@ -20041,6 +20049,11 @@ entities:
   aliases: []
   packages:
   - spack:kripke
+- id: krona
+  name: krona
+  aliases: []
+  packages:
+  - spack:krona
 - id: krpc
   name: krpc
   aliases: []
@@ -23836,12 +23849,10 @@ entities:
   - xmake:librdkafka
 - id: librealsense
   name: librealsense
-  aliases:
-  - realsense2
+  aliases: []
   packages:
   - bazel:librealsense
   - conan:librealsense
-  - vcpkg:realsense2
   - xmake:librealsense
 - id: libredwg
   name: libredwg
@@ -24965,6 +24976,11 @@ entities:
   aliases: []
   packages:
   - spack:libwhich
+- id: libwignernj
+  name: libwignernj
+  aliases: []
+  packages:
+  - spack:libwignernj
 - id: libwindowswm
   name: libwindowswm
   aliases: []
@@ -26905,6 +26921,7 @@ entities:
   name: mas-bandwidth-serialize
   aliases: []
   packages:
+  - conan:mas-bandwidth-serialize
   - vcpkg:mas-bandwidth-serialize
 - id: masa
   name: masa
@@ -28513,6 +28530,7 @@ entities:
   - conan:mpdecimal
   - meson:mpdecimal
   - spack:mpdecimal
+  - vcpkg:mpdecimal
   - xmake:mpdecimal
 - id: mpe2
   name: mpe2
@@ -28841,8 +28859,10 @@ entities:
   - vcpkg:msinttypes
 - id: msix
   name: msix
-  aliases: []
+  aliases:
+  - msix_packaging
   packages:
+  - bazel:msix_packaging
   - conan:msix
   - vcpkg:msix
 - id: msmc
@@ -41243,6 +41263,11 @@ entities:
   aliases: []
   packages:
   - spack:py-dpath
+- id: py-dram-bio
+  name: py-dram-bio
+  aliases: []
+  packages:
+  - spack:py-dram-bio
 - id: py-drep
   name: py-drep
   aliases: []
@@ -50128,6 +50153,11 @@ entities:
   aliases: []
   packages:
   - spack:py-scifem
+- id: py-scikit-bio
+  name: py-scikit-bio
+  aliases: []
+  packages:
+  - spack:py-scikit-bio
 - id: py-scikit-build
   name: py-scikit-build
   aliases: []
@@ -51425,6 +51455,13 @@ entities:
   aliases: []
   packages:
   - spack:py-tensordict
+- id: tensorflow
+  name: py-tensorflow
+  aliases:
+  - tensorflow-lite
+  packages:
+  - conan:tensorflow-lite
+  - spack:py-tensorflow
 - id: py-tensorflow-datasets
   name: py-tensorflow-datasets
   aliases: []
@@ -59129,6 +59166,11 @@ entities:
   aliases: []
   packages:
   - spack:r-rviennacl
+- id: r-rwiener
+  name: r-rwiener
+  aliases: []
+  packages:
+  - spack:r-rwiener
 - id: r-rzmq
   name: r-rzmq
   aliases: []
@@ -60821,6 +60863,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:realm-core
+- id: realsense2
+  name: realsense2
+  aliases: []
+  packages:
+  - vcpkg:realsense2
 - id: rebound
   name: rebound
   aliases: []
@@ -62712,6 +62759,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_minijinja
+- id: rules-mise
+  name: rules_mise
+  aliases: []
+  packages:
+  - bazel:rules_mise
 - id: rules-mjml
   name: rules_mjml
   aliases: []
@@ -67113,6 +67165,11 @@ entities:
   aliases: []
   packages:
   - spack:swftools
+- id: swift-bylaws
+  name: swift-bylaws
+  aliases: []
+  packages:
+  - bazel:swift-bylaws
 - id: swift-filename-matcher
   name: swift-filename-matcher
   aliases: []
@@ -67339,11 +67396,6 @@ entities:
   aliases: []
   packages:
   - spack:t8code
-- id: ta-lib
-  name: ta-lib
-  aliases: []
-  packages:
-  - xmake:ta-lib
 - id: tabix
   name: tabix
   aliases: []
@@ -67381,11 +67433,13 @@ entities:
   aliases: []
   packages:
   - spack:talass
-- id: talib
+- id: ta-lib
   name: talib
-  aliases: []
+  aliases:
+  - ta-lib
   packages:
   - vcpkg:talib
+  - xmake:ta-lib
 - id: talloc
   name: talloc
   aliases: []
@@ -67771,22 +67825,6 @@ entities:
   aliases: []
   packages:
   - spack:tengine
-- id: tensorflow
-  name: tensorflow
-  aliases:
-  - py-tensorflow
-  - tensorflow-cc
-  - tensorflow-lite
-  packages:
-  - conan:tensorflow-lite
-  - spack:py-tensorflow
-  - vcpkg:tensorflow
-  - vcpkg:tensorflow-cc
-- id: tensorflow-common
-  name: tensorflow-common
-  aliases: []
-  packages:
-  - vcpkg:tensorflow-common
 - id: tensorflow-serving-client
   name: tensorflow-serving-client
   aliases: []
@@ -68142,6 +68180,11 @@ entities:
   aliases: []
   packages:
   - spack:time
+- id: time-shield-cpp
+  name: time-shield-cpp
+  aliases: []
+  packages:
+  - vcpkg:time-shield-cpp
 - id: timedatex
   name: timedatex
   aliases: []

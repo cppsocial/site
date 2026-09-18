@@ -5,7 +5,36 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from site_plugins.browser import _book_published_date, _book_records
+from site_plugins.browser import _book_published_date, _book_records, _catalog_packages
+
+
+class PackageCatalogTests(unittest.TestCase):
+    def test_recipe_url_is_expanded_from_catalog_revision(self) -> None:
+        packages = _catalog_packages(
+            {
+                "repository": "https://github.com/example/recipes",
+                "revision": "abc123",
+                "packages": [
+                    {
+                        "id": "example:fmt",
+                        "recipe_path": "packages/fmt/package.py",
+                    }
+                ],
+            }
+        )
+
+        self.assertEqual(
+            packages,
+            [
+                {
+                    "id": "example:fmt",
+                    "recipe_url": (
+                        "https://github.com/example/recipes/blob/abc123/"
+                        "packages/fmt/package.py"
+                    ),
+                }
+            ],
+        )
 
 
 class BookPublishedDateTests(unittest.TestCase):

@@ -2,4 +2,6 @@ $schema: ../../schemas/blocks/card-group.json
 type: card_group
 card_type: book_card
 id: books
-cards: []
+cards:
+  - { isbn: "9780321714114" }
+  - { isbn: "9781491903995" }

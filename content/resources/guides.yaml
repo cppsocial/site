@@ -3,4 +3,7 @@ type: card_group
 id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
-cards: []
+cards:
+  - title: Microsoft modern C++ guide
+    path: https://learn.microsoft.com/en-us/cpp/cpp/welcome-back-to-cpp-modern-cpp
+    description: An overview of modern C++ language and library practices

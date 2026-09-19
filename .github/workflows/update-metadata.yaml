@@ -46,6 +46,12 @@ jobs:
       - name: Install tools
         run: python -m pip install -r requirements.txt
 
+      - name: Install xmake
+        if: inputs.updater == 'packages'
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+
       - name: Prepare fresh branch
         id: branch
         env:
@@ -86,6 +92,13 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+          # The provenance retrieval date changes even when metadata is unchanged.
+          if git diff --cached --quiet --ignore-matching-lines='^retrieved_at:' -- data/; then
+            echo "substantive=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "substantive=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Commit changes
         if: steps.changes.outputs.changed == 'true'
         env:
@@ -115,6 +128,7 @@ jobs:
           UPDATE_BRANCH: automation/update-${{ inputs.updater }}
           BASE_BRANCH: ${{ github.event.repository.default_branch }}
           UPDATER: ${{ inputs.updater }}
+          SUBSTANTIVE_CHANGES: ${{ steps.changes.outputs.substantive }}
         run: |
           pr_number="$(gh pr list \
             --state open \
@@ -128,10 +142,13 @@ jobs:
             gh pr edit "$pr_number" \
               --title "[metadata] update $UPDATER" \
               --body "Automated update from \`meta-updater $UPDATER\`."
-          else
+          elif [[ "$SUBSTANTIVE_CHANGES" == 'true' ]]
+          then
             gh pr create \
               --head "$UPDATE_BRANCH" \
               --base "$BASE_BRANCH" \
               --title "[metadata] update $UPDATER" \
               --body "Automated update from \`meta-updater $UPDATER\`."
+          else
+            echo "Only retrieval timestamps changed; skipping PR creation."
           fi

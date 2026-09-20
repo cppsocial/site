@@ -1,5 +1,35 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: mO2FLrYyy57jWTEK
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: std::call_once vs. std::async
+  url: https://devblogs.microsoft.com/oldnewthing/20260917-00/?p=112706
+  published: 2026-09-17 14:00:00+00:00
+  description: Simple vs complex machinery. The post <CODE>std::call_once</CODE> vs. <CODE>std::async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: gt1SdIoec9_G92C1
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Magic statics vs. std::call_once
+  url: https://devblogs.microsoft.com/oldnewthing/20260916-00/?p=112703
+  published: 2026-09-16 14:00:00+00:00
+  description: They sort of do the same thing, but differently. The post Magic statics vs. <CODE>std::call_once</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: y5KyZ65yT2_wcd89
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1?
+  url: https://devblogs.microsoft.com/oldnewthing/20260915-00/?p=112700
+  published: 2026-09-15 14:00:00+00:00
+  description: It used to start at 1, but that was the old system. The post Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
 - post_id: PtkwWlztbc4Z7c_t
   source_id: oldnewthing
   source_title: The Old New Thing

@@ -1,0 +1,471 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: I_jVmsWwDgXzGWd1
+  source_id: vitaut
+  source_title: vitaut
+  title: A complete floating-point to_chars in 18 kB
+  url: https://vitaut.net/posts/2026/complete-to-chars/
+  published: 2026-08-18 00:00:00+00:00
+  description: libstdc++'s floating-point std::to_chars, every format and precision for float through long double, adds about 256 kB to a statically linked binary. Żmij does the same job in about 18 kB, and formats shortest doubles about 7x faster in the benchmark below. std::to_chars for floa…
+- post_id: EO3-YxPpdd543bDb
+  source_id: vitaut
+  source_title: vitaut
+  title: The fastest double-to-string algorithm you’ve never heard of
+  url: https://vitaut.net/posts/2026/yy-dtoa/
+  published: 2026-08-10 00:00:00+00:00
+  description: Żmij, the binary-to-decimal conversion library I wrote about a few posts back, started as an optimized port of Schubfach. Later I switched its core to a different algorithm, defined in yy_double.c from yyjson by ibireme. It has no paper, no name beyond the file it lives in (I'll…
+- post_id: MVV3N8b8gz4evVrj
+  source_id: vitaut
+  source_title: vitaut
+  title: Every float on one page
+  url: https://vitaut.net/posts/2026/every-float/
+  published: 2026-05-02 00:00:00+00:00
+  description: In my previous post about Żmij, a high-performance binary-to-decimal floating-point conversion library, I drew a small diagram of a rounding interval around a single floating-point value. That worked well enough for the local picture, but it doesn't say much about the global one…
+- post_id: McK0-6-SLkkXDKWH
+  source_id: vitaut
+  source_title: vitaut
+  title: Faster double-to-string conversion
+  url: https://vitaut.net/posts/2025/faster-dtoa/
+  published: 2025-12-13 00:00:00+00:00
+  description: 'There comes a time in every software engineer’s life when they come up with a new binary-to-decimal floating-point conversion method. I guess my time has come. I just wrote one, mostly over a weekend: https://github.com/vitaut/zmij. It incorporates lessons learned from implement…'
+- post_id: jzlqrACPBOeQbZe2
+  source_id: vitaut
+  source_title: vitaut
+  title: to_chars or not to_chars?
+  url: https://vitaut.net/posts/2025/to-chars/
+  published: 2025-12-05 00:00:00+00:00
+  description: I was recently adding my Schubfach double-to-string conversion algorithm implementation to dtoa-benchmark and noticed that std::to_chars was notably missing from that benchmark. So I decided to add it and see how well it compares to other methods. And it did pretty well! This pa…
+- post_id: uwrVPj5UGyi4QPMA
+  source_id: vitaut
+  source_title: vitaut
+  title: The smallest state-of-the-art double-to-string implementation
+  url: https://vitaut.net/posts/2025/smallest-dtoa/
+  published: 2025-11-29 00:00:00+00:00
+  description: Converting floating-point numbers to their shortest decimal representations has long been a surprisingly challenging problem. For decades, developers relied on algorithms such as Dragon4 that used multi-precision arithmetic. More recently, a new generation of provably correct an…
+- post_id: jSBtRNwiKtK1byYC
+  source_id: vitaut
+  source_title: vitaut
+  title: double to string conversion in 150 lines of code
+  url: https://vitaut.net/posts/2024/simple-dtoa/
+  published: 2024-09-27 00:00:00+00:00
+  description: 'My previous blog post gained some attention on Hacker News (discussion), and as someone deeply interested in floating-point formatting, I couldn''t ignore the following comment: It''s kind of mindblowing to see how much code floating point formatting needs. If you want it to be fa…'
+- post_id: f5KpKHCQU7Uj3OEI
+  source_id: vitaut
+  source_title: vitaut
+  title: 'Honey, I shrunk {fmt}: bringing binary size to 14k and ditching the C++ runtime'
+  url: https://vitaut.net/posts/2024/binary-size/
+  published: 2024-08-30 00:00:00+00:00
+  description: The {fmt} formatting library is known for its small binary footprint, often producing code that is several times smaller per function call compared to alternatives like IOStreams, Boost Format, or, somewhat ironically, tinyformat. This is mainly achieved through careful applicat…
+- post_id: 0fEMVjRAjSStcr-A
+  source_id: vitaut
+  source_title: vitaut
+  title: 'Optimizing the unoptimizable: a journey to faster C++ compile times'
+  url: https://vitaut.net/posts/2024/faster-cpp-compile-times/
+  published: 2024-01-06 00:00:00+00:00
+  description: 'In this post I''ll talk about bringing compile times of the {fmt} library on par with the C standard I/O library (stdio). First some background: {fmt} is a popular open-source formatting library for C++ that provides a better alternative to C++ iostreams and C stdio. It has alrea…'
+- post_id: zh_rR4Nqj-prhzOV
+  source_id: vitaut
+  source_title: vitaut
+  title: std::print in C++23
+  url: https://vitaut.net/posts/2023/print-in-cpp23/
+  published: 2023-12-24 00:00:00+00:00
+  description: I just realized that 2023 is almost over and I haven't posted about the most important feature of C++23. Which feature is that, you might ask? Unlike C++20 which had a bunch of massive new features like modules, concepts and the third one, C++23 feels incremental. The C++23 feat…
+- post_id: ujhBHNmyP7WQWQ-c
+  source_id: vitaut
+  source_title: vitaut
+  title: Measuring clock precision
+  url: https://vitaut.net/posts/2023/measuring-clock-precision/
+  published: 2023-12-17 00:00:00+00:00
+  description: 'I''ve been reading Operating Systems: Three Easy Pieces, which is a great book BTW, and one of the questions in the TLB section is For timing, you’ll need to use a timer (e.g., gettimeofday()). How precise is such a timer? How long does an operation have to take in order for you…'
+- post_id: U6R6hFVPdd8Fv1im
+  source_id: vitaut
+  source_title: vitaut
+  title: ChatGPT-driven development
+  url: https://vitaut.net/posts/2023/chatgpt-driven-development/
+  published: 2023-12-14 00:00:00+00:00
+  description: 'In the vast, often inexplicable universe of C++ programming, I found myself staring into the digital abyss of a peculiar problem: how does one effectively compare format_as with the venerable formatter specialization? This question was as intriguing as it was esoteric, much like…'
+- post_id: Lma8ttpdPMnm0LL7
+  source_id: vitaut
+  source_title: vitaut
+  title: Printing double aka the most difficult problem in computer science
+  url: https://vitaut.net/posts/2023/printing-double/
+  published: 2023-06-04 00:00:00+00:00
+  description: 'A few years ago I discovered this StackOverflow question: How do I print a double value with full precision using cout? I was shocked to see how wrong most of the answers were so I answered it myself back then. Recently I stumbled upon it again and decided to write this blog pos…'
+- post_id: 6OCDMkxsz75wd9ba
+  source_id: vitaut
+  source_title: vitaut
+  title: Simple usage of C++20 modules
+  url: https://vitaut.net/posts/2023/simple-cxx20-modules/
+  published: 2023-04-17 00:00:00+00:00
+  description: In my previous post I showed how to compile {fmt} as a C++20 module with clang. Although taking only two commands, ideally it's not something you should be doing manually. So in this post, I'll talk about module support in CMake, everyone's favorite not a build system. My first…
+- post_id: fPcOXGTQxs9EJHql
+  source_id: vitaut
+  source_title: vitaut
+  title: C++20 modules in clang
+  url: https://vitaut.net/posts/2023/cxx20-modules-in-clang/
+  published: 2023-04-10 00:00:00+00:00
+  description: Out of three headline C++20 features (modules, coroutines and the third one), modules are, in my opinion, by far the most important for the daily use. Modules aim to replace the legacy header system inherited from C and based on primitive textual inclusion with a more scalable,…
+- post_id: QsR6u-1a3GlcCUGD
+  source_id: vitaut
+  source_title: vitaut
+  title: Migrating to a safer API with {fmt} 8.x
+  url: https://vitaut.net/posts/2022/migrating-to-safer-api/
+  published: 2022-01-29 00:00:00+00:00
+  description: 'We recently migrated a large codebase from {fmt} 7.x to 8.1.1 and in this blog post I''ll show some of the fun issues discovered thanks to improved diagnostics in the new version of this library. Let''s start with this piece of questionable code: std::string format_error( std::uin…'
+- post_id: gGejjwpTuoU9AcvM
+  source_id: vitaut
+  source_title: vitaut
+  title: iOS SSID format string bug is preventable
+  url: https://vitaut.net/posts/2021/preventing-format-string-bugs/
+  published: 2021-06-22 00:00:00+00:00
+  description: After joining my personal WiFi with the SSID “%p%s%s%s%s%n”, my iPhone permanently disabled it’s WiFi functionality. Neither rebooting nor changing SSID fixes it :~) — Carl Schou (@vm_call) on Twitter The SSID format string bug in iOS WiFi service has been making rounds on socia…
+- post_id: 8dKFijw4Ez1q9MrB
+  source_id: vitaut
+  source_title: vitaut
+  title: A quest for safe text formatting API
+  url: https://vitaut.net/posts/2021/safe-formatting-api/
+  published: 2021-06-16 00:00:00+00:00
+  description: 'Since the introduction of format strings in Fortran in the 50s pretty much all major programming languages used them in their text formatting and I/O APIs: printf-based: C, Haskell, Java/JVM languages, PHP and others Python-format-based: Python, Rust, C++ (starting from C++20) N…'
+- post_id: hqKjlC0h2YB8xTfS
+  source_id: vitaut
+  source_title: vitaut
+  title: Writing files 5 to 9 times faster than fprintf
+  url: https://vitaut.net/posts/2020/optimal-file-buffer-size/
+  published: 2020-08-04 00:00:00+00:00
+  description: The value of BUFSIZ has been chosen at random in 1989 and can no longer be changed because that would break ABI. — Peter Dimov (@pdimov2) on Twitter I recently added a new unsynchronized file output API to the {fmt} library. Together with format string compilation, zero memory a…
+- post_id: _lujJxp9R66zVoZD
+  source_id: vitaut
+  source_title: vitaut
+  title: Converting a hundred million integers to strings per second
+  url: https://vitaut.net/posts/2020/fast-int-to-string-revisited/
+  published: 2020-06-13 00:00:00+00:00
+  description: Almost 7 years ago I wrote a blog post comparing performance of different methods of converting an integer into a string. A lot of things have changed since then so I decided to write a follow-up post and see how much progress has been made over the years. First of all let's loo…
+- post_id: fmeX7cvzgK95ZKd2
+  source_id: vitaut
+  source_title: vitaut
+  title: Reducing {fmt} library size 4x using Bloaty McBloatface
+  url: https://vitaut.net/posts/2020/reducing-library-size/
+  published: 2020-05-21 00:00:00+00:00
+  description: When it comes to comparing different software solutions, speed is often the main if not the only factor considered. This is not the case in the {fmt} library which tries to find a good balance between speed, binary size and compile times by default and give you an option to get…
+- post_id: KNYAjK51ibEQtJ5V
+  source_id: vitaut
+  source_title: vitaut
+  title: std::format in C++20
+  url: https://vitaut.net/posts/2019/std-format-cpp20/
+  published: 2019-07-23 00:00:00+00:00
+  description: I'm happy to announce that the Text Formatting proposal (std::format) made it into the C++20 Committee Draft at the Cologne meeting, just in time before the feature freeze. This concludes a three-year long design, implementation, and standardization effort. Here's a brief histor…
+- post_id: 8-5jaIgVJ8v5W8f_
+  source_id: vitaut
+  source_title: vitaut
+  title: Formatting floating point numbers
+  url: https://vitaut.net/posts/2019/formatting-floating-point-numbers/
+  published: 2019-02-11 00:00:00+00:00
+  description: Is floating-point math broken? -- Cato Johnston (Stack Overflow) Formatting floating-point (FP) numbers is a surprisingly complicated task. While you can probably write a decent integer to string conversion in a matter of minutes, a good FP formatting algorithm deserves a paper…
+- post_id: m5VpHuvtUyrvM6Hg
+  source_id: vitaut
+  source_title: vitaut
+  title: ISO C++ standards committee meeting in Rapperswil
+  url: https://vitaut.net/posts/2018/iso-cpp-meeting-rapperswil/
+  published: 2018-06-15 00:00:00+00:00
+  description: Last week I attended the ISO C++ standards committee meeting in beautiful Rapperswil and here are some highlights biased towards what I’m interested in and what I had a chance to attend (mostly text formatting, modules, and various library evolution stuff). For a more comprehens…
+- post_id: RXX-DJsNje1DywzQ
+  source_id: vitaut
+  source_title: vitaut
+  title: Text Formatting at the ISO C++ standards meeting in Jacksonville
+  url: https://vitaut.net/posts/2018/text-formatting-jacksonville/
+  published: 2018-03-17 00:00:00+00:00
+  description: This week I attended the ISO C++ standards committee meeting to present the second revision of my paper P0645R1 Text Formatting, based on the {fmt} formatting library. The first revision was reviewed by Library Evolution Working Group (LEWG) in June 2017 in Toronto and there was…
+- post_id: eDVI352yg7FH5fPh
+  source_id: vitaut
+  source_title: vitaut
+  title: Improving compile times of C++ code
+  url: https://vitaut.net/posts/2017/improving-compile-times/
+  published: 2017-12-09 00:00:00+00:00
+  description: In the previous blog post I described how to catch errors early at the cost of somewhat increased compile times. In this one, I'll explore the other direction and discuss reducing compile times, again using the fmt library as an example. Use variadic templates judiciously Variad…
+- post_id: PT7XEFh89lyKdFwy
+  source_id: vitaut
+  source_title: vitaut
+  title: Compile-time format string checks
+  url: https://vitaut.net/posts/2017/compile-time-format-strings/
+  published: 2017-11-05 00:00:00+00:00
+  description: 'Note: the API described in this post is outdated, please use the one documented in Format string compilation instead. Compile-time validation of format strings in various forms is one of the most requested features in the fmt project on GitHub (#62, #166, #295, #467, #492, #544,…'
+- post_id: poyB0fw9Zef6KSzW
+  source_id: vitaut
+  source_title: vitaut
+  title: Format API improvements
+  url: https://vitaut.net/posts/2017/format-api-improvements/
+  published: 2017-08-20 00:00:00+00:00
+  description: 'It''s been a while since my last post. Two important things happened in the meantime to the fmt project: revision 0 of the formatting paper has been submitted to the standards committee and version 4 of the library released (thanks to Jonathan Müller for putting the new release t…'
+- post_id: 0YLR4YHTW2ck1jBF
+  source_id: vitaut
+  source_title: vitaut
+  title: Reducing printf call overhead with variadic templates
+  url: https://vitaut.net/posts/2016/reducing-printf-call-overhead/
+  published: 2016-11-05 00:00:00+00:00
+  description: A few days ago I learned about a cool new project called printpp which is a printf format string preprocessor. It rewrites format strings from brace-delimited format into printf format at compile time. Although the project mentions Python formatting, the only thing they seem to…
+- post_id: bLQOCFLOmjp_00JY
+  source_id: vitaut
+  source_title: vitaut
+  title: Pokémon GO attack party optimization
+  url: https://vitaut.net/posts/2016/pokemon-go/
+  published: 2016-07-19 00:00:00+00:00
+  description: We designed distributed architectures, highly available and resilient systems, reactive interfaces & what are they for? Catching Pokemons ;( — Mario Fusco (on Twitter) Pokémon GO, an augmented-reality mobile game recently released by Niantic, has been generating a lot of hype si…
+- post_id: JSPj15uZpPUatKOk
+  source_id: vitaut
+  source_title: vitaut
+  title: reStructuredText vs Markdown for documentation
+  url: https://vitaut.net/posts/2016/rst-vs-markdown/
+  published: 2016-06-16 00:00:00+00:00
+  description: In this post I am going to share my experience of using Markdown and reStructuredText (RST) for technical documentation. As a library developer I have to write a fair amount of it, for example, the fmt library documentation, and I've used both languages extensively. In fact, I'm…
+- post_id: H_Om1vXWnq_sbXKI
+  source_id: vitaut
+  source_title: vitaut
+  title: Giving up on Julia
+  url: https://vitaut.net/posts/2016/giving-up-on-julia/
+  published: 2016-05-13 00:00:00+00:00
+  description: 'When I first learned about the Julia programming language, I became very enthusiastic about it. Just look at the feature list from their website: Multiple dispatch: providing ability to define function behavior across many combinations of argument types Dynamic type system: type…'
+- post_id: tPXAtSaq2Xaufred
+  source_id: vitaut
+  source_title: vitaut
+  title: Working with optimization problems in .nl files
+  url: https://vitaut.net/posts/2016/working-with-optimization-problems-in-nl-files/
+  published: 2016-03-07 00:00:00+00:00
+  description: In one of the previous posts I have described an API for reading .nl files. The NL reader API is now stable and documented at https://ampl.github.io/nl-reader.html. Also you can find a few examples of using it in nl-example.cc. It is still the way to go if you want to process .n…
+- post_id: K2a7w-eTDWuPWZ53
+  source_id: vitaut
+  source_title: vitaut
+  title: Solving the GCHQ Christmas Challenge with AMPL and a CP solver
+  url: https://vitaut.net/posts/2015/solving-gchq-christmas-challenge-with-ampl/
+  published: 2015-12-13 00:00:00+00:00
+  description: 'The GCHQ''s Christmas Challenge puzzle shown in the picture below has been making rounds on social media and in the news so I decided to try modeling it in AMPL and solving with a constraint programming solver. Here are the rules of the puzzle: In this type of grid-shading puzzle…'
+- post_id: _uvU54aYiwuG7fSH
+  source_id: vitaut
+  source_title: vitaut
+  title: C++ Format packages for Linux and OS X
+  url: https://vitaut.net/posts/2015/cppformat-packages-for-linux-and-osx/
+  published: 2015-10-26 00:00:00+00:00
+  description: Ease of use has always been one of the main features of C++ Format. You only need to add two files, format.h and format.cc to your project in order to start using the library. And now C++ Format is available on major Linux distributions and Homebrew on OS X so you can install it…
+- post_id: 2TP-uh2gjuPvpIwi
+  source_id: vitaut
+  source_title: vitaut
+  title: Compile-time checking of printf arguments in C++ Format
+  url: https://vitaut.net/posts/2015/compile-time-checking-of-printf-args-in-cppformat/
+  published: 2015-04-22 00:00:00+00:00
+  description: 'Update: See Compile-time format string checks for a better solution that doesn''t involve macros. As an author of C++ Format, a library that implements safe Python-like and printf-like formatting, every now and then I hear questions whether it supports compile-time checking of fo…'
+- post_id: 1gZ_YkT1griT_EVj
+  source_id: vitaut
+  source_title: vitaut
+  title: Reliable detection of strerror variants
+  url: https://vitaut.net/posts/2015/reliable-detection-of-strerror-variants/
+  published: 2015-03-13 00:00:00+00:00
+  description: One of the challenges of writing portable code is dealing with variations of APIs that are supposed to be standard. In this post I'll talk about strerror and friends which turned out to be particularly interesting to detect. First, why not just use strerror which is defined in t…
+- post_id: 8-awf__3wsZPMVVi
+  source_id: vitaut
+  source_title: vitaut
+  title: Comparison of C++ Format and C library's printf
+  url: https://vitaut.net/posts/2015/comparison-of-cppformat-and-printf/
+  published: 2015-02-26 00:00:00+00:00
+  description: 'I was recently asked on GitHub why would someone use fmt::printf, which is a part of the C++ Format library, over the standard C library printf. This is a fair question and so I decided to write this blog post comparing the two. Disclaimer: I''m the author of C++ Format, so this…'
+- post_id: rMKJl-PUQogxoBya
+  source_id: vitaut
+  source_title: vitaut
+  title: Using C++ Format with Biicode
+  url: https://vitaut.net/posts/2014/using-cppformat-with-biicode/
+  published: 2014-12-30 00:00:00+00:00
+  description: As a first experiment with Biicode, a C/C++ dependency manager, I decided to publish C++ Format there and this short post is about my initial experience with the service and how you can use the library with Biicode. First of all, I really like the idea of a dependency manager fo…
+- post_id: 0ubzBsJqjcgxBAqI
+  source_id: vitaut
+  source_title: vitaut
+  title: Reading .nl files
+  url: https://vitaut.net/posts/2014/reading-nl-files/
+  published: 2014-09-19 00:00:00+00:00
+  description: The .nl format is possibly the most widely used format for representing mathematical optimization problems you've never heard of unless you are a solver developer. The reason it is not very well-known is because .nl is a low-level format designed for efficient machine input and…
+- post_id: JUnhZ0Jid9kPjPxf
+  source_id: vitaut
+  source_title: vitaut
+  title: Connecting a solver to AMPL
+  url: https://vitaut.net/posts/2014/connecting-solver-to-ampl/
+  published: 2014-07-11 00:00:00+00:00
+  description: I've been planning to write this post for a while, but it was hard to choose the right solver. Most mainstream solvers already have AMPL interfaces and I din't want to reimplement them. At the same time I didn't want to use an obscure solver noone heard of. Finally, I've found a…
+- post_id: PGuhUaQG6FD-btVc
+  source_id: vitaut
+  source_title: vitaut
+  title: Safe low-overhead alternative to printf
+  url: https://vitaut.net/posts/2014/low-overhead-safe-alternative-to-printf/
+  published: 2014-05-22 00:00:00+00:00
+  description: In posts Making string formatting fast and Fast integer to string conversion in C++ I have shown that safe alternatives to printf and sprintf such as the C++ Format library can perform on par and even outperform their unsafe C counterparts. But speed is not the only parameter th…
+- post_id: AZq2KN-i8yGK-EEX
+  source_id: vitaut
+  source_title: vitaut
+  title: Reporting system errors in C++ made easy
+  url: https://vitaut.net/posts/2014/reporting-system-errors-made-easy/
+  published: 2014-04-30 00:00:00+00:00
+  description: Reporting system errors in C++ is a daunting task. By system errors I mean errors returned by standard C library functions, POSIX or Windows API. In an ideal world you'd have a nice C++ API with errors reported as exceptions. But often you need to use this nasty C function that…
+- post_id: VXWxCq0D3OvLxQgA
+  source_id: vitaut
+  source_title: vitaut
+  title: NEOS statistics for 2013
+  url: https://vitaut.net/posts/2014/neos-statistics-for-2013/
+  published: 2014-01-02 00:00:00+00:00
+  description: 2013 is over so it's time to report the annual NEOS Server statistics again. The results are very different from the previous year. AMPL is now used in almost 90% of all submissions, a large increase from ~57% in 2012. The use of low-level formats such as MPS decreased to less t…
+- post_id: 3J3JRc0_0jPwb1PF
+  source_id: vitaut
+  source_title: vitaut
+  title: Fast integer to string conversion in C++
+  url: https://vitaut.net/posts/2013/integer-to-string-conversion-in-cplusplus/
+  published: 2013-09-07 00:00:00+00:00
+  description: 'An updated version of this post is available here: Converting a hundred million integers to strings per second. In this post I compare the performance of several methods of integer to string conversion in C++: sprintf std::stringstream std::to_string from C++11 boost::format fro…'
+- post_id: wSOBp332x0owuIvS
+  source_id: vitaut
+  source_title: vitaut
+  title: Modern Benders decomposition in AMPL
+  url: https://vitaut.net/posts/2013/modern-benders-decomposition-in-ampl/
+  published: 2013-09-01 00:00:00+00:00
+  description: I was thinking of how to implement Benders decomposition in AMPL in the way Paul Rubin calls "modern approach" in his great blog post, Benders Decomposition Then and Now. And experimenting with smpswriter, a program I recently wrote to convert deterministic equivalent problems w…
+- post_id: 9MAhGpXeeM3zT7cR
+  source_id: vitaut
+  source_title: vitaut
+  title: Using Eclipse CDT in Ubuntu
+  url: https://vitaut.net/posts/2013/using-eclipse-cdt-in-ubuntu/
+  published: 2013-08-29 00:00:00+00:00
+  description: One of the first IDEs that I used was Visual Studio 6.0 (shudder). It was a daunting experience, both the IDE and compiler were buggy, I remember having to reformulate perfectly valid programs to avoid internal compiler errors, standard compliance was something unheard of. I'm n…
+- post_id: eAh3Lhd1Gt75PYgQ
+  source_id: vitaut
+  source_title: vitaut
+  title: Visualizing geographical AMPL data using IPython and Google Charts
+  url: https://vitaut.net/posts/2013/visualizing-geographical-ampl-data-using-ipython-and-google-charts/
+  published: 2013-06-27 00:00:00+00:00
+  description: In this post I'll describe how to get geographical data from AMPL and display it in IPython using an interactive Google Chart. I'll use a simple map coloring problem implemented with AMPL constraint programming extensions. First install the ampl extension for IPython also known…
+- post_id: Fa1lHfvVAJisa24E
+  source_id: vitaut
+  source_title: vitaut
+  title: Solving a puzzle with AMPL and Gecode
+  url: https://vitaut.net/posts/2013/solving-a-puzzle-with-ampl-and-gecode/
+  published: 2013-02-08 00:00:00+00:00
+  description: 'Here''s an interesting little puzzle posted by Ryan Ng on Google+: A 5 digit number is written on a whiteboard. Ron erases one of its digits and adds a newly constructed number to the original one. The result is 41751. What is the original number? It can be easily solved with con…'
+- post_id: sVot5l5JXX76VnaC
+  source_id: vitaut
+  source_title: vitaut
+  title: 'AMPL magic: using IPython as an interface to AMPL'
+  url: https://vitaut.net/posts/2013/ampl-magic-using-ipython-as-an-interface-to-ampl/
+  published: 2013-01-08 00:00:00+00:00
+  description: In this post I will give an introduction to iampl, a project which implements AMPL magics for IPython. IPython is a Python-based interactive environment with additional capabilities for visualization, rendering formulas, scientific computing, data introspection, etc. With iampl…
+- post_id: 76_xZg6Q1BLQ3cUI
+  source_id: vitaut
+  source_title: vitaut
+  title: NEOS statistics for 2012
+  url: https://vitaut.net/posts/2013/neos-statistics-for-2012/
+  published: 2013-01-01 00:00:00+00:00
+  description: With the start of a new year I think it's about time to look at the NEOS Server statistics for 2012. So I wrote a small IPython notebook that extracts the information from NEOS Solver Access Statistics and here are the results. Gurobi has become number one solver on NEOS in 2012…
+- post_id: VDnUSYXqZ09zmZwk
+  source_id: vitaut
+  source_title: vitaut
+  title: Does string formatting boost karma?
+  url: https://vitaut.net/posts/2012/does-string-formatting-boost-karma/
+  published: 2012-12-21 00:00:00+00:00
+  description: If you've read any of my recent posts about string formatting (A better string formatting library for C++, Making string formatting fast or I can’t believe it’s not Python) I apologize for bringing this topic up again. Today my attention was drawn by Boost Karma, which is a less…
+- post_id: VSF-VzAJbx7ePJH7
+  source_id: vitaut
+  source_title: vitaut
+  title: I can't believe it's not Python
+  url: https://vitaut.net/posts/2012/i-cant-believe-its-not-python/
+  published: 2012-12-17 00:00:00+00:00
+  description: 'I''ve been recently experimenting with a new string formatting library for C++ and realized that it can be used for converting objects to strings à la Python''s str function. In fact the implementation of such function is almost trivial: template <typename T> std::string str(const…'
+- post_id: iIHkq4iHZFSLf57R
+  source_id: vitaut
+  source_title: vitaut
+  title: Making string formatting fast
+  url: https://vitaut.net/posts/2012/making-string-formatting-fast/
+  published: 2012-12-15 00:00:00+00:00
+  description: In one of the previous posts I've introduced C++ Format, a new formatting library for C++ and briefly described its API on a few examples. In this post I'll compare its performance with other libraries and discuss some design aspects that make it fast. To measure performance I u…
+- post_id: AxGlQ9jBHiJDrewd
+  source_id: vitaut
+  source_title: vitaut
+  title: Migrating from Blogger to GitHub Pages
+  url: https://vitaut.net/posts/2012/migrating-from-blogger-to-github-pages/
+  published: 2012-12-14 00:00:00+00:00
+  description: I've just migrated from Blogger to GitHub Pages. This is the first post that I'm writing using the new platform. The main reason for migration was that I wanted to write my posts in a lightweight markup language such as Markdown or reStructured Text. In Blogger I had to either u…
+- post_id: t8B-kKP9iT54OC3I
+  source_id: vitaut
+  source_title: vitaut
+  title: A better string formatting library for C++
+  url: https://vitaut.net/posts/2012/a-better-string-formatting-library-for-cplusplus/
+  published: 2012-12-12 00:00:00+00:00
+  description: When I started learning C++ I kind of liked the IOStreams library. It was safe, extensible and could work with user-defined types. This compared favorably with the printf family of functions. However, as I started using C++ more and more in my daily job I found out that IOStream…
+- post_id: 3PZFu4X2fnm3ivtk
+  source_id: vitaut
+  source_title: vitaut
+  title: Constraint Programming in AMPL
+  url: https://vitaut.net/posts/2012/constraint-programming-in-ampl/
+  published: 2012-10-09 00:00:00+00:00
+  description: AMPL has supported constraint programming since early 2000s when the paper Extending an Algebraic Modeling Language to Support Constraint Programming was published. This work has been recently resumed with an update to ilogcp, the AMPL driver for IBM ILOG CPLEX CP Optimizer (yes…
+- post_id: gFEBAkgtu3Ay5q5-
+  source_id: vitaut
+  source_title: vitaut
+  title: Cooking traditional Belarusian cold soup
+  url: https://vitaut.net/posts/2012/cooking-traditional-belarusian-cold-soup/
+  published: 2012-09-27 00:00:00+00:00
+  description: For a change, I decided to write about something other that software, because previous posts might have given an impression that I am a complete nerd and I want to dispel it. So in this post I am going to write about food, in particular, I am going to give simple instructions (a…
+- post_id: TeQOIc9pfjwpYfBv
+  source_id: vitaut
+  source_title: vitaut
+  title: Three months of AMPL development in one minute
+  url: https://vitaut.net/posts/2012/three-months-of-ampl-development-in-one-minute/
+  published: 2012-08-13 00:00:00+00:00
+  description: 'It''s been three month since I created the AMPL GitHub repository which is based on AMPL material from Netlib with some changes. The following video shows the change history: The video was created using Gource: $ gource -1280x720 --title AMPL --hide filenames,mouse \ --seconds-pe…'
+- post_id: g95fGZ0skfalKDQ7
+  source_id: vitaut
+  source_title: vitaut
+  title: Using SCIP with AMPL
+  url: https://vitaut.net/posts/2012/using-scip-with-ampl/
+  published: 2012-08-07 00:00:00+00:00
+  description: In this post I will describe how to build recently released SCIP version 3.0.0 with AMPL support on Linux. I am using Ubuntu 12.04, but the process should be similar on other distributions with apt replaced with whatever package manager available there. 1. Download the archive c…
+- post_id: mcW--UD-IEZ6EI9h
+  source_id: vitaut
+  source_title: vitaut
+  title: Testing derivatives using numerical differentiation
+  url: https://vitaut.net/posts/2012/testing-derivatives-using-numerical-differentiation/
+  published: 2012-07-17 00:00:00+00:00
+  description: I've been working recently on the AMPL interface for the GNU Scientific Library. Adding a function to AMPL normally requires providing first and second partial derivatives for it. Computing the derivatives is straightforward and there are plenty of tools, such as Wolfram Alpha,…
+- post_id: VBRgCNY3C5pnTWF-
+  source_id: vitaut
+  source_title: vitaut
+  title: Comparing methods of downloading software from Netlib
+  url: https://vitaut.net/posts/2012/comparing-methods-of-downloading-software-from-netlib/
+  published: 2012-06-25 00:00:00+00:00
+  description: Netlib is a repository for mathematical software such as BLAS, LAPACK and, most importantly =), AMPL Solver Library (ASL). The software can be retrieved using a number of protocols and as I found out the download speed can vary greatly. For example, it took me 10 minutes to retr…
+- post_id: 4qVjpOMEBb2UxF9p
+  source_id: vitaut
+  source_title: vitaut
+  title: Installing Buildbot in Ubuntu
+  url: https://vitaut.net/posts/2012/installing-buildbot-in-ubuntu/
+  published: 2012-06-16 00:00:00+00:00
+  description: Buildbot is a continuous integration (CI) system for build and test automation. It is successfully used by many well-known projects such as WebKit, Chromium and LLVM. My particular interest in Buildbot is in using it for building and testing AMPL solvers on different platforms.…
+- post_id: tMg2U35EcfrTDQYW
+  source_id: vitaut
+  source_title: vitaut
+  title: Beautiful math in Javadoc
+  url: https://vitaut.net/posts/2012/beautiful-math-in-javadoc/
+  published: 2012-01-14 00:00:00+00:00
+  description: A formula like a picture is often worth a thousand words. Working on software for mathematical optimization, I've been wondering how can I embed math in my API documentation generated by Javadoc. Recently I had some time to explore this problem and this post is devoted to my fin…
+- post_id: yRDmrywrtAG5nAx_
+  source_id: vitaut
+  source_title: vitaut
+  title: Ubuntu on a SONY VAIO VPCS11J7E laptop
+  url: https://vitaut.net/posts/2011/ubuntu-on-a-sony-vaio-vpcs11j7e-laptop/
+  published: 2011-12-08 00:00:00+00:00
+  description: Today I finally got my SONY VAIO VPCS11J7E laptop delivered after a warranty repair. They replaced a few parts and thoroughly cleaned the laptop. Now it looks as new apart from a small crack on flimsy plastic around the hinges (I rejected their generous offer to replace the plas…
+- post_id: q1sKul-NHMWs0Oct
+  source_id: vitaut
+  source_title: vitaut
+  title: First experience with Xtext
+  url: https://vitaut.net/posts/2011/first-experience-with-xtext/
+  published: 2011-12-03 00:00:00+00:00
+  description: In this post I describe my experience with the recent version (2.1) of Xtext, a framework for developing domain specific languages (DSLs). The main input for Xtext is a grammar file written in an elegant little language. The grammar language uses a variation of Extended Backus-N…
+- post_id: V99kG6GygYqDpjH1
+  source_id: vitaut
+  source_title: vitaut
+  title: User-defined keyboard shortcuts in Nautilus
+  url: https://vitaut.net/posts/2011/user-defined-keyboard-shortcuts-in-nautilus/
+  published: 2011-02-18 00:00:00+00:00
+  description: In this post I describe how to add arbitrary keyboard shortcuts to the Nautilus file manager using its extension API. I really like Nautilus, it has a clean interface and lots of features under the hood. One of the things I was missing coming from the world of orthodox file mana…

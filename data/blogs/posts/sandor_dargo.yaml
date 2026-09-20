@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: G8gFTaGp5B-mYQrr
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26: Trivial infinite loops are no longer undefined behaviour'
+  url: https://www.sandordargo.com/blog/2026/09/16/cpp26-trivial-infinite-loops
+  published: 2026-09-15 22:00:00+00:00
+  updated: 2026-09-15 22:00:00+00:00
+  description: Let’s start with a question! Is this program well-defined? int main() { while (true) ; } If you said yes, you’d be wrong — at least before C++26. A while (true); loop with no side effects used to be undefined behaviour. Compilers were free to assume it terminates, and some — Cla…
+  tags:
+  - dev
 - post_id: cC1Cu11__fUcO4cD
   source_id: sandor_dargo
   source_title: Sandor Dargo's Blog

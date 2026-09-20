@@ -33,3 +33,8 @@ cards:
     platform: slack
     path: https://cppalliance.org/slack/
     description: A large multi-channel C++ workspace operated by the C++ Alliance
+  - community_id: beman-discord
+    metadata_source: { source: discord, key: BKpNyJgSbm }
+    title: Beman Project Discord
+    platform: discord
+    path: https://discord.gg/BKpNyJgSbm

@@ -29,3 +29,9 @@ cards:
     platform: reddit
     path: https://www.reddit.com/r/Cplusplus/
     description: General C++ discussion, projects, and programming questions
+  - community_id: beman-discourse
+    metadata_source: { source: web, key: "https://discourse.bemanproject.org/" }
+    title: Beman Discourse
+    platform: forum
+    path: https://discourse.bemanproject.org/
+    description: Beman Project provides free peer-reviewed portable C++ source libraries, to be integrated with Standard C++

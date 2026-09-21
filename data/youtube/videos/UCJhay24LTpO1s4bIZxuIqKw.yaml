@@ -1,5 +1,86 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: NuJcFNbrdIg
+  title: Demystifying C++ initializer_list - Design, Behavior, and Best Practices for C++ - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=NuJcFNbrdIg
+  published: 2026-09-19 12:00:30+00:00
+  updated: 2026-09-19 12:00:32+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nDemystifying C++ initializer_list - Design, Behavior, and Best Practices - Prithvi Okade & Chandranath Bhattacharyya - ACCU on Sea 2026\n---\n\nstd::initializer_list is a useful tool in modern C++, yet its behavior often surprises even seasoned developers. This session provides a comprehensive exploration of its internal mechanics, from code transformation to the underlying structure of the backing array. We will navigate the complexities of overload resolution, performance issues in STL containers, and the technical reasons behind the copy-only constraint. Attendees will learn to distinguish between uniform initialization and list-initialization while identifying optimal use cases for compile-time data structures. The session also highlights common pitfalls, subtle compilation failures, and safe usage patterns. Finally, we look ahead to C++26 improvements, such as span-based construction and static backing storage. \n\
+    \nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nChandranath Bhattacharyya\n\nChandranath Bhattacharyya has been a professional programmer since 2000, with most of his career focused on C++. He currently works at Microsoft on the Edge browser team and is a dedicated internal educator. Over the past five years, he has delivered around 40 C++ talks to an internal audience of more than 100 engineers, emphasizing clear explanations of language features and practical best practices.\n\nHe has also begun presenting at public C++ conferences, including one talk at C++Now 2025 and two talks at CppCon 2025. Chandranath serves as a reviewer for submissions to C++Now, C++OnSea, and CppCon.\n\nPrithvi Okade\n\nI am currently a software engineer at Microsoft and have been there for about 2 years. I joined Microsoft after completing my undergraduate degree at Carnegie Mellon University's School of Computer Science. At Microsoft, I work on the Edge team, primarily developing\
+    \ AI tooling for business clientele (like sidebar Copilot).\n\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU on Sea Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\n\
+    https://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i3.ytimg.com/vi/NuJcFNbrdIg/hqdefault.jpg
+- video_id: vVFFW6hoG1Y
+  title: Contracts, Safety and Correctness in C++ - Lucian Radu Teodorescu - ACCU 2026
+  url: https://www.youtube.com/watch?v=vVFFW6hoG1Y
+  published: 2026-09-17 12:00:15+00:00
+  updated: 2026-09-20 03:51:38+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Contracts, Safety and Correctness - Lucian Radu Teodorescu - ACCU on Sea 2026
+
+    ---
+
+
+    Since 2023, safety has become a central theme in C++. In response to criticism of memory-unsafe languages, the C++ standard committee has intensified its efforts in this area. Over time, the term safety itself has become increasingly overloaded, with different stakeholders often meaning very different things by it. More recently, this ambiguity has led some to avoid the term safety altogether.
+
+
+    Contracts are one of the major features proposed for C++26. While they enjoy broad support, there is ongoing debate about their role: are contracts primarily about safety, correctness, or something else entirely, and what expectations should users place on them?
+
+
+    This talk aims to clarify the relationship between safety and correctness, and to position contracts within that landscape. We will discuss what contracts can and cannot guarantee, how they relate to different notions of safety, and how they can be used effectively to improve program correctness, illustrated with practical C++ examples. Finally, we take a step back and look beyond contracts at a small set of design and coding practices aimed at writing safer and more reliable C++ code.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Lucian Radu Teodorescu
+
+
+    Lucian Radu Teodorescu has a PhD in programming languages and is a Staff Engineer at Garmin. He likes challenges; and understanding the essence of things (if there is one) constitutes the biggest challenge of all.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/vVFFW6hoG1Y/hqdefault.jpg
 - video_id: gFynjahe-bg
   title: Dangerous Optimizations! in C++ - Part Deux - Robert C. Seacord - ACCU on Sea 2026
   url: https://www.youtube.com/watch?v=gFynjahe-bg

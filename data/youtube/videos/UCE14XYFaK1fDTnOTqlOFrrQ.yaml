@@ -1,0 +1,334 @@
+# Maintained by meta-updater youtube. Manual edits are preserved.
+# Set hidden: true and retain only video_id to suppress an item.
+- video_id: bTOePls0eP4
+  title: Branch prediction case study [Lightning Talk]
+  url: https://www.youtube.com/watch?v=bTOePls0eP4
+  published: 2026-03-12 14:01:02+00:00
+  updated: 2026-09-05 23:50:38+00:00
+  description: 'Presented by Dima Naiman at Core C++ 2025 conference, Tel Aviv.
+
+
+    ====='
+  thumbnail_url: https://i3.ytimg.com/vi/bTOePls0eP4/hqdefault.jpg
+- video_id: k6he6XtOeos
+  title: Introduction to Malware Development using C++ [Lightning Talk]
+  url: https://www.youtube.com/watch?v=k6he6XtOeos
+  published: 2026-03-11 14:01:10+00:00
+  updated: 2026-09-05 13:59:33+00:00
+  description: 'Presented by Zubin Niro Singh at Core C++ 2025 conference, Tel Aviv.
+
+
+    ====='
+  thumbnail_url: https://i4.ytimg.com/vi/k6he6XtOeos/hqdefault.jpg
+- video_id: sFwpeX20Dvc
+  title: 'Typing++ for C++ - Making the Compiler Do the Thinking :: Chris Gearing'
+  url: https://www.youtube.com/watch?v=sFwpeX20Dvc
+  published: 2026-03-10 14:01:25+00:00
+  updated: 2026-09-05 22:49:48+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    C++ lets us write powerful systems-and equally powerful bugs. Its weak typing gives us freedom, but not always safety.
+
+    In this talk I''ll argue that typing not a computing concept, but a linguistic one. By designing expressive types-from basic ints to rich class structures-we can shift from "I think this is right" to "I know this is right," catching errors at compile time instead of runtime.
+
+    Expect practical examples, a few missteps (mine, mostly), and techniques to make your compiler a partner in correctness-not just a passive syntax checker.
+
+    =====
+
+
+    Chris Gearing
+
+
+    I’m a Principle Software Engineer at Mobileye who prefers the quiet satisfaction of solving problems through well-crafted code. I gravitate toward C++, where I enjoy the challenge of designing systems that are both expressive and maintainable. I take a certain pride in writing code that improves with age—becoming more malleable, less brittle, and ideally, less surprising.
+
+    These days, I spend more time trying to help others appreciate software as a form of engineering with artistic undertones. When done thoughtfully, it’s both powerful and rewarding—though “thoughtfully” is a vague term that defies precise definition, which is probably why I keep revisiting it.
+
+    When I’m not writing or refactoring code, I’m often on a motorcycle, enjoying the kind of speed that doesn’t involve a compiler.'
+  thumbnail_url: https://i4.ytimg.com/vi/sFwpeX20Dvc/hqdefault.jpg
+- video_id: pxjQAsZFFDY
+  title: 'C++23 Tools you will actually use :: Alex Dathskovsky'
+  url: https://www.youtube.com/watch?v=pxjQAsZFFDY
+  published: 2026-03-09 14:01:12+00:00
+  updated: 2026-09-05 06:07:21+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Last year, we explored why C++20 is not just a “future standard,” but a powerful and practical tool you should already be using. If you haven’t adopted it yet, now’s the time.
+
+    But the C++ journey doesn’t stop there—C++23 is here, it’s maturing, and it’s packed with new features that deserve your attention. In this session, we’ll explore the most practical, accessible, and impactful additions in C++23—features that you can actually start using, not just in toy projects but in real-world codebases.
+
+    We’ll compare C++23 to its predecessors, highlight key language and library improvements, and see how these tools can simplify your development, improve readability, and bring more joy to modern C++.
+
+    Whether you''re already deep in C++20 or still catching up, this talk will help you chart your course into C++23 with confidence and clarity.
+
+    =====
+
+
+    Alex Dathskovsky
+
+
+    Alex Dathskovsky has over 17 years of software development experience, working on systems, low-level generic tools and high-level applications. Alex has worked as an integration/software developer at Elbit, senior software developer at Rafael, technical leader at Axxana, Software manager at Abbott Israel and now a group manager a technical manager at Speedata.io an Exciting startup the will change Big Data and analytics as we know it .On His current Job Alex is developing a new CPU/APU system working with C++20, Massive metaprogramming and development of LLVM to create the next Big thing for Big Data. Alex is a C++ expert with a strong experience in template meta-programming. Alex also teaches a course about the new features of modern C++, trying to motivate companies to move to the latest standards.'
+  thumbnail_url: https://i1.ytimg.com/vi/pxjQAsZFFDY/hqdefault.jpg
+- video_id: T8pcRgTSUf8
+  title: 'Abstraction Addiction: When Good C++ Design Goes Bad :: Adi Ben David'
+  url: https://www.youtube.com/watch?v=T8pcRgTSUf8
+  published: 2026-03-08 14:00:42+00:00
+  updated: 2026-09-06 03:48:39+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Language: Hebrew
+
+
+    As software developers we love elegant code. We use templates, polymorphism and type erasure; We slice and dice our classes to maintain SRP (Single Responsibility Principle) and we generalize for every conceivable future scenario. We are responsible engineers after all and we most definitely know what’s coming, so naturally we lay the groundwork, sometimes for things that won’t happen until the heat death of the universe.
+
+
+    I’m guessing you’ve all been there: you dive into a codebase and suddenly it’s less “reading code” and more “archeological expedition”. You’re carefully brushing away layers of inheritance and indirection to figure out what a function actually does, who implemented it, and on particularly fun days trying to guess which one of the three different implementations is actually called at runtime.
+
+    In this talk I’ll play devil’s advocate to ask “Do we really need all of this?”. We’ll examine examples inspired by real-world C++ code where well-intentioned design using language features such as inheritance hierarchies, deep template metaprogramming and generalized abstractions ended up adding more friction than flexibility.
+
+    Attendees will leave with a handy checklist to help spot over-engineered designs and strategy suggestions for balancing flexibility with maintainability in modern C++.
+
+    Whether you’ve inherited a complex legacy codebase or built one yourself, this session will give you tools (and cautionary tales) to keep your future codebase clean, clear and kind to whoever comes next – including you.
+
+    =====
+
+
+    Adi Ben David
+
+
+    Senior software engineer and a mother of 2. Have worked in the industry for almost a decade and will defend C++ against anyone who tries to put it down. Cyber security enthusiast by day and dancer by night. In my (not so) spare time I volunteer in organizations that aim at helping more women join our industry.'
+  thumbnail_url: https://i1.ytimg.com/vi/T8pcRgTSUf8/hqdefault.jpg
+- video_id: s9IzQRQAuT0
+  title: 'The Effects of C++ Evolution on Design Patterns :: Yair Friedman'
+  url: https://www.youtube.com/watch?v=s9IzQRQAuT0
+  published: 2026-03-06 12:01:36+00:00
+  updated: 2026-09-05 22:50:53+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Language: Hebrew
+
+
+    The book Design Patterns: Elements of Reusable Object-Oriented Software by the "Gang of Four" is regarded as one of the important sources for object-oriented design theory. However, since it was published in the 1990s C++ language has evolved, and the code samples given in the book looks outdated from a modern C++ perspective. In this presentation, I''ll go through the most useful patterns and show the effects of various features of C++ language versions. Ranging from small features that make your code more readable and maintainable, to total code rewrites that keeps the original patterns.
+
+    =====
+
+
+    Yair is a seasoned software engineer and architect with over three decades of C++ expertise, specializing in embedded systems, co-processor software design, and application interfaces. As an expert in legacy code modernization, Yair has developed proven methodologies for safely migrating systems to modern C++ standards. His approach minimizes risk while maximizing the benefits of modern language features. Beyond development, Yair is an educator delivering training programs on modern C++ features. Through his courses, he successfully motivates companies to embrace modern C++ practices, helping teams achieve improved performance and maintainability. Yair''s expertise extends to software security as a defensive cyber-security specialist, implementing robust measures that complicate potential attack vectors through proactive defensive programming.
+
+    Outside his professional work, Yair maintains a scholarly interest in ancient Semitic languages.'
+  thumbnail_url: https://i4.ytimg.com/vi/s9IzQRQAuT0/hqdefault.jpg
+- video_id: BeMwJdC6SLM
+  title: 'From GPU Bottlenecks to Smooth Chat: Cost-Efficient Architectures for LLM Inference :: Eshcar Hillel'
+  url: https://www.youtube.com/watch?v=BeMwJdC6SLM
+  published: 2026-03-05 14:00:19+00:00
+  updated: 2026-09-06 06:02:02+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    What does it take to serve a chatbot with billions of parameters in real time - without burning a hole in your data-center budget? Large Language Models (LLMs) are powering the next wave of AI applications but serving them efficiently at scale brings unique performance and cost challenges. This talk offers a systems-level look at the main bottlenecks in LLM inference, from GPU memory limits to inter-node communication, and the architectural innovations addressing them.
+
+
+    We’ll cover three key techniques: KV-cache offloading to relieve GPU pressure, prefill-decode disaggregation to boost throughput, and speculative decoding to speed generation in inference engines like vLLM and SGLang. We’ll also explore the tradeoffs between user experience and system efficiency, such as latency versus hardware utilization.
+
+
+    While often implemented in Python and CUDA, these performance principles: memory hierarchy awareness, data movement optimization, and throughput–latency balancing, are directly relevant to C++ developers building high-performance systems.
+
+    =====
+
+
+    Eshcar Hillel
+
+
+    Eshcar Hillel is leading AI research at Pliops, driving storage solutions for emerging workloads such as generative AI, deep learning recommender systems, and learning systems in general.
+
+    Eshcar specializes in theory and practice of distributed systems and in parallel computing. Prior to joining Pliops, Eshcar was a research director at Yahoo Research, was a contributor and PMC of open source projects, published over 25 scientific papers in leading academic venues and holds several U.S. patents. She holds a Ph.D. in computer science from the Technion, Israel Institute of Technology.'
+  thumbnail_url: https://i3.ytimg.com/vi/BeMwJdC6SLM/hqdefault.jpg
+- video_id: LWeZctvHhiI
+  title: 'Who''s Afraid of the Big Bad Template? :: Coral Kashri'
+  url: https://www.youtube.com/watch?v=LWeZctvHhiI
+  published: 2026-03-04 14:00:28+00:00
+  updated: 2026-09-05 17:25:20+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Many C++ developers can spend years, sometimes even a decade, without ever touching templates. In some workplaces, templates are even forbidden, treated as a dangerous curse requiring rare expertise.
+
+    This fun talk takes that “terrifying” subject and shows that templates are not as scary as they seem, and can even become your friend. We’ll start with something seemingly intimidating like NTTPs (Non-Type Template Parameters) and slowly dive into more “monstrous” code examples. Step by step, every piece will be broken down and explained in detail, turning fear into understanding.
+
+    This talk has only one requirement for attendance: a smile, so bring one with you :)
+
+    =====
+
+
+    Coral Kashri
+
+
+    A passionate C++ developer, author of C++Senioreas blog, and an active member of the ISO C++ committee.'
+  thumbnail_url: https://i1.ytimg.com/vi/LWeZctvHhiI/hqdefault.jpg
+- video_id: Wxy-ETWIuY0
+  title: 'Code Smarter: Harnessing AI tools for C++ Development :: Inbal Levi'
+  url: https://www.youtube.com/watch?v=Wxy-ETWIuY0
+  published: 2026-03-03 14:00:57+00:00
+  updated: 2026-09-05 13:33:40+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    AI is everywhere. But how can we use it to make an impact?
+
+    In this talk, we''ll dive into how AI tools are changing the game for C++ developers. Drawing from real-world deployment experience within Microsoft, I’ll introduce you to a framework developed to rigorously analyze AI tools, and introduce practical use cases, unexpected challenges, and their applicability to C++ workflows.
+
+    During the talk we’ll explore and get familiar with the latest available tools. We’ll also address limitations, best practices, and learn how to integrate these tools into production-level development environments.
+
+    Whether you''re skeptical or excited, this session will leave you with a grounded understanding of where AI tooling stands today, what it can (and can''t) do for your C++ projects, and how to prepare for the next wave of innovation.
+
+    =====
+
+
+    Inbal Levi is a Lead Software Engineer with an interest in code readability, compilers, language and software design. She is an active member of the ISO C++ Standards Committee as Library Evolution Work Group Chair, and as the ISO C++ Israeli NB Chair.
+
+    Inbal is also a director at ISO C++ Foundation and the Boost Foundation and puts effort into evolving both the local and international C++ communities, as an organizer of the CoreC++ conferenc'
+  thumbnail_url: https://i4.ytimg.com/vi/Wxy-ETWIuY0/hqdefault.jpg
+- video_id: FlNEsJiJAz0
+  title: 'Virtual Table Security: Basic Exploitation and Protection with CTF Example :: Sivan Zohar-Kotzer'
+  url: https://www.youtube.com/watch?v=FlNEsJiJAz0
+  published: 2026-03-02 14:00:32+00:00
+  updated: 2026-09-06 04:26:33+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    This beginner-friendly presentation introduces virtual table vulnerabilities in C++ through a practical CTF challenge walkthrough. We explore how virtual function calls work in memory, demonstrate a real CTF problem involving vtable corruption, and show basic protection methods. The talk covers step-by-step exploitation of a vulnerable program, explains how attackers redirect virtual function calls, and demonstrates modern defensive techniques. Attendees will learn fundamental security concepts through a hands-on CTF example without requiring prior exploitation experience.
+
+    =====
+
+
+    Sivan Zohar-Kotzer
+
+
+    Cloud Researcher at Varonis. Earlier: Software Developer at Cyfair-labs (Android research infrastructure), Test Engineer at CheckPoint Software Technologies Active in CTF competitions. Cyber Instructor at Magshimim-The National Cyber Program, Cyber Security and network expert at IDF Technological Unit 81, Infrastructure Engineer at IDF Technological Unit 81. Bachelor of Computer Science, Tel Aviv University (Schulich scholarship)'
+  thumbnail_url: https://i3.ytimg.com/vi/FlNEsJiJAz0/hqdefault.jpg
+- video_id: kGUeeAXHMSw
+  title: 'Virtual Table Security: Basic Exploitation and Protection with CTF Example :: Sivan Zohar-Kotzer'
+  url: https://www.youtube.com/watch?v=kGUeeAXHMSw
+  published: 2026-03-01 14:01:08+00:00
+  updated: 2026-09-05 15:08:58+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    This beginner-friendly presentation introduces virtual table vulnerabilities in C++ through a practical CTF challenge walkthrough. We explore how virtual function calls work in memory, demonstrate a real CTF problem involving vtable corruption, and show basic protection methods. The talk covers step-by-step exploitation of a vulnerable program, explains how attackers redirect virtual function calls, and demonstrates modern defensive techniques. Attendees will learn fundamental security concepts through a hands-on CTF example without requiring prior exploitation experience.
+
+    =====
+
+
+    Sivan Zohar-Kotzer
+
+
+    Cloud Researcher at Varonis. Earlier: Software Developer at Cyfair-labs (Android research infrastructure), Test Engineer at CheckPoint Software Technologies Active in CTF competitions. Cyber Instructor at Magshimim-The National Cyber Program, Cyber Security and network expert at IDF Technological Unit 81, Infrastructure Engineer at IDF Technological Unit 81. Bachelor of Computer Science, Tel Aviv University (Schulich scholarship)'
+  thumbnail_url: https://i4.ytimg.com/vi/kGUeeAXHMSw/hqdefault.jpg
+- video_id: 4r9qpxmiXoM
+  title: 'Lock me up, Scotty! :: Ben Liderman  Igor Khanin'
+  url: https://www.youtube.com/watch?v=4r9qpxmiXoM
+  published: 2026-02-26 14:00:08+00:00
+  updated: 2026-09-05 20:52:42+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Mutual exclusion (mutex) locks are among the most common building blocks in multi-threaded programming. While building concurrent systems, we don''t often consider how they actually work - but sometimes there are big gains to be had by looking under the covers.
+
+
+    At Fireblocks, we recently had the opportunity to unlock major performance improvements by designing our own locking primitive optimized for the unique constraints of the Intel(R) SGX environment. This talk will cover why and how we did this, and will give you an idea of when such a project could make sense for you.
+
+    =====
+
+
+    Igor Khanin
+
+
+    Senior Core Engineer and Tech Lead at Fireblocks, and is a strong believer that performance improvements can lead to a qualitative advantage.
+
+
+    Ben Liderman
+
+
+    System Architect at Fireblocks, and previously led its confidential computing infrastructure team.'
+  thumbnail_url: https://i1.ytimg.com/vi/4r9qpxmiXoM/hqdefault.jpg
+- video_id: cDX88OwUARY
+  title: 'Order! Order! :: Ofek Shochat  Shar-yashuv Giat'
+  url: https://www.youtube.com/watch?v=cDX88OwUARY
+  published: 2026-02-25 14:01:02+00:00
+  updated: 2026-09-05 06:06:21+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Language: Hebrew
+
+
+    Atomics give us a somewhat clear API for concurrency-safe shared values. But how does the hardware work? Are there any other things we should be wary of? How can we--as C++ enthusiasts--use concurrency safely?
+
+    =====
+
+
+    Ofek Shochat
+
+
+    Engineer by heart, menace by night. Love building stuff and understanding how other stuff works--particularly low-level details, and systems.
+
+
+    Shar-yashuv Giat'
+  thumbnail_url: https://i4.ytimg.com/vi/cDX88OwUARY/hqdefault.jpg
+- video_id: BHhOozU7_U8
+  title: 'const correctly in C++ : : Alex Cohn'
+  url: https://www.youtube.com/watch?v=BHhOozU7_U8
+  published: 2026-02-24 14:00:26+00:00
+  updated: 2026-09-05 13:05:35+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+    Language: Hebrew
+
+
+    Const-correctness is one of the basic features of C++. It can make your interfaces safer, your intent clearer, and your code more maintainable.
+
+
+    We start with the fundamentals: top- and low-level const on variables and pointers — then explore how const applies to member functions, parameters, and interfaces. Along the way we’ll discuss when (and when not) to reach for const_cast, and show how tools like mutable and std::experimental::propagate_const can improve real-world APIs.
+
+
+    By the end of this short, beginner-friendly session you will have a clear mental model of “const-correctness” and concrete rules to apply in your own code.
+
+    =====
+
+
+    Alex Cohn
+
+
+    A software craftsman, enjoying C++ since 1991 and up to day.
+
+    Today, Alex is a Senior C++ Developer at Priority Software, mostly busy with performance optimization of legacy code when moved to cloud environment.'
+  thumbnail_url: https://i3.ytimg.com/vi/BHhOozU7_U8/hqdefault.jpg
+- video_id: aBBsBsWNzEs
+  title: 'Coroutines 101 :: Omer Anson'
+  url: https://www.youtube.com/watch?v=aBBsBsWNzEs
+  published: 2026-02-23 14:00:00+00:00
+  updated: 2026-09-05 16:08:02+00:00
+  description: 'Presented at Core C++ 2025 conference, Tel Aviv.
+
+
+
+    In this talk we will introduce coroutines. What they are, what they''re not, and how to use them.
+
+    We wil go over why use coroutines: * Co-operative scheduling: You have control when to work and when to yield * No locking necessary * Each co-routing has its own natural control flow - no state machine needed
+
+    And show some example use-cases: * Real-time calculation (e.g., in games, mathematics libraries) * Co-operative multitasking, e.g., in a web server * Generators (e.g., infinite lists)
+
+    And have some real code examples.
+
+    =====
+
+
+    Omer Anson
+
+
+    Omer Anson is a seasoned low-level software developer. He has many years of experience developing in C++, Linux, networking, and security.'
+  thumbnail_url: https://i2.ytimg.com/vi/aBBsBsWNzEs/hqdefault.jpg

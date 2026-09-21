@@ -1,0 +1,1106 @@
+# Maintained by meta-updater youtube. Manual edits are preserved.
+# Set hidden: true and retain only video_id to suppress an item.
+- video_id: fc6zs81_OB0
+  title: C++ in the Realtime Embedded Context - A Case Study - Shin Umeda - C++Now 2026
+  url: https://www.youtube.com/watch?v=fc6zs81_OB0
+  published: 2026-09-20 15:00:00+00:00
+  updated: 2026-09-20 15:00:02+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    C++ in the Realtime Embedded Context - A Case Study - Shin Umeda - C++Now 2026
+
+    ---
+
+
+    This talk discusses using C++ in the embedded realtime context. It first goes over the context of a motor controller, and the problem context. C++ in the context of embedded, as well as the usage of hardware abstraction layers, unit libraries, and asynchrony are discussed. Benchmarking, along with disassembly, are inspected to understand the impact on performance.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Cpp_in_the_Realtime_Embedded_Context.pptx
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Shin Umeda
+
+
+    Shin Umeda is a student in San Jose State University, studying Computer Engineering. They began programming from a young age, and got deeply into C++ at first to port it to AVR.  They are now a part of the SJSU Robotics club, designing hardware and writing firmware for a URC competition robot.
+
+
+    They are currently working on a motor controller firmware with C++, Raspberry Pi Pico, and real time electrical commutation.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/fc6zs81_OB0/hqdefault.jpg
+- video_id: MunBEZx2i5c
+  title: Reflecting on Reflection - Introspection, Injection, and Beyond - C++Now 2026
+  url: https://www.youtube.com/watch?v=MunBEZx2i5c
+  published: 2026-09-18 15:00:13+00:00
+  updated: 2026-09-19 23:09:24+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Reflecting on Reflection - Introspection, Injection, and Beyond - Alex Yesmanchyk & Jagrut Dave - C++Now 2026
+
+    ---
+
+
+    Compile-time reflection is arguably the biggest expansion of metaprogramming ever. It enables the ability to query the structure of your program at compile time and use that information to generate maintainable, standard code, without macros or external code generators.
+
+
+    The original reflection feature was "typeful" and template-heavy, but the version that was standardized is the consteval, value-based design that’s more memory efficient. We will explore this evolution, as well as the long road through the Reflection TS from early reflection proposals and SG7 to the “big bang” adoption into the C++26 draft at the Sofia meeting.
+
+
+    Through compelling examples, such as automatic serialization and interface generation based on schemas, attendees will learn how to replace external build-step code generators with native C++ metaprogramming. We will demonstrate techniques for synthesizing new code, ranging from P2996’s define_aggregate to experimental Token Sequences. We will also look ahead to the next milestone, aka code generation. A deep dive into Clang and GCC implementations will uncover what happens under the hood of the compiler in the AST.
+
+
+    Attendees will leave this talk with a solid mental model of reflection, practical patterns and usages to try, and an understanding of why reflection arrived at its present form, and where it may go next.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Reflecting_on_Reflection.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Alex Yesmanchyk
+
+
+    Alex Yesmanchyk has been a senior software engineer at Bloomberg’s Engineering team since May 2024. An active member of the the Reflection and Compilers Working Groups in Bloomberg’s C++ Guild, Alex co-presented ""Reflection in Feeds"" during the firm’s internal Guild Week in 2025. He is a passionate contributor to various open source projects - notably, the GCC compiler, where he worked on the P2996 Reflection standard implementation. His technical pursuits include metaprogramming, modules, and coroutines in C++.
+
+
+    Jagrut Dave
+
+
+    Jagrut Dave is a senior software engineer at Bloomberg, where he has worked since 2016. His interests are in C++ metaprogramming, API design, and reflection. He has been involved in reflection-related discussions both within Bloomberg and in the ISO C++ Committee since 2019. He coordinates the Reflection Working Group within Bloomberg’s C++ Guild.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/MunBEZx2i5c/hqdefault.jpg
+- video_id: m0T8MrzWRjQ
+  title: Monadic Operations for Box-Like Types - Designing the Extensibility Model - Mikhail Svetkin - C++Now
+  url: https://www.youtube.com/watch?v=m0T8MrzWRjQ
+  published: 2026-09-15 15:00:16+00:00
+  updated: 2026-09-18 05:54:07+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Monadic Operations for Box-Like Types - Designing the Extensibility Model - Mikhail Svetkin - C++Now 2026
+
+    ---
+
+
+    C++23 gave std::optional and std::expected monadic operations - and_then, transform, or_else and transform_error for std::expected. The pattern is clearly useful. But it is not extensible: every type that wants to participate must wait for the committee to add member functions. std::unique_ptr, raw owning pointers, third-party expected types, user-defined result wrappers - none of them participate in the same vocabulary.
+
+
+    During Library in a Week at C++Now 2025, I proposed beman.monadics: free-function monadic operations for any "box-like type." The idea is to define a uniform extensibility interface so that raw pointers, smart pointers, and user-defined wrappers can participate in the same monadic pipeline as std::expected - without waiting for the committee to add member functions to each one.
+
+
+    The central question is whether monadic operations should be treated as algorithms or as customization points and the answer is not obvious. Each approach implies a different extensibility mechanism, different concept requirements, and a different path to standardization. This talk works through the design space: what makes a type "box-like" and how to express that as a concept, how to handle types that have a value but no error channel, and what a uniform pipe syntax requires from the constraint model.
+
+
+    C++Now 2025 started this. C++Now 2026 is the right place to find out if it can be finished.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Monadic_Operations_for_Box_Like_Types.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Mikhail Svetkin
+
+
+    Mikhail is a Principal Software Engineer at reMarkable, where he writes C++ for hardware that may or may not have an operating system.
+
+
+    At Library in a Week at C++Now 2025, he proposed beman.monadics: free-function monadic operations for any box-like type. This talk is what happened next.
+
+
+    His interests are libraries that should compose but don''t, build systems that should be declarative but aren''t, and compile-time computation that arguably goes further than it should. He has been writing C++ for over 15 years.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/m0T8MrzWRjQ/hqdefault.jpg
+- video_id: DcUOZE5FHDc
+  title: Functional Composition Beyond Monads - Jonathan Müller - C++Now 2026
+  url: https://www.youtube.com/watch?v=DcUOZE5FHDc
+  published: 2026-09-13 15:00:33+00:00
+  updated: 2026-09-17 21:04:53+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Functional Composition Beyond Monads - Jonathan Müller - C++Now 2026
+
+    ---
+
+
+    Functional programming is all about composing functions. If the output of one and the input of the other line up exactly, that''s trivial. If they don''t, you need some way to apply a function over some sort of structure data in the way you want. Monads are one way you can do that, but just like there are many different kinds of structures, there are also many different ways to compose functions.
+
+
+    In this talk, we''ll look at the more obscure functional composition patterns and cover applicatives, alternatives, traversables, and many more. We''ll talk about the different ways you can combine N values into one, covariant and contravariant composition, functional references as views on steroids. Along the way, we''ll discover that these obscure sounding patterns are actually everywhere in std::ranges and std::execution, and how we can use them to improve your declarative compositions.
+
+
+    And don''t worry, you won''t need to know any Haskell.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Functional_Composition_Beyond_Monads.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jonathan Müller
+
+
+    Jonathan is a Software Engineer at LSEG. There he develops low-latency market data feed handlers in C++ for high-frequency trading applications. Previously, he maintained think-cell’s core C++ libraries built around a custom range implementation.
+
+
+    He is also the chair of the std::ranges study group in the C++ standardization committee, a frequent speaker at conferences and universities, and the author of multiple open-source C++ libraries.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/DcUOZE5FHDc/hqdefault.jpg
+- video_id: 7QZchipF2gU
+  title: Plato, Magritte, Sartre & Carroll - Learning Software Design from the Masters - Ben Deane - C++Now
+  url: https://www.youtube.com/watch?v=7QZchipF2gU
+  published: 2026-09-11 15:00:15+00:00
+  updated: 2026-09-17 20:43:21+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Plato, Magritte, Sartre & Carroll - Learning Software Design from the Masters - Ben Deane - C++Now 2026
+
+    ---
+
+
+    How do we design code? What kinds of things must we balance? Efficiency? Ease of use? Domain sympathy? Simplicity of concepts? Naming? I could go on... what''s clear though, is that design of code is an important activity worth considering separately from implementation. Anyone can use a language to get the immediate job done. But to make the code well-designed -- a joy to use, whether it''s today or years from now -- that''s another matter.
+
+
+    In this talk we''ll take inspiration from some of the great thinkers of the past and explore what their ideas might mean in software we write today. How we might better approach the DESIGN of our code. And how we can avoid being trapped by implementation-thinking, which after all is so easy for us...
+
+
+    This is a talk packed full of things which I hope will make you think more deeply about the craft of software. I certainly think about these things all the time, and I continually find that they yield new and surprising insights.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Plato_Magritte_Sartre_Carroll.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Ben Deane
+
+
+    Ben has been programming in C++ for this whole millennium. He spent just over 20 years in the games industry working for companies like EA and Blizzard; many of the games he worked on used to be fondly remembered but now he’s accepted that they are probably mostly forgotten. After getting more interested in modern C++, in the teens he started giving internal company talks and then talks at various conferences, spreading ideas about types, algorithms and declarative and functional techniques.
+
+
+    In 2018 he left the games industry and worked in finance for a short spell, writing high-frequency trading platforms using the most modern C++ that compilers could support. Now he is a Principal Engineer at Intel where he puts monads inside your CPU.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/7QZchipF2gU/hqdefault.jpg
+- video_id: SgIiQS6RO60
+  title: Testing Everything in Constexpr - Braden Ganetsky - C++Now 2026
+  url: https://www.youtube.com/watch?v=SgIiQS6RO60
+  published: 2026-09-08 15:00:33+00:00
+  updated: 2026-09-17 20:46:16+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Testing Everything in Constexpr - Braden Ganetsky - C++Now 2026
+
+    ---
+
+
+    It is common knowledge that good software design practices involve unit testing your code. With more and more C++ code being executed at compile-time, it''s necessary that we also write unit tests that check the validity at compile-time. However, this is no trivial matter. Just like with regular run-time code, we cannot reasonably claim that the code works in all its intended purposes unless it is tested and empirically shown to work. In very rare cases, a compiler''s output can even vary between compile-time and run-time, given identical source code.
+
+
+    This talk will build up a compile-time-centric unit testing library, taking the audience on a tour of how and why to write compile-time unit tests. The "why" is straightforward and very important; as software professionals, we must test the validity of our code. The "how" is the fun part. Triggering a conditional miscompile is easy, but we all know that C++ compiler output can get notoriously unruly upon hitting errors. Therefore, we will explores ways to attain as much readability as possible in our diagnostics and error messages.
+
+
+    Currently, there are no popular C++ unit testing libraries that treat compile-time testing as a first-rate capability. As more and more code is written at compile-time, and as we move towards C++26 reflection, we still need to be testing all of our code. Let''s explore the tools we need in order to ergonomically and scalably test our constexpr code.
+
+    ---
+
+
+    Slides: https://ganets.ky/slides/2026/cppnow
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Braden Ganetsky
+
+
+    Braden Ganetsky serves as the Secretary of WG21, the ISO C++ committee. Braden graduated from the University of Manitoba with a degree in mechanical engineering, fueled by his passion for mechanical puzzles. During his final year of school, when all classes and activities were remote, he discovered C++ and has been hooked ever since. He interned as a C++ developer, which turned into a full time job, completing a successful pivot of his career. Now he spend his nights working on fun projects like parser combinators, constexpr unit testing, and getting involved in the C++ community.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/SgIiQS6RO60/hqdefault.jpg
+- video_id: 4I5jsK3zRv0
+  title: Multi-Priority Graph-Based Parallel Execution Using Taskflow - Yun Kai Peng - C++Now 2026
+  url: https://www.youtube.com/watch?v=4I5jsK3zRv0
+  published: 2026-09-06 15:00:18+00:00
+  updated: 2026-09-17 20:45:54+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Multi-Priority Graph-Based Parallel Execution Using Taskflow - Yun Kai Peng - C++Now 2026
+
+    ---
+
+
+    Modern C++ graph-based libraries such as Taskflow provide efficient parallel execution by scheduling tasks across a pool of worker threads. In practice, many systems execute latency-sensitive tasks that should be prioritized over background processing. This work presents a design and implementation of priority-aware scheduling for C++ Taskflow that preserves its lightweight task-graph model while improving responsiveness under contention.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Multi-Priority_Graph-Based_Parallel_Execution_Using_Taskflow.pptx
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Yun Kai Peng
+
+
+    Yun Kai Peng is a software engineer at Bloomberg, where he has spent the past three years working on the firm’s electronic trading solutions. He works in Modern C++, carefully balancing performance, reliability, and the occasional existential question about undefined behaviour. His current interests include multi-threaded application design and concurrency optimization for scalable, high-performance systems. Yun Kai Peng earned a bachelor’s degree in mathematics and computer science from McGill University.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/4I5jsK3zRv0/hqdefault.jpg
+- video_id: Ehy9wutYYH8
+  title: When Atomics Lose - Architecture‑Dependent Performance of C++ Synchronization - Sampad Acharya
+  url: https://www.youtube.com/watch?v=Ehy9wutYYH8
+  published: 2026-09-04 15:24:52+00:00
+  updated: 2026-09-18 00:07:50+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    When Atomics Lose - Architecture‑Dependent Performance of C++ Synchronization - Sampad Acharya - C++Now 2026
+
+    ---
+
+
+    Many C++ developers assume that atomics are always faster than mutexes. After all, atomics map directly to hardware instructions, while mutexes may involve OS‑level locking and kernel transitions. But real‑world benchmarks across different CPU architectures tell a more nuanced story.
+
+
+    This talk explores cases where atomics are slower than mutexes, particularly on ARM architectures such as Apple Silicon. The root cause lies in how C++’s memory model interacts with hardware memory models: x86’s strong ordering makes atomic operations relatively cheap, while ARM’s weaker ordering requires additional barriers that introduce measurable overhead. Combined with OS scheduling behavior, these differences can invert expected performance.
+
+
+    Attendees will learn how synchronization primitives behave across architectures, how to design meaningful benchmarks, and how to choose the right mechanism for cross‑platform high‑performance systems.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/When_Atomics_Lose.pptx
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Sampad Acharya
+
+
+    I’m a Senior Software Engineer at Bloomberg, specializing in low‑latency, cache‑optimized C++ systems for trading and real‑time environments. I have been in the software development industry for 6 years now.
+
+
+    I’m deeply interested in how algorithms behave in the real world—across CPU caches, branch predictors, and memory hierarchies—and I enjoy sharing insights that connect theoretical expectations with actual performance. Outside of work, I spend time on robotics, embedded systems, and building end‑to‑end C++ control stacks.
+
+
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/Ehy9wutYYH8/hqdefault.jpg
+- video_id: FOzGlO5XaPE
+  title: Refactoring Legacy C++ OOP Application Code with Functional Programming and Type Erasure Concepts
+  url: https://www.youtube.com/watch?v=FOzGlO5XaPE
+  published: 2026-09-01 15:00:36+00:00
+  updated: 2026-09-19 14:40:29+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Incremental Modernization - Refactoring Legacy C++ OOP Application Code with Functional Programming and Type Erasure Concepts - Jessica Ding - C++Now 2026
+
+    ---
+
+
+    As legacy C++ codebases evolve to meet new requirements, fix architectural issues, and address performance bottlenecks, refactoring becomes inevitable -- but full rewrites are risky, costly, and rarely practical. This talk explores how modern C++ features — especially functional programming techniques and type erasure — provide low-risk modernization strategies that align with where the C++ language is heading. We''ll show how pure functions, discriminated union types, and type-erased callables enable safer, more testable, and more flexible code with compile-time guarantees, even in traditionally object-oriented codebases. You''ll see concrete code examples with testing and migration strategies and walk away equipped with practical strategies to incrementally refactor your legacy systems without disruption.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Incremental_Modernization.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jessica Ding
+
+
+    Jessica Ding is a software engineer at Bloomberg, where she develops and maintains robust, high-performance trading and order management solutions that enable efficient execution, monitoring, and management of complex orders across global markets. Jessica earned her bachelor’s and master’s degrees from MIT. In her free time, she enjoys writing logic puzzles, competing in freestyle dance battles, and tinkering with knitting machine compilers.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/FOzGlO5XaPE/hqdefault.jpg
+- video_id: NYClJyMVtk8
+  title: What is your Algorithmic Core? - Egor Suvorov - C++Now 2026
+  url: https://www.youtube.com/watch?v=NYClJyMVtk8
+  published: 2026-08-30 15:00:36+00:00
+  updated: 2026-09-17 20:48:27+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    What is your Algorithmic Core? - Egor Suvorov - C++Now 2026
+
+    ---
+
+
+    Production C++ code often hides small, but deeply complex, algorithms inside layers of engineering -- APIs, lifetimes, error handling, integration, logging, and glue code. While we test classes and systems, we rarely test the algorithm itself in isolation.
+
+
+    Off-by-one errors and broken or missing invariants can survive extensive pre-production testing. Line coverage does not imply branch coverage. Branch coverage does not imply coverage of algorithmic corner cases. Testing through a wide public API often obscures the mathematical structure of the problem, making subtle bugs difficult to discover through multiple layers of abstraction.
+
+
+    This talk explores how to extract an "algorithmic core" from a larger component. Its correctness is fundamentally mathematical and largely language-agnostic rather than C++-specific.
+
+
+    Using examples such as substring matching, topological sorting variations, and lazy evaluation on trees, we will examine how problem corner cases differ from implementation corner cases, and how easily some of them are skipped.
+
+
+    We will discuss:
+
+
+    - Recognizing when an algorithm is entangled with boilerplate
+
+    - Extracting core logic without introducing accidental complexity
+
+    - What it takes to test algorithmic code in isolation
+
+    - Raising the level of abstraction to make reasoning easier without merely relocating complexity
+
+    - Using LLMs to assist in exploring and validating implementations
+
+    - Gradual rollout and comparison of competing implementations
+
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/What_is_your_Algorithmic_Core.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Egor Suvorov
+
+
+    Egor Suvorov is a senior software engineer at Bloomberg, where he works on DataLayer, the company''s real-time streaming data transformation pipeline. Previously, he led a freshman C++ course, where his students uncovered and reported dozens of bugs in various C++ tools. Egor was also part of the winning team of the ACM ICPC 2014 World Finals.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/NYClJyMVtk8/hqdefault.jpg
+- video_id: beo7kPRoZyY
+  title: Optimizing Bishop, Rook, and Queen Move Generation in a Chess Engine - Aryan Naraghi - C++Now 2026
+  url: https://www.youtube.com/watch?v=beo7kPRoZyY
+  published: 2026-08-28 15:46:34+00:00
+  updated: 2026-09-18 05:41:42+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Optimizing Bishop, Rook, and Queen Move Generation in a Chess Engine - Aryan Naraghi - C++Now 2026
+
+    ---
+
+
+    A chess engine must search millions of positions per second. Move generation is often a bottleneck. Generating moves for knights, kings, and pawns are computationally cheap (~1 nanosecond). However, rooks, bishops, and queens (aka "sliding pieces") present a unique challenge: their movement depends on the placement of other pieces. This makes on-demand generation too slow (20+ nanoseconds) and naively-implemented lookup tables impractical (requiring zettabytes of RAM).
+
+
+    We will start by reviewing the core data structures in a chess engine and the logic behind move generation. Then, we will explore "magic bitboards", a perfect hashing technique that enables sliding piece move generation in ~1 nanosecond. We will look at how to implement this in modern C++, comparing hardware-specific instructions like PEXT (Parallel Bits Extract) against a portable software approach. Finally, we will discuss the practical challenges of generating the data structures required for magic bitboards, including the limitations of consteval and how to integrate build-time table generation into the build process using Bazel.
+
+
+    To ground these concepts, we will be referencing implementation details and code from my C++ chess engine, FollyChess.
+
+    ---
+
+
+    Slides: https://cppnow26.follychess.com/
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Aryan Naraghi
+
+
+    Aryan Naraghi is a Staff Software Engineer at Google specializing in distributed systems. Over the past 14 years, he has built critical infrastructure across Google (including BigQuery, Cloud Run, Compute Engine, and Vertex AI) and previously led data strategy as Head of Data Analytics at Restaurant Brands International. He holds a B.S. in Computer Engineering from the University of Washington.
+
+
+    A dedicated C++ practitioner, Aryan is the creator of FollyChess, a C++ chess engine focusing on low-latency search and modern C++ design patterns.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/beo7kPRoZyY/hqdefault.jpg
+- video_id: WabG-ku-Osk
+  title: No Compiler Required - Hand-Rolling C++20 Coroutines in C++17 - Johannes Kalmbach - C++Now 2026
+  url: https://www.youtube.com/watch?v=WabG-ku-Osk
+  published: 2026-08-25 15:09:21+00:00
+  updated: 2026-09-18 07:59:15+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    No Compiler Required - Hand-Rolling C++20 Coroutines in C++17 - Johannes Kalmbach - C++Now 2026
+
+    ---
+
+
+    How does co_await actually work? Not only at the "promise_type customization point" level, but at the level of the state machine the compiler emits on your behalf.
+
+
+    In this talk, we will take C++20 coroutines apart by manually transforming them into equivalent C++17 state machines, starting with a simple generator and building up to coroutines involving symmetric transfer and exception propagation. Each transformation exposes a subtlety that is easy to overlook when the compiler does the work for us: coroutine frame layout, suspension point indexing, lifetime of locals across suspension points, and the surprisingly tricky semantics of initial_suspend and final_suspend. By the end, you will have a mental model precise enough to reason about compiler codegen, debug coroutine-related issues, and evaluate the design tradeoffs baked into the C++20 coroutine specification.
+
+
+    Because the transformations only touch the coroutine body (the promise_type, awaitables, and other customization points remain virtually unchanged) the coroutine infrastructure itself becomes a library-level concern, and we can change it. We demonstrate this by swapping the default stackless machinery for a stackful alternative that, for simple generators, matches the performance of handwritten iterators and ranges. Finally, we show that the tedious manual rewriting can be automated with a source-to-source rewriter built on LLVM''s LibTooling, making a case for why reimplementing core language features as library code can be practically valuable even when the compiler already provides them.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/No_Compiler_Required.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Johannes Kalmbach
+
+
+    I am a researcher and PhD candidate at the University of Freiburg (Germany) where I use modern C++ to build QLever, a highly efficient RDF graph database for knowledge graphs with hundreds of billions of statements. I have recently cofounded QLeverize AG which provides commercial support for QLever. If it was purely up to me, our codebase would already be running C++29 today.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/WabG-ku-Osk/hqdefault.jpg
+- video_id: vfXKH7Uj170
+  title: Algorithms for Trees - Foldable, Applicative, Traversable - Steve Downey - C++Now 2026
+  url: https://www.youtube.com/watch?v=vfXKH7Uj170
+  published: 2026-08-23 15:00:27+00:00
+  updated: 2026-09-18 02:15:52+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Algorithms for Trees - Foldable, Applicative, Traversable - Steve Downey - C++Now 2026
+
+    ---
+
+
+    The use of the functor and monad patterns in ranges, sender-receiver, optional, and expected has been broadly and widely successful. There are other type classes that C++ can profitably adopt for use in generic programming that have proven to be useful in other languages and ecosystems in the last decade.
+
+    In particular, I am interested in better support for algorithms over trees, and other data structures, where flattening into a sequence loses too much information. In this talk, I will focus on Foldable, Applicative, and Traversable type classes, as well as Monoid, as it provides capabilities for a number of tree algorithms.
+
+
+    The eventual goal of this work is to provide `fingertree` to the standard library, as well as support for application domain trees in use today, such as expression evaluators and syntax trees.
+
+
+    Takeaway: A better understanding of some of the theory behind current libraries and upcoming proposals, the inherent limitations of ranges, and some direction for extension consistent with current libraries.
+
+
+    - Foldables are types which can be made to look like a sequence of some sort, or a range, and support the basic `fold` operation which provides much of the power of std::ranges. Providing opt-in hooks for making a type Foldable rather than a Range is useful.
+
+
+    - Applicatives were introduced to provide the pattern of ''pure function applied to funny arguments'', where a type "supports its own peculiar way of giving meaning to the usual [notion of function invocation]." The implementation details of partially applied functions in a container turn out to be a distraction from understanding. They turn out to be widely relevant in contexts such as data parallel operations, and with less overhead than monadic operations.
+
+
+    - Traversables are generalizations of Foldables which allow preservation of the "shape" of a container, where a Foldable can only see the ordered sequence. A binary tree can be traversed and maintain the parent child relationships, where a fold can at most produce a range. Traversable also provides the ability to "commute" containers, generically, providing the ability to convert a range of tasks into a task producing a range.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Algorithms_for_Trees.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Steve Downey
+
+
+    Steve Downey has been a programmer for more than 30 years. Steve graduated from SUNY Purchase with a BS in Mathematics. A Computer Science degree would have involved two classes before 11:00 am, so was impossible.
+
+    He has worked at Bloomberg since 2003, and is currently working as an Engineer on the C++ Infrastructure team.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/vfXKH7Uj170/hqdefault.jpg
+- video_id: 3hL8mh0K8-I
+  title: Compile-Time Borrow Checker with Stateful Metaprogramming - Alon Wolf - C++Now 2026
+  url: https://www.youtube.com/watch?v=3hL8mh0K8-I
+  published: 2026-08-21 17:03:05+00:00
+  updated: 2026-09-17 20:42:58+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Compile-Time Borrow Checker with Stateful Metaprogramming - Alon Wolf - C++Now 2026
+
+    ---
+
+
+    Memory safety has become a central concern in modern programming. While Rust’s borrow checker enforces strong safety guarantees at compile time, C++ developers need not remain on the sidelines.
+
+    This talk explores how the core principles behind borrow checking can be adapted to C++ and enforced entirely at compile time.
+
+
+    We begin by examining what the borrow checker actually does, reviewing Rust’s MIR-based analyses such as Non-Lexical Lifetimes (NLL) and Polonius, along with their limitations.
+
+    We then show how stateful template metaprogramming can be used to build an intermediate representation of program behavior and enforce borrowing rules during compilation.
+
+    Finally, we look beyond borrow checking, showing how the framework generalizes beyond borrow checking and how C++26 reflection simplifies and strengthens the implementation.
+
+    Attendees will gain a practical understanding of borrow checking, stateful metaprogramming, and how modern C++ can move toward stronger compile-time safety guarantees.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Compile-Time_Borrow_Checker_with_Stateful_Metaprogramming.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Alon Wolf
+
+
+    Alon is a Senior Software Engineer at Medtronic specializing in 3D and computer graphics with a passion for high performance. He has developed many custom simulation and rendering engines for different platforms using modern C++. He also writes a C++ technical blog and participates in game jams.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/3hL8mh0K8-I/hqdefault.jpg
+- video_id: apLDto3FUVA
+  title: Coroutines for Dummies - Dominic Fischer - C++Now 2026
+  url: https://www.youtube.com/watch?v=apLDto3FUVA
+  published: 2026-08-18 15:00:11+00:00
+  updated: 2026-09-17 23:09:41+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Coroutines for Dummies - Dominic Fischer - C++Now 2026
+
+    ---
+
+
+    C++20 coroutines are a game-changer for writing asynchronous code and generators, but they come with a steep learning curve. This talk is designed to simplify the concept and make coroutines more approachable.
+
+
+    We’ll focus on co_await — how it works, what it does under the hood, and why it''s useful. If you’ve been curious about coroutines but found the resources confusing, this talk is for you.
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Coroutines_for_Dummies.pptx
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Dominic Fischer
+
+
+    Dominic Fischer is a software engineer on the software security platform engineering team at Bloomberg, where he has worked for more than 5 years. In this role, he codes primarily with C++ and a bit of Python. He is passionate about C++, concurrency, safety, and distributed systems.
+
+    In his free time, Dominic contributes to the embedded Rust ecosystem, focusing primarily on the ESP32. He earned a bachelor''s degree in computer science from the University of Manchester.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/apLDto3FUVA/hqdefault.jpg

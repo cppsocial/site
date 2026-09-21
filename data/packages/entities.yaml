@@ -1202,6 +1202,11 @@ entities:
   aliases: []
   packages:
   - spack:apple-libuuid
+- id: apple-mig
+  name: apple_mig
+  aliases: []
+  packages:
+  - bazel:apple_mig
 - id: apple-rules-lint
   name: apple_rules_lint
   aliases: []
@@ -19496,11 +19501,6 @@ entities:
   - conan:kealib
   - spack:kealib
   - vcpkg:kealib
-- id: keccak-tiny
-  name: keccak-tiny
-  aliases: []
-  packages:
-  - vcpkg:keccak-tiny
 - id: kedixa-coke
   name: kedixa-coke
   aliases: []
@@ -36526,6 +36526,11 @@ entities:
   packages:
   - cppget:plf-rand
   - xmake:plf_rand
+- id: plf-tools
+  name: plf-tools
+  aliases: []
+  packages:
+  - vcpkg:plf-tools
 - id: plf-indiesort
   name: plf_indiesort
   aliases:
@@ -61685,6 +61690,11 @@ entities:
   aliases: []
   packages:
   - spack:rocprim
+- id: rocprof-trace-decoder
+  name: rocprof-trace-decoder
+  aliases: []
+  packages:
+  - spack:rocprof-trace-decoder
 - id: rocprofiler-compute
   name: rocprofiler-compute
   aliases: []
@@ -62434,6 +62444,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_curl
+- id: rules-cyclone
+  name: rules_cyclone
+  aliases: []
+  packages:
+  - bazel:rules_cyclone
 - id: rules-d
   name: rules_d
   aliases: []
@@ -64337,8 +64352,10 @@ entities:
   - conan:sentry-crashpad
 - id: sentry-native
   name: sentry-native
-  aliases: []
+  aliases:
+  - sentry_native
   packages:
+  - bazel:sentry_native
   - conan:sentry-native
   - vcpkg:sentry-native
   - xmake:sentry-native
@@ -69291,6 +69308,11 @@ entities:
   aliases: []
   packages:
   - spack:tsne-cuda
+- id: ttmath
+  name: ttmath
+  aliases: []
+  packages:
+  - vcpkg:ttmath
 - id: tulip
   name: tulip
   aliases: []
@@ -72604,6 +72626,11 @@ entities:
   aliases: []
   packages:
   - spack:xrdcl-record
+- id: xrefl
+  name: xrefl
+  aliases: []
+  packages:
+  - xmake:xrefl
 - id: xrefresh
   name: xrefresh
   aliases: []

@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: meson
 repository: https://github.com/mesonbuild/wrapdb
-revision: 01d8f59d3689e00eb65f78a42e5c5a02456d7004
+revision: dbe7db37400c872e01e7687c7edc0287f066fefc
 packages:
 - id: meson:abseil-cpp
   registry: meson
@@ -4008,12 +4008,19 @@ packages:
     capabilities:
     - atomic_queue
     artifacts:
-    - url: https://github.com/max0x7ba/atomic_queue/archive/refs/tags/v1.9.2.tar.gz
-      checksums:
-      - sha256:7c3606f23cea69d39c3872996ffb83587bd4ab08da3c0c4c45aba7aa15eea9f8
-      filename: atomic_queue-1.9.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/atomic_queue_1.9.2-1/atomic_queue.wrap
+  - version: 1.9.4
+    packaging_revision: '1'
+    capabilities:
+    - atomic_queue
+    artifacts:
+    - url: https://github.com/max0x7ba/atomic_queue/archive/refs/tags/v1.9.4.tar.gz
+      checksums:
+      - sha256:fecfa9ca12fc203e40fd967c2bfa8033f77d0bde0e3b21c8ca5f5f9eeeabe022
+      filename: atomic_queue-1.9.4.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/atomic_queue_1.9.4-1/atomic_queue.wrap
   recipe_path: subprojects/atomic_queue.wrap
 - id: meson:au
   registry: meson
@@ -18265,12 +18272,19 @@ packages:
     capabilities:
     - mimalloc
     artifacts:
-    - url: https://github.com/microsoft/mimalloc/archive/refs/tags/v3.5.1.tar.gz
-      checksums:
-      - sha256:2602daad9b64b213a8835dee6fadda96d2081c0171bfcd3fb2db39bdc669d6b3
-      filename: mimalloc-3.5.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/mimalloc_3.5.1-1/mimalloc.wrap
+  - version: 3.5.3
+    packaging_revision: '1'
+    capabilities:
+    - mimalloc
+    artifacts:
+    - url: https://github.com/microsoft/mimalloc/archive/refs/tags/v3.5.3.tar.gz
+      checksums:
+      - sha256:3b4a15153a59905995f7070296ed604bb5ccc00cabb8b93446931aff77224d47
+      filename: mimalloc-3.5.3.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/mimalloc_3.5.3-1/mimalloc.wrap
   recipe_path: subprojects/mimalloc.wrap
 - id: meson:miniaudio
   registry: meson
@@ -21672,6 +21686,15 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/quickjs-ng_0.16.2-1/quickjs-ng.wrap
+  - version: 0.17.0
+    packaging_revision: '1'
+    capabilities:
+    - qjs
+    - qjsc
+    - quickjs-ng
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/quickjs-ng_0.17.0-1/quickjs-ng.wrap
   - version: 0.9.0
     packaging_revision: '1'
     capabilities:
@@ -23127,6 +23150,13 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl3_3.4.12-1/sdl3.wrap
+  - version: 3.4.14
+    packaging_revision: '1'
+    capabilities:
+    - sdl3
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/sdl3_3.4.14-1/sdl3.wrap
   - version: 3.4.2
     packaging_revision: '1'
     capabilities:

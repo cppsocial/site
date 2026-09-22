@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: d00acb55ee9b53f7f0d57550cb07d35de9994848
+revision: 00a60350d91da6d968a20a308c5c082076aa4d26
 packages:
 - id: spack:3dtk
   registry: spack
@@ -858,6 +858,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:9ae9b563137e08302d830a58a8bc3df2d8d0f78afeca2029b451636651d18f74
+  - version: 10.8.3
+    artifacts:
+    - checksums:
+      - sha256:cfad7f1c1bfa90c2fac3dca02f8d4d1c7aaf7d6e0d3bba24c091185d559c503b
   - version: 8.10.2
     artifacts:
     - checksums:
@@ -5574,6 +5578,10 @@ packages:
   - name: python
     constraint: 'python@3.6:'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -6750,7 +6758,11 @@ packages:
   - name: cmake
     constraint: 'cmake@3.18:'
     kind: build
-    condition: '@23.02:'
+    condition: '@23.02:26.08'
+  - name: cmake
+    constraint: 'cmake@3.25:'
+    kind: build
+    condition: '@26.09:'
   - name: cmake
     constraint: 'cmake@3.17:'
     kind: build
@@ -7304,6 +7316,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:12e242e47929afd38e9f974393003c3b65f98fa7fb6d5218019aac5b46917b25
+  - version: '26.09'
+    artifacts:
+    - checksums:
+      - sha256:ad541286a62128477154a702f6b1cf918e0156078036c408e9d720451d5fd90c
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/amrex/package.py
 - id: spack:amrfinder
@@ -38499,6 +38515,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:92dcfe3d2e1ca52b460c7f168d8d74e47cd17370fa8bdffb919174115f94ab0f
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -38882,6 +38902,10 @@ packages:
   - name: amdgpu_target
     description: set gpu targets
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -48434,6 +48458,7 @@ packages:
   - c
   - cmake
   - cxx
+  - g4hepem
   - hepmc3
   - imagemagick
   - intel-tbb
@@ -48469,6 +48494,9 @@ packages:
   - name: cxx
     constraint: cxx
     kind: build
+  - name: g4hepem
+    constraint: g4hepem
+    condition: +g4hepem
   - name: hepmc3
     constraint: hepmc3
     condition: +hepmc3
@@ -48523,6 +48551,7 @@ packages:
   - debug
   - doc
   - edm4hep
+  - g4hepem
   - geant4units
   - hepmc3
   - hepmc3-gz
@@ -48543,6 +48572,7 @@ packages:
     debug: 'false'
     doc: 'false'
     edm4hep: 'true'
+    g4hepem: 'false'
     geant4units: 'false'
     hepmc3: 'false'
     hepmc3-gz: 'false'
@@ -48589,6 +48619,10 @@ packages:
     description: Enable build with edm4hep
     default: 'true'
     condition: '@1.24:'
+  - name: g4hepem
+    description: Enable build of G4HepEm plugin
+    default: 'false'
+    condition: '@1.38: +ddg4'
   - name: geant4units
     description: Use geant4 units throughout
     default: 'false'
@@ -48724,6 +48758,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ade63b28c13d8e265ef95185326bc311fdf76cd3afe1a2bc44c7ff3f6a19409c
+  - version: '1.38'
+    artifacts:
+    - checksums:
+      - sha256:8a11c42cfd2026faae421260bc3dea9f61c78ebacd1f9ba1b0ca3ff054425ffd
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/dd4hep/package.py
 - id: spack:ddc
@@ -103014,6 +103052,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -103156,6 +103198,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -103302,6 +103348,10 @@ packages:
   - name: amdgpu_target
     description: AMD GPU architecture
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 6.1.0
     artifacts:
     - checksums:
@@ -103545,6 +103595,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -103675,6 +103729,10 @@ packages:
     constraint: cxx
     kind: build
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 6.3.0
     artifacts:
     - checksums:
@@ -103856,6 +103914,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 6.0.0
     artifacts:
     - checksums:
@@ -103989,6 +104051,10 @@ packages:
   - name: numactl
     constraint: numactl
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:92dcfe3d2e1ca52b460c7f168d8d74e47cd17370fa8bdffb919174115f94ab0f
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -104147,6 +104213,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -104323,6 +104393,10 @@ packages:
     description: Build with  plugins enabled or disabled
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 7.1.1
     artifacts:
     - checksums:
@@ -104399,6 +104473,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -104558,6 +104636,10 @@ packages:
     constraint: 'rocm-cmake@3.8.0:'
     kind: build
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:ba79c33ba7d22c97e39d57ef3839c0fada164d8d6dd936fd9ddb35a5909d4d81
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -104700,6 +104782,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:cd8c4722cddb4049ffb4240b3ad1aee85245abae4ccfac7d2d030e3546e72b46
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -104872,6 +104958,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -105062,6 +105152,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -105234,6 +105328,10 @@ packages:
     description: Enable ROCm support
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -105443,6 +105541,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 6.0.0
     artifacts:
     - checksums:
@@ -107551,6 +107653,10 @@ packages:
     constraint: cxx
     kind: build
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 7.0.0
     artifacts:
     - checksums:
@@ -107658,6 +107764,10 @@ packages:
     description: Build shared or static library
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -130119,6 +130229,7 @@ packages:
   - fortran
   - libxsmm
   - magma
+  - pkgconf
   dependency_details:
   - name: blas
     constraint: blas
@@ -130145,6 +130256,9 @@ packages:
   - name: magma
     constraint: magma+shared
     condition: +magma+shared
+  - name: pkgconf
+    constraint: pkgconf
+    kind: build
   options:
   - debug
   - libxsmm
@@ -152979,6 +153093,10 @@ packages:
     description: Build ROCm device libs as external LLVM project instead of a standalone spack package.
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:92dcfe3d2e1ca52b460c7f168d8d74e47cd17370fa8bdffb919174115f94ab0f
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -164140,6 +164258,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f4e3e60230455f5c6edadf33b74b365640d958c70dde95ae6746814d3a5a1b56
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -165812,6 +165934,10 @@ packages:
     default: 'true'
     condition: '@6.3:'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -166168,6 +166294,7 @@ packages:
     description: Use HIP as backend
     default: 'true'
   versions:
+  - version: 10.0.0
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -175004,6 +175131,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:0916700dec3342165b7ba2c3b5f99dcff767879d2a4931b5028dba47acd68bd5
+  - version: 3.0.3
+    artifacts:
+    - checksums:
+      - sha256:374537dd2c724116cbf45e3f72438f236012fd2664cb43e84de08c7fb9267424
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/namd/package.py
 - id: spack:nano
@@ -230428,6 +230559,17 @@ packages:
   - Apache-2.0
   homepage: https://github.com/aio-libs/aiohttp
   repository_url: https://github.com/aio-libs/aiohttp
+  dependencies:
+  - python
+  dependency_details:
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@3.11:'
+  - name: python
+    constraint: 'python@3.8:'
+    kind: build,run
+    condition: '@3.9:'
   versions:
   - version: 3.14.3
     artifacts:
@@ -232023,6 +232165,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b99acb15ff90faa46337d544b10226c3055ef06e538f82a0d8ae247740923d1d
+  - version: '26.09'
+    artifacts:
+    - checksums:
+      - sha256:4d4e7fad1f7df16c45e2fdaeda368b60df0c289a6aa023793892c529a6478641
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/py_amrex/package.py
 - id: spack:py-angel
@@ -264276,8 +264422,13 @@ packages:
     constraint: py-hatchling
     kind: build
   - name: python
-    constraint: python@3.10:3.12
+    constraint: 'python@3.10:'
     kind: build,run
+    condition: '@0.11.11:'
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@0.11.3:'
   versions:
   - version: 0.11.10
     artifacts:
@@ -275798,6 +275949,10 @@ packages:
     description: Enable support for gRPC Remote Procedure Call framework.
     default: 'false'
   versions:
+  - version: 1.52.0
+    artifacts:
+    - checksums:
+      - sha256:560716c807117394da12cecb0a54da5a451b5cf9866f1d37e9a5e2329a665351
   - version: 1.55.0
     artifacts:
     - checksums:
@@ -275806,6 +275961,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c25873c47279387cfdcbdafa36149887901d36202cb645a0e4f29686bf6e4417
+  - version: 1.57.1
+    artifacts:
+    - checksums:
+      - sha256:e877f2f041b640b4888b6917dde4f44515ab938bf744c4dbc06f11f0e8ed56b5
   - version: 1.58.0
     artifacts:
     - checksums:
@@ -455383,6 +455542,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -455734,6 +455897,10 @@ packages:
   - name: protobuf
     constraint: protobuf
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -460773,6 +460940,7 @@ packages:
   - name: amdgpu_target
     description: AMD GPU architecture
   versions:
+  - version: 10.0.0
   - version: 6.2.0
     artifacts:
     - checksums:
@@ -460889,6 +461057,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -461063,6 +461235,10 @@ packages:
     description: Use Tensile as a backend
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -461208,6 +461384,10 @@ packages:
   - name: amdgpu_target
     description: AMD GPU architecture
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 6.1.0
     artifacts:
     - checksums:
@@ -461378,6 +461558,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -461518,6 +461702,10 @@ packages:
     kind: build
     condition: '@6.2:'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 6.3.0
     artifacts:
     - checksums:
@@ -462018,6 +462206,10 @@ packages:
     constraint: cxx
     kind: build
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f832a52ead9788c9cc6d40e2fb84818c3e8e82b06079f26623a719cd891efd61
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -462158,6 +462350,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -462314,6 +462510,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -462462,6 +462662,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -462618,6 +462822,10 @@ packages:
     constraint: zlib-api
     kind: link
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:92dcfe3d2e1ca52b460c7f168d8d74e47cd17370fa8bdffb919174115f94ab0f
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -462797,6 +463005,7 @@ packages:
     description: Build with ROCm
     default: 'true'
   versions:
+  - version: 10.0.0
   - version: 6.2.0
     artifacts:
     - checksums:
@@ -462954,6 +463163,10 @@ packages:
     constraint: zlib-api
     kind: link
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:82a2d623c3d17e8ee14ef0d668fa6ef870542ae14b6ff8cbab3ed01286ffdffd
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -463120,6 +463333,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -463387,6 +463604,10 @@ packages:
     description: Build shared or static library
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -463549,6 +463770,10 @@ packages:
     description: AMD GPU architecture
     default: all
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -463720,6 +463945,10 @@ packages:
   - name: amdgpu_target
     description: AMD GPU architecture
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:1cce2345dafbe1d1ae929c11f4371cfb4fe23b6b9063976d5da05c55cdeb539c
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -463856,6 +464085,10 @@ packages:
     constraint: cxx
     kind: build
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -464169,6 +464402,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -464278,6 +464515,40 @@ packages:
     - checksums:
       - sha256:300cc50720d40bad7c7ed1f6d67e8c5ebecaba62c07a6ea1cc5813c0ea2e41b5
   recipe_path: repos/spack_repo/builtin/packages/rocprim/package.py
+- id: spack:rocprof-trace-decoder
+  registry: spack
+  name: rocprof-trace-decoder
+  summary: ROCm trace decoder library for rocprofiler-sdk
+  licenses:
+  - MIT
+  homepage: https://github.com/ROCm/rocm-systems
+  repository_url: https://github.com/rocm/rocm-systems
+  maintainers:
+  - afzpatel
+  - renjithravindrankannath
+  - srekolam
+  topics:
+  - rocm
+  dependencies:
+  - c
+  - cmake
+  - cxx
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: cmake
+    constraint: 'cmake@3.16:'
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
+  recipe_path: repos/spack_repo/builtin/packages/rocprof_trace_decoder/package.py
 - id: spack:rocprofiler-compute
   registry: spack
   name: rocprofiler-compute
@@ -464294,6 +464565,8 @@ packages:
   - rocm
   dependencies:
   - fmt
+  - googletest
+  - nlohmann-json
   - py-astunparse
   - py-colorlover
   - py-dash
@@ -464318,6 +464591,12 @@ packages:
   - name: fmt
     constraint: fmt@12.1
     condition: '@7.1:'
+  - name: googletest
+    constraint: googletest
+    condition: '@7.13,10:'
+  - name: nlohmann-json
+    constraint: nlohmann-json
+    condition: '@7.13,10:'
   - name: py-astunparse
     constraint: py-astunparse@1.6.2
     kind: build,run
@@ -464373,6 +464652,10 @@ packages:
   - name: python
     constraint: 'python@3.8:'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 6.3.2
     artifacts:
     - checksums:
@@ -464526,6 +464809,10 @@ packages:
   - name: py-termcolor
     constraint: py-termcolor
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -464667,11 +464954,18 @@ packages:
   - name: fmt
     constraint: fmt@:12.1
     condition: '@:7'
+  - name: fmt
+    constraint: fmt@:12.2
+    condition: '@10.0:'
   - name: glog
     constraint: glog
   - name: libunwind
     constraint: libunwind
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 6.1.0
     artifacts:
     - checksums:
@@ -464840,6 +465134,7 @@ packages:
     description: build internal fmt
     default: 'false'
   versions:
+  - version: 10.0.0
   - version: 6.2.4
   - version: 6.3.0
   - version: 6.3.1
@@ -464895,6 +465190,7 @@ packages:
   - python
   - sqlite
   - tau
+  - tcl
   - texinfo
   dependency_details:
   - name: autoconf
@@ -464971,6 +465267,10 @@ packages:
   - name: tau
     constraint: tau
     condition: +tau
+  - name: tcl
+    constraint: tcl
+    kind: build
+    condition: '@7.1:'
   - name: texinfo
     constraint: texinfo
   options:
@@ -465042,6 +465342,7 @@ packages:
     description: Enable support for using TAU markers in omnitrace instrumentation
     default: 'false'
   versions:
+  - version: 10.0.0
   - version: 6.3.0
   - version: 6.3.1
   - version: 6.3.2
@@ -465202,6 +465503,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -465342,6 +465647,10 @@ packages:
   - name: ucx
     constraint: 'ucx@1.17: +rocm'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 6.4.0
     artifacts:
     - checksums:
@@ -465458,6 +465767,10 @@ packages:
     description: This option improves performance at the cost of increased binary size and compile time by adding specialized kernels for small matrix sizes
     default: 'true'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -465633,6 +465946,10 @@ packages:
     description: Build rocsparse-test client
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -465781,6 +466098,10 @@ packages:
   - name: amdgpu_target
     description: AMD GPU architecture
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -465937,6 +466258,10 @@ packages:
     description: Build with address-sanitizer enabled or disabled
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -466069,6 +466394,10 @@ packages:
     constraint: cxx
     kind: build
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -466228,6 +466557,10 @@ packages:
     - Release
     default: Release
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -467965,6 +468298,10 @@ packages:
     description: Use OPENCL as the backend
     default: 'false'
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:eb7f255d6627d3cfb312a7bcf41d701517ecaeac88382b56f2bde8d4947ea592
   - version: 5.7.0
     artifacts:
     - checksums:
@@ -501293,6 +501630,10 @@ packages:
   - name: numactl
     constraint: numactl
   versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:3b24777b3e8600101125dedfe2ea169f6e5d3758abef4ed3db55288c1bf4fc4f
   - version: 6.3.0
     artifacts:
     - checksums:
@@ -514052,6 +514393,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:fa430d90de6d7d51811f7eb170797f55ccf0e7a344bfbc1c81f0fdba53986530
+  - version: '26.09'
+    artifacts:
+    - checksums:
+      - sha256:ea0c0c01883a8b8cc8c60dcce60c0c103b2abf873d6a63bffcf41c8762ae5be0
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/warpx/package.py
 - id: spack:wasi-sdk-prebuilt

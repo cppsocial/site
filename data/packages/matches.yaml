@@ -20581,6 +20581,54 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+- left: bazel:sentry_native
+  right: conan:sentry-crashpad
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+- left: bazel:sentry_native
+  right: conan:sentry-native
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same normalized spelling
+    weight: 0.75
+  - signal: shared package-family homepage
+    weight: 0.0
+- left: bazel:sentry_native
+  right: vcpkg:sentry-native
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same normalized spelling
+    weight: 0.75
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:sentry_native
+  right: xmake:sentry-native
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same normalized spelling
+    weight: 0.75
+  - signal: shared distributed version
+    weight: 0.12
 - left: bazel:simde
   right: conan:simde
   confidence: 1.0
@@ -22406,6 +22454,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared distributed version
     weight: 0.12
 - left: bazel:tl-expected
@@ -40788,8 +40838,6 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
   - signal: shared license
     weight: 0.05
   - signal: similar description
@@ -44639,6 +44687,8 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: same homepage
@@ -44646,6 +44696,8 @@ matches:
   - signal: conflicting licenses
     weight: -0.12
   - signal: similar description
+    weight: 0.12
+  - signal: shared distributed version
     weight: 0.12
 - left: conan:libhydrogen
   right: vcpkg:libhydrogen
@@ -44938,8 +44990,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: shared distributed version
     weight: 0.12
 - left: conan:libjpeg-turbo
@@ -49979,6 +50031,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared license
     weight: 0.05
 - left: conan:mexce
@@ -50092,8 +50146,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source checksum
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -59811,6 +59863,8 @@ matches:
     weight: 1.0
   - signal: substantially different names
     weight: -0.3
+  - signal: shared distributed version
+    weight: 0.12
 - left: conan:sdl
   right: spack:sdl2
   confidence: 1.0
@@ -63077,8 +63131,6 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
   - signal: similar description
     weight: 0.0877
   - signal: shared distributed version
@@ -64649,6 +64701,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared license
     weight: 0.05
   - signal: similar description
@@ -84687,8 +84741,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
 - left: meson:au
@@ -97254,8 +97306,6 @@ matches:
     weight: 1.0
   - signal: library-prefix alias
     weight: 0.6
-  - signal: same homepage
-    weight: 0.3
   - signal: similar description
     weight: 0.079
   - signal: shared distributed version
@@ -102480,8 +102530,6 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
   - signal: shared license
     weight: 0.05
   - signal: shared distributed version
@@ -109865,8 +109913,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: similar description
     weight: 0.1064
   - signal: shared distributed version
@@ -111677,6 +111725,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared license
     weight: 0.05
   - signal: similar description
@@ -116851,6 +116901,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared license
     weight: 0.05
   - signal: shared distributed version
@@ -121454,6 +121506,17 @@ matches:
     weight: 0.3
   - signal: shared distributed version
     weight: 0.12
+- left: spack:patch
+  right: xmake:patch
+  confidence: 0.9692
+  decision: merge
+  evidence:
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: shared distributed version
+    weight: 0.12
 - left: spack:plplot
   right: vcpkg:plplot
   confidence: 0.9692
@@ -122450,6 +122513,15 @@ matches:
     weight: 0.3
 - left: bazel:opus
   right: spack:opus
+  confidence: 0.965
+  decision: merge
+  evidence:
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+- left: bazel:patch
+  right: xmake:patch
   confidence: 0.965
   decision: merge
   evidence:
@@ -129039,15 +129111,6 @@ matches:
     weight: 0.95
   - signal: shared distributed version
     weight: 0.12
-- left: spack:patch
-  right: xmake:patch
-  confidence: 0.956
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-  - signal: shared distributed version
-    weight: 0.12
 - left: spack:pcre
   right: vcpkg:pcre
   confidence: 0.956
@@ -131409,13 +131472,6 @@ matches:
     weight: 0.95
 - left: bazel:pango
   right: xmake:pango
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-- left: bazel:patch
-  right: xmake:patch
   confidence: 0.95
   decision: merge
   evidence:
@@ -141670,6 +141726,17 @@ matches:
     weight: 0.1176
   - signal: shared distributed version
     weight: 0.12
+- left: spack:qt-3d
+  right: vcpkg:qt3d
+  confidence: 0.8037
+  decision: none
+  evidence:
+  - signal: same normalized spelling
+    weight: 0.75
+  - signal: similar description
+    weight: 0.1078
+  - signal: shared distributed version
+    weight: 0.12
 - left: spack:suite-sparse
   right: vcpkg:suitesparse
   confidence: 0.8017
@@ -142853,17 +142920,6 @@ matches:
     weight: 0.3
   - signal: shared license
     weight: 0.05
-- left: spack:qt-3d
-  right: vcpkg:qt3d
-  confidence: 0.7254
-  decision: none
-  evidence:
-  - signal: same normalized spelling
-    weight: 0.75
-  - signal: conflicting descriptions
-    weight: -0.07
-  - signal: shared distributed version
-    weight: 0.12
 - left: bazel:avro-cpp
   right: conan:libavrocpp
   confidence: 0.72
@@ -143018,6 +143074,32 @@ matches:
     weight: 0.3
   - signal: conflicting package types
     weight: -0.15
+- left: conan:isl
+  right: xmake:libisl
+  confidence: 0.7008
+  decision: none
+  evidence:
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting descriptions
+    weight: -0.07
+  - signal: shared distributed version
+    weight: 0.12
+- left: spack:isl
+  right: xmake:libisl
+  confidence: 0.7008
+  decision: none
+  evidence:
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting descriptions
+    weight: -0.07
+  - signal: shared distributed version
+    weight: 0.12
 - left: conan:rttr
   right: spack:r-ttr
   confidence: 0.6975
@@ -144170,28 +144252,6 @@ matches:
     weight: -0.12
   - signal: similar description
     weight: 0.1171
-  - signal: shared distributed version
-    weight: 0.12
-- left: conan:isl
-  right: xmake:libisl
-  confidence: 0.6026
-  decision: none
-  evidence:
-  - signal: library-prefix alias
-    weight: 0.6
-  - signal: conflicting descriptions
-    weight: -0.07
-  - signal: shared distributed version
-    weight: 0.12
-- left: spack:isl
-  right: xmake:libisl
-  confidence: 0.6026
-  decision: none
-  evidence:
-  - signal: library-prefix alias
-    weight: 0.6
-  - signal: conflicting descriptions
-    weight: -0.07
   - signal: shared distributed version
     weight: 0.12
 - left: bazel:bzip2

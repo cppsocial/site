@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: a47a9e08fd70f5342a2660be9ea65353b2904aa6
+revision: 7e595f3d0db8964cbcfab0882233be1a8b0d5d79
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -10379,6 +10379,11 @@ packages:
     - url: https://github.com/CGAL/cgal/releases/download/v6.1.1/CGAL-6.1.1-library.zip
       checksums:
       - sha256:6c5d68be1d28cbee3c3e05003746ec4791d0018c770b4276b9e6d69c3a0a355a
+  - version: 6.1.3
+    artifacts:
+    - url: https://github.com/CGAL/cgal/releases/download/v6.1.3/CGAL-6.1.3-library.zip
+      checksums:
+      - sha256:6c8e48e6ba0a6884b44491ce32b3aee3407ffc5c81a388f59dcb34d0c32f020b
   recipe_path: packages/c/cgal/xmake.lua
 - id: xmake:cgetopt
   registry: xmake
@@ -15984,7 +15989,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x55577cb90a00'
+    default: 'table: 0x556b51a252a0'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -22522,6 +22527,11 @@ packages:
     artifacts:
     - url: https://github.com/cieslarmichal/faker-cxx.git
     - url: https://github.com/cieslarmichal/faker-cxx/archive/refs/tags/v4.3.2.tar.gz
+  - version: v4.4.1
+    upstream_version: 4.4.1
+    artifacts:
+    - url: https://github.com/cieslarmichal/faker-cxx.git
+    - url: https://github.com/cieslarmichal/faker-cxx/archive/refs/tags/v4.4.1.tar.gz
   recipe_path: packages/f/faker-cxx/xmake.lua
 - id: xmake:fann
   registry: xmake
@@ -23685,7 +23695,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x55578007a120'
+    default: 'table: 0x556b558cb9b0'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -23695,7 +23705,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x55578007b780'
+    default: 'table: 0x556b558cd010'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -29309,11 +29319,21 @@ packages:
     - url: https://go.dev/dl/go1.26.7.linux-amd64.tar.gz
       checksums:
       - sha256:ffb5f8de10c62550dfddab66b36b57030721e0a44a3218e9e1181d7b59f121ca
+  - version: 1.26.8
+    artifacts:
+    - url: https://go.dev/dl/go1.26.8.linux-amd64.tar.gz
+      checksums:
+      - sha256:d0f743b33e8d8945e6b1f432edd15785c70507121d6e2a723b21285eddf8b57b
   - version: 1.27.0
     artifacts:
     - url: https://go.dev/dl/go1.27.0.linux-amd64.tar.gz
       checksums:
       - sha256:675c26c449cbb18fc24b74650de1eabbae6e16f64326fd85a283fb3b58280685
+  - version: 1.27.1
+    artifacts:
+    - url: https://go.dev/dl/go1.27.1.linux-amd64.tar.gz
+      checksums:
+      - sha256:63d339f0da5ab53635a56f2490a7984dfe12dfcff22ad749f63edaf590168445
   recipe_path: packages/g/go/xmake.lua
 - id: xmake:gobject-introspection
   registry: xmake
@@ -29476,7 +29496,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x55577c1e8630'
+    default: 'table: 0x556b4d3866f0'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -30858,6 +30878,11 @@ packages:
     artifacts:
     - url: https://github.com/MuggleWei/haclog.git
     - url: https://github.com/MuggleWei/haclog/archive/refs/tags/v0.4.4.tar.gz
+  - version: v0.4.5
+    upstream_version: 0.4.5
+    artifacts:
+    - url: https://github.com/MuggleWei/haclog.git
+    - url: https://github.com/MuggleWei/haclog/archive/refs/tags/v0.4.5.tar.gz
   recipe_path: packages/h/haclog/xmake.lua
 - id: xmake:half
   registry: xmake
@@ -31915,7 +31940,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x55578023bcb0'
+    default: 'table: 0x556b59a0c8f0'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -34488,7 +34513,7 @@ packages:
   summary: A C utility library and persistent key/value storage engine
   licenses:
   - MIT
-  homepage: https://iowow.softmotions.com
+  homepage: https://github.com/Softmotions/iowow
   repository_url: https://github.com/softmotions/iowow
   platforms:
   - android
@@ -41649,6 +41674,10 @@ packages:
     artifacts:
     - url: https://github.com/strukturag/libheif.git
     - url: https://github.com/strukturag/libheif/releases/download/v1.23.1/libheif-1.23.1.tar.gz
+  - version: 1.23.4
+    artifacts:
+    - url: https://github.com/strukturag/libheif.git
+    - url: https://github.com/strukturag/libheif/releases/download/v1.23.4/libheif-1.23.4.tar.gz
   recipe_path: packages/l/libheif/xmake.lua
 - id: xmake:libhubbub
   registry: xmake
@@ -42181,7 +42210,7 @@ packages:
   registry: xmake
   name: libisl
   summary: Integer Set Library
-  homepage: http://isl.gforge.inria.fr/
+  homepage: https://libisl.sourceforge.io/
   repository_url: https://github.com/xmake-mirror/isl
   platforms:
   - android
@@ -52653,6 +52682,11 @@ packages:
     artifacts:
     - url: https://github.com/emilk/loguru.git
     - url: https://github.com/emilk/loguru/archive/refs/tags/v2.1.0.tar.gz
+  - version: v2.2.0
+    upstream_version: 2.2.0
+    artifacts:
+    - url: https://github.com/emilk/loguru.git
+    - url: https://github.com/emilk/loguru/archive/refs/tags/v2.2.0.tar.gz
   recipe_path: packages/l/loguru/xmake.lua
 - id: xmake:lolly
   registry: xmake
@@ -56430,7 +56464,7 @@ packages:
   summary: Serial Graph Partitioning and Fill-reducing Matrix Ordering
   licenses:
   - Apache-2.0
-  homepage: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
+  homepage: https://github.com/KarypisLab/METIS
   repository_url: https://github.com/karypislab/metis
   platforms:
   - android
@@ -57279,10 +57313,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x55578ea3cce0'
+    default: 'table: 0x556b644683d0'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x55578ea3d760'
+    default: 'table: 0x556b64468e50'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -64196,6 +64230,10 @@ packages:
     artifacts:
     - url: https://github.com/ompl/ompl.git
     - url: https://github.com/ompl/ompl/archive/refs/tags/2.0.1.tar.gz
+  - version: 2.0.2
+    artifacts:
+    - url: https://github.com/ompl/ompl.git
+    - url: https://github.com/ompl/ompl/archive/refs/tags/2.0.2.tar.gz
   recipe_path: packages/o/ompl/xmake.lua
 - id: xmake:onednn
   registry: xmake
@@ -67231,6 +67269,11 @@ packages:
     artifacts:
     - url: https://github.com/AcademySoftwareFoundation/openvdb.git
     - url: https://github.com/AcademySoftwareFoundation/openvdb/archive/refs/tags/v13.0.0.tar.gz
+  - version: v13.1.0
+    upstream_version: 13.1.0
+    artifacts:
+    - url: https://github.com/AcademySoftwareFoundation/openvdb.git
+    - url: https://github.com/AcademySoftwareFoundation/openvdb/archive/refs/tags/v13.1.0.tar.gz
   - version: v7.1.0
     upstream_version: 7.1.0
     artifacts:
@@ -68584,7 +68627,7 @@ packages:
   registry: xmake
   name: patch
   summary: GNU patch, which applies diff files to original files.
-  homepage: http://www.gnu.org/software/patch/patch.html
+  homepage: https://savannah.gnu.org/projects/patch/
   repository_url: https://github.com/xmake-mirror/patch
   package_type: binary
   platforms:
@@ -70009,6 +70052,10 @@ packages:
     artifacts:
     - url: https://github.com/PipeWire/pipewire.git
     - url: https://github.com/PipeWire/pipewire/archive/refs/tags/1.6.8.tar.gz
+  - version: 1.6.9
+    artifacts:
+    - url: https://github.com/PipeWire/pipewire.git
+    - url: https://github.com/PipeWire/pipewire/archive/refs/tags/1.6.9.tar.gz
   recipe_path: packages/p/pipewire/xmake.lua
 - id: xmake:pixman
   registry: xmake
@@ -72063,6 +72110,10 @@ packages:
     artifacts:
     - url: https://github.com/protocolbuffers/protobuf.git
     - url: https://github.com/protocolbuffers/protobuf/releases/download/v36.0/protobuf-36.0.zip
+  - version: '36.2'
+    artifacts:
+    - url: https://github.com/protocolbuffers/protobuf.git
+    - url: https://github.com/protocolbuffers/protobuf/releases/download/v36.2/protobuf-36.2.zip
   recipe_path: packages/p/protobuf-cpp/xmake.lua
 - id: xmake:protoc
   registry: xmake
@@ -81028,6 +81079,9 @@ packages:
   - version: 2025.03.20
     artifacts:
     - url: https://github.com/floooh/sokol.git
+  - version: 2026.09.14
+    artifacts:
+    - url: https://github.com/floooh/sokol.git
   recipe_path: packages/s/sokol/xmake.lua
 - id: xmake:sokol-tools
   registry: xmake
@@ -84742,7 +84796,7 @@ packages:
   registry: xmake
   name: szip
   summary: Szip is an implementation of the extended-Rice lossless compression algorithm.
-  homepage: https://support.hdfgroup.org/doc_resource/SZIP/
+  homepage: https://docs.hdfgroup.org/archive/support/doc_resource/SZIP/index.html
   platforms:
   - android
   - bsd
@@ -86033,7 +86087,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x5557795ec370'
+    default: 'table: 0x556b54e95f70'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -87259,7 +87313,7 @@ packages:
   summary: simple, small, efficient, C++ XML parser that can be easily integrating into other programs.
   licenses:
   - zlib
-  homepage: http://www.grinninglizard.com/tinyxml2/
+  homepage: https://github.com/leethomason/tinyxml2
   repository_url: https://github.com/leethomason/tinyxml2
   platforms:
   - android
@@ -89010,7 +89064,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x55577b912a90'
+    default: 'table: 0x556b510d1110'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -92584,7 +92638,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x555773513330'
+    default: 'table: 0x556b4df04c70'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -95865,6 +95919,34 @@ packages:
     artifacts:
     - url: https://github.com/alibaba/xquic.git
   recipe_path: packages/x/xquic/xmake.lua
+- id: xmake:xrefl
+  registry: xmake
+  name: xrefl
+  summary: A general-purpose C++ reflection and code generation plugin for XMake
+  licenses:
+  - 0BSD
+  homepage: https://github.com/Edersteiner/xrefl
+  repository_url: https://github.com/edersteiner/xrefl
+  package_type: binary
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: 0.2.1
+    artifacts:
+    - url: https://github.com/Edersteiner/xrefl.git
+    - url: https://github.com/Edersteiner/xrefl/archive/refs/tags/v0.2.1.tar.gz
+  recipe_path: packages/x/xrefl/xmake.lua
 - id: xmake:xsimd
   registry: xmake
   name: xsimd
@@ -97197,7 +97279,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x55576decd6f0'
+    default: 'table: 0x556b43649fc0'
   versions:
   - version: 0.23.93
     artifacts:

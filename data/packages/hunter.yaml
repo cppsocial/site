@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: hunter
 repository: https://github.com/cpp-pm/hunter
-revision: 708cab1c4992eef5a4c0e0846d0bc9e760579b50
+revision: 83d3664b2fb02255e36bf80ee5f52b8665c83c9c
 packages:
 - id: hunter:ARM_NEON_2_x86_SSE
   registry: hunter
@@ -6524,7 +6524,12 @@ packages:
     - url: https://gitlab.com/tesch1/cppduals/-/archive/v0.9.3/cppduals-v0.9.3.tar.gz
       checksums:
       - sha1:ae3a98f7b57eec650ceb7287af6113108e760778
-  default_version: 0.9.3
+  - version: 0.9.4
+    artifacts:
+    - url: https://gitlab.com/tesch1/cppduals/-/archive/v0.9.4/cppduals-v0.9.4.tar.gz
+      checksums:
+      - sha1:e9c71d72863b02442569c0a2b4da5507d846cfb2
+  default_version: 0.9.4
   recipe_path: cmake/projects/cppduals/hunter.cmake
   native_url: https://hunter.readthedocs.io/en/latest/packages/pkg/cppduals.html
 - id: hunter:cppfs

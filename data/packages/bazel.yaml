@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: bazel
 repository: https://github.com/bazelbuild/bazel-central-registry
-revision: 1af7df7f91dcec0c93b4f7f4247a4215cea03e0f
+revision: eb05b77f41810ea7fa811244050b588675e8cd95
 packages:
 - id: bazel:abc
   registry: bazel
@@ -791,6 +791,8 @@ packages:
   maintainers:
   - '@anonrig'
   - c8ef
+  dependencies:
+  - rules_cc
   versions:
   - version: 2.9.2
     compatibility:
@@ -828,6 +830,17 @@ packages:
       checksums:
       - sha384:d9c11f1777c7a2c94b0e4ba2811d685d882d138718a69321b9013d450172b95996366ee6100675a372868961fc889e44
   - version: 4.0.0
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/ada-url/ada/releases/download/v4.0.0/singleheader.zip
+      checksums:
+      - sha384:0d52962e0bb1b912e0b903eb4cf5147769025d83465d96ffa33d238d32b6271d3621e3fd29632760ff6b16b015cfd912
+  - version: 4.0.0
+    packaging_revision: '1'
+    dependencies:
+    - name: rules_cc
+      constraint: 0.2.13
     compatibility:
     - '>=7.2.1'
     artifacts:
@@ -1712,6 +1725,36 @@ packages:
       checksums:
       - sha256:f51cd20748404fb86bb71e08fdfaa419b42f95dafce5aedf117c3de5ad7c6b0c
   recipe_path: modules/apilark/metadata.json
+- id: bazel:apple_mig
+  registry: bazel
+  name: apple_mig
+  homepage: https://github.com/hermeticbuild/apple_mig
+  repository_url: https://github.com/hermeticbuild/apple_mig
+  maintainers:
+  - Corentin Kerisit (@cerisier)
+  dependencies:
+  - platforms
+  - rules_cc
+  - rules_shell
+  versions:
+  - version: 138.0.1
+    dependencies:
+    - name: llvm
+      constraint: 0.8.21
+      kind: dev
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.25
+    - name: rules_shell
+      constraint: 0.8.0
+    compatibility:
+    - '>=8.4.2'
+    artifacts:
+    - url: https://github.com/hermeticbuild/apple_mig/releases/download/v138.0.1/apple_mig-138.0.1.tar.gz
+      checksums:
+      - sha256:acdeb617cd08344632b4dfd31ec5cf0eade24c00fe1e17d98480d5b970b4f4ce
+  recipe_path: modules/apple_mig/metadata.json
 - id: bazel:apple_rules_lint
   registry: bazel
   name: apple_rules_lint
@@ -79844,7 +79887,37 @@ packages:
     - url: https://github.com/c-ares/c-ares/releases/download/v1.34.5/c-ares-1.34.5.tar.gz
       checksums:
       - sha256:7d935790e9af081c25c495fd13c2cfcda4792983418e96358ef6e7320ee06346
+  - version: 1.34.5
+    packaging_revision: '5'
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.8.1
+    - name: platforms
+      constraint: 1.0.0
+    - name: rules_cc
+      constraint: 0.2.14
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/c-ares/c-ares/releases/download/v1.34.5/c-ares-1.34.5.tar.gz
+      checksums:
+      - sha256:7d935790e9af081c25c495fd13c2cfcda4792983418e96358ef6e7320ee06346
   - version: 1.34.6
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.8.1
+    - name: platforms
+      constraint: 1.0.0
+    - name: rules_cc
+      constraint: 0.2.14
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/c-ares/c-ares/releases/download/v1.34.5/c-ares-1.34.5.tar.gz
+      checksums:
+      - sha256:7d935790e9af081c25c495fd13c2cfcda4792983418e96358ef6e7320ee06346
+  - version: 1.34.6
+    packaging_revision: '1'
     dependencies:
     - name: bazel_skylib
       constraint: 1.8.1
@@ -98462,6 +98535,30 @@ packages:
     - url: https://github.com/perplexityai/gazelle_py/releases/download/v0.8.13/gazelle_py-v0.8.13.tar.gz
       checksums:
       - sha256:a5475cd985d4771d166bacac005bd04d1d2676ef59cc6d61f0b780a2faccf7a0
+  - version: 0.8.14
+    dependencies:
+    - name: gazelle
+      constraint: 0.50.0
+    - name: llvm
+      constraint: 0.7.3
+    - name: platforms
+      constraint: 1.0.0
+    - name: protobuf
+      constraint: 34.0.bcr.1
+    - name: rules_go
+      constraint: 0.60.0
+    - name: rules_proto
+      constraint: 7.1.0
+    - name: rules_rs
+      constraint: 0.0.111
+    - name: with_cfg.bzl
+      constraint: 0.14.6
+    compatibility:
+    - '>=8.5.0'
+    artifacts:
+    - url: https://github.com/perplexityai/gazelle_py/releases/download/v0.8.14/gazelle_py-v0.8.14.tar.gz
+      checksums:
+      - sha256:723ea0a7f7cfe938ffc6c3a62e6b21ea0ae2de0935f7b8fdaf1feb6bdcbf9acc
   - version: 0.8.2
     dependencies:
     - name: gazelle
@@ -106566,6 +106663,18 @@ packages:
     - url: https://github.com/grpc/grpc-proto/archive/ec30f589e2519d595688b9a42f88a91bdd6b733f.tar.gz
       checksums:
       - sha256:5e9b520b22afbd53a662cc29017064be253c1dfa6df8958738594e7fec6ade33
+  - version: 0.0.0-20260915-dd549fc
+    dependencies:
+    - name: googleapis
+      constraint: 0.0.0-20260825-d10ac924
+    - name: protobuf
+      constraint: '33.4'
+    - name: rules_proto
+      constraint: 7.1.0
+    artifacts:
+    - url: https://github.com/grpc/grpc-proto/archive/dd549fc4ed04b60b0fdd3866b82ef0a7c87c6e4f.tar.gz
+      checksums:
+      - sha256:6aaa807572edfe307eaddc15161ce684d02d054e3fca36b38993efc85575ddfa
   recipe_path: modules/grpc-proto/metadata.json
 - id: bazel:grpc_ecosystem_grpc_gateway
   registry: bazel
@@ -133742,6 +133851,18 @@ packages:
     - url: https://github.com/aous72/OpenJPH/archive/refs/tags/0.31.0.tar.gz
       checksums:
       - sha256:fe169dbbaae71a169a0a6a68dccb346616193252c1ca044217afa0d5d1dc436f
+  - version: 0.32.0
+    dependencies:
+    - name: rules_cc
+      constraint: 0.2.25
+    - name: rules_license
+      constraint: 1.0.0
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/aous72/OpenJPH/archive/refs/tags/0.32.0.tar.gz
+      checksums:
+      - sha256:5cb1ebe18e5ee1322d23ff2130b37562d447d1ad5586c3d16cf84be3ae30f719
   recipe_path: modules/openjph/metadata.json
 - id: bazel:openmesh
   registry: bazel
@@ -140787,6 +140908,29 @@ packages:
     - url: https://github.com/gatecat/prjoxide/archive/9ab3b4ee3b9c5c1d210243c667b1f39ee7c01496.zip
       checksums:
       - sha256:b606cdae1b29cdfdeb8693cb28468a67a9be2265350e81aeafb138988fe2c785
+  - version: 0.0.0-20260211-9ab3b4e
+    packaging_revision: '1'
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.8.2
+    - name: capnp-cpp
+      constraint: 1.1.0.bcr.1
+    - name: platforms
+      constraint: 1.1.0
+    - name: prjoxide-db
+      constraint: 0.0.0-20260126-79c15ee
+    - name: rules_python
+      constraint: 1.7.0
+    - name: rules_rust
+      constraint: 0.71.2
+    - name: rules_rust_pyo3
+      constraint: 0.71.2
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/gatecat/prjoxide/archive/9ab3b4ee3b9c5c1d210243c667b1f39ee7c01496.zip
+      checksums:
+      - sha256:b606cdae1b29cdfdeb8693cb28468a67a9be2265350e81aeafb138988fe2c785
   recipe_path: modules/prjoxide/metadata.json
 - id: bazel:prjoxide-db
   registry: bazel
@@ -141070,6 +141214,31 @@ packages:
       - sha256:62bc2cc9772db2314dbaae506ae2a75c8ee897dab053d8729e86a637b018fdb6
   - version: 1.3.0
     packaging_revision: '2'
+    dependencies:
+    - name: boringssl
+      constraint: 0.0.0-20240530-2db0eb3
+    - name: civetweb
+      constraint: 1.16.bcr.1
+    - name: curl
+      constraint: 8.7.1
+    - name: google_benchmark
+      constraint: 1.8.3
+      kind: dev
+    - name: googletest
+      constraint: 1.12.1
+      kind: dev
+    - name: platforms
+      constraint: 0.0.10
+    - name: rules_cc
+      constraint: 0.0.9
+    - name: zlib
+      constraint: 1.3.1
+    artifacts:
+    - url: https://github.com/jupp0r/prometheus-cpp/releases/download/v1.3.0/prometheus-cpp-with-submodules.tar.gz
+      checksums:
+      - sha256:62bc2cc9772db2314dbaae506ae2a75c8ee897dab053d8729e86a637b018fdb6
+  - version: 1.3.0
+    packaging_revision: '3'
     dependencies:
     - name: boringssl
       constraint: 0.0.0-20240530-2db0eb3
@@ -160566,6 +160735,32 @@ packages:
     - url: https://github.com/bazelbuild/rules_closure/releases/download/0.16.0/rules_closure-0.16.0.tar.gz
       checksums:
       - sha256:ea991ecd29b3854025e8c8c2596f04ee6209e48b4495b0adfae081c8c3555010
+  - version: 0.17.0
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.7.1
+    - name: google_bazel_common
+      constraint: 0.0.1
+    - name: platforms
+      constraint: 0.0.5
+    - name: protobuf
+      constraint: '31.0'
+    - name: rules_java
+      constraint: 8.6.1
+    - name: rules_jvm_external
+      constraint: '6.6'
+    - name: rules_proto
+      constraint: 7.0.2
+    - name: rules_python
+      constraint: 1.0.0
+    - name: rules_web_testing_java
+      constraint: 0.4.1
+    - name: rules_webtesting
+      constraint: 0.4.1
+    artifacts:
+    - url: https://github.com/bazelbuild/rules_closure/releases/download/0.17.0/rules_closure-0.17.0.tar.gz
+      checksums:
+      - sha256:d8d9c2aa13de9b4a4e739dd4f329a5c84b77e61a5abcd779a23094601b816178
   recipe_path: modules/rules_closure/metadata.json
 - id: bazel:rules_cocotb
   registry: bazel
@@ -161997,6 +162192,25 @@ packages:
       checksums:
       - sha512:604f4e2a44f663950f95c84dcb4fa74221dbab5d1714ba817f0381ca75561ae399cafaf8580f793af86f5584f64511d1515757395bc6290547800c2032f13618
   recipe_path: modules/rules_curl/metadata.json
+- id: bazel:rules_cyclone
+  registry: bazel
+  name: rules_cyclone
+  homepage: https://github.com/cyclone-core/rules-cyclone
+  repository_url: https://github.com/cyclone-core/rules-cyclone
+  maintainers:
+  - Cyclone Core (@cyclone-core)
+  dependencies:
+  - platforms
+  versions:
+  - version: 0.1.0
+    dependencies:
+    - name: platforms
+      constraint: 0.0.11
+    artifacts:
+    - url: https://github.com/cyclone-core/rules-cyclone/releases/download/v0.1.0/rules_cyclone-0.1.0.tar.gz
+      checksums:
+      - sha256:78bac0a2c19c2d4d95e339ad4f2eb828d438cf394865080f86b2cc985434d8eb
+  recipe_path: modules/rules_cyclone/metadata.json
 - id: bazel:rules_d
   registry: bazel
   name: rules_d
@@ -167830,6 +168044,36 @@ packages:
     - url: https://github.com/formatjs/rules_formatjs/releases/download/v0.12.2/rules_formatjs-v0.12.2.tar.gz
       checksums:
       - sha256:3a3186c1a9e510068052e78d66843098c05c8a7d4724ecca15b712bc21b73c82
+  - version: 0.12.3
+    dependencies:
+    - name: bazel_lib
+      constraint: 3.0.0
+      kind: dev
+    - name: bazelrc-preset.bzl
+      constraint: 1.8.0
+      kind: dev
+    - name: buildifier_prebuilt
+      constraint: 8.2.1
+      kind: dev
+    - name: gazelle
+      constraint: 0.47.0
+      kind: dev
+    - name: jq.bzl
+      constraint: 0.4.0
+    - name: package_metadata
+      constraint: 0.0.6
+    - name: platforms
+      constraint: 1.0.0
+    - name: rules_go
+      constraint: 0.59.0
+      kind: dev
+    - name: rules_shell
+      constraint: 0.3.0
+      kind: dev
+    artifacts:
+    - url: https://github.com/formatjs/rules_formatjs/releases/download/v0.12.3/rules_formatjs-v0.12.3.tar.gz
+      checksums:
+      - sha256:95aad73212b0b6aab14efa1d060cedf8d16d5f61d2c8e8ff012a4d0db7b01380
   - version: 0.4.3
     dependencies:
     - name: bazel_lib
@@ -170132,6 +170376,35 @@ packages:
     - url: https://github.com/HunterLarco/rules_graphql/releases/download/v0.2.0/rules_graphql-v0.2.0.tar.gz
       checksums:
       - sha256:1f0163c7fdb024dbda2b05684f0fec5d28a835c842b0369ebff1782b88c271f9
+  - version: 0.2.1
+    dependencies:
+    - name: aspect_bazel_lib
+      constraint: 2.21.2
+      kind: dev
+    - name: aspect_rules_js
+      constraint: 2.4.0
+    - name: aspect_rules_lint
+      constraint: 1.5.3
+      kind: dev
+    - name: bazel_env.bzl
+      constraint: 0.4.0
+      kind: dev
+    - name: bazel_skylib
+      constraint: 1.8.1
+    - name: bazelrc-preset.bzl
+      constraint: 1.0.1
+      kind: dev
+    - name: buildifier_prebuilt
+      constraint: 8.2.0.2
+      kind: dev
+    - name: rules_nodejs
+      constraint: 6.4.0
+    compatibility:
+    - '>=7.0.0'
+    artifacts:
+    - url: https://github.com/HunterLarco/rules_graphql/releases/download/v0.2.1/rules_graphql-v0.2.1.tar.gz
+      checksums:
+      - sha256:f26c58f0e63c3301a5d2f35b8dde1e60c6277390ed9b9e1c6ebb101f77e4a5f5
   recipe_path: modules/rules_graphql/metadata.json
 - id: bazel:rules_gzip
   registry: bazel
@@ -212138,6 +212411,40 @@ packages:
     - url: https://github.com/cgrindel/rules_swift_package_manager/releases/download/v1.23.0/rules_swift_package_manager.v1.23.0.tar.gz
       checksums:
       - sha256:ff49265565fbfb00c6340569bd1b616d9ce3b3797ebfa678ae66461e704d18f4
+  - version: 1.24.1
+    dependencies:
+    - name: apple_support
+      constraint: 1.24.2
+    - name: bazel_skylib
+      constraint: 1.8.2
+    - name: bazel_skylib_gazelle_plugin
+      constraint: 1.4.1
+      kind: dev
+    - name: cgrindel_bazel_starlib
+      constraint: 0.30.0
+    - name: gazelle
+      constraint: 0.50.0
+    - name: platforms
+      constraint: 1.0.0
+    - name: rules_apple
+      constraint: 4.3.3
+    - name: rules_bazel_integration_test
+      constraint: 0.33.2
+      kind: dev
+    - name: rules_cc
+      constraint: 0.2.14
+    - name: rules_go
+      constraint: 0.60.0
+    - name: rules_license
+      constraint: 1.0.0
+    - name: rules_shell
+      constraint: 0.6.1
+    - name: rules_swift
+      constraint: 3.6.0
+    artifacts:
+    - url: https://github.com/cgrindel/rules_swift_package_manager/releases/download/v1.24.1/rules_swift_package_manager.v1.24.1.tar.gz
+      checksums:
+      - sha256:ba2179944a3a961c3e5e1e252d3bfc141d2d04d0dd61f502b1a5ccad9305b94f
   - version: 1.3.0
     dependencies:
     - name: apple_support
@@ -216231,6 +216538,36 @@ packages:
     - url: https://github.com/periareon/rules_venv/releases/download/0.24.1/rules_venv-0.24.1.tar.gz
       checksums:
       - sha256:90a27b166a770178e76a8958bb94e8c688486bfc6e253069b4056c06ac434c73
+  - version: 0.25.0
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.8.2
+    - name: buildifier_prebuilt
+      constraint: 8.2.0.2
+      kind: dev
+    - name: platforms
+      constraint: 1.0.0
+    - name: rules_batch
+      constraint: 0.0.1
+    - name: rules_cc
+      constraint: 0.2.4
+    - name: rules_python
+      constraint: 1.7.0
+    - name: rules_req_compile
+      constraint: 1.1.0
+      kind: dev
+    - name: rules_rust_mdbook
+      constraint: 0.72.0
+      kind: dev
+    - name: rules_shell
+      constraint: 0.7.1
+    - name: stardoc
+      constraint: 0.8.0
+      kind: dev
+    artifacts:
+    - url: https://github.com/periareon/rules_venv/releases/download/0.25.0/rules_venv-0.25.0.tar.gz
+      checksums:
+      - sha256:bb907c886a5af6b3298a4b50bed26f447dc7fc38e0023502961ff23da24f13e1
   - version: 0.3.0
     dependencies:
     - name: bazel_skylib
@@ -218344,6 +218681,70 @@ packages:
     - url: https://github.com/perplexityai/rules_web_e2e/releases/download/v3.2.0/rules_web_e2e-v3.2.0.tar.gz
       checksums:
       - sha256:d176a5c6cea9f0ed75e80bc69f679973565e0116dd25ee6da3d925dc1fa9e987
+  - version: 3.3.0
+    dependencies:
+    - name: aspect_rules_js
+      constraint: 3.4.1
+    - name: aspect_rules_ts
+      constraint: 3.10.1
+    - name: bazel_lib
+      constraint: 3.7.2
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: llvm
+      constraint: 0.8.19
+    - name: ncurses
+      constraint: 6.4.20221231.bcr.4
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.22
+    - name: rules_license
+      constraint: 1.0.0
+    - name: rules_python
+      constraint: 1.8.0
+    - name: rules_shell
+      constraint: 0.8.0
+    - name: zip
+      constraint: '3.0'
+    compatibility:
+    - '>=8.5.0'
+    artifacts:
+    - url: https://github.com/perplexityai/rules_web_e2e/releases/download/v3.3.0/rules_web_e2e-v3.3.0.tar.gz
+      checksums:
+      - sha256:45d8903c94624435e70c979b4475f72919a5a1e662cb966fb1e753df4fb4a2ee
+  - version: 3.3.1
+    dependencies:
+    - name: aspect_rules_js
+      constraint: 3.4.1
+    - name: aspect_rules_ts
+      constraint: 3.10.1
+    - name: bazel_lib
+      constraint: 3.7.2
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: llvm
+      constraint: 0.8.19
+    - name: ncurses
+      constraint: 6.4.20221231.bcr.4
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.22
+    - name: rules_license
+      constraint: 1.0.0
+    - name: rules_python
+      constraint: 1.8.0
+    - name: rules_shell
+      constraint: 0.8.0
+    - name: zip
+      constraint: '3.0'
+    compatibility:
+    - '>=8.5.0'
+    artifacts:
+    - url: https://github.com/perplexityai/rules_web_e2e/releases/download/v3.3.1/rules_web_e2e-v3.3.1.tar.gz
+      checksums:
+      - sha256:32fc355e22a8cd0591df91a7566294a7d0a7adaebdc08362e80f8b971386e1ef
   recipe_path: modules/rules_web_e2e/metadata.json
 - id: bazel:rules_web_testing_go
   registry: bazel
@@ -222654,6 +223055,54 @@ packages:
       checksums:
       - sha256:3d2b5e824b5622038dc7b490897efe05ebbbb9e7350fc142f3ecc8789ef9bdf6
   recipe_path: modules/sentencepiece/metadata.json
+- id: bazel:sentry_native
+  registry: bazel
+  name: sentry_native
+  homepage: https://github.com/getsentry/sentry-native
+  repository_url: https://github.com/getsentry/sentry-native
+  maintainers:
+  - Corentin Kerisit (@cerisier)
+  dependencies:
+  - apple_mig
+  - apple_support
+  - bazel_skylib
+  - curl
+  - platforms
+  - rules_cc
+  - rules_python
+  - rules_shell
+  - zlib
+  versions:
+  - version: 0.16.6
+    dependencies:
+    - name: apple_mig
+      constraint: 138.0.1
+    - name: apple_support
+      constraint: 2.8.0
+    - name: bazel_skylib
+      constraint: 1.9.2
+    - name: curl
+      constraint: 8.21.0.bcr.2
+    - name: llvm
+      constraint: 0.8.21
+      kind: dev
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.25
+    - name: rules_python
+      constraint: 1.8.0
+    - name: rules_shell
+      constraint: 0.8.0
+    - name: zlib
+      constraint: 1.3.2
+    compatibility:
+    - '>=8.4.2'
+    artifacts:
+    - url: https://github.com/getsentry/sentry-native/releases/download/0.16.6/sentry-native.zip
+      checksums:
+      - sha256:d35145daaafddc50c0c87ec564acf0ba9968e67b23981e7f57c702b2dd6f2ff1
+  recipe_path: modules/sentry_native/metadata.json
 - id: bazel:sha256.bzl
   registry: bazel
   name: sha256.bzl
@@ -226708,6 +227157,16 @@ packages:
     - url: https://github.com/theblixguy/swift-bylaws/releases/download/v0.4.0/bylaws-bazel-module.tar.gz
       checksums:
       - sha256:88d08c795baf163a06d24a3f9608b5253ae96ab06eb8f683fdc625a935142b72
+  - version: 0.5.0
+    dependencies:
+    - name: bazel_lib
+      constraint: 3.7.2
+    - name: platforms
+      constraint: 1.0.0
+    artifacts:
+    - url: https://github.com/theblixguy/swift-bylaws/releases/download/v0.5.0/bylaws-bazel-module.tar.gz
+      checksums:
+      - sha256:d5f1a5ea43e41c7e71bdf19822b4383705622cf56704cf73552eda4b1a8464c0
   recipe_path: modules/swift-bylaws/metadata.json
 - id: bazel:swift-filename-matcher
   registry: bazel
@@ -227207,6 +227666,22 @@ packages:
     - url: https://github.com/swiftlang/swift-syntax/archive/refs/tags/603.0.2.tar.gz
       checksums:
       - sha256:4858b54834fae301e36ea63529302d51ce0b4de9da48a465ebab6f6f3d096cf2
+  - version: 604.0.0
+    dependencies:
+    - name: apple_support
+      constraint: 1.13.0
+    - name: platforms
+      constraint: 1.0.0
+    - name: rules_apple
+      constraint: 4.5.0
+    - name: rules_cc
+      constraint: 0.0.17
+    - name: rules_swift
+      constraint: 2.9.0
+    artifacts:
+    - url: https://github.com/swiftlang/swift-syntax/archive/refs/tags/604.0.0.tar.gz
+      checksums:
+      - sha256:a2968b85f4fbac228bfbbab7122ea69154d326cbf666e0bce6d8e9050f39a19d
   recipe_path: modules/swift-syntax/metadata.json
 - id: bazel:swift-system
   registry: bazel
@@ -230039,6 +230514,20 @@ packages:
     - url: https://github.com/thorvg/thorvg/releases/download/v1.0.3/thorvg-1.0.3.tar.xz
       checksums:
       - sha256:c47ad3cc793d2b251dd0828b65d64cae941bbb4c6cd04a793185d3594a92b34f
+  - version: 1.1.1
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.20
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/thorvg/thorvg/releases/download/v1.1.1/thorvg-1.1.1.tar.xz
+      checksums:
+      - sha256:5ca6143088f18b5dbe42552c939594100da6226d79de503d1a171184d6aa310d
   recipe_path: modules/thorvg/metadata.json
 - id: bazel:thrax
   registry: bazel
@@ -238832,6 +239321,42 @@ packages:
   - rules_cc
   - rules_rs
   versions:
+  - version: 1.10.0
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: llvm
+      constraint: 0.8.9
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.19
+    - name: rules_rs
+      constraint: 0.0.109
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-c/archive/refs/tags/1.10.0.tar.gz
+      checksums:
+      - sha256:c7bb6d90d6cbf1f612850e9bf00eaa27c47acd54247629c6de80b64e655607be
+  - version: 1.10.1
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: llvm
+      constraint: 0.8.9
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.19
+    - name: rules_rs
+      constraint: 0.0.109
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-c/archive/refs/tags/1.10.1.tar.gz
+      checksums:
+      - sha256:e22447dbbd3543e4b1869cb607baf68975159ac529f0e9c0edfd4db4d6d52fc3
   - version: 1.7.2
     dependencies:
     - name: platforms
@@ -238916,6 +239441,25 @@ packages:
     - url: https://github.com/eclipse-zenoh/zenoh-c/archive/refs/tags/1.9.0.tar.gz
       checksums:
       - sha256:6d66b1d1c725700148a6ea90faf93aa99c72db71a348bf30f5838b5a1be192d9
+  - version: 1.9.0
+    packaging_revision: '1'
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: llvm
+      constraint: 0.8.9
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.19
+    - name: rules_rs
+      constraint: 0.0.109
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-c/archive/refs/tags/1.9.0.tar.gz
+      checksums:
+      - sha256:6d66b1d1c725700148a6ea90faf93aa99c72db71a348bf30f5838b5a1be192d9
   recipe_path: modules/zenoh-c/metadata.json
 - id: bazel:zenoh-cpp
   registry: bazel
@@ -238932,6 +239476,42 @@ packages:
   - zenoh-c
   - zenoh-pico
   versions:
+  - version: 1.10.0
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: rules_cc
+      constraint: 0.2.20
+    - name: rules_shell
+      constraint: 0.8.0
+    - name: zenoh-c
+      constraint: 1.10.0
+    - name: zenoh-pico
+      constraint: 1.10.0
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-cpp/archive/refs/tags/1.10.0.tar.gz
+      checksums:
+      - sha256:c7aed678b421dcce0e3c39fa9ce5dc9bdd92180000beca1e0db9e0c6e78a4f3d
+  - version: 1.10.1
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: rules_cc
+      constraint: 0.2.20
+    - name: rules_shell
+      constraint: 0.8.0
+    - name: zenoh-c
+      constraint: 1.10.1
+    - name: zenoh-pico
+      constraint: 1.10.1
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-cpp/archive/refs/tags/1.10.1.tar.gz
+      checksums:
+      - sha256:64d3c315c4fdfa54b4d96ee27ee2b3d98320b0fb289402fff9d7a99bc513528e
   - version: 1.7.2
     dependencies:
     - name: bazel_skylib
@@ -239006,6 +239586,24 @@ packages:
     - url: https://github.com/eclipse-zenoh/zenoh-cpp/archive/refs/tags/1.8.0.tar.gz
       checksums:
       - sha256:19f6d29af3711561c4b9caffe64ef0a67602594e2e2f6615b43b9db7133d8313
+  - version: 1.9.0
+    dependencies:
+    - name: bazel_skylib
+      constraint: 1.9.0
+    - name: rules_cc
+      constraint: 0.2.20
+    - name: rules_shell
+      constraint: 0.8.0
+    - name: zenoh-c
+      constraint: 1.9.0.bcr.1
+    - name: zenoh-pico
+      constraint: 1.9.0
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-cpp/archive/refs/tags/1.9.0.tar.gz
+      checksums:
+      - sha256:ae07dcb19751a9980a6a73c76637e3bdc314cf65bf8e5e1abb5635f2de6b20aa
   recipe_path: modules/zenoh-cpp/metadata.json
 - id: bazel:zenoh-pico
   registry: bazel
@@ -239020,6 +239618,38 @@ packages:
   - platforms
   - rules_cc
   versions:
+  - version: 1.10.0
+    dependencies:
+    - name: cmake_configure_file
+      constraint: 0.1.7
+    - name: mbedtls
+      constraint: 3.6.5
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.20
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-pico/archive/refs/tags/1.10.0.tar.gz
+      checksums:
+      - sha256:2d17f70ec32faa60108055d13a935d7fc3d6b2b7e88d80b8e14f8fa6872ae237
+  - version: 1.10.1
+    dependencies:
+    - name: cmake_configure_file
+      constraint: 0.1.7
+    - name: mbedtls
+      constraint: 3.6.5
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.20
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-pico/archive/refs/tags/1.10.1.tar.gz
+      checksums:
+      - sha256:eba95fa8c95c7972a7c12e7173ece23092ce5c376c8d749748f0e152526622df
   - version: 1.7.2
     dependencies:
     - name: cmake_configure_file
@@ -239052,6 +239682,22 @@ packages:
     - url: https://github.com/eclipse-zenoh/zenoh-pico/archive/refs/tags/1.8.0.tar.gz
       checksums:
       - sha256:2aa7f8207467a84d6d204a4be5ea66dd0ea8038a7a6a55cb90c13059fb3116fb
+  - version: 1.9.0
+    dependencies:
+    - name: cmake_configure_file
+      constraint: 0.1.7
+    - name: mbedtls
+      constraint: 3.6.5
+    - name: platforms
+      constraint: 1.1.0
+    - name: rules_cc
+      constraint: 0.2.20
+    compatibility:
+    - '>=7.2.1'
+    artifacts:
+    - url: https://github.com/eclipse-zenoh/zenoh-pico/archive/refs/tags/1.9.0.tar.gz
+      checksums:
+      - sha256:111b9404de96ca776779d3d8dc61afe2df86b24fe0741606a61e92bd2c45cb1b
   recipe_path: modules/zenoh-pico/metadata.json
 - id: bazel:zip
   registry: bazel

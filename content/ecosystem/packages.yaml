@@ -3,4 +3,91 @@ type: card_group
 id: package-managers
 title: Package Managers
 description: Tools for managing C++ libraries and dependencies
-cards: []
+cards:
+  - title: vcpkg
+    path: https://vcpkg.io
+    description: vcpkg is a free C/C++ package manager for acquiring and managing libraries
+    metadata: { License: MIT }
+    links:
+      - { label: Documentation, path: https://learn.microsoft.com/en-us/vcpkg/ }
+      - { label: Packages, path: https://vcpkg.io/en/packages }
+      - { label: Source, path: https://github.com/microsoft/vcpkg }
+  - title: Conan
+    path: https://conan.io/
+    icon: https://cdn.simpleicons.org/conan
+    description: Create, share and reuse native binaries across your teams. One tool that speaks MSVC, CMake, Meson, Ninja - and plays nicely with the compiler flags you already have
+    metadata: { License: MIT }
+    links:
+      - { label: Documentation, path: https://docs.conan.io/2/ }
+      - { label: Packages, path: https://conan.io/center }
+      - { label: Source, path: https://github.com/conan-io/conan }
+  - title: Meson
+    path: https://mesonbuild.com/
+    description: Build system whose Wrap dependency mechanism can consume subprojects and the WrapDB package catalog
+    metadata: { License: Apache-2.0 }
+    links:
+      - {
+          label: Wrap guide,
+          path: https://mesonbuild.com/Wrap-dependency-system-manual.html,
+        }
+      - { label: Packages, path: https://wrapdb.mesonbuild.com/ }
+      - { label: Source, path: https://github.com/mesonbuild/meson }
+  - title: C++ Package Manager (CPM)
+    path: https://github.com/cpm-cmake/cpm.cmake
+    icon: https://cdn.simpleicons.org/cmake
+    description: CMake's missing package manager. A small CMake script for setup-free, cross-platform, reproducible dependency management
+    metadata: { License: MIT }
+    links:
+      - {
+          label: Documentation,
+          path: https://github.com/cpm-cmake/CPM.cmake#readme,
+        }
+      - { label: Source, path: https://github.com/cpm-cmake/CPM.cmake }
+  - title: Hunter
+    path: https://hunter.readthedocs.io/
+    icon: https://avatars.githubusercontent.com/u/54332082?s=128
+    description: CMake-driven, cross-platform source package manager for C and C++ projects
+    metadata: { License: BSD-2-Clause }
+    links:
+      - { label: Documentation, path: https://hunter.readthedocs.io/en/latest/ }
+      - {
+          label: Packages,
+          path: https://hunter.readthedocs.io/en/latest/packages.html,
+        }
+      - { label: Source, path: https://github.com/cpp-pm/hunter }
+  - title: Spack
+    path: https://spack.io/
+    description: Spack is a package manager for supercomputers, Linux, macOS, and Windows. It makes installing scientific software easy
+    metadata: { License: Apache-2.0 or MIT }
+    links:
+      - { label: Documentation, path: https://spack.readthedocs.io/ }
+      - { label: Packages, path: https://packages.spack.io/ }
+      - { label: Source, path: https://github.com/spack/spack }
+  - title: bpkg
+    path: https://build2.org/
+    icon: https://avatars.githubusercontent.com/u/39628269?s=128
+    description: bpkg is the package manager used in the build2 toolchain
+    metadata: { License: MIT }
+    links:
+      - { label: Documentation, path: https://build2.org/bpkg/doc/bpkg.xhtml }
+      - { label: Packages, path: https://cppget.org/ }
+      - { label: Source, path: https://github.com/build2/bpkg }
+  - title: Bazel
+    path: https://bazel.build/
+    description: Build system whose Bzlmod module system resolves external dependencies through registries such as the Bazel Central Registry
+    metadata: { License: Apache-2.0 }
+    links:
+      - { label: Documentation, path: https://bazel.build/external/overview }
+      - { label: Packages, path: https://registry.bazel.build/ }
+      - { label: Source, path: https://github.com/bazelbuild/bazel }
+  - title: xrepo
+    path: https://xrepo.xmake.io/#/
+    description: xrepo is a cross-platform C/C++ package manager based on Xmake
+    metadata: { License: Apache-2.0 }
+    links:
+      - {
+          label: Documentation,
+          path: https://xmake.io/#/package/remote_package,
+        }
+      - { label: Packages, path: https://packages.xmake.io/ }
+      - { label: Source, path: https://github.com/xmake-io/xrepo }

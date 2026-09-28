@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: hunter
 repository: https://github.com/cpp-pm/hunter
-revision: 83d3664b2fb02255e36bf80ee5f52b8665c83c9c
+revision: 997fab148b96896c5276cf1bfc0190da80dd5129
 packages:
 - id: hunter:ARM_NEON_2_x86_SSE
   registry: hunter
@@ -6529,7 +6529,12 @@ packages:
     - url: https://gitlab.com/tesch1/cppduals/-/archive/v0.9.4/cppduals-v0.9.4.tar.gz
       checksums:
       - sha1:e9c71d72863b02442569c0a2b4da5507d846cfb2
-  default_version: 0.9.4
+  - version: 0.9.6
+    artifacts:
+    - url: https://gitlab.com/tesch1/cppduals/-/archive/v0.9.6/cppduals-v0.9.6.tar.gz
+      checksums:
+      - sha1:0383343d893ecdaad969c8312a25d1e0c0695ff0
+  default_version: 0.9.6
   recipe_path: cmake/projects/cppduals/hunter.cmake
   native_url: https://hunter.readthedocs.io/en/latest/packages/pkg/cppduals.html
 - id: hunter:cppfs
@@ -9345,7 +9350,12 @@ packages:
     - url: https://github.com/cpp-pm/libdeflate/archive/refs/tags/v1.24-p0.tar.gz
       checksums:
       - sha1:07f1a72f3938377615da6e4bb48be77d1e8938a4
-  default_version: 1.24-p0
+  - version: '1.25'
+    artifacts:
+    - url: https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.25.tar.gz
+      checksums:
+      - sha1:7a7a9f7b0123d388e4caa2c92c751b4c3170dcca
+  default_version: '1.25'
   recipe_path: cmake/projects/libdeflate/hunter.cmake
   native_url: https://hunter.readthedocs.io/en/latest/packages/pkg/libdeflate.html
 - id: hunter:libdill

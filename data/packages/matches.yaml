@@ -104,6 +104,17 @@ matches:
     weight: -0.3
   - signal: shared distributed version
     weight: 0.12
+- left: bazel:abseil-py
+  right: spack:py-absl-py
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared distributed version
+    weight: 0.12
 - left: bazel:ada-url
   right: conan:ada
   confidence: 1.0
@@ -6261,6 +6272,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared distributed version
     weight: 0.12
 - left: bazel:cdt
@@ -6782,6 +6795,34 @@ matches:
     weight: 0.12
 - left: bazel:clipper2
   right: xmake:clipper2
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+- left: bazel:coal
+  right: conan:coal
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:coal
+  right: xmake:coal
   confidence: 1.0
   decision: merge
   evidence:
@@ -7710,6 +7751,8 @@ matches:
     weight: 1.0
   - signal: library-prefix alias
     weight: 0.6
+  - signal: shared distributed version
+    weight: 0.12
 - left: bazel:curl
   right: meson:curl
   confidence: 1.0
@@ -8432,6 +8475,15 @@ matches:
     weight: 1.0
   - signal: substantially different names
     weight: -0.3
+- left: bazel:egl-registry
+  right: cppget:libegl-registry
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
 - left: bazel:egl-registry
   right: vcpkg:egl-registry
   confidence: 1.0
@@ -9546,10 +9598,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
-  - signal: same distributed source checksum
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -10779,8 +10827,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source checksum
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: same homepage
@@ -10896,6 +10942,21 @@ matches:
   decision: conflict
   evidence:
   - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:gsl
+  right: spack:ms-gsl
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source checksum
     weight: 1.0
   - signal: substantially different names
     weight: -0.3
@@ -12519,6 +12580,21 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+- left: bazel:keynub_licdongle
+  right: xmake:keynub_licdongle
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: shared distributed version
+    weight: 0.12
 - left: bazel:kleidiai
   right: vcpkg:kleidiai
   confidence: 1.0
@@ -12539,6 +12615,58 @@ matches:
     weight: 0.95
   - signal: shared distributed version
     weight: 0.12
+- left: bazel:lcms2
+  right: conan:lcms
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:lcms2
+  right: meson:lcms2
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:lcms2
+  right: vcpkg:lcms
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:lcms2
+  right: xmake:lcms
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: same homepage
+    weight: 0.3
 - left: bazel:lcov
   right: spack:lcov
   confidence: 1.0
@@ -13015,6 +13143,17 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:libdeflate
+  right: hunter:libdeflate
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
   - signal: shared distributed version
     weight: 0.12
 - left: bazel:libdeflate
@@ -15842,6 +15981,10 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: shared distributed version
@@ -15857,6 +16000,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+  - signal: shared distributed version
+    weight: 0.12
 - left: bazel:meson
   right: vcpkg:vcpkg-tool-meson
   confidence: 1.0
@@ -15907,6 +16052,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: shared distributed version
+    weight: 0.12
 - left: bazel:mimalloc
   right: spack:mimalloc
   confidence: 1.0
@@ -16143,6 +16290,19 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:mp-units
+  right: spack:mp-units
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
   - signal: shared distributed version
     weight: 0.12
 - left: bazel:mp-units
@@ -17699,6 +17859,15 @@ matches:
   - signal: substantially different names
     weight: -0.3
 - left: bazel:opengl-registry
+  right: cppget:libopengl-registry
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+- left: bazel:opengl-registry
   right: vcpkg:opengl-registry
   confidence: 1.0
   decision: merge
@@ -18431,6 +18600,10 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same distributed source checksum
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -20507,6 +20680,88 @@ matches:
     weight: 1.0
   - signal: substantially different names
     weight: -0.3
+- left: bazel:sdl3
+  right: conan:sdl
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+- left: bazel:sdl3
+  right: meson:sdl2
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+- left: bazel:sdl3
+  right: meson:sdl3
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+- left: bazel:sdl3
+  right: spack:sdl2
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+- left: bazel:sdl3
+  right: vcpkg:sdl2
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+- left: bazel:sdl3
+  right: vcpkg:sdl3
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared distributed version
+    weight: 0.12
+- left: bazel:sdl3
+  right: xmake:libsdl2
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+- left: bazel:sdl3
+  right: xmake:libsdl3
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared package-family homepage
+    weight: 0.0
 - left: bazel:sed
   right: spack:sed
   confidence: 1.0
@@ -20609,8 +20864,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source URL
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
@@ -22672,6 +22925,28 @@ matches:
     weight: 0.95
   - signal: shared distributed version
     weight: 0.12
+- left: bazel:tre
+  right: conan:tre
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+- left: bazel:tre
+  right: vcpkg:tre
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
 - left: bazel:trompeloeil
   right: conan:trompeloeil
   confidence: 1.0
@@ -25660,8 +25935,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: conflicting descriptions
     weight: -0.07
   - signal: shared distributed version
@@ -30497,8 +30772,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source checksum
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: shared distributed version
@@ -30522,8 +30795,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source URL
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -30745,6 +31016,36 @@ matches:
   - signal: shared distributed version
     weight: 0.12
 - left: conan:cppcodec
+  right: cppget:libcppcodec
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: conflicting package types
+    weight: -0.15
+- left: conan:cppcodec
+  right: cppget:libcppcodec-tests
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: conflicting package types
+    weight: -0.15
+- left: conan:cppcodec
   right: spack:cppcodec
   confidence: 1.0
   decision: merge
@@ -30755,8 +31056,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
+  - signal: shared package-family homepage
+    weight: 0.0
   - signal: shared license
     weight: 0.05
   - signal: similar description
@@ -30787,8 +31088,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
+  - signal: shared package-family homepage
+    weight: 0.0
   - signal: shared license
     weight: 0.05
   - signal: similar description
@@ -32351,8 +32652,8 @@ matches:
     weight: 0.75
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: shared distributed version
     weight: 0.12
 - left: conan:daw_header_libraries
@@ -32695,6 +32996,47 @@ matches:
   - signal: shared license
     weight: 0.05
 - left: conan:directx-headers
+  right: cppget:libdirectx-guids
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+- left: conan:directx-headers
+  right: cppget:libdirectx-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+- left: conan:directx-headers
+  right: cppget:libdirectx-headers-tests
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: conflicting package types
+    weight: -0.15
+- left: conan:directx-headers
   right: vcpkg:directx-headers
   confidence: 1.0
   decision: merge
@@ -32716,8 +33058,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
+  - signal: shared package-family homepage
+    weight: 0.0
   - signal: shared license
     weight: 0.05
 - left: conan:dirent
@@ -33948,6 +34290,21 @@ matches:
     weight: 0.12
   - signal: shared distributed version
     weight: 0.12
+- left: conan:egl-headers
+  right: cppget:libegl-registry
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: conflicting package types
+    weight: -0.15
 - left: conan:egl-headers
   right: vcpkg:egl-registry
   confidence: 1.0
@@ -37619,6 +37976,19 @@ matches:
   - signal: shared distributed version
     weight: 0.12
 - left: conan:glext
+  right: cppget:libopengl-registry
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: conflicting package types
+    weight: -0.15
+- left: conan:glext
   right: vcpkg:opengl-registry
   confidence: 1.0
   decision: conflict
@@ -38064,7 +38434,7 @@ matches:
   - signal: shared license
     weight: 0.05
   - signal: similar description
-    weight: 0.12
+    weight: 0.09
 - left: conan:godot-cpp
   right: xmake:godotcpp
   confidence: 1.0
@@ -38075,7 +38445,7 @@ matches:
   - signal: same normalized spelling
     weight: 0.75
   - signal: similar description
-    weight: 0.12
+    weight: 0.09
   - signal: shared distributed version
     weight: 0.12
 - left: conan:godot-cpp
@@ -38090,7 +38460,7 @@ matches:
   - signal: shared license
     weight: 0.05
   - signal: similar description
-    weight: 0.1168
+    weight: 0.088
 - left: conan:google-cloud-cpp
   right: spack:google-cloud-cpp
   confidence: 1.0
@@ -38322,14 +38692,10 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source checksum
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: conflicting licenses
     weight: -0.12
-  - signal: shared distributed version
-    weight: 0.12
 - left: conan:grpc
   right: vcpkg:grpc
   confidence: 1.0
@@ -38550,8 +38916,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: similar description
     weight: 0.0917
 - left: conan:guetzli
@@ -38896,8 +39262,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source URL
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -42057,6 +42421,19 @@ matches:
   - signal: shared distributed version
     weight: 0.12
 - left: conan:khrplatform
+  right: cppget:libegl-registry
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: conflicting package types
+    weight: -0.15
+- left: conan:khrplatform
   right: vcpkg:egl-registry
   confidence: 1.0
   decision: conflict
@@ -43590,6 +43967,19 @@ matches:
     weight: -0.12
   - signal: similar description
     weight: 0.12
+  - signal: shared distributed version
+    weight: 0.12
+- left: conan:libdeflate
+  right: hunter:libdeflate
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
   - signal: shared distributed version
     weight: 0.12
 - left: conan:libdeflate
@@ -45609,6 +45999,21 @@ matches:
     weight: -0.12
   - signal: similar description
     weight: 0.12
+- left: conan:libnfs
+  right: vcpkg:libnfs
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.1071
 - left: conan:libnghttp2
   right: meson:nghttp2
   confidence: 1.0
@@ -46870,6 +47275,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
 - left: conan:libsvm
   right: xmake:libsvm
   confidence: 1.0
@@ -50269,6 +50676,23 @@ matches:
   - signal: shared distributed version
     weight: 0.12
 - left: conan:miniaudio
+  right: cppget:libminiaudio
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: shared license
+    weight: 0.05
+  - signal: similar description
+    weight: 0.096
+  - signal: shared distributed version
+    weight: 0.12
+- left: conan:miniaudio
   right: meson:miniaudio
   confidence: 1.0
   decision: merge
@@ -50721,6 +51145,8 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: same homepage
@@ -50729,6 +51155,8 @@ matches:
     weight: 0.05
   - signal: conflicting descriptions
     weight: -0.07
+  - signal: shared distributed version
+    weight: 0.12
 - left: conan:mold
   right: xmake:mold
   confidence: 1.0
@@ -50835,8 +51263,6 @@ matches:
     weight: -0.3
   - signal: conflicting descriptions
     weight: -0.07
-  - signal: shared distributed version
-    weight: 0.12
 - left: conan:mongo-c-driver
   right: vcpkg:mongo-c-driver
   confidence: 1.0
@@ -50848,8 +51274,6 @@ matches:
     weight: 0.95
   - signal: shared license
     weight: 0.05
-  - signal: shared distributed version
-    weight: 0.12
 - left: conan:mongo-c-driver
   right: xmake:mongo-c-driver
   confidence: 1.0
@@ -50939,6 +51363,19 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: conan:mp-units
+  right: spack:mp-units
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
   - signal: shared license
     weight: 0.05
   - signal: shared distributed version
@@ -51233,7 +51670,7 @@ matches:
 - left: conan:ms-gsl
   right: spack:cppgsl
   confidence: 1.0
-  decision: merge
+  decision: conflict
   evidence:
   - signal: same upstream repository
     weight: 1.0
@@ -51245,6 +51682,25 @@ matches:
     weight: 0.0
   - signal: shared license
     weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: conan:ms-gsl
+  right: spack:ms-gsl
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: similar description
+    weight: 0.0878
   - signal: shared distributed version
     weight: 0.12
 - left: conan:ms-gsl
@@ -53242,8 +53698,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: shared license
@@ -53751,8 +54205,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: similar description
     weight: 0.0971
   - signal: shared distributed version
@@ -54189,6 +54643,23 @@ matches:
     weight: 0.3
   - signal: shared license
     weight: 0.05
+- left: conan:opengl-registry
+  right: cppget:libopengl-registry
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.0986
+  - signal: conflicting package types
+    weight: -0.15
 - left: conan:opengl-registry
   right: vcpkg:opengl-registry
   confidence: 1.0
@@ -55566,6 +56037,10 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same distributed source checksum
+    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: shared distributed version
@@ -56002,6 +56477,12 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
 - left: conan:pixman
   right: meson:pixman
   confidence: 1.0
@@ -56110,6 +56591,8 @@ matches:
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.1082
 - left: conan:plf_colony
@@ -56138,6 +56621,8 @@ matches:
     weight: 0.75
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.12
 - left: conan:plf_indiesort
@@ -56166,6 +56651,8 @@ matches:
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
+  - signal: shared license
+    weight: 0.05
 - left: conan:plf_list
   right: xmake:plf_list
   confidence: 1.0
@@ -56229,12 +56716,12 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.0886
 - left: conan:plf_queue
@@ -56263,6 +56750,8 @@ matches:
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.0915
 - left: conan:plf_stack
@@ -61640,8 +62129,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: same homepage
@@ -66726,6 +67213,8 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: similar description
@@ -67104,8 +67593,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
   - signal: same homepage
@@ -67316,6 +67803,8 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -67620,6 +68109,19 @@ matches:
     weight: 0.05
   - signal: shared distributed version
     weight: 0.12
+- left: conan:wglext
+  right: cppget:libopengl-registry
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: conflicting package types
+    weight: -0.15
 - left: conan:wglext
   right: vcpkg:opengl-registry
   confidence: 1.0
@@ -68689,8 +69191,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source URL
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -71671,6 +72171,21 @@ matches:
   - signal: shared distributed version
     weight: 0.12
 - left: cppget:gsl
+  right: spack:ms-gsl
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: cppget:gsl
   right: vcpkg:ms-gsl
   confidence: 1.0
   decision: conflict
@@ -71711,6 +72226,21 @@ matches:
     weight: 0.12
 - left: cppget:gsl-tests
   right: spack:cppgsl
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: cppget:gsl-tests
+  right: spack:ms-gsl
   confidence: 1.0
   decision: merge
   evidence:
@@ -74905,6 +75435,80 @@ matches:
     weight: 0.3
   - signal: similar description
     weight: 0.0985
+- left: cppget:libcppcodec
+  right: spack:cppcodec
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+- left: cppget:libcppcodec
+  right: vcpkg:cppcodec
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+- left: cppget:libcppcodec
+  right: xmake:cppcodec
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: conflicting package types
+    weight: -0.15
+- left: cppget:libcppcodec-tests
+  right: spack:cppcodec
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+- left: cppget:libcppcodec-tests
+  right: vcpkg:cppcodec
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+- left: cppget:libcppcodec-tests
+  right: xmake:cppcodec
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: conflicting package types
+    weight: -0.15
 - left: cppget:libcpptrace
   right: spack:cpptrace
   confidence: 1.0
@@ -75229,6 +75833,84 @@ matches:
     weight: 0.0828
   - signal: conflicting package types
     weight: -0.15
+- left: cppget:libdirectx-guids
+  right: vcpkg:directx-headers
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: cppget:libdirectx-guids
+  right: xmake:directx-headers
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+- left: cppget:libdirectx-headers
+  right: vcpkg:directx-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: cppget:libdirectx-headers
+  right: xmake:directx-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+- left: cppget:libdirectx-headers-tests
+  right: vcpkg:directx-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
+- left: cppget:libdirectx-headers-tests
+  right: xmake:directx-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
 - left: cppget:libdouble-conversion
   right: hunter:double-conversion
   confidence: 1.0
@@ -75325,6 +76007,49 @@ matches:
     weight: -0.3
   - signal: conflicting licenses
     weight: -0.12
+- left: cppget:libegl-registry
+  right: vcpkg:egl-registry
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.086
+- left: cppget:libegl-registry
+  right: xmake:egl-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.086
+  - signal: conflicting package types
+    weight: -0.15
+- left: cppget:libegl-registry
+  right: xmake:khrplatform
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: conflicting package types
+    weight: -0.15
 - left: cppget:libenkits
   right: vcpkg:enkits
   confidence: 1.0
@@ -77973,6 +78698,45 @@ matches:
     weight: 0.05
   - signal: similar description
     weight: 0.1145
+- left: cppget:libminiaudio
+  right: meson:miniaudio
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+- left: cppget:libminiaudio
+  right: vcpkg:miniaudio
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: shared distributed version
+    weight: 0.12
+- left: cppget:libminiaudio
+  right: xmake:miniaudio
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.085
+  - signal: shared distributed version
+    weight: 0.12
 - left: cppget:libminiz
   right: hunter:miniz
   confidence: 1.0
@@ -78126,6 +78890,36 @@ matches:
     weight: 0.3
   - signal: shared license
     weight: 0.05
+- left: cppget:libopengl-registry
+  right: vcpkg:opengl-registry
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: library-prefix alias
+    weight: 0.6
+  - signal: same homepage
+    weight: 0.3
+  - signal: similar description
+    weight: 0.0994
+- left: cppget:libopengl-registry
+  right: xmake:opengl-headers
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.0994
+  - signal: conflicting package types
+    weight: -0.15
 - left: cppget:libpmp
   right: vcpkg:pmp-library
   confidence: 1.0
@@ -80020,6 +80814,8 @@ matches:
     weight: 0.95
   - signal: shared package-family homepage
     weight: 0.0
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.1035
 - left: cppget:plf-colony
@@ -80046,6 +80842,8 @@ matches:
     weight: 1.0
   - signal: substantially different names
     weight: -0.3
+  - signal: shared license
+    weight: 0.05
   - signal: conflicting descriptions
     weight: -0.07
 - left: cppget:plf-colony-tests
@@ -83527,6 +84325,39 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+- left: hunter:libdeflate
+  right: spack:libdeflate
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: shared distributed version
+    weight: 0.12
+- left: hunter:libdeflate
+  right: vcpkg:libdeflate
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: shared distributed version
+    weight: 0.12
+- left: hunter:libdeflate
+  right: xmake:libdeflate
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same distributed source URL
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
 - left: hunter:libigl
   right: vcpkg:libigl
   confidence: 1.0
@@ -86127,8 +86958,6 @@ matches:
   evidence:
   - signal: same upstream repository
     weight: 1.0
-  - signal: same distributed source URL
-    weight: 1.0
   - signal: same exact name
     weight: 0.95
 - left: meson:frozen
@@ -88033,6 +88862,17 @@ matches:
     weight: 0.95
 - left: meson:microsoft-gsl
   right: spack:cppgsl
+  confidence: 1.0
+  decision: conflict
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared distributed version
+    weight: 0.12
+- left: meson:microsoft-gsl
+  right: spack:ms-gsl
   confidence: 1.0
   decision: merge
   evidence:
@@ -91116,8 +91956,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: shared distributed version
     weight: 0.12
 - left: spack:assimp
@@ -92430,8 +93270,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: same homepage
-    weight: 0.3
+  - signal: shared package-family homepage
+    weight: 0.0
   - signal: shared license
     weight: 0.05
   - signal: similar description
@@ -92439,7 +93279,7 @@ matches:
 - left: spack:cppgsl
   right: vcpkg:ms-gsl
   confidence: 1.0
-  decision: merge
+  decision: conflict
   evidence:
   - signal: same upstream repository
     weight: 1.0
@@ -92454,7 +93294,7 @@ matches:
 - left: spack:cppgsl
   right: xmake:microsoft-gsl
   confidence: 1.0
-  decision: merge
+  decision: conflict
   evidence:
   - signal: same upstream repository
     weight: 1.0
@@ -92464,8 +93304,6 @@ matches:
     weight: 0.0
   - signal: shared license
     weight: 0.05
-  - signal: similar description
-    weight: 0.1091
 - left: spack:cpptrace
   right: vcpkg:cpptrace
   confidence: 1.0
@@ -93877,8 +94715,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: similar description
     weight: 0.1044
   - signal: shared distributed version
@@ -96788,6 +97626,19 @@ matches:
     weight: 0.95
   - signal: conflicting licenses
     weight: -0.12
+- left: spack:libnfs
+  right: vcpkg:libnfs
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: similar description
+    weight: 0.1071
 - left: spack:libnl
   right: xmake:libnl
   confidence: 1.0
@@ -97282,6 +98133,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
   - signal: shared distributed version
     weight: 0.12
 - left: spack:libsvm
@@ -97896,8 +98749,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: similar description
     weight: 0.12
 - left: spack:llhttp
@@ -98536,6 +99389,21 @@ matches:
     weight: 0.3
   - signal: conflicting licenses
     weight: -0.12
+- left: spack:mp-units
+  right: vcpkg:mp-units
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: shared license
+    weight: 0.05
+  - signal: shared distributed version
+    weight: 0.12
 - left: spack:mpark-variant
   right: vcpkg:mpark-variant
   confidence: 1.0
@@ -98577,6 +99445,36 @@ matches:
     weight: 0.3
   - signal: similar description
     weight: 0.1186
+- left: spack:ms-gsl
+  right: vcpkg:ms-gsl
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: same exact name
+    weight: 0.95
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
+  - signal: similar description
+    weight: 0.0859
+  - signal: shared distributed version
+    weight: 0.12
+- left: spack:ms-gsl
+  right: xmake:microsoft-gsl
+  confidence: 1.0
+  decision: merge
+  evidence:
+  - signal: same upstream repository
+    weight: 1.0
+  - signal: substantially different names
+    weight: -0.3
+  - signal: shared package-family homepage
+    weight: 0.0
+  - signal: shared license
+    weight: 0.05
 - left: spack:msgpack-c
   right: vcpkg:msgpack
   confidence: 1.0
@@ -104109,8 +105007,8 @@ matches:
     weight: -0.3
   - signal: same homepage
     weight: 0.3
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
   - signal: similar description
     weight: 0.0947
 - left: vcpkg:aravis
@@ -104292,8 +105190,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
 - left: vcpkg:async-simple
   right: xmake:async_simple
   confidence: 1.0
@@ -106445,8 +107343,8 @@ matches:
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
-  - signal: shared license
-    weight: 0.05
+  - signal: conflicting licenses
+    weight: -0.12
 - left: vcpkg:daw-json-link
   right: xmake:daw_json_link
   confidence: 1.0
@@ -110530,6 +111428,8 @@ matches:
     weight: 1.0
   - signal: same exact name
     weight: 0.95
+  - signal: shared license
+    weight: 0.05
 - left: vcpkg:libsystemd
   right: xmake:libsystemd
   confidence: 1.0
@@ -112349,6 +113249,8 @@ matches:
     weight: 0.95
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
 - left: vcpkg:nativefiledialog-extended
   right: xmake:nativefiledialog-extended
   confidence: 1.0
@@ -113765,6 +114667,8 @@ matches:
     weight: 0.75
   - signal: shared package-family homepage
     weight: 0.0
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.12
 - left: vcpkg:plf-hive
@@ -113793,6 +114697,8 @@ matches:
     weight: 0.75
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.12
 - left: vcpkg:plf-list
@@ -113804,6 +114710,8 @@ matches:
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
+  - signal: shared license
+    weight: 0.05
 - left: vcpkg:plf-nanotimer
   right: xmake:plf_nanotimer
   confidence: 1.0
@@ -113826,6 +114734,8 @@ matches:
     weight: 0.75
   - signal: same homepage
     weight: 0.3
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.1191
 - left: vcpkg:plf-stack
@@ -113837,6 +114747,8 @@ matches:
     weight: 1.0
   - signal: same normalized spelling
     weight: 0.75
+  - signal: shared license
+    weight: 0.05
   - signal: similar description
     weight: 0.0888
 - left: vcpkg:plog
@@ -115314,8 +116226,6 @@ matches:
   decision: merge
   evidence:
   - signal: same upstream repository
-    weight: 1.0
-  - signal: same distributed source URL
     weight: 1.0
   - signal: same exact name
     weight: 0.95
@@ -121264,17 +122174,6 @@ matches:
     weight: 0.3
   - signal: similar description
     weight: 0.1193
-- left: conan:openmpi
-  right: vcpkg:openmpi
-  confidence: 0.9692
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-  - signal: same homepage
-    weight: 0.3
-  - signal: shared distributed version
-    weight: 0.12
 - left: conan:qwt
   right: vcpkg:qwt
   confidence: 0.9692
@@ -121494,17 +122393,6 @@ matches:
   - signal: same homepage
     weight: 0.3
   - signal: similar description
-    weight: 0.12
-- left: spack:openmpi
-  right: vcpkg:openmpi
-  confidence: 0.9692
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-  - signal: same homepage
-    weight: 0.3
-  - signal: shared distributed version
     weight: 0.12
 - left: spack:patch
   right: xmake:patch
@@ -121814,17 +122702,6 @@ matches:
     weight: 0.3
   - signal: similar description
     weight: 0.0854
-- left: vcpkg:v8
-  right: xmake:v8
-  confidence: 0.9679
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-  - signal: same homepage
-    weight: 0.3
-  - signal: similar description
-    weight: 0.0815
 - left: conan:boringssl
   right: spack:boringssl
   confidence: 0.9667
@@ -129873,15 +130750,6 @@ matches:
     weight: 0.95
   - signal: shared license
     weight: 0.05
-- left: conan:llama-cpp
-  right: vcpkg:llama-cpp
-  confidence: 0.9525
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-  - signal: shared license
-    weight: 0.05
 - left: conan:lmdb
   right: spack:lmdb
   confidence: 0.9525
@@ -130973,13 +131841,6 @@ matches:
     weight: 0.95
 - left: bazel:libcpuid
   right: hunter:libcpuid
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-- left: bazel:libdeflate
-  right: hunter:libdeflate
   confidence: 0.95
   decision: merge
   evidence:
@@ -132395,13 +133256,6 @@ matches:
     weight: 0.95
 - left: conan:libcpuid
   right: hunter:libcpuid
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-- left: conan:libdeflate
-  right: hunter:libdeflate
   confidence: 0.95
   decision: merge
   evidence:
@@ -135177,27 +136031,6 @@ matches:
   evidence:
   - signal: same exact name
     weight: 0.95
-- left: hunter:libdeflate
-  right: spack:libdeflate
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-- left: hunter:libdeflate
-  right: vcpkg:libdeflate
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-- left: hunter:libdeflate
-  right: xmake:libdeflate
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
 - left: hunter:libdill
   right: xmake:libdill
   confidence: 0.95
@@ -136159,13 +136992,6 @@ matches:
     weight: 0.95
 - left: hunter:units
   right: spack:units
-  confidence: 0.95
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-- left: hunter:v8
-  right: vcpkg:v8
   confidence: 0.95
   decision: merge
   evidence:
@@ -137335,19 +138161,6 @@ matches:
     weight: 0.12
 - left: spack:minizip
   right: vcpkg:minizip
-  confidence: 0.8911
-  decision: merge
-  evidence:
-  - signal: same exact name
-    weight: 0.95
-  - signal: shared license
-    weight: 0.05
-  - signal: conflicting descriptions
-    weight: -0.07
-  - signal: shared distributed version
-    weight: 0.12
-- left: spack:openal-soft
-  right: vcpkg:openal-soft
   confidence: 0.8911
   decision: merge
   evidence:
@@ -138706,6 +139519,19 @@ matches:
     weight: -0.12
   - signal: shared distributed version
     weight: 0.12
+- left: conan:openmpi
+  right: vcpkg:openmpi
+  confidence: 0.8529
+  decision: merge
+  evidence:
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: shared distributed version
+    weight: 0.12
 - left: conan:pangomm
   right: vcpkg:pangomm
   confidence: 0.8529
@@ -138981,6 +139807,19 @@ matches:
     weight: 0.12
 - left: spack:libxpm
   right: vcpkg:libxpm
+  confidence: 0.8529
+  decision: merge
+  evidence:
+  - signal: same exact name
+    weight: 0.95
+  - signal: same homepage
+    weight: 0.3
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: shared distributed version
+    weight: 0.12
+- left: spack:openmpi
+  right: vcpkg:openmpi
   confidence: 0.8529
   decision: merge
   evidence:
@@ -141029,6 +141868,15 @@ matches:
     weight: 0.95
   - signal: conflicting licenses
     weight: -0.12
+- left: conan:llama-cpp
+  right: vcpkg:llama-cpp
+  confidence: 0.836
+  decision: merge
+  evidence:
+  - signal: same exact name
+    weight: 0.95
+  - signal: conflicting licenses
+    weight: -0.12
 - left: conan:melon
   right: xmake:melon
   confidence: 0.836
@@ -142214,6 +143062,19 @@ matches:
     weight: -0.07
   - signal: shared distributed version
     weight: 0.12
+- left: spack:openal-soft
+  right: vcpkg:openal-soft
+  confidence: 0.7744
+  decision: none
+  evidence:
+  - signal: same exact name
+    weight: 0.95
+  - signal: conflicting licenses
+    weight: -0.12
+  - signal: conflicting descriptions
+    weight: -0.07
+  - signal: shared distributed version
+    weight: 0.12
 - left: spack:pango
   right: vcpkg:pango
   confidence: 0.7744
@@ -142460,15 +143321,6 @@ matches:
   - signal: shared distributed version
     weight: 0.12
 - left: spack:llama-cpp
-  right: xmake:llama.cpp
-  confidence: 0.7625
-  decision: none
-  evidence:
-  - signal: same normalized spelling
-    weight: 0.75
-  - signal: shared license
-    weight: 0.05
-- left: vcpkg:llama-cpp
   right: xmake:llama.cpp
   confidence: 0.7625
   decision: none
@@ -143404,6 +144256,15 @@ matches:
     weight: -0.12
 - left: spack:cvector
   right: xmake:c-vector
+  confidence: 0.66
+  decision: none
+  evidence:
+  - signal: same normalized spelling
+    weight: 0.75
+  - signal: conflicting licenses
+    weight: -0.12
+- left: vcpkg:llama-cpp
+  right: xmake:llama.cpp
   confidence: 0.66
   decision: none
   evidence:
@@ -144867,6 +145728,13 @@ matches:
   evidence:
   - signal: library-prefix alias
     weight: 0.6
+- left: cppget:libcppcodec
+  right: hunter:cppcodec
+  confidence: 0.6
+  decision: none
+  evidence:
+  - signal: library-prefix alias
+    weight: 0.6
 - left: cppget:libcrashpad
   right: hunter:crashpad
   confidence: 0.6
@@ -144883,6 +145751,13 @@ matches:
     weight: 0.6
 - left: cppget:libcurl
   right: xmake:curl
+  confidence: 0.6
+  decision: none
+  evidence:
+  - signal: library-prefix alias
+    weight: 0.6
+- left: cppget:libegl-registry
+  right: hunter:EGL-Registry
   confidence: 0.6
   decision: none
   evidence:
@@ -145016,6 +145891,13 @@ matches:
     weight: 0.6
 - left: cppget:libodb-sqlite
   right: hunter:odb-sqlite
+  confidence: 0.6
+  decision: none
+  evidence:
+  - signal: library-prefix alias
+    weight: 0.6
+- left: cppget:libopengl-registry
+  right: hunter:OpenGL-Registry
   confidence: 0.6
   decision: none
   evidence:

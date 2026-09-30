@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: cppget
 repository: https://pkg.cppget.org/1/
-revision: 5d0e1b31d39e69e86b1e0f12cb788b73daa03b8232368f922e8f3461c7463840
+revision: af64c705dd18131774fd0907702d52b2ba90a82b5644f104fcfc3ba7d7726b41
 packages:
 - id: cppget:Eigen
   registry: cppget
@@ -19283,6 +19283,69 @@ packages:
       checksums:
       - sha256:8d1f07bccb2eff423419128991abb103a09ea7acd7751746466d6df9f625e73e
   recipe_url: https://cppget.org/libcpp-base64
+- id: cppget:libcppcodec
+  registry: cppget
+  name: libcppcodec
+  summary: Base64, base32, and hex encoding/decoding library
+  description: <p>Header-only C++11 library to encode/decode base64, base64url, base32,\ base32hex and hex (a.k.a. base16) as specified in RFC 4648, plus Crockford's base32.</p><p>MIT licensed with consistent, flexible API. Supports raw pointers, std::string and (templated) character vectors without unnecessary\ allocations. Cross-platform with measured decent performance and without compiler warnings.</p>
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/tplgy/cppcodec
+  repository_url: https://github.com/tplgy/cppcodec
+  topics:
+  - codec base64 base32 hex rfc4648
+  - encoding, base64, base32
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 0.2.1
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/cppcodec/libcppcodec-0.2.1.tar.gz
+      checksums:
+      - sha256:6859835f7622eae84a5c00ab6f1c50f699be4d9e58c2ff050ebc57f14abf6932
+  recipe_url: https://cppget.org/libcppcodec
+- id: cppget:libcppcodec-tests
+  registry: cppget
+  name: libcppcodec-tests
+  summary: Base64, base32, and hex encoding/decoding library (tests)
+  description: <p>Header-only C++11 library to encode/decode base64, base64url, base32,\ base32hex and hex (a.k.a. base16) as specified in RFC 4648, plus Crockford's base32.</p><p>MIT licensed with consistent, flexible API. Supports raw pointers, std::string and (templated) character vectors without unnecessary\ allocations. Cross-platform with measured decent performance and without compiler warnings.</p>
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/tplgy/cppcodec
+  repository_url: https://github.com/tplgy/cppcodec
+  languages:
+  - c++
+  package_type: exe
+  dependencies:
+  - bpkg
+  - build2
+  - catch2
+  - libcppcodec
+  versions:
+  - version: 0.2.1
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: catch2
+    - name: libcppcodec
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/cppcodec/libcppcodec-tests-0.2.1.tar.gz
+      checksums:
+      - sha256:3e7f89dca01e624f03272ce031482cb81c10b904ecd001013881cd39fa20f424
+  recipe_url: https://cppget.org/libcppcodec-tests
 - id: cppget:libcpptrace
   registry: cppget
   name: libcpptrace
@@ -19853,6 +19916,100 @@ packages:
       checksums:
       - sha256:284c40c27365dd80f337f2445fa42a4eea345be829a35f41567d74ae2abf101a
   recipe_url: https://cppget.org/libcxxopts-tests
+- id: cppget:libdirectx-guids
+  registry: cppget
+  name: libdirectx-guids
+  summary: DirectX GUID definitions for cross-platform use
+  description: <p>This repository hosts the official Direct3D 12 headers. These headers are\ made available under the MIT license rather than the traditional Windows SDK\ license.</p><p>Additionally, this repository hosts several helpers for using these headers.</p>
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/microsoft/DirectX-Headers
+  repository_url: https://github.com/microsoft/directx-headers
+  topics:
+  - graphics, api, c++, directx, d3d12
+  languages:
+  - c++
+  dependencies:
+  - bpkg
+  - build2
+  - libdirectx-headers
+  versions:
+  - version: 1.619.5
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libdirectx-headers
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/directx-headers/libdirectx-guids-1.619.5.tar.gz
+      checksums:
+      - sha256:3ee0f3de4e965acf79c761a899b699d68dea09c4846cd448eb449a6382cc6e1d
+  recipe_url: https://cppget.org/libdirectx-guids
+- id: cppget:libdirectx-headers
+  registry: cppget
+  name: libdirectx-headers
+  summary: Direct3D 12 headers and D3DX12 helper library
+  description: <p>This repository hosts the official Direct3D 12 headers. These headers are\ made available under the MIT license rather than the traditional Windows SDK\ license.</p><p>Additionally, this repository hosts several helpers for using these headers.</p>
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/microsoft/DirectX-Headers
+  repository_url: https://github.com/microsoft/directx-headers
+  topics:
+  - graphics, api, c++, directx, d3d12
+  languages:
+  - c++
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.619.5
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/directx-headers/libdirectx-headers-1.619.5.tar.gz
+      checksums:
+      - sha256:bdcfd3404ef14953c34b6abf96adcebeb339f4dbbf10a18e26cb9ae3446791b1
+  recipe_url: https://cppget.org/libdirectx-headers
+- id: cppget:libdirectx-headers-tests
+  registry: cppget
+  name: libdirectx-headers-tests
+  summary: Direct3D 12 headers and D3DX12 helper library (tests)
+  description: <p>This repository hosts the official Direct3D 12 headers. These headers are\ made available under the MIT license rather than the traditional Windows SDK\ license.</p><p>Additionally, this repository hosts several helpers for using these headers.</p>
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/microsoft/DirectX-Headers
+  repository_url: https://github.com/microsoft/directx-headers
+  topics:
+  - graphics, api, c++, directx, d3d12
+  languages:
+  - c++
+  package_type: exe
+  dependencies:
+  - bpkg
+  - build2
+  - gtest
+  - libdirectx-guids
+  versions:
+  - version: 1.619.5
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: gtest
+    - name: libdirectx-guids
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/directx-headers/libdirectx-headers-tests-1.619.5.tar.gz
+      checksums:
+      - sha256:dedd8a0e31ce038535338d6a6774540b69e57161c9af852d90ca32d497b68126
+  recipe_url: https://cppget.org/libdirectx-headers-tests
 - id: cppget:libdouble-conversion
   registry: cppget
   name: libdouble-conversion
@@ -19954,6 +20111,37 @@ packages:
       checksums:
       - sha256:c30957bc33ffa71c3bfcf87cf2633aa82a04b5247dd6cdae12b06ac53ab2209b
   recipe_url: https://cppget.org/libdwarfp
+- id: cppget:libegl-registry
+  registry: cppget
+  name: libegl-registry
+  summary: Khronos EGL API and extension headers
+  description: <p>The EGL-Registry repository contains the EGL API and Extension Registry, including specifications, reference pages and reference cards, and the enumerant registry. It is also used as a backing store for the web view of the registry at https://www.khronos.org/registry/egl/ ; commits to the main branch of this repository will be reflected there.</p><p>In the past, the EGL registry was maintained in a public Subversion repository. The history in that repository has not been imported to github, but it is still available at https://cvs.khronos.org/svn/repos/registry/trunk/public/egl/ .</p>
+  description_format: html
+  licenses:
+  - Apache-2.0, MIT
+  homepage: https://github.com/KhronosGroup/EGL-Registry
+  repository_url: https://github.com/khronosgroup/egl-registry
+  documentation_url: https://registry.khronos.org/EGL/
+  topics:
+  - EGL API, Khronos registry, graphics headers
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 2026.3.19
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/egl-registry/libegl-registry-2026.3.19.tar.gz
+      checksums:
+      - sha256:6d169f9e43756c32384025d9a373a6167a558648eab566f9d5fdc6e46ffc12ca
+  recipe_url: https://cppget.org/libegl-registry
 - id: cppget:libenkits
   registry: cppget
   name: libenkits
@@ -25894,6 +26082,37 @@ packages:
       checksums:
       - sha256:25257b5c295e4505bf68ba22f15e9c9cc850538e4b61c91a9c459e041b5abfba
   recipe_url: https://cppget.org/libminhook
+- id: cppget:libminiaudio
+  registry: cppget
+  name: libminiaudio
+  summary: Audio playback and capture C library
+  description: <p>&lt;h1 align="center"&gt; &lt;/h1&gt;</p><p>&lt;h4 align="center"&gt;An audio playback and capture library in a single source\ file.&lt;/h4&gt;</p>
+  description_format: html
+  licenses:
+  - MIT-0
+  - Unlicense
+  homepage: https://github.com/mackron/miniaudio
+  repository_url: https://github.com/mackron/miniaudio
+  documentation_url: https://miniaud.io/docs
+  topics:
+  - audio, playback, capture
+  languages:
+  - c
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 0.11.25
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/miniaudio/libminiaudio-0.11.25.tar.gz
+      checksums:
+      - sha256:300f788b25dc40d766fb1770cef72245da5845c773dadfad961e400e17305770
+  recipe_url: https://cppget.org/libminiaudio
 - id: cppget:libminiz
   registry: cppget
   name: libminiz
@@ -26872,6 +27091,37 @@ packages:
       checksums:
       - sha256:28536e5f4613c84726f442888a7556edf238525375620dfdb5553743440b8488
   recipe_url: https://cppget.org/libopengl-meta-examples
+- id: cppget:libopengl-registry
+  registry: cppget
+  name: libopengl-registry
+  summary: Khronos OpenGL, OpenGL ES, and OpenGL SC API and extension headers
+  licenses:
+  - MIT, Apache-2.0, SGI-B-2.0
+  homepage: https://github.com/KhronosGroup/OpenGL-Registry
+  repository_url: https://github.com/khronosgroup/opengl-registry
+  documentation_url: https://registry.khronos.org/OpenGL/
+  topics:
+  - OpenGL API, Khronos registry, graphics headers
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  - libegl-registry
+  versions:
+  - version: 2026.8.3
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libegl-registry
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/opengl-registry/libopengl-registry-2026.8.3.tar.gz
+      checksums:
+      - sha256:50c08ff3ae54382efa7094618c8fd0b577d52b3633d94433cfaa8f1ec1ada871
+  recipe_url: https://cppget.org/libopengl-registry
 - id: cppget:libopensim
   registry: cppget
   name: libopensim

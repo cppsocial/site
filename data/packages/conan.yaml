@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: conan
 repository: https://github.com/conan-io/conan-center-index
-revision: 319023a7b852a005e96a38919588263b05a9d541
+revision: 07389b8fa043666661da208a0cff039338f6e596
 packages:
 - id: conan:7bitconf
   registry: conan
@@ -211,11 +211,11 @@ packages:
   - zip
   package_type: application
   versions:
-  - version: '26.02'
+  - version: '26.03'
     artifacts:
-    - url: https://github.com/ip7z/7zip/releases/download/26.02/7z2602-src.tar.xz
-    - url: https://sourceforge.net/projects/sevenzip/files/7-Zip/26.02/7z2602-src.tar.xz
-    - url: https://www.7-zip.org/a/7z2602-src.tar.xz
+    - url: https://github.com/ip7z/7zip/releases/download/26.03/7z2603-src.tar.xz
+    - url: https://sourceforge.net/projects/sevenzip/files/7-Zip/26.03/7z2603-src.tar.xz
+    - url: https://www.7-zip.org/a/7z2603-src.tar.xz
   recipe_path: recipes/7zip/config.yml
   native_url: https://conan.io/center/recipes/7zip
 - id: conan:aaf
@@ -1946,6 +1946,43 @@ packages:
     artifacts:
     - url: https://archive.apache.org/dist/apr/apr-util-1.6.1.tar.gz
     - url: https://downloads.apache.org/apr/apr-util-1.6.1.tar.gz
+  - version: 1.6.5
+    dependencies:
+    - name: apr
+    - name: expat
+    - name: libiconv
+    - name: libmysqlclient
+    - name: libpq
+    - name: openssl
+    - name: sqlite3
+    features:
+    - name: dbm
+      default: 'false'
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_commoncrypto
+      default: 'false'
+    - name: with_expat
+      default: 'true'
+    - name: with_lber
+      default: 'false'
+    - name: with_ldap
+      default: 'false'
+    - name: with_mysql
+      default: 'false'
+    - name: with_nss
+      default: 'false'
+    - name: with_openssl
+      default: 'false'
+    - name: with_postgresql
+      default: 'false'
+    - name: with_sqlite3
+      default: 'false'
+    artifacts:
+    - url: https://archive.apache.org/dist/apr/apr-util-1.6.5.tar.gz
+    - url: https://downloads.apache.org/apr/apr-util-1.6.5.tar.gz
   recipe_path: recipes/apr-util/config.yml
   native_url: https://conan.io/center/recipes/apr-util
 - id: conan:apriltag
@@ -18515,7 +18552,7 @@ packages:
     with_octomap: 'true'
     with_qhull: 'false'
   versions:
-  - version: 3.0.2
+  - version: 3.0.4
     dependencies:
     - name: assimp
     - name: boost
@@ -18529,9 +18566,9 @@ packages:
     - name: with_qhull
       default: 'false'
     artifacts:
-    - url: https://github.com/coal-library/coal/releases/download/v3.0.2/coal-3.0.2.tar.gz
+    - url: https://github.com/coal-library/coal/releases/download/v3.0.4/coal-3.0.4.tar.gz
       checksums:
-      - sha256:899eb343ee7d86ae6312401bc969d1d2cb8103a5a67af5e1f06061a9c5fb0743
+      - sha256:0a9091aa281f51b9513f11aae39758a6188bca63010524f36b3bdc566381ca4a
   recipe_path: recipes/coal/config.yml
   native_url: https://conan.io/center/recipes/coal
 - id: conan:cocoyaxi
@@ -27057,6 +27094,55 @@ packages:
       - sha256:ebe82b0c3c7678d31bc26ad7ab9aedfd66057a559c541750ede5d19a0ed0c245
   recipe_path: recipes/dpp/config.yml
   native_url: https://conan.io/center/recipes/dpp
+- id: conan:dqlite
+  registry: conan
+  name: dqlite
+  summary: Embeddable and replicated SQL database engine with high availability and automatic failover
+  licenses:
+  - LGPL-3.0-only WITH LGPL-3.0-linking-exception
+  homepage: https://github.com/canonical/dqlite
+  repository_url: https://github.com/canonical/dqlite
+  topics:
+  - database
+  - raft
+  - replication
+  - sqlite
+  package_type: library
+  dependencies:
+  - autoconf
+  - automake
+  - libtool
+  - libuv
+  - lz4
+  - pkgconf
+  - sqlite3
+  options:
+  - fPIC
+  - shared
+  default_options:
+    fPIC: 'true'
+    shared: 'false'
+  versions:
+  - version: 1.18.7
+    dependencies:
+    - name: autoconf
+    - name: automake
+    - name: libtool
+    - name: libuv
+    - name: lz4
+    - name: pkgconf
+    - name: sqlite3
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/canonical/dqlite/archive/refs/tags/v1.18.7.tar.gz
+      checksums:
+      - sha256:7a9087460f3296313379e95a25761c88081c508ae0742bec6fb63e895eb807a9
+  recipe_path: recipes/dqlite/config.yml
+  native_url: https://conan.io/center/recipes/dqlite
 - id: conan:dr_libs
   registry: conan
   name: dr_libs
@@ -30498,22 +30584,6 @@ packages:
     - url: https://github.com/libexpat/libexpat/releases/download/R_2_7_5/expat-2.7.5.tar.xz
       checksums:
       - sha256:1032dfef4ff17f70464827daa28369b20f6584d108bc36f17ab1676e1edd2f91
-  - version: 2.8.3
-    dependencies:
-    - name: cmake
-    features:
-    - name: char_type
-      default: char
-    - name: fPIC
-      default: 'true'
-    - name: large_size
-      default: 'false'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_3/expat-2.8.3.tar.xz
-      checksums:
-      - sha256:f6256df90c906773d344da084402b7d3e4f22ed41b1a59c989098a83d3ea0c85
   - version: 2.8.4
     dependencies:
     - name: cmake
@@ -30530,6 +30600,22 @@ packages:
     - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_4/expat-2.8.4.tar.xz
       checksums:
       - sha256:656ae1cc8da3b4ea513bb4e254f33e6243938084c0ec6239da873376b09985a7
+  - version: 2.8.5
+    dependencies:
+    - name: cmake
+    features:
+    - name: char_type
+      default: char
+    - name: fPIC
+      default: 'true'
+    - name: large_size
+      default: 'false'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_5/expat-2.8.5.tar.xz
+      checksums:
+      - sha256:1e727b8933ec51a77a9a9d9afcf8e688bce45d907c13e36ab7393fe36e703182
   recipe_path: recipes/expat/config.yml
   native_url: https://conan.io/center/recipes/expat
 - id: conan:expected-lite
@@ -38526,13 +38612,13 @@ packages:
   dependencies:
   - cmake
   versions:
-  - version: 8.3.0
+  - version: 8.4.0
     dependencies:
     - name: cmake
     artifacts:
-    - url: https://github.com/stephenberry/glaze/archive/refs/tags/v8.3.0.tar.gz
+    - url: https://github.com/stephenberry/glaze/archive/refs/tags/v8.4.0.tar.gz
       checksums:
-      - sha256:6a8f97f5cdb8df5c87f1b32710679585f3f1a577b67bb66150f2516072e00317
+      - sha256:4ee6f2ec68e8c763553d6a16e0d79cd51fac7c58cbd98783760f418ce82c9a91
   recipe_path: recipes/glaze/config.yml
   native_url: https://conan.io/center/recipes/glaze
 - id: conan:glbinding
@@ -39326,7 +39412,7 @@ packages:
     - url: https://github.com/KhronosGroup/glslang/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
       checksums:
       - sha256:555ac780ccceca926fa25775834639ce6ffc744120bfb68fb8657dd4032d21ee
-  - version: 1.4.350.0
+  - version: 1.4.357.0
     dependencies:
     - name: cmake
     features:
@@ -39343,9 +39429,9 @@ packages:
     - name: spv_remapper
       default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/glslang/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+    - url: https://github.com/KhronosGroup/glslang/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:a6885b1631fd77c89cd689b939cf2b3032c5ec13ee99250270d34bcad1efc10c
+      - sha256:81038794e20494556edbcc0fc70fa984d71d1b440f9c49adf2cbaaa60a519757
   recipe_path: recipes/glslang/config.yml
   native_url: https://conan.io/center/recipes/glslang
 - id: conan:glu
@@ -39837,34 +39923,42 @@ packages:
 - id: conan:godot-cpp
   registry: conan
   name: godot-cpp
-  summary: C++ bindings for the Godot script API
+  summary: C++ bindings for the Godot Engine's GDExtension API
   licenses:
   - MIT
   homepage: https://github.com/godotengine/godot-cpp
   repository_url: https://github.com/godotengine/godot-cpp
   topics:
-  - c++
-  - game-development
+  - bindings
   - game-engine
+  - gdextension
+  - godot
   package_type: static-library
   dependencies:
   - scons
   options:
+  - api_version
   - fPIC
+  - target
   default_options:
+    api_version: '4.7'
     fPIC: 'true'
+    target: template_debug
   versions:
-  - version: 3.3.4
-    dependencies:
-    - name: scons
+  - version: 10.0.0
     features:
+    - name: api_version
+      default: '4.7'
     - name: fPIC
       default: 'true'
+    - name: target
+      default: template_debug
     artifacts:
-    - url: https://github.com/godotengine/godot-cpp/archive/godot-3.3.4-stable.tar.gz
+    - url: https://github.com/godotengine/godot-cpp/archive/refs/tags/10.0.0-stable.tar.gz
       checksums:
-      - sha256:fa12b8dd8652109eceae7aecf134f64529edfb34ec33d24b1a9c220b40599575
+      - sha256:ebbf64f0f8f8b8b66bc4bc4d3797db97f95b19cf0dfb5b3f8cf56683d9df7db4
   - version: 3.5.1
+    summary: C++ bindings for the Godot script API
     dependencies:
     - name: scons
     features:
@@ -39874,16 +39968,6 @@ packages:
     - url: https://github.com/godotengine/godot-cpp/archive/godot-3.5.1-stable.tar.gz
       checksums:
       - sha256:a0ab1f117d30ab01837e39e7ff704bbded282db4643343579b2bca11794f99fc
-  - version: cci.3.2-20200130
-    dependencies:
-    - name: scons
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/godotengine/godot-cpp/archive/aba8766618c6aa40c6f7b40b513e8e47cfa807f4.zip
-      checksums:
-      - sha256:a6dba9cda3c36c669ffca2bb9dd4e372bcd1fbf23c74076505467247c15f0e77
   recipe_path: recipes/godot-cpp/config.yml
   native_url: https://conan.io/center/recipes/godot-cpp
 - id: conan:godot_headers
@@ -40567,10 +40651,6 @@ packages:
       default: 'false'
     - name: with_libsystemd
       default: 'false'
-    artifacts:
-    - url: https://github.com/grpc/grpc/archive/v1.54.3.tar.gz
-      checksums:
-      - sha256:17e4e1b100657b88027721220cbfb694d86c4b807e9257eaf2fb2d273b41b1b1
   - version: 1.69.0
     dependencies:
     - name: abseil
@@ -40611,11 +40691,7 @@ packages:
       default: 'false'
     - name: with_libsystemd
       default: 'false'
-    artifacts:
-    - url: https://github.com/grpc/grpc/archive/v1.69.0.tar.gz
-      checksums:
-      - sha256:cd256d91781911d46a57506978b3979bfee45d5086a1b6668a3ae19c5e77f8dc
-  - version: 1.83.1
+  - version: 1.84.0
     dependencies:
     - name: abseil
     - name: c-ares
@@ -40655,10 +40731,6 @@ packages:
       default: 'false'
     - name: with_libsystemd
       default: 'false'
-    artifacts:
-    - url: https://github.com/grpc/grpc/archive/refs/tags/v1.83.1.tar.gz
-      checksums:
-      - sha256:60caa8397426d8a500e3e57ab6a49d1cb5aa62a36f2591eb9da3d77fa38ad8c9
   recipe_path: recipes/grpc/config.yml
   native_url: https://conan.io/center/recipes/grpc
 - id: conan:grpc-proto
@@ -60643,7 +60715,7 @@ packages:
     with_zlib: 'true'
     with_zstd: 'false'
   versions:
-  - version: '14.23'
+  - version: '14.24'
     dependencies:
     - name: icu
     - name: msys2
@@ -60662,10 +60734,10 @@ packages:
     - name: with_openssl
       default: 'false'
     artifacts:
-    - url: https://ftp.postgresql.org/pub/source/v14.23/postgresql-14.23.tar.bz2
+    - url: https://ftp.postgresql.org/pub/source/v14.24/postgresql-14.24.tar.bz2
       checksums:
-      - sha256:cc7216822b546330e29c2f91e123c8734a4c41795082145bb962aa712e8c94a5
-  - version: '15.18'
+      - sha256:a7fa7ed3d558172355f51406097a7bd4f6b473be80f311ef7cda96bf383d8897
+  - version: '15.19'
     dependencies:
     - name: icu
     - name: msys2
@@ -60684,10 +60756,10 @@ packages:
     - name: with_openssl
       default: 'false'
     artifacts:
-    - url: https://ftp.postgresql.org/pub/source/v15.18/postgresql-15.18.tar.bz2
+    - url: https://ftp.postgresql.org/pub/source/v15.19/postgresql-15.19.tar.bz2
       checksums:
-      - sha256:11df0df97fe3ea4ba9a791faaf39cee1d2fe571e78885b5b55d8517d27c323b4
-  - version: '16.14'
+      - sha256:e1a64a87a46b825b88c082e4518161a47aab53c45694964f8ba1df28f7859f89
+  - version: '16.15'
     dependencies:
     - name: icu
     - name: msys2
@@ -60706,9 +60778,9 @@ packages:
     - name: with_openssl
       default: 'false'
     artifacts:
-    - url: https://ftp.postgresql.org/pub/source/v16.14/postgresql-16.14.tar.bz2
+    - url: https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.bz2
       checksums:
-      - sha256:f6d077142737920858ce958ccdb75c6ee137a63b5b0853c70693d401ac7e3471
+      - sha256:c1575341fa7bd40f5274ea465b34390f4dc64cdd0770af327005caaeb9f6b7ed
   - version: '17.11'
     dependencies:
     - name: bison
@@ -75315,112 +75387,26 @@ packages:
   - metal
   - moltenvk
   - vulkan
-  package_type: library
+  package_type: shared-library
   dependencies:
   - cereal
+  - cmake
   options:
-  - fPIC
-  - hide_vulkan_symbols
-  - shared
   - tools
-  - with_spirv_tools
   default_options:
-    fPIC: 'true'
-    hide_vulkan_symbols: 'false'
-    shared: 'true'
     tools: 'true'
-    with_spirv_tools: 'true'
   versions:
-  - version: 1.1.11
+  - version: 1.4.2
     dependencies:
     - name: cereal
+    - name: cmake
     features:
-    - name: fPIC
-      default: 'true'
-    - name: hide_vulkan_symbols
-      default: 'false'
-    - name: shared
-      default: 'true'
     - name: tools
       default: 'true'
-    - name: with_spirv_tools
-      default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.1.11.tar.gz
+    - url: https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.4.2.tar.gz
       checksums:
-      - sha256:938ea0ba13c6538b0ee505ab391a3020f206ab9d29c869f20dd19318a4ee8997
-  - version: 1.2.0
-    dependencies:
-    - name: cereal
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: hide_vulkan_symbols
-      default: 'false'
-    - name: shared
-      default: 'true'
-    - name: tools
-      default: 'true'
-    - name: with_spirv_tools
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.2.0.tar.gz
-      checksums:
-      - sha256:6e7af2dad0530b2b404480dbe437ca4670c6615cc2ec6cf6a20ed04d9d75e0bd
-  - version: 1.2.1
-    dependencies:
-    - name: cereal
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: hide_vulkan_symbols
-      default: 'false'
-    - name: shared
-      default: 'true'
-    - name: tools
-      default: 'true'
-    - name: with_spirv_tools
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.2.1.tar.gz
-      checksums:
-      - sha256:4742df8f35473c5a737f2b120ae06aa6b9e8a7a3753b88932e501b06b1d17ea8
-  - version: 1.2.2
-    dependencies:
-    - name: cereal
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: hide_vulkan_symbols
-      default: 'false'
-    - name: shared
-      default: 'true'
-    - name: tools
-      default: 'true'
-    - name: with_spirv_tools
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.2.2.tar.gz
-      checksums:
-      - sha256:8065a10c2d70b561f48475dedb118e643176527b162d6e439fa127270c2a07dd
-  - version: 1.3.0
-    dependencies:
-    - name: cereal
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: hide_vulkan_symbols
-      default: 'false'
-    - name: shared
-      default: 'true'
-    - name: tools
-      default: 'true'
-    - name: with_spirv_tools
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/MoltenVK/archive/refs/tags/v1.3.0.tar.gz
-      checksums:
-      - sha256:9476033d49ef02776ebab288fffae3e28fd627a3e29b7ae5975a1e1c785bf912
+      - sha256:6864db532f1dbbdb621a8d0ec13f24edae318fd9269dd3dd0cdff791334bb1cb
   recipe_path: recipes/moltenvk/config.yml
   native_url: https://conan.io/center/recipes/moltenvk
 - id: conan:mongo-c-driver
@@ -75469,7 +75455,7 @@ packages:
     with_zlib: 'true'
     with_zstd: 'true'
   versions:
-  - version: 1.24.3
+  - version: 1.30.11
     dependencies:
     - name: cyrus-sasl
     - name: icu
@@ -75499,10 +75485,10 @@ packages:
     - name: with_zstd
       default: 'true'
     artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/1.24.3/mongo-c-driver-1.24.3.tar.gz
+    - url: https://github.com/mongodb/mongo-c-driver/releases/download/1.30.11/mongo-c-driver-1.30.11.tar.gz
       checksums:
-      - sha256:cc0ad1006447ded21bbefecf57d6fef61afe6f0d56a4e28da73805d50fdb81b5
-  - version: 1.26.2
+      - sha256:85765da33342c6ecd018ea9fccc587871c0f7278e4ade4a8a51812867149ee28
+  - version: 2.5.4
     dependencies:
     - name: cyrus-sasl
     - name: icu
@@ -75532,273 +75518,9 @@ packages:
     - name: with_zstd
       default: 'true'
     artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.26.2.tar.gz
+    - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.5.4/mongo-c-driver-2.5.4.tar.gz
       checksums:
-      - sha256:7084c488a758bf226cc0b3d500e7e001f0e2e37391cbeecd341050a9a899857d
-  - version: 1.27.6
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.27.6.tar.gz
-      checksums:
-      - sha256:7dee166dd106e3074582dd107f62815aa29311520149cda52efb69590b2cae7a
-  - version: 1.28.1
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.28.1.tar.gz
-      checksums:
-      - sha256:249fd66d8d12aac2aec7dea1456e1bf24908c87971016c391a1a82a636029a87
-  - version: 1.29.0
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/1.29.0/mongo-c-driver-1.29.0.tar.gz
-      checksums:
-      - sha256:e3dbe86e1f40e100344c48a4c0e39d2da360d2b12a54f16031fa8f90ff16fe5e
-  - version: 1.29.1
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/1.29.1/mongo-c-driver-1.29.1.tar.gz
-      checksums:
-      - sha256:64382a775353e67c510450c83d72b72e6747ba18256dd1d313deeef7db073b4f
-  - version: 1.29.2
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/1.29.2/mongo-c-driver-1.29.2.tar.gz
-      checksums:
-      - sha256:b5c33912c365e108d1fb1a03586364bbadc90e568e5719b290e15031c6e5ad90
-  - version: 1.30.6
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/1.30.6/mongo-c-driver-1.30.6.tar.gz
-      checksums:
-      - sha256:831ddb54d1cd2ae080548ff3febdbc5a68a4938ef932e442269bf6b11af871b8
-  - version: 2.2.0
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.2.0/mongo-c-driver-2.2.0.tar.gz
-      checksums:
-      - sha256:6117f90a5f0ff0a37cdf01710344925649e1432460b905cd1570d95a94a7ff10
-  - version: 2.2.1
-    dependencies:
-    - name: cyrus-sasl
-    - name: icu
-    - name: libressl
-    - name: openssl
-    - name: pkgconf
-    - name: snappy
-    - name: zlib
-    - name: zstd
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: srv
-      default: 'true'
-    - name: with_icu
-      default: 'true'
-    - name: with_sasl
-      default: 'false'
-    - name: with_snappy
-      default: 'true'
-    - name: with_ssl
-      default: openssl
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.2.1/mongo-c-driver-2.2.1.tar.gz
-      checksums:
-      - sha256:bc56f9acd91454eca5121e030fc1bb236283a94f4522b749beeb55e5e30343fb
+      - sha256:9ddca33cfad97af34f264895f0e9c687d851f5e12f951ecb5794f95e9f5c5fb3
   recipe_path: recipes/mongo-c-driver/config.yml
   native_url: https://conan.io/center/recipes/mongo-c-driver
 - id: conan:mongo-cxx-driver
@@ -75848,7 +75570,7 @@ packages:
     - url: https://github.com/mongodb/mongo-cxx-driver/releases/download/r3.11.0/mongo-cxx-driver-r3.11.0.tar.gz
       checksums:
       - sha256:cb4263229d769ec44aa66563e2dd2d70c6384c85d93840a52fe26b15436c54f1
-  - version: 4.0.0
+  - version: 4.6.0
     dependencies:
     - name: boost
     - name: mongo-c-driver
@@ -75862,9 +75584,9 @@ packages:
     - name: with_ssl
       default: 'true'
     artifacts:
-    - url: https://github.com/mongodb/mongo-cxx-driver/releases/download/r4.0.0/mongo-cxx-driver-r4.0.0.tar.gz
+    - url: https://github.com/mongodb/mongo-cxx-driver/releases/download/r4.6.0/mongo-cxx-driver-r4.6.0.tar.gz
       checksums:
-      - sha256:d8a254bde203d0fe2df14243ef2c3bab7f12381dc9206d0c1b450f6ae02da7cf
+      - sha256:eac122db0789fc82b0ba93f92a1503d74c502bfe4728345eaa8650e50a79da11
   recipe_path: recipes/mongo-cxx-driver/config.yml
   native_url: https://conan.io/center/recipes/mongo-cxx-driver
 - id: conan:morton-nd
@@ -89252,14 +88974,18 @@ packages:
   - flatbuffers
   - glad
   - glfw
-  - kiss-icp
   - libcurl
   - libpcap
   - libpng
   - libtins
+  - libzip
+  - onetbb
+  - openssl
   - optional-lite
   - sophus
+  - tsl-robin-map
   - zlib
+  - zstd
   options:
   - build_mapping
   - build_osf
@@ -89279,7 +89005,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.14.0
+  - version: 1.0.1
     dependencies:
     - name: ceres-solver
     - name: cmake
@@ -89287,14 +89013,18 @@ packages:
     - name: flatbuffers
     - name: glad
     - name: glfw
-    - name: kiss-icp
     - name: libcurl
     - name: libpcap
     - name: libpng
     - name: libtins
+    - name: libzip
+    - name: onetbb
+    - name: openssl
     - name: optional-lite
     - name: sophus
+    - name: tsl-robin-map
     - name: zlib
+    - name: zstd
     features:
     - name: build_mapping
       default: 'true'
@@ -89313,46 +89043,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/ouster-lidar/ouster-sdk/archive/refs/tags/release-0.14.0.tar.gz
+    - url: https://github.com/ouster-lidar/ouster-sdk/archive/refs/tags/v1.0.1.tar.gz
       checksums:
-      - sha256:dc5d24ba78f13facc0392dc159700474ffd0df34ad019b53632a497de9b56d51
-  - version: 0.15.0
-    dependencies:
-    - name: ceres-solver
-    - name: cmake
-    - name: eigen
-    - name: flatbuffers
-    - name: glad
-    - name: glfw
-    - name: kiss-icp
-    - name: libcurl
-    - name: libpcap
-    - name: libpng
-    - name: libtins
-    - name: optional-lite
-    - name: sophus
-    - name: zlib
-    features:
-    - name: build_mapping
-      default: 'true'
-    - name: build_osf
-      default: 'true'
-    - name: build_pcap
-      default: 'true'
-    - name: build_sensor
-      default: 'true'
-    - name: build_viz
-      default: 'false'
-    - name: eigen_max_align_bytes
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/ouster-lidar/ouster-sdk/archive/refs/tags/v0.15.0.tar.gz
-      checksums:
-      - sha256:852ab984781d49163faa2e1f333f4c6cb20637199b2fe6de1f9e76b77856c276
+      - sha256:b40b5a54f551d80d2027e7b3c5662cf2e3ec9e5668e2d5a31c7510aae13b97b3
   recipe_path: recipes/ouster_sdk/config.yml
   native_url: https://conan.io/center/recipes/ouster_sdk
 - id: conan:out_ptr
@@ -91162,6 +90855,36 @@ packages:
     - url: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2
       checksums:
       - sha256:47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7
+  - version: '10.48'
+    dependencies:
+    - name: bzip2
+    - name: zlib
+    features:
+    - name: build_pcre2_16
+      default: 'true'
+    - name: build_pcre2_32
+      default: 'true'
+    - name: build_pcre2_8
+      default: 'true'
+    - name: build_pcre2grep
+    - name: fPIC
+      default: 'true'
+    - name: grep_support_callout_fork
+      default: 'true'
+    - name: link_size
+      default: '2'
+    - name: shared
+      default: 'false'
+    - name: support_jit
+      default: 'false'
+    - name: with_bzip2
+      default: 'true'
+    - name: with_zlib
+      default: 'true'
+    artifacts:
+    - url: https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.48/pcre2-10.48.tar.bz2
+      checksums:
+      - sha256:b6c68fdf6f3ac31388b50aa89ff0fc49c00c987c16e7b5146491d12003f2c8ed
   recipe_path: recipes/pcre2/config.yml
   native_url: https://conan.io/center/recipes/pcre2
 - id: conan:pdal
@@ -102658,6 +102381,24 @@ packages:
     - url: https://github.com/scipopt/scip/releases/download/v10.0.3/scip-10.0.3.tgz
       checksums:
       - sha256:7fe90d216e1481b430eaed2bfc25c0349ffd73bfad6201bd96fa082dc54c1438
+  - version: 10.1.0
+    dependencies:
+    - name: bliss
+    - name: gmp
+    - name: zlib
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_gmp
+      default: 'true'
+    - name: with_sym
+    - name: with_tpi
+    artifacts:
+    - url: https://github.com/scipopt/scip/releases/download/v10.1.0/scip-10.1.0.tgz
+      checksums:
+      - sha256:fe8cfd15a03970ef45156ed56c6a4382485bd095e0e99cf7d7db87cdf8d47304
   recipe_path: recipes/scip/config.yml
   native_url: https://conan.io/center/recipes/scip
 - id: conan:scippp
@@ -104691,7 +104432,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: '2025.3'
+  - version: '2026.4'
     dependencies:
     - name: cmake
     features:
@@ -104700,9 +104441,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/google/shaderc/archive/refs/tags/v2025.3.tar.gz
+    - url: https://github.com/google/shaderc/archive/refs/tags/v2026.4.tar.gz
       checksums:
-      - sha256:a8e4a25e5c2686fd36981e527ed05e451fcfc226bddf350f4e76181371190937
+      - sha256:f06ce5bcca94e5df7f34e115743597d0ad2e13c5fe9213c67dc8c76031241947
   recipe_path: recipes/shaderc/config.yml
   native_url: https://conan.io/center/recipes/shaderc
 - id: conan:shapelib
@@ -106542,6 +106283,24 @@ packages:
     - url: https://github.com/scipopt/soplex/archive/refs/tags/v8.0.3.tar.gz
       checksums:
       - sha256:224eca4c49a2509a2a893a1d4b63e510e2ddb4ff374699cc6afc36f12af4e621
+  - version: 8.1.0
+    dependencies:
+    - name: boost
+    - name: gmp
+    - name: zlib
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_boost
+      default: 'true'
+    - name: with_gmp
+      default: 'true'
+    artifacts:
+    - url: https://github.com/scipopt/soplex/archive/refs/tags/v8.1.0.tar.gz
+      checksums:
+      - sha256:5aad34f158d251549e2aadbfbef706629f38652fcd027c12b0a8b2d3c8ff0719
   recipe_path: recipes/soplex/config.yml
   native_url: https://conan.io/center/recipes/soplex
 - id: conan:soundtouch
@@ -107244,7 +107003,7 @@ packages:
     shared: 'false'
     util: 'true'
   versions:
-  - version: 1.3.239.0
+  - version: 1.4.357.0
     features:
     - name: build_executable
       default: 'true'
@@ -107271,309 +107030,9 @@ packages:
     - name: util
       default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/sdk-1.3.239.0.tar.gz
+    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:a1695022880e7ef3c2d407647f79876045dc2a3ed012753adc71ead5cc5178ba
-  - version: 1.3.243.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/sdk-1.3.243.0.tar.gz
-      checksums:
-      - sha256:549fff809de2b3484bcc5d710ccd76ca29cbd764dd304c3687252e2f3d034e06
-  - version: 1.3.246.1
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/sdk-1.3.246.1.tar.gz
-      checksums:
-      - sha256:44d1aef7e6e247b4b7ec6a1ef0bbb43cc9b681ee689393db90ac815d240808b1
-  - version: 1.3.250.1
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/sdk-1.3.250.1.tar.gz
-      checksums:
-      - sha256:5b7402d7078eeffca0926875b1dcd0f5dd78791a30529de7c8456686f6fc52ce
-  - version: 1.3.261.1
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/sdk-1.3.261.1.tar.gz
-      checksums:
-      - sha256:a5cf99ed62e93800232e50b782890321d4d7e053dcaa71bd8efc0c48a00bd1dd
-  - version: 1.3.268.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.3.268.0.tar.gz
-      checksums:
-      - sha256:dd656a51ba4c229c1a0bb220b7470723e8fd4b68abb7f2cf2ca4027df824f4a0
-  - version: 1.3.296.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.3.296.0.tar.gz
-      checksums:
-      - sha256:4f7f9a8a643e6694f155712016b9b572c13a9444e65b3f43b27bb464c0ab76e0
-  - version: 1.4.309.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.4.309.0.tar.gz
-      checksums:
-      - sha256:cf4f12a767d63f63024e61750e372ffdc95567513b99ed9be6f21f474b328ddd
-  - version: 1.4.313.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-      checksums:
-      - sha256:7d1de24918bea9897753f7561d4d154f68ec89c36bb70c13598222b8039d4212
-  - version: 1.4.321.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.4.321.0.tar.gz
-      checksums:
-      - sha256:6037555620c27105bf1d4068a6eeb4b0d7953630d556a1ca9799dfe06fd2fb68
-  - version: 1.4.350.0
-    features:
-    - name: build_executable
-      default: 'true'
-    - name: c_api
-      default: 'true'
-    - name: cpp
-      default: 'true'
-    - name: exceptions
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: glsl
-      default: 'true'
-    - name: hlsl
-      default: 'true'
-    - name: msl
-      default: 'true'
-    - name: namespace
-      default: spirv_cross
-    - name: reflect
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: util
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Cross/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
-      checksums:
-      - sha256:fbf9bee521545557357679173d39787a954bd8187e4b2fcaa09044c70201b434
+      - sha256:97c910326afdd44d794ce8561326fa675fd1958b27142f03295403044d639639
   recipe_path: recipes/spirv-cross/config.yml
   native_url: https://conan.io/center/recipes/spirv-cross
 - id: conan:spirv-headers
@@ -107593,46 +107052,16 @@ packages:
   - vulkan
   package_type: header-library
   versions:
-  - version: 1.3.239.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/sdk-1.3.239.0.tar.gz
-      checksums:
-      - sha256:fdaf6670e311cd1c08ae90bf813e89dd31630205bc60030ffd25fb0af39b51fe
-  - version: 1.3.243.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/sdk-1.3.243.0.tar.gz
-      checksums:
-      - sha256:16927b1868e7891377d059cd549484e4158912439cf77451ae7e01e2a3bcd28b
-  - version: 1.3.261.1
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/sdk-1.3.261.1.tar.gz
-      checksums:
-      - sha256:32b4c6ae6a2fa9b56c2c17233c8056da47e331f76e117729925825ea3e77a739
-  - version: 1.3.268.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.3.268.0.tar.gz
-      checksums:
-      - sha256:1022379e5b920ae21ccfb5cb41e07b1c59352a18c3d3fdcbf38d6ae7733384d4
-  - version: 1.3.296.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.3.296.0.tar.gz
-      checksums:
-      - sha256:1423d58a1171611d5aba2bf6f8c69c72ef9c38a0aca12c3493e4fda64c9b2dc6
-  - version: 1.4.309.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.309.0.tar.gz
-      checksums:
-      - sha256:a96f8b4f2dfb18f7432e5c523e220ab0075372a9509e0c25fbff21c76af0de7c
   - version: 1.4.313.0
     artifacts:
     - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
       checksums:
       - sha256:f68be549d74afb61600a1e3a7d1da1e6b7437758c8e77d664909f88f302c5ac1
-  - version: 1.4.350.0
+  - version: 1.4.357.0
     artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+    - url: https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:9905d9341f20388adb852c77dd982f2c4d539fd68e6c1f1bcebf034715f2d1d5
+      - sha256:4d703067a7e06331ccb37bdfed3f9b7879cc61969a2689ae95c95db34a47ff07
   recipe_path: recipes/spirv-headers/config.yml
   native_url: https://conan.io/center/recipes/spirv-headers
 - id: conan:spirv-reflect
@@ -107658,26 +107087,16 @@ packages:
   default_options:
     fPIC: 'true'
   versions:
-  - version: 1.4.313.0
+  - version: 1.4.357.0
     dependencies:
     - name: cmake
     features:
     - name: fPIC
       default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
+    - url: https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:a72129e23ffdf98978b0e60fcf24a14039503383cb077462677a1c59ffd168f0
-  - version: 1.4.350.0
-    dependencies:
-    - name: cmake
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Reflect/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
-      checksums:
-      - sha256:c81ea49449d77189574ce0ff1374350533c283f41a9dd1b59f351c26961302b9
+      - sha256:c865bd55459c5b8020a6ac962e462fc33eb4bf2dae8bf7c474357c58ce22a95d
   recipe_path: recipes/spirv-reflect/config.yml
   native_url: https://conan.io/center/recipes/spirv-reflect
 - id: conan:spirv-tools
@@ -107708,48 +107127,6 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.3.236.0
-    dependencies:
-    - name: cmake
-    features:
-    - name: build_executables
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/sdk-1.3.236.0.tar.gz
-      checksums:
-      - sha256:6789c782a8ba8fa127c3d579f9362f0cdde7a9ccc2e8513cdf217bba579dfda9
-  - version: 1.3.239.0
-    dependencies:
-    - name: cmake
-    features:
-    - name: build_executables
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/sdk-1.3.239.0.tar.gz
-      checksums:
-      - sha256:327b2dba4515646eee28c1a5fe1332891e81c8b6ff289363f52877f3e67c2d81
-  - version: 1.3.243.0
-    dependencies:
-    - name: cmake
-    features:
-    - name: build_executables
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/sdk-1.3.243.0.tar.gz
-      checksums:
-      - sha256:684a29e37bfdc6e151fe1d3ec4b87c5396c17a439de545d81ea05d4ee6fbc86e
   - version: 1.4.313.0
     dependencies:
     - name: cmake
@@ -107764,7 +107141,7 @@ packages:
     - url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
       checksums:
       - sha256:6b60f723345ceed5291cceebbcfacf7fea9361a69332261fa08ae57e2a562005
-  - version: 1.4.350.0
+  - version: 1.4.357.0
     dependencies:
     - name: cmake
     features:
@@ -107775,9 +107152,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+    - url: https://github.com/KhronosGroup/SPIRV-Tools/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:446b288fe76d3f31bbf9a405d62b97020ac0f135edb0ed5dbdf1136c488138f5
+      - sha256:d31e7109b6ef3559067e53e520870eafed7c9534d00db9728814b6df03fa4a5e
   recipe_path: recipes/spirv-tools/config.yml
   native_url: https://conan.io/center/recipes/spirv-tools
 - id: conan:spix
@@ -117619,21 +116996,11 @@ packages:
     - url: https://github.com/nemtrif/utfcpp/archive/v4.0.5.tar.gz
       checksums:
       - sha256:ffc668a310e77607d393f3c18b32715f223da1eac4c4d6e0579a11df8e6b59cf
-  - version: 4.0.9
+  - version: 4.2.1
     artifacts:
-    - url: https://github.com/nemtrif/utfcpp/archive/v4.0.9.tar.gz
+    - url: https://github.com/nemtrif/utfcpp/archive/v4.2.1.tar.gz
       checksums:
-      - sha256:397a9a2a6ed5238f854f490b0177b840abc6b62571ec3e07baa0bb94d3f14d5a
-  - version: 4.1.1
-    artifacts:
-    - url: https://github.com/nemtrif/utfcpp/archive/v4.1.1.tar.gz
-      checksums:
-      - sha256:1ca68016f0abc24172998e39ce0d8f8e2b7a26f7579a0ff85d4e1b9a7aea56f8
-  - version: 4.2.0
-    artifacts:
-    - url: https://github.com/nemtrif/utfcpp/archive/v4.2.0.tar.gz
-      checksums:
-      - sha256:54a8e96ea835a7359e8e53d03e30e9833d51350cc4615ff53f8449ef19ee46ab
+      - sha256:6d6a5493a111884cc085ee31babfe6d9960c8fb08fc80a64852eaeea8323dbc1
   recipe_path: recipes/utfcpp/config.yml
   native_url: https://conan.io/center/recipes/utfcpp
 - id: conan:uthash
@@ -117968,6 +117335,11 @@ packages:
     - url: https://github.com/martinmoene/variant-lite/archive/v2.0.0.tar.gz
       checksums:
       - sha256:70c1509e24d03abfd22d2e702ab398238e69658b7b2890ce1d7e9731d6b5a7cb
+  - version: 3.0.0
+    artifacts:
+    - url: https://github.com/martinmoene/variant-lite/archive/v3.0.0.tar.gz
+      checksums:
+      - sha256:bd596550369f33ef9455566822f5a4d52852a63a33d3d70ac1fbb529b78abc7b
   recipe_path: recipes/variant-lite/config.yml
   native_url: https://conan.io/center/recipes/variant-lite
 - id: conan:vc
@@ -118756,70 +118128,14 @@ packages:
   default_options:
     fPIC: 'true'
   versions:
-  - version: 1.3.239.0
+  - version: 1.4.357.0
     features:
     - name: fPIC
       default: 'true'
     artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/sdk-1.3.239.0.tar.gz
+    - url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:b628ae7d4e554c20763ac34e1fd18b87725c0c346e2a7106fa23701877bbac65
-  - version: 1.3.243.0
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/sdk-1.3.243.0.tar.gz
-      checksums:
-      - sha256:5cd92d592227d2d4d9af1b66662d4f92f84bbf431572c43889689e15b6da1dca
-  - version: 1.3.250.0
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/sdk-1.3.250.0.tar.gz
-      checksums:
-      - sha256:5b6b6e8abcebe5a3e35ee7d1115d12dc976413da4f5dddf8b387e7769f92fc50
-  - version: 1.3.261.1
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/sdk-1.3.261.1.tar.gz
-      checksums:
-      - sha256:052866c6cbff9efdf1e73e71c1d65070c36863730c95a4e93833500b4d894d69
-  - version: 1.3.268.0
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.3.268.0.tar.gz
-      checksums:
-      - sha256:f1d30fac1cdc17a8fdc8c69f371663547f92db99cfd612962190bb1e2c8ce74d
-  - version: 1.3.296.0
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.3.296.0.tar.gz
-      checksums:
-      - sha256:8ffd0e81e29688f4abaa39e598937160b098228f37503903b10d481d4862ab85
-  - version: 1.4.313.0
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-      checksums:
-      - sha256:d86bcf1aff499f41a3e445b55df5e393a5ce49b1bda689eb7335b0a0a54a3c0b
-  - version: 1.4.350.0
-    features:
-    - name: fPIC
-      default: 'true'
-    artifacts:
-    - url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
-      checksums:
-      - sha256:a04f26f76e9a4f9acf936bd2c159f5c4c8348f8ebaf118ff72ba6a9637ad3e80
+      - sha256:6400c7b23e24d17e4f04bac49b55b06c4e87677d33398e90344743ec73560ca6
   recipe_path: recipes/volk/config.yml
   native_url: https://conan.io/center/recipes/volk
 - id: conan:vorbis
@@ -119038,46 +118354,26 @@ packages:
     - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/sdk-1.3.243.0.tar.gz
       checksums:
       - sha256:29ddb2ef931f5fb0cabd1a78398f9c4da44d37f8c8a1e110f834f4c260c9d548
-  - version: 1.3.250.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/sdk-1.3.250.0.tar.gz
-      checksums:
-      - sha256:0da601a81b868bc543ec09ab7e514d1b059774993dfce81df7150f432c8bf33a
-  - version: 1.3.261.1
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/sdk-1.3.261.1.tar.gz
-      checksums:
-      - sha256:7a25ebdb6325e626dc5d33bc937b289ccce7ddb7b0ac1a1b1d5d7ff33b6715d3
   - version: 1.3.268.0
     artifacts:
     - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.3.268.0.tar.gz
       checksums:
       - sha256:94993cbe2b1a604c0d5d9ea37a767e1aba4d771d2bfd4ddceefd66243095164f
-  - version: 1.3.290.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.3.290.0.tar.gz
-      checksums:
-      - sha256:5b186e1492d97c44102fe858fb9f222b55524a8b6da940a8795c9e326ae6d722
   - version: 1.3.296.0
     artifacts:
     - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.3.296.0.tar.gz
       checksums:
       - sha256:1e872a0be3890784bbe68dcd89b7e017fed77ba95820841848718c98bda6dc33
-  - version: 1.4.309.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.4.309.0.tar.gz
-      checksums:
-      - sha256:2bc1b4127950badc80212abf1edfa5c3b5032f3425edf37255863ba7592c1969
-  - version: 1.4.313.0
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz
-      checksums:
-      - sha256:20743c99a96c07290f24377360e7a12bdd2c465ba202e0c7ef2ec25d446cf61d
   - version: 1.4.350.0
     artifacts:
     - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
       checksums:
       - sha256:70270d10bf2c1e074a06ee37a50b75d332993d1b80a1d9526eeed2da6d82ed22
+  - version: 1.4.357.0
+    artifacts:
+    - url: https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
+      checksums:
+      - sha256:e87dce08116151f6b6d7de6b6faf41498e87e6cf848ff16fa3bd5402190ad4a3
   recipe_path: recipes/vulkan-headers/config.yml
   native_url: https://conan.io/center/recipes/vulkan-headers
 - id: conan:vulkan-loader
@@ -119151,26 +118447,6 @@ packages:
     - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/sdk-1.3.243.0.tar.gz
       checksums:
       - sha256:89a09547be30491ee0a11cd7c883e78a637fb761280d6c6c2174f37188527dc3
-  - version: 1.3.250.0
-    dependencies:
-    - name: cmake
-    - name: jwasm
-    - name: pkgconf
-    - name: wayland
-    - name: xorg
-    features:
-    - name: with_wsi_directfb
-      default: 'false'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/sdk-1.3.250.0.tar.gz
-      checksums:
-      - sha256:17f8683fd8320d5dfebdb22879f26f82c014d320a6a0622118cd298887626295
   - version: 1.3.268.0
     dependencies:
     - name: cmake
@@ -119191,7 +118467,7 @@ packages:
     - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/vulkan-sdk-1.3.268.0.tar.gz
       checksums:
       - sha256:404fa621f1ab2731bcc68bcbff64d8c6de322faad2d87f9198641bd37255fd39
-  - version: 1.3.290.0
+  - version: 1.4.357.0
     dependencies:
     - name: cmake
     - name: jwasm
@@ -119208,69 +118484,9 @@ packages:
     - name: with_wsi_xlib
       default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v1.3.290.tar.gz
+    - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:a1f0d80c4ee448d4fa37d1d4a4c4cf1d6d0f5873d3ca6dffe2a9498e6e654142
-  - version: 1.4.309.0
-    dependencies:
-    - name: cmake
-    - name: jwasm
-    - name: pkgconf
-    - name: wayland
-    - name: xorg
-    features:
-    - name: with_wsi_directfb
-      default: 'false'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v1.4.309.tar.gz
-      checksums:
-      - sha256:3e4085a55f6e356fe9dbd47e6dc762be732790add3532943da824b3e8c062827
-  - version: 1.4.313.0
-    dependencies:
-    - name: cmake
-    - name: jwasm
-    - name: pkgconf
-    - name: wayland
-    - name: xorg
-    features:
-    - name: with_wsi_directfb
-      default: 'false'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.313.0.tar.gz
-      checksums:
-      - sha256:c736fa79d974c3513f5573b74249ed002aab59f1d15d1c13fc1d00644830869a
-  - version: 1.4.350.0
-    dependencies:
-    - name: cmake
-    - name: jwasm
-    - name: pkgconf
-    - name: wayland
-    - name: xorg
-    features:
-    - name: with_wsi_directfb
-      default: 'false'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.4.350.0.tar.gz
-      checksums:
-      - sha256:91f88fc43abb36821a568c7fbb3f815e9baf946d5fe187928df279708d45e509
+      - sha256:54f2537df22313768da0317dda2abdaaab7711b4081c48c869a79db343d0ae70
   recipe_path: recipes/vulkan-loader/config.yml
   native_url: https://conan.io/center/recipes/vulkan-loader
 - id: conan:vulkan-memory-allocator
@@ -119345,16 +118561,16 @@ packages:
   default_options:
     fPIC: 'true'
   versions:
-  - version: 1.4.350.0
+  - version: 1.4.357.0
     dependencies:
     - name: cmake
     features:
     - name: fPIC
       default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+    - url: https://github.com/KhronosGroup/Vulkan-Utility-Libraries/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:19a215e9469df0749d7c1b389fc667a3f7e160f0b6da71000fadc30140494563
+      - sha256:6d450436aea4a821d7b0d8bb914c2e375088d98eeeaad0fbf059fdb06ac937f4
   recipe_path: recipes/vulkan-utility-libraries/config.yml
   native_url: https://conan.io/center/recipes/vulkan-utility-libraries
 - id: conan:vulkan-validationlayers
@@ -119376,157 +118592,15 @@ packages:
   - wayland
   - xorg
   options:
-  - fPIC
   - with_wsi_wayland
   - with_wsi_xcb
   - with_wsi_xlib
   default_options:
-    fPIC: 'true'
     with_wsi_wayland: 'true'
     with_wsi_xcb: 'true'
     with_wsi_xlib: 'true'
   versions:
-  - version: 1.3.211.0
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.211.0.tar.gz
-      checksums:
-      - sha256:927c1cb98c81fe8a1a529cf2d977d701dcda49c495a19583dc00e178b6757203
-  - version: 1.3.216.0
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.216.0.tar.gz
-      checksums:
-      - sha256:593d9b818d536490b70322a01b306ec165df5e7a70d770d05014fbd0b325fa15
-  - version: 1.3.224.1
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.224.1.tar.gz
-      checksums:
-      - sha256:49c00e0119e3bc11e13c0c740e57c76b582b14f754f3779b85508c4d90d9df85
-  - version: 1.3.231.1
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.231.1.tar.gz
-      checksums:
-      - sha256:ea40af0f499e7e97a86ee54410c5c78e7f7bac40f65ae09a1549773b6501bf4d
-  - version: 1.3.236.0
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.236.0.tar.gz
-      checksums:
-      - sha256:68f2cf70b1960f85e931ef56935e6ceda1beeb214f8fa319e6b95128b02b485a
-  - version: 1.3.239.0
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.239.0.tar.gz
-      checksums:
-      - sha256:7aa7fb46e25e5ef0144d29c92122b631dc7c7c6804a6339f195b368ad53328e4
-  - version: 1.3.243.0
-    dependencies:
-    - name: cmake
-    - name: pkgconf
-    - name: robin-hood-hashing
-    - name: wayland
-    - name: xorg
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: with_wsi_wayland
-      default: 'true'
-    - name: with_wsi_xcb
-      default: 'true'
-    - name: with_wsi_xlib
-      default: 'true'
-    artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/sdk-1.3.243.0.tar.gz
-      checksums:
-      - sha256:fd9f6c24027de177b2fb0eb6385542d62f4c21665a8d4cc7e1c118688e0836de
-  - version: 1.4.350.0
+  - version: 1.4.357.0
     dependencies:
     - name: cmake
     - name: pkgconf
@@ -119541,9 +118615,9 @@ packages:
     - name: with_wsi_xlib
       default: 'true'
     artifacts:
-    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.350.0.tar.gz
+    - url: https://github.com/KhronosGroup/Vulkan-ValidationLayers/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
       checksums:
-      - sha256:4905ae2d2424cccdd88554b78f6f53e3469da17433c3923d049a167ea674f50e
+      - sha256:73180b11992a3554e97ebc18e6bf2b45ff9790ded9d87fc526c7bab865d1303f
   recipe_path: recipes/vulkan-validationlayers/config.yml
   native_url: https://conan.io/center/recipes/vulkan-validationlayers
 - id: conan:vvenc
@@ -125294,7 +124368,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.13.3
+  - version: 0.14.1
     dependencies:
     - name: cmake
     - name: rapidhash
@@ -125304,9 +124378,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/hellobertrand/zxc/archive/refs/tags/v0.13.3.tar.gz
+    - url: https://github.com/hellobertrand/zxc/archive/refs/tags/v0.14.1.tar.gz
       checksums:
-      - sha256:46ff1c9f8c78c19cd891abbbf15b80025f6bbcedd515ddb6ce6c8d91175b5653
+      - sha256:53744db7583231b03dc012b18880ea74b3a7060b58d411eed3694c9f521ceda3
   recipe_path: recipes/zxc/config.yml
   native_url: https://conan.io/center/recipes/zxc
 - id: conan:zxing-cpp

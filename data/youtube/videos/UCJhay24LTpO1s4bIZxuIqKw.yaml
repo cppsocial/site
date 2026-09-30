@@ -1,5 +1,154 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: dr1kiPXIwcc
+  title: Postmodern Programming - Tony Van Eerd - ACCU 2026
+  url: https://www.youtube.com/watch?v=dr1kiPXIwcc
+  published: 2026-09-26 12:00:05+00:00
+  updated: 2026-09-28 08:18:10+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Postmodern Programming - Tony Van Eerd - ACCU on Sea 2026
+
+    ---
+
+
+    An unusual talk about programming, postmodernism, communication, functions, context, and who knows what else. With the lofty goal of fundamentally changing how you think while you code.
+
+
+    This is my most requested talk.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Tony Van Eerd
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/dr1kiPXIwcc/hqdefault.jpg
+- video_id: oVo-nRcm6BM
+  title: 'There Is No Optimal: Pareto Trade Offs in C++ — Compile-Time Search with Real Constraints'
+  url: https://www.youtube.com/watch?v=oVo-nRcm6BM
+  published: 2026-09-24 12:46:02+00:00
+  updated: 2026-09-25 22:31:18+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nThere Is No Optimal - Pareto Trade Offs in C++ — Compile-Time Search with Real Constraints - Andrew Drakeford - ACCU on Sea 2026\n---\n\nIn performance-critical C++, what does “optimal” mean? It is never a universal quantity. Game engines might need bit-exact determinism. In HPC, a solver may prioritise throughput, latency, or some combination of both. An embedded application might be more constrained by memory than by power consumption. Yet developers are often forced to hand-tune low-level code—or accept generic libraries that can’t reflect their real constraints.\n\nWhat if you could define what “best” means for your context—and have a compile-time solver choose the best legal implementation for that definition? This talk presents a practical, reusable methodology using only C++20/23. You’ll learn how to:\n\n- Declare what transformations are allowed (e.g., “reordering is permitted within a bounded numerical error”),\n\
+    - Encode your trade-offs as policies (e.g., “determinism first, then speed, under 64 KB”),\n- Ground decisions in measured profiles, not theoretical assumptions.\n\nWe will demonstrate by a progression through examples, how we can use the modern C++ machinery to represent and solve for this Pareto optimum: The examples are as follows:\n\n1. Variadic reduction: for calculating multiple statistics.\n2. Matrix chain multiplication: choose evaluation order to minimise work.\n3. Memory layout: To reduce cache misses, we reorder struct fields by access frequency, alignment, concurrency needs, and logical grouping—not simply by packing the largest elements first. We also consider necessary constraints.\n 4. Sparse matrix–vector multiplication: We select hybrid storage formats based on sparsity patterns and evaluation approaches based on hardware constraints.\n\nFor each example, we use a small code framework to expose the intent. We use it to define and constrain the search space. It uses compile-time\
+    \ exploration (via dynamic programming) to identify the best candidate and construct an appropriate execution plan. Since the decision is made during compilation, the resulting binary executes a plan where the only selected path has no runtime dispatch.\n\nWe will also discuss techniques for controlling build times and briefly sketch how C++26 reflection could reduce boilerplate (e.g., introspecting members) and how executors might extend this approach to scheduling.\n\nThis isn’t about automating away expertise. It’s about giving expert developers a way to encode their judgment—then letting the compiler do the tedious searching.\n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nAndrew Drakeford\n\nPhysics PhD who started out at BT Labs working with AI and acting as a design consultant for large scale systems in network management and billing. He has spent the last few decades designing and writing high performance quantitative libraries and applications in\
+    \ C++. He is interested in quant finance, machine learning, vectorisation, SIMD and HPC. He is a member of the UK C++ panel.\n\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program:\
+    \ https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i4.ytimg.com/vi/oVo-nRcm6BM/hqdefault.jpg
+- video_id: kdaw_l086q0
+  title: 16 Years Doing C++ Standardization Work - A Personal Retrospective - Nevin Liber - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=kdaw_l086q0
+  published: 2026-09-21 12:00:39+00:00
+  updated: 2026-09-23 03:40:53+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    16 Years Doing C++ Standardization Work - A Personal Retrospective - Nevin Liber - ACCU on Sea 2026
+
+    ---
+
+
+    I''ve been working on C++ standardization for over a decade and a half, and have been reflecting (pun intended) on what has been accomplished, increased participation, and why I keep doing it.
+
+
+    I''ll talk about my personal journey in how I got involved with C++, with C++ standardization, the lessons I learned (and am continuing to learn) both participating and chairing, getting proposals through the committee, where we are now, where I think it is heading, and how you can help.
+
+
+    Maybe I will convince some of you to attend a meeting to see for yourselves what we do, and perhaps even contribute to C++29 or beyond.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Nevin ":-)" Liber
+
+
+    Nevin “🙂” Liber is a Computer Scientist in the ALCF (Argonne Leadership Computing Facility) division of Argonne National Laboratory, where he works on Kokkos and Aurora. He also represents Argonne on the C++, C & SYCL Committees. For C++ he is the Admin Chair, Vice Chair of LEWGI/SG18 and Chair of the US Delegation.
+
+
+    Back when he started out working at Bell Labs over three decades ago, a friend of his called and asked “What do you know about C++? You folks invented it!” That was enough to get a relatively shy junior engineer to go find the local expert so he could go play with it, and the rest is history! He has worked in C++ across various industries and platforms (big data, low-latency, operating systems, embedded, telephony and now exascale computing, just to name a few). He has also been a C++ Committee member since 2010 and hosted both the C++ and C standards meetings in Chicago.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/kdaw_l086q0/hqdefault.jpg
 - video_id: NuJcFNbrdIg
   title: Demystifying C++ initializer_list - Design, Behavior, and Best Practices for C++ - ACCU on Sea 2026
   url: https://www.youtube.com/watch?v=NuJcFNbrdIg

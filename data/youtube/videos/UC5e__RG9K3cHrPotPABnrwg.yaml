@@ -1,5 +1,226 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: y0JW63JjkYw
+  title: Can C++ Become a Memory Safe Language? - Prabhu Missier - C++Now 2026
+  url: https://www.youtube.com/watch?v=y0JW63JjkYw
+  published: 2026-09-27 15:00:14+00:00
+  updated: 2026-09-27 15:00:16+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Can C++ Become a Memory Safe Language? - A Deep Dive Into Safety Profiles – a Game Changer for National Security Systems and Cybersecurity Applications - Prabhu Missier - C++Now 2026
+
+    ---
+
+
+    In June 2025 the NSA and CISA released a cybersecurity information sheet stressing the need to move to memory safe languages to reduce vulnerabilities in modern software development. This wasn''t the first and only advisory note and it seriously undermined the image of C++ and its use in developing critical applications which maintain national security or for that matter any critical system.
+
+
+    Memory safety is a key consideration while building systems impacting national security and C++ has always been grappling with memory safety.
+
+
+    The C++ core guidelines when enforced and static analysis when done can only mitigate risks to a certain extent but can''t close the gap provided by protections built into memory safe languages. Safety profiles are attempting to close this gap by aspiring to provide memory safety in C++.
+
+
+    Safety profiles are expected to become a part of the C++ standard with work in progress and will play a role in determining whether C++ stays relevant in the face of competition from memory safe languages.
+
+
+    Other approaches to achieve memory safety were considered by WG21.
+
+
+    In this talk the speaker will describe the concept of Safety profiles which is expected to stabilize in C++ 29 and also do a deep dive into the proposed implementation while also highlighting the costs and tradeoffs involved while building national security systems and cybersecurity software using C++ without Safety profiles.
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Prabhu Missier
+
+
+    Prabhu Missier has built safety critical real time applications in the Avionics, Automotive Electronics, Data management and Network Security domains using C++ while at Honeywell, IBM, BAE and other places. These days he works in the Defense sector.
+
+    He also runs a Software Development studio and apart from tinkering with Android and Arduino he loves trekking in Australia where he lives.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/y0JW63JjkYw/hqdefault.jpg
+- video_id: ntp7_oWz2E4
+  title: A Tour of Link-Time Operations and their Practical Applications - Vito Gamberini - C++Now 2026
+  url: https://www.youtube.com/watch?v=ntp7_oWz2E4
+  published: 2026-09-25 14:51:27+00:00
+  updated: 2026-09-26 22:42:14+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Leveraging the Linker - A Tour of Link-Time Operations and their Practical Applications - Vito Gamberini - C++Now 2026
+
+    ---
+
+
+    Embedded and kernel developers have long used a technique called "linker sets" to put the linker to work, collecting statically initialized elements from across translation units into a single collection. Can we use this technique in modern C++? Could we use it in a template even?
+
+
+    In this talk we''ll use linker sets as a view into the least loved element of the toolchain, the linker. We''ll talk about object formats, optimizations like link-time code generation and COMDAT folding, and the attributes available to manipulate the behavior of the linker. We''ll use these techniques to implement linker sets for modern C++, and yes, we can even use them in a template.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Leveraging_the_Linker.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Vito Gamberini
+
+
+    Originally a member of the Naval Nuclear Propulsion community with the US Navy, Vito Gamberini transitioned to C/C++ developer and educator in his post-naval career.
+
+
+    Vito lectured on computer architecture and toolchain development at NYU Tandon School of Engineering for four years before joining Kitware to work on build tooling for a range of language communities, with a focus on C/C++.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/ntp7_oWz2E4/hqdefault.jpg
+- video_id: oDWonsx-aM4
+  title: Lasting Quality - Michael Caisse - C++Now 2026
+  url: https://www.youtube.com/watch?v=oDWonsx-aM4
+  published: 2026-09-22 15:00:36+00:00
+  updated: 2026-09-24 19:15:03+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lasting Quality - Michael Caisse - C++Now 2026
+
+    ---
+
+
+    Software quality is often described as having three facets: Structural, Functional, and Process. Much fuss is allocated to Functional Quality while meeting the Process Quality goals of dates and budgets; however, Structural Quality is the stuff of Software Engineering and affects all aspects of a project for its entire lifecycle. A car can get you from point A to point B safely but if you have to pull the engine out for an oil change, it fails the structural quality test. Much of the software writing across industry focuses on function and schedule but has no concern for malleability or maintainability.
+
+
+    Structural Quality includes Testability, Malleability/Maintainability, Understandability, Efficiency, and Security. In this talk, we will explore these aspects from the perspective of architecture, design, and implementation strategies. While there is no single ""silver bullet"", there are a few strategies that have substantial impact on quality. We will look at these strategies in the concrete with implementations in embedded firmware; a domain that often neglects Structural Quality because of perceived resource constraints (memory and/or cycles).
+
+
+    Please join me as we discuss software engineering and practical solutions that are enable via contemporary C++.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Lasting_Quality.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Michael Caisse
+
+
+    Michael started using C++ with embedded systems in 1990. He continues to be passionate about combing his degree in Electrical Engineering with elegant software solutions. Michael is a Senior Principal Engineer at Intel where he works with a talented team putting magic into silicon. He is always excited to share his discoveries with others.
+
+
+    When he isn''t fighting with compilers or robots, he enjoys fencing with a sabre.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/oDWonsx-aM4/hqdefault.jpg
 - video_id: fc6zs81_OB0
   title: C++ in the Realtime Embedded Context - A Case Study - Shin Umeda - C++Now 2026
   url: https://www.youtube.com/watch?v=fc6zs81_OB0

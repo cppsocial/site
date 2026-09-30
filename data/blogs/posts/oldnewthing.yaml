@@ -1,5 +1,65 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: kjeDtjQXcS0HKuFv
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'Debugging walkthrough: Access violation on nonsense instruction, episode 3'
+  url: https://devblogs.microsoft.com/oldnewthing/20260925-00/?p=112731/
+  published: 2026-09-25 14:00:00+00:00
+  description: 'Trying to figure out what the interloper was trying to. The post Debugging walkthrough: Access violation on nonsense instruction, episode 3 appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: K4gx_rKQdlGM-IHa
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: No, really, you need to pass all unhandled messages to DefWindowProc, part 2
+  url: https://devblogs.microsoft.com/oldnewthing/20260924-00/?p=112728/
+  published: 2026-09-24 14:00:00+00:00
+  description: Another example to add to the list. The post No, really, you need to pass all unhandled messages to DefWindowProc, part 2 appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: ac0vjHZpZHwVXoB8
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: When working with Win32 FILETIME, don’t forget that you have std::chrono now
+  url: https://devblogs.microsoft.com/oldnewthing/20260923-00/?p=112726/
+  published: 2026-09-23 14:00:00+00:00
+  description: Let the library do the math for you. The post When working with Win32 <CODE>FILETIME</CODE>, don’t forget that you have <CODE>std::chrono</CODE> now appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: FBqemeMM-4xl88Bx
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: A brief history of Windows scroll bar shortcuts
+  url: https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/
+  published: 2026-09-22 14:00:00+00:00
+  description: Right-clicking and shift-clicking. The post A brief history of Windows scroll bar shortcuts appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: LFSzx8uGfxzIaE4E
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: What’s the highest legal FILETIME? Is it safe to use?
+  url: https://devblogs.microsoft.com/oldnewthing/20260921-00/?p=112711/
+  published: 2026-09-21 14:00:00+00:00
+  description: Being wary of how people use it and how it interacts with other types. The post What’s the highest legal <CODE>FILETIME</CODE>? Is it safe to use? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: a5qB5qxoUt3efx9P
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Comparing exception behavior of magic statics, std::call_once, and std::async
+  url: https://devblogs.microsoft.com/oldnewthing/20260918-00/?p=112709/
+  published: 2026-09-18 14:00:00+00:00
+  description: Do you try again or give up? The post Comparing exception behavior of magic statics, <CODE>std::<WBR>call_<WBR>once</CODE>, and <CODE>std::<WBR>async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
 - post_id: mO2FLrYyy57jWTEK
   source_id: oldnewthing
   source_title: The Old New Thing
@@ -7,6 +67,26 @@
   url: https://devblogs.microsoft.com/oldnewthing/20260917-00/?p=112706
   published: 2026-09-17 14:00:00+00:00
   description: Simple vs complex machinery. The post <CODE>std::call_once</CODE> vs. <CODE>std::async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: o1zTuSLyqUIDt5Wj
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: std::call_once vs. std::async
+  url: https://devblogs.microsoft.com/oldnewthing/20260917-00/?p=112706/
+  published: 2026-09-17 14:00:00+00:00
+  description: Simple vs complex machinery. The post <CODE>std::call_once</CODE> vs. <CODE>std::async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: B_ozU7hM0eqIhOTp
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Magic statics vs. std::call_once
+  url: https://devblogs.microsoft.com/oldnewthing/20260916-00/?p=112703/
+  published: 2026-09-16 14:00:00+00:00
+  description: They sort of do the same thing, but differently. The post Magic statics vs. <CODE>std::call_once</CODE> appeared first on The Old New Thing .
   tags:
   - Code
   - Old New Thing
@@ -20,6 +100,16 @@
   tags:
   - Code
   - Old New Thing
+- post_id: VT693ZksFAlRCEBd
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1?
+  url: https://devblogs.microsoft.com/oldnewthing/20260915-00/?p=112700/
+  published: 2026-09-15 14:00:00+00:00
+  description: It used to start at 1, but that was the old system. The post Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
 - post_id: y5KyZ65yT2_wcd89
   source_id: oldnewthing
   source_title: The Old New Thing
@@ -27,6 +117,16 @@
   url: https://devblogs.microsoft.com/oldnewthing/20260915-00/?p=112700
   published: 2026-09-15 14:00:00+00:00
   description: It used to start at 1, but that was the old system. The post Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: 3vwW4FYX6WrY_r4X
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why didn’t ReadDirectoryChangesW provide a way to correlate the two sides of a rename operation?
+  url: https://devblogs.microsoft.com/oldnewthing/20260914-00/?p=112696/
+  published: 2026-09-14 14:00:00+00:00
+  description: Perhaps it wasn't necessary, or perhaps it didn't occur to them that this a problem. The post Why didn’t <CODE>ReadDirectoryChangesW</CODE> provide a way to correlate the two sides of a rename operation? appeared first on The Old New Thing .
   tags:
   - Old New Thing
   - Other

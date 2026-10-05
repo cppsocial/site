@@ -1,5 +1,55 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: nw5ASfYdUtwHu2Zq
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why is there no Windows hot-patching support for other architectures like 32-bit ARM and MIPS?
+  url: https://devblogs.microsoft.com/oldnewthing/20261002-00/?p=112753/
+  published: 2026-10-02 14:00:00+00:00
+  description: They either predate hot-patching or never needed it. The post Why is there no Windows hot-patching support for other architectures like 32-bit ARM and MIPS? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: GDYt-XWAC-gOufNX
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Windows on Itanium also provided for hot-patching, in an even simpler way
+  url: https://devblogs.microsoft.com/oldnewthing/20261001-57/?p=112747/
+  published: 2026-10-01 14:00:57+00:00
+  description: Once again, the benefit of fixed-length instructions. The post Windows on Itanium also provided for hot-patching, in an even simpler way appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: LZBDm6q0xYc_nKiR
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Windows on AArch64 also provides for hot-patching, but it’s much simpler than on x86
+  url: https://devblogs.microsoft.com/oldnewthing/20260930-00/?p=112744/
+  published: 2026-09-30 14:00:00+00:00
+  description: Fixed-length instructions makes it a much easier task. The post Windows on AArch64 also provides for hot-patching, but it’s much simpler than on x86 appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: 1vLcz7bcCi-LVZlE
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: As a general rule, calling product support while drunk is not recommended
+  url: https://devblogs.microsoft.com/oldnewthing/20260929-00/?p=112740/
+  published: 2026-09-29 14:00:00+00:00
+  description: Swearing is also poor form. The post As a general rule, calling product support while drunk is not recommended appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: twkF-Y5XI7CUTGtC
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ reminder: Function-local static variables are initialized only once, even if it looks like they get initialized multiple times'
+  url: https://devblogs.microsoft.com/oldnewthing/20260928-00/?p=112738/
+  published: 2026-09-28 14:00:00+00:00
+  description: 'Only on first execution. The post C++ reminder: Function-local static variables are initialized only once, even if it looks like they get initialized multiple times appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
 - post_id: kjeDtjQXcS0HKuFv
   source_id: oldnewthing
   source_title: The Old New Thing

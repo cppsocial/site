@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: 29896d6895078b4a785fad6ab1f80fce40930bf3
+revision: be7ecfb0fb42c9be9d4e72ec0e585b3d16886387
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -59,6 +59,34 @@ packages:
     - url: https://github.com/xmake-mirror/7zip.git
     - url: https://github.com/xmake-mirror/7zip/archive/refs/tags/21.02.tar.gz
   recipe_path: packages/7/7z/xmake.lua
+- id: xmake:aargh
+  registry: xmake
+  name: aargh
+  summary: Single-header command-line argument parser for C99 (argh.h)
+  licenses:
+  - MIT
+  homepage: https://github.com/ilyabrin/aargh
+  repository_url: https://github.com/ilyabrin/aargh
+  package_type: library
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: 1.9.0
+    artifacts:
+    - url: https://github.com/ilyabrin/aargh.git
+    - url: https://github.com/ilyabrin/aargh/archive/refs/tags/v1.9.0.tar.gz
+  recipe_path: packages/a/aargh/xmake.lua
 - id: xmake:abseil
   registry: xmake
   name: abseil
@@ -5419,6 +5447,11 @@ packages:
     artifacts:
     - url: https://github.com/aws/aws-lc.git
     - url: https://github.com/aws/aws-lc/archive/refs/tags/v5.1.0.tar.gz
+  - version: v5.11.0
+    upstream_version: 5.11.0
+    artifacts:
+    - url: https://github.com/aws/aws-lc.git
+    - url: https://github.com/aws/aws-lc/archive/refs/tags/v5.11.0.tar.gz
   - version: v5.3.0
     upstream_version: 5.3.0
     artifacts:
@@ -8596,6 +8629,11 @@ packages:
     - url: https://github.com/apache/brpc/archive/refs/tags/1.16.0.tar.gz
       checksums:
       - sha256:60f218554527f05ad8fae3cb8f81879d0c7dc72b249cde132049c44b1a73e76d
+  - version: 1.18.0
+    artifacts:
+    - url: https://github.com/apache/brpc/archive/refs/tags/1.18.0.tar.gz
+      checksums:
+      - sha256:763795b13309e353642105fe8b55583ebf5a19a0e3b398a5fb4f9268c728cafc
   - version: 1.3.0
     artifacts:
     - url: https://github.com/apache/brpc/archive/refs/tags/1.3.0.tar.gz
@@ -9794,6 +9832,11 @@ packages:
     artifacts:
     - url: https://github.com/catchorg/Catch2.git
     - url: https://github.com/catchorg/Catch2/archive/refs/tags/v3.15.2.zip
+  - version: v3.16.0
+    upstream_version: 3.16.0
+    artifacts:
+    - url: https://github.com/catchorg/Catch2.git
+    - url: https://github.com/catchorg/Catch2/archive/refs/tags/v3.16.0.zip
   - version: v3.2.0
     upstream_version: 3.2.0
     artifacts:
@@ -11316,6 +11359,35 @@ packages:
     - url: https://github.com/concurrencykit/ck.git
     - url: https://github.com/concurrencykit/ck/archive/refs/tags/0.7.2.tar.gz
   recipe_path: packages/c/ck/xmake.lua
+- id: xmake:clap
+  registry: xmake
+  name: clap
+  summary: cross plat Audio Plugin API
+  homepage: https://cleveraudio.org/
+  repository_url: https://github.com/free-audio/clap
+  package_type: library
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  versions:
+  - version: 1.2.10
+    artifacts:
+    - url: https://github.com/free-audio/clap/archive/refs/tags/1.2.10.zip
+      checksums:
+      - sha256:e3016e90da0cba5d194e2c565a4eed14325091938560394e636ba4e5230d7cd0
+  recipe_path: packages/c/clap/xmake.lua
 - id: xmake:clara
   registry: xmake
   name: clara
@@ -13537,6 +13609,11 @@ packages:
     artifacts:
     - url: https://github.com/yhirose/cpp-httplib.git
     - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.53.1.tar.gz
+  - version: v0.59.0
+    upstream_version: 0.59.0
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib.git
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.59.0.tar.gz
   - version: v0.8.5
     upstream_version: 0.8.5
     artifacts:
@@ -15998,7 +16075,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x563366401f70'
+    default: 'table: 0x5607494603f0'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -21188,6 +21265,11 @@ packages:
     artifacts:
     - url: https://github.com/SirLynix/enet6.git
     - url: https://github.com/SirLynix/enet6/archive/refs/tags/v6.1.3.tar.gz
+  - version: v6.1.4
+    upstream_version: 6.1.4
+    artifacts:
+    - url: https://github.com/SirLynix/enet6.git
+    - url: https://github.com/SirLynix/enet6/archive/refs/tags/v6.1.4.tar.gz
   recipe_path: packages/e/enet6/xmake.lua
 - id: xmake:enkits
   registry: xmake
@@ -21768,6 +21850,10 @@ packages:
     artifacts:
     - url: https://github.com/ETLCPP/etl.git
     - url: https://github.com/ETLCPP/etl/archive/refs/tags/20.48.1.tar.gz
+  - version: 20.49.0
+    artifacts:
+    - url: https://github.com/ETLCPP/etl.git
+    - url: https://github.com/ETLCPP/etl/archive/refs/tags/20.49.0.tar.gz
   recipe_path: packages/e/etl/xmake.lua
 - id: xmake:eudev
   registry: xmake
@@ -21810,6 +21896,11 @@ packages:
     artifacts:
     - url: https://github.com/eudev-project/eudev.git
     - url: https://github.com/eudev-project/eudev/archive/refs/tags/v3.2.14.tar.gz
+  - version: v3.2.15
+    upstream_version: 3.2.15
+    artifacts:
+    - url: https://github.com/eudev-project/eudev.git
+    - url: https://github.com/eudev-project/eudev/archive/refs/tags/v3.2.15.tar.gz
   - version: v3.2.9
     upstream_version: 3.2.9
     artifacts:
@@ -21894,6 +21985,11 @@ packages:
     artifacts:
     - url: https://github.com/sudoevolve/EUI-NEO.git
     - url: https://github.com/sudoevolve/EUI-NEO/archive/refs/tags/v0.5.9.tar.gz
+  - version: v0.6.0
+    upstream_version: 0.6.0
+    artifacts:
+    - url: https://github.com/sudoevolve/EUI-NEO.git
+    - url: https://github.com/sudoevolve/EUI-NEO/archive/refs/tags/v0.6.0.tar.gz
   recipe_path: packages/e/eui-neo/xmake.lua
 - id: xmake:eve
   registry: xmake
@@ -22932,6 +23028,11 @@ packages:
     artifacts:
     - url: https://github.com/fastfloat/fast_float.git
     - url: https://github.com/fastfloat/fast_float/archive/refs/tags/v8.2.5.tar.gz
+  - version: v8.3.0
+    upstream_version: 8.3.0
+    artifacts:
+    - url: https://github.com/fastfloat/fast_float.git
+    - url: https://github.com/fastfloat/fast_float/archive/refs/tags/v8.3.0.tar.gz
   recipe_path: packages/f/fast_float/xmake.lua
 - id: xmake:fast_io
   registry: xmake
@@ -23722,7 +23823,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x563353c7e890'
+    default: 'table: 0x560729cc0d50'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -23732,7 +23833,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x563353c7fef0'
+    default: 'table: 0x560729cc23b0'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -26799,6 +26900,82 @@ packages:
       checksums:
       - sha256:8d7df33a4b692493f01a05b82047134a8291d00f113b6a23bdb5253a6527f5a1
   recipe_path: packages/g/geant4/xmake.lua
+- id: xmake:gecode
+  registry: xmake
+  name: gecode
+  summary: Generic Constraint Development Environment
+  homepage: https://www.gecode.dev
+  repository_url: https://github.com/gecode/gecode
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  features:
+  - name: allocator
+    description: Enable default allocator
+    default: 'true'
+  - name: audit
+    description: Enable audit code
+    default: 'false'
+  - name: cbs
+    description: Enable counting-based search support
+    default: 'false'
+  - name: cpprofiler
+    description: Enable CPProfiler support
+    default: 'true'
+  - name: driver
+    description: Build driver module
+    default: 'true'
+  - name: fault_injection
+    description: Enable deterministic test-only failpoints
+    default: 'false'
+  - name: flatzinc
+    description: Build FlatZinc module
+    default: 'true'
+  - name: float_vars
+    description: Build float variables module
+    default: 'true'
+  - name: gcc_visibility
+    description: Enable GCC visibility attributes
+    default: 'true'
+  - name: int_vars
+    description: Build int variables module
+    default: 'true'
+  - name: minimodel
+    description: Build minimodel module
+    default: 'true'
+  - name: mpfr
+    description: Enable MPFR support
+    default: 'true'
+  - name: osx_unfair_mutex
+    description: Enable macOS unfair mutexes
+    default: 'true'
+  - name: search
+    description: Build search module
+    default: 'true'
+  - name: set_vars
+    description: Build set variables module
+    default: 'true'
+  - name: thread
+    description: Enable thread support
+    default: 'true'
+  versions:
+  - version: 6.4.0
+    artifacts:
+    - url: https://github.com/Gecode/gecode.git
+    - url: https://github.com/Gecode/gecode/archive/refs/tags/release-6.4.0.tar.gz
+  recipe_path: packages/g/gecode/xmake.lua
 - id: xmake:gelldur-eventbus
   registry: xmake
   name: gelldur-eventbus
@@ -29500,6 +29677,9 @@ packages:
   - version: '4.4'
     artifacts:
     - url: https://github.com/godotengine/godot-cpp.git
+  - version: '4.5'
+    artifacts:
+    - url: https://github.com/godotengine/godot-cpp.git
   recipe_path: packages/g/godotcpp4/xmake.lua
 - id: xmake:google-cloud-cpp
   registry: xmake
@@ -29530,7 +29710,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x56336c8ba610'
+    default: 'table: 0x56074246ec30'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -31974,7 +32154,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x56335d847bc0'
+    default: 'table: 0x560732d67220'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -34447,6 +34627,34 @@ packages:
     artifacts:
     - url: https://github.com/dscharrer/innoextract.git
   recipe_path: packages/i/innoextract/xmake.lua
+- id: xmake:innosetup
+  registry: xmake
+  name: innosetup
+  summary: Inno Setup is an open-source installation builder for Windows applications by Jordan Russell and Martijn Laan.
+  licenses:
+  - Inno Setup License
+  homepage: https://jrsoftware.org/isinfo.php
+  package_type: binary
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: 7.1.0
+    artifacts:
+    - url: https://www.nuget.org/api/v2/package/Tools.InnoSetup/7.1.0/#Tools.InnoSetup-7.1.0.zip
+      checksums:
+      - sha256:aad15c662593c6f5656457a5c001f4591babd72820cacf63f9706d4af5d93b75
+  recipe_path: packages/i/innosetup/xmake.lua
 - id: xmake:interface99
   registry: xmake
   name: interface99
@@ -35242,6 +35450,10 @@ packages:
     artifacts:
     - url: https://github.com/akheron/jansson.git
     - url: https://github.com/akheron/jansson/releases/download/v2.15.0/jansson-2.15.0.tar.gz
+  - version: 2.15.1
+    artifacts:
+    - url: https://github.com/akheron/jansson.git
+    - url: https://github.com/akheron/jansson/releases/download/v2.15.1/jansson-2.15.1.tar.gz
   recipe_path: packages/j/jansson/xmake.lua
 - id: xmake:jasper
   registry: xmake
@@ -36701,6 +36913,10 @@ packages:
     artifacts:
     - url: https://github.com/nucleic/kiwi.git
     - url: https://github.com/nucleic/kiwi/archive/refs/tags/1.5.0.tar.gz
+  - version: 1.5.1
+    artifacts:
+    - url: https://github.com/nucleic/kiwi.git
+    - url: https://github.com/nucleic/kiwi/archive/refs/tags/1.5.1.tar.gz
   recipe_path: packages/k/kiwisolver/xmake.lua
 - id: xmake:klib
   registry: xmake
@@ -38507,6 +38723,10 @@ packages:
     artifacts:
     - url: https://github.com/dpryan79/libBigWig.git
     - url: https://github.com/dpryan79/libBigWig/archive/refs/tags/0.4.8.tar.gz
+  - version: 0.4.9
+    artifacts:
+    - url: https://github.com/dpryan79/libBigWig.git
+    - url: https://github.com/dpryan79/libBigWig/archive/refs/tags/0.4.9.tar.gz
   recipe_path: packages/l/libbigwig/xmake.lua
 - id: xmake:libbpf
   registry: xmake
@@ -44175,6 +44395,84 @@ packages:
     - url: https://github.com/xiph/opus.git
     - url: https://github.com/xiph/opus/archive/refs/tags/v1.5.2.tar.gz
   recipe_path: packages/l/libopus/xmake.lua
+- id: xmake:libopusenc
+  registry: xmake
+  name: libopusenc
+  summary: Modern audio compression for the internet.
+  licenses:
+  - BSD-3-Clause
+  homepage: https://opus-codec.org
+  repository_url: https://github.com/xiph/libopusenc
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - libopus
+  external_names:
+  - apt::libopusenc-dev
+  - brew::libopusenc
+  - pacman::libopusenc
+  versions:
+  - version: '0.3'
+    artifacts:
+    - url: https://downloads.xiph.org/releases/opus/libopusenc-0.3.tar.gz
+    - url: https://github.com/xiph/libopusenc/archive/refs/tags/0.3.tar.gz
+    - url: https://github.com/xiph/opus.git
+  - version: v0.3
+    upstream_version: '0.3'
+    artifacts:
+    - url: https://downloads.xiph.org/releases/opus/libopusenc-v0.3.tar.gz
+    - url: https://github.com/xiph/libopusenc/archive/refs/tags/v0.3.tar.gz
+    - url: https://github.com/xiph/opus.git
+  recipe_path: packages/l/libopusenc/xmake.lua
+- id: xmake:libopusfile
+  registry: xmake
+  name: libopusfile
+  summary: Modern audio compression for the internet.
+  licenses:
+  - BSD-3-Clause
+  homepage: https://opus-codec.org
+  repository_url: https://github.com/xiph/opusfile
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  - libogg
+  - libopus
+  external_names:
+  - apt::libopusfile-dev
+  - brew::opusfile
+  - pacman::opusfile
+  features:
+  - name: shared
+    description: Build shared library.
+    default: 'false'
+  versions:
+  - version: 0.12+20260328
+    artifacts:
+    - url: https://github.com/xiph/opusfile.git
+  recipe_path: packages/l/libopusfile/xmake.lua
 - id: xmake:liboqs
   registry: xmake
   name: liboqs
@@ -44801,6 +45099,11 @@ packages:
     artifacts:
     - url: https://github.com/glennrp/libpng.git
     - url: https://github.com/glennrp/libpng/archive/refs/tags/v1.6.58.tar.gz
+  - version: v1.6.59
+    upstream_version: 1.6.59
+    artifacts:
+    - url: https://github.com/glennrp/libpng.git
+    - url: https://github.com/glennrp/libpng/archive/refs/tags/v1.6.59.tar.gz
   recipe_path: packages/l/libpng/xmake.lua
 - id: xmake:libpopcnt
   registry: xmake
@@ -46383,6 +46686,11 @@ packages:
     - url: https://github.com/libsdl-org/SDL.git
     - url: https://github.com/libsdl-org/SDL/releases/download/release-3.4.12/SDL3-3.4.12.zip
     - url: https://www.libsdl.org/release/SDL3-3.4.12.zip
+  - version: 3.4.16
+    artifacts:
+    - url: https://github.com/libsdl-org/SDL.git
+    - url: https://github.com/libsdl-org/SDL/releases/download/release-3.4.16/SDL3-3.4.16.zip
+    - url: https://www.libsdl.org/release/SDL3-3.4.16.zip
   - version: 3.4.2
     artifacts:
     - url: https://github.com/libsdl-org/SDL.git
@@ -46783,6 +47091,11 @@ packages:
     - url: https://github.com/SELinuxProject/selinux/releases/download/3.10/libsepol-3.10.tar.gz
       checksums:
       - sha256:d555586797fa9f38344496d2a7ec1147b6caaf3fcc44c42d8d5173edd7a79a71
+  - version: '3.11'
+    artifacts:
+    - url: https://github.com/SELinuxProject/selinux/releases/download/3.11/libsepol-3.11.tar.gz
+      checksums:
+      - sha256:79f3d2c88f44b7eb5cf54d9792e03232297e17f97a179163f2750099a00f164d
   - version: '3.9'
     artifacts:
     - url: https://github.com/SELinuxProject/selinux/releases/download/3.9/libsepol-3.9.tar.gz
@@ -55099,6 +55412,11 @@ packages:
     - url: https://github.com/mariadb-corporation/mariadb-connector-c/archive/refs/tags/v3.3.9.tar.gz
       checksums:
       - sha256:062b9ec5c26cbb236a78f0ba26981272053f59bdfc113040bab904a9da36d31f
+  - version: 3.4.11
+    artifacts:
+    - url: https://github.com/mariadb-corporation/mariadb-connector-c/archive/refs/tags/v3.4.11.tar.gz
+      checksums:
+      - sha256:7cdb35c571dd0c187f806f569285829d31b4aba4feb93957a034b0b1e887e276
   - version: 3.4.7
     artifacts:
     - url: https://github.com/mariadb-corporation/mariadb-connector-c/archive/refs/tags/v3.4.7.tar.gz
@@ -57220,6 +57538,11 @@ packages:
     artifacts:
     - url: https://github.com/microsoft/mimalloc.git
     - url: https://github.com/microsoft/mimalloc/archive/refs/tags/v3.5.0.zip
+  - version: v3.5.3
+    upstream_version: 3.5.3
+    artifacts:
+    - url: https://github.com/microsoft/mimalloc.git
+    - url: https://github.com/microsoft/mimalloc/archive/refs/tags/v3.5.3.zip
   recipe_path: packages/m/mimalloc/xmake.lua
 - id: xmake:mingw-w64
   registry: xmake
@@ -57369,10 +57692,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x56336cc1f520'
+    default: 'table: 0x56073b606d60'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x56336a9d97e0'
+    default: 'table: 0x56073b6077e0'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -62162,6 +62485,11 @@ packages:
     artifacts:
     - url: https://github.com/stevengj/nlopt.git
     - url: https://github.com/stevengj/nlopt/archive/refs/tags/v2.10.1.tar.gz
+  - version: v2.11.0
+    upstream_version: 2.11.0
+    artifacts:
+    - url: https://github.com/stevengj/nlopt.git
+    - url: https://github.com/stevengj/nlopt/archive/refs/tags/v2.11.0.tar.gz
   - version: v2.7.0
     upstream_version: 2.7.0
     artifacts:
@@ -63344,6 +63672,11 @@ packages:
     artifacts:
     - url: https://github.com/NazaraEngine/ShaderLang.git
     - url: https://github.com/NazaraEngine/ShaderLang/archive/refs/tags/v1.1.5.tar.gz
+  - version: v1.1.6
+    upstream_version: 1.1.6
+    artifacts:
+    - url: https://github.com/NazaraEngine/ShaderLang.git
+    - url: https://github.com/NazaraEngine/ShaderLang/archive/refs/tags/v1.1.6.tar.gz
   recipe_path: packages/n/nzsl/xmake.lua
 - id: xmake:oatpp
   registry: xmake
@@ -64151,7 +64484,6 @@ packages:
   licenses:
   - zlib
   homepage: https://libomath.org/
-  repository_url: https://github.com/orange-cpp/omath
   platforms:
   - android
   - bsd
@@ -64171,108 +64503,43 @@ packages:
   - name: avx2
     description: Enable AVX2
     default: 'true'
+  - name: cppm
+    description: Build omath C++ module interface
+    default: 'false'
+  - name: hook
+    description: omath will HooksManager that can hook DirectX/OpenGL automatically
+    default: 'true'
   - name: imgui
     description: Define method to convert omath types to imgui types
+    default: 'true'
+  - name: inline
+    description: Force compiler to make some functions to be force inlined
+    default: 'true'
+  - name: legacy
+    description: Enable legacy classes that MUST be used ONLY for backward compatibility
+    default: 'true'
+  - name: lua
+    description: Omath bindings for lua
     default: 'true'
   - name: shared
     description: Build shared library.
     default: 'false'
+  - name: supp
+    description: Supress some safety checks in release build to improve general performance
+    default: 'true'
   versions:
-  - version: v3.10.1
-    upstream_version: 3.10.1
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v3.10.1.tar.gz
-  - version: v3.8.1
-    upstream_version: 3.8.1
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v3.8.1.tar.gz
-  - version: v3.8.2
-    upstream_version: 3.8.2
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v3.8.2.tar.gz
-  - version: v3.9.0
-    upstream_version: 3.9.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v3.9.0.tar.gz
-  - version: v3.9.3
-    upstream_version: 3.9.3
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v3.9.3.tar.gz
-  - version: v3.9.4
-    upstream_version: 3.9.4
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v3.9.4.tar.gz
-  - version: v4.0.1
-    upstream_version: 4.0.1
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.0.1.tar.gz
-  - version: v4.1.0
-    upstream_version: 4.1.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.1.0.tar.gz
-  - version: v4.2.0
-    upstream_version: 4.2.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.2.0.tar.gz
-  - version: v4.3.0
-    upstream_version: 4.3.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.3.0.tar.gz
-  - version: v4.4.0
-    upstream_version: 4.4.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.4.0.tar.gz
-  - version: v4.5.0
-    upstream_version: 4.5.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.5.0.tar.gz
-  - version: v4.6.1
-    upstream_version: 4.6.1
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.6.1.tar.gz
-  - version: v4.7.0
-    upstream_version: 4.7.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v4.7.0.tar.gz
-  - version: v5.0.0
-    upstream_version: 5.0.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v5.0.0.tar.gz
-  - version: v5.2.0
-    upstream_version: 5.2.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v5.2.0.tar.gz
-  - version: v5.2.1
-    upstream_version: 5.2.1
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v5.2.1.tar.gz
-  - version: v5.3.0
-    upstream_version: 5.3.0
-    artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v5.3.0.tar.gz
   - version: v5.6.0
     upstream_version: 5.6.0
     artifacts:
-    - url: https://github.com/orange-cpp/omath.git
-    - url: https://github.com/orange-cpp/omath/archive/refs/tags/v5.6.0.tar.gz
+    - url: https://git.libomath.org/orange/omath/archive/v5.6.0.tar.gz
+      checksums:
+      - sha256:48cdf091451e7b999c0c49c7e979fdf61238bcadccd84a8be13135b8548f18c3
+  - version: v5.7.0
+    upstream_version: 5.7.0
+    artifacts:
+    - url: https://git.libomath.org/orange/omath/archive/v5.7.0.tar.gz
+      checksums:
+      - sha256:f5ddca871dee3aab70c9ac324a671dc366d901ed57dd0df3cada5df2aaca2b42
   recipe_path: packages/o/omath/xmake.lua
 - id: xmake:ompl
   registry: xmake
@@ -64416,6 +64683,11 @@ packages:
     artifacts:
     - url: https://github.com/oneapi-src/oneDNN.git
     - url: https://github.com/oneapi-src/oneDNN/archive/refs/tags/v3.13.2.tar.gz
+  - version: v3.13.3
+    upstream_version: 3.13.3
+    artifacts:
+    - url: https://github.com/oneapi-src/oneDNN.git
+    - url: https://github.com/oneapi-src/oneDNN/archive/refs/tags/v3.13.3.tar.gz
   - version: v3.3.4
     upstream_version: 3.3.4
     artifacts:
@@ -69577,6 +69849,10 @@ packages:
     artifacts:
     - url: https://github.com/taocpp/PEGTL.git
     - url: https://github.com/taocpp/PEGTL/archive/refs/tags/4.0.1.tar.gz
+  - version: 4.0.2
+    artifacts:
+    - url: https://github.com/taocpp/PEGTL.git
+    - url: https://github.com/taocpp/PEGTL/archive/refs/tags/4.0.2.tar.gz
   recipe_path: packages/p/pegtl/xmake.lua
 - id: xmake:peloader
   registry: xmake
@@ -72501,6 +72777,11 @@ packages:
     artifacts:
     - url: https://github.com/wdas/ptex.git
     - url: https://github.com/wdas/ptex/archive/refs/tags/v2.5.2.tar.gz
+  - version: v2.5.4
+    upstream_version: 2.5.4
+    artifacts:
+    - url: https://github.com/wdas/ptex.git
+    - url: https://github.com/wdas/ptex/archive/refs/tags/v2.5.4.tar.gz
   recipe_path: packages/p/ptex/xmake.lua
 - id: xmake:pthreadpool
   registry: xmake
@@ -76739,6 +77020,10 @@ packages:
     artifacts:
     - url: https://github.com/mikke89/RmlUi.git
     - url: https://github.com/mikke89/RmlUi/archive/refs/tags/6.2.tar.gz
+  - version: '6.3'
+    artifacts:
+    - url: https://github.com/mikke89/RmlUi.git
+    - url: https://github.com/mikke89/RmlUi/archive/refs/tags/6.3.tar.gz
   recipe_path: packages/r/rmlui/xmake.lua
 - id: xmake:robin-hood-hashing
   registry: xmake
@@ -77867,6 +78152,11 @@ packages:
     artifacts:
     - url: https://github.com/aws/s2n-tls.git
     - url: https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.0.tar.gz
+  - version: v1.7.10
+    upstream_version: 1.7.10
+    artifacts:
+    - url: https://github.com/aws/s2n-tls.git
+    - url: https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.10.tar.gz
   - version: v1.7.2
     upstream_version: 1.7.2
     artifacts:
@@ -78223,6 +78513,10 @@ packages:
     artifacts:
     - url: https://github.com/SCons/scons.git
     - url: https://github.com/SCons/scons/archive/refs/tags/4.1.0.zip
+  - version: 4.11.1
+    artifacts:
+    - url: https://github.com/SCons/scons.git
+    - url: https://github.com/SCons/scons/archive/refs/tags/4.11.1.zip
   - version: 4.3.0
     artifacts:
     - url: https://github.com/SCons/scons.git
@@ -78794,6 +79088,10 @@ packages:
     artifacts:
     - url: https://github.com/getsentry/sentry-native.git
     - url: https://github.com/getsentry/sentry-native/releases/download/0.16.6/sentry-native.zip
+  - version: 0.17.1
+    artifacts:
+    - url: https://github.com/getsentry/sentry-native.git
+    - url: https://github.com/getsentry/sentry-native/releases/download/0.17.1/sentry-native.zip
   - version: 0.6.3
     artifacts:
     - url: https://github.com/getsentry/sentry-native.git
@@ -80189,6 +80487,11 @@ packages:
     artifacts:
     - url: https://github.com/brofield/simpleini.git
     - url: https://github.com/brofield/simpleini/archive/refs/tags/v4.26.tar.gz
+  - version: v4.27
+    upstream_version: '4.27'
+    artifacts:
+    - url: https://github.com/brofield/simpleini.git
+    - url: https://github.com/brofield/simpleini/archive/refs/tags/v4.27.tar.gz
   recipe_path: packages/s/simpleini/xmake.lua
 - id: xmake:simplethreadpool
   registry: xmake
@@ -82285,6 +82588,11 @@ packages:
     - url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.17.0.tar.gz
       checksums:
       - sha256:79c0e164b9c059e7487bf8f29272f601cca5f3312cc267461f81e349962a5058
+  - version: 4.19.0
+    artifacts:
+    - url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.19.0.tar.gz
+      checksums:
+      - sha256:7075f96cbabe45b4ecfc2e6b1745a625f856f695b0827a5506ce9ed85b906aa0
   - version: 4.5.3
     artifacts:
     - url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.5.3.tar.gz
@@ -83115,6 +83423,11 @@ packages:
     artifacts:
     - url: https://github.com/cisco/libsrtp.git
     - url: https://github.com/cisco/libsrtp/archive/refs/tags/v2.8.tar.gz
+  - version: v2.8.1
+    upstream_version: 2.8.1
+    artifacts:
+    - url: https://github.com/cisco/libsrtp.git
+    - url: https://github.com/cisco/libsrtp/archive/refs/tags/v2.8.1.tar.gz
   recipe_path: packages/s/srtp/xmake.lua
 - id: xmake:sse2neon
   registry: xmake
@@ -86192,7 +86505,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x5633551fc5b0'
+    default: 'table: 0x56072b10e5f0'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -89169,7 +89482,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x563366034230'
+    default: 'table: 0x560736975590'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -90175,6 +90488,11 @@ packages:
     artifacts:
     - url: https://github.com/nemtrif/utfcpp.git
     - url: https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.1.1.tar.gz
+  - version: v4.2.1
+    upstream_version: 4.2.1
+    artifacts:
+    - url: https://github.com/nemtrif/utfcpp.git
+    - url: https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.2.1.tar.gz
   recipe_path: packages/u/utfcpp/xmake.lua
 - id: xmake:uthash
   registry: xmake
@@ -90637,6 +90955,11 @@ packages:
     artifacts:
     - url: https://github.com/uNetworking/uWebSockets.git
     - url: https://github.com/uNetworking/uWebSockets/archive/refs/tags/v20.79.0.tar.gz
+  - version: v20.80.0
+    upstream_version: 20.80.0
+    artifacts:
+    - url: https://github.com/uNetworking/uWebSockets.git
+    - url: https://github.com/uNetworking/uWebSockets/archive/refs/tags/v20.80.0.tar.gz
   recipe_path: packages/u/uwebsockets/xmake.lua
 - id: xmake:v8
   registry: xmake
@@ -91140,6 +91463,50 @@ packages:
     artifacts:
     - url: https://github.com/scoopr/vectorial.git
   recipe_path: packages/v/vectorial/xmake.lua
+- id: xmake:vectorscan
+  registry: xmake
+  name: vectorscan
+  summary: High-performance regular expression matching library
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/VectorCamp/vectorscan
+  repository_url: https://github.com/vectorcamp/vectorscan
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - boost
+  - cmake
+  - libpcap
+  - ragel
+  - sqlite3
+  features:
+  - name: assert
+    description: Fat runtime for x86
+    default: 'true'
+  - name: fat_runtime
+    description: Fat runtime for x86
+    default: 'false'
+  - name: simd
+    description: Enable SIMD optimizations
+    default: 'true'
+  versions:
+  - version: 5.4.13
+    artifacts:
+    - url: https://github.com/VectorCamp/vectorscan/archive/refs/tags/vectorscan/5.4.13.tar.gz
+      checksums:
+      - sha256:11bfcd2dde32d8a08d1a2eebb09294b12a3fa2be140078f8091b751fa1fabd89
+  recipe_path: packages/v/vectorscan/xmake.lua
 - id: xmake:veil
   registry: xmake
   name: veil
@@ -92743,7 +93110,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x563378f3cc10'
+    default: 'table: 0x56074f689460'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -96538,6 +96905,11 @@ packages:
     artifacts:
     - url: https://github.com/Cyan4973/xxHash.git
     - url: https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz
+  - version: v0.8.4
+    upstream_version: 0.8.4
+    artifacts:
+    - url: https://github.com/Cyan4973/xxHash.git
+    - url: https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.4.tar.gz
   recipe_path: packages/x/xxhash/xmake.lua
 - id: xmake:xxmlxx
   registry: xmake
@@ -96657,6 +97029,10 @@ packages:
     artifacts:
     - url: https://downloads.sourceforge.net/project/lzmautils/xz-5.8.3.tar.gz
     - url: https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz
+  - version: 5.8.4
+    artifacts:
+    - url: https://downloads.sourceforge.net/project/lzmautils/xz-5.8.4.tar.gz
+    - url: https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz
   recipe_path: packages/x/xz/xmake.lua
 - id: xmake:xz-embedded
   registry: xmake
@@ -97384,7 +97760,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x563362e9b7c0'
+    default: 'table: 0x560734ed5900'
   versions:
   - version: 0.23.93
     artifacts:

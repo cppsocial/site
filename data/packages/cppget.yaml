@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: cppget
 repository: https://pkg.cppget.org/1/
-revision: af64c705dd18131774fd0907702d52b2ba90a82b5644f104fcfc3ba7d7726b41
+revision: a071a2112d12b711ccb0571af3af2694cd078fa72368005673226bf8b23877a9
 packages:
 - id: cppget:Eigen
   registry: cppget
@@ -3970,7 +3970,9 @@ packages:
   - build2
   - libglslang
   versions:
-  - version: 16.5.0
+  - version: 16.5.0+1
+    upstream_version: 16.5.0
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
@@ -3978,9 +3980,9 @@ packages:
     - name: libglslang
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/glslang/glslang-tools-16.5.0.tar.gz
+      url: https://pkg.cppget.org/1/testing/glslang/glslang-tools-16.5.0+1.tar.gz
       checksums:
-      - sha256:68ee4c0c5a37a5f28b3adc81b843da451dc1ec275a1c8a6514bede98086a2e01
+      - sha256:e8629a35a40212df0e0399be0692c6d5d76aab71683b778459b7c72e0be2d4b8
   recipe_url: https://cppget.org/glslang-tools
 - id: cppget:gmock
   registry: cppget
@@ -5572,9 +5574,9 @@ packages:
   - libz
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -5585,9 +5587,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libavcodec-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libavcodec-7.0.2+8.tar.gz
       checksums:
-      - sha256:1eca736416effb0515bb66bab1cbe2427e8591ee1352e659e48218bf91664445
+      - sha256:5377e2f53fd6487d8c69c52e67dd432ce2f4ccb853e60c5c8f4b2c8c7a1bbf09
   recipe_url: https://cppget.org/libavcodec
 - id: cppget:libavdevice
   registry: cppget
@@ -5607,9 +5609,9 @@ packages:
   - libavutil
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -5619,9 +5621,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libavdevice-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libavdevice-7.0.2+8.tar.gz
       checksums:
-      - sha256:0cc0b5ef3120f34f76ea767539c6278916a357000670a458dcfd9ee6a81667b2
+      - sha256:bfb57f65d456ec9c5ff294e115eb699f52c186728a84c65ecb9757709996dff1
   recipe_url: https://cppget.org/libavdevice
 - id: cppget:libavfilter
   registry: cppget
@@ -5643,9 +5645,9 @@ packages:
   - libswscale
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -5657,9 +5659,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libavfilter-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libavfilter-7.0.2+8.tar.gz
       checksums:
-      - sha256:87f5da66add059cf0a872c583cdda08e867e02ca8ec664d741c5397877fc5b1f
+      - sha256:7b13a39cc291fce103522ba8d5835a681db05d0c6fe026fa2011f1f35e58dcbd
   recipe_url: https://cppget.org/libavfilter
 - id: cppget:libavformat
   registry: cppget
@@ -5680,9 +5682,9 @@ packages:
   - libz
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -5693,9 +5695,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libavformat-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libavformat-7.0.2+8.tar.gz
       checksums:
-      - sha256:74144d72d88f24b90116ad82984b277074fc4cfd4d470d0f4511f102ae6381f8
+      - sha256:35b9393a62597ff387d7518622c7f4ccc0fd17dadda59affcf9fe9a5aa063c8b
   recipe_url: https://cppget.org/libavformat
 - id: cppget:libavutil
   registry: cppget
@@ -5713,9 +5715,9 @@ packages:
   - build2
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -5723,9 +5725,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libavutil-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libavutil-7.0.2+8.tar.gz
       checksums:
-      - sha256:26e159e39862b05071090539e6ff8aeb1d196311b0955bda7b974cb24f2b4c04
+      - sha256:04af9cace3f6c2935fe1159ca9d56716f183dc448c3599f4d5b88273679690f2
   recipe_url: https://cppget.org/libavutil
 - id: cppget:libb2
   registry: cppget
@@ -20914,6 +20916,36 @@ packages:
       url: https://pkg.cppget.org/1/testing/glaze/libglaze-7.9.1.tar.gz
       checksums:
       - sha256:204ebaf6753af95f3eb42f9677b4fe593f499057c820d3fbdd77934cf2389aad
+  - version: 8.4.0
+    channel: testing
+    summary: Multi-format serialization, reflection, and RPC C++ library
+    description: <p>One of the fastest JSON libraries in the world. Glaze reads and writes from\ object memory, simplifying interfaces and offering incredible performance.</p><p>Formats Supported:</p>
+    documentation_url: https://stephenberry.github.io/glaze
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libasio
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/glaze/libglaze-8.4.0.tar.gz
+      checksums:
+      - sha256:3ea63f9c69c53d9f7069e63cbb129784fef6cc6735f42a75f3cb6dd7c36c4c72
+  - version: 9.0.0+1
+    upstream_version: 9.0.0
+    packaging_revision: '1'
+    channel: testing
+    summary: Multi-format serialization, reflection, and RPC C++ library
+    description: <p>One of the fastest JSON libraries in the world. Glaze reads and writes from\ object memory, simplifying interfaces and offering incredible performance.</p><p>Formats Supported:</p>
+    documentation_url: https://stephenberry.github.io/glaze
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libasio
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/glaze/libglaze-9.0.0+1.tar.gz
+      checksums:
+      - sha256:2b9e583ba2d8776cfe6f39bef3bf5c68a5e2f857f682d44fbef4347b358e1a95
   recipe_url: https://cppget.org/libglaze
 - id: cppget:libglaze-tests
   registry: cppget
@@ -21141,6 +21173,38 @@ packages:
       url: https://pkg.cppget.org/1/testing/glaze/libglaze-tests-7.9.1.tar.gz
       checksums:
       - sha256:26b3a529622d083e5bc806bad8865fda73689d4cc5a6407305aca6392a217a0a
+  - version: 8.4.0
+    channel: testing
+    summary: Multi-format serialization, reflection, and RPC C++ library (tests)
+    documentation_url: https://stephenberry.github.io/glaze
+    dependencies:
+    - name: Eigen
+    - name: bpkg
+    - name: build2
+    - name: libasio
+    - name: libsqlite3
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/glaze/libglaze-tests-8.4.0.tar.gz
+      checksums:
+      - sha256:122efdf382411ea2761f1fedf407907a1bf0ad09bd2b9650c8ccfbc85bd539b9
+  - version: 9.0.0+1
+    upstream_version: 9.0.0
+    packaging_revision: '1'
+    channel: testing
+    summary: Multi-format serialization, reflection, and RPC C++ library (tests)
+    documentation_url: https://stephenberry.github.io/glaze
+    dependencies:
+    - name: Eigen
+    - name: bpkg
+    - name: build2
+    - name: libasio
+    - name: libsqlite3
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/glaze/libglaze-tests-9.0.0+1.tar.gz
+      checksums:
+      - sha256:1ecc5162a6c59a37d80c476fdef641d9a268bfbc123155e9365f806c020c8b5f
   recipe_url: https://cppget.org/libglaze-tests
 - id: cppget:libglob
   registry: cppget
@@ -21191,17 +21255,21 @@ packages:
   dependencies:
   - bpkg
   - build2
+  - libspirv-tools
   versions:
-  - version: 16.5.0
+  - version: 16.5.0+1
+    upstream_version: 16.5.0
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
     - name: build2
+    - name: libspirv-tools
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/glslang/libglslang-16.5.0.tar.gz
+      url: https://pkg.cppget.org/1/testing/glslang/libglslang-16.5.0+1.tar.gz
       checksums:
-      - sha256:debb48e84334a599e0d622ddbfca8a3891b47aecb54e53f00962da48c2516a32
+      - sha256:52dc107de7f508394a65b64830c4e6d0911591306092b0a63e7c06126f4e798b
   recipe_url: https://cppget.org/libglslang
 - id: cppget:libhalf
   registry: cppget
@@ -25682,6 +25750,37 @@ packages:
       checksums:
       - sha256:298fcc76a2007780a928145370d8f539de46cb7bf2011346e6bebf983d735e5b
   recipe_url: https://cppget.org/libjpeg-turbo
+- id: cppget:libjsoncpp
+  registry: cppget
+  name: libjsoncpp
+  summary: JSON parsing and serialization C++ library
+  description: <p>JSON is a lightweight data-interchange format. It can represent numbers, strings, ordered sequences of values, and collections of name/value pairs.</p><p>JsonCpp is a C++ library that allows manipulating JSON values, including serialization and deserialization to and from strings. It can also preserve existing comment in deserialization/serialization steps, making it a\ convenient format to store user input files.</p>
+  description_format: html
+  licenses:
+  - MIT
+  - 'other: public domain'
+  homepage: https://github.com/open-source-parsers/jsoncpp
+  repository_url: https://github.com/open-source-parsers/jsoncpp
+  topics:
+  - json parsing serialization
+  - json parsing, json serialization
+  languages:
+  - c++
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.9.8
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/jsoncpp/libjsoncpp-1.9.8.tar.gz
+      checksums:
+      - sha256:25d2f96330bea057654915ca8b802f23057077d15f74a4fadee13af80fe600f7
+  recipe_url: https://cppget.org/libjsoncpp
 - id: cppget:liblager
   registry: cppget
   name: liblager
@@ -25990,6 +26089,17 @@ packages:
       url: https://pkg.cppget.org/1/stable/md4c/libmd4c-0.4.8.tar.gz
       checksums:
       - sha256:8c48151d8aa4846f1db9ea9838e10cdbfc0f344a8893cf54803abb1a74924e66
+  - version: 0.6.0
+    channel: testing
+    description: '<p>Home: https://github.com/mity/md4c</p><p>Wiki: https://github.com/mity/md4c/wiki</p>'
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/md4c/libmd4c-0.6.0.tar.gz
+      checksums:
+      - sha256:1d0081888f8bc816e01cecbdcbcee7824d823ddd5bd80f98173121453df608ea
   recipe_url: https://cppget.org/libmd4c
 - id: cppget:libmeshoptimizer
   registry: cppget
@@ -27599,9 +27709,9 @@ packages:
   - libavutil
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -27610,9 +27720,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libpostproc-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libpostproc-7.0.2+8.tar.gz
       checksums:
-      - sha256:49cfb8a016f734da09c94179e6cd165137a569ad6683f817f9c8d6d60bb38496
+      - sha256:ae456a531f99bf609cf533850d74c03c60b43f4173cf10a1089d61b9c621ed70
   recipe_url: https://cppget.org/libpostproc
 - id: cppget:libpq
   registry: cppget
@@ -28429,7 +28539,9 @@ packages:
   - build2
   - libspirv-headers
   versions:
-  - version: 1.4.357
+  - version: 1.4.357+1
+    upstream_version: 1.4.357
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
@@ -28437,9 +28549,9 @@ packages:
     - name: libspirv-headers
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/spirv-tools/libspirv-tools-1.4.357.tar.gz
+      url: https://pkg.cppget.org/1/testing/spirv-tools/libspirv-tools-1.4.357+1.tar.gz
       checksums:
-      - sha256:dca5c1278981109294b134bc79b84e7ed35934a6eabfd3b635d78f00e7dc78fa
+      - sha256:28c2a2bb544128dc311f1d83e4925f78c6016f81a01bbcc5162fa4d6cd9a4cbd
   recipe_url: https://cppget.org/libspirv-tools
 - id: cppget:libsqlite3
   registry: cppget
@@ -28884,9 +28996,9 @@ packages:
   - libswscale
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -28896,9 +29008,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libswresample-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libswresample-7.0.2+8.tar.gz
       checksums:
-      - sha256:fb412dfb17e64231305a4653e6251a272623fcfaa02f64e561719b0a4b26149d
+      - sha256:f62a930d95be965df7b80f4673ffb52cd092ed47662bcf945b41e43b036985bf
   recipe_url: https://cppget.org/libswresample
 - id: cppget:libswscale
   registry: cppget
@@ -28917,9 +29029,9 @@ packages:
   - libavutil
   - nasm
   versions:
-  - version: 7.0.2+6
+  - version: 7.0.2+8
     upstream_version: 7.0.2
-    packaging_revision: '6'
+    packaging_revision: '8'
     channel: testing
     dependencies:
     - name: bpkg
@@ -28928,9 +29040,9 @@ packages:
     - name: nasm
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/FFmpeg/libswscale-7.0.2+6.tar.gz
+      url: https://pkg.cppget.org/1/testing/FFmpeg/libswscale-7.0.2+8.tar.gz
       checksums:
-      - sha256:343164ecb0b5e303edf43efde4aee2967f7398c12969668c4b5f8608b36e5830
+      - sha256:ca05fa040b8c73727b380766db03f60865d0e4e02248e12e1c9c9acb9aac9157
   recipe_url: https://cppget.org/libswscale
 - id: cppget:libtaskflow
   registry: cppget
@@ -29715,9 +29827,9 @@ packages:
   - libvulkan-headers
   - vulkan-loader-asm-offset
   versions:
-  - version: 1.4.359+2
+  - version: 1.4.359+4
     upstream_version: 1.4.359
-    packaging_revision: '2'
+    packaging_revision: '4'
     channel: testing
     dependencies:
     - name: bpkg
@@ -29727,9 +29839,9 @@ packages:
     - name: vulkan-loader-asm-offset
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/vulkan-loader/libvulkan-loader-1.4.359+2.tar.gz
+      url: https://pkg.cppget.org/1/testing/vulkan-loader/libvulkan-loader-1.4.359+4.tar.gz
       checksums:
-      - sha256:25d528f17e14e169e80f7bd398d667d9f9b4363fcdeae3db42d2ac3d744ee1d1
+      - sha256:dbb5f7cdcfcb982df18ab62c5428f8be26991ad7b42aa25a52b3ea183c3cf784
   recipe_url: https://cppget.org/libvulkan-loader
 - id: cppget:libvulkan-meta
   registry: cppget
@@ -31113,16 +31225,18 @@ packages:
   - bpkg
   - build2
   versions:
-  - version: 2.16.3
+  - version: 2.16.3+1
+    upstream_version: 2.16.3
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
     - name: build2
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/nasm/nasm-2.16.3.tar.gz
+      url: https://pkg.cppget.org/1/testing/nasm/nasm-2.16.3+1.tar.gz
       checksums:
-      - sha256:ef243aa85973cbdcbb846ff50d23974e3f19a4652f16e9dbe3eda9ea0253d6a5
+      - sha256:2068a2c3066b6ea7cdab81c0387409dba8e06e0609d5276dad94a6762b33d85a
   recipe_url: https://cppget.org/nasm
 - id: cppget:nlohmann-json
   registry: cppget
@@ -33010,7 +33124,9 @@ packages:
   - libspirv-headers
   - libspirv-tools
   versions:
-  - version: 1.4.357
+  - version: 1.4.357+1
+    upstream_version: 1.4.357
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
@@ -33019,9 +33135,9 @@ packages:
     - name: libspirv-tools
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/spirv-tools/spirv-tools-1.4.357.tar.gz
+      url: https://pkg.cppget.org/1/testing/spirv-tools/spirv-tools-1.4.357+1.tar.gz
       checksums:
-      - sha256:dc99194da9c49d0ead59cd0ac698273a9d7c1ab11455efdf504cbb87b67189d2
+      - sha256:66de0aa20991d22efde057f0e5f41d870f1eb5f23c9d94382d1f9581733e8236
   recipe_url: https://cppget.org/spirv-tools
 - id: cppget:sqlite3
   registry: cppget
@@ -34360,9 +34476,9 @@ packages:
   - build2
   - libvulkan-headers
   versions:
-  - version: 1.4.359+2
+  - version: 1.4.359+4
     upstream_version: 1.4.359
-    packaging_revision: '2'
+    packaging_revision: '4'
     channel: testing
     dependencies:
     - name: bpkg
@@ -34370,9 +34486,9 @@ packages:
     - name: libvulkan-headers
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/vulkan-loader/vulkan-loader-asm-offset-1.4.359+2.tar.gz
+      url: https://pkg.cppget.org/1/testing/vulkan-loader/vulkan-loader-asm-offset-1.4.359+4.tar.gz
       checksums:
-      - sha256:ad601a8a5d7434fc71dd3ce4479152a90bd059bf01f9e34be1bbf6e9b3cd35d9
+      - sha256:9f10b61fd3db3fa28d724a598bdd266a6a0889983ea1149bcccf339799d0cca7
   recipe_url: https://cppget.org/vulkan-loader-asm-offset
 - id: cppget:websocketpp
   registry: cppget

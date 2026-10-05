@@ -63,6 +63,11 @@ entities:
   aliases: []
   packages:
   - conan:aaplus
+- id: aargh
+  name: aargh
+  aliases: []
+  packages:
+  - xmake:aargh
 - id: abacus
   name: abacus
   aliases: []
@@ -6824,10 +6829,12 @@ entities:
   packages:
   - hunter:ClangToolsExtra
 - id: clap-cleveraudio
-  name: clap-cleveraudio
-  aliases: []
+  name: clap
+  aliases:
+  - clap-cleveraudio
   packages:
   - vcpkg:clap-cleveraudio
+  - xmake:clap
 - id: clapack
   name: clapack
   aliases:
@@ -8234,7 +8241,6 @@ entities:
   aliases: []
   packages:
   - conan:cppdap
-  - vcpkg:cppdap
 - id: cppduals
   name: cppduals
   aliases: []
@@ -9044,8 +9050,10 @@ entities:
   - vcpkg:cudnn
 - id: cudnn-frontend
   name: cudnn-frontend
-  aliases: []
+  aliases:
+  - cudnn_frontend
   packages:
+  - bazel:cudnn_frontend
   - vcpkg:cudnn-frontend
 - id: cudss
   name: cudss
@@ -9405,6 +9413,11 @@ entities:
   aliases: []
   packages:
   - spack:daos
+- id: daqp
+  name: daqp
+  aliases: []
+  packages:
+  - bazel:daqp
 - id: darknet
   name: darknet
   aliases: []
@@ -12483,6 +12496,11 @@ entities:
   aliases: []
   packages:
   - conan:fcarouge-kalman
+- id: fcftest
+  name: fcftest
+  aliases: []
+  packages:
+  - vcpkg:fcftest
 - id: fcgi
   name: fcgi
   aliases:
@@ -12650,6 +12668,17 @@ entities:
   aliases: []
   packages:
   - xmake:ffms2
+- id: nv-codec-headers
+  name: ffnvcodec
+  aliases:
+  - ff-nvcodec-headers
+  - nv-codec-headers
+  packages:
+  - bazel:ffnvcodec
+  - conan:nv-codec-headers
+  - meson:ff-nvcodec-headers
+  - vcpkg:ffnvcodec
+  - xmake:nv-codec-headers
 - id: ffr
   name: ffr
   aliases: []
@@ -12890,6 +12919,7 @@ entities:
   - FLAC
   - libflac
   packages:
+  - bazel:flac
   - conan:flac
   - hunter:FLAC
   - meson:flac
@@ -14334,6 +14364,11 @@ entities:
   aliases: []
   packages:
   - spack:gearshifft
+- id: gecode
+  name: gecode
+  aliases: []
+  packages:
+  - xmake:gecode
 - id: gee
   name: gee
   aliases: []
@@ -15803,6 +15838,7 @@ entities:
   name: grep
   aliases: []
   packages:
+  - bazel:grep
   - spack:grep
 - id: grib-util
   name: grib-util
@@ -16346,6 +16382,7 @@ entities:
   name: gzip
   aliases: []
   packages:
+  - bazel:gzip
   - spack:gzip
 - id: gzip-hpp
   name: gzip-hpp
@@ -17625,6 +17662,11 @@ entities:
   aliases: []
   packages:
   - spack:iceauth
+- id: iceberg-cpp
+  name: iceberg-cpp
+  aliases: []
+  packages:
+  - vcpkg:iceberg-cpp
 - id: icecream-cpp
   name: icecream-cpp
   aliases: []
@@ -18182,6 +18224,11 @@ entities:
   packages:
   - conan:innoextract
   - xmake:innoextract
+- id: innosetup
+  name: innosetup
+  aliases: []
+  packages:
+  - xmake:innosetup
 - id: inputproto
   name: inputproto
   aliases: []
@@ -19126,10 +19173,12 @@ entities:
   - xmake:jsoncons
 - id: jsoncpp
   name: jsoncpp
-  aliases: []
+  aliases:
+  - libjsoncpp
   packages:
   - bazel:jsoncpp
   - conan:jsoncpp
+  - cppget:libjsoncpp
   - hunter:jsoncpp
   - meson:jsoncpp
   - spack:jsoncpp
@@ -19998,6 +20047,7 @@ entities:
   name: kokkos
   aliases: []
   packages:
+  - conan:kokkos
   - spack:kokkos
   - xmake:kokkos
 - id: kokkos-fft
@@ -23408,6 +23458,7 @@ entities:
   aliases: []
   packages:
   - vcpkg:libopusenc
+  - xmake:libopusenc
 - id: liboqs
   name: liboqs
   aliases: []
@@ -23923,10 +23974,12 @@ entities:
   - xmake:librdkafka
 - id: librealsense
   name: librealsense
-  aliases: []
+  aliases:
+  - realsense2
   packages:
   - bazel:librealsense
   - conan:librealsense
+  - vcpkg:realsense2
   - xmake:librealsense
 - id: libredwg
   name: libredwg
@@ -24966,6 +25019,11 @@ entities:
   - meson:libvmaf
   - vcpkg:libvmaf
   - xmake:vmaf
+- id: libvncserver
+  name: libvncserver
+  aliases: []
+  packages:
+  - spack:libvncserver
 - id: libvori
   name: libvori
   aliases: []
@@ -26602,6 +26660,7 @@ entities:
   name: lzip
   aliases: []
   packages:
+  - bazel:lzip
   - conan:lzip
 - id: lzma
   name: lzma
@@ -26664,6 +26723,11 @@ entities:
   aliases: []
   packages:
   - spack:macfuse
+- id: mach
+  name: mach
+  aliases: []
+  packages:
+  - vcpkg:mach
 - id: macsio
   name: macsio
   aliases: []
@@ -27276,6 +27340,10 @@ entities:
   aliases: []
   packages:
   - conan:md4qt
+- id: md4qt-e7b52a4d
+  name: md4qt
+  aliases: []
+  packages:
   - xmake:md4qt
 - id: md5
   name: md5
@@ -30708,16 +30776,6 @@ entities:
   aliases: []
   packages:
   - spack:nut
-- id: nv-codec-headers
-  name: nv-codec-headers
-  aliases:
-  - ff-nvcodec-headers
-  - ffnvcodec
-  packages:
-  - conan:nv-codec-headers
-  - meson:ff-nvcodec-headers
-  - vcpkg:ffnvcodec
-  - xmake:nv-codec-headers
 - id: nvapi
   name: nvapi
   aliases: []
@@ -32409,11 +32467,13 @@ entities:
   - xmake:libopus
 - id: opusfile
   name: opusfile
-  aliases: []
+  aliases:
+  - libopusfile
   packages:
   - conan:opusfile
   - hunter:opusfile
   - vcpkg:opusfile
+  - xmake:libopusfile
 - id: or-tools
   name: or-tools
   aliases:
@@ -38313,6 +38373,11 @@ entities:
   aliases: []
   packages:
   - spack:py-ansiwrap
+- id: py-anthropic
+  name: py-anthropic
+  aliases: []
+  packages:
+  - spack:py-anthropic
 - id: py-antimeridian
   name: py-antimeridian
   aliases: []
@@ -41156,6 +41221,11 @@ entities:
   aliases: []
   packages:
   - spack:py-deprecation-alias
+- id: py-depyf
+  name: py-depyf
+  aliases: []
+  packages:
+  - spack:py-depyf
 - id: py-derivative
   name: py-derivative
   aliases: []
@@ -41221,6 +41291,11 @@ entities:
   aliases: []
   packages:
   - spack:py-dipy
+- id: py-dirscape
+  name: py-dirscape
+  aliases: []
+  packages:
+  - spack:py-dirscape
 - id: py-dirtyjson
   name: py-dirtyjson
   aliases: []
@@ -42681,6 +42756,11 @@ entities:
   aliases: []
   packages:
   - spack:py-gffutils
+- id: py-gguf
+  name: py-gguf
+  aliases: []
+  packages:
+  - spack:py-gguf
 - id: py-ghp-import
   name: py-ghp-import
   aliases: []
@@ -43046,6 +43126,11 @@ entities:
   aliases: []
   packages:
   - spack:py-grpcio
+- id: py-grpcio-reflection
+  name: py-grpcio-reflection
+  aliases: []
+  packages:
+  - spack:py-grpcio-reflection
 - id: py-grpcio-status
   name: py-grpcio-status
   aliases: []
@@ -44417,6 +44502,11 @@ entities:
   aliases: []
   packages:
   - spack:py-kosh
+- id: py-kraken-biom
+  name: py-kraken-biom
+  aliases: []
+  packages:
+  - spack:py-kraken-biom
 - id: py-krb5
   name: py-krb5
   aliases: []
@@ -46366,6 +46456,11 @@ entities:
   aliases: []
   packages:
   - spack:py-openai
+- id: py-openai-harmony
+  name: py-openai-harmony
+  aliases: []
+  packages:
+  - spack:py-openai-harmony
 - id: py-openai-whisper
   name: py-openai-whisper
   aliases: []
@@ -47656,6 +47751,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pyautogui
+- id: py-pybase64
+  name: py-pybase64
+  aliases: []
+  packages:
+  - spack:py-pybase64
 - id: py-pybedtools
   name: py-pybedtools
   aliases: []
@@ -48326,6 +48426,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pymatgen-core
+- id: py-pymatgen-db
+  name: py-pymatgen-db
+  aliases: []
+  packages:
+  - spack:py-pymatgen-db
 - id: py-pymatreader
   name: py-pymatreader
   aliases: []
@@ -48336,6 +48441,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pymbolic
+- id: py-pymc
+  name: py-pymc
+  aliases: []
+  packages:
+  - spack:py-pymc
 - id: py-pymc3
   name: py-pymc3
   aliases: []
@@ -49621,6 +49731,11 @@ entities:
   aliases: []
   packages:
   - spack:py-qdldl
+- id: py-qiskit
+  name: py-qiskit
+  aliases: []
+  packages:
+  - spack:py-qiskit
 - id: py-qiskit-aer
   name: py-qiskit-aer
   aliases: []
@@ -50461,6 +50576,11 @@ entities:
   aliases: []
   packages:
   - spack:py-scitokens
+- id: py-scmver
+  name: py-scmver
+  aliases: []
+  packages:
+  - spack:py-scmver
 - id: py-scooby
   name: py-scooby
   aliases: []
@@ -51488,6 +51608,11 @@ entities:
   aliases: []
   packages:
   - spack:py-stevedore
+- id: py-stim
+  name: py-stim
+  aliases: []
+  packages:
+  - spack:py-stim
 - id: py-stomp-py
   name: py-stomp-py
   aliases: []
@@ -61121,11 +61246,6 @@ entities:
   aliases: []
   packages:
   - vcpkg:realm-core
-- id: realsense2
-  name: realsense2
-  aliases: []
-  packages:
-  - vcpkg:realsense2
 - id: rebound
   name: rebound
   aliases: []
@@ -62582,6 +62702,16 @@ entities:
   aliases: []
   packages:
   - bazel:rules_bison
+- id: rules-bittorrent
+  name: rules_bittorrent
+  aliases: []
+  packages:
+  - bazel:rules_bittorrent
+- id: rules-bound
+  name: rules_bound
+  aliases: []
+  packages:
+  - bazel:rules_bound
 - id: rules-browsers
   name: rules_browsers
   aliases: []
@@ -64881,6 +65011,7 @@ entities:
   name: sheenbidi
   aliases: []
   packages:
+  - bazel:sheenbidi
   - spack:sheenbidi
   - vcpkg:sheenbidi
   - xmake:sheenbidi
@@ -68653,6 +68784,7 @@ entities:
   aliases:
   - libtinyexr
   packages:
+  - bazel:tinyexr
   - conan:tinyexr
   - cppget:libtinyexr
   - hunter:tinyexr
@@ -70641,6 +70773,7 @@ entities:
   packages:
   - conan:vectorscan
   - vcpkg:vectorscan
+  - xmake:vectorscan
 - id: vegas2
   name: vegas2
   aliases: []
@@ -71200,6 +71333,11 @@ entities:
   aliases: []
   packages:
   - hunter:vurtun-lib
+- id: vvdec
+  name: vvdec
+  aliases: []
+  packages:
+  - vcpkg:vvdec
 - id: vvenc
   name: vvenc
   aliases: []
@@ -71475,7 +71613,13 @@ entities:
   name: wget
   aliases: []
   packages:
+  - bazel:wget
   - spack:wget
+- id: wget2
+  name: wget2
+  aliases: []
+  packages:
+  - bazel:wget2
 - id: wgl
   name: wgl
   aliases: []
@@ -73564,6 +73708,7 @@ entities:
   aliases: []
   packages:
   - conan:zimg
+  - vcpkg:zimg
   - xmake:zimg
 - id: zimpl
   name: zimpl

@@ -1,5 +1,166 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: 9BpVjPKv02s
+  title: 'Rust & C++: What We Learned Building Our Own APIs'
+  url: https://www.youtube.com/watch?v=9BpVjPKv02s
+  published: 2026-10-03 12:00:14+00:00
+  updated: 2026-10-05 08:24:19+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    One Lib to Rule Them All and in the Darkness bindgen… - Antonello Palazzi & Kay Hicketts - ACCU on Sea 2026
+
+    ---
+
+
+    Have you ever wondered what’s going on underneath the covers of your favourite programming languages? As it turns out, language interop is an excellent (although sometimes painful) way to learn about that.
+
+
+    The speakers discovered this after creating APIs for their engineering team''s Generically Useful Library in a couple of different programming languages. They’ll talk about why they chose bindings for this project vs the alternatives, how objects are managed at each layer and the associated complexities. They’ll also show some very detailed examples of language implementation differences (specifically for our Rust→C++ API) and what that means for bindings.
+
+
+    Whether you’re already in a bind with bindings or you’re tinkering around in a similarly low level problem space, this talk will help guide you on an interesting journey through the layers and point out some of the potential booby traps so you don’t encounter them on your own.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Kay Hicketts
+
+
+    Kay Hicketts was an electronic engineer in a previous life but moved to Bloomberg in 2008 where she was reborn as a software developer She has dabbled with Rust, Java and Python but considers C++ to be her mother tongue. She works in a systems infrastructure team that provides generically re-usable libraries for the company''s more than 9,000 engineers. Recently, her team wrote a library that acts as an effective distributed lock for resources across a network, which is now used by hundreds of applications across the firm. Kay earned a Bachelor''s degree in electrical & electronic engineering from Brunel University.
+
+
+    Antonello Palazzi
+
+
+    A nuclear engineer by training, Antonello converted to the joys of software engineering thanks to scientific computing. An adopted Londoner, Antonello has a love and hate relationship with C++ (who doesn''t), a deep fondness for Rust, and a forbidden fascination with C. He works at Bloomberg in a systems infrastructure engineering team that provides generically re-usable libraries for the company''s more than 9,000 engineers. Recently, his team wrote a library that acts as an effective distributed lock for resources across a network, which is now used by hundreds of applications across the firm. Antonello earned a master''s degree in nuclear engineering from Università degli Studi di Roma La Sapienza and a doctorate in nuclear engineering from Imperial College London. When not swearing against a blinking cursor, Antonello enjoys judo, cats and a crisp pint.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/9BpVjPKv02s/hqdefault.jpg
+- video_id: bAsJvmtYZOg
+  title: Design Patterns - The Most Common Misconceptions (3 of N) - Klaus Iglberger - ACCU 2026
+  url: https://www.youtube.com/watch?v=bAsJvmtYZOg
+  published: 2026-10-01 13:27:03+00:00
+  updated: 2026-10-03 01:13:47+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Design Patterns - The Most Common Misconceptions (3 of N) - Klaus Iglberger - ACCU on Sea 2026
+
+    ---
+
+
+    Design patterns are everywhere, as they are the key to managing dependencies between software entities. Thus knowledge about these is an essential part of every programmers toolbox. But despite their fundamental importance, there are some common misconceptions about them, in particular about several of the most often used design patterns.
+
+
+    In this talk, we’ll take a close look at the Decorator and Adapter design patterns. Both are very commonly used — there are for instance various applications within the C++ standard library — and both have clearly defined applications and responsibilities. However, since they are structurally similar, they are often confused — even in the standard library.
+
+
+    In this talk we’ll shed some light on these two design patterns and their misconceptions. We’ll see several examples of them, also within the C++ standard library, and learn how to properly distinguish between them.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Klaus Iglberger
+
+
+    Klaus Iglberger is a freelance C++ trainer and consultant. He shares his expertise in popular C++ courses — from beginner to advanced — all around the world. He is the author of “C++ Software Design” [1], one of the organizers of the Munich C++ user group [2], and the (co-)organizer of the Back-to-Basics [3] and Software Design [4] tracks at CppCon [5].
+
+
+    [1] https://learning.oreilly.com/library/view/c-software-design/9781098113155/ [2] https://www.meetup.com/MUCplusplus/ [3] https://cppcon.org/b2b/ [4] https://cppcon.org/softwaredesign/ [5] https://cppcon.org
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/bAsJvmtYZOg/hqdefault.jpg
+- video_id: ttoQfPP_Gkg
+  title: Refactoring Towards Structured Concurrency - Roi Barkan - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=ttoQfPP_Gkg
+  published: 2026-09-28 11:54:14+00:00
+  updated: 2026-09-30 12:22:27+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nRefactoring Towards Structured Concurrency - Roi Barkan - ACCU on Sea 2026\n---\n\nThe addition of \"Senders and Receivers\" (a.k.a execution) to C++26 is a nudge for C++ practitioners to consider utilizing Structured Concurrency princinples when designing and implementing concurrent systems. Structured Concurrency is a well reasoned methodology, described by various C++ experts in the past, focused on composability, wide applicability, error tollerance and on correct fit with the rest of the language, most notably C++20 coroutines. The challenge that we'll face in this talk is that of taking existing concurrent and systems which were not originally designed with Structured Concurrency in mind, and making the gradual changes towards that design and towards more natural use of senders, receivers and coroutines. Join me in a tour of various techniques and tips for modernizing legacy concurrent systems, as we prepare for\
+    \ adopting the C++26 standard. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nRoi Barkan\n\nProfessional software developer and architect since 2000, Roi's main focus throughout his career was on high performance and distributed systems, implementing complex and innovative algorithms. Roi is the SVP technologies of Istra Research, where he helps creating low latency financial systems. Prior to working for Istra Research, Roi spent 12 years in software development, architecture and management in the IT Security field. Roi received his B.A in Computer Science with high honors from the Technion in Israel, and his executive MBA from Tel Aviv University.\n\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU on Sea Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages,\
+    \ tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming\
+    \ #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i1.ytimg.com/vi/ttoQfPP_Gkg/hqdefault.jpg
 - video_id: dr1kiPXIwcc
   title: Postmodern Programming - Tony Van Eerd - ACCU 2026
   url: https://www.youtube.com/watch?v=dr1kiPXIwcc

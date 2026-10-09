@@ -1,5 +1,151 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: KB5Nfofgu2k
+  title: Senders For Existing Asynchronous Interfaces - Dietmar Kühl - C++Now 2026
+  url: https://www.youtube.com/watch?v=KB5Nfofgu2k
+  published: 2026-10-04 15:00:03+00:00
+  updated: 2026-10-04 15:00:04+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Senders For Existing Asynchronous Interfaces - Dietmar Kühl - C++Now 2026
+
+    ---
+
+
+    C++26 specifies an interface for asynchronous operations. Previous presentations have shown how to utilize such interfaces to compose work based on concurrent computations and use native sender interfaces to deal with networking. Since there were asynchronous interfaces that predated the C++ interface, it is desirable to integrate these into the new ecosystem. This presentation shows how to take an existing asynchronous interface and add a sender interface for full integration with std::execution.
+
+
+    My concrete plan is to combine a networking interface for HTTP requests with a PostgreSQL database to respond to these requests. The whole system is meant to use one thread to service multiple clients concurrently, making non-blocking requests to the database to keep the overall system responsive. This approach will show how to expose the existing interface using senders to compose the overall application.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Senders_for_Existing_Asynchronous_Interfaces.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Dietmar Kühl
+
+
+    Dietmar Kühl is a senior software developer at Bloomberg, where he works on the data distribution environment used both internally and by enterprise installations at clients. Before joining Bloomberg, he did consulting for software projects mainly in the finance sector. He is a regular attendee of the ANSI/ISO C++ standards committee (WG21) and presents at conferences. He used to be a moderator of the newsgroup comp.lang.c++.moderated and frequently answers questions on Stack Overflow.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/KB5Nfofgu2k/hqdefault.jpg
+- video_id: 96AGjm3uwko
+  title: SPL - Open Source, Constexpr Library for Composing Algorithms - John Bandela - C++Now 2026
+  url: https://www.youtube.com/watch?v=96AGjm3uwko
+  published: 2026-10-02 19:18:21+00:00
+  updated: 2026-10-04 22:00:08+00:00
+  description: "https://www.cppnow.org\n---\n\nSPL - Open Source, Constexpr Library for Composing Algorithms - John Bandela - C++Now 2026\n---\n\nIs std::ranges the best way to compose operations on ranges?\n\nWhat if instead of basing composition on a generalization of ＜iterator＞, we instead based composition on a generalization of ＜algorithm＞?\n\nWhat if there was a library that was open source and constexpr, and based on the experience of using this approach for years in production?\n\nCome and learn about SPL - a new open source library that allows you to compose algorithms.\n\nWe will look at some of the issues C++ developers have noticed with std::ranges when used for algorithm composition.\n\nNext, we will examine engineering tradeoffs where we can trade the flexibility of std::ranges for improved memory safety and composability.\n\nThis talk will focus on practical uses of this composability such as zipping multiple streams of data, aggregations, and monadic error handling.\n\nFinally,\
+    \ we will delve into the implementation of SPL and discuss how it can be extended.\n---\n\nSlides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/SPL.pdf \n\nthink-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech\n---\n\nJohn Bandela\n\nLoves working with C++. T-Rex Trainer\n---\n\nC++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.\nAnnual CppNow Conference - https://www.cppnow.org\nhttps://www.linkedin.com/company/cppnow\nhttps://twitter.com/cppnow\n\
+    https://www.facebook.com/CppNow\nhttps://www.reddit.com/r/CppNow\nhttps://mastodon.social/@cppnow\nVideo Sponsors: Bloomberg\n---\n\nVideos Filmed & Edited By Bash Films: https://bashfilms.com/\nYouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i2.ytimg.com/vi/96AGjm3uwko/hqdefault.jpg
+- video_id: ZBXHPKVCa8E
+  title: What Every C++ Programmer Needs to Know About AI - Jody Hagins - C++Now 2026
+  url: https://www.youtube.com/watch?v=ZBXHPKVCa8E
+  published: 2026-09-29 15:00:30+00:00
+  updated: 2026-10-02 14:18:42+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    What Every C++ Programmer Needs to Know About AI - Jody Hagins - C++Now 2026
+
+    ---
+
+
+    Any sufficiently advanced technology is indistinguishable from magic. Unfortunately, so is a decent parlor trick. The whole game with AI is figuring out which one you''re actually looking at.
+
+
+    Generative AI is changing the programming landscape, which is exciting, confusing, useful, over-hyped, and occasionally just plain scary. For C++ programmers, that mix gets even more interesting because our mistakes are rarely decorative. This talk explores what C++ developers actually need to know about AI: the technical risks, the broader human concerns, and the practical techniques that make these tools more helpful and less hazardous.
+
+
+    We will cover correctness and some issues that are particularly important for C++ code, as well as the bigger questions around trust, skill atrophy, hype, and whether faster code generation is really the same thing as better software. The tone will be practical and interactive, with time for Q&A, discussion, and maybe an impromptu panel if the room has opinions (and for a C++ Now audience, I need to be careful or I may not get to speak past the introduction).
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/What_Every_Cpp_Programmer_Needs_to_Know_About_AI.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jody Hagins
+
+
+    Jody Hagins started using C++ back in the mid 1980s, with cfront. In 1993, he enjoyed writing enough C++ support code to enable writing loadable unix device drivers in C++. Since then, he has been applying C++ to various problems within the fintech space.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/ZBXHPKVCa8E/hqdefault.jpg
 - video_id: y0JW63JjkYw
   title: Can C++ Become a Memory Safe Language? - Prabhu Missier - C++Now 2026
   url: https://www.youtube.com/watch?v=y0JW63JjkYw

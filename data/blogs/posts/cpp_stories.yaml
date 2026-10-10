@@ -1,5 +1,12 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: xoHzJowGnKWmTc1m
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Using C++17 std::optional
+  url: https://www.cppstories.com/2018/05/using-optional/
+  published: 2026-09-28 00:00:00+00:00
+  description: Let’s take a pair of two types <YourType, bool> - what can you do with such composition? In this article, I’ll describe std::optional - a helper “vocabulary” type added in C++17. It’s a wrapper that either contains a value of your type or is empty. Let’s see where it can be usef…
 - post_id: pyDL_XdhwNrYnap5
   source_id: cpp_stories
   source_title: C++ Stories

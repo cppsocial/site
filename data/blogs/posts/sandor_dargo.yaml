@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: JSMqRfXf5NLgdBmH
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26: the new debugging header'
+  url: https://www.sandordargo.com/blog/2026/09/30/cpp26-debugging
+  published: 2026-09-29 22:00:00+00:00
+  updated: 2026-09-29 22:00:00+00:00
+  description: 'If you’ve ever needed to hit a breakpoint programmatically in C++, you’ve probably written something like this: #if defined(_MSC_VER) __debugbreak(); #elif defined(__clang__) __builtin_debugtrap(); #elif defined(__GNUC__) && (defined(__i386__) || defined(__x86_64__)) __asm__ vol…'
+  tags:
+  - dev
 - post_id: aAeb1trQ43GwBrIT
   source_id: sandor_dargo
   source_title: Sandor Dargo's Blog

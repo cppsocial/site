@@ -337,7 +337,7 @@ def _package_data(config: SiteConfig) -> tuple[list[dict], list[dict], list[str]
             raise TypeError(f"{path}: packages must be a list")
         catalogs[path.stem] = [
             item
-            for item in packages
+            for item in _catalog_packages(document)
             if item.get("id") not in ignored
             and not item.get("id", "").startswith(ignored_prefixes)
         ]
@@ -371,6 +371,20 @@ def _package_data(config: SiteConfig) -> tuple[list[dict], list[dict], list[str]
         )
     summaries, details = browser_records(master, catalogs, overrides.get("preferences"))
     return summaries, details, sorted(catalogs)
+
+
+def _catalog_packages(document: dict) -> list[dict]:
+    """Expand catalog-level repository data for browser-facing package links."""
+    repository = str(document.get("repository") or "").rstrip("/")
+    revision = str(document.get("revision") or "HEAD")
+    result = []
+    for raw in document.get("packages", []):
+        item = dict(raw)
+        recipe_path = item.pop("recipe_path", None)
+        if repository and recipe_path:
+            item["recipe_url"] = f"{repository}/blob/{revision}/{recipe_path}"
+        result.append(item)
+    return result
 
 
 def _tracked_update(

@@ -1,0 +1,177 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: pyDL_XdhwNrYnap5
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'C++26: Standard Library Hardening Experiments'
+  url: https://www.cppstories.com/2026/hardening-experiments/
+  published: 2026-08-30 00:00:00+00:00
+  description: “Hardening” seems to be a very popular term in the C++ World in 2026. In this article we’ll explore what this word means and see some core examples. Can a hardened library make C++ fully safe? Let’s find out. The Core Idea When you learned about std::vector you may remember that…
+- post_id: UWuLYuR2bTaBnjXM
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Understanding std::counting_semaphore and std::binary_semaphore from C++20
+  url: https://www.cppstories.com/2026/semaphore/
+  published: 2026-08-08 00:00:00+00:00
+  description: 'This article explains the two semaphore types introduced in C++20: std::counting_semaphore and std::binary_semaphore . We’ll first use a counting semaphore to limit how many threads can operate at the same time. Then we’ll use a binary semaphore to send a signal between threads.…'
+- post_id: xihPAAEk2gwgMTgl
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: How to join or concat ranges, C++26
+  url: https://www.cppstories.com/2025/join_concat_ranges/
+  published: 2026-05-16 00:00:00+00:00
+  description: Modern C++ continuously improves its range library to provide more expressive, flexible, and efficient ways to manipulate collections. Usually, when you wanted to concatenate or flatten ranges, you’d use raw loops or custom algorithms. With C++’s range adaptors, we now have an e…
+- post_id: 5HRpUHVzhB_zIbBQ
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 15 Different Ways to Filter Containers in Modern C++
+  url: https://www.cppstories.com/2021/filter-cpp-containers/
+  published: 2026-05-03 00:00:00+00:00
+  description: Do you know how many ways we can implement a filter function in C++? While the problem is relatively easy to understand - take a container, copy elements that match a predicate, and return a new container - it’s good to exercise with the C++ Standard Library and check a few idea…
+- post_id: 9HGmt19vNd2Vw5hL
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Understanding std::shared_mutex from C++17
+  url: https://www.cppstories.com/2026/shared_mutex/
+  published: 2026-02-14 00:00:00+00:00
+  description: In this article, we’ll start with a basic example using std::mutex , look at its limitations, and then introduce std::shared_mutex , a reader-writer mutex added in C++17. Even in 2026, with many new concurrency features available, std::shared_mutex is still a valuable and practi…
+- post_id: 6YmJ68mqCn_gKtad
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: IIFE for Complex Initialization
+  url: https://www.cppstories.com/2016/11/iife-for-complex-initialization/
+  published: 2026-01-24 00:00:00+00:00
+  description: What do you do when the code for a variable initialization is complicated? Do you move it to another method or write inside the current scope? In this blog post, I’d like to present a trick that allows computing a value for a variable, even a const variable, with a compact notat…
+- post_id: x9kNS2gC-Yug2iAG
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 7 Practical std::chrono Calendar Examples (C++20)
+  url: https://www.cppstories.com/2025/chrono-calendar-examples/
+  published: 2025-12-30 00:00:00+00:00
+  description: 'This article collects small, self-contained, and practical examples for working with std::chrono calendar types. The previous blog post - see Exploring C++20 std::chrono - Calendar Types - C++ Stories - focused on the building blocks: calendar types, operators, and arithmetic ru…'
+- post_id: SOC2aYJ27V7d_zmd
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Exploring C++20 std::chrono - Calendar Types
+  url: https://www.cppstories.com/2025/chrono-calendar-types/
+  published: 2025-12-27 00:00:00+00:00
+  description: Before C++20, <chrono> gave us a solid foundation for working with clocks, durations, and time points - but it didn’t really know anything about the civil calendar. If you needed to represent “March 15”, check whether a date is valid, compute “the third Monday of November”, or a…
+- post_id: wpOotdne7v4WyxTy
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'C++ Templates: How to Iterate through std::tuple: C++26 Packs and Expansion Statements'
+  url: https://www.cppstories.com/2025/tuple-iteration-cpp26/
+  published: 2025-10-12 00:00:00+00:00
+  description: In part 1 of this mini-series, we looked at the basics of iterating over a std::tuple using index_sequence and fold expressions. In part 2 , we simplified things with std::apply and even created helpers like for_each_tuple and transform_tuple . So far, we used C++ features up to…
+- post_id: oaXILenov4EnADCV
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'C++ Templates: How to Iterate through std::tuple: std::apply and More'
+  url: https://www.cppstories.com/2022/tuple-iteration-apply/
+  published: 2025-09-21 00:00:00+00:00
+  description: In the previous article on the tuple iteration, we covered the basics. As a result, we implemented a function template that took a tuple and could nicely print it to the output. There was also a version with operator << . Today we can go further and see some other techniques. Th…
+- post_id: j6bkrLLgfG7pVTs3
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Structured bindings in C++17, 8 years later
+  url: https://www.cppstories.com/2025/structured-bindings-cpp26-updates/
+  published: 2025-08-31 00:00:00+00:00
+  description: Structured binding is a C++17 feature that allows you to bind multiple variables to the elements of a structured object, such as a tuple or struct. This can make your code more concise and easier to read, especially when working with complex data structures. On this blog, we alr…
+- post_id: 7Rx3Z8lYr-r5d_eE
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: How to Avoid Thread-Safety Cost for Functions' static Variables
+  url: https://www.cppstories.com/2025/thread_safety_function_statics/
+  published: 2025-08-23 00:00:00+00:00
+  description: In this blog post, we’ll look at static variables defined in a function scope. We’ll see how they are implemented and how to use them. What’s more, we’ll discuss several cases where we can avoid extra thread-safety cost. Let’s start. Introduction As you may know, C++ offers a wa…
+- post_id: 6M_aS66Whw7_8luo
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: How to Split Ranges in C++23
+  url: https://www.cppstories.com/2025/ranges_split_chunk/
+  published: 2025-05-16 00:00:00+00:00
+  description: 'In this blog post, we’ll continue looking at ranges and this time explore ways to split them into sub-ranges. So we’ll take a look at views::split , views::chunk , and views::chunk_by . We’ll walk through two examples for each adaptor: one simple and one slightly more advanced,…'
+- post_id: rGyUAw52J4fB1rED
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Views as Data Members for Custom Iterators
+  url: https://www.cppstories.com/2025/custom_iter_cpp_20_ranges_views/
+  published: 2025-04-22 00:00:00+00:00
+  description: In this blog post, we’ll write an iterator that works with a vector of vectors. We’ll explore a “manual” version as well as leverage C++20 ranges/views to do the hard work. The problem statement What’s the use case? See this popular interview question (found in DailyCodingProble…
+- post_id: 9eRU5mIt0Sfk5Znc
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Details of std::mdspan from C++23
+  url: https://www.cppstories.com/2025/cpp23_mdspan/
+  published: 2025-02-27 00:00:00+00:00
+  description: 'In this article, we’ll see details of std::mdspan, a new view type tailored to multidimensional data. We’ll go through type declaration, creation techniques, and options to customize the internal functionality. Type declaration The type is declared in the following way: template…'
+- post_id: BTswUHjW0ZLn7Cnj
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: Adjacency Matrix and std::mdspan, C++23
+  url: https://www.cppstories.com/2025/cpp23_mdspan_adj/
+  published: 2025-02-11 00:00:00+00:00
+  description: In graph theory, an adjacency matrix is a square matrix used to represent a finite (and usually dense) graph. The elements of the matrix indicate whether pairs of vertices are adjacent or not, and in weighted graphs, they store the edge weights. In many beginner-level tutorials,…
+- post_id: FwQYSyh1DLyKfuY1
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: How to use std::span from C++20
+  url: https://www.cppstories.com/2023/span-cpp20/
+  published: 2025-02-03 00:00:00+00:00
+  description: 'In this article, we’ll look at std::span , which has been available since C++20. This “view” type is more generic than string_view and can help work with arbitrary contiguous collections. Updated in Feb 2025: added section about returning spans and C++26 improvements ( .at() and…'
+- post_id: fx4wHwGg7itsRZZ-
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'Improving Code Safety in C++26: Managers and Dangling References'
+  url: https://www.cppstories.com/2025/cpp26-safety-temp/
+  published: 2025-01-20 00:00:00+00:00
+  description: In this blog post, we’ll explore ways to improve the safety of a simple configuration manager. We’ll handle common pitfalls like dangling references and excessive stack usage. Additionally, we’ll see how C++26 helps enforce safer coding practices with stricter diagnostics and im…
+- post_id: f72MkuIFW-nitCXk
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 8 More C++23 Examples
+  url: https://www.cppstories.com/2024/cpp23_more_examples/
+  published: 2024-12-30 00:00:00+00:00
+  description: In this article, you’ll see eight larger examples that illustrate the changes in C++23. C++23 brings a ton of cool features, as you can see in my two previous articles ( here and here ). So far, we explored each new addition one by one, but I’d like to share more examples that c…
+- post_id: NpFmbZBAVV8wCziU
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: C++23 Library Features and Reference Cards
+  url: https://www.cppstories.com/2024/cpp23_lib/
+  published: 2024-12-08 00:00:00+00:00
+  description: 'In this blog post, you’ll see all C++23 library features! Each with a short description and additional code example. Prepare for a ride! For language features please see the previous article: C++23 Language Features and Reference Cards - C++ Stories Want your own copy to print?…'
+- post_id: bXEOdNuc_YdjqyLf
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: C++23 Language Features and Reference Cards
+  url: https://www.cppstories.com/2024/cpp23_lang/
+  published: 2024-11-17 00:00:00+00:00
+  description: 'C++23 Language Features In this blog post, you’ll see all C++23 language features! Each with short description and additional code example. Prepare for a ride! For library features please see the next article: C++23 Library Features and Reference Cards - C++ Stories Want your ow…'
+- post_id: z9h0Wzz-jbjuRrN5
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'Around the World in C++: Exploring Time Zones with std::chrono'
+  url: https://www.cppstories.com/2024/zones_around_world_chrono/
+  published: 2024-11-10 00:00:00+00:00
+  description: While most time zones use simple hour offsets from UTC, some regions have chosen unusual time differences. In this blog post, we’ll explore how we can discover such zones using C++20’s chrono library. We’ll use GCC 14.2 as it fully supports C++20 chrono and also std::print from…
+- post_id: NYrLsF5u9wnl52S3
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: What is the current time around the world? Utilizing std::chrono with time zones in C++23
+  url: https://www.cppstories.com/2024/chrono_dates_zones/
+  published: 2024-11-03 00:00:00+00:00
+  description: In this blog post, we will explore handling dates using std::chrono , including time zones. We’ll utilize the latest features of the library to retrieve the current time across various time zones, taking into account daylight saving time changes as well. Additionally, we will in…
+- post_id: RuSMoXXJ3YKZfPBW
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'C++ String Conversion: Exploring std::from_chars in C++17 to C++26'
+  url: https://www.cppstories.com/2018/12/fromchars/
+  published: 2024-10-13 00:00:00+00:00
+  description: With the introduction of C++17, the C++ Standard Library expanded its capabilities for converting text to numbers with the addition of std::from_chars . This low-level, high-performance API offers significant advantages over previous methods, such as atoi and stringstream . In t…
+- post_id: bLrq4Uniw_qJhDEd
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: std::initializer_list in C++ 2/2 - Caveats and Improvements
+  url: https://www.cppstories.com/2023/initializer_list_improvements/
+  published: 2024-09-29 00:00:00+00:00
+  description: 'In this article, you’ll learn why std::initializer_list has a bad reputation in C++. Is passing values using it as efficient as “emplace”? How can we use non-copyable types? You’ll also see how to fix some of the problems. Let’s start with the issues first: Updated in Sept 2024:…'

@@ -3,4 +3,15 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: C++ Standard Working Draft
+    icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
+    path: https://github.com/cplusplus/draft
+    description: Latest draft standard LaTeX sources
+  - title: Paper status
+    icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
+    path: https://github.com/cplusplus/papers
+    description: When papers progress through groups, the paper status is updated in this repository
+  - title: wg21.org
+    path: https://wg21.org/
+    description: A volunteer resource by the C++ Alliance with an improved mailing view

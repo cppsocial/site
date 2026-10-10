@@ -4,6 +4,9 @@ id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
 cards:
+  - title: C++ Patterns
+    path: https://cpppatterns.com/
+    description: Small modern C++ examples organized by pattern and language facility
   - title: LearnCpp
     path: https://www.learncpp.com/
     description: LearnCpp.com is a free website devoted to teaching you how to program in modern C++

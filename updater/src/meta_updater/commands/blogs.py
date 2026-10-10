@@ -20,7 +20,7 @@ from ..shared.blogs import (
     sitemap_discovery,
     sitemap_post,
 )
-from ..shared.dataset import YamlDataset
+from ..shared.dataset import YamlDataset, sorted_mapping
 from ..shared.feeds import fetch
 from ..shared.provenance import (
     cancel_provenance_tracking,
@@ -350,6 +350,7 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
             "metadata and visible page."
         ),
         exclude_defaults=True,
+        canonicalize=sorted_mapping,
     )
     post_data = RecentCache(
         output / "posts",

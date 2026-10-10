@@ -16,3 +16,36 @@ cards:
         path: https://web.libera.chat/#c++
       - label: Connection guide
         path: https://libera.chat/guides/connect
+  - community_id: better-cpp
+    metadata_source: { source: discord, key: YWfdM2tctt }
+    title: Better C++
+    platform: discord
+    description: A welcoming C++ community for all skill levels - ask questions, share knowledge and discuss everything C++
+    path: https://discord.gg/YWfdM2tctt
+  - community_id: cpp-discord
+    metadata_source: { source: discord, key: uxuWKB2aNe }
+    title: C++
+    platform: discord
+    path: https://discord.gg/uxuWKB2aNe
+  - community_id: llvm-discord
+    metadata_source: { source: discord, key: 2kQU7PCuys }
+    title: LLVM Discord
+    platform: discord
+    path: https://discord.gg/2kQU7PCuys
+  - community_id: include-cpp
+    metadata_source: { source: discord, key: vSYgpmPrra }
+    title: "#include <C++>"
+    platform: discord
+    description: "#include <C++> is a global, inclusive, and diverse community for developers interested in C++"
+    path: https://discord.gg/vSYgpmPrra
+  - community_id: cpplang-slack
+    metadata_source: { source: web, key: "https://cppalliance.org/slack/" }
+    title: C++ Language Slack
+    platform: slack
+    path: https://cppalliance.org/slack/
+    description: A large multi-channel C++ workspace operated by the C++ Alliance
+  - community_id: beman-discord
+    metadata_source: { source: discord, key: BKpNyJgSbm }
+    title: Beman Project Discord
+    platform: discord
+    path: https://discord.gg/BKpNyJgSbm

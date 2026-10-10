@@ -96,6 +96,7 @@ class RegistryPackage(Schema):
     features: list[PackageFeature] | None = None
     versions: list[PackageVersion] | None = None
     default_version: str | None = None
+    recipe_path: str | None = None
     recipe_url: str | None = None
     native_url: str | None = None
 

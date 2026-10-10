@@ -60,7 +60,7 @@ def channel_metadata(channel_id: str, timeout: float) -> dict[str, Any]:
     return {
         "url": url,
         "description": sanitize_unicode(metadata.get("description", "")).strip(),
-        "keywords": [sanitize_unicode(value) for value in keywords],
+        "keywords": sorted(set(sanitize_unicode(value) for value in keywords)),
         "avatar_url": _image(
             metadata.get("avatar", {}).get("thumbnails", []), 900
         ),
@@ -105,7 +105,9 @@ def channel_videos(channel_id: str, timeout: float) -> list[dict[str, Any]]:
                 else None,
                 "description": sanitize_unicode(entry["description"]),
                 "thumbnail_url": entry["thumbnail_url"],
-                "tags": [sanitize_unicode(value) for value in entry["tags"]],
+                "tags": sorted(
+                    set(sanitize_unicode(value) for value in entry["tags"])
+                ),
             }
         )
     return result
@@ -116,7 +118,9 @@ def normalize_video(item: Any) -> dict[str, Any]:
     for field_name in ("title", "description"):
         if field_name in data:
             data[field_name] = sanitize_unicode(data[field_name])
-    data["tags"] = [sanitize_unicode(value) for value in data.get("tags", [])]
+    data["tags"] = sorted(
+        set(sanitize_unicode(value) for value in data.get("tags", []))
+    )
     for name in ("published", "updated"):
         value = data.get(name)
         if isinstance(value, date) and not isinstance(value, datetime):

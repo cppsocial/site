@@ -4,6 +4,9 @@ id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
 cards:
+  - title: C++ Standards Committee (WG21)
+    path: https://isocpp.org/std/the-committee
+    description: "Overview of the committee's structure"
   - title: C++ Standard Working Draft
     icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
     path: https://github.com/cplusplus/draft

@@ -3,4 +3,10 @@ type: card_group
 id: past-conferences
 title: Past Conferences
 description: Conference series that are no longer running
-cards: []
+cards:
+  - title: CppNorth
+    path: https://cppnorth.ca/
+    description: Toronto C++ conference held from 2022 through 2025; its organizers joined with NDC Conferences to create NDC Toronto in 2026
+    metadata:
+      Location: Toronto, Canada
+      Years active: 2022-2025

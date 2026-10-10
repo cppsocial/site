@@ -8,3 +8,10 @@ cards:
     path: https://lefticus.gitbooks.io/cpp-best-practices/content/
     icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
     description: Collaborative collection of C++ Best Practices
+  - title: LearnCpp
+    path: https://www.learncpp.com/
+    description: LearnCpp.com is a free website devoted to teaching you how to program in modern C++
+  - title: Google C++ Style Guide
+    path: https://google.github.io/styleguide/cppguide.html
+    icon: https://cdn.simpleicons.org/google
+    description: "Google's detailed conventions and engineering guidelines for maintaining large C++ codebases"

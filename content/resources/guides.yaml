@@ -4,6 +4,9 @@ id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
 cards:
+  - title: Abseil C++ Tips of the Week
+    path: https://abseil.io/tips/
+    description: Tips from Google's C++ engineers on language subtleties, API design, readability, and modern C++ practices
   - title: LearnCpp
     path: https://www.learncpp.com/
     description: LearnCpp.com is a free website devoted to teaching you how to program in modern C++

@@ -3,21 +3,17 @@ from typing import Any
 
 from ..shared.text import render_text
 from .common import (
-    REPOSITORIES,
     _class_metadata,
     clean_licenses,
     clean_list,
-    github_url,
     option_value,
     repository_identity,
-    repository_revision,
     scalar_strings,
     source_checksums,
 )
 
 
 def parse_spack(root: Path) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     base = root / "repos" / "spack_repo" / "builtin" / "packages"
     records = []
     for recipe in sorted(base.glob("*/package.py")):
@@ -120,9 +116,7 @@ def parse_spack(root: Path) -> list[dict[str, Any]]:
                 "default_options": default_options,
                 "features": features,
                 "versions": versions,
-                "recipe_url": github_url(
-                    REPOSITORIES["spack"], revision, recipe.relative_to(root)
-                ),
+                "recipe_path": recipe.relative_to(root).as_posix(),
             }
         )
     return records

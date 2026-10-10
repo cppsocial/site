@@ -38,8 +38,8 @@ class ProvenanceTests(unittest.TestCase):
             self.assertEqual(
                 result["source_urls"],
                 [
-                    "https://example.test/feed.xml",
                     "https://example.test/accepted-post",
+                    "https://example.test/feed.xml",
                 ],
             )
 

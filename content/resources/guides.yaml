@@ -4,7 +4,18 @@ id: guides
 title: C++ guides & FAQs
 description: All sorts of resources to improve your code
 cards:
-  - title: Bjarne Stroustrup's C++ FAQ
+  - title: LearnCpp
+    path: https://www.learncpp.com/
+    description: LearnCpp.com is a free website devoted to teaching you how to program in modern C++
+  - title: C++ Core Guidelines
+    path: https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_core_guidelines/cpp_core_guidelines_logo.svg
+    description: A living set of guidelines for modern, safe, and maintainable C++
+  - title: Google C++ Style Guide
+    path: https://google.github.io/styleguide/cppguide.html
+    icon: https://cdn.simpleicons.org/google
+    description: "Google's detailed conventions and engineering guidelines for maintaining large C++ codebases"
+  - title: "Bjarne Stroustrup's C++ FAQ"
     path: https://www.stroustrup.com/bs_faq.html
     icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
     description: Answers about C++ design, history, usage, and common misconceptions from its creator

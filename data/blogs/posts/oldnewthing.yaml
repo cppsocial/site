@@ -1,0 +1,282 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: nw5ASfYdUtwHu2Zq
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why is there no Windows hot-patching support for other architectures like 32-bit ARM and MIPS?
+  url: https://devblogs.microsoft.com/oldnewthing/20261002-00/?p=112753/
+  published: 2026-10-02 14:00:00+00:00
+  description: They either predate hot-patching or never needed it. The post Why is there no Windows hot-patching support for other architectures like 32-bit ARM and MIPS? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: GDYt-XWAC-gOufNX
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Windows on Itanium also provided for hot-patching, in an even simpler way
+  url: https://devblogs.microsoft.com/oldnewthing/20261001-57/?p=112747/
+  published: 2026-10-01 14:00:57+00:00
+  description: Once again, the benefit of fixed-length instructions. The post Windows on Itanium also provided for hot-patching, in an even simpler way appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: LZBDm6q0xYc_nKiR
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Windows on AArch64 also provides for hot-patching, but it’s much simpler than on x86
+  url: https://devblogs.microsoft.com/oldnewthing/20260930-00/?p=112744/
+  published: 2026-09-30 14:00:00+00:00
+  description: Fixed-length instructions makes it a much easier task. The post Windows on AArch64 also provides for hot-patching, but it’s much simpler than on x86 appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: 1vLcz7bcCi-LVZlE
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: As a general rule, calling product support while drunk is not recommended
+  url: https://devblogs.microsoft.com/oldnewthing/20260929-00/?p=112740/
+  published: 2026-09-29 14:00:00+00:00
+  description: Swearing is also poor form. The post As a general rule, calling product support while drunk is not recommended appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: twkF-Y5XI7CUTGtC
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ reminder: Function-local static variables are initialized only once, even if it looks like they get initialized multiple times'
+  url: https://devblogs.microsoft.com/oldnewthing/20260928-00/?p=112738/
+  published: 2026-09-28 14:00:00+00:00
+  description: 'Only on first execution. The post C++ reminder: Function-local static variables are initialized only once, even if it looks like they get initialized multiple times appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: kjeDtjQXcS0HKuFv
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'Debugging walkthrough: Access violation on nonsense instruction, episode 3'
+  url: https://devblogs.microsoft.com/oldnewthing/20260925-00/?p=112731/
+  published: 2026-09-25 14:00:00+00:00
+  description: 'Trying to figure out what the interloper was trying to. The post Debugging walkthrough: Access violation on nonsense instruction, episode 3 appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: K4gx_rKQdlGM-IHa
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: No, really, you need to pass all unhandled messages to DefWindowProc, part 2
+  url: https://devblogs.microsoft.com/oldnewthing/20260924-00/?p=112728/
+  published: 2026-09-24 14:00:00+00:00
+  description: Another example to add to the list. The post No, really, you need to pass all unhandled messages to DefWindowProc, part 2 appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: ac0vjHZpZHwVXoB8
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: When working with Win32 FILETIME, don’t forget that you have std::chrono now
+  url: https://devblogs.microsoft.com/oldnewthing/20260923-00/?p=112726/
+  published: 2026-09-23 14:00:00+00:00
+  description: Let the library do the math for you. The post When working with Win32 <CODE>FILETIME</CODE>, don’t forget that you have <CODE>std::chrono</CODE> now appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: FBqemeMM-4xl88Bx
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: A brief history of Windows scroll bar shortcuts
+  url: https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/
+  published: 2026-09-22 14:00:00+00:00
+  description: Right-clicking and shift-clicking. The post A brief history of Windows scroll bar shortcuts appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: LFSzx8uGfxzIaE4E
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: What’s the highest legal FILETIME? Is it safe to use?
+  url: https://devblogs.microsoft.com/oldnewthing/20260921-00/?p=112711/
+  published: 2026-09-21 14:00:00+00:00
+  description: Being wary of how people use it and how it interacts with other types. The post What’s the highest legal <CODE>FILETIME</CODE>? Is it safe to use? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: a5qB5qxoUt3efx9P
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Comparing exception behavior of magic statics, std::call_once, and std::async
+  url: https://devblogs.microsoft.com/oldnewthing/20260918-00/?p=112709/
+  published: 2026-09-18 14:00:00+00:00
+  description: Do you try again or give up? The post Comparing exception behavior of magic statics, <CODE>std::<WBR>call_<WBR>once</CODE>, and <CODE>std::<WBR>async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: mO2FLrYyy57jWTEK
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: std::call_once vs. std::async
+  url: https://devblogs.microsoft.com/oldnewthing/20260917-00/?p=112706
+  published: 2026-09-17 14:00:00+00:00
+  description: Simple vs complex machinery. The post <CODE>std::call_once</CODE> vs. <CODE>std::async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: o1zTuSLyqUIDt5Wj
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: std::call_once vs. std::async
+  url: https://devblogs.microsoft.com/oldnewthing/20260917-00/?p=112706/
+  published: 2026-09-17 14:00:00+00:00
+  description: Simple vs complex machinery. The post <CODE>std::call_once</CODE> vs. <CODE>std::async</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: B_ozU7hM0eqIhOTp
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Magic statics vs. std::call_once
+  url: https://devblogs.microsoft.com/oldnewthing/20260916-00/?p=112703/
+  published: 2026-09-16 14:00:00+00:00
+  description: They sort of do the same thing, but differently. The post Magic statics vs. <CODE>std::call_once</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: gt1SdIoec9_G92C1
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Magic statics vs. std::call_once
+  url: https://devblogs.microsoft.com/oldnewthing/20260916-00/?p=112703
+  published: 2026-09-16 14:00:00+00:00
+  description: They sort of do the same thing, but differently. The post Magic statics vs. <CODE>std::call_once</CODE> appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: VT693ZksFAlRCEBd
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1?
+  url: https://devblogs.microsoft.com/oldnewthing/20260915-00/?p=112700/
+  published: 2026-09-15 14:00:00+00:00
+  description: It used to start at 1, but that was the old system. The post Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: y5KyZ65yT2_wcd89
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1?
+  url: https://devblogs.microsoft.com/oldnewthing/20260915-00/?p=112700
+  published: 2026-09-15 14:00:00+00:00
+  description: It used to start at 1, but that was the old system. The post Why do Microsoft job levels start in the high 50’s instead of starting at a sane number like 1? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: 3vwW4FYX6WrY_r4X
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why didn’t ReadDirectoryChangesW provide a way to correlate the two sides of a rename operation?
+  url: https://devblogs.microsoft.com/oldnewthing/20260914-00/?p=112696/
+  published: 2026-09-14 14:00:00+00:00
+  description: Perhaps it wasn't necessary, or perhaps it didn't occur to them that this a problem. The post Why didn’t <CODE>ReadDirectoryChangesW</CODE> provide a way to correlate the two sides of a rename operation? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: PtkwWlztbc4Z7c_t
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why didn’t ReadDirectoryChangesW provide a way to correlate the two sides of a rename operation?
+  url: https://devblogs.microsoft.com/oldnewthing/20260914-00/?p=112696
+  published: 2026-09-14 14:00:00+00:00
+  description: Perhaps it wasn't necessary, or perhaps it didn't occur to them that this a problem. The post Why didn’t <CODE>ReadDirectoryChangesW</CODE> provide a way to correlate the two sides of a rename operation? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: J9d07Wx5983coaPX
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: How can I remove the Close button from my window caption?
+  url: https://devblogs.microsoft.com/oldnewthing/20260911-00/?p=112691
+  published: 2026-09-11 14:00:00+00:00
+  description: Not through normal means. The post How can I remove the Close button from my window caption? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+- post_id: LeluakuzZ73UJmuV
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why is the x86 undefined instruction called ud2? Why 2?
+  url: https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689
+  published: 2026-09-10 14:00:00+00:00
+  description: It came after ud0 and ud1 . The post Why is the x86 undefined instruction called <CODE>ud2</CODE>? Why 2? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
+- post_id: SK9tgfrswSsu4mln
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: What algorithm did Windows XP use to choose your initial user picture?
+  url: https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683
+  published: 2026-09-09 14:00:00+00:00
+  description: It's random, really. The post What algorithm did Windows XP use to choose your initial user picture? appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: OKLsqnRuC_QzXUPx
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: A sample use of the winstart.bat file in Windows 95
+  url: https://devblogs.microsoft.com/oldnewthing/20260908-00/?p=112679
+  published: 2026-09-08 14:00:00+00:00
+  description: For a driver that needs high resolution mode only in Windows. The post A sample use of the <CODE>winstart.bat</CODE> file in Windows 95 appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: 3lG9x8V0pZm-dkfE
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why don’t we allow stacks to be sparse, instead of forcing them to be contiguous?
+  url: https://devblogs.microsoft.com/oldnewthing/20260907-00/?p=112677
+  published: 2026-09-07 14:00:00+00:00
+  description: Imagining how to report a memory allocation failure for a sparse page. The post Why don’t we allow stacks to be sparse, instead of forcing them to be contiguous? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: c7NSFLEATeuCXY4Q
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: What happens if you change a window class’s GCL_CBWNDEXTRA?
+  url: https://devblogs.microsoft.com/oldnewthing/20260904-00/?p=112675
+  published: 2026-09-04 14:00:00+00:00
+  description: You're changing the value for future windows. The post What happens if you change a window class’s <CODE>GCL_<WBR>CBWNDEXTRA</CODE>? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: wEy6mUHDmZ3v_vMi
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: The case of the progress callback that never got called when progress happened
+  url: https://devblogs.microsoft.com/oldnewthing/20260903-00/?p=112672
+  published: 2026-09-03 14:00:00+00:00
+  description: Are you talking to the right guy? The post The case of the progress callback that never got called when progress happened appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: PotclqwUkLUbQ3CU
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: The perils of binding to value types in XAML
+  url: https://devblogs.microsoft.com/oldnewthing/20260902-00/?p=112668
+  published: 2026-09-02 14:00:00+00:00
+  description: Loss of identity. The post The perils of binding to value types in XAML appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: mZ4PENfU6XPdMzIC
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'Microspeak: Funded / unfunded'
+  url: https://devblogs.microsoft.com/oldnewthing/20260901-00/?p=112662
+  published: 2026-09-01 14:00:00+00:00
+  description: 'People are our most valuable asset. The post Microspeak: Funded / unfunded appeared first on The Old New Thing .'
+  tags:
+  - Microspeak
+  - Old New Thing
+  - Other

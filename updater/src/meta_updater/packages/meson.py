@@ -4,16 +4,12 @@ from pathlib import Path
 from typing import Any
 
 from .common import (
-    REPOSITORIES,
     clean_list,
-    github_url,
     repository_identity,
-    repository_revision,
 )
 
 
 def parse_meson(root: Path) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     releases_path = root / "releases.json"
     releases = (
         json.loads(releases_path.read_text(encoding="utf-8"))
@@ -99,9 +95,7 @@ def parse_meson(root: Path) -> list[dict[str, Any]]:
                 "repository_url": repository,
                 "components": [*dependency_names, *program_names],
                 "versions": versions,
-                "recipe_url": github_url(
-                    REPOSITORIES["meson"], revision, wrap.relative_to(root)
-                ),
+                "recipe_path": wrap.relative_to(root).as_posix(),
             }
         )
     return records

@@ -7,7 +7,7 @@ import yaml
 from schemas.blocks import CachedVideo, ChannelMetadata
 
 from ..config import MetaUpdaterConfig
-from ..shared.dataset import YamlDataset
+from ..shared.dataset import YamlDataset, sorted_mapping
 from ..shared.provenance import finish_provenance_tracking, start_provenance_tracking
 from ..shared.recent import RecentCache, merge_records, prune_records
 from ..shared.runtime import (
@@ -184,6 +184,7 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
         dict[str, ChannelMetadata],
         "meta-updater youtube metadata",
         "Descriptions and keywords come from public YouTube channel metadata.",
+        canonicalize=sorted_mapping,
     )
     video_data = RecentCache(
         output / "videos",

@@ -1,0 +1,96 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: plY9BVvhev0OFIpB
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'My ALS Journey (31/31): The End'
+  url: https://www.modernescpp.com/index.php/my-als-journey-31-31-the-end/
+  published: 2025-10-09 09:11:45+00:00
+  description: Dear readers, we are extremely sad to inform you that Rainer passed away on October 6, 2025, surrounded by his closest family. After suffering from life-threatening pneumonia, Rainer decided against further life-sustaining measures that would have severely restricted his life. H…
+  tags:
+  - ALS
+- post_id: zBAMzyhkpuNyHDhz
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: Small Safety Improvements in the C++ 26 Core Language
+  url: https://www.modernescpp.com/index.php/small-safety-improvements-in-the-c-26-core-language/
+  published: 2025-09-22 10:16:59+00:00
+  description: Safety is an important concern in C++26. Contracts are probably the most important feature for safety. But C++26 has much more to offer. Today, I would like to introduce three small but important improvements in C++26 that solve typical safety issues in C++. Disallow binding a r…
+  tags:
+  - C++26
+- post_id: qBSG_6eCJs0-J5Th
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'My ALS Journey (30/n): Cippi at the CppCon'
+  url: https://www.modernescpp.com/index.php/my-als-journey-30-n-cippi-at-the-cppcon/
+  published: 2025-09-21 15:37:39+00:00
+  description: This week was very exciting for Cippi. She visited CppCon in Aurora, near Denver. My blog, Modern C++, is also celebrating a small anniversary. >> My ALS Journey so far << CppCon You probably know Cippi. Cippi is my deputy at C++ conferences and also an ALS ambassador.I’m starti…
+  tags:
+  - ALS
+- post_id: 72w7BQY0sPm9D2nJ
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'Contracts: Evaluation Semantic'
+  url: https://www.modernescpp.com/index.php/contracts-evaluation-semantic/
+  published: 2025-09-08 09:49:06+00:00
+  description: 'After briefly presenting the details of contracts in my last article, “Contracts: A Deep Dive“, I would like to take a closer look at the very interesting Evaluation Semantic in today’s article. If a contract assertion occurs, one of the four evaluation semantics is applied: ign…'
+  tags:
+  - C++26
+  - Contracts
+- post_id: IhqvxLYWu5xAsj2t
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'My ALS Journey (29/n): I feel Good'
+  url: https://www.modernescpp.com/index.php/my-als-journey-29-n-i-feel-good/
+  published: 2025-09-02 16:23:19+00:00
+  description: 'I often receive messages asking about my health and wishing me well. I am very happy to receive these messages and just want to reply: I feel good. >> My ALS Journey so far << The following gives me a great deal of strength and brings me happiness. Providing Added Value for the…'
+  tags:
+  - ALS
+- post_id: QmOA8Mwx8DbdK4Vu
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'Contracts: A Deep Dive'
+  url: https://www.modernescpp.com/index.php/contracs-a-deep-dive/
+  published: 2025-08-25 09:35:30+00:00
+  description: I already introduced contracts in the article “Contracts in C++26”. In this article and the next ones, I will dive deeper into the details. In this article, I refer mainly to the excellent proposal “Contracts for C++”. Unfortunately, proposal P2900R14 exceeds 100 pages in length…
+  tags:
+  - C++26
+  - Contracts
+- post_id: XNKrKJlLiPyYEFZd
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'My ALS Journey (28/n): Bureaucracy – The German Disease'
+  url: https://www.modernescpp.com/index.php/my-als-journey-28-n-bureaucracy-the-german-disease/
+  published: 2025-08-23 09:42:52+00:00
+  description: 'Today I want to write about a sad topic. Bureaucracy in the German healthcare system is becoming increasingly absurd. In this world, the Darwin principle reigns supreme: survival of the fittest. >> My ALS Journey so far << Before I begin this article, I would like to share a few…'
+  tags:
+  - ALS
+- post_id: U5pOenFcfVNqP_rW
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'Data-Parallel Types: Algorithms'
+  url: https://www.modernescpp.com/index.php/data-parallel-types-algorithms/
+  published: 2025-08-11 08:45:45+00:00
+  description: The data-parallel types library has four special algorithms for SIMD vectors. The four special algorithms are min, max, minmax, and clamp. min, max, and minmax The two algorithms min and max have in common that they each accept two SIMD vectors and return a SIMD vector. This con…
+  tags:
+  - C++26
+  - Data-Parallel Types
+- post_id: _Ar9Y-72HdWuU0A6
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'My ALS Journey (27/n): An Emergency Call'
+  url: https://www.modernescpp.com/index.php/my-als-journey-27-n-an-emergency-call/
+  published: 2025-08-08 14:46:32+00:00
+  description: Unfortunately, I had an emergency call last Friday. That’s why this article is appearing a little earlier than usual. >> My ALS Journey so far << Firstly, I would like to say that I am doing very well and have made a full recovery from my incident. However, I would like to share…
+  tags:
+  - ALS
+- post_id: RLh1KV1bTak4cXPc
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'Data-Parallel Types: Reduction'
+  url: https://www.modernescpp.com/index.php/data-parallel-types-reduction/
+  published: 2025-07-28 10:10:02+00:00
+  description: 'In this article, I will discuss reduction and mask reduction for data-parallel types. Reduction A reduction reduces the SIMD vector to a single element. The library provides three functions for this purpose: reduce, hmin, and hmax.The following program shows how these functions…'
+  tags:
+  - C++26
+  - Data-Parallel Types

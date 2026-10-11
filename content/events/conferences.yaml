@@ -4,6 +4,29 @@ id: conferences
 title: Conferences
 description: Major C++ conferences around the world
 cards:
+  - title: Meeting C++
+    path: https://meetingcpp.com/
+    description: Annual hybrid C++ conference in Berlin with onsite and online tracks and international speakers
+    metadata:
+      Location: Berlin, Germany
+      Frequency: Annual
+  - title: CppCon
+    path: https://cppcon.org/
+    description: Annual, week-long, in-person gathering organized by the C++ community, with talks for experience levels from novice to expert
+    metadata:
+      Location: Aurora, Colorado, USA
+      Frequency: Annual
+  - title: C++Now
+    path: https://cppnow.org/
+    description: Five-day, in-person conference in Aspen focused on advanced C++, open-source libraries, and the language's future evolution
+    metadata:
+      Location: Aspen, Colorado, USA
+      Frequency: Annual
+  - title: C++Online
+    path: https://cpponline.uk/
+    description: Online-only international C++ conference designed for broad geographic and financial accessibility
+    metadata:
+      Location: Online
   - title: NDC Toronto
     path: https://ndctoronto.com/
     description: NDC Toronto is a premier software development conference held annually in Toronto, covering a wide range of topics including .NET, C++, Rust, Embedded, Cybersecurity, Cloud, DevOps, frontend, AI, and software architecture, to mention a few

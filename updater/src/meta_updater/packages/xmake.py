@@ -7,12 +7,9 @@ from typing import Any
 
 from ..shared.text import render_text
 from .common import (
-    REPOSITORIES,
     clean_licenses,
     clean_list,
-    github_url,
     repository_identity,
-    repository_revision,
 )
 
 
@@ -21,7 +18,6 @@ def _xmake_url(url: str) -> str:
 
 
 def parse_xmake(root: Path) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     exporter = Path(__file__).with_name("xmake_export.lua")
 
     with tempfile.TemporaryDirectory() as temporary:
@@ -134,11 +130,7 @@ def parse_xmake(root: Path) -> list[dict[str, Any]]:
                 "package_type": str(package.get("kind") or ""),
                 "features": configs,
                 "versions": versions,
-                "recipe_url": github_url(
-                    REPOSITORIES["xmake"],
-                    revision,
-                    Path(package["recipe"]),
-                ),
+                "recipe_path": Path(package["recipe"]).as_posix(),
             }
         )
 

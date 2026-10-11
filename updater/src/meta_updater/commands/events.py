@@ -217,7 +217,13 @@ def refresh(source_path: Path, timeout: float) -> list[CalendarEvent]:
         found = meetup_events(source, fetch(source["url"], timeout), checked)
         print(f"{source['id']}: {len(found)} dated events")
         records.extend(found)
-    records.sort(key=lambda event: (event["start_date"], event["title"]))
+    records.sort(
+        key=lambda event: (
+            event["start_date"],
+            event["title"],
+            event["ical_uid"],
+        )
+    )
     return [CalendarEvent.model_validate(event) for event in records]
 
 

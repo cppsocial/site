@@ -16,6 +16,12 @@ cards:
     metadata:
       Location: Aurora, Colorado, USA
       Frequency: Annual
+  - title: C++Now
+    path: https://cppnow.org/
+    description: Five-day, in-person conference in Aspen focused on advanced C++, open-source libraries, and the language's future evolution
+    metadata:
+      Location: Aspen, Colorado, USA
+      Frequency: Annual
   - title: C++Online
     path: https://cpponline.uk/
     description: Online-only international C++ conference designed for broad geographic and financial accessibility

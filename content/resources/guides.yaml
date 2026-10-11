@@ -15,3 +15,7 @@ cards:
     path: https://google.github.io/styleguide/cppguide.html
     icon: https://cdn.simpleicons.org/google
     description: "Google's detailed conventions and engineering guidelines for maintaining large C++ codebases"
+  - title: "Bjarne Stroustrup's C++ FAQ"
+    path: https://www.stroustrup.com/bs_faq.html
+    icon: https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.svg
+    description: Answers about C++ design, history, usage, and common misconceptions from its creator

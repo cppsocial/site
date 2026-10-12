@@ -1,5 +1,58 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: -gNQiygfpoE
+  title: Safety and Interoperability with C++ and Rust with Jon Bauman - CppCast 412 / C++ Weekly 553
+  url: https://www.youtube.com/watch?v=-gNQiygfpoE
+  published: 2026-10-05 15:29:48+00:00
+  updated: 2026-10-05 15:35:26+00:00
+  description: 'Summary:
+
+
+    In this episode Mathieu and Jason are joined by Jon Bauman to discuss safety and interoperability between Rust and C++. We go into what does “safety” really mean (there are several categories of safety) and what can be guaranteed or not, and how to improve safety in C++.
+
+
+    Jon is currently looking for sponsorship to continue this important work. You can contact Jon via Joncppcast@shumi.org
+
+
+    Check out the extensive list of links and notes for this episode.
+
+
+    Guest Bio:
+
+
+    Jon Bauman has worked in tech for over two decades across various industries and programming disciplines. After several decades trying out prescriptivism, they prefer descriptivism and not bundling gender metadata with 3rd person pronouns. But  they will not mind at all if you call them "him", or even "her".
+
+
+    They are a proud alumnus of the University of Michigan, Etsy, Mozilla and the Rust Foundation. Working at every level of the tech stack from operating systems to web applications, Jon brought their experience in Rust and standards development to bear as the implementer of AVIF support in Firefox and the erstwhile lead for the Rust Foundation''s "C++ Interoperability Initiative". As a result, Jon and the Rust Foundation joined WG21. In less than a year of membership, Jon, along with Timur Doumler (CppCast host emeritus) and five other committee veterans, authored P3874, "Should C++ be a memory-safe language?", which received overwhelming consensus from EWG at the Croydon meeting this past March.
+
+
+    In their spare time, Jon enjoys the vibrant Seattle film community, being a philosophy-of-language dilettante, spending time in the natural beauty of the Pacific Northwest, and being a friend to all cats. They are currently taking a well-deserved break from work, but hope to return soon and help continue the effort to improve C++ and bring the benefits of memory safety to as many people as possible.
+
+
+    Links:
+
+    * https://www.youtube.com/playlist?list=PLQ7xWQPwGyGo6t1sCzuLFT5fM4re23_51
+
+    * https://wg21.link/p3874r1
+
+    * https://github.com/cplusplus/papers/issues/2475
+
+    * Interop initiative: https://github.com/rustfoundation/interop-initiative/blob/main/problem-statement.md
+
+    * https://borrowsanitizer.com/
+
+    * https://goals.rust-lang.org/2025h2/interop-problem-map.html
+
+    * Miri playground - https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&gist=5697caaf943045cdcd8054451170fb4e
+
+    * https://www.ralfj.de/blog/2025/07/24/memory-safety.html
+
+    * https://plv.mpi-sws.org/rustbelt/
+
+    * https://research.ralfj.de/thesis.html
+
+    * And I think I forgot one.'
+  thumbnail_url: https://i2.ytimg.com/vi/-gNQiygfpoE/hqdefault.jpg
 - video_id: EaYvQz8oQkM
   title: C++ Weekly - Ep 552 - C++26's is_within_lifetime
   url: https://www.youtube.com/watch?v=EaYvQz8oQkM

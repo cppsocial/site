@@ -1,5 +1,53 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: _HohP5X6_SM
+  title: 'Interview with Mateusz Pusz about his Meeting C++ 2026 keynote: Why Great C++ Libraries Fail'
+  url: https://www.youtube.com/watch?v=_HohP5X6_SM
+  published: 2026-10-11 08:00:21+00:00
+  updated: 2026-10-11 10:18:59+00:00
+  description: 'Interview with Mateusz Pusz about his Meeting C++ 2026 keynote: Why Great C++ Libraries Fail (And How to Fix That)
+
+    https://meetingcpp.com/mcpp/schedule/talkview.php?th=7478d33323476961fe3019d9911c924b5dfba771'
+  thumbnail_url: https://i4.ytimg.com/vi/_HohP5X6_SM/hqdefault.jpg
+- video_id: sHEAAhhvmKM
+  title: Interview with Jan Wilczek about applying type erasure
+  url: https://www.youtube.com/watch?v=sHEAAhhvmKM
+  published: 2026-10-09 19:00:32+00:00
+  updated: 2026-10-10 15:27:29+00:00
+  description: "Jan Wilczek on his talk at Meeting C++ 2026: https://meetingcpp.com/mcpp/schedule/talkview.php?th=74e2c39d32e7bfefbbced3746cf8963f22f84cf6\n\nTalk Description:\nApplication developers sometimes hit a limitation of a 3rd-party library or framework. The Type Erasure design pattern can help us overcome such limitations without the need to change the 3rd-party API.\n\nType Erasure is a relatively complex design pattern that allows us to treat a set of unrelated classes as if they shared a common base class, while preserving value semantics. The downside is increased code bloat and code complexity as the pattern requires a significant amount of additional code.\n\nThere have been quite a few talks explaining HOW to implement Type Erasure, while the topic of WHEN has been rarely discussed. Should we always use type erasure instead of virtual polymorphism? And if not, then what are the criteria?\n\nThis talk will show a concrete example from the audio programming industry of how\
+    \ Type Erasure allowed adding new functionalities to the parameter class system of the JUCE C++ framework without changing its API. As such, the talk will be useful for application and library developers who use 3rd party libraries but need an extra degree of flexibility.\n\nYou will come out of the talk understanding\n\n    what Type Erasure is,\n    when to use it, and\n    how to implement it.\n\nYou don't need to understand Type Erasure, audio development, or JUCE to attend the talk; the necessary minimum will be explained during the talk."
+  thumbnail_url: https://i4.ytimg.com/vi/sHEAAhhvmKM/hqdefault.jpg
+- video_id: M8Eb5NIpgxQ
+  title: 'Interview with Boguslaw Cyganek: Everthing about Tensors'
+  url: https://www.youtube.com/watch?v=M8Eb5NIpgxQ
+  published: 2026-10-07 19:00:40+00:00
+  updated: 2026-10-08 11:26:15+00:00
+  description: 'Meeting C++ 2026: https://meetingcpp.com/2026
+
+    Link to the talk: https://meetingcpp.com/mcpp/schedule/talkview.php?th=15a6baa3ceecb935eea691530fe62b6652c0e408
+
+    Interview with Boguslaw Cyganek: Everthing about Tensors
+
+
+    Talk description:
+
+    In the context of AI, we increasingly hear the term "tensor." Yet many developers still perceive tensors as mysterious mathematical objects hidden behind Python APIs and GPU frameworks.
+
+    This talk demystifies tensors from a practical C++ programmer’s perspective. We''ll explore what tensors really are and, with simple math and graphics, introduce basic concepts like indexing, order, rank, decomposition, and matricization. We''ll show how to represent tensors using multidimensional data structures and how they can be efficiently represented in modern C++. We''ll examine the Boost, Eigen, Blaze, xtensor, and Kokkos libraries, with a particular focus on `std::mdspan`, as well as the upcoming `std::mdarray` and `std::linalg`, and in the context of efficient tensor processing on CPUs and GPUs.
+
+    Everyone is welcome!'
+  thumbnail_url: https://i2.ytimg.com/vi/M8Eb5NIpgxQ/hqdefault.jpg
+- video_id: wqWqQUqMwwg
+  title: 'Interview with Antoine Morrier: Thread safety through constexpr in C++?'
+  url: https://www.youtube.com/watch?v=wqWqQUqMwwg
+  published: 2026-10-05 14:30:36+00:00
+  updated: 2026-10-09 09:30:38+00:00
+  description: 'Meeting C++ 2026: https://meetingcpp.com/2026
+
+    Link to Talk Thread-safety compile-time guaranteed in C++: https://meetingcpp.com/mcpp/schedule/talkview.php?th=bbb99154527c748cc4f3ca28582503d64e217695
+
+    Antoine Morrier gave an interview about his talk about thread safety through constexpr in C++.'
+  thumbnail_url: https://i4.ytimg.com/vi/wqWqQUqMwwg/hqdefault.jpg
 - video_id: xJGmqam49qQ
   title: 'Meeting C++ 2026: Interview with Frances Buontempo about her talk and books'
   url: https://www.youtube.com/watch?v=xJGmqam49qQ

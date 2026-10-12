@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: ba771bbe0ac98014a38072305550f2064c9f8cae
+revision: aaebb96913b83caa724d49230aa7823f406f6746
 packages:
 - id: spack:3dtk
   registry: spack
@@ -4334,20 +4334,20 @@ packages:
   description: The ALPS project (Algorithms and Libraries for Physics Simulations) aims at providing generic parallel algorithms for classical and quantum lattice models and provides utility classes and algorithm for many others.
   description_format: html
   licenses:
-  - BSL-1.0
   - MIT
-  homepage: https://github.com/ALPSim/ALPS
+  homepage: https://alps.comp-phys.org
   repository_url: https://github.com/alpsim/alps
   maintainers:
   - Ooolab
   - Sinan81
   - egull
   dependencies:
+  - blas
   - boost
   - c
+  - cmake
   - cxx
   - fftw
-  - fortran
   - hdf5
   - lapack
   - mpi
@@ -4357,26 +4357,42 @@ packages:
   - python
   - zlib-api
   dependency_details:
+  - name: blas
+    constraint: blas
   - name: boost
-    constraint: 'boost@1.80:'
+    constraint: boost@1.69:+filesystem+serialization+system+program_options+regex+thread+date_time+chrono+timer+iostreams+test+python
+    kind: build,link
+    condition: '@3:'
+  - name: boost
+    constraint: boost+mpi
+    condition: '@3: +mpi'
+  - name: boost
+    constraint: boost~mpi
+    condition: '@3: ~mpi'
+  - name: boost
+    constraint: boost@1.80:1.90
     kind: build
+    condition: '@:2.3.4'
   - name: c
     constraint: c
     kind: build
+  - name: cmake
+    constraint: 'cmake@3.18:'
+    kind: build
+  - name: cmake
+    constraint: 'cmake@3.22:'
+    kind: build
+    condition: '@3:'
   - name: cxx
     constraint: cxx
     kind: build
   - name: fftw
     constraint: fftw
-  - name: fortran
-    constraint: fortran
-    kind: build
-  - name: hdf5
-    constraint: hdf5+mpi+hl
-    condition: +mpi
+  - name: fftw
+    constraint: fftw~mpi
+    condition: ~mpi
   - name: hdf5
     constraint: hdf5~mpi+hl
-    condition: ~mpi
   - name: lapack
     constraint: lapack
   - name: mpi
@@ -4392,7 +4408,7 @@ packages:
     constraint: py-scipy
     kind: build,run
   - name: python
-    constraint: python
+    constraint: 'python@3.9:'
     kind: build,link,run
   - name: zlib-api
     constraint: zlib-api
@@ -4410,10 +4426,14 @@ packages:
     - checksums:
       - sha256:73d8c9038d00c7f768f65474b2a657d5c49daf105ddfcaef7d16737500b5d02f
   - version: 2.3.4-beta.2
-    preferred: true
     artifacts:
     - checksums:
       - sha256:ca2e1307630e6fccac279ab7711036f7c6dee43c386fd6f24cfc77c86a3c7f1c
+  - version: 3.0.0
+    artifacts:
+    - checksums:
+      - sha256:ea44545afc570de7df8c01f093b769adf344f72579968b700e4e93df9eedb0ea
+  - version: master
   recipe_path: repos/spack_repo/builtin/packages/alps/package.py
 - id: spack:alpscore
   registry: spack
@@ -12648,6 +12668,105 @@ packages:
     - checksums:
       - sha256:fd499fcf51317b1aaf27336fb5e919c44c1f867f1ae6681ee197365d3065238b
   recipe_path: repos/spack_repo/builtin/packages/asciidoc_py3/package.py
+- id: spack:asciinema
+  registry: spack
+  name: asciinema
+  summary: Terminal session recorder, streamer, and player.
+  licenses:
+  - GPL-3.0-or-later
+  homepage: https://asciinema.org
+  repository_url: https://github.com/asciinema/asciinema
+  dependencies:
+  - c
+  - rust
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: rust
+    constraint: 'rust@1.82.0:'
+    kind: build
+  versions:
+  - version: 3.0.0
+    artifacts:
+    - checksums:
+      - sha256:f44feaa1bc150e7964635dc4714fd86089a968587fed81dccf860ee7b64617ca
+  - version: 3.0.1
+    artifacts:
+    - checksums:
+      - sha256:612ecb265ccb316f07c9825bacd7301fd21f03a72b516edd370b0d3aa1adf2bb
+  - version: 3.1.0
+    artifacts:
+    - checksums:
+      - sha256:d07d22d9531fa98d2999dfc2ef27651efc3a4f5e5f46a78c3c306b69c466af8b
+  - version: 3.2.0
+    artifacts:
+    - checksums:
+      - sha256:247c7c87481f38d7788c1fb1be12021c778676c0d0ab37e529ec528f87f487ce
+  - version: 3.2.1
+    artifacts:
+    - checksums:
+      - sha256:e7e49a09c664a76afc5bc25ca09871eb090bfbe68a2ddbc72750d3cb215d36f1
+  recipe_path: repos/spack_repo/builtin/packages/asciinema/package.py
+- id: spack:asciinema-agg
+  registry: spack
+  name: asciinema-agg
+  summary: agg (asciinema gif generator) produces high-quality, lightweight animated GIF files from asciicast terminal recordings. It supports custom color themes...
+  description: agg (asciinema gif generator) produces high-quality, lightweight animated GIF files from asciicast terminal recordings. It supports custom color themes, fonts, rendering speed adjustments, and idle-time compression.
+  description_format: html
+  licenses:
+  - GPL-3.0-or-later
+  homepage: https://docs.asciinema.org/manual/agg/
+  repository_url: https://github.com/asciinema/agg
+  dependencies:
+  - c
+  - rust
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: rust
+    constraint: 'rust@1.85.0:'
+    kind: build
+    condition: '@1.7.0:'
+  - name: rust
+    constraint: 'rust@1.75.0:'
+    kind: build
+    condition: '@1.6.0'
+  - name: rust
+    constraint: 'rust@1.70.0:'
+    kind: build
+    condition: '@:1.5.0'
+  versions:
+  - version: 1.4.3
+    artifacts:
+    - checksums:
+      - sha256:1089e47a8e6ca7f147f74b2347e6b29d94311530a8b817c2f30f19744e4549c1
+  - version: 1.5.0
+    artifacts:
+    - checksums:
+      - sha256:4bfbd0cc02f416ce868f0209b659a87e333de8f0b5edad19810e152ac6e7fc55
+  - version: 1.6.0
+    artifacts:
+    - checksums:
+      - sha256:541bdc7e7ec148d2146c8033e58a9046d9d3587671e8f375c9e606b5a24d3f82
+  - version: 1.7.0
+    artifacts:
+    - checksums:
+      - sha256:8927e2f3b1db53feed2e74319497ddc8404ac7989cb592099c402fbd05d94aa4
+  - version: 1.8.0
+    artifacts:
+    - checksums:
+      - sha256:31e0d54b6abc2c7545464bef0b5b9603d851c186c4ecfcd52f08a30d7bfa2781
+  - version: 1.8.1
+    artifacts:
+    - checksums:
+      - sha256:9a2a7e6ca2748befb6a4c1c3eff437ae6029fde99ec882a951b3671aa30eacdb
+  - version: 1.9.0
+    artifacts:
+    - checksums:
+      - sha256:8170119502ad2c1c697e5cd4d050d87c425ecee726c5f6c3c2140703bcb31bb3
+  recipe_path: repos/spack_repo/builtin/packages/asciinema_agg/package.py
 - id: spack:asdcplib
   registry: spack
   name: asdcplib
@@ -20927,6 +21046,72 @@ packages:
     - checksums:
       - sha256:03fbc0d0fc867f76d64f756d556598e5fe5f015363df8f97fbed4cfd541c6749
   recipe_path: repos/spack_repo/builtin/packages/biobloom/package.py
+- id: spack:bioconductor-rcummerbund
+  registry: spack
+  name: bioconductor-rcummerbund
+  summary: Allows for persistent storage, access, exploration, and manipulation of Cufflinks high-throughput sequencing data. In addition, provides numerous plotting...
+  description: Allows for persistent storage, access, exploration, and manipulation of Cufflinks high-throughput sequencing data. In addition, provides numerous plotting functions for commonly used visualizations.
+  description_format: html
+  licenses:
+  - Artistic-2.0
+  homepage: https://www.bioconductor.org/packages/release/bioc/html/cummeRbund.html
+  maintainers:
+  - meyersbs
+  dependencies:
+  - r
+  - r-biobase
+  - r-biocgenerics
+  - r-fastcluster
+  - r-ggplot2
+  - r-gviz
+  - r-plyr
+  - r-reshape2
+  - r-rsqlite
+  - r-rtracklayer
+  - r-s4vectors
+  dependency_details:
+  - name: r
+    constraint: 'r@2.7.0:'
+    kind: build,run
+  - name: r-biobase
+    constraint: r-biobase
+    kind: build,run
+  - name: r-biocgenerics
+    constraint: 'r-biocgenerics@0.3.2:'
+    kind: build,run
+  - name: r-biocgenerics
+    constraint: r-biocgenerics
+    kind: build,run
+  - name: r-fastcluster
+    constraint: r-fastcluster
+    kind: build,run
+  - name: r-ggplot2
+    constraint: r-ggplot2
+    kind: build,run
+  - name: r-gviz
+    constraint: r-gviz
+    kind: build,run
+  - name: r-plyr
+    constraint: r-plyr
+    kind: build,run
+  - name: r-reshape2
+    constraint: r-reshape2
+    kind: build,run
+  - name: r-rsqlite
+    constraint: r-rsqlite
+    kind: build,run
+  - name: r-rtracklayer
+    constraint: r-rtracklayer
+    kind: build,run
+  - name: r-s4vectors
+    constraint: 'r-s4vectors@0.9.25:'
+    kind: build,run
+  versions:
+  - version: 2.50.0
+    artifacts:
+    - checksums:
+      - sha256:887ad38f0fa6cf7910d49ac812b46b4742e2495bf28dfe16e891dc1f5d663fc4
+  recipe_path: repos/spack_repo/builtin/packages/bioconductor_rcummerbund/package.py
 - id: spack:biopieces
   registry: spack
   name: biopieces
@@ -26548,7 +26733,7 @@ packages:
     condition: '@0.5.0:+all'
   - name: arborx
     constraint: arborx
-    condition: +arborx @master
+    condition: '+arborx @0.8:'
   - name: arborx
     constraint: arborx@1.7
     condition: +arborx @:0.7.0
@@ -26590,13 +26775,26 @@ packages:
     constraint: 'hypre-cmake@2.22.1:'
     condition: '@0.5.0:0.7.0 +hypre'
   - name: kokkos
-    constraint: kokkos
+    constraint: kokkos@3.1:4.6
+    condition: '@0.3'
   - name: kokkos
-    constraint: 'kokkos+cuda_lambda@3.7:'
-    condition: +cuda
+    constraint: kokkos@3.2:4.6
+    condition: '@0.4:0.5'
   - name: kokkos
-    constraint: 'kokkos+cuda_lambda@4.1:'
-    condition: '+cuda@0.7:'
+    constraint: kokkos@3.7:4.6
+    condition: '@0.6:0.7'
+  - name: kokkos
+    constraint: kokkos@4.1:4.6
+    condition: '@0.8.0'
+  - name: kokkos
+    constraint: 'kokkos@4.1:'
+    condition: '@0.8.1:'
+  - name: kokkos
+    constraint: 'kokkos@3.7: +cuda_lambda'
+    condition: '@:0.6 +cuda'
+  - name: kokkos
+    constraint: 'kokkos@4.1: +cuda_lambda'
+    condition: '@0.7: +cuda'
   - name: mpi
     constraint: mpi
     condition: +mpi
@@ -26639,17 +26837,20 @@ packages:
     description: Build with ArborX support
     default: 'false'
   - name: cajita
-    description: Build Cajita subpackage (Grid in 0.6:)
+    description: Build Cajita subpackage
     default: 'false'
+    condition: '@:0.5 +mpi'
   - name: examples
     description: Build tutorial examples
     default: 'false'
   - name: grid
     description: Build Grid subpackage
     default: 'false'
+    condition: '@0.6: +mpi'
   - name: hdf5
     description: Build with HDF5 support
     default: 'false'
+    condition: '@0.6: +mpi'
   - name: heffte
     description: Build with heFFTe support
     default: 'false'
@@ -26669,6 +26870,7 @@ packages:
   - name: silo
     description: Build with SILO support
     default: 'false'
+    condition: '@0.4:'
   - name: testing
     description: Build unit tests
     default: 'false'
@@ -26697,6 +26899,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3d46532144ea9a3f36429a65cccb7562d1244f1389dd8aff0d253708d1ec9838
+  - version: 0.8.0
+    artifacts:
+    - checksums:
+      - sha256:1399145d4fbfe5d4ac569540e97d3609053d333a12b3b3882dcb5dc488767907
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/cabana/package.py
 - id: spack:cabana-pd
@@ -31791,6 +31997,9 @@ packages:
   - name: covfie
     constraint: 'covfie@0.13:'
     condition: +covfie
+  - name: 'covfie '
+    constraint: covfie ~cuda
+    condition: +covfie ~cuda
   - name: cxx
     constraint: cxx
     kind: build
@@ -31830,14 +32039,14 @@ packages:
     constraint: 'swig@4.1:'
     condition: +swig
   - name: vecgeom
-    constraint: 'vecgeom@1.2.5:'
-    condition: +vecgeom
+    constraint: vecgeom@1.2:1
+    condition: '@:0.6 +vecgeom'
   - name: vecgeom
-    constraint: 'vecgeom@1.2.8:'
-    condition: '@0.6: +vecgeom'
-  - name: vecgeom
-    constraint: 'vecgeom@1.2.10:'
-    condition: '@0.6: +vecgeom +cuda'
+    constraint: vecgeom@1.2:2
+    condition: '@0.7: +vecgeom'
+  - name: 'vecgeom '
+    constraint: vecgeom ~cuda
+    condition: +vecgeom ~cuda
   - name: 'vecgeom '
     constraint: vecgeom +cuda cuda_arch=none
     condition: +vecgeom +cuda cuda_arch=none
@@ -34220,10 +34429,10 @@ packages:
     - spack
     default: none
   versions:
-  - version: 2.7.0
+  - version: 2.10.0
     artifacts:
     - checksums:
-      - sha256:5e3269babdae334c80fc3f25114698fdfe53e84ea06626af22d2b54eeb75bee6
+      - sha256:55234b391e32757fbdcf78a4c9517a1f0f8075e4d73a68005fc4ac251ef6b5d4
   - version: 2.8.0
     artifacts:
     - checksums:
@@ -43511,8 +43720,6 @@ packages:
   - BenjaminTJohnson
   - Hang-Lei-NOAA
   - climbfuji
-  - edwardhartnett
-  - t-brown
   dependencies:
   - c
   - cmake
@@ -43533,9 +43740,6 @@ packages:
     kind: build
     condition: '@3.1.3:'
   - name: crtm-fix
-    constraint: crtm-fix@2.3.0_emc
-    condition: '@2.3.0 +fix'
-  - name: crtm-fix
     constraint: crtm-fix@2.4.0_emc
     condition: '@=2.4.0 +fix'
   - name: crtm-fix
@@ -43549,11 +43753,7 @@ packages:
     condition: '@3.1.2 +fix'
   - name: crtm-fix
     constraint: crtm-fix@3.1.2
-    condition: '@3.1.3 +fix'
-  - name: ecbuild
-    constraint: ecbuild
-    kind: build
-    condition: '@v2.3'
+    condition: '@3.1.3:3.1.5 +fix'
   - name: ecbuild
     constraint: ecbuild
     kind: build
@@ -43573,9 +43773,6 @@ packages:
     condition: '@2.4.0:'
   - name: netcdf-fortran
     constraint: netcdf-fortran
-    condition: '@v2.3'
-  - name: netcdf-fortran
-    constraint: netcdf-fortran
     condition: '@v2.4'
   - name: netcdf-fortran
     constraint: netcdf-fortran
@@ -43589,8 +43786,6 @@ packages:
     description: Download CRTM coefficient or "fix" files (several GBs).
     default: 'false'
   versions:
-  - version: 2.3.0
-    lifecycle: deprecated
   - version: 2.4.0
   - version: 2.4.0.1
   - version: 3.1.1-build1
@@ -43605,6 +43800,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4f72bb281d266063c902caa6613e508d6d80367c10ee4881dd67e08c146c9c33
+  - version: 3.1.5
+    artifacts:
+    - checksums:
+      - sha256:81663d2a70de5b636c18c927581bbc410a0fbb15f4295472560e81190ba2af81
   - version: v2.4-jedi.1
     upstream_version: 2.4-jedi.1
   - version: v2.4-jedi.2
@@ -43682,11 +43881,6 @@ packages:
     default: 'false'
     condition: '@3:'
   versions:
-  - version: 2.3.0_emc
-    lifecycle: deprecated
-    artifacts:
-    - checksums:
-      - sha256:1452af2d1d11d57ef3c57b6b861646541e7042a9b0f3c230f9a82854d7e90924
   - version: 2.4.0.1_emc
     artifacts:
     - checksums:
@@ -45182,6 +45376,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ad6f2f94934b38e31e48272833c99b891d045b4565fe942a53fbd27bd3910e16
+  - version: 8.22.0
+    artifacts:
+    - checksums:
+      - sha256:5d956a6a22b3c279f50c421ee5d3c9e9d660cb6f115dcf881b579e952130549c
   recipe_path: repos/spack_repo/builtin/packages/curl/package.py
 - id: spack:cusolvermp
   registry: spack
@@ -63660,9 +63858,14 @@ packages:
     - checksums:
       - sha256:963250a823c16a498582b4ad82ad0f88926be0769675d3b6956be4d769a1cd8f
   - version: 2.8.5
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:952c03c33a6b337f12dae7a9b0f9dee86f867550d35c994d6bdaaddd37dc8454
+  - version: 2.9.0
+    artifacts:
+    - checksums:
+      - sha256:775e8a68f81a748a401dc3168318d4a39484eb4f954726f21517c8f42c0ba984
   recipe_path: repos/spack_repo/builtin/packages/expat/package.py
 - id: spack:expect
   registry: spack
@@ -66115,12 +66318,17 @@ packages:
   repository_url: https://github.com/opengene/fastp
   dependencies:
   - cxx
+  - highway
   - libdeflate
   - libisal
   dependency_details:
   - name: cxx
     constraint: cxx
     kind: build
+  - name: highway
+    constraint: 'highway@1.1:'
+    kind: build,link
+    condition: '@1.2:'
   - name: libdeflate
     constraint: libdeflate
     kind: build,link
@@ -66146,6 +66354,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:80464cca840f7ecaeec63528cc5c4b138af83da909f91291115e1811e5f8cec6
+  - version: 1.3.6
+    artifacts:
+    - checksums:
+      - sha256:4a282e9bbcbce849cd4ed3527e59469ad2cf7cf8d3cbe99debabaca985030946
+  - version: 1.3.7
+    artifacts:
+    - checksums:
+      - sha256:5b7d6880c66e9e10e5923c68ee0c0b5a30f59bd252d836c379c74f8533c26993
   recipe_path: repos/spack_repo/builtin/packages/fastp/package.py
 - id: spack:fastphase
   registry: spack
@@ -78765,7 +78981,8 @@ packages:
   name: gatk
   summary: Genome Analysis Toolkit Variant Discovery in High-Throughput Sequencing Data
   licenses:
-  - Unlicense
+  - Apache-2.0
+  - BSD-3-Clause
   homepage: https://gatk.broadinstitute.org/hc/en-us
   repository_url: https://github.com/broadinstitute/gatk
   maintainers:
@@ -78888,6 +79105,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:dc1a4471e8bb566397db9894ca18acbf8f40f3fc312c8fad9a8c5390c218e916
+  - version: 4.7.0.0
+    artifacts:
+    - checksums:
+      - sha256:d093d2693b1626361a413ca59d6d4a0bf968717f280a8fd9ce060b25eb2ed1db
   recipe_path: repos/spack_repo/builtin/packages/gatk/package.py
 - id: spack:gau2grid
   registry: spack
@@ -78993,6 +79214,7 @@ packages:
   - libunwind
   - ms-gsl
   - nlohmann-json
+  - pkg-config
   - py-networkx
   - py-pytest-cov
   - py-pyyaml
@@ -79004,6 +79226,7 @@ packages:
   - uuid
   - xerces-c
   - zlib-api
+  - zstd
   dependency_details:
   - name: aida
     constraint: aida
@@ -79062,6 +79285,9 @@ packages:
     constraint: ms-gsl
   - name: nlohmann-json
     constraint: nlohmann-json
+  - name: pkg-config
+    constraint: pkg-config
+    condition: +zstd
   - name: py-networkx
     constraint: py-networkx
     kind: build,run
@@ -79091,6 +79317,9 @@ packages:
     condition: +xercesc
   - name: zlib-api
     constraint: zlib-api
+  - name: zstd
+    constraint: zstd
+    condition: +zstd
   options:
   - aida
   - cppunit
@@ -79104,6 +79333,7 @@ packages:
   - unwind
   - vtune
   - xercesc
+  - zstd
   default_options:
     aida: 'false'
     cppunit: 'false'
@@ -79117,6 +79347,7 @@ packages:
     unwind: 'false'
     vtune: 'false'
     xercesc: 'false'
+    zstd: 'false'
   features:
   - name: aida
     description: Build AIDA interfaces support
@@ -79163,6 +79394,10 @@ packages:
   - name: xercesc
     description: Build with Xerces-C XML support
     default: 'false'
+  - name: zstd
+    description: Build with zstd compression support
+    default: 'false'
+    condition: '@40.6:'
   versions:
   - version: '35.0'
     artifacts:
@@ -79300,6 +79535,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3b8cc6f0d677f24eff51d5f51f31880320f4761ab8ebdb57e968397ca53f0e04
+  - version: '40.6'
+    artifacts:
+    - checksums:
+      - sha256:674b7f4063f6cb4678e92ffad8e11bd5c25523efc42eb4b66b20c539ed6844dc
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/gaudi/package.py
 - id: spack:gaussian
@@ -82274,6 +82513,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f9d5c7d108ae6be644d12997e0289e23e5d2da18df1cab9aaacd9b76412dfec6
+  - version: 11.4.3
+    artifacts:
+    - checksums:
+      - sha256:718752c1829cbfcf174f0e539d60ee3f76843b894444e61d2228d66a6887ef6e
   recipe_path: repos/spack_repo/builtin/packages/geant4/package.py
 - id: spack:geant4-data
   registry: spack
@@ -82878,6 +83121,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:d6090b1515dc33cd9532f1470e2038b7794258fbb8a411fa8a6e4520e933241b
+  - version: 04-00-06
+    artifacts:
+    - checksums:
+      - sha256:7d337ac9d7aaea669b224e300b63880c7d8fae7a1fc65eb5aa33dc6c39f9585d
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/generalbrokenlines/package.py
 - id: spack:generate-ninja
@@ -84210,6 +84457,10 @@ packages:
   - name: py-scipy
     constraint: 'py-scipy@1.3.0:'
     kind: build,run
+  - name: py-scipy
+    constraint: py-scipy@:1.11
+    kind: build,run
+    condition: '@:1.7.7.0'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
@@ -84228,6 +84479,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:dd351b5cd33688adfcd8bff9794ae0cc0ce01a572dac2bcf6c9d7db77b3e4883
+  - version: 1.7.7.1
+    artifacts:
+    - checksums:
+      - sha256:cf8e14766de43967182be839de20c9d1709b60fae38a0b3d175742dfad7a5d44
   recipe_path: repos/spack_repo/builtin/packages/getorganelle/package.py
 - id: spack:gettext
   registry: spack
@@ -88932,6 +89187,7 @@ packages:
   - version: '2025-08-21'
   - version: '2025-12-02'
   - version: '2026-02-12'
+  - version: '2026-06-10'
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/gloo/package.py
 - id: spack:glow
@@ -89507,6 +89763,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c8e3ec83ec04bbe2c1e7d8f27e7be18a816ace04c3b3bae78c616f4d545c3382
+  - version: 2.4.1
+    artifacts:
+    - checksums:
+      - sha256:2813b1a30b1aca8892a496d2f39e50a34a6f2d2df46590b2b4442739b54d9033
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/gmgpolar/package.py
 - id: spack:gmic
@@ -91270,6 +91530,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4e39b98e42f946fa05ac8bc5b71877df97dbdb7cbb1a777b541667ad7117fd2e
+  - version: 1.26.9
+    artifacts:
+    - checksums:
+      - sha256:9735d7dcdb65b35d3fa577f04064737c03b89cf1a2b71e6e69fe2f3c6f9fd4ca
   - version: 1.27.0
     artifacts:
     - checksums:
@@ -91278,6 +91542,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4e408abae126d916b6164627193f2c54f0e3ca1312d693b86db45f862ab238b1
+  - version: 1.27.2
+    artifacts:
+    - checksums:
+      - sha256:03495da2ba64894d40f5c4992e49454fa78b50690604ff92b6afff5081b76e62
   recipe_path: repos/spack_repo/builtin/packages/go/package.py
 - id: spack:go-bootstrap
   registry: spack
@@ -97686,8 +97954,13 @@ packages:
   - cairo
   - libjpeg
   - libpng
+  - libssh2
   - libtool
+  - libvncserver
+  - libwebp
   - m4
+  - openssl
+  - pango
   - pkgconfig
   - uuid
   dependency_details:
@@ -97706,22 +97979,59 @@ packages:
     constraint: libjpeg
   - name: libpng
     constraint: libpng
+  - name: libssh2
+    constraint: libssh2
+    condition: +ssh
   - name: libtool
     constraint: libtool
     kind: build
+  - name: libvncserver
+    constraint: libvncserver
+    condition: +vnc
+  - name: libwebp
+    constraint: libwebp
+    condition: +webp
   - name: m4
     constraint: m4
     kind: build
+  - name: openssl
+    constraint: openssl
+    condition: +ssh
+  - name: pango
+    constraint: pango
+    condition: +ssh
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
   - name: uuid
     constraint: uuid
+  options:
+  - ssh
+  - vnc
+  - webp
+  default_options:
+    ssh: 'true'
+    vnc: 'false'
+    webp: 'false'
+  features:
+  - name: ssh
+    description: SSH support
+    default: 'true'
+  - name: vnc
+    description: VNC support
+    default: 'false'
+  - name: webp
+    description: WebP support
+    default: 'false'
   versions:
   - version: 1.5.5
     artifacts:
     - checksums:
       - sha256:50430c0f0f3b92f2cd3e60436fab0cedee8c1a9f762696a666016347039c731e
+  - version: 1.6.0
+    artifacts:
+    - checksums:
+      - sha256:913b05d19beabed4a3066e6e2be3078783048f55c7a9d2e3a012897a8766c245
   recipe_path: repos/spack_repo/builtin/packages/guacamole_server/package.py
 - id: spack:guidance
   registry: spack
@@ -111828,6 +112138,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:306a9ca401c0f0ce0a33d4482b6ca95fa3036821d5347ca2c12ac17b0ada63bf
+  - version: 2.5.1
+    artifacts:
+    - checksums:
+      - sha256:2df5f802db160212de78a1bdfba01c9275b5d5d0ca8f58b00298779d50a5e02a
   recipe_path: repos/spack_repo/builtin/packages/icey/package.py
 - id: spack:ico
   registry: spack
@@ -115904,7 +116218,9 @@ packages:
 - id: spack:ior
   registry: spack
   name: ior
-  summary: The IOR software is used for benchmarking parallel file systems using POSIX, MPI-IO, or HDF5 interfaces.
+  summary: IOR is an MPI-based application for benchmarking parallel file systems. It generates I/O workloads in interleaved or random patterns and supports various...
+  description: IOR is an MPI-based application for benchmarking parallel file systems. It generates I/O workloads in interleaved or random patterns and supports various backends including POSIX, MPI-IO, and HDF5. Also included, mdtest and md-workbench are applications for benchmarking metadata operations.
+  description_format: html
   homepage: https://github.com/hpc/ior
   repository_url: https://github.com/hpc/ior
   dependencies:
@@ -115971,20 +116287,20 @@ packages:
     ncmpi: 'false'
   features:
   - name: aio
-    description: support AIO backend API
+    description: Support I/O with the AIO backend API
     default: 'false'
     condition: '@4:'
   - name: daos
-    description: support IO with the DAOS DFS and DAOS backends
+    description: Support I/O with the DAOS DFS and DAOS backends
     default: 'false'
   - name: hdf5
-    description: support IO with HDF5 backend
+    description: Support I/O with the HDF5 backend
     default: 'false'
   - name: lustre
-    description: support configurable Lustre striping values
+    description: Support configurable Lustre striping values
     default: 'false'
   - name: ncmpi
-    description: support IO with NCMPI backend
+    description: Support I/O with the NCMPI backend
     default: 'false'
   versions:
   - version: 3.0.1
@@ -116000,11 +116316,11 @@ packages:
     - checksums:
       - sha256:ebcf2495aecb357370a91a2d5852cfd83bba72765e586bcfaf15fb79ca46d00e
   - version: 3.3.0
-    preferred: true
     artifacts:
     - checksums:
       - sha256:701f2167f81ef963e227d4c036c4a947a98b5642b7c14c87c8ae657849891528
   - version: 3.3.0rc1
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:0e42ebf5b5adae60625bf97989c8e2519d41ea2e3d18561d7d5b945625317aa5
@@ -122757,7 +123073,6 @@ packages:
   - amdgpu_target
   - apu
   - cmake_lang
-  - cuda_arch
   - deprecated_code
   - intel_gpu_arch
   - pic
@@ -122768,7 +123083,6 @@ packages:
     amdgpu_target: none
     apu: 'false'
     cmake_lang: 'false'
-    cuda_arch: none
     deprecated_code: 'true'
     intel_gpu_arch: none
     pic: 'false'
@@ -122790,10 +123104,6 @@ packages:
   - name: cmake_lang
     description: Use CMake language support for CUDA/HIP
     default: 'false'
-  - name: cuda_arch
-    description: CUDA architecture
-    default: none
-    condition: +cuda
   - name: deprecated_code
     description: Whether to enable deprecated code
     default: 'true'
@@ -127613,6 +127923,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:a0cfef0ba91038be8f95b09a07a9e9f40a4fbe9fdc630c7ed136c1d79cba83af
+  - version: 2.23.4
+    artifacts:
+    - checksums:
+      - sha256:86185940a070a2f0de049ecb45ea128f3d74f3b928a325f0b04da3202e4aaf0c
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/lcio/package.py
 - id: spack:lcms
@@ -127686,7 +128000,6 @@ packages:
   maintainers:
   - KineticTheory
   dependencies:
-  - c
   - cxx
   - perl
   - perl-b-hooks-endofscope
@@ -127716,12 +128029,10 @@ packages:
   - perl-time-hires
   - perl-timedate
   dependency_details:
-  - name: c
-    constraint: c
-    kind: build
   - name: cxx
     constraint: cxx
     kind: build
+    condition: +xs
   - name: perl
     constraint: perl
     kind: build,run
@@ -127803,6 +128114,21 @@ packages:
   - name: perl-timedate
     constraint: perl-timedate
     kind: run
+  options:
+  - doc
+  - xs
+  default_options:
+    doc: 'true'
+    xs: 'true'
+  features:
+  - name: doc
+    description: Build man and HTML format documentation
+    default: 'true'
+    condition: '@2.5:'
+  - name: xs
+    description: Build the C++ XS extension (for improved performance)
+    default: 'true'
+    condition: '@2.6:'
   versions:
   - version: '1.14'
     artifacts:
@@ -127836,6 +128162,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:7e5e5a154bd5f3557659c328cab376764e7abd238bb403c424472c296b175126
+  - version: '2.6'
+    artifacts:
+    - checksums:
+      - sha256:67a45db99b8ef0260c3fac9a2e3749fd8fa350a15e235dd3c29b356d97755c75
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/lcov/package.py
 - id: spack:ldak
@@ -128480,6 +128810,7 @@ packages:
   - version: 26.03.0
   - version: 26.06.0
   - version: 26.09.0
+  - version: 26.09.1
   - version: cr-20230307
     lifecycle: deprecated
   - version: master
@@ -130720,6 +131051,7 @@ packages:
   - jeremylt
   - tzanio
   - v-dobrev
+  - zatkins-dev
   dependencies:
   - blas
   - c
@@ -130804,6 +131136,7 @@ packages:
   - version: '0.7'
   - version: '0.8'
   - version: '0.9'
+  - version: 1.0.0
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/libceed/package.py
 - id: spack:libcerf
@@ -132468,6 +132801,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:21362b00653bbfc1c71f71a7578da66b5b5203559d43134d2dd7719e313ce041
+  - version: 3.1-20260512
+    artifacts:
+    - checksums:
+      - sha256:432d5e7ea8b0116dd39f2eca7bc11d0eed77faa6b77ea526ace89907c23ea4a0
   recipe_path: repos/spack_repo/builtin/packages/libedit/package.py
 - id: spack:libefence
   registry: spack
@@ -133336,6 +133673,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1ee2ab6eb16462c0fe7a836f9df52b8f12309dfee3f3774aa93a86f521a8e8b1
+  - version: 2.7.0
+    artifacts:
+    - checksums:
+      - sha256:366000427e194d4ce22e272519b608afbebb1fc9915bcf5da924157a8a47fe10
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/libfabric/package.py
 - id: spack:libfastcommon
@@ -134725,6 +135066,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:7656b19459a7ca7d2fd0fcec4f2e0fd0deec1b4f39c703a114e8f4c22d82a99c
+  - version: 2.0.1
+    artifacts:
+    - checksums:
+      - sha256:96d2bda64aaf9cf7b6c1a42205e408b0ef2a353ba42dad560db215e7ec105e2e
   recipe_path: repos/spack_repo/builtin/packages/libgff/package.py
 - id: spack:libgit2
   registry: spack
@@ -165452,6 +165797,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:cd96069d42ab1afd799e1eecd82c0a98e9dd2d0f42a0f86942dead1664381f3d
+  - version: 01-01-02
+    artifacts:
+    - checksums:
+      - sha256:4ab4bdc0da51c9647642debf86828b3b42e968cea8b5935c824dd9b562cbc3ac
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/mille/package.py
 - id: spack:millepede
@@ -165568,6 +165917,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c567c8f486194c1edf9e04c53c15f22635120be13e1de19c428f2eb088ae3222
+  - version: 05-01-06
+    artifacts:
+    - checksums:
+      - sha256:4162b8f6861b6a52ca4d6a781d6632f6f64832c672c5f8a169ff21e91d35389a
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/millepede/package.py
 - id: spack:mimalloc
@@ -168487,6 +168840,26 @@ packages:
     artifacts:
     - checksums:
       - sha256:6db0b11094836e4107e44ed23c94c4c9b4ede21d4d35e425a3d7e40e59437293
+  - version: 0.24.0
+    artifacts:
+    - checksums:
+      - sha256:d16290fac3cca0f5508d8a45842274b82373a65b34b7d54e6f096faa4f877fb2
+  - version: 0.24.1
+    artifacts:
+    - checksums:
+      - sha256:05d9cdca54a8d6ccda1fcb9b12873e84f0bf9e7839d7991977f22d1c4a4bdd42
+  - version: 0.24.2
+    artifacts:
+    - checksums:
+      - sha256:eabfee49015349072f24cf6a3fbbc56a9345352580529f1f5a0d889577658cb5
+  - version: 0.24.3
+    artifacts:
+    - checksums:
+      - sha256:bb5014023d17acfb715f7d8db44611c62032bb45a454921fead63e5a6a8d1a68
+  - version: 0.24.4
+    artifacts:
+    - checksums:
+      - sha256:2dcf456b6aa4ee65f30a08a1bfa6d59602657e555074b91760fef893d7afbcf1
   - version: 0.4.2
     artifacts:
     - checksums:
@@ -170901,6 +171274,8 @@ packages:
   licenses:
   - BSD-2-Clause
   homepage: https://www.bytereef.org/mpdecimal/
+  topics:
+  - windows
   dependencies:
   - c
   - cxx
@@ -170915,6 +171290,7 @@ packages:
   - name: gmake
     constraint: gmake
     kind: build
+    condition: build_system=autotools
   versions:
   - version: 2.4.2
     artifacts:
@@ -170924,6 +171300,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:9f9cd4c041f99b5c49ffb7b59d9f12d95b683d88585608aa56a6307667b2b21f
+  - version: 4.0.0
+    artifacts:
+    - checksums:
+      - sha256:942445c3245b22730fd41a67a7c5c231d11cb1b9936b9c0f76334fb7d0b4468c
   recipe_path: repos/spack_repo/builtin/packages/mpdecimal/package.py
 - id: spack:mpe2
   registry: spack
@@ -172537,6 +172917,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1a4670be84e6b968d59382328294db4c8ceb73e0c19c702265deec6f2177815c
+  - version: 3.2.8
+    artifacts:
+    - checksums:
+      - sha256:d821f13341664d6f5d26931810f4bf5703f5dae08a78e2c51a7cabdd8cf9a613
   recipe_path: repos/spack_repo/builtin/packages/mrbayes/package.py
 - id: spack:mrbench
   registry: spack
@@ -174456,6 +174840,8 @@ packages:
   - libcxxwrap-julia
   - mpi
   - netcdf-fortran
+  - node-js
+  - npm
   dependency_details:
   - name: c
     constraint: c
@@ -174463,6 +174849,10 @@ packages:
   - name: cmake
     constraint: 'cmake@3.21:'
     kind: build
+  - name: cmake
+    constraint: 'cmake@3.24:'
+    kind: build
+    condition: '@0.14.2:'
   - name: cxx
     constraint: cxx
     kind: build
@@ -174481,12 +174871,22 @@ packages:
   - name: netcdf-fortran
     constraint: netcdf-fortran
     condition: +tuvx
+  - name: node-js
+    constraint: node-js
+    kind: build,run
+    condition: +javascript
+  - name: npm
+    constraint: npm
+    kind: build
+    condition: +javascript
   options:
   - fmt
   - fortran
   - javascript
   - julia
+  - miam
   - micm
+  - miem
   - mpi
   - openmp
   - shared
@@ -174497,7 +174897,9 @@ packages:
     fortran: 'false'
     javascript: 'false'
     julia: 'false'
+    miam: 'false'
     micm: 'true'
+    miem: 'false'
     mpi: 'false'
     openmp: 'false'
     shared: 'false'
@@ -174516,9 +174918,15 @@ packages:
   - name: julia
     description: Build the Julia wrapper
     default: 'false'
+  - name: miam
+    description: Enable MIAM support
+    default: 'false'
   - name: micm
     description: Enable MICM support
     default: 'true'
+  - name: miem
+    description: Enable MIEM support
+    default: 'false'
   - name: mpi
     description: Enable MPI support
     default: 'false'
@@ -174575,6 +174983,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:aec7be3f46abfd334f1842acf88434c1d3d872703714641fc5a4730892a1d947
+  - version: 0.17.1
+    artifacts:
+    - checksums:
+      - sha256:1f7dd45c295dbaa27e31b3f496c9a3095bb00d9173fb341ea9cf86fda2995de1
   recipe_path: repos/spack_repo/builtin/packages/musica/package.py
 - id: spack:musl
   registry: spack
@@ -178009,6 +178421,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c6e03cacbde7eae908eabfe65b2c1edc7b1754e07597b8f7fe2fc894f21b2dca
+  - version: 5.4.1
+    artifacts:
+    - checksums:
+      - sha256:1908416c4c8c8754f48b797d1030ac847e07d7e49a6d5bf455bdee7808409aad
   recipe_path: repos/spack_repo/builtin/packages/nco/package.py
 - id: spack:ncompress
   registry: spack
@@ -185547,6 +185963,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:99a3e97d7fe90d5195e87256492bf9cd42476d72cbc79ba477011a2384b88f92
+  - version: 3.5.0
+    artifacts:
+    - checksums:
+      - sha256:f244c5eec33f9769123a755dda1e9b80339345ab278cf9542ff34677c88804b5
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/nvtx/package.py
 - id: spack:nwchem
@@ -203037,6 +203457,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:d34f02e113cf7193a1ebf2770d3ac527088d485d4e047ed10e5d217c6ef5de96
+  - version: '10.47'
+    artifacts:
+    - checksums:
+      - sha256:47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7
   recipe_path: repos/spack_repo/builtin/packages/pcre2/package.py
 - id: spack:pcsclite
   registry: spack
@@ -218132,9 +218556,11 @@ packages:
   - scotch
   - strumpack
   - suite-sparse
+  - superlu
   - superlu-dist
   - tetgen
   - trilinos
+  - umpire
   - valgrind
   - zlib-api
   dependency_details:
@@ -218340,6 +218766,9 @@ packages:
   - name: suite-sparse
     constraint: suite-sparse
     condition: +suite-sparse
+  - name: superlu
+    constraint: 'superlu@5.2.1:'
+    condition: +superlu
   - name: superlu-dist
     constraint: superlu-dist@6.1:~int64
     condition: '@3.13.0:+superlu-dist+mpi~int64'
@@ -218364,6 +218793,9 @@ packages:
   - name: trilinos
     constraint: trilinos+mpi+exodus
     condition: +exodusii+mpi
+  - name: umpire
+    constraint: umpire
+    condition: '@3.24:+hypre ^hypre+umpire'
   - name: valgrind
     constraint: valgrind
     condition: +valgrind
@@ -218385,6 +218817,7 @@ packages:
   - cgns
   - clanguage
   - complex
+  - cxxstd
   - debug
   - double
   - examples
@@ -218423,6 +218856,7 @@ packages:
   - shared
   - strumpack
   - suite-sparse
+  - superlu
   - superlu-dist
   - sycl
   - tetgen
@@ -218434,6 +218868,7 @@ packages:
     cgns: 'false'
     clanguage: C
     complex: 'false'
+    cxxstd: auto
     debug: 'false'
     double: 'true'
     examples: 'true'
@@ -218472,6 +218907,7 @@ packages:
     shared: 'true'
     strumpack: 'false'
     suite-sparse: 'false'
+    superlu: 'false'
     superlu-dist: 'false'
     sycl: 'false'
     tetgen: 'false'
@@ -218496,6 +218932,15 @@ packages:
   - name: complex
     description: Build with complex numbers
     default: 'false'
+  - name: cxxstd
+    description: 'Specify the C++ dialect to use (auto: let PETSc choose)'
+    values:
+    - '11'
+    - '14'
+    - '17'
+    - '20'
+    - auto
+    default: auto
   - name: debug
     description: Compile in debug mode
     default: 'false'
@@ -218625,6 +219070,9 @@ packages:
     default: 'false'
   - name: suite-sparse
     description: Activates support for SuiteSparse
+    default: 'false'
+  - name: superlu
+    description: Activates support for SuperLU (sequential)
     default: 'false'
   - name: superlu-dist
     description: Activates support for superlu-dist (only parallel)
@@ -237831,6 +238279,26 @@ packages:
     - checksums:
       - sha256:3ee5830014931ea84af5cd065c637b6614efa03d9b88bd8fbfc924e7ed01d6ba
   recipe_path: repos/spack_repo/builtin/packages/py_auditwheel/package.py
+- id: spack:py-auth0-python
+  registry: spack
+  name: py-auth0-python
+  summary: Auth0 Python SDK - Management and Authentication APIs
+  licenses:
+  - MIT
+  homepage: https://github.com/auth0/auth0-python
+  repository_url: https://github.com/auth0/auth0-python
+  maintainers:
+  - LydDeb
+  versions:
+  - version: 3.24.1
+    artifacts:
+    - checksums:
+      - sha256:62c2e177b9517879bd8632da9eb7668aedd5775fddea87b0e0e1e9a89b9dd096
+  - version: 6.2.0
+    artifacts:
+    - checksums:
+      - sha256:92ee2f23be1bf633b129cbc408f314b1ca35a6c742192cba225c13bf3c59eeac
+  recipe_path: repos/spack_repo/builtin/packages/py_auth0_python/package.py
 - id: spack:py-authlib
   registry: spack
   name: py-authlib
@@ -251086,6 +251554,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a
+  - version: 8.5.0
+    artifacts:
+    - checksums:
+      - sha256:ba0d2089de75ea0310e2dde03160e6ca10009947fb95a182f9b54021bb272e34
   recipe_path: repos/spack_repo/builtin/packages/py_click/package.py
 - id: spack:py-click-didyoumean
   registry: spack
@@ -251342,27 +251814,6 @@ packages:
     - checksums:
       - sha256:01026c764b34d8204b8f527a730ef667fa5827fca765993ff1ed3e9dab2c11ae
   recipe_path: repos/spack_repo/builtin/packages/py_climate/package.py
-- id: spack:py-climax
-  registry: spack
-  name: py-climax
-  summary: 'ClimaX: A foundation model for weather and climate.'
-  licenses:
-  - MIT
-  homepage: https://github.com/microsoft/ClimaX
-  repository_url: https://github.com/microsoft/climax
-  dependencies:
-  - py-setuptools
-  dependency_details:
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  versions:
-  - version: 0.3.1
-    artifacts:
-    - checksums:
-      - sha256:1a8ab02fd1083de4340e26889ceea75f9dbc6e56433c731ba616cb46767872fc
-  - version: main
-  recipe_path: repos/spack_repo/builtin/packages/py_climax/package.py
 - id: spack:py-clint
   registry: spack
   name: py-clint
@@ -255151,60 +255602,6 @@ packages:
     - checksums:
       - sha256:beddb7b78f6b22adbed6ead5ad5de4bfb31dd2c55f3211b2a2b3b65529049223
   recipe_path: repos/spack_repo/builtin/packages/py_csvkit/package.py
-- id: spack:py-ctgan
-  registry: spack
-  name: py-ctgan
-  summary: CTGAN is a collection of Deep Learning based Synthetic Data Generators for single table data, which are able to learn from real data and generate synthetic...
-  description: CTGAN is a collection of Deep Learning based Synthetic Data Generators for single table data, which are able to learn from real data and generate synthetic clones with high fidelity.
-  description_format: html
-  licenses:
-  - MIT
-  homepage: https://github.com/sdv-dev/CTGAN
-  repository_url: https://github.com/sdv-dev/ctgan
-  dependencies:
-  - py-numpy
-  - py-packaging
-  - py-pandas
-  - py-rdt
-  - py-scikit-learn
-  - py-setuptools
-  - py-torch
-  - py-torchvision
-  - python
-  dependency_details:
-  - name: py-numpy
-    constraint: py-numpy@1.20:1
-    kind: build,run
-  - name: py-packaging
-    constraint: py-packaging@20:21
-    kind: build,run
-  - name: py-pandas
-    constraint: py-pandas@1.1.3:1
-    kind: build,run
-  - name: py-rdt
-    constraint: py-rdt@0.6.1:0.6
-    kind: build,run
-  - name: py-scikit-learn
-    constraint: py-scikit-learn@0.24:1
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-torch
-    constraint: py-torch@1.8.0:1
-    kind: build,run
-  - name: py-torchvision
-    constraint: py-torchvision@0.9:0
-    kind: build,run
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
-  versions:
-  - version: 0.5.0
-    artifacts:
-    - checksums:
-      - sha256:b8a5dbf21dab2d2e2690013f13feb0922f5bad13440b15bc031ce9d58c7fb988
-  recipe_path: repos/spack_repo/builtin/packages/py_ctgan/package.py
 - id: spack:py-ctypes-dlpack
   registry: spack
   name: py-ctypes-dlpack
@@ -256075,6 +256472,10 @@ packages:
     constraint: 'py-cython@0.29.20:'
     kind: build
   - name: py-dnaio
+    constraint: 'py-dnaio@1.2.3:'
+    kind: build,run
+    condition: '@5:'
+  - name: py-dnaio
     constraint: 'py-dnaio@1.2.0:'
     kind: build,run
     condition: '@4.7:'
@@ -256110,6 +256511,10 @@ packages:
     constraint: py-dnaio@0.4.2:0.4
     kind: build,run
     condition: '@2.10'
+  - name: py-setuptools
+    constraint: 'py-setuptools@78:'
+    kind: build
+    condition: '@5.1:'
   - name: py-setuptools
     constraint: 'py-setuptools@63:'
     kind: build
@@ -256150,6 +256555,10 @@ packages:
     constraint: py-xopen@0.8.4:0.8
     kind: build,run
     condition: '@2.6:2.10'
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@5:'
   - name: python
     constraint: 'python@3.8:'
     kind: build,run
@@ -256195,6 +256604,26 @@ packages:
     artifacts:
     - checksums:
       - sha256:8738a35b363eaf615665a4e7d1b4beb385cd93fb7ffdcf82cd4ab6457acc879b
+  - version: '4.8'
+    artifacts:
+    - checksums:
+      - sha256:ac852f6b5f2d1147d0d34bef2eaa5879776f81c69a35dd328a701aae39ec6034
+  - version: '4.9'
+    artifacts:
+    - checksums:
+      - sha256:da3b45775b07334d2e2580a7b154d19ea7e872f0da813bb1ac2a4da712bfc223
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:cd66872b6635c068cf223f72fb0cc93b2454088a3e807a550bb36f717d25ae29
+  - version: '5.1'
+    artifacts:
+    - checksums:
+      - sha256:6bc76345c0a45f6b680cb1164e48eb1f81815c764ec471284ab6234c6653b937
+  - version: '5.2'
+    artifacts:
+    - checksums:
+      - sha256:2394deead42ecae5fe0fdf369e35f3e2afed770e14059582272779c2e8295d3c
   recipe_path: repos/spack_repo/builtin/packages/py_cutadapt/package.py
 - id: spack:py-cvxopt
   registry: spack
@@ -257945,9 +258374,13 @@ packages:
   homepage: https://dash.plotly.com/
   repository_url: https://github.com/plotly/dash
   dependencies:
+  - py-comm
   - py-flask
   - py-importlib-metadata
+  - py-janus
+  - py-nest-asyncio
   - py-plotly
+  - py-pydantic
   - py-requests
   - py-retrying
   - py-setuptools
@@ -257955,20 +258388,40 @@ packages:
   - py-werkzeug
   - python
   dependency_details:
+  - name: py-comm
+    constraint: py-comm
+    kind: build,run
+    condition: '@4.4.1:'
   - name: py-flask
     constraint: py-flask
   - name: py-importlib-metadata
     constraint: py-importlib-metadata
+  - name: py-janus
+    constraint: 'py-janus@1.0.0:'
+    kind: build,run
+    condition: '@4.4.1:'
+  - name: py-nest-asyncio
+    constraint: py-nest-asyncio
+    kind: build,run
+    condition: '@4.4.1:'
   - name: py-plotly
     constraint: py-plotly@5
     condition: '@:2'
   - name: py-plotly
     constraint: 'py-plotly@5:'
     condition: '@3:'
+  - name: py-pydantic
+    constraint: 'py-pydantic@2.10.0:'
+    kind: build,run
+    condition: '@4.4.1:'
   - name: py-requests
     constraint: py-requests
   - name: py-retrying
     constraint: py-retrying
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: run
+    condition: '@4.4.1:'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
@@ -257982,6 +258435,10 @@ packages:
   - name: python
     constraint: 'python@3.8:'
     kind: build,run
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@4.4.1:'
   versions:
   - version: 2.17.1
     artifacts:
@@ -257991,6 +258448,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3944beb32000ee8b22cd7fbb33545a0a43e25916c63aa41ba59ee5611997815e
+  - version: 4.4.1
+    artifacts:
+    - checksums:
+      - sha256:9356ca7856bc496c12c5b6de5978aaf783e090d07450ee395ade1c0c2cbdf816
   recipe_path: repos/spack_repo/builtin/packages/py_dash/package.py
 - id: spack:py-dash-bootstrap-components
   registry: spack
@@ -258001,20 +258462,39 @@ packages:
   homepage: https://dash-bootstrap-components.opensource.faculty.ai/
   repository_url: https://github.com/facultyai/dash-bootstrap-components
   dependencies:
+  - py-dash
+  - py-hatchling
   - py-setuptools
   - python
   dependency_details:
+  - name: py-dash
+    constraint: 'py-dash@3.0.4:'
+    kind: build,run
+    condition: '@2.0.4:'
+  - name: py-hatchling
+    constraint: py-hatchling
+    kind: build
+    condition: '@2.0.4:'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
+    condition: '@:1.6.0'
   - name: python
     constraint: 'python@3.8:'
     kind: build,run
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@2.0.4:'
   versions:
   - version: 1.6.0
     artifacts:
     - checksums:
       - sha256:960a1ec9397574792f49a8241024fa3cecde0f5930c971a3fc81f016cbeb1095
+  - version: 2.0.4
+    artifacts:
+    - checksums:
+      - sha256:c3206c0923774bbc6a6ddaa7822b8d9aa5326b0d3c1e7cd795cc975025fe2484
   recipe_path: repos/spack_repo/builtin/packages/py_dash_bootstrap_components/package.py
 - id: spack:py-dash-svg
   registry: spack
@@ -258126,6 +258606,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f7d96c8274e8a900d217c1ff6ea8d1bbf0b4c2c21e74a409644498d925eb8f85
+  - version: 2026.7.1
+    artifacts:
+    - checksums:
+      - sha256:5727484427665f051e86bf87d021a64d6411141cdc8a20bfe3c1ad2968cc06b7
   recipe_path: repos/spack_repo/builtin/packages/py_dask/package.py
 - id: spack:py-dask-awkward
   registry: spack
@@ -259972,50 +260456,6 @@ packages:
     - checksums:
       - sha256:dd7bc7d5c8b51b5b90f01b0e2fe23c801fd8b4c6a7ee7e31c5a3c3663fcc7ceb
   recipe_path: repos/spack_repo/builtin/packages/py_deepdiff/package.py
-- id: spack:py-deepecho
-  registry: spack
-  name: py-deepecho
-  summary: DeepEcho is a Synthetic Data Generation Python library for mixed-type, multivariate time series.
-  licenses:
-  - MIT
-  homepage: https://github.com/sdv-dev/DeepEcho
-  repository_url: https://github.com/sdv-dev/deepecho
-  dependencies:
-  - py-numpy
-  - py-pandas
-  - py-pytest-runner
-  - py-setuptools
-  - py-torch
-  - py-tqdm
-  - python
-  dependency_details:
-  - name: py-numpy
-    constraint: py-numpy@1.20.0:1
-    kind: build,run
-  - name: py-pandas
-    constraint: py-pandas@1.1.3:1
-    kind: build,run
-  - name: py-pytest-runner
-    constraint: 'py-pytest-runner@2.11.1:'
-    kind: build
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-torch
-    constraint: py-torch@1.8.0:1
-    kind: build,run
-  - name: py-tqdm
-    constraint: py-tqdm@4.15:4
-    kind: build,run
-  - name: python
-    constraint: python@3.6:3.9
-    kind: build,run
-  versions:
-  - version: 0.3.0.post1
-    artifacts:
-    - checksums:
-      - sha256:9f67373a435b5bcd84441c53eae87a2ba17a27574419a59191f92198f400b914
-  recipe_path: repos/spack_repo/builtin/packages/py_deepecho/package.py
 - id: spack:py-deephyper
   registry: spack
   name: py-deephyper
@@ -262010,6 +262450,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4a8fc6102fededfbaae45288501276da2297a054d74eb6589f01b087c7f95c26
+  - version: 2026.7.1
+    artifacts:
+    - checksums:
+      - sha256:f7c48ab6961734874521574d75898466703bce93f22f0cff5872c7e4ac6425d4
   recipe_path: repos/spack_repo/builtin/packages/py_distributed/package.py
 - id: spack:py-distro
   registry: spack
@@ -262306,9 +262750,17 @@ packages:
     constraint: 'py-cython@0.29.20:'
     kind: build
     condition: '@0.9.1:'
+  - name: py-cython
+    constraint: 'py-cython@3.1:'
+    kind: build
+    condition: '@1.2.4:'
   - name: py-setuptools
     constraint: 'py-setuptools@52:'
     kind: build
+  - name: py-setuptools
+    constraint: 'py-setuptools@78:'
+    kind: build
+    condition: '@1.2.4:'
   - name: py-setuptools-scm
     constraint: 'py-setuptools-scm@6.2:'
     kind: build
@@ -262328,6 +262780,14 @@ packages:
     constraint: 'python@3.7:'
     kind: build,run
     condition: '@0.9.1:'
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@1.2.3:'
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+    condition: '@1.2.4:'
   versions:
   - version: 0.10.0
     artifacts:
@@ -262349,6 +262809,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:d0528c23516fe4e947970bdef33c423f0a30ab3b083bd4f6f049fd66d8cef803
+  - version: 1.2.3
+    artifacts:
+    - checksums:
+      - sha256:aad456d9f6272339958b2c5af32fd64d77a50aca12e394e7a143b4129d49b0b9
+  - version: 1.2.4
+    artifacts:
+    - checksums:
+      - sha256:a7570311f29e8b3c1ea39a60f57b7baf8dad8f2508595c58d4278c5571463166
   recipe_path: repos/spack_repo/builtin/packages/py_dnaio/package.py
 - id: spack:py-dnspython
   registry: spack
@@ -263335,6 +263803,24 @@ packages:
     - checksums:
       - sha256:2d4a503fa806e33b580afb6d21879b2399178e48ba3b05ada882449fee571889
   recipe_path: repos/spack_repo/builtin/packages/py_dram_bio/package.py
+- id: spack:py-drawsvg
+  registry: spack
+  name: py-drawsvg
+  summary: A Python 3 library for programmatically generating SVG (vector) images and animations. Drawsvg can also render to PNG, MP4, and display your drawings in...
+  description: A Python 3 library for programmatically generating SVG (vector) images and animations. Drawsvg can also render to PNG, MP4, and display your drawings in Jupyter notebook and Jupyter lab.
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/cduck/drawsvg
+  repository_url: https://github.com/cduck/drawsvg
+  maintainers:
+  - LydDeb
+  versions:
+  - version: 2.4.2
+    artifacts:
+    - checksums:
+      - sha256:5efd8bcdc2c2400425e7fb71b4b80d8fdd83b1dc810f790f58a165df33ddd303
+  recipe_path: repos/spack_repo/builtin/packages/py_drawsvg/package.py
 - id: spack:py-drep
   registry: spack
   name: py-drep
@@ -267519,92 +268005,6 @@ packages:
     - checksums:
       - sha256:b19acac4bb41d76e59e03394b5dd165f4761c86fa327f56307a35cbee3b60158
   recipe_path: repos/spack_repo/builtin/packages/py_farama_notifications/package.py
-- id: spack:py-fastai
-  registry: spack
-  name: py-fastai
-  summary: You can use fastai without any installation by using Google Colab. In fact, every page of this documentation is also available as an interactive notebook...
-  description: You can use fastai without any installation by using Google Colab. In fact, every page of this documentation is also available as an interactive notebook - click "Open in colab" at the top of any page to open it (be sure to change the Colab runtime to "GPU" to have it run fast!) See the fast.ai documentation on Using Colab for more information.
-  description_format: html
-  licenses:
-  - Apache-2.0
-  homepage: https://github.com/fastai/fastai/tree/master/
-  repository_url: https://github.com/fastai/fastai
-  dependencies:
-  - pil
-  - py-fastcore
-  - py-fastdownload
-  - py-fastprogress
-  - py-matplotlib
-  - py-packaging
-  - py-pandas
-  - py-pip
-  - py-pyyaml
-  - py-requests
-  - py-scikit-learn
-  - py-scipy
-  - py-setuptools
-  - py-spacy
-  - py-torch
-  - py-torchvision
-  - python
-  dependency_details:
-  - name: pil
-    constraint: 'pil@6.0.1:'
-    kind: build,run
-  - name: py-fastcore
-    constraint: py-fastcore@1.3.22:1.3
-    kind: build,run
-  - name: py-fastdownload
-    constraint: py-fastdownload@0.0.5:1
-    kind: build,run
-  - name: py-fastprogress
-    constraint: 'py-fastprogress@0.2.4:'
-    kind: build,run
-  - name: py-matplotlib
-    constraint: py-matplotlib
-    kind: build,run
-  - name: py-packaging
-    constraint: py-packaging
-    kind: build
-  - name: py-pandas
-    constraint: py-pandas
-    kind: build,run
-  - name: py-pip
-    constraint: py-pip
-    kind: build
-  - name: py-pyyaml
-    constraint: py-pyyaml
-    kind: build,run
-  - name: py-requests
-    constraint: py-requests
-    kind: build,run
-  - name: py-scikit-learn
-    constraint: py-scikit-learn
-    kind: build,run
-  - name: py-scipy
-    constraint: py-scipy
-    kind: build,run
-  - name: py-setuptools
-    constraint: 'py-setuptools@36.2:'
-    kind: build
-  - name: py-spacy
-    constraint: py-spacy@:3
-    kind: build,run
-  - name: py-torch
-    constraint: py-torch@1.7.0:1.10
-    kind: build,run
-  - name: py-torchvision
-    constraint: 'py-torchvision@0.8.2:'
-    kind: build,run
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
-  versions:
-  - version: 2.5.3
-    artifacts:
-    - checksums:
-      - sha256:0cae50617979b052f0ed7337800e6814ee346b792203cf48305709c935e8eeb7
-  recipe_path: repos/spack_repo/builtin/packages/py_fastai/package.py
 - id: spack:py-fastaindex
   registry: spack
   name: py-fastaindex
@@ -268371,7 +268771,7 @@ packages:
     constraint: py-cython
     kind: build
   - name: py-cython
-    constraint: py-cython@3.0.11:3.0
+    constraint: 'py-cython@3.0.11:'
     kind: build
     condition: '@0.8.3'
   - name: py-cython
@@ -273162,11 +273562,17 @@ packages:
   homepage: https://github.com/aradi/fypp
   repository_url: https://github.com/aradi/fypp
   dependencies:
+  - py-hatchling
   - py-setuptools
   dependency_details:
+  - name: py-hatchling
+    constraint: py-hatchling
+    kind: build
+    condition: '@3.3:'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
+    condition: '@:3.2'
   versions:
   - version: 2.1.1
     artifacts:
@@ -273180,6 +273586,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:42a551fa82df5ea752f0c0dd5c008d5f544e1aa90c1abd054b0afd8170878dba
+  - version: '3.3'
+    artifacts:
+    - checksums:
+      - sha256:2fe0fbbe35f3f8e9fca1fd2d1e571f2c4084ed919de0bcef14f3adb98064a818
   recipe_path: repos/spack_repo/builtin/packages/py_fypp/package.py
 - id: spack:py-galaxy-containers
   registry: spack
@@ -275815,11 +276225,15 @@ packages:
   homepage: https://github.com/johnlees/glmnet_python/
   repository_url: https://github.com/johnlees/glmnet_python
   dependencies:
+  - fortran
   - py-joblib
   - py-numpy
   - py-scipy
   - py-setuptools
   dependency_details:
+  - name: fortran
+    constraint: fortran
+    kind: build
   - name: py-joblib
     constraint: 'py-joblib@0.10.3:'
     kind: build,run
@@ -281180,46 +281594,11 @@ packages:
   - JuanPedroGHM
   - LeonKaem
   dependencies:
-  - py-docutils
-  - py-h5py
-  - py-matplotlib
-  - py-netcdf4
-  - py-pre-commit
-  - py-scikit-learn
   - py-setuptools
-  - py-zarr
   dependency_details:
-  - name: py-docutils
-    constraint: 'py-docutils@0.16:'
-    kind: build,link,run
-    condition: +docutils
-  - name: py-h5py
-    constraint: 'py-h5py@2.8.0:'
-    kind: build,link,run
-    condition: +hdf5
-  - name: py-matplotlib
-    constraint: 'py-matplotlib@3.1.0:'
-    kind: build,link,run
-    condition: +examples
-  - name: py-netcdf4
-    constraint: 'py-netcdf4@1.5.6:'
-    kind: build,link,run
-    condition: +netcdf
-  - name: py-pre-commit
-    constraint: 'py-pre-commit@1.18.3:'
-    kind: build,link,run
-    condition: +dev
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@0.24.0:'
-    kind: build,link,run
-    condition: +examples
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
-  - name: py-zarr
-    constraint: py-zarr
-    kind: build,link,run
-    condition: +zarr
   options:
   - cuda
   - dev
@@ -281227,6 +281606,7 @@ packages:
   - examples
   - hdf5
   - netcdf
+  - pandas
   - rocm
   - zarr
   default_options:
@@ -281236,6 +281616,7 @@ packages:
     examples: 'false'
     hdf5: 'false'
     netcdf: 'false'
+    pandas: 'false'
     rocm: 'false'
     zarr: 'false'
   features:
@@ -281243,13 +281624,13 @@ packages:
     description: build Py_Torch dependency with cuda support
     default: 'false'
   - name: dev
-    description: Use the py-pre-commit package
+    description: include packages needed for development
     default: 'false'
   - name: docutils
-    description: Use the py-docutils package
+    description: adding packages for working with documentation
     default: 'false'
   - name: examples
-    description: Use py-scikit-learn and py-matplotlib for the example tests
+    description: include packages need for the examples
     default: 'false'
   - name: hdf5
     description: Use the py-h5py package needed for HDF5 support
@@ -281257,6 +281638,10 @@ packages:
   - name: netcdf
     description: Use the py-netcdf4 package needed for NetCDF support
     default: 'false'
+  - name: pandas
+    description: use pandas for analysis
+    default: 'false'
+    condition: '@1.9:'
   - name: rocm
     description: build Py_Torch dependency with rocm support
     default: 'false'
@@ -281265,46 +281650,14 @@ packages:
     default: 'false'
     condition: '@1.6:'
   versions:
-  - version: 1.3.0
-    artifacts:
-    - checksums:
-      - sha256:fa247539a559881ffe574a70227d3c72551e7c4a9fb29b0945578d6a840d1c87
-  - version: 1.3.1
-    artifacts:
-    - checksums:
-      - sha256:8997ddc56a1d3078b44a1e2933adc0a7fbf678bd19bade3ae015bc0e13d40d3b
-  - version: 1.4.0
-    artifacts:
-    - checksums:
-      - sha256:6836fa10f9ce62ea61cf1bdc3283d7ad0c305836cc5a08c4edfd30695708e788
-  - version: 1.4.1
-    artifacts:
-    - checksums:
-      - sha256:ecd871717c372a6983f643c0178dda44bc017d6b32b9258dbf3775af95f580ce
-  - version: 1.4.2
-    artifacts:
-    - checksums:
-      - sha256:d6714428a9c5204c1c44a2b246f228effaddc688f812277f229f4acdbcfeb7c5
-  - version: 1.5.0
-    artifacts:
-    - checksums:
-      - sha256:a2e2d7f0c1f340ab2597f2b9c02563f0057419a53287fbf4cdf1a7934bc6d60b
-  - version: 1.5.1
-    artifacts:
-    - checksums:
-      - sha256:95fea9daec6c2d5f0453159dbcd5efb26cb23997f0981e49fe9793a2fd342313
-  - version: 1.6.0
-    artifacts:
-    - checksums:
-      - sha256:cd011e67c284b7f94d0f1c6ff8bf5309535fa26a895b0db2df83290c47dae55b
-  - version: 1.7.0
-    artifacts:
-    - checksums:
-      - sha256:1d787cc5f52fc2123bb69e6e2ee53b268b258abe4ed5be99e53706bcb250175c
   - version: 1.8.0
     artifacts:
     - checksums:
       - sha256:f0d64e122c88a44ca27ad60d91cdb7250f97c71c971913302ed90d838d7fd253
+  - version: 1.9.0
+    artifacts:
+    - checksums:
+      - sha256:cd5aacd7b8dccb2c47b7c088260503ae1eb1a3138048a4b687f48746f1a7f749
   recipe_path: repos/spack_repo/builtin/packages/py_heat/package.py
 - id: spack:py-heavyball
   registry: spack
@@ -281779,6 +282132,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8ddedb73c8c08928c793df2f3401ec26f95be7f7e516a7bee2fbb546f6676113
+  - version: 1.6.0
+    artifacts:
+    - checksums:
+      - sha256:2e58454a340b3556dfa4972d5451aff4fba8dd42a236600ba1a1d2b1514f0fef
   recipe_path: repos/spack_repo/builtin/packages/py_hf_xet/package.py
 - id: spack:py-hieroglyph
   registry: spack
@@ -283547,11 +283904,11 @@ packages:
   - name: cli
     description: Install dependencies for CLI-specific features
     default: 'false'
-    condition: '@0.10:'
+    condition: '@0.10:0'
   - name: hf_transfer
     description: Install hf_transfer to speed up downloads/uploads
     default: 'false'
-    condition: '@0.21:'
+    condition: '@0.21:0'
   versions:
   - version: 0.0.10
     artifacts:
@@ -283593,6 +283950,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:d58130fd5aa7408480681475491c0abd7e835442082fbc3ef4d45b6c39f83853
+  - version: 1.29.0
+    artifacts:
+    - checksums:
+      - sha256:6ebb385a581435325cf6d5c5b233d5d4bc91175834d99fd65dae14379b36e9ad
   recipe_path: repos/spack_repo/builtin/packages/py_huggingface_hub/package.py
 - id: spack:py-humanfriendly
   registry: spack
@@ -283874,10 +284235,10 @@ packages:
     kind: build
     condition: '@:1.3.2'
   versions:
-  - version: 1.3.5
+  - version: 1.3.7
     artifacts:
     - checksums:
-      - sha256:71c441eabbde086062045e4d3fce9e26015244f1a4ac721cf3e444c7edf10633
+      - sha256:d4ff629c7e23b64a9db5fe5b027cf7c55b633b737f03be51ef41b77ed016f75e
   recipe_path: repos/spack_repo/builtin/packages/py_hydra_core/package.py
 - id: spack:py-hypercorn
   registry: spack
@@ -285815,33 +286176,6 @@ packages:
   - MIT
   homepage: https://github.com/jaraco/inflect
   repository_url: https://github.com/jaraco/inflect
-  dependencies:
-  - py-pydantic
-  - py-setuptools
-  - py-setuptools-scm
-  - python
-  dependency_details:
-  - name: py-pydantic
-    constraint: 'py-pydantic@1.9.1:'
-    kind: build,run
-    condition: '@6.0.2:'
-  - name: py-setuptools
-    constraint: 'py-setuptools@42:'
-    kind: build
-  - name: py-setuptools
-    constraint: 'py-setuptools@56:'
-    kind: build
-    condition: '@6.0.2:'
-  - name: py-setuptools-scm
-    constraint: 'py-setuptools-scm+toml@3.4.1:'
-    kind: build
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
-  - name: python
-    constraint: 'python@3.7:'
-    kind: build,run
-    condition: '@6.0.2:'
   versions:
   - version: 5.0.2
     artifacts:
@@ -285851,6 +286185,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f1a6bcb0105046f89619fde1a7d044c612c614c2d85ef182582d9dc9b86d309a
+  - version: 7.5.0
+    artifacts:
+    - checksums:
+      - sha256:faf19801c3742ed5a05a8ce388e0d8fe1a07f8d095c82201eb904f5d27ad571f
   recipe_path: repos/spack_repo/builtin/packages/py_inflect/package.py
 - id: spack:py-inheritance
   registry: spack
@@ -288816,6 +289154,44 @@ packages:
     - checksums:
       - sha256:42b28017b3e6b57a44b0274cc15f5153239c4873959030399ac1afc009c22365
   recipe_path: repos/spack_repo/builtin/packages/py_jax/package.py
+- id: spack:py-jax-tqdm
+  registry: spack
+  name: py-jax-tqdm
+  summary: Tqdm progress bar for JAX scans and loops.
+  licenses:
+  - MIT
+  homepage: https://github.com/jeremiecoullon/jax-tqdm
+  repository_url: https://github.com/jeremiecoullon/jax-tqdm
+  maintainers:
+  - tpadioleau
+  dependencies:
+  - py-chex
+  - py-jax
+  - py-poetry-core
+  - py-tqdm
+  - python
+  dependency_details:
+  - name: py-chex
+    constraint: py-chex@0.1.87:0.1
+    kind: build,run
+  - name: py-jax
+    constraint: py-jax@0.4.12:0
+    kind: build,run
+  - name: py-poetry-core
+    constraint: py-poetry-core@1.2:1
+    kind: build
+  - name: py-tqdm
+    constraint: py-tqdm@4.64.1:4
+    kind: build,run
+  - name: python
+    constraint: python@3.10:3
+    kind: build,run
+  versions:
+  - version: 0.4.0
+    artifacts:
+    - checksums:
+      - sha256:d76a7ab07286ed8024fa019add2668b4d1d6ddf3bcaa166f2e1466d9e51b99a0
+  recipe_path: repos/spack_repo/builtin/packages/py_jax_tqdm/package.py
 - id: spack:py-jaxlib
   registry: spack
   name: py-jaxlib
@@ -291065,190 +291441,6 @@ packages:
   repository_url: https://github.com/jupyter-server/jupyter_server
   topics:
   - build-tools
-  dependencies:
-  - npm
-  - py-anyio
-  - py-argon2-cffi
-  - py-hatch-jupyter-builder
-  - py-hatchling
-  - py-jinja2
-  - py-jupyter-client
-  - py-jupyter-core
-  - py-jupyter-events
-  - py-jupyter-server-terminals
-  - py-nbconvert
-  - py-nbformat
-  - py-overrides
-  - py-packaging
-  - py-prometheus-client
-  - py-pyzmq
-  - py-send2trash
-  - py-terminado
-  - py-tornado
-  - py-traitlets
-  - py-websocket-client
-  - python
-  dependency_details:
-  - name: npm
-    constraint: npm
-    kind: build
-    condition: +typescript
-  - name: py-anyio
-    constraint: 'py-anyio@3.1.0:'
-    kind: build,run
-    condition: '@2.2.1:'
-  - name: py-anyio
-    constraint: py-anyio@3.1.0:3
-    kind: build,run
-    condition: '@:2.2.0'
-  - name: py-argon2-cffi
-    constraint: 'py-argon2-cffi@21.1:'
-    kind: build,run
-    condition: '@2.14:'
-  - name: py-argon2-cffi
-    constraint: py-argon2-cffi
-    kind: build,run
-  - name: py-hatch-jupyter-builder
-    constraint: 'py-hatch-jupyter-builder@0.8.1:'
-    kind: build
-    condition: '@2:'
-  - name: py-hatchling
-    constraint: 'py-hatchling@1.11:'
-    kind: build
-    condition: '@2:'
-  - name: py-jinja2
-    constraint: 'py-jinja2@3.0.3:'
-    kind: build,run
-    condition: '@2.14:'
-  - name: py-jinja2
-    constraint: py-jinja2
-    kind: build,run
-  - name: py-jupyter-client
-    constraint: 'py-jupyter-client@7.4.4:'
-    kind: build,run
-    condition: '@2:'
-  - name: py-jupyter-client
-    constraint: 'py-jupyter-client@6.1.12:'
-    kind: build,run
-    condition: '@1.16:'
-  - name: py-jupyter-core
-    constraint: 'py-jupyter-core@4.12:4,5.1:'
-    kind: build,run
-    condition: '@1.23.5:'
-  - name: py-jupyter-core
-    constraint: 'py-jupyter-core@4.7:'
-    kind: build,run
-    condition: '@1.16:'
-  - name: py-jupyter-events
-    constraint: 'py-jupyter-events@0.11:'
-    kind: build,run
-    condition: '@2.10.1:'
-  - name: py-jupyter-events
-    constraint: 'py-jupyter-events@0.9:'
-    kind: build,run
-    condition: '@2.10.1:'
-  - name: py-jupyter-events
-    constraint: 'py-jupyter-events@0.6:'
-    kind: build,run
-    condition: '@2.6:'
-  - name: py-jupyter-server-terminals
-    constraint: 'py-jupyter-server-terminals@0.4.4:'
-    kind: build,run
-    condition: '@2.14:'
-  - name: py-jupyter-server-terminals
-    constraint: py-jupyter-server-terminals
-    kind: build,run
-    condition: '@2:'
-  - name: py-nbconvert
-    constraint: 'py-nbconvert@6.4.4:'
-    kind: build,run
-    condition: '@1.16:'
-  - name: py-nbformat
-    constraint: 'py-nbformat@5.3:'
-    kind: build,run
-    condition: '@2:'
-  - name: py-nbformat
-    constraint: 'py-nbformat@5.2:'
-    kind: build,run
-    condition: '@1.15:'
-  - name: py-overrides
-    constraint: 'py-overrides@5.0:'
-    kind: build,run
-    condition: '@2.17: ^python@:3.11'
-  - name: py-overrides
-    constraint: 'py-overrides@5.0:'
-    kind: build,run
-    condition: '@2.14:2.16 '
-  - name: py-overrides
-    constraint: py-overrides
-    kind: build,run
-    condition: '@2.6:2.16'
-  - name: py-packaging
-    constraint: 'py-packaging@22.0:'
-    kind: build,run
-    condition: '@2.14:'
-  - name: py-packaging
-    constraint: py-packaging
-    kind: build,run
-    condition: '@1.13.2:'
-  - name: py-prometheus-client
-    constraint: 'py-prometheus-client@0.9:'
-    kind: build,run
-    condition: '@2.14:'
-  - name: py-prometheus-client
-    constraint: py-prometheus-client
-    kind: build,run
-  - name: py-pyzmq
-    constraint: 'py-pyzmq@24:'
-    kind: build,run
-    condition: '@2:'
-  - name: py-pyzmq
-    constraint: 'py-pyzmq@17:'
-    kind: build,run
-  - name: py-send2trash
-    constraint: 'py-send2trash@1.8.2:'
-    kind: build,run
-    condition: '@2.7.1:'
-  - name: py-send2trash
-    constraint: py-send2trash
-    kind: build,run
-  - name: py-terminado
-    constraint: 'py-terminado@0.8.3:'
-    kind: build,run
-  - name: py-tornado
-    constraint: 'py-tornado@6.2:'
-    kind: build,run
-    condition: '@2:'
-  - name: py-tornado
-    constraint: 'py-tornado@6.1:'
-    kind: build,run
-  - name: py-traitlets
-    constraint: 'py-traitlets@5.6:'
-    kind: build,run
-    condition: '@2.0.1:'
-  - name: py-traitlets
-    constraint: 'py-traitlets@5.1:'
-    kind: build,run
-    condition: '@1.16:'
-  - name: py-traitlets
-    constraint: 'py-traitlets@5:'
-    kind: build,run
-    condition: '@1.13.3:'
-  - name: py-websocket-client
-    constraint: 'py-websocket-client@1.7:'
-    kind: build,run
-    condition: '@2.14:'
-  - name: py-websocket-client
-    constraint: py-websocket-client
-    kind: build,run
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build,run
-    condition: '@2.15:'
-  - name: python
-    constraint: 'python@3.8:'
-    kind: build,run
-    condition: '@2:'
   options:
   - typescript
   default_options:
@@ -291275,6 +291467,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c38ea898566964c888b4772ae1ed58eca84592e88251d2cfc4d171f81f7e99d5
+  - version: 2.21.1
+    artifacts:
+    - checksums:
+      - sha256:a8960aa29263f6041283e97d4756b099fb49b767baab6371891ecb1bd40a63df
   - version: 2.6.0
     artifacts:
     - checksums:
@@ -291635,8 +291831,6 @@ packages:
   dependencies:
   - node-js
   - npm
-  - py-hatchling
-  - py-importlib-resources
   dependency_details:
   - name: node-js
     constraint: node-js
@@ -291644,18 +291838,6 @@ packages:
   - name: npm
     constraint: npm
     kind: run
-  - name: py-hatchling
-    constraint: 'py-hatchling@1.21.1:'
-    kind: build
-    condition: '@4.3.5:'
-  - name: py-hatchling
-    constraint: 'py-hatchling@1.5:'
-    kind: build
-    condition: '@4:'
-  - name: py-importlib-resources
-    constraint: 'py-importlib-resources@1.4:'
-    kind: build,run
-    condition: '@4: ^python@:3.8'
   versions:
   - version: 2.1.0
     artifacts:
@@ -291729,6 +291911,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:af54d7242cc689a1e6c3ad213cc9b6d9781787d9ec67c52ec9a8f4707088cadd
+  - version: 4.6.4
+    artifacts:
+    - checksums:
+      - sha256:404f49b081819378524886c9db66dba57a5565981eff885830df1baba3a17df5
   recipe_path: repos/spack_repo/builtin/packages/py_jupyterlab/package.py
 - id: spack:py-jupyterlab-pygments
   registry: spack
@@ -300217,7 +300403,7 @@ packages:
     constraint: py-hatchling
     kind: build
   - name: py-httpx
-    constraint: py-httpx@0.27.1:1
+    constraint: py-httpx@0.27.1:0
     kind: build,run
   - name: py-httpx-sse
     constraint: 'py-httpx-sse@0.4:'
@@ -300226,12 +300412,12 @@ packages:
     constraint: 'py-jsonschema@4.20:'
     kind: build,run
   - name: py-pydantic
-    constraint: py-pydantic@2.11:2
-    kind: build,run
-  - name: py-pydantic
     constraint: py-pydantic@2.12:2
     kind: build,run
     condition: '^python@3.14:'
+  - name: py-pydantic
+    constraint: py-pydantic@2.11:2
+    kind: build,run
   - name: py-pydantic-settings
     constraint: 'py-pydantic-settings@2.5.2:'
     kind: build,run
@@ -300245,12 +300431,12 @@ packages:
     constraint: 'py-sse-starlette@1.6.1:'
     kind: build,run
   - name: py-starlette
-    constraint: 'py-starlette@0.27:'
-    kind: build,run
-  - name: py-starlette
     constraint: 'py-starlette@0.48:'
     kind: build,run
     condition: '^python@3.14:'
+  - name: py-starlette
+    constraint: 'py-starlette@0.27:'
+    kind: build,run
   - name: py-typing-extensions
     constraint: 'py-typing-extensions@4.9:'
     kind: build,run
@@ -300272,6 +300458,10 @@ packages:
     description: Command-line tooling (mcp CLI)
     default: 'false'
   versions:
+  - version: 1.26.0
+    artifacts:
+    - checksums:
+      - sha256:db6e2ef491eecc1a0d93711a76f28dec2e05999f93afd48795da1c1137142c66
   - version: 1.28.1
     artifacts:
     - checksums:
@@ -302706,29 +302896,11 @@ packages:
   - Apache-2.0
   homepage: https://github.com/BEL-Public/mffpy
   repository_url: https://github.com/bel-public/mffpy
-  dependencies:
-  - py-deprecated
-  - py-numpy
-  - py-pytz
-  - py-setuptools
-  - python
-  dependency_details:
-  - name: py-deprecated
-    constraint: 'py-deprecated@1.2.12:'
-    kind: build,run
-  - name: py-numpy
-    constraint: 'py-numpy@1.15.1:'
-    kind: build,run
-  - name: py-pytz
-    constraint: 'py-pytz@2019.2:'
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
   versions:
+  - version: 0.11.0
+    artifacts:
+    - checksums:
+      - sha256:daaf3d018e7bb4a6827e4bb32d7877a3cc78e1bc97c2b0f3d1027e7ae1724eef
   - version: 0.6.3
     artifacts:
     - checksums:
@@ -305899,6 +306071,33 @@ packages:
     - checksums:
       - sha256:c667d3180513422f9c7545be5eec5d296dcbb357e06f72ed39cc683797556e69
   recipe_path: repos/spack_repo/builtin/packages/py_msgpack_numpy/package.py
+- id: spack:py-msgspec
+  registry: spack
+  name: py-msgspec
+  summary: A fast serialization and validation library, with builtin support for JSON, MessagePack, YAML, and TOML.
+  licenses:
+  - BSD-3-Clause
+  homepage: https://msgspec.dev/
+  dependencies:
+  - py-setuptools
+  - py-setuptools-scm
+  - python
+  dependency_details:
+  - name: py-setuptools
+    constraint: 'py-setuptools@80:'
+    kind: build
+  - name: py-setuptools-scm
+    constraint: 'py-setuptools-scm@8:'
+    kind: build
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+  versions:
+  - version: 0.20.0
+    artifacts:
+    - checksums:
+      - sha256:692349e588fde322875f8d3025ac01689fead5901e7fb18d6870a44519d62a29
+  recipe_path: repos/spack_repo/builtin/packages/py_msgspec/package.py
 - id: spack:py-msrest
   registry: spack
   name: py-msrest
@@ -306110,14 +306309,10 @@ packages:
   repository_url: https://github.com/aio-libs/multidict
   dependencies:
   - c
-  - py-setuptools
   - py-typing-extensions
   dependency_details:
   - name: c
     constraint: c
-    kind: build
-  - name: py-setuptools
-    constraint: 'py-setuptools@40:'
     kind: build
   - name: py-typing-extensions
     constraint: 'py-typing-extensions@4.1:'
@@ -306148,10 +306343,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:d2d4e4787672911b48350df02ed3fa3fffdc2f2e8ca06dd6afdf34189b76a9dd
-  - version: 6.7.0
+  - version: 7.1.0
     artifacts:
     - checksums:
-      - sha256:c6e99d9a65ca282e578dfea819cfa9c0a62b2499d8677392e09feaf305e9e6f5
+      - sha256:61a4e5d81b8d4e4ad61964b230129e7a2b914793d96289029078fc9009f074ec
   recipe_path: repos/spack_repo/builtin/packages/py_multidict/package.py
 - id: spack:py-multiecho
   registry: spack
@@ -307244,6 +307439,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f7f0a889c8fb80deaacb95e918d88e05148850a32d2b8eda28446291b2bf7c35
+  - version: 3.1.0
+    artifacts:
+    - checksums:
+      - sha256:6661e3dc1434d78781ccf7913442d90361dab395c3424efadb63bbb6ddea7ea3
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_nanobind/package.py
 - id: spack:py-nanoget
@@ -312743,6 +312942,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:df2d5874ff183595a4ba404edd04f6bd9b5505c1d7708573f6a6c17489a67563
+  - version: 2.5.4
+    artifacts:
+    - checksums:
+      - sha256:9a94cf751c9ad8ebaa835bcd3d40dacf8534ad086b88c38029b65123c7999d2a
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_numpy/package.py
 - id: spack:py-numpy-groupies
@@ -313859,25 +314062,10 @@ packages:
   description_format: html
   licenses:
   - BSD-3-Clause
-  homepage: https://github.com/omry/omegaconf
-  repository_url: https://github.com/omry/omegaconf
+  homepage: https://github.com/hydra-ecosystem/omegaconf
+  repository_url: https://github.com/hydra-ecosystem/omegaconf
   maintainers:
   - calebrob6
-  dependencies:
-  - py-antlr4-python3-runtime
-  - py-pyyaml
-  dependency_details:
-  - name: py-antlr4-python3-runtime
-    constraint: py-antlr4-python3-runtime@4.9
-    kind: build,run
-    condition: '@2.2.2:'
-  - name: py-antlr4-python3-runtime
-    constraint: py-antlr4-python3-runtime@4.8
-    kind: build,run
-    condition: '@2.1'
-  - name: py-pyyaml
-    constraint: 'py-pyyaml@5.1:'
-    kind: build,run
   versions:
   - version: 2.2.2
     artifacts:
@@ -313891,6 +314079,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e5e7de64aeebeddaf8e6d3f7a783b32ac2a01c0fbd9c878012caecb891a1f42a
+  - version: 2.4.0
+    artifacts:
+    - checksums:
+      - sha256:7e219a70bea371da250285b9c01c7db027bc421722799c2cc4ff14bc4a2a753b
   recipe_path: repos/spack_repo/builtin/packages/py_omegaconf/package.py
 - id: spack:py-onnx
   registry: spack
@@ -314132,6 +314324,30 @@ packages:
       - sha256:9d65c52009a90499f8c25fdfe5acda3ac88efe0788eb1d5f2575a989277145fb
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_onnx/package.py
+- id: spack:py-onnx-ir
+  registry: spack
+  name: py-onnx-ir
+  summary: Efficient in-memory representation for ONNX.
+  licenses:
+  - Apache-2.0
+  homepage: https://onnx.ai/ir-py
+  repository_url: https://github.com/onnx/ir-py
+  dependencies:
+  - py-setuptools
+  - python
+  dependency_details:
+  - name: py-setuptools
+    constraint: 'py-setuptools@77:'
+    kind: build
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+  versions:
+  - version: 1.0.0
+    artifacts:
+    - checksums:
+      - sha256:9e261f25fde8da9612ae5cb43b3b374d5ff469c04af0363cad588b2bb000b812
+  recipe_path: repos/spack_repo/builtin/packages/py_onnx_ir/package.py
 - id: spack:py-onnx-opcounter
   registry: spack
   name: py-onnx-opcounter
@@ -314399,6 +314615,32 @@ packages:
   - version: 1.22.2
   - version: 1.7.2
   recipe_path: repos/spack_repo/builtin/packages/py_onnxruntime/package.py
+- id: spack:py-onnxscript
+  registry: spack
+  name: py-onnxscript
+  summary: Naturally author ONNX functions and models using a subset of Python. Required by torch.onnx.export(..., dynamo=True), the default exporter since PyTorch 2.9.
+  description: <p>Naturally author ONNX functions and models using a subset of Python.</p><p>Required by torch.onnx.export(..., dynamo=True), the default exporter since PyTorch 2.9.</p>
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://microsoft.github.io/onnxscript/
+  repository_url: https://github.com/microsoft/onnxscript
+  dependencies:
+  - py-setuptools
+  - python
+  dependency_details:
+  - name: py-setuptools
+    constraint: 'py-setuptools@70:'
+    kind: build
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+  versions:
+  - version: 0.7.2
+    artifacts:
+    - checksums:
+      - sha256:2c664f6383d10f332a4d47b2876dcab16dba84909fe703656b19abc281fda165
+  recipe_path: repos/spack_repo/builtin/packages/py_onnxscript/package.py
 - id: spack:py-ont-fast5-api
   registry: spack
   name: py-ont-fast5-api
@@ -322611,6 +322853,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:382ff9f685ee3bc25864f820aa50505825f10f5458ffff07e30a6d96e5715cab
+  - version: 26.2.1
+    artifacts:
+    - checksums:
+      - sha256:71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e
   - version: 9.0.1
     artifacts:
     - checksums:
@@ -323190,6 +323436,7 @@ packages:
   dependencies:
   - py-decorator
   - py-hatch
+  - py-hatchling
   - py-jupyter-packaging
   - py-jupyterlab
   - py-narwhals
@@ -323209,11 +323456,15 @@ packages:
   - name: py-hatch
     constraint: py-hatch
     kind: build
-    condition: '@6.1:'
+    condition: '@6.1:6.6'
+  - name: py-hatchling
+    constraint: 'py-hatchling@1.26:'
+    kind: build
+    condition: '@6.7:'
   - name: py-jupyter-packaging
     constraint: 'py-jupyter-packaging@0.10.0:'
     kind: build
-    condition: '@6.1:'
+    condition: '@6.1:6.6'
   - name: py-jupyterlab
     constraint: py-jupyterlab@3
     kind: build
@@ -323241,14 +323492,15 @@ packages:
   - name: py-setuptools
     constraint: 'py-setuptools@61:'
     kind: build
-    condition: '@6.1:'
+    condition: '@6.1:6.6'
   - name: py-setuptools
     constraint: 'py-setuptools@40.8.0:'
     kind: build
-    condition: '@5.14.1:'
+    condition: '@5.14.1:6.6'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
+    condition: '@:6.6'
   - name: py-six
     constraint: py-six
     kind: build,run
@@ -323310,6 +323562,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8840a184d18ccae0f9189c2b9a2943923fd5cae7717b723f36eef78f444e5a73
+  - version: 6.7.0
+    artifacts:
+    - checksums:
+      - sha256:45eea0ff27e2a23ccd62776f77eb43aa1ca03df4192b76036e380bb479b892c6
   - version: 6.9.0
     artifacts:
     - checksums:
@@ -325566,6 +325822,51 @@ packages:
     - checksums:
       - sha256:71cd24a2b3eb335cb800c7159f423df1bd4dcd5171b234be15e3f31ec9f622da
   recipe_path: repos/spack_repo/builtin/packages/py_prometheus_client/package.py
+- id: spack:py-prometheus-fastapi-instrumentator
+  registry: spack
+  name: py-prometheus-fastapi-instrumentator
+  summary: Instrument your FastAPI app with Prometheus metrics.
+  licenses:
+  - ISC
+  homepage: https://github.com/trallnag/prometheus-fastapi-instrumentator
+  repository_url: https://github.com/trallnag/prometheus-fastapi-instrumentator
+  dependencies:
+  - py-poetry-core
+  - py-prometheus-client
+  - py-starlette
+  - python
+  dependency_details:
+  - name: py-poetry-core
+    constraint: 'py-poetry-core@2:'
+    kind: build
+  - name: py-prometheus-client
+    constraint: py-prometheus-client@0.8:0
+    kind: build,run
+  - name: py-starlette
+    constraint: py-starlette@1
+    kind: build,run
+    condition: '@8:'
+  - name: py-starlette
+    constraint: py-starlette@0.30:0
+    kind: build,run
+    condition: '@:7'
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+    condition: '@8:'
+  - name: python
+    constraint: 'python@3.8:'
+    kind: build,run
+  versions:
+  - version: 7.1.0
+    artifacts:
+    - checksums:
+      - sha256:be7cd61eeea4e5912aeccb4261c6631b3f227d8924542d79eaf5af3f439cbe5e
+  - version: 8.1.0
+    artifacts:
+    - checksums:
+      - sha256:b77f3043665e8d28e2bbd21017506195a43d9adf1d402d01bf95b494b7e560e1
+  recipe_path: repos/spack_repo/builtin/packages/py_prometheus_fastapi_instrumentator/package.py
 - id: spack:py-prometheus-flask-exporter
   registry: spack
   name: py-prometheus-flask-exporter
@@ -328425,6 +328726,8 @@ packages:
   - curl
   - py-numpy
   - py-setuptools
+  - py-setuptools-scm
+  - python
   dependency_details:
   - name: c
     constraint: c
@@ -328439,6 +328742,14 @@ packages:
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
+  - name: py-setuptools-scm
+    constraint: py-setuptools-scm
+    kind: build
+    condition: '@0.3.20:'
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@0.3.23:'
   options:
   - numpy
   default_options:
@@ -328452,6 +328763,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:e01991790ece496bf6d3f00778dcfb136dd9ca0fd28acc1b3fb43051ad9b8403
+  - version: 0.3.22
+    artifacts:
+    - checksums:
+      - sha256:5d4426f754bd7b7f6dc21d6c3f93b58a96a65b6eb2e578ae03b31a71272d2243
+  - version: 0.3.25
+    artifacts:
+    - checksums:
+      - sha256:8c717b0222e6677956fd659c8a21650983679ffb3314427d7f68d2910fad202a
+  - version: 0.3.26
+    artifacts:
+    - checksums:
+      - sha256:8b01c6542ed9e65d0758ff18a43d6fd7b1c517e1f6aa6132368fe17ee32c1533
   - version: 0.3.4
     artifacts:
     - checksums:
@@ -328652,6 +328975,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:74b6a2c2b4573a400cafb6ecbf60c98df300cd3d0041296b913d02b2cbbb2676
+  - version: 3.1.0
+    artifacts:
+    - checksums:
+      - sha256:ef712655692a2e9bf7bb7874c022564a45f91d847ddee987e720cd9e28849665
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_pybind11/package.py
 - id: spack:py-pybind11-stubgen
@@ -330230,6 +330557,7 @@ packages:
   repository_url: https://github.com/pydantic/pydantic-extra-types
   dependencies:
   - py-hatchling
+  - py-pycountry
   - py-pydantic
   - py-typing-extensions
   - python
@@ -330237,6 +330565,10 @@ packages:
   - name: py-hatchling
     constraint: py-hatchling
     kind: build
+  - name: py-pycountry
+    constraint: 'py-pycountry@23:'
+    kind: build,run
+    condition: +pycountry
   - name: py-pydantic
     constraint: 'py-pydantic@2.5.2:'
     kind: build,run
@@ -330244,8 +330576,20 @@ packages:
     constraint: py-typing-extensions
     kind: build,run
   - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@2.11:'
+  - name: python
     constraint: 'python@3.8:'
     kind: build,run
+  options:
+  - pycountry
+  default_options:
+    pycountry: 'false'
+  features:
+  - name: pycountry
+    description: Enable pycountry support
+    default: 'false'
   versions:
   - version: 2.10.0
     artifacts:
@@ -330255,6 +330599,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1dcfa2c0cf741a422f088e0dbb4690e7bfadaaf050da3d6f80d6c3cf58a2bad8
+  - version: 2.11.1
+    artifacts:
+    - checksums:
+      - sha256:46792d2307383859e923d8fcefa82108b1a141f8a9c0198982b3832ab5ef1049
   recipe_path: repos/spack_repo/builtin/packages/py_pydantic_extra_types/package.py
 - id: spack:py-pydantic-settings
   registry: spack
@@ -342960,11 +343308,6 @@ packages:
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
-  versions:
-  - version: 0.7.0
-    artifacts:
-    - checksums:
-      - sha256:64ac270e80a92066d489407be1900a329df8e26844430f941ecc88771188c471
   recipe_path: repos/spack_repo/builtin/packages/py_python_igraph/package.py
 - id: spack:py-python-javabridge
   registry: spack
@@ -349262,53 +349605,6 @@ packages:
     - checksums:
       - sha256:59aeb8fbc16e45686f65df23b91896a17eb14ace7a7546860f50d2bb5ec4c9c0
   recipe_path: repos/spack_repo/builtin/packages/py_reindent/package.py
-- id: spack:py-relion
-  registry: spack
-  name: py-relion
-  summary: This is a helper package for relion, not to be used by end-users. relion (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a software package...
-  description: <p>This is a helper package for relion, not to be used by end-users.</p><p>relion (for REgularised LIkelihood OptimisatioN, pronounce rely-on) is a software package that employs an empirical Bayesian approach for electron cryo-microscopy (cryo-EM) structure determination.</p>
-  description_format: html
-  licenses:
-  - GPL-2
-  homepage: https://relion.readthedocs.io/en/latest/
-  repository_url: https://github.com/3dem/relion
-  maintainers:
-  - Markus92
-  dependencies:
-  - py-setuptools
-  - py-setuptools-scm
-  - py-wheel
-  - python
-  dependency_details:
-  - name: py-setuptools
-    constraint: 'py-setuptools@45:'
-    kind: build
-  - name: py-setuptools-scm
-    constraint: 'py-setuptools-scm@6.3:'
-    kind: build
-  - name: py-wheel
-    constraint: py-wheel
-    kind: build
-  - name: python
-    constraint: python@3.10
-  options:
-  - cuda
-  default_options:
-    cuda: 'true'
-  features:
-  - name: cuda
-    description: Build with CUDA (recommended)
-    default: 'true'
-  versions:
-  - version: 5.0.0
-    artifacts:
-    - checksums:
-      - sha256:5d02d529bfdb396204310b35963f35e5ec40ed9fd10bc88c901119ae7d7739fc
-  - version: 5.0.1
-    artifacts:
-    - checksums:
-      - sha256:acbf898e96513b092514a56ff2a255c69a795e7a6f04131eacc8f55e2a900c23
-  recipe_path: repos/spack_repo/builtin/packages/py_relion/package.py
 - id: spack:py-relion-blush
   registry: spack
   name: py-relion-blush
@@ -350601,6 +350897,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c275f34ea3afe36aec6342c2a2298893104b5650528941fb53c21067276dba19
+  - version: 1.7.0
+    artifacts:
+    - checksums:
+      - sha256:f31d809c465ee43f367d599ccaf88b73bc2c4d75d74ed43f2d538838c53544ba
   - version: 1.8.0
     artifacts:
     - checksums:
@@ -351624,48 +351924,9 @@ packages:
   licenses:
   - MIT
   homepage: https://rpds.readthedocs.io/
+  repository_url: https://github.com/crate-py/rpds
   maintainers:
   - wdconinc
-  dependencies:
-  - c
-  - py-maturin
-  - python
-  - rust
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: py-maturin
-    constraint: py-maturin@1.9:1
-    kind: build
-    condition: '@0.25:'
-  - name: py-maturin
-    constraint: py-maturin@1.2:1
-    kind: build
-    condition: '@0.19.1:0.25.1'
-  - name: py-maturin
-    constraint: py-maturin@1.0:1
-    kind: build
-    condition: '@:0.19.0'
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build
-    condition: '@0.21:'
-  - name: python
-    constraint: 'python@3.8:'
-    kind: build
-    condition: '@:0.20'
-  - name: rust
-    constraint: 'rust@1.85:'
-    kind: build
-    condition: '@0.25:'
-  - name: rust
-    constraint: 'rust@1.76:'
-    kind: build
-    condition: '@0.19:'
-  - name: rust
-    constraint: 'rust@1.60:'
-    kind: build
   versions:
   - version: 0.18.1
     artifacts:
@@ -351679,6 +351940,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:26a1c73171d10b7acccbded82bf6a586ab8203601e565badc74bbbf8bc5a10f8
+  - version: 2026.6.3
+    artifacts:
+    - checksums:
+      - sha256:1cebd1337c242e4ec2293e541f712b2da849b29f48f0c293684b71c0632625d4
   recipe_path: repos/spack_repo/builtin/packages/py_rpds_py/package.py
 - id: spack:py-rply
   registry: spack
@@ -352528,6 +352793,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e460aafd5495ec89efaa6ced2e4a9a581116451e1c88b9d37ef497e0f8e93982
+  - version: 0.16.10
+    artifacts:
+    - checksums:
+      - sha256:eff4728c4eaae93f0955cd264d24b2ab348e74bf59986ccf282ba6dc16b3b017
   - version: 0.3.0
     artifacts:
     - checksums:
@@ -354547,6 +354816,60 @@ packages:
     - checksums:
       - sha256:a71e19e1485893754ae8c050668232fcc694f17b83602e75fbebf7bf9f975e1e
   recipe_path: repos/spack_repo/builtin/packages/py_scikits_odes/package.py
+- id: spack:py-scimba
+  registry: spack
+  name: py-scimba
+  summary: This library implements some common tools for scientific machine learning.
+  licenses:
+  - MIT
+  homepage: https://www.scimba.org
+  maintainers:
+  - tpadioleau
+  dependencies:
+  - py-matplotlib
+  - py-numpy
+  - py-scipy
+  - py-setuptools
+  - py-torch
+  - py-tqdm
+  - python
+  dependency_details:
+  - name: py-matplotlib
+    constraint: py-matplotlib
+    kind: build,run
+  - name: py-numpy
+    constraint: py-numpy
+    kind: build,run
+  - name: py-scipy
+    constraint: py-scipy
+    kind: build,run
+  - name: py-setuptools
+    constraint: 'py-setuptools@61.2:'
+    kind: build
+  - name: py-torch
+    constraint: 'py-torch@2.9:'
+    kind: build,run
+  - name: py-tqdm
+    constraint: py-tqdm
+    kind: build,run
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+    condition: '@1.0.0:'
+  options:
+  - jax
+  default_options:
+    jax: 'false'
+  features:
+  - name: jax
+    description: Install the experimental JAX backend
+    default: 'false'
+  versions:
+  - version: 1.3.4
+    artifacts:
+    - checksums:
+      - sha256:7b555633c577c043b73417f86a85ca2c71837e4310fc114de7ada31a1f60a755
+  recipe_path: repos/spack_repo/builtin/packages/py_scimba/package.py
 - id: spack:py-scine-chemoton
   registry: spack
   name: py-scine-chemoton
@@ -355102,67 +355425,6 @@ packages:
     - checksums:
       - sha256:7206a2ad27ca031d693d65cbcbcfc661498f3983838079a66579bcc784b25293
   recipe_path: repos/spack_repo/builtin/packages/py_scs/package.py
-- id: spack:py-sdmetrics
-  registry: spack
-  name: py-sdmetrics
-  summary: The SDMetrics library provides a set of dataset-agnostic tools for evaluating the quality of a synthetic database by comparing it to the real database that...
-  description: The SDMetrics library provides a set of dataset-agnostic tools for evaluating the quality of a synthetic database by comparing it to the real database that it is modeled after.
-  description_format: html
-  licenses:
-  - MIT
-  homepage: https://github.com/sdv-dev/SDMetrics
-  repository_url: https://github.com/sdv-dev/sdmetrics
-  maintainers:
-  - Kerilk
-  - jke513
-  dependencies:
-  - py-copulas
-  - py-numpy
-  - py-pandas
-  - py-pyts
-  - py-rdt
-  - py-scikit-learn
-  - py-scipy
-  - py-setuptools
-  - py-torch
-  - python
-  dependency_details:
-  - name: py-copulas
-    constraint: py-copulas@0.6.0:0.6
-    kind: build,run
-  - name: py-numpy
-    constraint: py-numpy@1.20:1
-    kind: build,run
-  - name: py-pandas
-    constraint: py-pandas@1.1.3:1.1.4
-    kind: build,run
-  - name: py-pyts
-    constraint: py-pyts@0.12.0:0.12
-    kind: build,run
-  - name: py-rdt
-    constraint: py-rdt@0.6.1:0.6
-    kind: build,run
-  - name: py-scikit-learn
-    constraint: py-scikit-learn@0.24:1
-    kind: build,run
-  - name: py-scipy
-    constraint: py-scipy@1.5.4:1
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-torch
-    constraint: py-torch@1.8.0:1
-    kind: build,run
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
-  versions:
-  - version: 0.4.1
-    artifacts:
-    - checksums:
-      - sha256:28df1cdd6988b3464306c1d189da19ee13a49023c53ca8b3db399fc9fd45fae8
-  recipe_path: repos/spack_repo/builtin/packages/py_sdmetrics/package.py
 - id: spack:py-sdnotify
   registry: spack
   name: py-sdnotify
@@ -355187,79 +355449,6 @@ packages:
     - checksums:
       - sha256:73977fc746b36cc41184dd43c3fe81323e7b8b06c2bb0826c4f59a20c56bb9f1
   recipe_path: repos/spack_repo/builtin/packages/py_sdnotify/package.py
-- id: spack:py-sdv
-  registry: spack
-  name: py-sdv
-  summary: The Synthetic Data Vault (SDV) is a Synthetic Data Generation ecosystem of libraries that allows users to easily learn single-table, multi-table and...
-  description: The Synthetic Data Vault (SDV) is a Synthetic Data Generation ecosystem of libraries that allows users to easily learn single-table, multi-table and timeseries datasets to later on generate new Synthetic Data that has the same format and statistical properties as the original dataset.
-  description_format: html
-  licenses:
-  - MIT
-  homepage: https://github.com/sdv-dev/SDV
-  repository_url: https://github.com/sdv-dev/sdv
-  maintainers:
-  - Kerilk
-  - jke513
-  dependencies:
-  - py-copulas
-  - py-ctgan
-  - py-deepecho
-  - py-faker
-  - py-graphviz
-  - py-numpy
-  - py-pandas
-  - py-rdt
-  - py-sdmetrics
-  - py-setuptools
-  - py-tqdm
-  - python
-  dependency_details:
-  - name: py-copulas
-    constraint: py-copulas@0.6.0:0.6
-    kind: build,run
-  - name: py-ctgan
-    constraint: py-ctgan@0.5.0:0.5
-    kind: build,run
-  - name: py-deepecho
-    constraint: py-deepecho@0.3.0.post1:0.3
-    kind: build,run
-  - name: py-faker
-    constraint: py-faker@3.0.0:9
-    kind: build,run
-  - name: py-graphviz
-    constraint: py-graphviz@0.13.2:0
-    kind: build,run
-  - name: py-numpy
-    constraint: py-numpy@1.20:1
-    kind: build,run
-  - name: py-pandas
-    constraint: py-pandas@1.1.3:1.1.4
-    kind: build,run
-  - name: py-rdt
-    constraint: py-rdt@0.6.1:0.6
-    kind: build,run
-  - name: py-sdmetrics
-    constraint: py-sdmetrics@0.4.1:0.4
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-tqdm
-    constraint: py-tqdm@4.15:4
-    kind: build,run
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
-  versions:
-  - version: 0.13.1
-    artifacts:
-    - checksums:
-      - sha256:c0a0dbc4a64e5f60cabd123a8c19b3f99594f5a0911de83e08d172b810222c93
-  - version: 0.14.0
-    artifacts:
-    - checksums:
-      - sha256:a62714b73a7e14b95ffbda0920a3a5a6fe891a17d8611380af5f9ca1ff8fc234
-  recipe_path: repos/spack_repo/builtin/packages/py_sdv/package.py
 - id: spack:py-seaborn
   registry: spack
   name: py-seaborn
@@ -356922,6 +357111,9 @@ packages:
     constraint: c
     kind: build
   - name: geos
+    constraint: 'geos@3.10:'
+    condition: '@2.2:'
+  - name: geos
     constraint: 'geos@3.9:'
     condition: '@2.1:'
   - name: geos
@@ -357007,6 +357199,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2ed4ecb28320a433db18a5bf029986aa8afcfd740745e78847e330d5d94922a9
+  - version: 2.2.0
+    artifacts:
+    - checksums:
+      - sha256:e8865e553d874a1ec4a032057ea81fca9def37b188cd8fb550af3b3480b3f88c
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_shapely/package.py
 - id: spack:py-shellescape
@@ -369651,7 +369847,7 @@ packages:
   name: py-torch
   summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration.
   licenses:
-  - BSD-3-Clause
+  - Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT
   homepage: https://pytorch.org/
   repository_url: https://github.com/pytorch/pytorch
   maintainers:
@@ -369679,7 +369875,6 @@ packages:
   - nvtx
   - psimd
   - pthreadpool
-  - py-tqdm
   - sleef
   - ucc
   - ucx
@@ -369702,34 +369897,7 @@ packages:
     condition: '@2.13:'
   - name: cpuinfo
     constraint: cpuinfo@2025-11-14
-    condition: '@2.10:2.12'
-  - name: cpuinfo
-    constraint: cpuinfo@2025-03-21
-    condition: '@2.8:2.9'
-  - name: cpuinfo
-    constraint: cpuinfo@2024-09-26
-    condition: '@2.6:2.7'
-  - name: cpuinfo
-    constraint: cpuinfo@2024-09-06
-    condition: '@2.5.1'
-  - name: cpuinfo
-    constraint: cpuinfo@2024-08-30
-    condition: '@2.5.0'
-  - name: cpuinfo
-    constraint: cpuinfo@2023-11-04
-    condition: '@2.3:2.4'
-  - name: cpuinfo
-    constraint: cpuinfo@2023-01-13
-    condition: '@2.1:2.2'
-  - name: cpuinfo
-    constraint: cpuinfo@2022-08-19
-    condition: '@1.13:2.0'
-  - name: cpuinfo
-    constraint: cpuinfo@2020-12-17
-    condition: '@1.8:1.12'
-  - name: cpuinfo
-    constraint: cpuinfo@2020-06-11
-    condition: '@1.6:1.7'
+    condition: '@:2.12'
   - name: cusparselt
     constraint: cusparselt
     condition: +cusparselt
@@ -369763,14 +369931,11 @@ packages:
     constraint: numactl
     condition: +numa
   - name: nvtx
+    constraint: nvtx@3.5.0
+    condition: '@2.14:'
+  - name: nvtx
     constraint: nvtx@3.3.0
-    condition: '@2.10:'
-  - name: nvtx
-    constraint: nvtx@3.2.1
-    condition: '@2.8:2.9'
-  - name: nvtx
-    constraint: nvtx@3.1.0
-    condition: '@2.6:2.7'
+    condition: '@:2.13'
   - name: psimd
     constraint: psimd@2020-05-17
   - name: pthreadpool
@@ -369778,34 +369943,9 @@ packages:
     condition: '@2.13:'
   - name: pthreadpool
     constraint: pthreadpool@2023-08-29
-    condition: '@2.2:2.12'
-  - name: pthreadpool
-    constraint: pthreadpool@2021-04-13
-    condition: '@1.9:2.1'
-  - name: pthreadpool
-    constraint: pthreadpool@2020-10-05
-    condition: '@1.8'
-  - name: pthreadpool
-    constraint: pthreadpool@2020-06-15
-    condition: '@1.6:1.7'
-  - name: py-tqdm
-    constraint: py-tqdm
-    kind: run
+    condition: '@:2.12'
   - name: sleef
     constraint: sleef@3.8
-    condition: '@2.8:'
-  - name: sleef
-    constraint: sleef@3.7.0_2024-12-06
-    condition: '@2.7'
-  - name: sleef
-    constraint: sleef@3.6.0_2024-03-20
-    condition: '@2.4:2.6'
-  - name: sleef
-    constraint: sleef@3.5.1_2020-12-22
-    condition: '@1.8:2.3'
-  - name: sleef
-    constraint: sleef@3.4.0_2019-07-30
-    condition: '@1.6:1.7'
   - name: ucc
     constraint: ucc
     condition: +ucc
@@ -369816,7 +369956,6 @@ packages:
     constraint: valgrind
     condition: +valgrind
   options:
-  - breakpad
   - caffe2
   - cuda
   - cudnn
@@ -369846,7 +369985,6 @@ packages:
   - valgrind
   - xnnpack
   default_options:
-    breakpad: 'true'
     caffe2: 'false'
     cusparselt: 'true'
     custom-protobuf: 'false'
@@ -369871,10 +370009,6 @@ packages:
     valgrind: 'true'
     xnnpack: 'true'
   features:
-  - name: breakpad
-    description: Enable breakpad crash dump library
-    default: 'true'
-    condition: '@1.10:1.11'
   - name: caffe2
     description: Build Caffe2
     default: 'false'
@@ -369886,7 +370020,7 @@ packages:
   - name: cusparselt
     description: Use NVIDIA cuSPARSELt
     default: 'true'
-    condition: '@2.1: +cuda'
+    condition: +cuda
   - name: custom-protobuf
     description: Use vendored protobuf
     default: 'false'
@@ -369901,10 +370035,10 @@ packages:
     default: 'true'
   - name: flash_attention
     default: 'true'
-    condition: '@1.13:+cuda'
+    condition: +cuda
   - name: flash_attention
     default: 'true'
-    condition: '@1.13:+rocm'
+    condition: +rocm
   - name: gloo
     description: Use Gloo
     default: 'false'
@@ -369912,7 +370046,7 @@ packages:
   - name: kineto
     description: Use Kineto profiling library
     default: 'true'
-    condition: '@1.8:2.10'
+    condition: '@:2.10'
   - name: kineto
     description: Use Kineto profiling library
     default: 'true'
@@ -369935,7 +370069,7 @@ packages:
     condition: +distributed
   - name: mps
     description: Use MPS for macOS build (requires full Xcode suite)
-    condition: '@1.12: platform=darwin'
+    condition: platform=darwin
   - name: nccl
     description: Use NCCL
     default: 'true'
@@ -369978,11 +370112,11 @@ packages:
   - name: ucc
     description: Use UCC
     default: 'false'
-    condition: '@1.13: +distributed'
+    condition: +distributed
   - name: valgrind
     description: Use Valgrind
     default: 'true'
-    condition: '@1.8: platform=linux'
+    condition: platform=linux
   - name: xnnpack
     description: Use XNNPACK
     default: 'true'
@@ -369992,6 +370126,8 @@ packages:
   - version: 2.12.0
   - version: 2.12.1
   - version: 2.13.0
+  - version: 2.14.0
+  - version: 2.14.1
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_torch/package.py
 - id: spack:py-torch-c-dlpack-ext
@@ -370461,12 +370597,10 @@ packages:
   - c
   - cmake
   - cxx
-  - ffmpeg
   - ninja
   - pkgconfig
   - py-pybind11
   - py-setuptools
-  - sox
   dependency_details:
   - name: c
     constraint: c
@@ -370474,271 +370608,26 @@ packages:
   - name: cmake
     constraint: 'cmake@3.18:'
     kind: build
-    condition: '@0.10:'
-  - name: cmake
-    constraint: 'cmake@3.5:'
-    kind: build
-    condition: '@0.8:'
   - name: cxx
     constraint: cxx
     kind: build
-  - name: ffmpeg
-    constraint: ffmpeg@4.4:6
-    condition: '@2.1:2.8'
   - name: ninja
     constraint: ninja
     kind: build
-    condition: '@0.8:'
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
   - name: py-pybind11
     constraint: py-pybind11
     kind: build,link
-    condition: '@0.12:'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
-  - name: sox
-    constraint: sox
-    condition: '@2.1:2.8'
   versions:
-  - version: 0.10.0
-  - version: 0.10.1
-  - version: 0.10.2
-  - version: 0.11.0
-  - version: 0.12.0
-  - version: 0.12.1
-  - version: 0.13.0
-  - version: 0.13.1
-  - version: 0.7.2
-  - version: 0.8.0
-  - version: 0.8.1
-  - version: 0.8.2
-  - version: 0.9.0
-  - version: 0.9.1
-  - version: 2.0.1
-  - version: 2.0.2
-  - version: 2.1.0
-  - version: 2.1.1
-  - version: 2.1.2
   - version: 2.10.0
   - version: 2.11.0
-  - version: 2.2.0
-  - version: 2.2.1
-  - version: 2.2.2
-  - version: 2.3.0
-  - version: 2.3.1
-  - version: 2.4.0
-  - version: 2.4.1
-  - version: 2.5.0
-  - version: 2.5.1
-  - version: 2.6.0
-  - version: 2.7.0
-  - version: 2.7.1
-  - version: 2.8.0
-  - version: 2.9.0
-  - version: 2.9.1
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_torchaudio/package.py
-- id: spack:py-torchbenchmark
-  registry: spack
-  name: py-torchbenchmark
-  summary: A collection of open source benchmarks used to evaluate PyTorch performance.
-  licenses:
-  - BSD-3-Clause
-  homepage: https://github.com/pytorch/benchmark
-  repository_url: https://github.com/pytorch/benchmark
-  maintainers:
-  - adamjstewart
-  dependencies:
-  - git-lfs
-  - py-accelerate
-  - py-beautifulsoup4
-  - py-distro
-  - py-iopath
-  - py-kornia
-  - py-monkeytype
-  - py-numpy
-  - py-patch
-  - py-psutil
-  - py-py-cpuinfo
-  - py-pytest
-  - py-pytest-benchmark
-  - py-pyyaml
-  - py-requests
-  - py-scipy
-  - py-setuptools
-  - py-submitit
-  - py-tabulate
-  - py-timm
-  - py-torch
-  - py-torchaudio
-  - py-torchtext
-  - py-torchvision
-  - py-transformers
-  - python
-  dependency_details:
-  - name: git-lfs
-    constraint: git-lfs
-    kind: build,run
-  - name: py-accelerate
-    constraint: py-accelerate
-    kind: build,run
-  - name: py-beautifulsoup4
-    constraint: py-beautifulsoup4
-    kind: build,run
-  - name: py-distro
-    constraint: py-distro
-    kind: build,run
-  - name: py-iopath
-    constraint: py-iopath
-    kind: build,run
-  - name: py-kornia
-    constraint: py-kornia
-    kind: build,run
-  - name: py-monkeytype
-    constraint: py-monkeytype
-    kind: build,run
-  - name: py-numpy
-    constraint: py-numpy
-    kind: build,run
-  - name: py-patch
-    constraint: py-patch
-    kind: build,run
-  - name: py-psutil
-    constraint: py-psutil
-    kind: build,run
-  - name: py-py-cpuinfo
-    constraint: py-py-cpuinfo
-    kind: build,run
-  - name: py-pytest
-    constraint: py-pytest
-    kind: build,run
-  - name: py-pytest-benchmark
-    constraint: py-pytest-benchmark
-    kind: build,run
-  - name: py-pyyaml
-    constraint: py-pyyaml
-    kind: build,run
-  - name: py-requests
-    constraint: py-requests
-    kind: build,run
-  - name: py-scipy
-    constraint: py-scipy
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-submitit
-    constraint: py-submitit
-    kind: build,run
-  - name: py-tabulate
-    constraint: py-tabulate
-    kind: build,run
-  - name: py-timm
-    constraint: py-timm
-    kind: build,run
-  - name: py-torch
-    constraint: py-torch
-    kind: build,run
-  - name: py-torchaudio
-    constraint: py-torchaudio
-    kind: build,run
-  - name: py-torchtext
-    constraint: py-torchtext
-    kind: build,run
-  - name: py-torchvision
-    constraint: py-torchvision
-    kind: build,run
-  - name: py-transformers
-    constraint: py-transformers
-    kind: build,run
-  - name: python
-    constraint: python@3.8:+pythoncmd
-    kind: build,run
-  versions:
-  - version: main
-  recipe_path: repos/spack_repo/builtin/packages/py_torchbenchmark/package.py
-- id: spack:py-torchdata
-  registry: spack
-  name: py-torchdata
-  summary: Composable data loading modules for PyTorch.
-  licenses:
-  - BSD-3-Clause
-  homepage: https://github.com/pytorch/data
-  repository_url: https://github.com/pytorch/data
-  maintainers:
-  - adamjstewart
-  dependencies:
-  - aws-sdk-cpp
-  - cxx
-  - py-pybind11
-  dependency_details:
-  - name: aws-sdk-cpp
-    constraint: aws-sdk-cpp
-    condition: '@0.4:0.9'
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: py-pybind11
-    constraint: py-pybind11
-    condition: '@0.4:0.9'
-  versions:
-  - version: 0.10.1
-    artifacts:
-    - checksums:
-      - sha256:42f977c6a4a890848ef50c4ce3e01beeec04cc921e3ccc71d941f97de209bbfb
-  - version: 0.11.0
-    artifacts:
-    - checksums:
-      - sha256:945c53a8587567624aaad2d66204fbae9acb9535696554c53ffeb83320c308b9
-  - version: 0.3.0
-    artifacts:
-    - checksums:
-      - sha256:ac36188bf133cf5f1041a28ccb3ee82ba52d4b5d99617be37d64d740acd6cfd4
-  - version: 0.4.0
-    artifacts:
-    - checksums:
-      - sha256:b4ec446a701680faa620fcb828b98ba36a63fa79da62a1e568d4a683889172da
-  - version: 0.4.1
-    artifacts:
-    - checksums:
-      - sha256:71c0aa3aca3b04a986a2cd4cc2e0be114984ca836dc4def2c700bf1bd1ff087e
-  - version: 0.5.0
-    artifacts:
-    - checksums:
-      - sha256:b4e1a7015b34e3576111d495a00a675db238bfd136629fc443078bab9383ec36
-  - version: 0.5.1
-    artifacts:
-    - checksums:
-      - sha256:69d80bd33ce8f08e7cfeeb71cefddfc29cede25a85881e33dbae47576b96ed29
-  - version: 0.6.0
-    artifacts:
-    - checksums:
-      - sha256:048dea12ee96c0ea1525097959fee811d7b38c2ed05f44a90f35f8961895fb5b
-  - version: 0.6.1
-    artifacts:
-    - checksums:
-      - sha256:c596db251c5e6550db3f00e4308ee7112585cca4d6a1c82a433478fd86693257
-  - version: 0.7.0
-    artifacts:
-    - checksums:
-      - sha256:0b444719c3abc67201ed0fea92ea9c4100e7f36551ba0d19a09446cc11154eb3
-  - version: 0.7.1
-    artifacts:
-    - checksums:
-      - sha256:ef9bbdcee759b53c3c9d99e76eb0a66da33d36bfb7f859a25a9b5e737a51fa23
-  - version: 0.8.0
-    artifacts:
-    - checksums:
-      - sha256:d5d27b264e79d7d00ad4998f14d097b770332d979672dceb6d038caf204f1208
-  - version: 0.9.0
-    artifacts:
-    - checksums:
-      - sha256:b547bbe848ad813cc5365fe0bb02051150bec6c7c4ee7bffd6b6d3d7bdeddd75
-  - version: main
-  recipe_path: repos/spack_repo/builtin/packages/py_torchdata/package.py
 - id: spack:py-torchdiffeq
   registry: spack
   name: py-torchdiffeq
@@ -370854,64 +370743,6 @@ packages:
       - sha256:9dfb36737e1ddb4156cd51244bf4247c4a2bafd0d177e7b6d59288ca8ae848b7
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_torchgeo/package.py
-- id: spack:py-torchmeta
-  registry: spack
-  name: py-torchmeta
-  summary: A collection of extensions and data-loaders for few-shot learning & meta-learning in PyTorch. Torchmeta contains popular meta-learning benchmarks, fully...
-  description: A collection of extensions and data-loaders for few-shot learning &amp; meta-learning in PyTorch. Torchmeta contains popular meta-learning benchmarks, fully compatible with both torchvision and PyTorch's DataLoader.
-  description_format: html
-  licenses:
-  - MIT
-  homepage: https://github.com/tristandeleu/pytorch-meta
-  repository_url: https://github.com/tristandeleu/pytorch-meta
-  dependencies:
-  - pil
-  - py-h5py
-  - py-numpy
-  - py-ordered-set
-  - py-requests
-  - py-setuptools
-  - py-torch
-  - py-torchvision
-  - py-tqdm
-  - python
-  dependency_details:
-  - name: pil
-    constraint: 'pil@7.0:'
-    kind: build,run
-  - name: py-h5py
-    constraint: py-h5py
-    kind: build,run
-  - name: py-numpy
-    constraint: 'py-numpy@1.14:'
-    kind: build,run
-  - name: py-ordered-set
-    constraint: py-ordered-set
-    kind: build,run
-  - name: py-requests
-    constraint: py-requests
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-torch
-    constraint: py-torch@1.4.0:1.8
-    kind: build,run
-  - name: py-torchvision
-    constraint: py-torchvision@0.5.0:0.9
-    kind: build,run
-  - name: py-tqdm
-    constraint: 'py-tqdm@4.0.0:'
-    kind: build,run
-  - name: python
-    constraint: 'python@3.6:'
-    kind: build,run
-  versions:
-  - version: 1.7.0
-    artifacts:
-    - checksums:
-      - sha256:148d42b6a1ec27970408f7bcb97cf1cb203f8699214e06424fe43d78faa848d9
-  recipe_path: repos/spack_repo/builtin/packages/py_torchmeta/package.py
 - id: spack:py-torchmetrics
   registry: spack
   name: py-torchmetrics
@@ -371165,92 +370996,6 @@ packages:
     - checksums:
       - sha256:981bf689e22e0cf7f95c746002f20a24ad26aa6b9d861134a14bc6ce92230590
   recipe_path: repos/spack_repo/builtin/packages/py_torchsummary/package.py
-- id: spack:py-torchtext
-  registry: spack
-  name: py-torchtext
-  summary: Text utilities, models, transforms, and datasets for PyTorch.
-  licenses:
-  - BSD-3-Clause
-  homepage: https://github.com/pytorch/text
-  repository_url: https://github.com/pytorch/text
-  maintainers:
-  - adamjstewart
-  dependencies:
-  - c
-  - cmake
-  - cxx
-  - ninja
-  - py-numpy
-  - py-pybind11
-  - py-requests
-  - py-setuptools
-  - py-torchdata
-  - py-tqdm
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cmake
-    constraint: 'cmake@3.18:'
-    kind: build
-    condition: '@0.13:'
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: ninja
-    constraint: ninja
-    kind: build
-    condition: '@0.13:'
-  - name: py-numpy
-    constraint: py-numpy
-    kind: build,run
-  - name: py-pybind11
-    constraint: py-pybind11
-    kind: build,link
-  - name: py-requests
-    constraint: py-requests
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-torchdata
-    constraint: py-torchdata@0.7.0
-    kind: build,run
-    condition: '@0.16.0'
-  - name: py-torchdata
-    constraint: py-torchdata@0.6.1
-    kind: build,run
-    condition: '@0.15.2'
-  - name: py-torchdata
-    constraint: py-torchdata@0.6.0
-    kind: build,run
-    condition: '@0.15.1'
-  - name: py-tqdm
-    constraint: py-tqdm
-    kind: build,run
-  versions:
-  - version: 0.10.0
-  - version: 0.10.1
-  - version: 0.11.1
-  - version: 0.11.2
-  - version: 0.12.0
-  - version: 0.13.0
-  - version: 0.13.1
-  - version: 0.14.0
-  - version: 0.14.1
-  - version: 0.15.1
-  - version: 0.15.2
-  - version: 0.16.0
-  - version: 0.16.1
-  - version: 0.16.2
-  - version: 0.17.0
-  - version: 0.17.1
-  - version: 0.17.2
-  - version: 0.18.0
-  - version: 0.8.1
-  - version: 0.9.2
-  - version: main
-  recipe_path: repos/spack_repo/builtin/packages/py_torchtext/package.py
 - id: spack:py-torchtoolbox
   registry: spack
   name: py-torchtoolbox
@@ -371340,10 +371085,7 @@ packages:
   - ninja
   - pil
   - py-numpy
-  - py-requests
   - py-setuptools
-  - py-six
-  - py-typing-extensions
   dependency_details:
   - name: c
     constraint: c
@@ -371375,36 +371117,12 @@ packages:
   - name: pil
     constraint: 'pil@5.3:'
     kind: build,run
-    condition: '@0.10:'
-  - name: pil
-    constraint: 'pil@4.1.1:'
-    kind: build,run
   - name: py-numpy
     constraint: py-numpy
     kind: build,run
-  - name: py-numpy
-    constraint: py-numpy@:1
-    kind: build,run
-    condition: '@:0.18'
-  - name: py-requests
-    constraint: py-requests
-    kind: build,run
-    condition: '@0.12:0.17.0'
-  - name: py-setuptools
-    constraint: py-setuptools@:76
-    kind: build
-    condition: '@:0.21.0'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
-  - name: py-six
-    constraint: py-six
-    kind: build,run
-    condition: '@:0.5'
-  - name: py-typing-extensions
-    constraint: py-typing-extensions
-    kind: build,run
-    condition: '@0.12:0.14'
   options:
   - ffmpeg
   - jpeg
@@ -371434,132 +371152,7 @@ packages:
     condition: '@:0.25'
   - name: webp
     default: 'false'
-    condition: '@0.20:'
   versions:
-  - version: 0.10.0
-    artifacts:
-    - checksums:
-      - sha256:82bb2c2b03d8a65f4ea74bb0ee5566b0876a1992aceefb1e11475c7b5d2e857b
-  - version: 0.10.1
-    artifacts:
-    - checksums:
-      - sha256:4d595cf0214c8adc817f8e3cd0043a027b52b481e05d67b04f4947fcb43d4277
-  - version: 0.11.0
-    artifacts:
-    - checksums:
-      - sha256:8e85acf8f5d39f27e92e610ccb506dac0bf4412bb366a318d2aa5f384cbd4d2c
-  - version: 0.11.1
-    artifacts:
-    - checksums:
-      - sha256:32a06ccf755e4d75006ce03701f207652747a63dbfdf65f0f20a1b6f93a2e834
-  - version: 0.11.2
-    artifacts:
-    - checksums:
-      - sha256:55689c57c29f82438a133d0af3315991037be59c8e02471bdcaa31731154a714
-  - version: 0.11.3
-    artifacts:
-    - checksums:
-      - sha256:b4c51d27589783e6e6941ecaa67b55f6f41633874ec37f80b64a0c92c3196e0c
-  - version: 0.12.0
-    artifacts:
-    - checksums:
-      - sha256:99e6d3d304184895ff4f6152e2d2ec1cbec89b3e057d9c940ae0125546b04e91
-  - version: 0.13.0
-    artifacts:
-    - checksums:
-      - sha256:2fe9139150800820d02c867a0b64b7c7fbc964d48d76fae235d6ef9215eabcf4
-  - version: 0.13.1
-    artifacts:
-    - checksums:
-      - sha256:c32fab734e62c7744dadeb82f7510ff58cc3bca1189d17b16aa99b08afc42249
-  - version: 0.14.0
-    artifacts:
-    - checksums:
-      - sha256:be1621c85c56eb40537cb74e6ec5d8e58ed8b69f8374a58bcb6ec413cb540c8b
-  - version: 0.14.1
-    artifacts:
-    - checksums:
-      - sha256:ced67e1cf1f97e168cdf271851a4d0b6d382ab7936e7bcbb39aaa87239c324b6
-  - version: 0.15.1
-    artifacts:
-    - checksums:
-      - sha256:689d23d4ebb0c7e54e8651c89b17155b64341c14ae4444a04ca7dc6f2b6a0a43
-  - version: 0.15.2
-    artifacts:
-    - checksums:
-      - sha256:1efcb80e0a6e42c54f07ee16167839b4d302aeeecc12839cc47c74b06a2c20d4
-  - version: 0.16.0
-    artifacts:
-    - checksums:
-      - sha256:79b30b082237e3ead21e74587cedf4a4d832f977cf7dfeccfb65f67988b12ceb
-  - version: 0.16.1
-    artifacts:
-    - checksums:
-      - sha256:d31fe52e4540750c8d372b0f38f1bfa81d8261193f2c2c06577332831d203c50
-  - version: 0.16.2
-    artifacts:
-    - checksums:
-      - sha256:8c1f2951e98d8ada6e5a468f179af4be9f56d2ebc3ab057af873da61669806d7
-  - version: 0.17.0
-    artifacts:
-    - checksums:
-      - sha256:55e395d5c7d9bf7658c82ac633cac2224aa168e1bfe8bb5b2b2a296c792a3500
-  - version: 0.17.1
-    artifacts:
-    - checksums:
-      - sha256:a01c7bce4098c41b62cd3a08d87569113e25d12994b1370f0fd5f531952b6cef
-  - version: 0.17.2
-    artifacts:
-    - checksums:
-      - sha256:0f9304acd77aafb7cfaf3fd5e318b2986ecc73547394b971d710eacd59f3e78e
-  - version: 0.18.0
-    artifacts:
-    - checksums:
-      - sha256:3e61cbac33986a862a59cd733fd65da8b2c2a6160a66556cfa0e850f62fd43c7
-  - version: 0.18.1
-    artifacts:
-    - checksums:
-      - sha256:347d472a9ceecc44e0bee1eda140d63cfaffc74a54ec07d4b98da7698ce75516
-  - version: 0.19.0
-    artifacts:
-    - checksums:
-      - sha256:4c499d0a412b5a21d55ac3c0a37e80ecd7e1f002f2a7b6b3b38a2de2544acbb6
-  - version: 0.19.1
-    artifacts:
-    - checksums:
-      - sha256:083e75c467285595ec3eb3c7aa8493c19e53d7eb42f13046fb56a07c8897e5a8
-  - version: 0.20.0
-    artifacts:
-    - checksums:
-      - sha256:b59d9896c5c957c6db0018754bbd17d079c5102b82b9be0b438553b40a7b6029
-  - version: 0.20.1
-    artifacts:
-    - checksums:
-      - sha256:7e08c7f56e2c89859310e53d898f72bccc4987cd83e08cfd6303513da15a9e71
-  - version: 0.21.0
-    artifacts:
-    - checksums:
-      - sha256:0a4a967bbb7f9810f792cd0289a07fb98c8fb5d1303fae8b63e3a6b05d720058
-  - version: 0.22.0
-    artifacts:
-    - checksums:
-      - sha256:83ed8855cdfb138aba6f116f8fd8da8b83463170dad67a70f60327915ed12014
-  - version: 0.22.1
-    artifacts:
-    - checksums:
-      - sha256:fa1b0a58e13c08329bcff8d52607b4e25944fd074c01dee1b501c8158fadcdec
-  - version: 0.23.0
-    artifacts:
-    - checksums:
-      - sha256:db5a91569e5eb4a3b02e9eaad6080335f5ae3824890a697f5618541999f04027
-  - version: 0.24.0
-    artifacts:
-    - checksums:
-      - sha256:f799cdd1d67a3edbcdc6af8fb416fe1b019b512fb426c0314302cd81518a0095
-  - version: 0.24.1
-    artifacts:
-    - checksums:
-      - sha256:071da2078600bfec4886efab77358c9329abfedcf1488b05879b556cb9b84ba7
   - version: 0.25.0
     artifacts:
     - checksums:
@@ -371580,22 +371173,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:ecc4451241c8eeadc0c88213bd65c7932c9622d1d0034254b938f25362283ee9
-  - version: 0.8.2
+  - version: 0.29.0
     artifacts:
     - checksums:
-      - sha256:9a866c3c8feb23b3221ce261e6153fc65a98ce9ceaa71ccad017016945c178bf
-  - version: 0.9.0
+      - sha256:24be57d922927d8a2ac2e8f076f07c3447ddf8f1d25ddbb7b65578f36c9ab8e3
+  - version: 0.29.1
     artifacts:
     - checksums:
-      - sha256:9351ed92aded632f8c7f59dfadac13c191a834babe682f5785ea47e6fcf6b472
-  - version: 0.9.1
-    artifacts:
-    - checksums:
-      - sha256:79964773729880e0eee0e6af13f336041121d4cc8491a3e2c0e5f184cac8a718
-  - version: 0.9.2
-    artifacts:
-    - checksums:
-      - sha256:b41fc99bbf18450750bcd1804393e7c09dc8d4873c6b7e544b11c70fda59cbc8
+      - sha256:0a14655bd32095148d93fa595f93aba45dda0d13b25cc7fe86a041340e4a4862
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_torchvision/package.py
 - id: spack:py-tornado
@@ -373780,6 +373365,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ec2b8066b618df18cab4cb8e992f8da45d360332acb23fa34df7fa29cd1b9d3a
+  - version: 0.0.85
+    artifacts:
+    - checksums:
+      - sha256:ef442cbc2fd6dad02eb00dee4213c1e0f18e09bcbeec2cdce6aa802603c5c6bb
   recipe_path: repos/spack_repo/builtin/packages/py_ty/package.py
 - id: spack:py-typed-ast
   registry: spack
@@ -373843,57 +373432,6 @@ packages:
   repository_url: https://github.com/agronholm/typeguard
   maintainers:
   - meyersbs
-  dependencies:
-  - py-importlib-metadata
-  - py-setuptools
-  - py-setuptools-scm
-  - py-typing-extensions
-  - python
-  dependency_details:
-  - name: py-importlib-metadata
-    constraint: 'py-importlib-metadata@3.6:'
-    kind: build,run
-    condition: '@3.0.2: ^python@:3.9'
-  - name: py-setuptools
-    constraint: 'py-setuptools@42:'
-    kind: build
-    condition: '@:2.13.3'
-  - name: py-setuptools
-    constraint: 'py-setuptools@64:'
-    kind: build
-    condition: '@3.0.2:'
-  - name: py-setuptools
-    constraint: 'py-setuptools@77:'
-    kind: build
-    condition: '@4.4.3:'
-  - name: py-setuptools-scm
-    constraint: py-setuptools-scm@3.4:+toml
-    kind: build
-    condition: '@:2.13.3'
-  - name: py-setuptools-scm
-    constraint: py-setuptools-scm@6.4:+toml
-    kind: build
-    condition: '@3.0.2:'
-  - name: py-typing-extensions
-    constraint: 'py-typing-extensions@4.4.0:'
-    kind: build,run
-    condition: '@3.0.2: ^python@:3.10'
-  - name: py-typing-extensions
-    constraint: 'py-typing-extensions@4.14.0:'
-    kind: build,run
-    condition: '@4.4.3:'
-  - name: python
-    constraint: 'python@3.5.3:'
-    kind: build,run
-    condition: '@:2.13.3'
-  - name: python
-    constraint: 'python@3.7.4:'
-    kind: build,run
-    condition: '@3.0.2:'
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build,run
-    condition: '@4.4.1:'
   versions:
   - version: 2.12.1
     artifacts:
@@ -373911,6 +373449,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3a7fd2dffb705d4d0efaed4306a704c89b9dee850b688f060a8b1615a79e5f74
+  - version: 4.6.0
+    artifacts:
+    - checksums:
+      - sha256:e7414f09111317de3e335de92cd397c5c0ca00b1cc1676de12e1d444a79b3f21
   recipe_path: repos/spack_repo/builtin/packages/py_typeguard/package.py
 - id: spack:py-typepy
   registry: spack
@@ -376057,10 +375599,10 @@ packages:
     default: 'false'
     condition: '@1.15:'
   versions:
-  - version: 2.7.0
+  - version: 2.8.0
     artifacts:
     - checksums:
-      - sha256:231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c
+      - sha256:63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63
   recipe_path: repos/spack_repo/builtin/packages/py_urllib3/package.py
 - id: spack:py-urllib3-secure-extra
   registry: spack
@@ -376476,12 +376018,13 @@ packages:
   summary: The lightning-fast ASGI server.
   licenses:
   - BSD-3-Clause
-  homepage: https://www.uvicorn.org/
+  homepage: https://uvicorn.dev/
   dependencies:
   - py-click
   - py-h11
   - py-hatchling
   - py-typing-extensions
+  - python
   dependency_details:
   - name: py-click
     constraint: 'py-click@7.0:'
@@ -376493,13 +376036,20 @@ packages:
     constraint: py-hatchling
     kind: build
   - name: py-typing-extensions
-    constraint: py-typing-extensions
-    kind: build,run
-    condition: ^python@:3.7
-  - name: py-typing-extensions
     constraint: 'py-typing-extensions@4:'
     kind: build,run
     condition: ^python@:3.10
+  - name: py-typing-extensions
+    constraint: py-typing-extensions
+    kind: build,run
+    condition: ^python@:3.7
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+    condition: '@0.40:'
+  - name: python
+    constraint: python
+    kind: build,run
   options:
   - standard
   default_options:
@@ -376521,6 +376071,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:0e929828f6186353a80b58ea719861d2629d766293b6d19baf086ba31d4f3328
+  - version: 0.42.0
+    artifacts:
+    - checksums:
+      - sha256:9b1f190ce15a2dd22e7758651d9b6d12df09a13d51ba5bf4fc33c383a48e1775
   recipe_path: repos/spack_repo/builtin/packages/py_uvicorn/package.py
 - id: spack:py-uvloop
   registry: spack
@@ -376541,6 +376095,10 @@ packages:
     constraint: 'python@3.8:'
     kind: build,run
     condition: '@0.19:'
+  - name: python
+    constraint: python@:3.10
+    kind: build,run
+    condition: '@:0.16'
   - name: python
     constraint: 'python@3.7:'
     kind: build,run
@@ -380966,6 +380524,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c4ac9a01a945d90d5b1628e2af045099a9d4943536d4f2ee3ae963c3b222d15b
+  - version: 2026.7.0
+    artifacts:
+    - checksums:
+      - sha256:361b495928fdbf5b58d0969bb6775339019da5e93ca74d61ddf4eb5edd6ce604
   recipe_path: repos/spack_repo/builtin/packages/py_xarray/package.py
 - id: spack:py-xarray-einstats
   registry: spack
@@ -382694,7 +382256,6 @@ packages:
   - py-numpy
   - py-ray
   - py-scikit-learn
-  - py-sdv
   - py-setuptools
   - py-tqdm
   - py-ytopt-autotune
@@ -382730,10 +382291,6 @@ packages:
   - name: py-scikit-learn
     constraint: 'py-scikit-learn@1.0.0:'
     kind: build,run
-  - name: py-sdv
-    constraint: py-sdv@0.13.1:0.13
-    kind: build,run
-    condition: +online
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
@@ -382746,14 +382303,6 @@ packages:
   - name: python
     constraint: 'python@3.6:'
     kind: build,run
-  options:
-  - online
-  default_options:
-    online: 'false'
-  features:
-  - name: online
-    description: Install requirements for online tuning.
-    default: 'false'
   versions:
   - version: 0.0.3
     artifacts:
@@ -460172,6 +459721,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:275d5fa6eb04878bb327e197003ac0dec63096457a214048c47fd38b7f58d844
+  - version: 4.10.4
+    artifacts:
+    - checksums:
+      - sha256:6494aa8ff7cbb2bc35145ecdf14e978330a57527eaabb299bf7c4eff1d3cddec
   - version: 4.2.0
     artifacts:
     - checksums:
@@ -460611,7 +460164,6 @@ packages:
   - motioncor2
   - mpi
   - pbzip2
-  - py-relion
   - tbb
   - xz
   - zstd
@@ -460662,10 +460214,6 @@ packages:
     constraint: pbzip2
     kind: run
     condition: '@5:'
-  - name: py-relion
-    constraint: py-relion@5.0.1 ~cuda
-    kind: build,run
-    condition: '@5.0.1 +python ~cuda'
   - name: tbb
     constraint: tbb
     condition: +altcpu
@@ -460689,7 +460237,6 @@ packages:
   - gui
   - mklfft
   - purpose
-  - python
   default_options:
     allow_ctf_in_sagd: 'true'
     altcpu: 'false'
@@ -460702,7 +460249,6 @@ packages:
     gui: 'true'
     mklfft: 'false'
     purpose: cluster
-    python: 'true'
   features:
   - name: allow_ctf_in_sagd
     description: Allow CTF-modulation in SAGD, as specified in Claim 1 of patent US10,282,513B2
@@ -460749,10 +460295,6 @@ packages:
     - cluster
     - desktop
     default: cluster
-  - name: python
-    description: Include py-relion Python tools (torch, napari, etc.)
-    default: 'true'
-    condition: '@5:'
   versions:
   - version: 3.0.7
     artifacts:
@@ -472236,6 +471778,7 @@ packages:
   name: salmon
   summary: Salmon is a tool for quantifying the expression of transcripts using RNA-seq data.
   licenses:
+  - BSD-3-Clause
   - GPL-3.0-only
   homepage: https://combine-lab.github.io/salmon/
   repository_url: https://github.com/combine-lab/salmon
@@ -472244,11 +471787,9 @@ packages:
   dependencies:
   - boost
   - bzip2
-  - c
   - catch2
   - cereal
   - curl
-  - cxx
   - htslib
   - intel-oneapi-tbb
   - intel-tbb
@@ -472272,33 +471813,28 @@ packages:
     condition: '@1.4.0:1.10.3'
   - name: boost
     constraint: boost@1.72.0:+atomic+filesystem+timer+chrono+program_options
-    condition: '@1.11.4:'
+    condition: '@1.11.4:1'
   - name: bzip2
     constraint: bzip2
-  - name: c
-    constraint: c
-    kind: build
   - name: catch2
     constraint: catch2
     kind: test
-    condition: '@1.11:'
+    condition: '@1.11:1'
   - name: cereal
     constraint: cereal
+    condition: '@:1'
   - name: curl
     constraint: curl
-    condition: '@0.14.1:'
-  - name: cxx
-    constraint: cxx
-    kind: build
+    condition: '@0.14.1:1'
   - name: htslib
     constraint: htslib
-    condition: '@1.10.2:'
+    condition: '@1.10.2:1'
   - name: intel-oneapi-tbb
     constraint: 'intel-oneapi-tbb@2021.4.0:'
-    condition: '@1.11: %tbb=intel-oneapi-tbb'
+    condition: '@1.11:1 %tbb=intel-oneapi-tbb'
   - name: intel-tbb
     constraint: 'intel-tbb@2021.4.0:'
-    condition: '@1.11: %tbb=intel-tbb'
+    condition: '@1.11:1 %tbb=intel-tbb'
   - name: jemalloc
     constraint: jemalloc
     condition: '@:1.10'
@@ -472307,15 +471843,20 @@ packages:
     condition: '@:1.10'
   - name: libgff
     constraint: libgff
+    condition: '@:1'
+  - name: libgff
+    constraint: 'libgff@2.0.1:'
+    condition: '@1.11:1'
   - name: mimalloc
     constraint: mimalloc
-    condition: '@1.11:'
+    condition: '@1.11:1'
   - name: pkgconfig
     constraint: pkgconfig
+    condition: '@:1'
   - name: python
     constraint: 'python@3:'
     kind: build
-    condition: '@1.11:'
+    condition: '@1.11:1'
   - name: staden-io-lib
     constraint: staden-io-lib~curl
     condition: '@:1.10'
@@ -472324,25 +471865,16 @@ packages:
     condition: '@1.10.3'
   - name: tbb
     constraint: tbb
+    condition: '@:1'
   - name: xz
     constraint: xz
+    condition: '@:1'
   - name: zlib-api
     constraint: zlib-api
     condition: '@:1.10'
   - name: zlib-ng
     constraint: zlib-ng~compat
-    condition: '@1.11:'
-  options:
-  - build_type
-  default_options:
-    build_type: RELEASE
-  features:
-  - name: build_type
-    description: CMake build type
-    values:
-    - DEBUG
-    - RELEASE
-    default: RELEASE
+    condition: '@1.11:1'
   versions:
   - version: 0.12.0
     artifacts:
@@ -472380,6 +471912,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:450d953a5c43fe63fd745733f478d3fbaf24d926cb52731fd38ee21c4990d613
+  - version: 2.8.0
+    artifacts:
+    - checksums:
+      - sha256:298e6fe9980e4d60e4a4ca8f043d3446e6a1ed0777487331224151eb93ae7dd4
   recipe_path: repos/spack_repo/builtin/packages/salmon/package.py
 - id: spack:salmon-tddft
   registry: spack
@@ -475610,7 +475146,7 @@ packages:
   homepage: https://gitlab.inria.fr/scotch/scotch
   maintainers:
   - AlexanderRichert-NOAA
-  - climbfuji
+  - jcortial-safran
   dependencies:
   - bison
   - c
@@ -488159,6 +487695,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:845630a69c93c915435100fcb4c800e9f0b181a44bb1debbf8e3a68993ce7797
+  - version: 8.5.3
+    artifacts:
+    - checksums:
+      - sha256:6a6cd477027c843d18e0d21fbdef75c56595398b48507905a8f432ac0e0255cf
+  - version: 8.6.0
+    artifacts:
+    - checksums:
+      - sha256:0fd198a5b1509258b11f4b6946b5bff62a9cbe95b2c35c43d71642987d0b396b
   - version: develop
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/spiral_software/package.py
@@ -492116,6 +491660,7 @@ packages:
   - metis
   - mpi
   - parmetis
+  - rocprim
   - rocsolver
   - rocthrust
   - scalapack
@@ -492187,6 +491732,9 @@ packages:
   - name: parmetis
     constraint: parmetis
     condition: +parmetis
+  - name: rocprim
+    constraint: rocprim
+    condition: '@8.1.0: +rocm'
   - name: rocsolver
     constraint: rocsolver
     condition: +rocm
@@ -492358,6 +491906,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:11cc8645d622a16510b39a20efc64f34862b41976152d17f9fbf3e91f899766c
+  - version: 8.1.0
+    artifacts:
+    - checksums:
+      - sha256:f86a05d3ad9e87ad8a6e1008d15bf3e628f133bfe0a52d4268354a342cbe03d0
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/strumpack/package.py
 - id: spack:su2
@@ -498424,6 +497976,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c10969df6d2e91d44c2200eaffad0db041938fad24d3455c65a2a69082d7eb0d
+  - version: 0.2.0
+    artifacts:
+    - checksums:
+      - sha256:666d72b26f896a61915ae49a7a239f9206ccbcc73e81b116ca85f9b95f22dcbc
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/tdls/package.py
 - id: spack:tealeaf
@@ -500744,6 +500300,10 @@ packages:
     constraint: c
     kind: build
   versions:
+  - version: '1.10'
+    artifacts:
+    - checksums:
+      - sha256:e8c29fb4ab599d8478e41e8618f50db8aede9c90af27d0d2ef28ae50d5de09c3
   - version: '1.9'
     artifacts:
     - checksums:
@@ -502939,74 +502499,11 @@ packages:
     constraint: py-setuptools
     kind: build
   versions:
-  - version: 0.2.5
-    artifacts:
-    - checksums:
-      - sha256:002a6eb775598b6c4df0225f3a488bfe6a6da9246e8ca42eb4e7d58f694c25cc
   - version: 0.3.18
     artifacts:
     - checksums:
       - sha256:a68a426bea0c0999a714f868694d7a5f07cfb0456098e99ac3e7b33865abcd7b
-  - version: 0.3.7
-    artifacts:
-    - checksums:
-      - sha256:ae3c0d6ccb1e8ad2e4926421442b8cb33a4d01d1ee1dff83174949a9f91cc8a9
   recipe_path: repos/spack_repo/builtin/packages/topaz/package.py
-- id: spack:topaz-3dem
-  registry: spack
-  name: topaz-3dem
-  summary: 'topaz: Pipeline for particle picking in cryo-electron microscopy images using convolutional neural networks trained from positive and unlabeled examples...'
-  description: 'topaz: Pipeline for particle picking in cryo-electron microscopy images using convolutional neural networks trained from positive and unlabeled examples. Also featuring micrograph and tomogram denoising with DNNs.'
-  description_format: html
-  licenses:
-  - GPL-3.0-or-later
-  homepage: https://github.com/3dem/topaz
-  repository_url: https://github.com/3dem/topaz
-  dependencies:
-  - py-future
-  - py-numpy
-  - py-pandas
-  - py-pillow
-  - py-scikit-image
-  - py-scikit-learn
-  - py-scipy
-  - py-setuptools
-  - py-torch
-  - py-torchvision
-  dependency_details:
-  - name: py-future
-    constraint: py-future
-    kind: build,run
-  - name: py-numpy
-    constraint: 'py-numpy@1.11:'
-    kind: build,run
-  - name: py-pandas
-    constraint: py-pandas
-    kind: build,run
-  - name: py-pillow
-    constraint: 'py-pillow@6.2.0:'
-    kind: build,run
-  - name: py-scikit-image
-    constraint: py-scikit-image
-    kind: build,run
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@0.19.0:'
-    kind: build,run
-  - name: py-scipy
-    constraint: 'py-scipy@0.17.0:'
-    kind: build,run
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-torch
-    constraint: py-torch@1:2.3
-    kind: build,run
-  - name: py-torchvision
-    constraint: py-torchvision
-    kind: build,run
-  versions:
-  - version: '20220325'
-  recipe_path: repos/spack_repo/builtin/packages/topaz_3dem/package.py
 - id: spack:topcom
   registry: spack
   name: topcom
@@ -503683,15 +503180,15 @@ packages:
   dependencies:
   - abyss
   - blat
-  - py-python-igraph
+  - py-igraph
   - python
   dependency_details:
   - name: abyss
     constraint: abyss@1.5.2
   - name: blat
     constraint: blat
-  - name: py-python-igraph
-    constraint: 'py-python-igraph@0.7.0:'
+  - name: py-igraph
+    constraint: 'py-igraph@0.7.0:'
     kind: build,run
   - name: python
     constraint: 'python@2.7.6:'
@@ -507350,6 +506847,7 @@ packages:
   - verbs
   - vfs
   - xpmem
+  - ze
   default_options:
     assertions: 'false'
     backtrace_detail: 'false'
@@ -507382,6 +506880,7 @@ packages:
     verbs: 'false'
     vfs: 'false'
     xpmem: 'false'
+    ze: 'false'
   features:
   - name: assertions
     description: Enable assertions
@@ -507488,6 +506987,9 @@ packages:
     condition: '@1.11.0:'
   - name: xpmem
     description: Enable XPMEM support
+    default: 'false'
+  - name: ze
+    description: Enable Intel GPU support
     default: 'false'
   versions:
   - version: 1.10.0
@@ -511831,6 +511333,7 @@ packages:
   dependencies:
   - c
   - cxx
+  - googletest
   - veccore
   dependency_details:
   - name: c
@@ -511839,6 +511342,10 @@ packages:
   - name: cxx
     constraint: cxx
     kind: build
+  - name: googletest
+    constraint: googletest
+    kind: test
+    condition: '@2.1:'
   - name: veccore
     constraint: veccore
   - name: veccore
@@ -511850,32 +511357,35 @@ packages:
   options:
   - cxxstd
   - gdml
-  - geant4
-  - root
+  - maxdepth
+  - nav
   - shared
   - surface
   default_options:
-    cxxstd: '17'
+    cxxstd: '20'
     gdml: 'true'
-    geant4: 'false'
-    root: 'false'
+    maxdepth: '4'
+    nav: index
     shared: 'true'
     surface: 'false'
   features:
   - name: cxxstd
     description: Use the specified C++ standard when building
-    default: '17'
+    default: '20'
   - name: gdml
     description: Support native GDML geometry descriptions
     default: 'true'
-  - name: geant4
-    description: Support Geant4 geometry construction
-    default: 'false'
-    condition: '@:1'
-  - name: root
-    description: Support ROOT geometry construction
-    default: 'false'
-    condition: '@:1'
+  - name: maxdepth
+    description: Tuple state size
+    values:
+    - '2'
+    - '4'
+    - '8'
+    default: '4'
+    condition: nav=tuple
+  - name: nav
+    description: Navigation state implementation
+    default: index
   - name: shared
     description: Build shared libraries
     default: 'true'
@@ -511885,10 +511395,12 @@ packages:
     condition: '@2:'
   versions:
   - version: 1.1.20
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:e1c75e480fc72bca8f8072ea00320878a9ae375eed7401628b15cddd097ed7fd
   - version: 1.2.10
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:3e0934842694452e4cb4a265428cb99af1ecc45f0e2d28a32dfeaa0634c21e2a
@@ -511900,20 +511412,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:f5fb455b2a2a5f386e171a621d0e95908ab6269803c4b186861849e8c88e8350
-  - version: 2.0.0-rc.7
-    lifecycle: deprecated
-    artifacts:
-    - checksums:
-      - sha256:f95eacd7154f7b41950161988465b5c086f80dade91dec8328085949c6f443a0
-  - version: 2.0.0-rc.9
-    lifecycle: deprecated
-    artifacts:
-    - checksums:
-      - sha256:cfc0cb86303c1dc475a5dde9022384e2034f789a0908feb007103c1e7cd9aa65
   - version: 2.1.0
     artifacts:
     - checksums:
       - sha256:d23335472562cd97a61f21f5bde2361acda8cf50951c1b384981511ad43c99c9
+  - version: 2.1.1
+    artifacts:
+    - checksums:
+      - sha256:92fddc31987557363d7985698ec423375265aa7ee3e3dc062485611dd13eb3b8
+  - version: 2.2.0
+    artifacts:
+    - checksums:
+      - sha256:885b293a82cd3c80221e0aa2b8b5ca1b6c336abcd4b6756a2bad6e3ed4543493
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/vecgeom/package.py
 - id: spack:veclibfort
@@ -512190,6 +511700,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:af8c125edf83637f92c43dade7ffc64e8f611c79c77804286a56c9de5cadaa90
+  - version: 1.28.0
+    artifacts:
+    - checksums:
+      - sha256:19edde5fdb4ffa8716e5c947ac16b925c15a824c05bac21eece6813ea37f6adc
   - version: 1.3.0
     artifacts:
     - checksums:

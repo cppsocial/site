@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: cppget
 repository: https://pkg.cppget.org/1/
-revision: a071a2112d12b711ccb0571af3af2694cd078fa72368005673226bf8b23877a9
+revision: b0ad50434bbc06c1a7e26cd4228d5e6afb8b908b07f3cb75abfa543993b64074
 packages:
 - id: cppget:Eigen
   registry: cppget
@@ -32874,6 +32874,19 @@ packages:
       url: https://pkg.cppget.org/1/stable/spdlog/spdlog-1.14.1+2.tar.gz
       checksums:
       - sha256:b0e844d10d8f27bce6b878fcddbcc87254e22691246627b9b436c48b1f8c8258
+  - version: 1.17.0
+    channel: testing
+    summary: C++ logging library
+    description: <p>Fast C++ logging library</p><p>Copy the include folder to your build tree and use a C++11\ compiler.</p>
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: fmt
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/spdlog/spdlog-1.17.0.tar.gz
+      checksums:
+      - sha256:fdb534098ee4c23c8ec77401e0ac1263c5e39315f05550943e3c3e1033db0e1d
   - version: 1.8.2+2
     upstream_version: 1.8.2
     packaging_revision: '2'
@@ -33003,6 +33016,18 @@ packages:
       url: https://pkg.cppget.org/1/stable/spdlog/spdlog-bench-1.14.1+2.tar.gz
       checksums:
       - sha256:e7e6e92302a52c544a13afbcbc37c406191cd152a333dc8eb11cb001cb4ea311
+  - version: 1.17.0
+    channel: testing
+    summary: C++ logging library (benchmarks)
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: google-benchmark
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/spdlog/spdlog-bench-1.17.0.tar.gz
+      checksums:
+      - sha256:de0c7e8f247f183f1ff1874064bb7707469857068f4b173fd9009b1854aa50f7
   recipe_url: https://cppget.org/spdlog-bench
 - id: cppget:spdlog-tests
   registry: cppget
@@ -33068,6 +33093,18 @@ packages:
       url: https://pkg.cppget.org/1/stable/spdlog/spdlog-tests-1.14.1+2.tar.gz
       checksums:
       - sha256:a2e9fa65b4cbd44363303af75de93de1a6cf55d94ee6a95abbcf876feb13aa66
+  - version: 1.17.0
+    channel: testing
+    summary: C++ logging library (tests)
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: catch2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/spdlog/spdlog-tests-1.17.0.tar.gz
+      checksums:
+      - sha256:9609932f45a74e40a9c00f3dad1dbd55c5a514d219ed0f2f51b081d39e4fc4d5
   recipe_url: https://cppget.org/spdlog-tests
 - id: cppget:spirv-cross
   registry: cppget

@@ -1,5 +1,21 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: m6gOag_Rtdg
+  title: 'Embedded C++ development in CLion: Toolchains, CMake, and Remote Debugging'
+  url: https://www.youtube.com/watch?v=m6gOag_Rtdg
+  published: 2026-10-07 06:00:24+00:00
+  updated: 2026-10-10 06:55:29+00:00
+  description: 'Learn how to configure CLion for embedded Linux development. In this tutorial, Joshua Goins walks through setting up an embedded toolchain and CMake profile, deploying an application over SSH, and configuring remote debugging with GDB server.
+
+
+    Using a Toradex i.MX6 board, Joshua demonstrates how to build locally and debug on the target hardware from within CLion. Set breakpoints, inspect variables, and modify values using the same debugging interface you use for desktop development.
+
+
+    To follow along, you’ll need a configured Linux device, an SDK installed on your development machine, and GDB server installed on the target.
+
+
+    (This is the original: Learn how to configure CLion for embedded Linux development without leaving your IDE. In this tutorial, Joshua Goins walks through setting up your toolchain and CMake profiles, deploying binaries via SSH, and configuring a remote GDB server for seamless debugging on target hardware like the Toradex i.MX6. Streamline your embedded C++ workflow and debug remote applications just like desktop projects.)'
+  thumbnail_url: https://i2.ytimg.com/vi/m6gOag_Rtdg/hqdefault.jpg
 - video_id: jh2dV4YKhrU
   title: 'September 2026 Newsletter: AI-Assisted Code Modernization, Distrobox, and New KDAB Videos'
   url: https://www.youtube.com/watch?v=jh2dV4YKhrU

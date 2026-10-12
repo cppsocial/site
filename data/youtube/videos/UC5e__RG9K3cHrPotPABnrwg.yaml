@@ -1,5 +1,228 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: xwnRPyRK5h4
+  title: Cutting Some Slack for our Programs - Lisa Lippincott - C++Now 2026
+  url: https://www.youtube.com/watch?v=xwnRPyRK5h4
+  published: 2026-10-11 15:00:18+00:00
+  updated: 2026-10-11 15:00:20+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Cutting Some Slack for our Programs - Lisa Lippincott - C++Now 2026
+
+    ---
+
+
+    Good software design is sometimes understood as running a tight ship, in which every outcome of a program’s action is anticipated and carefully prepared for. I take an opposing view: in my experience, the tight ship model leads to brittle, unmaintainable programs. I prefer designs that are composed of loosely coupled components, leaving room for piecewise evolutionary change.
+
+
+    This looseness of coupling — this slack — is a resource that can be depleted as a program evolves. Perhaps surprisingly, we can counter the erosion of slack by setting rules for how components interact. The effect of the rules is to divide the slack into portions and allocate those portions to the futures of particular components.
+
+
+    In this lecture, I’ll be looking at various component interface mechanisms with an eye toward the ways they preserve or erode a program’s slack. I will pay particular attention to C++26 contracts, and discuss some contracts features proposed for C++29.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Cutting_Some_Slack_for_our_Programs.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Lisa Lippincott
+
+
+    Lisa Lippincott designed the software architectures of Tanium and BigFix, two systems for managing large fleets of computers. She''s currently assistant chair of the numerics study group of the C++ standardization committee. In her spare time, she studies mathematical logic, and wants to make computer-checked proofs of correctness a routine part of programming.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/xwnRPyRK5h4/hqdefault.jpg
+- video_id: m7gwSr27m74
+  title: Object Oriented Programming in Contemporary C++ - Steve Downey - C++Now 2026
+  url: https://www.youtube.com/watch?v=m7gwSr27m74
+  published: 2026-10-09 15:00:35+00:00
+  updated: 2026-10-11 14:53:56+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Object Oriented Programming in Contemporary C++ - Steve Downey - C++Now 2026
+
+    ---
+
+
+    Abstract: Today, it is yet again fashionable to criticize Object-Oriented Programming. However, many of the criticisms are aimed at features and practices that are not particularly OO, or are due to impedence mismatches with value-oriented, functional styles.
+
+
+    Takeaway: How and why to apply Object Oriented techniques in C++ today in contemporary styles.
+
+
+    Object Orientation dominated software development from the 1980s to the early 2000s because it was demonstrably more successful in practice than other existing paradigms. There was intense bottom-up pressure to adopt OO practices.
+
+
+    C++ grew up in this environment. Always a multi-paradigm language, it nonetheless incorporates many features in the core of the language to support OO styles, which was an important part of its success.
+
+
+    "I made up the term ''object-oriented'', and I can tell you I did not have C++ in mind." – Alan Kay, OPSLA 1997 Keynote
+
+
+    The core tenets of OO are often said to be Encapsulation, Abstraction, Inheritance, and Polymorphism. However, only Inheritance is particular to OO. The others are much more about the painfully low-level tools and programming languages available, where they are very much table stakes.
+
+
+    The core of an Object and OO are the ideas of Identity, Behavior, and State. Identity and state, in particular, cause impedance mismatches with other paradigms, especially value-oriented ones. This is similar to problems with working with a system designed around the Relational Database model in another paradigm.
+
+
+    Using tools effectively requires one to understand what the tool is, what its intended use is, and how it works (or does not work) with other tools. In this talk, we will explore what the core of the Object Oriented model is, what parts are "just" good engineering practices, and how to use OO in C++ with less pain and more success.
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Steve Downey
+
+
+    Steve Downey has been a programmer for more than 30 years. Steve graduated from SUNY Purchase with a BS in Mathematics. A Computer Science degree would have involved two classes before 11:00 am, so was impossible.
+
+    He has worked at Bloomberg since 2003, and is currently working as an Engineer on the C++ Infrastructure team.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/m7gwSr27m74/hqdefault.jpg
+- video_id: ZRd_XN3LGxo
+  title: Signal Trees - A Deep Dive into a High-Performance Alternative to Queue-Based Task Scheduling
+  url: https://www.youtube.com/watch?v=ZRd_XN3LGxo
+  published: 2026-10-06 15:04:41+00:00
+  updated: 2026-10-07 18:37:24+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Signal Trees - A Deep Dive into a High-Performance Alternative to Queue-Based Task Scheduling - Michael Maniscalco - C++Now 2026
+
+    ---
+
+
+    Selecting which ready source to service next is the core scheduling task in low-latency systems. The conventional approach routes that decision through queues; however, fan-in queues concentrate contention and throughput degrades under load, and priority usually compounds it - adding complexity. Polling avoids some contention but injects jitter and wasted cycles. This talk deep-dives into Signal Trees: an alternative lock-free, low-latency readiness scheduler that sidesteps queue-centered degradation at scale and eliminates the need for polling entirely.
+
+    We start with measurements - scaling, tail percentiles, and service distribution - showing up to 40× higher throughput than queue-based schedulers under contention, then explain how that performance improvement emerges from the design. We will examine the internal design, invariants, and the deliberate choices behind them. We cover how Signal Trees support priority and fairness without sacrificing performance or introducing the contention inherent in queue-based schedulers.
+
+
+    We close by delineating the boundary between the Signal Tree scheduling primitive and an execution layer above it: Signal Trees provide readiness and selection, deferring responsibility for work and data to the execution layer.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Signal_Trees.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Michael Maniscalco
+
+
+    Michael been building C++ systems professionally for over 25 years. He started in data compression, developing algorithms such as M99, M03, and MSufSort. For the past decade he has worked in finance as a principal engineer and software architect, building low-latency infrastructure for high-frequency trading. His interests include performance engineering, lock-free concurrency, and algorithm design.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/ZRd_XN3LGxo/hqdefault.jpg
 - video_id: KB5Nfofgu2k
   title: Senders For Existing Asynchronous Interfaces - Dietmar Kühl - C++Now 2026
   url: https://www.youtube.com/watch?v=KB5Nfofgu2k

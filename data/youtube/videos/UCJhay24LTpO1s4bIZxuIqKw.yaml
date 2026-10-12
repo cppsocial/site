@@ -1,5 +1,237 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: whFzmXXhG5g
+  title: Our Journey Toward a Fully Backward-Compatible, UB-Safe, ISO C++ - John Lakos - ACCU 2026
+  url: https://www.youtube.com/watch?v=whFzmXXhG5g
+  published: 2026-10-10 12:00:36+00:00
+  updated: 2026-10-10 12:00:37+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Our Journey Toward a Fully Backward-Compatible, UB-Safe, ISO C++ - John Lakos - ACCU 2026
+
+    ---
+
+
+    Today''s world runs on C++. That''s because, in domains requiring scale, performance, low latency, and fine-grained control over concurrency, C++ is second to none! Yet in recent years, a growing concern has emerged: C++ programs are often considered unsafe — not because of programmer negligence, but because the language itself provides insufficient mechanisms to prevent or reliably detect undefined behavior (UB).
+
+
+    For those financially and technically invested in C++, its current lack of language safety raises a fundamental question: How can we evolve ISO C++ to be UB-safe without necessarily sacrificing runtime performance, and without breaking backward compatibility with existing, valid C++ code?
+
+
+    In this talk, we begin by motivating an overall approach to UB-safety that starts from a simple but uncompromising premise: each individual potential source of UB must be able to be detected via runtime checking. Crucially, this approach eliminates the notion of “safe” and “unsafe” regions of a program — there is no place where UB can hide, and no need to switch languages, subsets, or tools to achieve comprehensive coverage.
+
+
+    We then examine how the C++26 contracts facility provides the essential foundation for transforming optional runtime checks into the practical, scalable mechanisms for eliminate UB bugs in production software. Contracts give developers fine-grained control over where and when checking occurs, allowing runtime overhead to be spent where it is affordable or most valuable — such as in new, rarely executed, or security-critical code. These decisions naturally evolve over time, as long-running checks that never fire may no longer justify their cost.
+
+
+    Finally, we outline the concrete steps of an incremental journey toward reducing undefined behavior in ISO C++. The result is a model of UB-safety — rooted in C++26 contracts and optional runtime checking — that is competitive with, and in key respects stronger than, approaches taken by other high-performance languages. Most importantly, this model applies not only to new code, but to the vast body of existing C++ software already in the wild.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    John Lakos
+
+
+    John Lakos, author of Large-Scale C++ Software Design (Pearson, 1996), is currently exploring the application of AI to large-scale C++ software design. From 2001 to 2026, he served at Bloomberg LP in New York City as a senior architect and mentor for C++ Software Development worldwide. He is an active voting member of the C++ Standards Committee''s Evolution Working Group. Previously, Dr. Lakos directed the design and development of infrastructure libraries for proprietary analytical financial applications at Bear Stearns. For 12 years prior, Dr. Lakos developed large frameworks and advanced ICCAD applications at Mentor Graphics, for which he holds multiple software patents. His academic credentials include a Ph.D. in Computer Science (''97) and an Sc.D. in Electrical Engineering (''89) from Columbia University. Dr. Lakos received his undergraduate degrees from MIT in Mathematics (''82) and Computer Science (''81). He is the author of the multi-volume book Large-Scale C++, the first
+    volume of which, Volume I: Process and Architecture (Pearson, 2020), is currently available, and subsequent volumes are forthcoming.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/whFzmXXhG5g/hqdefault.jpg
+- video_id: w9k-L0GLLKM
+  title: Modernizing Legacy Codebases Without Stopping the World - Peter Muldoon - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=w9k-L0GLLKM
+  published: 2026-10-08 12:57:27+00:00
+  updated: 2026-10-11 23:41:42+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Modernizing Legacy Codebases Without Stopping the World - Peter Muldoon - ACCU 2026
+
+    ---
+
+
+    Every mature codebase carries history and technical debt. The challenge is modernizing without stopping the world or introducing big re-write failure risks.
+
+
+    In this talk, we’ll explore how to modernize legacy C++ codebases incrementally using a mix of deterministic code transformations and AI-assisted refactoring.
+
+
+    After delving into some of the common problems with legacy modernization, we''ll start tackling the simple ""boring"" stuff that deliver huge leverage of changes via clang tooling. These represent repeatable, deterministic reviewable upgrades that can be automated and applied at scale.
+
+
+    Then we can look at more difficult transformations that can be AI assisted with more aggressive transformations including API improvements and how to prevent it going off the rails. This will be backed by Compiler diagnostics, static analysis and testing to keep changes maintainable and correct.
+
+
+    The goal is not to replace engineering judgment, but to accelerate it: turning modernization into a continuous, low-risk workflow instead of a disruptive project.
+
+
+    Attendees will leave with a repeatable playbook for modernizing legacy codebases incrementally, safely, and at scale—using the right tool for each class of change
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Peter Muldoon
+
+
+    Pete Muldoon has been using C++ since 1991. Pete has worked in Ireland, England and the USA and is currently employed by Bloomberg as a senior Engineering Lead. A consultant for over 20 years prior to joining Bloomberg, Peter has worked on a broad range of projects and code bases in a large number of companies both tech and finance. Such broad exposure has, over time, shown what works and what doesn''t for large scale engineering projects. He''s a proponent of applied engineering principles, elegant solutions and expressive code.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/w9k-L0GLLKM/hqdefault.jpg
+- video_id: FeYEO3PhEVY
+  title: Real-time Safety in C & C++ - Guaranteed by the Compiler! - Anders Schau Knatten - ACCU on Sea 2026
+  url: https://www.youtube.com/watch?v=FeYEO3PhEVY
+  published: 2026-10-05 12:05:27+00:00
+  updated: 2026-10-06 20:13:46+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Real-time Safety in C & C++ - Guaranteed by the Compiler! - Anders Schau Knatten - ACCU on Sea 2026
+
+    ---
+
+
+    Clang 20 introduced Function Effect Analysis (FEA), which enables real-time safety guarantees at compile-time. Mark your functions as non-throwing, non-allocating, or non-blocking — and have the compiler enforce it! For instance, a function marked non-allocating is not allowed to call malloc or new, and can only call other functions if they are also marked non-allocating (or if the compiler can deduce that they won''t allocate).
+
+
+    In this talk, we will demonstrate function effect analysis and explain how it works. We will also see why it can be hard to enable FEA in the presence of third-party libraries, and what can be done about it.
+
+
+    At Squarehead, we''ve used FEA almost since its official release to refactor our soft real-time pipeline towards harder real-time. We will present our experience and lessons learned from this process, and the talk will be packed with useful real-life tips, tricks, and practices to set you up for success.
+
+
+    We will also demonstrate the brand-new RealtimeSanitizer, the run-time companion to FEA.
+
+
+    After this talk, you''ll know how and why to use Function Effect Analysis and RealtimeSanitizer and be aware of real-life tips, tricks, and practices for using them in your own projects.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Anders Schau Knatten
+
+
+    Anders started programming in Turbo Pascal in 1995, and has been programming professionally in various languages since 2001, with a main focus on C++. He''s currently a senior software engineer at Squarehead, working on acoustic drone detection systems. He''s also the author of the book C++ Brain Teasers, CppQuiz.org and the blog C++ on a Friday.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/FeYEO3PhEVY/hqdefault.jpg
 - video_id: 9BpVjPKv02s
   title: 'Rust & C++: What We Learned Building Our Own APIs'
   url: https://www.youtube.com/watch?v=9BpVjPKv02s

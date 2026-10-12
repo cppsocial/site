@@ -105,3 +105,39 @@
   tags:
   - boost
   - natvis
+- post_id: cmJpbeKsoDdHbTXW
+  source_id: ganetsky
+  source_title: Braden++
+  title: The Parser concept (+ NoneOf and AllOf)
+  url: https://blog.ganets.ky/ParserConcept/
+  published: 2023-07-27 00:00:00+00:00
+  description: Continuing on my series on my expression template parser generator library…So far I’ve defined the AnyOf parser, that checks whether the first character of the input string matches any characters from a given set. This is one of my “primitive” parsers. I’ve thought of 2 other “p…
+  tags:
+  - tok3n
+- post_id: nWR44OSOrTF9lHF9
+  source_id: ganetsky
+  source_title: Braden++
+  title: My first compiler bug
+  url: https://blog.ganets.ky/FirstCompilerBug/
+  published: 2023-06-08 00:00:00+00:00
+  description: I talked about this in a lightning talk at C++Now 2023. I want to go into more detail here.It’s exciting in a masochistic way I guess. A sort of self-schadenfreude. Somehow I found a bug in a major compiler! Frustrating for my workflow obviously, but it feels like a compliment,…
+  tags:
+  - tok3n
+- post_id: c9LptYZZpnpKBNM0
+  source_id: ganetsky
+  source_title: Braden++
+  title: One char at a time
+  url: https://blog.ganets.ky/AnyOf/
+  published: 2023-05-13 00:00:00+00:00
+  description: Last time I had a brief explanation of the library I want to design. I want to create parser combinators using expression templates, where all information is in the parser types themselves, with no data members.Writing this library has been a hugely enjoyable experience. I’m sur…
+  tags:
+  - tok3n
+- post_id: hcHXbq_Whr--4BYO
+  source_id: ganetsky
+  source_title: Braden++
+  title: A string literal as a template argument
+  url: https://blog.ganets.ky/StaticString/
+  published: 2023-05-01 00:00:00+00:00
+  description: But first, a preambleThis is my backstory before the recipe in this metaphorical cookbook.I was first introduced to the idea of parser combinators in a CppCon talk not about parser combinators, at least not as the main feature. Ben Deane and Jason Turner’s famous “constexpr ALL…
+  tags:
+  - tok3n

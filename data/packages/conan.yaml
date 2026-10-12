@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: conan
 repository: https://github.com/conan-io/conan-center-index
-revision: 0041956adaf93eaef517c6a853934029906b8917
+revision: 6ec00e22c295fd5c9eaebd66c113db35ad57638e
 packages:
 - id: conan:7bitconf
   registry: conan
@@ -16764,6 +16764,16 @@ packages:
     - url: https://github.com/team-charls/charls/archive/2.4.2.tar.gz
       checksums:
       - sha256:d1c2c35664976f1e43fec7764d72755e6a50a80f38eca70fcc7553cad4fe19d9
+  - version: 2.4.4
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/team-charls/charls/archive/2.4.4.tar.gz
+      checksums:
+      - sha256:fbd712903d61306ad00d5fa5029a9882630c7311ca487f48d2d76000956e8ff9
   recipe_path: recipes/charls/config.yml
   native_url: https://conan.io/center/recipes/charls
 - id: conan:chef-fun
@@ -17367,62 +17377,6 @@ packages:
     use_locales: 'true'
     utils: 'false'
   versions:
-  - version: 1.7.12
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: use_locales
-      default: 'true'
-    - name: utils
-      default: 'false'
-    artifacts:
-    - url: https://github.com/DaveGamble/cJSON/archive/v1.7.12.tar.gz
-      checksums:
-      - sha256:760687665ab41a5cff9c40b1053c19572bcdaadef1194e5cba1b5e6f824686e7
-  - version: 1.7.13
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: use_locales
-      default: 'true'
-    - name: utils
-      default: 'false'
-    artifacts:
-    - url: https://github.com/DaveGamble/cJSON/archive/v1.7.13.tar.gz
-      checksums:
-      - sha256:d4e77a38f540f2c37f55758f2666655314f1f51c716fea5f279659940efdcf04
-  - version: 1.7.14
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: use_locales
-      default: 'true'
-    - name: utils
-      default: 'false'
-    artifacts:
-    - url: https://github.com/DaveGamble/cJSON/archive/v1.7.14.tar.gz
-      checksums:
-      - sha256:fb50a663eefdc76bafa80c82bc045af13b1363e8f45cec8b442007aef6a41343
-  - version: 1.7.15
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: use_locales
-      default: 'true'
-    - name: utils
-      default: 'false'
-    artifacts:
-    - url: https://github.com/DaveGamble/cJSON/archive/v1.7.15.tar.gz
-      checksums:
-      - sha256:5308fd4bd90cef7aa060558514de6a1a4a0819974a26e6ed13973c5f624c24b2
   - version: 1.7.16
     features:
     - name: fPIC
@@ -17437,34 +17391,6 @@ packages:
     - url: https://github.com/DaveGamble/cJSON/archive/v1.7.16.tar.gz
       checksums:
       - sha256:451131a92c55efc5457276807fc0c4c2c2707c9ee96ef90c47d68852d5384c6c
-  - version: 1.7.17
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: use_locales
-      default: 'true'
-    - name: utils
-      default: 'false'
-    artifacts:
-    - url: https://github.com/DaveGamble/cJSON/archive/v1.7.17.tar.gz
-      checksums:
-      - sha256:c91d1eeb7175c50d49f6ba2a25e69b46bd05cffb798382c19bfb202e467ec51c
-  - version: 1.7.18
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: use_locales
-      default: 'true'
-    - name: utils
-      default: 'false'
-    artifacts:
-    - url: https://github.com/DaveGamble/cJSON/archive/v1.7.18.tar.gz
-      checksums:
-      - sha256:3aa806844a03442c00769b83e99970be70fbef03735ff898f4811dd03b9f5ee5
   - version: 1.7.19
     features:
     - name: fPIC
@@ -17986,7 +17912,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.2.3
+  - version: 1.4.1
     dependencies:
     - name: cmake
     - name: lz4
@@ -17997,9 +17923,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/facontidavide/cloudini/archive/refs/tags/1.2.3.tar.gz
+    - url: https://github.com/facontidavide/cloudini/archive/refs/tags/1.4.1.tar.gz
       checksums:
-      - sha256:414e55a63eae2ffa169da16e24c69723c96d4d9d13cc020c175763f14c029209
+      - sha256:0fb83aa71c665fc73fdaaf3eefb2f16282f554f3d326c626437467acb203f59b
   recipe_path: recipes/cloudini/config.yml
   native_url: https://conan.io/center/recipes/cloudini
 - id: conan:clove-unit
@@ -18143,7 +18069,7 @@ packages:
   package_type: application
   versions:
   - version: 3.31.12
-  - version: 4.4.3
+  - version: 4.4.4
   recipe_path: recipes/cmake/config.yml
   native_url: https://conan.io/center/recipes/cmake
 - id: conan:cminpack
@@ -19863,6 +19789,35 @@ packages:
     - url: https://github.com/yhirose/cpp-httplib/archive/v0.56.0.tar.gz
       checksums:
       - sha256:41f214d844e3b9117b734a8cc305b6141c5b47d63009681944e03bc31d92b9ca
+  - version: 0.59.0
+    dependencies:
+    - name: brotli
+    - name: mbedtls
+    - name: openssl
+    - name: wolfssl
+    - name: zlib
+    - name: zstd
+    features:
+    - name: use_macos_keychain_certs
+      default: 'true'
+    - name: use_non_blocking_getaddrinfo
+      default: 'true'
+    - name: with_brotli
+      default: 'false'
+    - name: with_mbedtls
+      default: 'false'
+    - name: with_openssl
+      default: 'false'
+    - name: with_wolfssl
+      default: 'false'
+    - name: with_zlib
+      default: 'false'
+    - name: with_zstd
+      default: 'false'
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/v0.59.0.tar.gz
+      checksums:
+      - sha256:7c8cc7df044abb837d75f7c1e56333305acb40335c3788b8f5fbf5927e63e148
   recipe_path: recipes/cpp-httplib/config.yml
   native_url: https://conan.io/center/recipes/cpp-httplib
 - id: conan:cpp-ipc
@@ -22098,6 +22053,29 @@ packages:
       - sha256:43c076800b19cb9f994ee7e77020e79ea2a01257f221d2f6d80e656f2507069e
   recipe_path: recipes/cr/config.yml
   native_url: https://conan.io/center/recipes/cr
+- id: conan:crashcatch
+  registry: conan
+  name: crashcatch
+  summary: A cross-platform, single-header C++ crash-reporting library for modern C++ applications.
+  licenses:
+  - MIT
+  homepage: https://github.com/keithpotz/CrashCatch
+  repository_url: https://github.com/keithpotz/crashcatch
+  topics:
+  - crash-handler
+  - crash-reporting
+  - header-only
+  - minidump
+  - single-header
+  package_type: header-library
+  versions:
+  - version: 1.6.0
+    artifacts:
+    - url: https://github.com/keithpotz/CrashCatch/archive/refs/tags/v1.6.0.tar.gz
+      checksums:
+      - sha256:601802cb2d99e3d302773520a50f97259c3bd5cff771263a658a12d01bf8d013
+  recipe_path: recipes/crashcatch/config.yml
+  native_url: https://conan.io/center/recipes/crashcatch
 - id: conan:crashpad
   registry: conan
   name: crashpad
@@ -30101,11 +30079,11 @@ packages:
   - utility
   package_type: header-library
   versions:
-  - version: 20.48.1
+  - version: 20.49.0
     artifacts:
-    - url: https://github.com/ETLCPP/etl/archive/refs/tags/20.48.1.tar.gz
+    - url: https://github.com/ETLCPP/etl/archive/refs/tags/20.49.0.tar.gz
       checksums:
-      - sha256:0a6c5ec3c89b2de614b435301931566e4118a7bd7b7909615a11132f39a89ee9
+      - sha256:b3e7a5544795ec8f4a1b2ab46f6e88fdb78be5a07738f008ce11dd37ed14b6e4
   recipe_path: recipes/etl/config.yml
   native_url: https://conan.io/center/recipes/etl
 - id: conan:eudev
@@ -30526,22 +30504,6 @@ packages:
     - url: https://github.com/libexpat/libexpat/releases/download/R_2_7_5/expat-2.7.5.tar.xz
       checksums:
       - sha256:1032dfef4ff17f70464827daa28369b20f6584d108bc36f17ab1676e1edd2f91
-  - version: 2.8.4
-    dependencies:
-    - name: cmake
-    features:
-    - name: char_type
-      default: char
-    - name: fPIC
-      default: 'true'
-    - name: large_size
-      default: 'false'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_4/expat-2.8.4.tar.xz
-      checksums:
-      - sha256:656ae1cc8da3b4ea513bb4e254f33e6243938084c0ec6239da873376b09985a7
   - version: 2.8.5
     dependencies:
     - name: cmake
@@ -30558,6 +30520,22 @@ packages:
     - url: https://github.com/libexpat/libexpat/releases/download/R_2_8_5/expat-2.8.5.tar.xz
       checksums:
       - sha256:1e727b8933ec51a77a9a9d9afcf8e688bce45d907c13e36ab7393fe36e703182
+  - version: 2.9.0
+    dependencies:
+    - name: cmake
+    features:
+    - name: char_type
+      default: char
+    - name: fPIC
+      default: 'true'
+    - name: large_size
+      default: 'false'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/libexpat/libexpat/releases/download/R_2_9_0/expat-2.9.0.tar.xz
+      checksums:
+      - sha256:1e6371862cc31999b368c3b89b49994f0677e1bab5f1b2b85ae3741f5d803051
   recipe_path: recipes/expat/config.yml
   native_url: https://conan.io/center/recipes/expat
 - id: conan:expected-lite
@@ -31360,6 +31338,24 @@ packages:
     - url: https://github.com/spnda/fastgltf/archive/refs/tags/v0.9.0.tar.gz
       checksums:
       - sha256:0bb564e127b14c22f062db50f89381dd2e0a20dbaf4987ca138a4ae8728712f9
+  - version: 0.9.1
+    dependencies:
+    - name: simdjson
+    features:
+    - name: disable_custom_memory_pool
+      default: 'false'
+    - name: enable_small_vector
+      default: 'false'
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: use_64bit_float
+      default: 'false'
+    artifacts:
+    - url: https://github.com/spnda/fastgltf/archive/refs/tags/v0.9.1.tar.gz
+      checksums:
+      - sha256:d8705a496deb2831775baeef5009be36d24bf3d10f8d29ab016e977d0119c872
   recipe_path: recipes/fastgltf/config.yml
   native_url: https://conan.io/center/recipes/fastgltf
 - id: conan:fastnoise2
@@ -43656,16 +43652,6 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.7.0
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/hunspell/hunspell/files/2573619/hunspell-1.7.0.tar.gz
-      checksums:
-      - sha256:57be4e03ae9dd62c3471f667a0d81a14513e314d4d92081292b90435944ff951
   - version: 1.7.2
     features:
     - name: fPIC
@@ -43676,6 +43662,16 @@ packages:
     - url: https://github.com/hunspell/hunspell/archive/refs/tags/v1.7.2.tar.gz
       checksums:
       - sha256:69fa312d3586c988789266eaf7ffc9861d9f6396c31fc930a014d551b59bbd6e
+  - version: 1.7.5
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/hunspell/hunspell/archive/refs/tags/v1.7.5.tar.gz
+      checksums:
+      - sha256:833ee0cb129f7b933def265ea907f9ba4d0cfc5b52d838678eafceeec1adaa53
   recipe_path: recipes/hunspell/config.yml
   native_url: https://conan.io/center/recipes/hunspell
 - id: conan:hwdata
@@ -44054,7 +44050,7 @@ packages:
     with_ffmpeg: 'false'
     with_opencv: 'false'
   versions:
-  - version: 2.4.11
+  - version: 2.5.1
     dependencies:
     - name: cmake
     - name: ffmpeg
@@ -44074,9 +44070,9 @@ packages:
     - name: with_opencv
       default: 'false'
     artifacts:
-    - url: https://github.com/nilstate/icey/archive/refs/tags/2.4.11.tar.gz
+    - url: https://github.com/nilstate/icey/archive/refs/tags/2.5.1.tar.gz
       checksums:
-      - sha256:65a32554a871671db7ff0e4075b50a9f3a899964f25e47b8eb564e1f76b0ce75
+      - sha256:2df5f802db160212de78a1bdfba01c9275b5d5d0ca8f58b00298779d50a5e02a
   recipe_path: recipes/icey/config.yml
   native_url: https://conan.io/center/recipes/icey
 - id: conan:iconfontcppheaders
@@ -61006,7 +61002,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.4.1
+  - version: 1.5.0
     dependencies:
     - name: antlr4-cppruntime
     - name: fmt
@@ -61019,9 +61015,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/QuTech-Delft/libqasm/releases/download/1.4.1/libqasm-1.4.1.tar.gz
+    - url: https://github.com/QuTech-Delft/libqasm/releases/download/1.5.0/libqasm-1.5.0.tar.gz
       checksums:
-      - sha256:ea20d82978d273a2fb2f778a1e088833e67b9010c5dcb4f4937982a0f89ea842
+      - sha256:ba9e7b8b303af019723509abdaa2448c61984b20dfa3853b5230b31bf76a7ec3
   recipe_path: recipes/libqasm/config.yml
   native_url: https://conan.io/center/recipes/libqasm
 - id: conan:libqrencode
@@ -61206,6 +61202,44 @@ packages:
       - sha256:f7284cdfc07ad343a314e4878df0300874b0145d9d331b063b096b482e7e44f4
   recipe_path: recipes/librasterlite2/config.yml
   native_url: https://conan.io/center/recipes/librasterlite2
+- id: conan:librats
+  registry: conan
+  name: librats
+  summary: 'C++17 peer-to-peer networking library: encrypted P2P (Noise XX), DHT/mDNS discovery, NAT traversal (STUN/UPnP/NAT-PMP), GossipSub pub/sub, file transfer...'
+  description: 'C++17 peer-to-peer networking library: encrypted P2P (Noise XX), DHT/mDNS discovery, NAT traversal (STUN/UPnP/NAT-PMP), GossipSub pub/sub, file transfer, optional BitTorrent.'
+  description_format: html
+  licenses:
+  - MIT AND BSD-3-Clause AND BSD-2-Clause AND BSD-1-Clause
+  homepage: https://github.com/librats/librats
+  repository_url: https://github.com/librats/librats
+  topics:
+  - bittorrent
+  - dht
+  - gossipsub
+  - nat-traversal
+  - networking
+  - noise-protocol
+  - p2p
+  package_type: library
+  options:
+  - fPIC
+  - shared
+  default_options:
+    fPIC: 'true'
+    shared: 'false'
+  versions:
+  - version: 2.3.7
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/librats/librats/archive/refs/tags/2.3.7.tar.gz
+      checksums:
+      - sha256:f576c0fb39a48553d52cfc111d9dfbc5e0340fcca2ed0d1d310d711228cd6aa0
+  recipe_path: recipes/librats/config.yml
+  native_url: https://conan.io/center/recipes/librats
 - id: conan:libraw
   registry: conan
   name: libraw
@@ -64145,6 +64179,46 @@ packages:
       - sha256:b47d3ac19d3549e54a05d0019a6c400674da716123858cfdb6d3bdd70a66c702
   recipe_path: recipes/libtirpc/config.yml
   native_url: https://conan.io/center/recipes/libtirpc
+- id: conan:libtomcrypt
+  registry: conan
+  name: libtomcrypt
+  summary: A comprehensive, modular and portable cryptographic toolkit.
+  licenses:
+  - WTFPL
+  homepage: https://www.libtom.net/LibTomCrypt/
+  repository_url: https://github.com/libtom/libtomcrypt
+  topics:
+  - cryptography
+  - encryption
+  - security
+  languages:
+  - C
+  package_type: library
+  dependencies:
+  - libtommath
+  - libtool
+  options:
+  - fPIC
+  - shared
+  default_options:
+    fPIC: 'true'
+    shared: 'false'
+  versions:
+  - version: 1.18.2
+    dependencies:
+    - name: libtommath
+    - name: libtool
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/libtom/libtomcrypt/releases/download/v1.18.2/crypt-1.18.2.tar.xz
+      checksums:
+      - sha256:96ad4c3b8336050993c5bc2cf6c057484f2b0f9f763448151567fbab5e767b84
+  recipe_path: recipes/libtomcrypt/config.yml
+  native_url: https://conan.io/center/recipes/libtomcrypt
 - id: conan:libtommath
   registry: conan
   name: libtommath
@@ -64741,6 +64815,23 @@ packages:
     - url: https://github.com/google/libultrahdr/archive/refs/tags/v1.4.0.tar.gz
       checksums:
       - sha256:e7e1252e2c44d8ed6b99ee0f67a3caf2d8a61c43834b13b1c3cd485574c03ab9
+  - version: 2.0.2
+    dependencies:
+    - name: cmake
+    - name: libjpeg
+    - name: libjpeg-turbo
+    - name: mozjpeg
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_jpeg
+      default: libjpeg
+    artifacts:
+    - url: https://github.com/google/libultrahdr/archive/refs/tags/v2.0.2.tar.gz
+      checksums:
+      - sha256:aa8d193bb887c348c419780511dd03b374f4e07af8812b6d3f80c8537cf1ef2c
   recipe_path: recipes/libultrahdr/config.yml
   native_url: https://conan.io/center/recipes/libultrahdr
 - id: conan:libunifex
@@ -69547,6 +69638,16 @@ packages:
     - url: https://github.com/lvandeve/lodepng/archive/c18b949b71f45e78b1f9a28c5d458bce0da505d6.tar.gz
       checksums:
       - sha256:915d1bf834e67632b87bd18c932e6041ed0ca46a7e3493f5e3290980092cf2d9
+  - version: cci.20260102
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/lvandeve/lodepng/archive/865adac2b8149774401626101ec618e3de45e1d8.tar.gz
+      checksums:
+      - sha256:480265dbc4c46a4258a776abbb9a66addc8adeaea085bb9f540b7d5292b1f534
   recipe_path: recipes/lodepng/config.yml
   native_url: https://conan.io/center/recipes/lodepng
 - id: conan:log.c
@@ -77787,21 +77888,6 @@ packages:
   - serialization
   package_type: header-library
   versions:
-  - version: 0.10.0
-    artifacts:
-    - url: https://github.com/Neargye/nameof/archive/v0.10.0.tar.gz
-      checksums:
-      - sha256:9c4eaaa795ebbdb5d87952b5280d9eb0ca2d1eaab3bac98a296cb1b74f8e673c
-  - version: 0.10.1
-    artifacts:
-    - url: https://github.com/Neargye/nameof/archive/v0.10.1.tar.gz
-      checksums:
-      - sha256:000a55de58fb57cd77043ab9e91a3c91dbea5947b2cb0034cddf869ecf16e86d
-  - version: 0.10.2
-    artifacts:
-    - url: https://github.com/Neargye/nameof/archive/v0.10.2.tar.gz
-      checksums:
-      - sha256:b596fd0804c61781bc8d87d9b8e448e2450debddb52c70ed3e89bf02c6c16f4f
   - version: 0.10.3
     artifacts:
     - url: https://github.com/Neargye/nameof/archive/v0.10.3.tar.gz
@@ -77812,11 +77898,11 @@ packages:
     - url: https://github.com/Neargye/nameof/archive/v0.10.4.tar.gz
       checksums:
       - sha256:b67ed2155a32760067eee0d33c727b9badfd8c12393ebbe3b7ab219b4faa0149
-  - version: 0.9.4
+  - version: 0.10.6
     artifacts:
-    - url: https://github.com/Neargye/nameof/archive/v0.9.4.tar.gz
+    - url: https://github.com/Neargye/nameof/archive/v0.10.6.tar.gz
       checksums:
-      - sha256:d23505104ce94474318976af8ce334e6891ef0b3927dfa1bc64484f701072aae
+      - sha256:4ae9893dc81648a522a489c29f72567309f7d5d0bd8467b0026327262a0daf9b
   recipe_path: recipes/nameof/config.yml
   native_url: https://conan.io/center/recipes/nameof
 - id: conan:nanoarrow
@@ -79510,7 +79596,7 @@ packages:
     fPIC: 'true'
     with_dnssd: mdnsresponder
   versions:
-  - version: cci.20260812
+  - version: cci.20261005
     dependencies:
     - name: avahi
     - name: boost
@@ -79528,9 +79614,9 @@ packages:
     - name: with_dnssd
       default: mdnsresponder
     artifacts:
-    - url: https://github.com/sony/nmos-cpp/archive/a19e3648ecfd620715b0f0fe3f184c6b7f26a996.tar.gz
+    - url: https://github.com/sony/nmos-cpp/archive/b6c83670ba6b37c55b8e4f0b440268016e1b5941.tar.gz
       checksums:
-      - sha256:0dff98d05b23398c7a6b7e278fe8a37eab9347102d0ee3eea16cf17fc1da1e2e
+      - sha256:2b0b170f0de378427bb7f5f591085266bcab8b82175b0bf834eee1143dda1c41
   recipe_path: recipes/nmos-cpp/config.yml
   native_url: https://conan.io/center/recipes/nmos-cpp
 - id: conan:nmslib
@@ -91246,7 +91332,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: '40.0'
+  - version: '58.2'
     features:
     - name: disable_logging
       default: 'false'
@@ -91255,117 +91341,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v40.0.tar.gz
+    - url: https://github.com/google/perfetto/releases/download/v58.2/perfetto-cpp-sdk-src.zip
       checksums:
-      - sha256:bd78f0165e66026c31c8c39221ed2863697a8bba5cd39b12e4b43d0b7f71626f
-  - version: '41.0'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v41.0.tar.gz
-      checksums:
-      - sha256:4c8fe8a609fcc77ca653ec85f387ab6c3a048fcd8df9275a1aa8087984b89db8
-  - version: '42.0'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v42.0.tar.gz
-      checksums:
-      - sha256:1c474a0f16cc2f9da826fd3f9e44ffd77785c433e997cdaf0ee390ae3d64b53e
-  - version: '43.1'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v43.1.tar.gz
-      checksums:
-      - sha256:0f23ba39520c9ec629c48dc36a3a4bb92ed9653ac6694445be22985205a3f4ce
-  - version: '44.0'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v44.0.tar.gz
-      checksums:
-      - sha256:db4162ee6495b1fcc13ba7aca77d67f9fd1766d184743137a04af8b1e3906b9d
-  - version: '45.0'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v45.0.tar.gz
-      checksums:
-      - sha256:dcb815fb54370fa20a657552288016cb66e7a98237c1a1d47e7645a4325ac75e
-  - version: '47.0'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v47.0.tar.gz
-      checksums:
-      - sha256:9bbd38a0f074038bde6ccbcf5f2ff32587eb60faec254932268ecb6f17f18186
-  - version: '48.1'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v48.1.tar.gz
-      checksums:
-      - sha256:8d1c6bf44f1bdb098ab70cd60da3ce6b6e731e4eb21dd52b2527cbdcf85d984d
-  - version: '50.1'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v50.1.tar.gz
-      checksums:
-      - sha256:c2230d04790eb50231a58616a3f1ff6dcf772d8e220333a7711605f99c5c6db9
-  - version: '52.0'
-    features:
-    - name: disable_logging
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/google/perfetto/archive/refs/tags/v52.0.tar.gz
-      checksums:
-      - sha256:1872349439820e241003a9862cb69f4d535926c437d5316b49ce4a820613539d
+      - sha256:e56126ff81f0f914d35fe03c72419d147acf2890f36fbda7d4558fd5b84c4b09
   recipe_path: recipes/perfetto/config.yml
   native_url: https://conan.io/center/recipes/perfetto
 - id: conan:perlinnoise
@@ -93485,6 +93463,11 @@ packages:
     - url: https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz
       checksums:
       - sha256:2cec05cd1bb03af98a8b06a1e22f6e6e1a65b1e2f3816cb3069bb0874825f08c
+  - version: 0.4.12
+    artifacts:
+    - url: https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz
+      checksums:
+      - sha256:c835b640a40ce357e1b83666aabd95edffa24ddddd49b8daff63adb851cdab74
   - version: 0.4.9
     artifacts:
     - url: https://poppler.freedesktop.org/poppler-data-0.4.9.tar.gz
@@ -94399,7 +94382,7 @@ packages:
     - url: https://github.com/protocolbuffers/protobuf/releases/download/v33.5/protobuf-33.5.tar.gz
       checksums:
       - sha256:c6c7c27fadc19d40ab2eaa23ff35debfe01f6494a8345559b9bb285ce4144dd1
-  - version: 7.35.0
+  - version: 7.35.1
     dependencies:
     - name: abseil
     - name: cmake
@@ -94420,9 +94403,33 @@ packages:
     - name: with_zlib
       default: 'true'
     artifacts:
-    - url: https://github.com/protocolbuffers/protobuf/releases/download/v35.0/protobuf-35.0.tar.gz
+    - url: https://github.com/protocolbuffers/protobuf/releases/download/v35.1/protobuf-35.1.tar.gz
       checksums:
-      - sha256:8f907baca4b34a3b4854103ba5811e418fb6e2ff11fe0d8df9e8280b11d79926
+      - sha256:f0b6838e7522a8da96126d487068c959bc624926368f3024ac8fd03abd0a1ac4
+  - version: 7.36.2
+    dependencies:
+    - name: abseil
+    - name: cmake
+    - name: zlib
+    features:
+    - name: debug_suffix
+      default: 'true'
+    - name: fPIC
+      default: 'true'
+    - name: lite
+      default: 'false'
+    - name: shared
+      default: 'false'
+    - name: upb
+      default: 'false'
+    - name: with_rtti
+      default: 'true'
+    - name: with_zlib
+      default: 'true'
+    artifacts:
+    - url: https://github.com/protocolbuffers/protobuf/releases/download/v36.2/protobuf-36.2.tar.gz
+      checksums:
+      - sha256:3d9642a662d10e68ebae5e53f14dcce5105684212d5078f8e0d47d1ab3ae6b64
   recipe_path: recipes/protobuf/config.yml
   native_url: https://conan.io/center/recipes/protobuf
 - id: conan:protobuf-c
@@ -94601,6 +94608,52 @@ packages:
       - sha256:dc615342bcbe51ca885323e51b68b90ed9bb9fa7df0f4419dbfa0297d5e837b7
   recipe_path: recipes/psimd/config.yml
   native_url: https://conan.io/center/recipes/psimd
+- id: conan:psqlodbc
+  registry: conan
+  name: psqlodbc
+  summary: The official PostgreSQL ODBC driver
+  licenses:
+  - LGPL-2.0-or-later
+  homepage: https://odbc.postgresql.org/
+  repository_url: https://github.com/postgresql-interfaces/psqlodbc
+  topics:
+  - database
+  - db
+  - driver
+  - odbc
+  - postgresql
+  package_type: shared-library
+  dependencies:
+  - autoconf
+  - automake
+  - libpq
+  - libtool
+  - odbc
+  versions:
+  - version: 16.00.0005
+    dependencies:
+    - name: autoconf
+    - name: automake
+    - name: libpq
+    - name: libtool
+    - name: odbc
+    artifacts:
+    - url: https://github.com/postgresql-interfaces/psqlodbc/archive/refs/tags/REL-16_00_0005.tar.gz
+      checksums:
+      - sha256:1aa1bd5f9cb26ac1a4729ed2ab48974b29c335bebff6830d66aaac8bcd081ab0
+  - version: 18.00.0004
+    dependencies:
+    - name: autoconf
+    - name: automake
+    - name: libpq
+    - name: libtool
+    - name: odbc
+    artifacts:
+    - url: https://github.com/postgresql-interfaces/psqlodbc/archive/refs/tags/REL-18_00_0004.tar.gz
+      checksums:
+      - sha256:af12354a5960846f5578e168b456cde3c21a11c4788277663bf9266b1de3adda
+  recipe_path: recipes/psqlodbc/config.yml
+  native_url: https://conan.io/center/recipes/psqlodbc
 - id: conan:psyinf-gmtl
   registry: conan
   name: psyinf-gmtl
@@ -99247,7 +99300,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.19.1
+  - version: 1.21.0
     dependencies:
     - name: cmake
     - name: concurrentqueue
@@ -99261,9 +99314,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/reductstore/reduct-cpp/archive/refs/tags/v1.19.1.tar.gz
+    - url: https://github.com/reductstore/reduct-cpp/archive/refs/tags/v1.21.0.tar.gz
       checksums:
-      - sha256:843b6b525dfeb250394fa98609e9046de68d1f26b0bad4a2d2a308a07c97095f
+      - sha256:225500b18968cddcf02d0cbc53060530e5aa0d81b919d205f65d1c2577160045
   recipe_path: recipes/reduct-cpp/config.yml
   native_url: https://conan.io/center/recipes/reduct-cpp
 - id: conan:refl-cpp
@@ -102849,7 +102902,7 @@ packages:
     - url: https://www.libsdl.org/release/SDL2-2.32.10.tar.gz
       checksums:
       - sha256:5f5993c530f084535c65a6879e9b26ad441169b3e25d789d83287040a9ca5165
-  - version: 3.4.14
+  - version: 3.4.16
     dependencies:
     - name: cmake
     - name: dbus
@@ -102939,9 +102992,9 @@ packages:
     - name: xsync
       default: 'true'
     artifacts:
-    - url: https://github.com/libsdl-org/SDL/releases/download/release-3.4.14/SDL3-3.4.14.tar.gz
+    - url: https://github.com/libsdl-org/SDL/releases/download/release-3.4.16/SDL3-3.4.16.tar.gz
       checksums:
-      - sha256:30d4aa2b3037718142b32dffd4e72f917ebb6cc5227150e7bb9c45efb2153aeb
+      - sha256:7322236cd12090c3eb40b9728be4d49c76f66ad17d04369584d4ecad5cf77c68
   recipe_path: recipes/sdl/config.yml
   native_url: https://conan.io/center/recipes/sdl
 - id: conan:sdl_image
@@ -112383,6 +112436,44 @@ packages:
     - url: https://archive.apache.org/dist/thrift/0.24.0/thrift-0.24.0.tar.gz
       checksums:
       - sha256:e0fa5839a4c5c1d631b0931cf2c554ebbfa4e2fee3a9fb3ffd4f82ce4396c6e4
+  - version: 0.25.0
+    dependencies:
+    - name: bison
+    - name: boost
+    - name: cmake
+    - name: flex
+    - name: libevent
+    - name: openssl
+    - name: qt
+    - name: winflexbison
+    - name: zlib
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_c_glib
+      default: 'false'
+    - name: with_cpp
+      default: 'true'
+    - name: with_haskell
+      default: 'false'
+    - name: with_java
+      default: 'false'
+    - name: with_libevent
+      default: 'true'
+    - name: with_openssl
+      default: 'true'
+    - name: with_python
+      default: 'false'
+    - name: with_qt5
+      default: 'false'
+    - name: with_zlib
+      default: 'true'
+    artifacts:
+    - url: https://archive.apache.org/dist/thrift/0.25.0/thrift-0.25.0.tar.gz
+      checksums:
+      - sha256:66da4707214c54c94bac082103dc67adaf9e08925662700f269170a7b534b214
   recipe_path: recipes/thrift/config.yml
   native_url: https://conan.io/center/recipes/thrift
 - id: conan:thrust
@@ -122235,6 +122326,18 @@ packages:
     - url: https://github.com/Cyan4973/xxHash/archive/v0.8.3.tar.gz
       checksums:
       - sha256:aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80
+  - version: 0.8.4
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: utility
+      default: 'true'
+    artifacts:
+    - url: https://github.com/Cyan4973/xxHash/archive/v0.8.4.tar.gz
+      checksums:
+      - sha256:5738270935e7c3d38a79b3adf7c9692566ce7895a25f67de43ad52ab504acd32
   recipe_path: recipes/xxhash/config.yml
   native_url: https://conan.io/center/recipes/xxhash
 - id: conan:xxsds-sdsl-lite

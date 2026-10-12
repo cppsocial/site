@@ -1,5 +1,55 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: bOzUoGjjH8Q85SA_
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: One way of thinking about access specifiers in C++/WinRT implementation types
+  url: https://devblogs.microsoft.com/oldnewthing/20261009-00/?p=112764/
+  published: 2026-10-09 14:00:00+00:00
+  description: Mapping them to concepts from C# and the now-defunct C++/CX. The post One way of thinking about access specifiers in C++/WinRT implementation types appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: fmeageN3erz_PaN9
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: If one anti-malware software is good, does that make two better?
+  url: https://devblogs.microsoft.com/oldnewthing/20261008-00/?p=112762/
+  published: 2026-10-08 14:00:00+00:00
+  description: Not always. The post If one anti-malware software is good, does that make two better? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Tips/Support
+- post_id: SMvaORf3A3BtYbhU
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: How can undefined opcodes ud0 and ud1 have parameters? How undefined were they?
+  url: https://devblogs.microsoft.com/oldnewthing/20261007-00/?p=112759/
+  published: 2026-10-07 14:00:00+00:00
+  description: They weren't defined, not even as undefined. The post How can undefined opcodes <CODE>ud0</CODE> and <CODE>ud1</CODE> have parameters? How undefined were they? appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: mpMEsP2QcllBq6jC
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why does the compiler sometimes use ud2 and sometimes int 3 for code that shouldn’t execute?
+  url: https://devblogs.microsoft.com/oldnewthing/20261006-00/?p=112757/
+  published: 2026-10-06 14:00:00+00:00
+  description: It shouldn't execute, but for different reasons. The post Why does the compiler sometimes use <CODE>ud2</CODE> and sometimes <CODE>int 3</CODE> for code that shouldn’t execute? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: Mgzw8voTlfRxkd5L
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: If somebody tries to hot-patch an already-hot-patched function, how do they avoid conflicts?
+  url: https://devblogs.microsoft.com/oldnewthing/20261005-00/?p=112755/
+  published: 2026-10-05 14:00:00+00:00
+  description: Hot-patching is for Windows, not for you. The post If somebody tries to hot-patch an already-hot-patched function, how do they avoid conflicts? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
 - post_id: nw5ASfYdUtwHu2Zq
   source_id: oldnewthing
   source_title: The Old New Thing

@@ -1,5 +1,12 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: wML-WR1js828c4AM
+  source_id: cpp_stories
+  source_title: C++ Stories
+  title: 'C++26 Contracts: Introduction to Preconditions and Postconditions'
+  url: https://www.cppstories.com/2026/cpp26_contracts/
+  published: 2026-10-11 00:00:00+00:00
+  description: In the article about Standard Library hardening , we looked at checks for invalid Standard Library container access and other broken preconditions. I mentioned that those requirements are expressed in terms of “contracts”. But what about our code? In this post, we’ll explore con…
 - post_id: xoHzJowGnKWmTc1m
   source_id: cpp_stories
   source_title: C++ Stories

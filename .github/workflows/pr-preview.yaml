@@ -96,7 +96,7 @@ jobs:
     permissions:
       contents: read
       issues: write
-      pull-requests: read
+      pull-requests: write
     environment:
       name: netlify-preview
       url: ${{ steps.deploy.outputs.preview-url }}

@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: be7ecfb0fb42c9be9d4e72ec0e585b3d16886387
+revision: 2eedd731d1e7e377bc0eea970b9f0c120ca5f00d
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -82,6 +82,10 @@ packages:
   - wasm
   - windows
   versions:
+  - version: 1.12.0
+    artifacts:
+    - url: https://github.com/ilyabrin/aargh.git
+    - url: https://github.com/ilyabrin/aargh/archive/refs/tags/v1.12.0.tar.gz
   - version: 1.9.0
     artifacts:
     - url: https://github.com/ilyabrin/aargh.git
@@ -3395,6 +3399,10 @@ packages:
     artifacts:
     - url: https://github.com/aurora-opensource/au.git
     - url: https://github.com/aurora-opensource/au/archive/refs/tags/0.6.0.tar.gz
+  - version: 0.6.1
+    artifacts:
+    - url: https://github.com/aurora-opensource/au.git
+    - url: https://github.com/aurora-opensource/au/archive/refs/tags/0.6.1.tar.gz
   recipe_path: packages/a/aurora-au/xmake.lua
 - id: xmake:autoconf
   registry: xmake
@@ -3817,6 +3825,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-auth.git
     - url: https://github.com/awslabs/aws-c-auth/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.0.1
+    upstream_version: 1.0.1
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-auth.git
+    - url: https://github.com/awslabs/aws-c-auth/archive/refs/tags/v1.0.1.tar.gz
   recipe_path: packages/a/aws-c-auth/xmake.lua
 - id: xmake:aws-c-cal
   registry: xmake
@@ -4099,6 +4112,16 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-common.git
     - url: https://github.com/awslabs/aws-c-common/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.0.2
+    upstream_version: 1.0.2
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-common.git
+    - url: https://github.com/awslabs/aws-c-common/archive/refs/tags/v1.0.2.tar.gz
+  - version: v1.0.3
+    upstream_version: 1.0.3
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-common.git
+    - url: https://github.com/awslabs/aws-c-common/archive/refs/tags/v1.0.3.tar.gz
   recipe_path: packages/a/aws-c-common/xmake.lua
 - id: xmake:aws-c-compression
   registry: xmake
@@ -4407,6 +4430,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-http.git
     - url: https://github.com/awslabs/aws-c-http/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.1.0
+    upstream_version: 1.1.0
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-http.git
+    - url: https://github.com/awslabs/aws-c-http/archive/refs/tags/v1.1.0.tar.gz
   recipe_path: packages/a/aws-c-http/xmake.lua
 - id: xmake:aws-c-io
   registry: xmake
@@ -4607,6 +4635,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-io.git
     - url: https://github.com/awslabs/aws-c-io/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.1.0
+    upstream_version: 1.1.0
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-io.git
+    - url: https://github.com/awslabs/aws-c-io/archive/refs/tags/v1.1.0.tar.gz
   recipe_path: packages/a/aws-c-io/xmake.lua
 - id: xmake:aws-c-mqtt
   registry: xmake
@@ -4708,6 +4741,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-mqtt.git
     - url: https://github.com/awslabs/aws-c-mqtt/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.1.1
+    upstream_version: 1.1.1
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-mqtt.git
+    - url: https://github.com/awslabs/aws-c-mqtt/archive/refs/tags/v1.1.1.tar.gz
   recipe_path: packages/a/aws-c-mqtt/xmake.lua
 - id: xmake:aws-c-s3
   registry: xmake
@@ -4901,6 +4939,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-s3.git
     - url: https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.1.1.tar.gz
+  - version: v1.3.1
+    upstream_version: 1.3.1
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-s3.git
+    - url: https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.3.1.tar.gz
   recipe_path: packages/a/aws-c-s3/xmake.lua
 - id: xmake:aws-c-sdkutils
   registry: xmake
@@ -5091,6 +5134,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-checksums.git
     - url: https://github.com/awslabs/aws-checksums/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.0.1
+    upstream_version: 1.0.1
+    artifacts:
+    - url: https://github.com/awslabs/aws-checksums.git
+    - url: https://github.com/awslabs/aws-checksums/archive/refs/tags/v1.0.1.tar.gz
   recipe_path: packages/a/aws-checksums/xmake.lua
 - id: xmake:aws-crt-cpp
   registry: xmake
@@ -5268,6 +5316,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-crt-cpp.git
     - url: https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.43.5.tar.gz
+  - version: v0.43.9
+    upstream_version: 0.43.9
+    artifacts:
+    - url: https://github.com/awslabs/aws-crt-cpp.git
+    - url: https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.43.9.tar.gz
   recipe_path: packages/a/aws-crt-cpp/xmake.lua
 - id: xmake:aws-lc
   registry: xmake
@@ -8219,6 +8272,10 @@ packages:
     artifacts:
     - url: https://github.com/randombit/botan.git
     - url: https://github.com/randombit/botan/archive/refs/tags/3.12.0.tar.gz
+  - version: 3.13.0
+    artifacts:
+    - url: https://github.com/randombit/botan.git
+    - url: https://github.com/randombit/botan/archive/refs/tags/3.13.0.tar.gz
   - version: 3.4.0
     artifacts:
     - url: https://github.com/randombit/botan.git
@@ -15474,6 +15531,12 @@ packages:
     - url: https://github.com/CrowCpp/Crow/archive/refs/tags/v1.3.2.zip
       checksums:
       - sha256:adb53d6b16aa3184df7f981688881baa809fe6e5058da335819b4a67428cb69b
+  - version: v1.3.5
+    upstream_version: 1.3.5
+    artifacts:
+    - url: https://github.com/CrowCpp/Crow/archive/refs/tags/v1.3.5.zip
+      checksums:
+      - sha256:0d21fd426876f21f9098f5d90b8773d2e0b7f98cb686c83bcd626ee1d25aa489
   recipe_path: packages/c/crow/xmake.lua
 - id: xmake:crstl
   registry: xmake
@@ -16075,7 +16138,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x5607494603f0'
+    default: 'table: 0x558ab53cb020'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -16145,6 +16208,11 @@ packages:
     artifacts:
     - url: https://github.com/NVIDIA/cuda-samples.git
     - url: https://github.com/NVIDIA/cuda-samples/archive/refs/tags/v13.2.tar.gz
+  - version: v13.4
+    upstream_version: '13.4'
+    artifacts:
+    - url: https://github.com/NVIDIA/cuda-samples.git
+    - url: https://github.com/NVIDIA/cuda-samples/archive/refs/tags/v13.4.tar.gz
   recipe_path: packages/c/cuda-samples/xmake.lua
 - id: xmake:cumem
   registry: xmake
@@ -16397,6 +16465,26 @@ packages:
     artifacts:
     - url: https://github.com/NVIDIA/cutlass.git
     - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.2.1.tar.gz
+  - version: v4.2.2
+    upstream_version: 4.2.2
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.2.2.tar.gz
+  - version: v4.3.0
+    upstream_version: 4.3.0
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.3.0.tar.gz
+  - version: v4.3.1
+    upstream_version: 4.3.1
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.3.1.tar.gz
+  - version: v4.3.2
+    upstream_version: 4.3.2
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.3.2.tar.gz
   - version: v4.3.3
     upstream_version: 4.3.3
     artifacts:
@@ -16412,6 +16500,16 @@ packages:
     artifacts:
     - url: https://github.com/NVIDIA/cutlass.git
     - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.3.5.tar.gz
+  - version: v4.3.6
+    upstream_version: 4.3.6
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.3.6.tar.gz
+  - version: v4.4.0
+    upstream_version: 4.4.0
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.4.0.tar.gz
   - version: v4.4.1
     upstream_version: 4.4.1
     artifacts:
@@ -16422,16 +16520,66 @@ packages:
     artifacts:
     - url: https://github.com/NVIDIA/cutlass.git
     - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.4.2.tar.gz
+  - version: v4.4.3
+    upstream_version: 4.4.3
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.4.3.tar.gz
   - version: v4.5.0
     upstream_version: 4.5.0
     artifacts:
     - url: https://github.com/NVIDIA/cutlass.git
     - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.5.0.tar.gz
+  - version: v4.5.1
+    upstream_version: 4.5.1
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.5.1.tar.gz
   - version: v4.5.2
     upstream_version: 4.5.2
     artifacts:
     - url: https://github.com/NVIDIA/cutlass.git
     - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.5.2.tar.gz
+  - version: v4.5.3
+    upstream_version: 4.5.3
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.5.3.tar.gz
+  - version: v4.6.0
+    upstream_version: 4.6.0
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.6.0.tar.gz
+  - version: v4.6.1
+    upstream_version: 4.6.1
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.6.1.tar.gz
+  - version: v4.6.2
+    upstream_version: 4.6.2
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.6.2.tar.gz
+  - version: v4.6.3
+    upstream_version: 4.6.3
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.6.3.tar.gz
+  - version: v4.7.0
+    upstream_version: 4.7.0
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.7.0.tar.gz
+  - version: v4.7.1
+    upstream_version: 4.7.1
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.7.1.tar.gz
+  - version: v4.8.0
+    upstream_version: 4.8.0
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.8.0.tar.gz
   recipe_path: packages/c/cutlass/xmake.lua
 - id: xmake:cwt-cucumber
   registry: xmake
@@ -23823,7 +23971,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x560729cc0d50'
+    default: 'table: 0x558a98a8ac50'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -23833,7 +23981,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x560729cc23b0'
+    default: 'table: 0x558a98a64b20'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -29710,7 +29858,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x56074246ec30'
+    default: 'table: 0x558ab6857bb0'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -32154,7 +32302,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x560732d67220'
+    default: 'table: 0x558a9a586f90'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -32685,6 +32833,42 @@ packages:
     - url: https://github.com/castano/icbc.git
     - url: https://github.com/castano/icbc/archive/refs/tags/1.05.tar.gz
   recipe_path: packages/i/icbc/xmake.lua
+- id: xmake:icey
+  registry: xmake
+  name: icey
+  summary: C++20 media stack for real-time video, signalling, TURN, and media servers
+  licenses:
+  - LGPL-2.1-or-later
+  homepage: https://0state.com/icey/
+  repository_url: https://github.com/nilstate/icey
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  - libuv
+  - llhttp
+  - minizip
+  - nlohmann_json
+  - openssl3
+  - zlib
+  versions:
+  - version: 2.5.1
+    artifacts:
+    - url: https://github.com/nilstate/icey/archive/refs/tags/2.5.1.tar.gz
+      checksums:
+      - sha256:2df5f802db160212de78a1bdfba01c9275b5d5d0ca8f58b00298779d50a5e02a
+  recipe_path: packages/i/icey/xmake.lua
 - id: xmake:icu4c
   registry: xmake
   name: icu4c
@@ -37666,6 +37850,40 @@ packages:
     artifacts:
     - url: https://github.com/modm-io/lbuild.git
   recipe_path: packages/l/lbuild/xmake.lua
+- id: xmake:lcc-license-generator
+  registry: xmake
+  name: lcc-license-generator
+  summary: License generator for open-license-manager
+  licenses:
+  - BSD-3-Clause
+  homepage: https://github.com/open-license-manager/lcc-license-generator
+  repository_url: https://github.com/open-license-manager/lcc-license-generator
+  package_type: binary
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - boost
+  - cmake
+  features:
+  - name: openssl
+    description: Use openssl
+    default: 'false'
+  versions:
+  - version: 2021.05.27
+    artifacts:
+    - url: https://github.com/open-license-manager/lcc-license-generator.git
+  recipe_path: packages/l/lcc-license-generator/xmake.lua
 - id: xmake:lcms
   registry: xmake
   name: lcms
@@ -37812,6 +38030,11 @@ packages:
     artifacts:
     - url: https://github.com/smuellerDD/leancrypto.git
     - url: https://github.com/smuellerDD/leancrypto/archive/refs/tags/v1.8.0.tar.gz
+  - version: v1.9.1
+    upstream_version: 1.9.1
+    artifacts:
+    - url: https://github.com/smuellerDD/leancrypto.git
+    - url: https://github.com/smuellerDD/leancrypto/archive/refs/tags/v1.9.1.tar.gz
   recipe_path: packages/l/leancrypto/xmake.lua
 - id: xmake:lemon
   registry: xmake
@@ -39688,6 +39911,11 @@ packages:
     artifacts:
     - url: https://github.com/paullouisageneau/libdatachannel.git
     - url: https://github.com/paullouisageneau/libdatachannel/archive/refs/tags/v0.24.5.tar.gz
+  - version: v0.24.6
+    upstream_version: 0.24.6
+    artifacts:
+    - url: https://github.com/paullouisageneau/libdatachannel.git
+    - url: https://github.com/paullouisageneau/libdatachannel/archive/refs/tags/v0.24.6.tar.gz
   recipe_path: packages/l/libdatachannel/xmake.lua
 - id: xmake:libdatrie
   registry: xmake
@@ -45526,6 +45754,10 @@ packages:
     artifacts:
     - url: https://github.com/LibRaw/LibRaw.git
     - url: https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.1.tar.gz
+  - version: 0.22.2
+    artifacts:
+    - url: https://github.com/LibRaw/LibRaw.git
+    - url: https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.2.tar.gz
   recipe_path: packages/l/libraw/xmake.lua
 - id: xmake:librdkafka
   registry: xmake
@@ -48373,31 +48605,31 @@ packages:
     artifacts:
     - url: git://git.savannah.gnu.org/libtool.git
     - url: http://ftpmirror.gnu.org/libtool/libtool-2.4.5.tar.gz
-    - url: https://distfiles.gentoo.org/distfiles/78/libtool-2.4.5.tar.xz
+    - url: https://alpha.gnu.org/gnu/libtool/libtool-2.4.5.tar.xz
     - url: https://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.4.5.tar.gz
   - version: 2.4.6
     artifacts:
     - url: git://git.savannah.gnu.org/libtool.git
     - url: http://ftpmirror.gnu.org/libtool/libtool-2.4.6.tar.gz
-    - url: https://distfiles.gentoo.org/distfiles/78/libtool-2.4.6.tar.xz
+    - url: https://alpha.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz
     - url: https://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.4.6.tar.gz
   - version: 2.4.7
     artifacts:
     - url: git://git.savannah.gnu.org/libtool.git
     - url: http://ftpmirror.gnu.org/libtool/libtool-2.4.7.tar.gz
-    - url: https://distfiles.gentoo.org/distfiles/78/libtool-2.4.7.tar.xz
+    - url: https://alpha.gnu.org/gnu/libtool/libtool-2.4.7.tar.xz
     - url: https://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.4.7.tar.gz
   - version: 2.5.4
     artifacts:
     - url: git://git.savannah.gnu.org/libtool.git
     - url: http://ftpmirror.gnu.org/libtool/libtool-2.5.4.tar.gz
-    - url: https://distfiles.gentoo.org/distfiles/78/libtool-2.5.4.tar.xz
+    - url: https://alpha.gnu.org/gnu/libtool/libtool-2.5.4.tar.xz
     - url: https://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.5.4.tar.gz
   - version: 2.6.0
     artifacts:
     - url: git://git.savannah.gnu.org/libtool.git
     - url: http://ftpmirror.gnu.org/libtool/libtool-2.6.0.tar.gz
-    - url: https://distfiles.gentoo.org/distfiles/78/libtool-2.6.0.tar.xz
+    - url: https://alpha.gnu.org/gnu/libtool/libtool-2.6.0.tar.xz
     - url: https://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.6.0.tar.gz
   recipe_path: packages/l/libtool/xmake.lua
 - id: xmake:libtorch
@@ -51734,6 +51966,44 @@ packages:
     - url: https://github.com/ctabin/libzippp.git
     - url: https://github.com/ctabin/libzippp/archive/refs/tags/libzippp-v7.1-1.10.1.tar.gz
   recipe_path: packages/l/libzippp/xmake.lua
+- id: xmake:licensecc
+  registry: xmake
+  name: licensecc
+  summary: Software licensing, copy protection in C++. It has few dependencies and it's cross-platform.
+  licenses:
+  - BSD-3-Clause
+  homepage: http://open-license-manager.github.io/licensecc/
+  repository_url: https://github.com/open-license-manager/licensecc
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  - lcc-license-generator
+  features:
+  - name: openssl
+    description: Use openssl
+    default: 'false'
+  - name: shared
+    description: Build shared library.
+    default: 'false'
+  versions:
+  - version: v2.0.0
+    upstream_version: 2.0.0
+    artifacts:
+    - url: https://github.com/open-license-manager/licensecc.git
+    - url: https://github.com/open-license-manager/licensecc/archive/refs/tags/v2.0.0.tar.gz
+  recipe_path: packages/l/licensecc/xmake.lua
 - id: xmake:lief
   registry: xmake
   name: lief
@@ -53221,6 +53491,11 @@ packages:
     artifacts:
     - url: https://github.com/litespeedtech/ls-qpack.git
     - url: https://github.com/litespeedtech/ls-qpack/archive/refs/tags/v2.6.5.tar.gz
+  - version: v2.7.0
+    upstream_version: 2.7.0
+    artifacts:
+    - url: https://github.com/litespeedtech/ls-qpack.git
+    - url: https://github.com/litespeedtech/ls-qpack/archive/refs/tags/v2.7.0.tar.gz
   recipe_path: packages/l/ls-qpack/xmake.lua
 - id: xmake:lsp-framework
   registry: xmake
@@ -53484,6 +53759,11 @@ packages:
     artifacts:
     - url: https://github.com/lua/lua.git
     - url: https://www.lua.org/ftp/lua-5.5.0.tar.gz
+  - version: v5.5.1
+    upstream_version: 5.5.1
+    artifacts:
+    - url: https://github.com/lua/lua.git
+    - url: https://www.lua.org/ftp/lua-5.5.1.tar.gz
   recipe_path: packages/l/lua/xmake.lua
 - id: xmake:lua-format
   registry: xmake
@@ -53970,6 +54250,11 @@ packages:
     artifacts:
     - url: https://github.com/lvgl/lvgl.git
     - url: https://github.com/lvgl/lvgl/archive/refs/tags/v9.5.0.tar.gz
+  - version: v9.6.0
+    upstream_version: 9.6.0
+    artifacts:
+    - url: https://github.com/lvgl/lvgl.git
+    - url: https://github.com/lvgl/lvgl/archive/refs/tags/v9.6.0.tar.gz
   recipe_path: packages/l/lvgl/xmake.lua
 - id: xmake:lwlog
   registry: xmake
@@ -57692,10 +57977,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x56073b606d60'
+    default: 'table: 0x558ab69a60d0'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x56073b6077e0'
+    default: 'table: 0x558ab69a6b50'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -58262,6 +58547,38 @@ packages:
     artifacts:
     - url: https://github.com/mandreyel/mio.git
   recipe_path: packages/m/mio/xmake.lua
+- id: xmake:mir
+  registry: xmake
+  name: mir
+  summary: A lightweight JIT compiler framework based on a medium-level internal representation
+  licenses:
+  - MIT
+  homepage: https://github.com/vnmakarov/mir
+  repository_url: https://github.com/vnmakarov/mir
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - curl
+  - libcurl
+  versions:
+  - version: v1.0.0
+    upstream_version: 1.0.0
+    artifacts:
+    - url: https://github.com/vnmakarov/mir/archive/refs/tags/v1.0.0.zip
+      checksums:
+      - sha256:08d27e8bd46ddded8567cb17dc384f817044ca0058285ecda22f8ce99ebd80ba
+  recipe_path: packages/m/mir/xmake.lua
 - id: xmake:mjson
   registry: xmake
   name: mjson
@@ -61405,6 +61722,38 @@ packages:
       checksums:
       - sha256:d499fcddbb750040f2e55e0fc700cb1681a45ff3751ec25f45835c787cb2dca2
   recipe_path: packages/n/ndarray/xmake.lua
+- id: xmake:ndicapi
+  registry: xmake
+  name: ndicapi
+  summary: A common C API for communicating with NDI Polaris and Aurora devices.
+  licenses:
+  - MIT
+  homepage: https://github.com/PlusToolkit/ndicapi
+  repository_url: https://github.com/plustoolkit/ndicapi
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  features:
+  - name: python
+    description: Build python.
+    default: 'false'
+  versions:
+  - version: 2026.09.06
+    artifacts:
+    - url: https://github.com/PlusToolkit/ndicapi.git
+  recipe_path: packages/n/ndicapi/xmake.lua
 - id: xmake:ndk
   registry: xmake
   name: ndk
@@ -67363,7 +67712,62 @@ packages:
     - url: https://github.com/openssl/openssl/archive/refs/tags/openssl-3.6.3.zip
       checksums:
       - sha256:e24124cb19d26f2045f53d3ee94871288136242931d001c71646c2403cfedee3
+  - version: 3.6.5
+    artifacts:
+    - url: https://github.com/openssl/openssl/archive/refs/tags/openssl-3.6.5.zip
+      checksums:
+      - sha256:e9773ec47f3bcfa4c3ab0a333d777bcb880f7ce9b5b488c954222dfd26dd9659
   recipe_path: packages/o/openssl3/xmake.lua
+- id: xmake:openssl4
+  registry: xmake
+  name: openssl4
+  summary: A robust, commercial-grade, and full-featured toolkit for TLS and SSL.
+  licenses:
+  - Apache-2.0
+  homepage: https://www.openssl.org/
+  repository_url: https://github.com/openssl/openssl
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  features:
+  - name: extra_build_opts
+    description: Additional comma-separated OpenSSL Configure options.
+  - name: fips
+    description: Build the FIPS provider (not a FIPS certification).
+    default: 'true'
+  - name: jom
+    description: Try using jom to compile in parallel.
+    default: 'true'
+  - name: md2
+    description: Enable MD2 support.
+    default: 'false'
+  - name: multi-threading
+    description: Enable multi-threading support.
+    default: 'true'
+  - name: openssldir
+    description: OpenSSL configuration directory (defaults to <prefix>/ssl).
+  - name: shared
+    description: Build shared library.
+    default: 'false'
+  - name: target
+    description: Override the built-in OpenSSL Configure target.
+  versions:
+  - version: 4.0.3
+    artifacts:
+    - url: https://github.com/openssl/openssl/archive/refs/tags/openssl-4.0.3.zip
+      checksums:
+      - sha256:e24c35ad40ce1affe615c3c41f0e1e3054435f554578579f7f5a9fe1cb166685
+  recipe_path: packages/o/openssl4/xmake.lua
 - id: xmake:opensubdiv
   registry: xmake
   name: opensubdiv
@@ -80805,9 +81209,6 @@ packages:
   - name: gfx
     description: Enable gfx targets
     default: 'false'
-  - name: shared
-    description: Build shared library
-    default: 'true'
   - name: slang_glslang
     description: Enable glslang dependency and slang-glslang wrapper target
     default: 'false'
@@ -84564,6 +84965,11 @@ packages:
     - url: https://github.com/AkarinATCP/stv/archive/refs/tags/v2.2.0.tar.gz
       checksums:
       - sha256:5beed1ca3fa388266ad26130175b31811c8e4eb6ee7e1613dc7e761291e77da5
+  - version: 3.0.0
+    artifacts:
+    - url: https://github.com/AkarinATCP/stv/archive/refs/tags/v3.0.0.tar.gz
+      checksums:
+      - sha256:ffeaade9bdf9138909f8f7351df6f4dd25b8b966f801ef240eff1257b1d70cd8
   recipe_path: packages/s/stv/xmake.lua
 - id: xmake:stx
   registry: xmake
@@ -85861,6 +86267,13 @@ packages:
     - url: https://github.com/tboox/tbox.git
     - url: https://github.com/tboox/tbox/archive/v1.8.1.tar.gz
     - url: https://gitlab.com/tboox/tbox.git
+  - version: v1.8.2
+    upstream_version: 1.8.2
+    artifacts:
+    - url: https://gitee.com/tboox/tbox.git
+    - url: https://github.com/tboox/tbox.git
+    - url: https://github.com/tboox/tbox/archive/v1.8.2.tar.gz
+    - url: https://gitlab.com/tboox/tbox.git
   recipe_path: packages/t/tbox/xmake.lua
 - id: xmake:tcb-span
   registry: xmake
@@ -86505,7 +86918,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x56072b10e5f0'
+    default: 'table: 0x558a9a156e50'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -86920,6 +87333,35 @@ packages:
     - url: https://github.com/tiltedphoques/TiltedCore.git
     - url: https://github.com/tiltedphoques/TiltedCore/archive/v0.2.9.zip
   recipe_path: packages/t/tiltedcore/xmake.lua
+- id: xmake:timeh
+  registry: xmake
+  name: timeh
+  summary: A simple terminal time utility
+  licenses:
+  - MIT
+  homepage: https://github.com/Monjaris/timeh
+  repository_url: https://github.com/monjaris/timeh
+  package_type: binary
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: 0.5.0
+    artifacts:
+    - url: https://github.com/Monjaris/timeh/archive/refs/tags/v0.5.0.tar.gz
+      checksums:
+      - sha256:f146f4b17ff83ef72ca7ea6958fda016a660e38732f9f9e452f176a23c233d85
+  recipe_path: packages/t/timeh/xmake.lua
 - id: xmake:tinjector
   registry: xmake
   name: tinjector
@@ -87359,6 +87801,11 @@ packages:
     artifacts:
     - url: https://github.com/syoyo/tinyexr.git
     - url: https://github.com/syoyo/tinyexr/archive/refs/tags/v3.0.0.tar.gz
+  - version: v3.2.0
+    upstream_version: 3.2.0
+    artifacts:
+    - url: https://github.com/syoyo/tinyexr.git
+    - url: https://github.com/syoyo/tinyexr/archive/refs/tags/v3.2.0.tar.gz
   recipe_path: packages/t/tinyexr/xmake.lua
 - id: xmake:tinyfiledialogs
   registry: xmake
@@ -88680,6 +89127,11 @@ packages:
     artifacts:
     - url: https://github.com/an-tao/trantor.git
     - url: https://github.com/an-tao/trantor/archive/refs/tags/v1.5.28.tar.gz
+  - version: v1.5.29
+    upstream_version: 1.5.29
+    artifacts:
+    - url: https://github.com/an-tao/trantor.git
+    - url: https://github.com/an-tao/trantor/archive/refs/tags/v1.5.29.tar.gz
   - version: v1.5.5
     upstream_version: 1.5.5
     artifacts:
@@ -89482,7 +89934,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x560736975590'
+    default: 'table: 0x558aae6b2e20'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -91024,6 +91476,35 @@ packages:
     - url: https://sourceware.org/git/valgrind.git
     - url: https://sourceware.org/pub/valgrind/valgrind-3.27.0.tar.bz2
   recipe_path: packages/v/valgrind/xmake.lua
+- id: xmake:valgrind-macos
+  registry: xmake
+  name: valgrind-macos
+  summary: A valgrind mirror with latest macOS support
+  licenses:
+  - GPL-3.0
+  homepage: https://github.com/LouisBrunner/valgrind-macos
+  repository_url: https://github.com/louisbrunner/valgrind-macos
+  package_type: binary
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - autotools
+  versions:
+  - version: 2026.09.09
+    artifacts:
+    - url: https://github.com/LouisBrunner/valgrind-macos.git
+  recipe_path: packages/v/valgrind-macos/xmake.lua
 - id: xmake:valijson
   registry: xmake
   name: valijson
@@ -93110,7 +93591,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x56074f689460'
+    default: 'table: 0x558abe781d60'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -93601,6 +94082,10 @@ packages:
     artifacts:
     - url: https://fossies.org/linux/misc/wayland-1.25.0.tar.xz
     - url: https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.25.0/downloads/wayland-1.25.0.tar.xz
+  - version: 1.26.0
+    artifacts:
+    - url: https://fossies.org/linux/misc/wayland-1.26.0.tar.xz
+    - url: https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.26.0/downloads/wayland-1.26.0.tar.xz
   recipe_path: packages/w/wayland/xmake.lua
 - id: xmake:wayland-protocols
   registry: xmake
@@ -95715,6 +96200,35 @@ packages:
       checksums:
       - sha256:dcecaaa535802fd57c84cceeff50c64efe7f2326bf752e16d2b77945649c8cd7
   recipe_path: packages/x/xcb-util-wm/xmake.lua
+- id: xmake:xclang
+  registry: xmake
+  name: xclang
+  summary: A relocatable Clang toolchain with bundled Linux and Windows sysroots
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/clice-io/xclang
+  repository_url: https://github.com/clice-io/xclang
+  package_type: toolchain
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: 23.1.2+10
+    artifacts:
+    - url: https://github.com/clice-io/xclang/releases/download/23.1.2.10/xclang-23.1.2.10-x86_64-unknown-linux-gnu.tar.xz
+      checksums:
+      - sha256:ea6394410c102a3cbd2d0afc2d59935404c0a51298bc944ebd25490e6cc0d568
+  recipe_path: packages/x/xclang/xmake.lua
 - id: xmake:xdl
   registry: xmake
   name: xdl
@@ -97247,6 +97761,35 @@ packages:
     - url: https://github.com/fantasy-peak/yaml_cpp_struct.git
     - url: https://github.com/fantasy-peak/yaml_cpp_struct/archive/refs/tags/v1.0.4.tar.gz
   recipe_path: packages/y/yaml_cpp_struct/xmake.lua
+- id: xmake:yara
+  registry: xmake
+  name: yara
+  summary: The pattern matching swiss knife
+  licenses:
+  - BSD-3-Clause
+  homepage: https://virustotal.github.io/yara/
+  repository_url: https://github.com/virustotal/yara
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - openssl3
+  versions:
+  - version: 4.5.8
+    artifacts:
+    - url: https://github.com/VirusTotal/yara.git
+    - url: https://github.com/VirusTotal/yara/archive/refs/tags/v4.5.8.tar.gz
+  recipe_path: packages/y/yara/xmake.lua
 - id: xmake:yas
   registry: xmake
   name: yas
@@ -97760,7 +98303,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x560734ed5900'
+    default: 'table: 0x558aa4796dd0'
   versions:
   - version: 0.23.93
     artifacts:

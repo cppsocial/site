@@ -3,6 +3,7 @@ type: card_group
 card_type: book_card
 id: books
 cards:
+  - { isbn: "9781617294693" }
   - {
       isbn: "9780321623218",
       cover_url: "https://images-na.ssl-images-amazon.com/images/P/0321623215.01.L.jpg",

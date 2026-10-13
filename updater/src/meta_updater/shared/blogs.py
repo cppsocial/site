@@ -715,7 +715,7 @@ def metadata(source: dict[str, Any], timeout: float) -> dict[str, Any]:
             or (title_description[1] if len(title_description) > 1 else ""),
             500,
         ),
-        "keywords": list(dict.fromkeys(sanitize_unicode(value) for value in keywords)),
+        "keywords": sorted(set(sanitize_unicode(value) for value in keywords)),
         "avatar_url": page_avatar(page, source["website_url"]),
         "source_url": source["website_url"],
     }
@@ -727,5 +727,7 @@ def normalize_post(item: Any) -> dict[str, Any]:
     for field_name in ("source_title", "title", "description"):
         if field_name in data:
             data[field_name] = sanitize_unicode(data[field_name])
-    data["tags"] = [sanitize_unicode(value) for value in data.get("tags", [])]
+    data["tags"] = sorted(
+        set(sanitize_unicode(value) for value in data.get("tags", []))
+    )
     return data

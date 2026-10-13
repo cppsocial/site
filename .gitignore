@@ -19,3 +19,4 @@ build*/
 **/__pycache__/
 schemas/**/*.json
 node_modules
+.coverage

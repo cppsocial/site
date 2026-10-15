@@ -11,5 +11,6 @@ This document contains a list of maintainers of this repository. We use the role
 | Jan Schultke | [Eisenwave](https://github.com/eisenwave) | janschultke@gmail.com | Curator |
 | Daniel Hannon | [notdanhan](https://github.com/notdanhan) | danhan@live.ie | Curator |
 | Patrick Roberts | [patrickroberts](https://github.com/patrickroberts) | cpp@patrickroberts.dev | Curator |
+| André Polomat | [lapinozz](https://github.com/lapinozz) | contact@lapinozz.com | Curator |
 
 ## Emeritus

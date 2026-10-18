@@ -273,7 +273,8 @@ def _book_records(config: SiteConfig) -> list[dict[str, Any]]:
 
 
 def _book_published_date(label: str) -> str:
-    value = re.sub(r"(?<=\d)(?:st|nd|rd|th)\b", "", label.strip(), flags=re.IGNORECASE)
+    value = re.sub(r"(?<=\d)(?:st|nd|rd|th)\b", "",
+                   label.strip(), flags=re.IGNORECASE)
     for pattern in (
         "%Y-%m-%d",
         "%B %d, %Y",
@@ -285,7 +286,8 @@ def _book_published_date(label: str) -> str:
     ):
         try:
             # The source describes a calendar date, not an instant or timezone.
-            return datetime.strptime(value, pattern).date().isoformat()  # noqa: DTZ007
+            # RUF100 gets flagged on CI but realistically it should flag DTZ007
+            return datetime.strptime(value, pattern).date().isoformat()  # noqa: RUF100 DTZ007
         except ValueError:
             pass
     year = next(iter(re.findall(r"\b(?:1[0-9]{3}|20[0-9]{2})\b", value)), "")
@@ -293,7 +295,8 @@ def _book_published_date(label: str) -> str:
 
 
 def _apply_corrections(catalogs: dict[str, list[dict]], values: list[dict]) -> None:
-    by_id = {item["id"]: item for catalog in catalogs.values() for item in catalog}
+    by_id = {item["id"]: item for catalog in catalogs.values()
+             for item in catalog}
     for correction in values:
         target = by_id.get(correction.get("package"))
         if target is None:
@@ -315,8 +318,10 @@ def _apply_corrections(catalogs: dict[str, list[dict]], values: list[dict]) -> N
             target.pop(field, None)
         elif operation == "add":
             additions = correction.get("value")
-            additions = additions if isinstance(additions, list) else [additions]
-            target[field] = list(dict.fromkeys([*target.get(field, []), *additions]))
+            additions = additions if isinstance(
+                additions, list) else [additions]
+            target[field] = list(dict.fromkeys(
+                [*target.get(field, []), *additions]))
         else:
             target[field] = correction.get("value")
 
@@ -342,7 +347,8 @@ def _package_data(config: SiteConfig) -> tuple[list[dict], list[dict], list[str]
             and not item.get("id", "").startswith(ignored_prefixes)
         ]
     _apply_corrections(catalogs, overrides.get("corrections", []))
-    by_id = {item["id"]: item for values in catalogs.values() for item in values}
+    by_id = {item["id"]: item for values in catalogs.values()
+             for item in values}
     entities = _load_yaml(root / "entities.yaml", {}).get("entities", [])
     master = []
     for entity in entities:
@@ -353,7 +359,8 @@ def _package_data(config: SiteConfig) -> tuple[list[dict], list[dict], list[str]
         names = Counter(item["name"] for item in variants)
         name = entity.get("name") or min(
             names,
-            key=lambda value: (-names[value], len(value), value.casefold(), value),
+            key=lambda value: (-names[value], len(value),
+                               value.casefold(), value),
         )
         aliases = entity.get("aliases")
         if aliases is None:
@@ -369,7 +376,8 @@ def _package_data(config: SiteConfig) -> tuple[list[dict], list[dict], list[str]
                 ],
             }
         )
-    summaries, details = browser_records(master, catalogs, overrides.get("preferences"))
+    summaries, details = browser_records(
+        master, catalogs, overrides.get("preferences"))
     return summaries, details, sorted(catalogs)
 
 
@@ -393,10 +401,12 @@ def _tracked_update(
     update: Callable[[], bool],
 ) -> PluginResult:
     result = PluginResult()
-    before = {path for path in directory.iterdir()} if directory.is_dir() else set()
+    before = {path for path in directory.iterdir(
+    )} if directory.is_dir() else set()
     if not update():
         return result
-    after = {path for path in directory.iterdir()} if directory.is_dir() else set()
+    after = {path for path in directory.iterdir(
+    )} if directory.is_dir() else set()
     result.generated.extend(PluginFile(source, path) for path in sorted(after))
     result.removed.extend(sorted(before - after))
     return result
@@ -424,7 +434,8 @@ def _update_search_collection(
         normalized[record_id] = record
 
     snapshot = json.dumps(
-        {"records": sorted(normalized.values(), key=lambda value: value["id"])},
+        {"records": sorted(normalized.values(),
+                           key=lambda value: value["id"])},
         ensure_ascii=False,
         separators=(",", ":"),
         sort_keys=True,
@@ -642,7 +653,8 @@ def _build_data(config: SiteConfig) -> tuple[PluginResult, bool]:
         ]
         graph_path = output / "package-graph.json"
         if _write_json(graph_path, graph):
-            result.generated.append(PluginFile(config.data / "packages", graph_path))
+            result.generated.append(PluginFile(
+                config.data / "packages", graph_path))
         details_by_manager = {manager: [] for manager in managers}
         for detail in details:
             details_by_manager[detail["id"].split(":", 1)[0]].append(detail)
@@ -666,12 +678,14 @@ def _build_data(config: SiteConfig) -> tuple[PluginResult, bool]:
         # releases the GIL. Each collection writes to a distinct directory, so
         # generate them concurrently while retaining deterministic contents.
         with ThreadPoolExecutor(max_workers=len(package_jobs)) as executor:
-            updates = executor.map(lambda job: _tracked_update(*job), package_jobs)
+            updates = executor.map(
+                lambda job: _tracked_update(*job), package_jobs)
             for update_result in updates:
                 result.extend(update_result)
     except Exception as error:  # noqa: BLE001 - report plugin errors without aborting site
         successful = False
-        print(f"error: package browser catalog build failed: {error}", file=sys.stderr)
+        print(f"error: package browser catalog build failed: {
+              error}", file=sys.stderr)
     return result, successful
 
 

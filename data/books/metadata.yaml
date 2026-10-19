@@ -28,6 +28,22 @@
   - Programming languages (electronic computers)
   rating: 4.3
   rating_count: 10
+'9780321623218':
+  title: The C++ standard library
+  authors:
+  - Nicolai M. Josuttis
+  subtitle: a tutorial and reference
+  isbn_13: '9780321623218'
+  isbn_10: '0321623215'
+  publisher: Addison-Wesley
+  publish_date: '2012'
+  pages: 1136
+  cover_url: https://covers.openlibrary.org/b/id/8634342-L.jpg
+  url: https://openlibrary.org/books/OL25101981M/The_C_standard_library
+  work_key: /works/OL16283356W
+  subjects:
+  - C plus plus (computer program language)
+  - C++ (Computer program language)
 '9780321714114':
   title: C++ Primer
   authors:
@@ -100,3 +116,17 @@
   - Programming Languages
   rating: 4.667
   rating_count: 3
+'9781617294693':
+  title: C++ Concurrency in Action
+  authors:
+  - Anthony Williams
+  isbn_13: '9781617294693'
+  isbn_10: '1617294691'
+  publisher: Manning
+  publish_date: '2019'
+  pages: 592
+  cover_url: https://covers.openlibrary.org/b/id/15232886-L.jpg
+  url: https://openlibrary.org/books/OL26832747M/C_Concurrency_in_Action
+  work_key: /works/OL19542036W
+  subjects:
+  - C plus plus (computer program language)

@@ -4,6 +4,9 @@ id: general
 title: General resources
 description: References, analysis tools, playgrounds, and other practical C++ utilities
 cards:
+  - title: C++ Build Benchmark
+    path: https://build-bench.com/
+    description: Build Bench is a tool to quickly and simply compare the build time of code snippets with various compilers
   - title: Compiler Explorer
     path: https://godbolt.org/
     description: Compile and inspect C++ across compilers, versions, architectures, and optimization levels

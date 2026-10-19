@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: aaebb96913b83caa724d49230aa7823f406f6746
+revision: 7ec9e6d2fb15b25c9af9dbfcfe605abee603f2c3
 packages:
 - id: spack:3dtk
   registry: spack
@@ -9888,13 +9888,19 @@ packages:
     - checksums:
       - sha256:eb806e22dabfb6549c398b55e50c747e4c51b57f8879da9e29813de40af54b48
   - version: 1.5.0
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:36d67d57ef959397fa4f59169cf7deb92220537160e761e0c1cff84624ad81e3
   - version: 1.5.3
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:5a3bf360a5240086324aa7f7005ab7eeee91095e2091078b3f9783eaf6e7288a
+  - version: 1.5.4
+    artifacts:
+    - checksums:
+      - sha256:ec1f51e696ba384f90bc7ab2c7a438fee70da98763d001b8f3175d14a91cfcf6
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/apptainer/package.py
 - id: spack:apr
@@ -12676,6 +12682,8 @@ packages:
   - GPL-3.0-or-later
   homepage: https://asciinema.org
   repository_url: https://github.com/asciinema/asciinema
+  maintainers:
+  - CISSSCO
   dependencies:
   - c
   - rust
@@ -12718,6 +12726,8 @@ packages:
   - GPL-3.0-or-later
   homepage: https://docs.asciinema.org/manual/agg/
   repository_url: https://github.com/asciinema/agg
+  maintainers:
+  - CISSSCO
   dependencies:
   - c
   - rust
@@ -24428,6 +24438,8 @@ packages:
   - MIT
   homepage: https://github.com/lanl/branson
   repository_url: https://github.com/lanl/branson
+  maintainers:
+  - alexrlongne
   topics:
   - proxy-app
   dependencies:
@@ -29693,6 +29705,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1ab2de20460d4641553addfdfe6acd4109d871d5531f8f519a52ea4926303087
+  - version: 3.8.1
+    artifacts:
+    - checksums:
+      - sha256:18b3f70ac80fccc340d8c6ff0f339b2ae64944782f8d2fca2bd705cf47cadb79
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/catch2/package.py
 - id: spack:cbc
@@ -30775,6 +30791,22 @@ packages:
     artifacts:
     - checksums:
       - sha256:7d3f36c6236b4a9fd6e40a0520aa516e0dcbe157aa6345966eb25f35bc4cdc77
+  - version: 3.4.1
+    artifacts:
+    - checksums:
+      - sha256:e18f4d7ca197131128aa1439ae20e35a0b875ef0da115d3282c8218dbdb4f81a
+  - version: 3.4.2
+    artifacts:
+    - checksums:
+      - sha256:e7734fd0c6d4ad97f78ad400b0f39a47b5f8ce5ab5250fe393ef4652ca3333e3
+  - version: 3.4.3
+    artifacts:
+    - checksums:
+      - sha256:3871f7589dc0fa38d74b164ff81b298e1551d5478a06fe20c6947d7328f9fd53
+  - version: 3.5.0
+    artifacts:
+    - checksums:
+      - sha256:57fbcdfdc4b3c35397a2be27d360eef8b7a8275acce8b498254906c55d4495b4
   recipe_path: repos/spack_repo/builtin/packages/cccl/package.py
 - id: spack:cce
   registry: spack
@@ -31964,32 +31996,20 @@ packages:
   - cmake
   - covfie
   - cxx
-  - doxygen
+  - dd4hep
   - g4vg
-  - geant4
   - hepmc3
   - nlohmann-json
-  - py-breathe
-  - py-sphinx
   - python
   - root
   - swig
-  - vecgeom
   dependency_details:
   - name: cli11
     constraint: cli11
     condition: '@0.6:'
   - name: cmake
-    constraint: 'cmake@3.13:'
-    kind: build
-  - name: cmake
-    constraint: 'cmake@3.18:'
-    kind: build
-    condition: +cuda+vecgeom
-  - name: cmake
     constraint: 'cmake@3.22:'
     kind: build
-    condition: +rocm
   - name: cmake
     constraint: 'cmake@3.27:'
     kind: build
@@ -31997,62 +32017,37 @@ packages:
   - name: covfie
     constraint: 'covfie@0.13:'
     condition: +covfie
-  - name: 'covfie '
-    constraint: covfie ~cuda
-    condition: +covfie ~cuda
   - name: cxx
     constraint: cxx
     kind: build
-  - name: doxygen
-    constraint: doxygen
-    kind: build
-    condition: +doc
+  - name: 'dd4hep '
+    constraint: dd4hep +ddg4
+    condition: +dd4hep
   - name: g4vg
     constraint: 'g4vg@1.0.2:'
     condition: '@0.6: +geant4 +vecgeom'
-  - name: geant4
-    constraint: geant4@10.5:11.2
-    condition: '@0.4.2:0.4 +geant4'
-  - name: geant4
-    constraint: 'geant4@10.5:'
-    condition: '@0.5: +geant4'
   - name: hepmc3
     constraint: hepmc3
     condition: +hepmc3
   - name: nlohmann-json
     constraint: nlohmann-json
-  - name: py-breathe
-    constraint: py-breathe
-    kind: build
-    condition: +doc
-  - name: py-sphinx
-    constraint: py-sphinx
-    kind: build
-    condition: +doc
   - name: python
     constraint: python
     kind: build
+    condition: '@:0.5'
+  - name: python
+    constraint: python
+    kind: test
   - name: root
-    constraint: root
+    constraint: 'root@6.28:'
     condition: +root
   - name: swig
     constraint: 'swig@4.1:'
     condition: +swig
-  - name: vecgeom
-    constraint: vecgeom@1.2:1
-    condition: '@:0.6 +vecgeom'
-  - name: vecgeom
-    constraint: vecgeom@1.2:2
-    condition: '@0.7: +vecgeom'
-  - name: 'vecgeom '
-    constraint: vecgeom ~cuda
-    condition: +vecgeom ~cuda
-  - name: 'vecgeom '
-    constraint: vecgeom +cuda cuda_arch=none
-    condition: +vecgeom +cuda cuda_arch=none
   options:
   - covfie
   - cxxstd
+  - dd4hep
   - debug
   - doc
   - geant4
@@ -32064,8 +32059,9 @@ packages:
   - swig
   - vecgeom
   default_options:
-    covfie: 'false'
+    covfie: 'true'
     cxxstd: '17'
+    dd4hep: 'false'
     debug: 'false'
     doc: 'false'
     geant4: 'true'
@@ -32079,11 +32075,15 @@ packages:
   features:
   - name: covfie
     description: Enable covfie magnetic fields
-    default: 'false'
+    default: 'true'
     condition: '@0.6:'
   - name: cxxstd
     description: C++ standard version
     default: '17'
+  - name: dd4hep
+    description: Enable dd4hep plugin
+    default: 'false'
+    condition: '@0.7:'
   - name: debug
     description: Enable runtime debug assertions
     default: 'false'
@@ -32118,10 +32118,12 @@ packages:
     default: 'true'
   versions:
   - version: 0.4.4
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:8b5ae63aa2d50c2ecf48d752424e4a33c50c07d9f0f5ca5448246de3286fd836
   - version: 0.5.0
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:4a8834224d96fd01897e5872ac109f60d91ef0bd7b63fac05a73dcdb61a5530e
@@ -32153,6 +32155,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c87910acd0bb9dc85c53e2e4d9958f36d3bb1e5975f0e08fe7274b332a2ccf27
+  - version: 0.7.0
+    artifacts:
+    - checksums:
+      - sha256:e48cf616bf662afede88951306c5806c97b1d1acb2be2cce91ddccc9ef076c4f
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/celeritas/package.py
 - id: spack:cellpose
@@ -41638,6 +41644,7 @@ packages:
   - hdf5
   - lapack
   - libsmeagol
+  - libwignernj
   - libxs
   - libxsmm
   - pexsi
@@ -41676,6 +41683,9 @@ packages:
   - name: libsmeagol
     constraint: libsmeagol
     condition: +smeagol
+  - name: libwignernj
+    constraint: libwignernj
+    condition: '@2027:'
   - name: libxs
     constraint: libxs@1:+fortran
     condition: smm=libxs
@@ -48664,24 +48674,12 @@ packages:
   homepage: https://github.com/rordenlab/dcm2niix
   repository_url: https://github.com/rordenlab/dcm2niix
   dependencies:
-  - c
-  - cxx
   - openjpeg
-  - pkgconfig
   - zlib-api
   dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
   - name: openjpeg
     constraint: openjpeg
     condition: +jp2k
-  - name: pkgconfig
-    constraint: pkgconfig
-    kind: build
   - name: zlib-api
     constraint: zlib-api
   options:
@@ -48714,6 +48712,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1b24658678b6c24141e58760dbea9fe2786ffdd736bcc37a36d9cdabc731bafa
+  - version: 1.0.20260724
+    artifacts:
+    - checksums:
+      - sha256:be6478b15aaf1e0c396df242e272a6a695966dc916672f519844ad1682b59e59
   recipe_path: repos/spack_repo/builtin/packages/dcm2niix/package.py
 - id: spack:dcmtk
   registry: spack
@@ -51022,6 +51024,9 @@ packages:
   - name: mctc-lib
     constraint: mctc-lib@0.3
     condition: '@:3.7'
+  - name: mctc-lib
+    constraint: 'mctc-lib@0.6:'
+    condition: '@4.3:'
   - name: meson
     constraint: 'meson@0.57.1:'
     kind: build
@@ -51121,6 +51126,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:467e024071510ad82b862c66c383c2ebc164fc1140e15dfc79f48d2f999fd184
+  - version: 4.3.0
+    artifacts:
+    - checksums:
+      - sha256:e94c5d021c0a4b4aa9b5587e36fda2f398271dc2dc1abfbe097fdb04022bef35
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/dftd4/package.py
 - id: spack:dftfe
@@ -55469,6 +55478,7 @@ packages:
   - name: python
     description: Build with Python driver
     default: 'true'
+    condition: '@:1.3'
   - name: tpce
     description: Include TPCE in build
     default: 'false'
@@ -64601,6 +64611,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:bdfad5addb6df40b811bc076eacf71555f6a6291fe043e8eb9f9b0a4ee9720c5
+  - version: 1.1.5
+    artifacts:
+    - checksums:
+      - sha256:81afd6ceed4e755cdd3e9cd76feedec57d061bb2797ed50f3afb4c9741ada2aa
+  - version: 1.1.6
+    artifacts:
+    - checksums:
+      - sha256:514cdc9580c493beee3128d69a9b830b9f3c177fc1765b1961b247089f60ac85
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/fabulous/package.py
 - id: spack:faircmakemodules
@@ -66140,19 +66158,25 @@ packages:
 - id: spack:fastloess-cpp
   registry: spack
   name: fastloess-cpp
-  summary: High-performance LOESS (Locally Estimated Scatterplot Smoothing) C++ bindings, implemented in Rust.
+  summary: High-performance LOESS (Locally Estimated Scatterplot Smoothing) C++17 bindings, implemented in Rust. Supports multivariate batch, streaming, and online...
+  description: High-performance LOESS (Locally Estimated Scatterplot Smoothing) C++17 bindings, implemented in Rust. Supports multivariate batch, streaming, and online smoothing, robust outlier handling, confidence and prediction intervals, cross-validation, and parallel execution. Provides shared and static libraries with an owning C++ interface and a C-compatible API.
+  description_format: html
   licenses:
   - MIT OR Apache-2.0
-  homepage: https://github.com/thisisamirv/loess-project
+  homepage: https://thisisamirv.github.io/loess-project/cpp/
   repository_url: https://github.com/thisisamirv/loess-project
   maintainers:
   - thisisamirv
   dependencies:
   - c
+  - cxx
   - rust
   dependency_details:
   - name: c
     constraint: c
+    kind: build
+  - name: cxx
+    constraint: cxx
     kind: build
   - name: rust
     constraint: 'rust@1.89:'
@@ -66166,23 +66190,33 @@ packages:
     artifacts:
     - checksums:
       - sha256:9a6b5bfd879b321af54e4cae016716b74499a50d0cecb8e3665ce1ed9703968c
+  - version: 3.0.0
+    artifacts:
+    - checksums:
+      - sha256:33940eaa0c6d972194225060d6ab95361e3664f685578855fe6f5da4cfad926e
   recipe_path: repos/spack_repo/builtin/packages/fastloess_cpp/package.py
 - id: spack:fastlowess-cpp
   registry: spack
   name: fastlowess-cpp
-  summary: High-performance LOWESS (Locally Weighted Scatterplot Smoothing) C++ bindings, implemented in Rust.
+  summary: High-performance LOWESS (Locally Weighted Scatterplot Smoothing) C++17 bindings, implemented in Rust. Supports batch, streaming, and online smoothing, robust...
+  description: High-performance LOWESS (Locally Weighted Scatterplot Smoothing) C++17 bindings, implemented in Rust. Supports batch, streaming, and online smoothing, robust outlier handling, confidence and prediction intervals, cross-validation, and parallel execution. Provides shared and static libraries with an owning C++ interface and a C-compatible API.
+  description_format: html
   licenses:
   - MIT OR Apache-2.0
-  homepage: https://github.com/thisisamirv/lowess-project
+  homepage: https://thisisamirv.github.io/lowess-project/cpp/
   repository_url: https://github.com/thisisamirv/lowess-project
   maintainers:
   - thisisamirv
   dependencies:
   - c
+  - cxx
   - rust
   dependency_details:
   - name: c
     constraint: c
+    kind: build
+  - name: cxx
+    constraint: cxx
     kind: build
   - name: rust
     constraint: 'rust@1.89:'
@@ -66204,6 +66238,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ec0e99ac8f53ad80105eb47891569298e1e02d4068b6be89ab248e56cddbc8fa
+  - version: 5.0.0
+    artifacts:
+    - checksums:
+      - sha256:5aaddb050b08d9efa5493c4181dc2d59d02c5a87320dd95b415b726df1884007
   recipe_path: repos/spack_repo/builtin/packages/fastlowess_cpp/package.py
 - id: spack:fastmath
   registry: spack
@@ -75679,6 +75717,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1
+  - version: 2.15.0
+    artifacts:
+    - checksums:
+      - sha256:9186627467a616d9a9e3e574748ac0c45fa77398e6364edef3041a8ba8d92f64
   recipe_path: repos/spack_repo/builtin/packages/freetype/package.py
 - id: spack:freexl
   registry: spack
@@ -77731,6 +77773,7 @@ packages:
   - g4hepem
   - g4vg
   - geant4
+  - googletest
   - hepmc3
   - veccore
   - vecgeom
@@ -77749,8 +77792,18 @@ packages:
     constraint: g4hepem +cuda +early_tracking_exit
   - name: g4vg
     constraint: 'g4vg@1.0.3:'
+  - name: g4vg
+    constraint: 'g4vg@1.0.6:'
+    condition: '@0.3.2:'
+  - name: g4vg
+    constraint: 'g4vg@1.0.7:'
+    condition: '@0.4:'
   - name: 'geant4 '
     constraint: geant4 ~vecgeom
+  - name: googletest
+    constraint: 'googletest@1.17:'
+    kind: test
+    condition: '@0.4.0:'
   - name: hepmc3
     constraint: hepmc3
     kind: test
@@ -77758,6 +77811,9 @@ packages:
     constraint: 'veccore@0.5.2:'
   - name: vecgeom
     constraint: 'vecgeom@2: +cuda +gdml'
+  - name: vecgeom
+    constraint: vecgeom@:2.0
+    condition: '@:0.3'
   - name: xerces-c
     constraint: xerces-c
   options:
@@ -77797,6 +77853,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:e179d0b600beeeb34357c767bbc22498715ca6719917abbc14221fde39fb2885
+  - version: 0.3.5
+    artifacts:
+    - checksums:
+      - sha256:f9301a46f6a6537cffde2a51c739ce0daa79f92f7086913c33aa686d6b57f581
+  - version: 0.4.1
+    artifacts:
+    - checksums:
+      - sha256:feceb76687034baeef50ad035d1a0ca58fa783b3c9d6916d9ebabea5ee09ac07
   recipe_path: repos/spack_repo/builtin/packages/g4adept/package.py
 - id: spack:g4channeling
   registry: spack
@@ -87480,6 +87544,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:cf3f215a640c8a4257f14317586b8f1fdd25a10a93cb4bdda147c0f9ad88e74f
+  - version: 2.88.4
+    artifacts:
+    - checksums:
+      - sha256:25fd169f3b2f91fe2391ad297883ce0fcf30c69fc789ffd1c9672d1332b1c5a8
   recipe_path: repos/spack_repo/builtin/packages/glib/package.py
 - id: spack:glib-bootstrap
   registry: spack
@@ -87538,6 +87606,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:cf3f215a640c8a4257f14317586b8f1fdd25a10a93cb4bdda147c0f9ad88e74f
+  - version: 2.88.4
+    artifacts:
+    - checksums:
+      - sha256:25fd169f3b2f91fe2391ad297883ce0fcf30c69fc789ffd1c9672d1332b1c5a8
   recipe_path: repos/spack_repo/builtin/packages/glib_bootstrap/package.py
 - id: spack:glib-networking
   registry: spack
@@ -106773,6 +106845,10 @@ packages:
   summary: HMMER is used for searching sequence databases for sequence homologs, and for making sequence alignments. It implements methods using probabilistic models...
   description: HMMER is used for searching sequence databases for sequence homologs, and for making sequence alignments. It implements methods using probabilistic models called profile hidden Markov models (profile HMMs).
   description_format: html
+  licenses:
+  - BSD-3-Clause
+  - GPL-2.0-or-later
+  - GPL-3.0-or-later
   homepage: http://www.hmmer.org
   dependencies:
   - c
@@ -123269,8 +123345,14 @@ packages:
     kind: build
     condition: '@:0'
   - name: cuda
-    constraint: cuda@11:12
+    constraint: 'cuda@11:'
     condition: device_backend=cufft
+  - name: cuda
+    constraint: cuda@:13
+    condition: device_backend=cufft
+  - name: cuda
+    constraint: cuda@:12
+    condition: '@:1 device_backend=cufft'
   - name: cxx
     constraint: cxx
     kind: build
@@ -161097,6 +161179,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:a82c92deee73ee00d5ded3bb13f59677b0c543a272f488125a364a62ef943fb9
+  - version: 0.6.1
+    artifacts:
+    - checksums:
+      - sha256:0499733af21015c022e8af0b5c477d779d27b58843c2a4c47644a683df2f3e42
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/mctc_lib/package.py
 - id: spack:mcutils
@@ -176533,8 +176619,14 @@ packages:
     constraint: cuda@6.5.14:7.5.18
     condition: '@2.12 +cuda'
   - name: cuda
-    constraint: 'cuda@8.0.61:'
-    condition: '@2.13: +cuda'
+    constraint: cuda@8.0.61:11
+    condition: '@2.13:2.14 +cuda'
+  - name: cuda
+    constraint: cuda@9.1:12
+    condition: '@3:3.0.3 +cuda'
+  - name: cuda
+    constraint: 'cuda@9.1:'
+    condition: '@3.0.4: +cuda'
   - name: cxx
     constraint: cxx
     kind: build
@@ -177428,6 +177520,7 @@ packages:
   - version: 3.0.0
   - version: 3.0.2
   - version: 3.3.0
+  - version: 3.4.1
   recipe_path: repos/spack_repo/builtin/packages/ncbi_vdb/package.py
 - id: spack:nccl
   registry: spack
@@ -199429,9 +199522,7 @@ packages:
   homepage: https://github.com/awslabs/palace
   repository_url: https://github.com/awslabs/palace
   maintainers:
-  - cameronrutherford
   - hughcars
-  - phdum
   - sbozzolo
   - simlap
   topics:
@@ -199455,8 +199546,10 @@ packages:
   - mpi
   - nlohmann-json
   - nlohmann-json-schema-validator
+  - parmetis
   - pkgconfig
   - scnlib
+  - umpire
   - zlib-api
   dependency_details:
   - name: blas
@@ -199468,13 +199561,17 @@ packages:
     constraint: 'catch2@3:'
     kind: test
   - name: cmake
+    constraint: 'cmake@3.18.1:'
+    kind: build
+    condition: '@0.11'
+  - name: cmake
     constraint: 'cmake@3.21:'
     kind: build
-    condition: '@0.14:0.15'
+    condition: '@0.12:0.14'
   - name: cmake
     constraint: 'cmake@3.24:'
     kind: build
-    condition: '@0.16:'
+    condition: '@0.15:'
   - name: cxx
     constraint: cxx
     kind: build
@@ -199537,6 +199634,8 @@ packages:
   - name: metis
     constraint: metis~int64
     condition: ~int64
+  - name: metis
+    constraint: metis+petsc_patches+gkrand
   - name: mpi
     constraint: mpi
   - name: nlohmann-json
@@ -199544,6 +199643,8 @@ packages:
   - name: nlohmann-json-schema-validator
     constraint: 'nlohmann-json-schema-validator@2.4.0:'
     condition: '@0.16:'
+  - name: parmetis
+    constraint: parmetis+petsc_patches
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -199553,12 +199654,19 @@ packages:
   - name: scnlib
     constraint: scnlib~shared
     condition: '~shared@0.14:'
+  - name: umpire
+    constraint: umpire@:2025.12
+    condition: '@0.16: +cuda'
+  - name: umpire
+    constraint: umpire@:2025.12
+    condition: '@0.16: +rocm'
   - name: zlib-api
     constraint: zlib-api
   options:
   - arpack
   - asan
   - coverage
+  - cudss
   - cxxstd
   - gslib
   - int64
@@ -199574,6 +199682,7 @@ packages:
     arpack: 'false'
     asan: 'false'
     coverage: 'false'
+    cudss: 'false'
     cxxstd: '17'
     gslib: 'true'
     int64: 'false'
@@ -199597,6 +199706,10 @@ packages:
     description: Measure code coverage when running (leads to severe loss of performance)
     default: 'false'
     condition: '@0.16:'
+  - name: cudss
+    description: Build with cuDSS sparse direct solver
+    default: 'false'
+    condition: '@0.18:'
   - name: cxxstd
     description: C++ standard
     values:
@@ -199642,6 +199755,10 @@ packages:
   - version: 0.14.0
   - version: 0.15.0
   - version: 0.16.0
+  - version: 0.16.1
+  - version: 0.17.0
+  - version: 0.18.0
+  - version: 0.18.1
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/palace/package.py
 - id: spack:palisade-development
@@ -221123,6 +221240,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:056f84c467450fb5700ad4df9c8cc669bf7f6046976eed7a19eadbc7553b6500
+  - version: 1.1.0
+    artifacts:
+    - checksums:
+      - sha256:63b17b48b855e36e64c5013523acd48131ffcfa90ae48fe2f3e6fa9fe3d0da32
+  - version: 1.2.0
+    artifacts:
+    - checksums:
+      - sha256:ccfa08c4ae2ab4f744bcc7b5fe0ad47960b6d3dffde65e480bce215b83624dbd
   recipe_path: repos/spack_repo/builtin/packages/pi/package.py
 - id: spack:picard
   registry: spack
@@ -225785,9 +225910,6 @@ packages:
     default: None
     condition: '@1.7.0: +test'
   versions:
-  - version: 1.3.0
-  - version: 1.4.0
-  - version: 1.4.1
   - version: 1.5.1
   - version: 1.5.2
   - version: 1.6.0
@@ -225797,6 +225919,8 @@ packages:
   - version: 2.0.1
   - version: 2.1.0
   - version: 3.0.0
+  - version: 3.1.0
+  - version: 3.1.1
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/ports_of_call/package.py
 - id: spack:possvm
@@ -286705,7 +286829,7 @@ packages:
   registry: spack
   name: py-intel-openmp
   summary: Intel OpenMP* Runtime Library x86_64 dynamic libraries for macOS*. Intel OpenMP* Runtime Library provides OpenMP API specification support in Intel C...
-  description: Intel OpenMP Runtime Library x86_64 dynamic libraries for macOS. Intel OpenMP* Runtime Library provides OpenMP API specification support in Intel C Compiler, Intel C++ Compiler and Intel Fortran Compiler. It helps to improve performance by creating multithreaded software using shared memory and running on multi-core processor systems.
+  description: Intel OpenMP* Runtime Library x86_64 dynamic libraries for macOS*. Intel OpenMP* Runtime Library provides OpenMP API specification support in Intel C Compiler, Intel C++ Compiler and Intel Fortran Compiler. It helps to improve performance by creating multithreaded software using shared memory and running on multi-core processor systems.
   description_format: html
   homepage: https://pypi.org/project/intel-openmp/
   recipe_path: repos/spack_repo/builtin/packages/py_intel_openmp/package.py
@@ -306499,6 +306623,7 @@ packages:
   - ewels
   - vladsavelyev
   dependencies:
+  - py-boto3
   - py-click
   - py-coloredlogs
   - py-humanize
@@ -306512,19 +306637,28 @@ packages:
   - py-packaging
   - py-pillow
   - py-plotly
+  - py-polars
   - py-pyaml-env
+  - py-pyarrow
   - py-pydantic
   - py-python-dotenv
   - py-pyyaml
   - py-requests
   - py-rich
   - py-rich-click
+  - py-scanpy
+  - py-scipy
   - py-setuptools
   - py-spectra
   - py-tiktoken
   - py-tqdm
   - py-typeguard
+  - python
   dependency_details:
+  - name: py-boto3
+    constraint: py-boto3
+    kind: build,run
+    condition: '@1.29:'
   - name: py-click
     constraint: py-click
     kind: build,run
@@ -306564,11 +306698,19 @@ packages:
   - name: py-plotly
     constraint: 'py-plotly@5.18:'
     kind: build,run
+  - name: py-polars
+    constraint: py-polars
+    kind: build,run
+    condition: '@1.29:'
   - name: py-pyaml-env
     constraint: py-pyaml-env
     kind: build,run
+  - name: py-pyarrow
+    constraint: py-pyarrow
+    kind: build,run
+    condition: '@1.29:'
   - name: py-pydantic
-    constraint: 'py-pydantic@2.7.1:'
+    constraint: 'py-pydantic@2.7.0:'
     kind: build,run
   - name: py-python-dotenv
     constraint: py-python-dotenv
@@ -306585,6 +306727,14 @@ packages:
   - name: py-rich-click
     constraint: py-rich-click
     kind: build,run
+  - name: py-scanpy
+    constraint: py-scanpy
+    kind: build,run
+    condition: '@1.31'
+  - name: py-scipy
+    constraint: py-scipy
+    kind: build,run
+    condition: '@1.31'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
@@ -306600,6 +306750,9 @@ packages:
   - name: py-typeguard
     constraint: py-typeguard
     kind: build,run
+  - name: python
+    constraint: 'python@3.8:'
+    kind: build,run
   versions:
   - version: '1.23'
     artifacts:
@@ -306609,6 +306762,30 @@ packages:
     artifacts:
     - checksums:
       - sha256:3cb65ac9ca07b6146fb239e0bc42f5337808973cb37e1d9a8bd753eaf70ac7e7
+  - version: '1.29'
+    artifacts:
+    - checksums:
+      - sha256:14e61bcb710caee59a7f6037d6a255f3062f6032e760734a351d9dd8a8be2609
+  - version: '1.30'
+    artifacts:
+    - checksums:
+      - sha256:4e5e4af10c965b9139c97620bb2174e558143aa4116a7aa969f6065b848183d8
+  - version: '1.31'
+    artifacts:
+    - checksums:
+      - sha256:3e2e4202ed335cd0651733018f6fe1dc8faf982cc335e837cf2a54bbd7646152
+  - version: '1.32'
+    artifacts:
+    - checksums:
+      - sha256:753908c16256bda6371e094d6a7dd5e9d15a43648e7ffa9a38a34a8bc29a127f
+  - version: '1.33'
+    artifacts:
+    - checksums:
+      - sha256:06e2b82fd9bfa458a79d8da869cb7d88260f624c03297120a70446a49ce852ed
+  - version: '1.34'
+    artifacts:
+    - checksums:
+      - sha256:859a54f8d1cf6b55c367d885860ad3c2b423e63b8804485ef065b77f4ffee58e
   recipe_path: repos/spack_repo/builtin/packages/py_multiqc/package.py
 - id: spack:py-multiurl
   registry: spack
@@ -310777,200 +310954,6 @@ packages:
   repository_url: https://github.com/nilearn/nilearn
   maintainers:
   - ChristopherChristofi
-  dependencies:
-  - py-hatch-vcs
-  - py-hatchling
-  - py-jinja2
-  - py-joblib
-  - py-lxml
-  - py-nibabel
-  - py-numpy
-  - py-packaging
-  - py-pandas
-  - py-requests
-  - py-scikit-learn
-  - py-scipy
-  - py-setuptools
-  - python
-  dependency_details:
-  - name: py-hatch-vcs
-    constraint: py-hatch-vcs
-    kind: build
-    condition: '@0.10.1:'
-  - name: py-hatchling
-    constraint: py-hatchling
-    kind: build
-    condition: '@0.10.1:'
-  - name: py-jinja2
-    constraint: 'py-jinja2@3.1.2:'
-    kind: build,run
-    condition: '@0.13:'
-  - name: py-joblib
-    constraint: 'py-joblib@1.2:'
-    kind: build,run
-    condition: '@0.11:'
-  - name: py-joblib
-    constraint: 'py-joblib@1:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-joblib
-    constraint: 'py-joblib@0.15:'
-    kind: build,run
-    condition: '@0.9.1:'
-  - name: py-joblib
-    constraint: 'py-joblib@0.12:'
-    kind: build,run
-    condition: '@0.7:'
-  - name: py-lxml
-    constraint: py-lxml
-    kind: build,run
-    condition: '@0.9.1:0.12'
-  - name: py-nibabel
-    constraint: 'py-nibabel@5.2:'
-    kind: build,run
-    condition: '@0.11:'
-  - name: py-nibabel
-    constraint: 'py-nibabel@4:'
-    kind: build,run
-    condition: '@0.10.3:'
-  - name: py-nibabel
-    constraint: 'py-nibabel@3.2:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-nibabel
-    constraint: 'py-nibabel@3:'
-    kind: build,run
-    condition: '@0.9.1:'
-  - name: py-nibabel
-    constraint: 'py-nibabel@2.5:'
-    kind: build,run
-    condition: '@0.8:'
-  - name: py-nibabel
-    constraint: 'py-nibabel@2.0.2:'
-    kind: build,run
-  - name: py-numpy
-    constraint: 'py-numpy@1.22.4:'
-    kind: build,run
-    condition: '@0.11:'
-  - name: py-numpy
-    constraint: 'py-numpy@1.19:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-numpy
-    constraint: 'py-numpy@1.18:'
-    kind: build,run
-    condition: '@0.9.1:'
-  - name: py-numpy
-    constraint: 'py-numpy@1.16:'
-    kind: build,run
-    condition: '@0.8:'
-  - name: py-numpy
-    constraint: 'py-numpy@1.11:'
-    kind: build,run
-    condition: '@0.5:'
-  - name: py-numpy
-    constraint: 'py-numpy@1.6.1:'
-    kind: build,run
-  - name: py-packaging
-    constraint: py-packaging
-    kind: build,run
-    condition: '@0.10.1:'
-  - name: py-pandas
-    constraint: 'py-pandas@2.2:'
-    kind: build,run
-    condition: '@0.11:'
-  - name: py-pandas
-    constraint: 'py-pandas@1.1.5:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-pandas
-    constraint: 'py-pandas@1:'
-    kind: build,run
-    condition: '@0.9.1:'
-  - name: py-pandas
-    constraint: 'py-pandas@0.24.0:'
-    kind: build,run
-    condition: '@0.8:'
-  - name: py-pandas
-    constraint: 'py-pandas@0.18.0:'
-    kind: build,run
-    condition: '@0.7:'
-  - name: py-requests
-    constraint: 'py-requests@2.30:'
-    kind: build,run
-    condition: '@0.13:'
-  - name: py-requests
-    constraint: 'py-requests@2.25:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-requests
-    constraint: 'py-requests@2:'
-    kind: build,run
-    condition: '@0.7:'
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@1.4:'
-    kind: build,run
-    condition: '@0.11:'
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@1:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@0.22:'
-    kind: build,run
-    condition: '@0.9.1:'
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@0.21:'
-    kind: build,run
-    condition: '@0.8:'
-  - name: py-scikit-learn
-    constraint: 'py-scikit-learn@0.19:'
-    kind: build,run
-    condition: '@0.7:'
-  - name: py-scipy
-    constraint: 'py-scipy@1.9:'
-    kind: build,run
-    condition: '@0.13:'
-  - name: py-scipy
-    constraint: 'py-scipy@1.8:'
-    kind: build,run
-    condition: '@0.10.3:'
-  - name: py-scipy
-    constraint: 'py-scipy@1.6:'
-    kind: build,run
-    condition: '@0.10:'
-  - name: py-scipy
-    constraint: 'py-scipy@1.5:'
-    kind: build,run
-    condition: '@0.9.1:'
-  - name: py-scipy
-    constraint: 'py-scipy@1.2:'
-    kind: build,run
-    condition: '@0.8:'
-  - name: py-scipy
-    constraint: 'py-scipy@0.19:'
-    kind: build,run
-    condition: '@0.6:'
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-    condition: '@:0.10.0'
-  - name: python
-    constraint: 'python@3.10:'
-    kind: build,run
-    condition: '@0.13:'
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build,run
-    condition: '@0.11:'
-  - name: python
-    constraint: 'python@3.8:'
-    kind: build,run
-    condition: '@0.10.3:'
-  - name: python
-    constraint: 'python@3.7:'
-    kind: build,run
-    condition: '@0.10:'
   options:
   - plotting
   default_options:
@@ -311000,6 +310983,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:66d4a4f3f1dea9b8683806849ea8e91abfeac11e14f7e972a726f644e515bc2b
+  - version: 0.14.1
+    artifacts:
+    - checksums:
+      - sha256:6f7ec639be2c9e4a3625ebc4f25c3de31ae3af21331c8d03e27201c482609672
   - version: 0.7.1
     artifacts:
     - checksums:
@@ -313203,6 +313190,20 @@ packages:
     - checksums:
       - sha256:b0db7b75a32367a0e25c23b397842c65e344a1206524d16c8069f0a1c91b5f4c
   recipe_path: repos/spack_repo/builtin/packages/py_numpydoc/package.py
+- id: spack:py-numpyro
+  registry: spack
+  name: py-numpyro
+  summary: Probabilistic programming with NumPy powered by JAX for autograd and JIT compilation to GPU/TPU/CPU.
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/pyro-ppl/numpyro
+  repository_url: https://github.com/pyro-ppl/numpyro
+  versions:
+  - version: 0.22.0
+    artifacts:
+    - checksums:
+      - sha256:d428b688f7c6d1f9089b730c242a3817452609e3672bd62bbc1b02ce17f069bb
+  recipe_path: repos/spack_repo/builtin/packages/py_numpyro/package.py
 - id: spack:py-nvidia-dali
   registry: spack
   name: py-nvidia-dali
@@ -318460,6 +318461,20 @@ packages:
     - checksums:
       - sha256:0917211c0f083f344e7f1bc997e0d713dbc147b6380bc19f606119394f820b9a
   recipe_path: repos/spack_repo/builtin/packages/py_paramz/package.py
+- id: spack:py-paranoid-scientist
+  registry: spack
+  name: py-paranoid-scientist
+  summary: Runtime verification and automated testing for scientific code.
+  licenses:
+  - MIT
+  homepage: https://github.com/mwshinn/paranoidscientist
+  repository_url: https://github.com/mwshinn/paranoidscientist
+  versions:
+  - version: 0.2.3
+    artifacts:
+    - checksums:
+      - sha256:074b40185a7d923373218144eaa7799b0b78b660f0975a313696caa972016929
+  recipe_path: repos/spack_repo/builtin/packages/py_paranoid_scientist/package.py
 - id: spack:py-parasail
   registry: spack
   name: py-parasail
@@ -330823,6 +330838,20 @@ packages:
     - checksums:
       - sha256:b3d9cff0b9431e0fd0b2d5eefe4414c3d3c20bd18fdd7d1b42b2f01f25bac808
   recipe_path: repos/spack_repo/builtin/packages/py_pydatalog/package.py
+- id: spack:py-pyddm
+  registry: spack
+  name: py-pyddm
+  summary: Generalized drift diffusion modeling for Python.
+  licenses:
+  - MIT
+  homepage: https://github.com/mwshinn/PyDDM
+  repository_url: https://github.com/mwshinn/pyddm
+  versions:
+  - version: 0.9.0
+    artifacts:
+    - checksums:
+      - sha256:98b971de5dcb4e490d4f72c631d9f12f9584cdabeddbb466656cf0f45fe27ffd
+  recipe_path: repos/spack_repo/builtin/packages/py_pyddm/package.py
 - id: spack:py-pydeface
   registry: spack
   name: py-pydeface
@@ -334359,6 +334388,26 @@ packages:
     - checksums:
       - sha256:bb7b21bec57ecdba3f6f44c856ebebdf6549fd6e80661bd44fd5094236729242
   recipe_path: repos/spack_repo/builtin/packages/py_pylatex/package.py
+- id: spack:py-pylatexenc
+  registry: spack
+  name: py-pylatexenc
+  summary: Simple LaTeX parser providing latex-to-unicode and unicode-to-latex conversion
+  licenses:
+  - MIT
+  homepage: https://github.com/phfaist/pylatexenc
+  repository_url: https://github.com/phfaist/pylatexenc
+  maintainers:
+  - LydDeb
+  versions:
+  - version: '2.10'
+    artifacts:
+    - checksums:
+      - sha256:3dd8fd84eb46dc30bee1e23eaab8d8fb5a7f507347b23e5f38ad9675c84f40d3
+  - version: '2.11'
+    artifacts:
+    - checksums:
+      - sha256:305a072a99ce736246049c9da05841b9d718c0f7ea8888f5f596cf15cb621053
+  recipe_path: repos/spack_repo/builtin/packages/py_pylatexenc/package.py
 - id: spack:py-pyld
   registry: spack
   name: py-pyld
@@ -337781,35 +337830,9 @@ packages:
   name: py-pyqt-builder
   summary: The PEP 517 compliant PyQt build system.
   licenses:
+  - BSD-2-Clause
   - GPL-2.0-or-later
   homepage: https://www.riverbankcomputing.com/hg/PyQt-builder/
-  dependencies:
-  - py-packaging
-  - py-setuptools
-  - py-setuptools-scm
-  - py-sip
-  dependency_details:
-  - name: py-packaging
-    constraint: py-packaging
-    kind: build,run
-  - name: py-setuptools
-    constraint: 'py-setuptools@77:'
-    kind: build
-    condition: '@1.18.2:'
-  - name: py-setuptools
-    constraint: 'py-setuptools@30.3:'
-    kind: build
-  - name: py-setuptools-scm
-    constraint: 'py-setuptools-scm@8:'
-    kind: build
-    condition: '@1.16:'
-  - name: py-sip
-    constraint: py-sip@6.7:6
-    kind: build,run
-    condition: '@1.15:'
-  - name: py-sip
-    constraint: py-sip@6.3:6
-    kind: build,run
   versions:
   - version: 1.12.2
     artifacts:
@@ -337831,6 +337854,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:6af6646ba29668751b039bfdced51642cb510e300796b58a4d68b7f956a024d8
+  - version: 1.20.0
+    artifacts:
+    - checksums:
+      - sha256:267ac1ee1593c67884f3c9cb6566f72a92ca28353050fc9d087433c28c74a889
   recipe_path: repos/spack_repo/builtin/packages/py_pyqt_builder/package.py
 - id: spack:py-pyqt4
   registry: spack
@@ -338011,24 +338038,6 @@ packages:
   licenses:
   - GPL-2.0-or-later
   homepage: https://www.riverbankcomputing.com/software/sip/
-  dependencies:
-  - c
-  - cxx
-  - py-setuptools
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: py-setuptools
-    constraint: 'py-setuptools@75.8.1:'
-    kind: build
-    condition: '@13.10.2:'
-  - name: py-setuptools
-    constraint: 'py-setuptools@30.3:'
-    kind: build
   versions:
   - version: 13.10.2
     artifacts:
@@ -338038,6 +338047,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:869c5b48afe38e55b1ee0dd72182b0886e968cc509b98023ff50010b013ce1be
+  - version: 13.13.0
+    artifacts:
+    - checksums:
+      - sha256:2cd55f575cde208c398d6cfdecc5a13394ed2afb54226210c50e3a6df7c3a997
   - version: 13.5.1
     artifacts:
     - checksums:
@@ -339135,6 +339148,7 @@ packages:
   - c
   - cmake
   - cxx
+  - gmake
   - libcint
   - libxc
   - py-h5py
@@ -339162,6 +339176,9 @@ packages:
     kind: build
   - name: cxx
     constraint: cxx
+    kind: build
+  - name: gmake
+    constraint: gmake
     kind: build
   - name: libcint
     constraint: libcint+coulomb_erf+f12
@@ -347507,6 +347524,33 @@ packages:
     - checksums:
       - sha256:ef567d0be7677c99890d5c6ff30e679699fe7e5fca1a90fa3b6974edd8421794
   recipe_path: repos/spack_repo/builtin/packages/py_quart/package.py
+- id: spack:py-quarto
+  registry: spack
+  name: py-quarto
+  summary: Quarto is an open-source scientific and technical publishing system built on Pandoc.
+  licenses:
+  - MIT
+  homepage: https://quarto.org
+  dependencies:
+  - py-jupyter
+  - py-nbclient
+  - py-setuptools
+  dependency_details:
+  - name: py-jupyter
+    constraint: py-jupyter
+    kind: build,run
+  - name: py-nbclient
+    constraint: py-nbclient
+    kind: build,run
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+  versions:
+  - version: 1.10.19
+    artifacts:
+    - checksums:
+      - sha256:e4b14f3aeb38ea536672428a402c413c962bd4ba9d0b9805f416779226eb53e2
+  recipe_path: repos/spack_repo/builtin/packages/py_quarto/package.py
 - id: spack:py-quast
   registry: spack
   name: py-quast
@@ -348330,7 +348374,15 @@ packages:
   - name: py-cython
     constraint: py-cython@3.0.12:3.1
     kind: build
-    condition: '@3.14.1:'
+    condition: '@3.14.1:3.14.3'
+  - name: py-cython
+    constraint: py-cython@3.1.6:3.1
+    kind: build
+    condition: '@3.14.2:3.14.3'
+  - name: py-cython
+    constraint: py-cython@3.1.6:3.2
+    kind: build
+    condition: '@3.14.4:'
   - name: py-scikit-build-core
     constraint: 'py-scikit-build-core@0.11:'
     kind: build
@@ -348355,6 +348407,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:b02850e7f7152bd1edff27e9d584505b84968cacedee7a734ec4050c655a803c
+  - version: 3.14.3
+    artifacts:
+    - checksums:
+      - sha256:2491937177868bc4b1e469087601d53f925e8d270ccc21e07404b4b5814b7b5f
+  - version: 3.14.5
+    artifacts:
+    - checksums:
+      - sha256:ba10ac57884ce82112f7ed910b67e7fb6072d8ef2c06e30dc63c0f604a112e0e
   - version: 3.3.1
     artifacts:
     - checksums:
@@ -357789,6 +357849,7 @@ packages:
   name: py-sip
   summary: A Python bindings generator for C/C++ libraries.
   licenses:
+  - BSD-2-Clause
   - GPL-2.0-or-later
   homepage: https://www.riverbankcomputing.com/software/sip
   options:
@@ -357845,6 +357906,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:bb2516983f9f716d321e5157c00d0de0c12422eba73b8f43a44610a0f6622438
+  - version: 6.17.1
+    artifacts:
+    - checksums:
+      - sha256:34e2c1389e25394f5ba3c6b9d999d04373baf8d7161410536d444f48226d2f50
   - version: 6.4.0
     artifacts:
     - checksums:
@@ -360017,6 +360082,11 @@ packages:
   - name: py-snakemake-interface-storage-plugins
     constraint: py-snakemake-interface-storage-plugins@3
     kind: build,run
+    condition: '@:0.2'
+  - name: py-snakemake-interface-storage-plugins
+    constraint: py-snakemake-interface-storage-plugins@4.1:4
+    kind: build,run
+    condition: '@0.3:'
   - name: python
     constraint: python@3.11:3
     kind: build,run
@@ -360025,6 +360095,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e4944a7c134e98515d9473c867c4ce071e3b625a5a9002a00da6ac917bc0c0ad
+  - version: 0.3.1
+    artifacts:
+    - checksums:
+      - sha256:45e5d7f01de14388c3f43163f6af5cb03ef0e12e4446587a9a04b6a1ba712143
   recipe_path: repos/spack_repo/builtin/packages/py_snakemake_storage_plugin_http/package.py
 - id: spack:py-snakemake-storage-plugin-pelican
   registry: spack
@@ -364492,6 +364566,20 @@ packages:
     - checksums:
       - sha256:c813fdcda8e81c3936ffeac47cb69cfb2d1f5e77ad0de656c6dab56aeebd9249
   recipe_path: repos/spack_repo/builtin/packages/py_sshtunnel/package.py
+- id: spack:py-ssm-simulators
+  registry: spack
+  name: py-ssm-simulators
+  summary: SSMS is a package collecting simulators and training data generators for cognitive science, neuroscience, and approximate bayesian computation.
+  licenses:
+  - MIT
+  homepage: https://github.com/lnccbrown/ssm-simulators
+  repository_url: https://github.com/lnccbrown/ssm-simulators
+  versions:
+  - version: 0.14.0
+    artifacts:
+    - checksums:
+      - sha256:521d260491ba894a57945518bf362919888ea482188b0082839ce0c0aa17a840
+  recipe_path: repos/spack_repo/builtin/packages/py_ssm_simulators/package.py
 - id: spack:py-sspilib
   registry: spack
   name: py-sspilib
@@ -373146,6 +373234,7 @@ packages:
   homepage: https://github.com/boschmitt/tweedledum
   repository_url: https://github.com/boschmitt/tweedledum
   dependencies:
+  - c
   - cmake
   - cxx
   - eigen
@@ -373156,6 +373245,9 @@ packages:
   - py-wheel
   - python
   dependency_details:
+  - name: c
+    constraint: c
+    kind: build
   - name: cmake
     constraint: 'cmake@3.18:'
     kind: build
@@ -391440,7 +391532,7 @@ packages:
   registry: spack
   name: r-ape
   summary: Analyses of Phylogenetics and Evolution. Functions for reading, writing, plotting, and manipulating phylogenetic trees, analyses of comparative data in a...
-  description: <p>Analyses of Phylogenetics and Evolution.</p><p>Functions for reading, writing, plotting, and manipulating phylogenetic trees, analyses of comparative data in a phylogenetic framework, ancestral character analyses, analyses of diversification and macroevolution, computing distances from DNA sequences, reading and writing nucleotide sequences as well as importing from BioConductor, and several tools such as Mantel's test, generalized skyline plots, graphical exploration of phylogenetic data (alex, trex, kronoviz), estimation of absolute evolutionary rates and clock-like trees using mean path lengths and penalized likelihood, dating trees with non-contemporaneous sequences, translating DNA into AA sequences, and assessing sequence alignments. Phylogeny estimation can be done with the NJ, BIONJ, ME, MVR, SDM, and triangle methods, and several methods handling incomplete distance matrices (NJ, BIONJ, MVR*, and the corresponding triangle method). Some functions call external
+  description: <p>Analyses of Phylogenetics and Evolution.</p><p>Functions for reading, writing, plotting, and manipulating phylogenetic trees, analyses of comparative data in a phylogenetic framework, ancestral character analyses, analyses of diversification and macroevolution, computing distances from DNA sequences, reading and writing nucleotide sequences as well as importing from BioConductor, and several tools such as Mantel's test, generalized skyline plots, graphical exploration of phylogenetic data (alex, trex, kronoviz), estimation of absolute evolutionary rates and clock-like trees using mean path lengths and penalized likelihood, dating trees with non-contemporaneous sequences, translating DNA into AA sequences, and assessing sequence alignments. Phylogeny estimation can be done with the NJ, BIONJ, ME, MVR, SDM, and triangle methods, and several methods handling incomplete distance matrices (NJ*, BIONJ*, MVR*, and the corresponding triangle method). Some functions call external
     applications (PhyML, Clustal, T-Coffee, Muscle) whose results are returned into R.</p>
   description_format: html
   licenses:
@@ -391900,7 +391992,7 @@ packages:
   registry: spack
   name: r-assertive
   summary: Readable Check Functions to Ensure Code Integrity. Lots of predicates (is_* functions) to check the state of your variables, and assertions (assert_*...
-  description: <p>Readable Check Functions to Ensure Code Integrity.</p><p>Lots of predicates (is_ functions) to check the state of your variables, and assertions (assert_ functions) to throw errors if they aren't in the right form.</p>
+  description: <p>Readable Check Functions to Ensure Code Integrity.</p><p>Lots of predicates (is_* functions) to check the state of your variables, and assertions (assert_* functions) to throw errors if they aren't in the right form.</p>
   description_format: html
   dependencies:
   - r
@@ -396337,6 +396429,27 @@ packages:
     - checksums:
       - sha256:e4bce367e869e42eaeea05566d2033d8cee2103179b11cd9a401440b58a351f8
   recipe_path: repos/spack_repo/builtin/packages/r_callr/package.py
+- id: spack:r-capushe
+  registry: spack
+  name: r-capushe
+  summary: Capushe, Data-Driven Slope Estimation and Dimension Jump Calibration of penalized criteria for model selection. The calibration methods available in this...
+  description: <p>Capushe, Data-Driven Slope Estimation and Dimension Jump</p><p>Calibration of penalized criteria for model selection. The calibration methods available in this package are based on the slope heuristics.</p>
+  description_format: html
+  licenses:
+  - GPL-2.0-or-later
+  homepage: https://cran.r-project.org/package=capushe
+  dependencies:
+  - r-mass
+  dependency_details:
+  - name: r-mass
+    constraint: r-mass
+    kind: build,run
+  versions:
+  - version: 1.1.3
+    artifacts:
+    - checksums:
+      - sha256:3aa40d130d9738d7afff13201824def11ade6588b9e035fe45f3c5eb077349e3
+  recipe_path: repos/spack_repo/builtin/packages/r_capushe/package.py
 - id: spack:r-car
   registry: spack
   name: r-car
@@ -407848,7 +407961,7 @@ packages:
   registry: spack
   name: r-future-apply
   summary: Apply Function to Elements in Parallel using Futures. Implementations of apply(), by(), eapply(), lapply(), Map(), mapply(), replicate(), sapply(), tapply()...
-  description: <p>Apply Function to Elements in Parallel using Futures.</p><p>Implementations of apply(), by(), eapply(), lapply(), Map(), mapply(), replicate(), sapply(), tapply(), and vapply() that can be resolved using any future-supported backend, e.g. parallel on the local machine or distributed on a compute cluster. These future_apply() functions come with the same pros and cons as the corresponding base-R apply() functions but with the additional feature of being able to be processed via the future framework.</p>
+  description: <p>Apply Function to Elements in Parallel using Futures.</p><p>Implementations of apply(), by(), eapply(), lapply(), Map(), mapply(), replicate(), sapply(), tapply(), and vapply() that can be resolved using any future-supported backend, e.g. parallel on the local machine or distributed on a compute cluster. These future_*apply() functions come with the same pros and cons as the corresponding base-R *apply() functions but with the additional feature of being able to be processed via the future framework.</p>
   description_format: html
   versions:
   - version: 1.10.0
@@ -411384,7 +411497,7 @@ packages:
   registry: spack
   name: r-ggsignif
   summary: Significance Brackets for 'ggplot2'. Enrich your 'ggplots' with group-wise comparisons. This package provides an easy way to indicate if two groups are...
-  description: <p>Significance Brackets for 'ggplot2'.</p><p>Enrich your 'ggplots' with group-wise comparisons. This package provides an easy way to indicate if two groups are significantly different. Commonly this is shown by a bracket on top connecting the groups of interest which itself is annotated with the level of significance (NS, , , **). The package provides a single layer (geom_signif()) that takes the groups for comparison and the test (t.test(), wilcox.text() etc.) as arguments and adds the annotation to the plot.</p>
+  description: <p>Significance Brackets for 'ggplot2'.</p><p>Enrich your 'ggplots' with group-wise comparisons. This package provides an easy way to indicate if two groups are significantly different. Commonly this is shown by a bracket on top connecting the groups of interest which itself is annotated with the level of significance (NS, *, **, ***). The package provides a single layer (geom_signif()) that takes the groups for comparison and the test (t.test(), wilcox.text() etc.) as arguments and adds the annotation to the plot.</p>
   description_format: html
   licenses:
   - GPL-3.0-only OR custom
@@ -435848,6 +435961,33 @@ packages:
     constraint: r-graph
     kind: build,run
   recipe_path: repos/spack_repo/builtin/packages/r_rgraphviz/package.py
+- id: spack:r-rhandsontable
+  registry: spack
+  name: r-rhandsontable
+  summary: An R interface to the 'Handsontable' JavaScript library, which is a minimalist Excel-like data grid editor.
+  licenses:
+  - MIT
+  homepage: http://jrowen.github.io/rhandsontable/
+  dependencies:
+  - r-htmlwidgets
+  - r-jsonlite
+  - r-magrittr
+  dependency_details:
+  - name: r-htmlwidgets
+    constraint: 'r-htmlwidgets@0.3.3:'
+    kind: build,run
+  - name: r-jsonlite
+    constraint: r-jsonlite
+    kind: build,run
+  - name: r-magrittr
+    constraint: r-magrittr
+    kind: build,run
+  versions:
+  - version: 0.3.8
+    artifacts:
+    - checksums:
+      - sha256:901ed9c59936f7fa52ad8db3111c8904ab962f9c74f1b6cd40f81683af35d21d
+  recipe_path: repos/spack_repo/builtin/packages/r_rhandsontable/package.py
 - id: spack:r-rhdf5
   registry: spack
   name: r-rhdf5
@@ -445523,7 +445663,7 @@ packages:
   name: r-spatialreg
   summary: Spatial Regression Analysis. A collection of all the estimation functions for spatial cross-sectional models (on lattice/areal data using spatial weights...
   description: <p>Spatial Regression Analysis.</p><p>A collection of all the estimation functions for spatial cross-sectional models (on lattice/areal data using spatial weights matrices) contained up to now in 'spdep', 'sphet' and 'spse'. These model fitting functions include maximum likelihood methods for cross-sectional models proposed by 'Cliff' and 'Ord' (1973, ISBN:0850860369) and (1981, ISBN:0850860814), fitting methods initially described by 'Ord' (1975) &lt;doi:10.1080/01621459.1975.10480272&gt;. The models are further described by 'Anselin' (1988) &lt;doi:10.1007/978-94-015-7799-1&gt;. Spatial two stage least squares and spatial general method of moment models initially proposed by 'Kelejian' and 'Prucha' (1998) &lt;doi:10.1023/A:1007707430416&gt; and (1999) &lt;doi:10.1111/1468-2354.00027&gt; are provided. Impact methods and MCMC fitting methods proposed by 'LeSage' and 'Pace' (2009) &lt;doi:10.1201/9781420064254&gt; are implemented for the family of cross-sectional spatial regression
-    models. Methods for fitting the log determinant term in maximum likelihood and MCMC fitting are compared by 'Bivand et al.' (2013) &lt;doi:10.1111/gean.12008&gt;, and model fitting methods by 'Bivand' and 'Piras' (2015) &lt;doi:10.18637/jss.v063.i18&gt;; both of these articles include extensive lists of references. 'spatialreg' &gt;= 1.1- correspond to 'spdep' &gt;= 1.1-1, in which the model fitting functions are deprecated and pass through to 'spatialreg', but will mask those in 'spatialreg'. From versions 1.2-, the functions will be made defunct in 'spdep'.</p>
+    models. Methods for fitting the log determinant term in maximum likelihood and MCMC fitting are compared by 'Bivand et al.' (2013) &lt;doi:10.1111/gean.12008&gt;, and model fitting methods by 'Bivand' and 'Piras' (2015) &lt;doi:10.18637/jss.v063.i18&gt;; both of these articles include extensive lists of references. 'spatialreg' &gt;= 1.1-* correspond to 'spdep' &gt;= 1.1-1, in which the model fitting functions are deprecated and pass through to 'spatialreg', but will mask those in 'spatialreg'. From versions 1.2-*, the functions will be made defunct in 'spdep'.</p>
   description_format: html
   licenses:
   - GPL-2.0-only
@@ -456886,6 +457026,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:338f81b52b54e16090e193daf36c1d4baa9b902705cfdc7f4497e3e09718533b
+  - version: 8.2.13
+    artifacts:
+    - checksums:
+      - sha256:28e500793324bd7d330b396ef27ea49c9186fa5e1edb3d5439036dc6c33e6067
   recipe_path: repos/spack_repo/builtin/packages/raxml/package.py
 - id: spack:raxml-ng
   registry: spack
@@ -467068,7 +467212,6 @@ packages:
   dependencies:
   - cmake
   - cxx
-  - fortran
   - googletest
   dependency_details:
   - name: cmake
@@ -467076,9 +467219,6 @@ packages:
     kind: build
   - name: cxx
     constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
     kind: build
   - name: googletest
     constraint: 'googletest@1.10.0:'
@@ -472220,10 +472360,6 @@ packages:
     constraint: llvm@19:22 +clang
     kind: build,link,run
     condition: '@0.4.0:'
-  - name: llvm
-    constraint: llvm@19:22 +clang
-    kind: build,link,run
-    condition: '@master'
   options:
   - flang
   default_options:
@@ -472249,7 +472385,11 @@ packages:
     artifacts:
     - checksums:
       - sha256:fe251f28cd44eeb71640b03d01d6201c935485b4794ba7bc2d92e7988a13d237
-  - version: master
+  - version: 0.5.0
+    artifacts:
+    - checksums:
+      - sha256:124748eb14456fccae83935daef136d6f3f01b96be874e69725e875833b94c10
+  - version: main
   recipe_path: repos/spack_repo/builtin/packages/saltfm/package.py
 - id: spack:sam2p
   registry: spack
@@ -475345,6 +475485,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:76557a986c2bbcc08a122e21113f77266e08b584bc2d2d3a0dede39572d1af78
+  - version: 7.0.17
+    artifacts:
+    - checksums:
+      - sha256:d8bc97540e83520f5218ebc6ed44ee370e0faa1e9c68d5e3c4cd8db0c683d48b
   - version: 7.0.3
     artifacts:
     - checksums:
@@ -480540,6 +480684,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:c548629115c3d5f180d06a70bc29dcf42e4018fbc9e4ba7c99abc1cdbfda7c1e
+  - version: 1.5.0
+    artifacts:
+    - checksums:
+      - sha256:64a3cb126acddb0aaffd87b1e54f35eca0c30f63bc675cdb8ad523373c7c396f
+  - version: 1.6.0
+    artifacts:
+    - checksums:
+      - sha256:534919ebc44bb59de323513f41d1c1fba5f457008323d2e67087351a76c8fd9f
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/simple_dftd3/package.py
 - id: spack:simplemoc
@@ -481755,6 +481907,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ce77dd168b2c3ef4a89cc2d6b163cb00b3d8b9d4b0652bc9de187dc7e0e74d77
+  - version: 7.12.0
+    artifacts:
+    - checksums:
+      - sha256:25d14a31faf9cd07b19a327aba5f8f024be63cf6d9d033eada4410727bf95ce9
   - version: 7.3.0
     artifacts:
     - checksums:
@@ -485332,6 +485488,8 @@ packages:
   registry: spack
   name: spades
   summary: SPAdes - St. Petersburg genome assembler - is intended for both standard isolates and single-cell MDA bacteria assemblies.
+  licenses:
+  - GPL-2.0-only
   homepage: https://cab.spbu.ru/software/spades/
   repository_url: https://github.com/ablab/spades
   maintainers:
@@ -485340,6 +485498,7 @@ packages:
   - bzip2
   - c
   - cxx
+  - mpi
   - python
   - zlib-api
   dependency_details:
@@ -485351,9 +485510,16 @@ packages:
   - name: cxx
     constraint: cxx
     kind: build
+  - name: mpi
+    constraint: mpi
+    condition: '@4.2: +tools'
   - name: python
     constraint: python
     kind: build,run
+  - name: python
+    constraint: 'python@3.8:'
+    kind: build,run
+    condition: '@4:'
   - name: zlib-api
     constraint: zlib-api
   options:
@@ -485408,6 +485574,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:07c02eb1d9d90f611ac73bdd30ddc242ed51b00c8a3757189e8a8137ad8cfb8b
+  - version: 4.1.0
+    artifacts:
+    - checksums:
+      - sha256:997b066e157efd079f8c63229df85a9c7b81c3f626059a68669283049ab175f9
+  - version: 4.2.0
+    artifacts:
+    - checksums:
+      - sha256:043322129f8536411f1172b7d1c9adfcb6d49d152c10066ccc03e86b6f615a6b
+  - version: 4.3.0
+    artifacts:
+    - checksums:
+      - sha256:09671ca39f9c6d2479d9fc168100bfd089b4a24002d51b815386d2b24d424456
   recipe_path: repos/spack_repo/builtin/packages/spades/package.py
 - id: spack:span-lite
   registry: spack
@@ -487206,6 +487384,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b22fc9abae9716c574fbc6d55cfc53ed654a714fccc5657a26ff5d18114bd8bd
+  - version: 2.8.0
+    artifacts:
+    - checksums:
+      - sha256:161562fa082da85a8ecda0339ddaac3714470434de60eb67978a960872cacf78
   recipe_path: repos/spack_repo/builtin/packages/spglib/package.py
 - id: spack:sph2pipe
   registry: spack
@@ -487469,30 +487651,8 @@ packages:
     description: Python, Numpy & Matplotlib Support
     default: 'false'
   versions:
-  - version: 1.6.0
-    artifacts:
-    - checksums:
-      - sha256:afa5526d87c78c1165ead06c09c5c2b9e4a913687443e5adff7b709ea4dd7edf
-  - version: 1.6.1
-    artifacts:
-    - checksums:
-      - sha256:52774322571d3b9b0dc3c6b255257de9af0e8e6170834360f2252c1ac272cbe7
-  - version: 1.6.2
-    artifacts:
-    - checksums:
-      - sha256:91fb403ce3b151fbdf8b6ff5aed0d8dde1177749f5633951027b100ebc7080d3
-  - version: 1.6.3
-    artifacts:
-    - checksums:
-      - sha256:f78c50e0b4d7c4fd3f380432f12a528941e2bee5171d6f200e9a52bbcea940e9
   - version: 1.6.4
-    artifacts:
-    - checksums:
-      - sha256:a51de69e438f5e3893958736d246c41ca87fd6442ee1e0a9cc5d442861ac5404
   - version: 1.7.0
-    artifacts:
-    - checksums:
-      - sha256:effe6844fd895c4790eeebcb3f3bc7b3d4a7380554acfcc528d8d8296e88a9ba
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/spiner/package.py
 - id: spack:spiral-package-fftx
@@ -488264,6 +488424,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:83e6b2020a034e9a7ad4a72feea59e1ad52f162e09cbd26735a3ffb98359fc4f
+  - version: 3.54.1
+    artifacts:
+    - checksums:
+      - sha256:926ef8d3eab93fbf6e06011901273eec076b25594a4e1cdadd50c987f4f6d64e
   recipe_path: repos/spack_repo/builtin/packages/sqlite/package.py
 - id: spack:sqlite-jdbc
   registry: spack
@@ -488682,6 +488846,10 @@ packages:
     constraint: 'flex@2.6:'
   - name: libxml2
     constraint: libxml2@:2.13
+    condition: '@:3.3.0'
+  - name: libxml2
+    constraint: libxml2
+    condition: '@3.4.1:'
   - name: ncbi-vdb
     constraint: ncbi-vdb
   - name: ncbi-vdb
@@ -488690,6 +488858,9 @@ packages:
   - name: ncbi-vdb
     constraint: 'ncbi-vdb@3.3.0:'
     condition: '@3.3.0:'
+  - name: ncbi-vdb
+    constraint: 'ncbi-vdb@3.4.1:'
+    condition: '@3.4.1:'
   - name: openjdk
     constraint: openjdk
   options:
@@ -488717,6 +488888,7 @@ packages:
   - version: 3.0.0
   - version: 3.0.3
   - version: 3.3.0
+  - version: 3.4.1
   recipe_path: repos/spack_repo/builtin/packages/sra_tools/package.py
 - id: spack:sratoolkit
   registry: spack
@@ -494337,6 +494509,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:22ae0e887f8cca8031a325c67d005207653200b40e71edb3f88780e28e47d0ff
+  - version: 4.5.1
+    artifacts:
+    - checksums:
+      - sha256:7fec50b27deddab5455a9633780b6341eddfb96215a7619e93a76eb27178f653
   - version: fortran
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/swig/package.py
@@ -526810,6 +526986,7 @@ packages:
   - flex
   - fortran
   - mpi
+  - py-nanobind
   - py-pip
   - py-pybind11
   - python
@@ -526847,6 +527024,10 @@ packages:
   - name: mpi
     constraint: mpi
     condition: +mpi
+  - name: py-nanobind
+    constraint: py-nanobind
+    kind: build,link
+    condition: '@7.11: +pymi'
   - name: py-pip
     constraint: py-pip
     kind: run
@@ -529748,6 +529929,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:9b8d1ecedd5b5e81fbf1918e876752a7dd948e05c1a0dba10ab863842d45acd5
+  - version: 5.9.2
+    artifacts:
+    - checksums:
+      - sha256:36fa734374b44783582cec09bcd67822e2f992c779ec1624ab5596df078d2f81
   recipe_path: repos/spack_repo/builtin/packages/zsh/package.py
 - id: spack:zstd
   registry: spack

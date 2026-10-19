@@ -451,6 +451,7 @@ entities:
   name: aixlog
   aliases: []
   packages:
+  - conan:aixlog
   - vcpkg:aixlog
 - id: akantu
   name: akantu
@@ -3354,12 +3355,9 @@ entities:
   name: binutils
   aliases: []
   packages:
+  - bazel:binutils
   - conan:binutils
   - spack:binutils
-- id: binutils-f6b6a725
-  name: binutils
-  aliases: []
-  packages:
   - xmake:binutils
 - id: bioawk
   name: bioawk
@@ -6791,6 +6789,11 @@ entities:
   aliases: []
   packages:
   - spack:citcoms
+- id: citor
+  name: citor
+  aliases: []
+  packages:
+  - xmake:citor
 - id: cityhash
   name: cityhash
   aliases: []
@@ -9583,6 +9586,7 @@ entities:
   aliases: []
   packages:
   - vcpkg:dawn
+  - xmake:dawn
 - id: daxa
   name: daxa
   aliases: []
@@ -19970,6 +19974,11 @@ entities:
   aliases: []
   packages:
   - conan:kiss-icp
+- id: kissat
+  name: kissat
+  aliases: []
+  packages:
+  - bazel:kissat
 - id: kissfft
   name: kissfft
   aliases: []
@@ -21909,6 +21918,7 @@ entities:
   aliases: []
   packages:
   - bazel:libfn
+  - conan:libfn
   - vcpkg:libfn
 - id: libfontenc
   name: libfontenc
@@ -25693,11 +25703,6 @@ entities:
   aliases: []
   packages:
   - cppget:libz
-- id: libzchunk
-  name: libzchunk
-  aliases: []
-  packages:
-  - xmake:libzchunk
 - id: libzen
   name: libzen
   aliases:
@@ -29493,6 +29498,16 @@ entities:
   aliases: []
   packages:
   - conan:naive-tsearch
+- id: naja-if
+  name: naja-if
+  aliases: []
+  packages:
+  - bazel:naja-if
+- id: naja-verilog
+  name: naja-verilog
+  aliases: []
+  packages:
+  - bazel:naja-verilog
 - id: nalu
   name: nalu
   aliases: []
@@ -30503,8 +30518,10 @@ entities:
   - xmake:node-addon-api
 - id: node-api-headers
   name: node-api-headers
-  aliases: []
+  aliases:
+  - libnode-api-headers
   packages:
+  - cppget:libnode-api-headers
   - vcpkg:node-api-headers
   - xmake:node-api-headers
 - id: node-api-stub
@@ -32826,6 +32843,11 @@ entities:
   aliases: []
   packages:
   - bazel:p4_constraints
+- id: p4-infra
+  name: p4_infra
+  aliases: []
+  packages:
+  - bazel:p4_infra
 - id: p4c
   name: p4c
   aliases: []
@@ -33310,6 +33332,11 @@ entities:
   aliases: []
   packages:
   - spack:pbmpi
+- id: pbrt-proto
+  name: pbrt_proto
+  aliases: []
+  packages:
+  - bazel:pbrt_proto
 - id: pbtools
   name: pbtools
   aliases: []
@@ -33608,6 +33635,7 @@ entities:
   name: perf-cpp
   aliases: []
   packages:
+  - conan:perf-cpp
   - vcpkg:perf-cpp
 - id: perfetto
   name: perfetto
@@ -46387,6 +46415,11 @@ entities:
   aliases: []
   packages:
   - spack:py-numpydoc
+- id: py-numpyro
+  name: py-numpyro
+  aliases: []
+  packages:
+  - spack:py-numpyro
 - id: py-nvidia-dali
   name: py-nvidia-dali
   aliases: []
@@ -46902,6 +46935,11 @@ entities:
   aliases: []
   packages:
   - spack:py-paramz
+- id: py-paranoid-scientist
+  name: py-paranoid-scientist
+  aliases: []
+  packages:
+  - spack:py-paranoid-scientist
 - id: py-parasail
   name: py-parasail
   aliases: []
@@ -48077,6 +48115,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pydatalog
+- id: py-pyddm
+  name: py-pyddm
+  aliases: []
+  packages:
+  - spack:py-pyddm
 - id: py-pydeface
   name: py-pydeface
   aliases: []
@@ -48452,6 +48495,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pylatex
+- id: py-pylatexenc
+  name: py-pylatexenc
+  aliases: []
+  packages:
+  - spack:py-pylatexenc
 - id: py-pyld
   name: py-pyld
   aliases: []
@@ -49917,6 +49965,11 @@ entities:
   aliases: []
   packages:
   - spack:py-quart
+- id: py-quarto
+  name: py-quarto
+  aliases: []
+  packages:
+  - spack:py-quarto
 - id: py-quast
   name: py-quast
   aliases: []
@@ -51629,6 +51682,11 @@ entities:
   aliases: []
   packages:
   - spack:py-sshtunnel
+- id: py-ssm-simulators
+  name: py-ssm-simulators
+  aliases: []
+  packages:
+  - spack:py-ssm-simulators
 - id: py-sspilib
   name: py-sspilib
   aliases: []
@@ -53908,6 +53966,7 @@ entities:
   name: qoi
   aliases: []
   packages:
+  - bazel:qoi
   - conan:qoi
   - vcpkg:qoi
   - xmake:qoi
@@ -55670,6 +55729,11 @@ entities:
   aliases: []
   packages:
   - spack:r-callr
+- id: r-capushe
+  name: r-capushe
+  aliases: []
+  packages:
+  - spack:r-capushe
 - id: r-car
   name: r-car
   aliases: []
@@ -59275,6 +59339,11 @@ entities:
   aliases: []
   packages:
   - spack:r-rgraphviz
+- id: r-rhandsontable
+  name: r-rhandsontable
+  aliases: []
+  packages:
+  - spack:r-rhandsontable
 - id: r-rhdf5
   name: r-rhdf5
   aliases: []
@@ -61127,6 +61196,7 @@ entities:
   name: raygui
   aliases: []
   packages:
+  - conan:raygui
   - vcpkg:raygui
   - xmake:raygui
 - id: rayleigh
@@ -61366,6 +61436,7 @@ entities:
   aliases: []
   packages:
   - conan:rectpack2d
+  - vcpkg:rectpack2d
 - id: recycle
   name: recycle
   aliases: []
@@ -62583,6 +62654,7 @@ entities:
   name: rubberband
   aliases: []
   packages:
+  - conan:rubberband
   - meson:rubberband
   - vcpkg:rubberband
   - xmake:rubberband
@@ -62883,6 +62955,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_cpan
+- id: rules-csharp
+  name: rules_csharp
+  aliases: []
+  packages:
+  - bazel:rules_csharp
 - id: rules-cuda
   name: rules_cuda
   aliases: []
@@ -63213,6 +63290,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_latex_host
+- id: rules-layer-optimizer
+  name: rules_layer_optimizer
+  aliases: []
+  packages:
+  - bazel:rules_layer_optimizer
 - id: rules-libusb
   name: rules_libusb
   aliases: []
@@ -66636,6 +66718,7 @@ entities:
   aliases: []
   packages:
   - vcpkg:sqlpp23
+  - xmake:sqlpp23
 - id: sqoop
   name: sqoop
   aliases: []
@@ -67860,6 +67943,7 @@ entities:
   name: sz
   aliases: []
   packages:
+  - conan:sz
   - spack:sz
   - vcpkg:sz
 - id: sz-cpp
@@ -71267,6 +71351,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:vsgimgui
+- id: vsgpoints
+  name: vsgpoints
+  aliases: []
+  packages:
+  - vcpkg:vsgpoints
 - id: vsgqt
   name: vsgqt
   aliases: []
@@ -73747,6 +73836,13 @@ entities:
   - conan:zbar
   - vcpkg:mchehab-zbar
   - xmake:zbar
+- id: libzchunk
+  name: zchunk
+  aliases:
+  - libzchunk
+  packages:
+  - bazel:zchunk
+  - xmake:libzchunk
 - id: zenoh-c
   name: zenoh-c
   aliases: []

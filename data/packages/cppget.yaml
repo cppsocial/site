@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: cppget
 repository: https://pkg.cppget.org/1/
-revision: b0ad50434bbc06c1a7e26cd4228d5e6afb8b908b07f3cb75abfa543993b64074
+revision: 730157949abe08ccb11dd1930d51090401edf65dd5d84dc649695ea932692edc
 packages:
 - id: cppget:Eigen
   registry: cppget
@@ -2987,6 +2987,18 @@ packages:
       url: https://pkg.cppget.org/1/stable/entt/entt-3.9.0.tar.gz
       checksums:
       - sha256:b6b1fc951fa8a4621ea2632878e9fbe0adf8a9d2ce35b6b29b8675f3f21788c9
+  - version: 4.0.0
+    channel: testing
+    summary: Modern C++ Entity-Component-System (ECS) library
+    description: <p>[]\ (https://github.com/skypjack/entt/actions)</p><p>&gt; EnTT has been a dream so far, we haven't found a single bug to date and\ it's &gt; super easy to work with &gt; &gt; -- Every EnTT User Ever</p>
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/entt/entt-4.0.0.tar.gz
+      checksums:
+      - sha256:28ba497bb8420616657b69451b98a1beb4c040cff0bb92b4079875e077e9f0af
   recipe_url: https://cppget.org/entt
 - id: cppget:enum_set
   registry: cppget
@@ -3970,9 +3982,9 @@ packages:
   - build2
   - libglslang
   versions:
-  - version: 16.5.0+1
+  - version: 16.5.0+2
     upstream_version: 16.5.0
-    packaging_revision: '1'
+    packaging_revision: '2'
     channel: testing
     dependencies:
     - name: bpkg
@@ -3980,9 +3992,9 @@ packages:
     - name: libglslang
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/glslang/glslang-tools-16.5.0+1.tar.gz
+      url: https://pkg.cppget.org/1/testing/glslang/glslang-tools-16.5.0+2.tar.gz
       checksums:
-      - sha256:e8629a35a40212df0e0399be0692c6d5d76aab71683b778459b7c72e0be2d4b8
+      - sha256:edd49051c20c1eb641e31abacf5d6c702f551b2df6cc2b313fd3bad4aa2f3abe
   recipe_url: https://cppget.org/glslang-tools
 - id: cppget:gmock
   registry: cppget
@@ -20391,6 +20403,19 @@ packages:
       url: https://pkg.cppget.org/1/testing/fineftp-server/libfineftp-server-1.5.1.tar.gz
       checksums:
       - sha256:0a419f8dfced6bcc4efad594d1bf295250862e9f3d792cf6ba901350f8a86304
+  - version: 1.6.0
+    channel: testing
+    summary: FTP server library for Windows and Unix flavors
+    description: <p>FineFTP is a minimal FTP server library for Windows and Unix flavors. The\ project is CMake based and only depends on asio, which is integrated as git\ submodule. No boost is required.</p><p>You can easily embed this library into your own project in order to create an\ embedded FTP Server. It was developed and tested on Windows 10 (Visual\ Studio 2015 and newer, MinGW) and Ubuntu 18.04 - 22.04 (gcc 7.4.0 - 11.2.0).\ It should also run fine on macOS.</p>
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libasio
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/fineftp-server/libfineftp-server-1.6.0.tar.gz
+      checksums:
+      - sha256:1b600a2735d880f9feb22867b76492787f87ed8ef69f0ffb333fa313b7e10b15
   recipe_url: https://cppget.org/libfineftp-server
 - id: cppget:libfreetype
   registry: cppget
@@ -21257,9 +21282,9 @@ packages:
   - build2
   - libspirv-tools
   versions:
-  - version: 16.5.0+1
+  - version: 16.5.0+2
     upstream_version: 16.5.0
-    packaging_revision: '1'
+    packaging_revision: '2'
     channel: testing
     dependencies:
     - name: bpkg
@@ -21267,9 +21292,9 @@ packages:
     - name: libspirv-tools
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/glslang/libglslang-16.5.0+1.tar.gz
+      url: https://pkg.cppget.org/1/testing/glslang/libglslang-16.5.0+2.tar.gz
       checksums:
-      - sha256:52dc107de7f508394a65b64830c4e6d0911591306092b0a63e7c06126f4e798b
+      - sha256:fb93e3d6cab0dce107f55287a92090a7072326bcd5f155c018b233c4f542c4ff
   recipe_url: https://cppget.org/libglslang
 - id: cppget:libhalf
   registry: cppget
@@ -26465,6 +26490,39 @@ packages:
       checksums:
       - sha256:3e5a2d6afece0dbe40659b6817252248a8fe484154ffa40be3fad536e2cab124
   recipe_url: https://cppget.org/libnng
+- id: cppget:libnode-api-headers
+  registry: cppget
+  name: libnode-api-headers
+  summary: Node-API C headers for building Node.js native addons
+  description: '<p>Introduction-Contributing-Code of Conduct-Install-API-Creating a release-Team-License</p><p>node-api-headers contains the header files for the C-based Node-API provided by Node.js. Node-API is an API for building native addons that guarantees the ABI (Application Binary Interface) stability across versions of Node.js (see: Node-API).</p>'
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/nodejs/node-api-headers
+  repository_url: https://github.com/nodejs/node-api-headers
+  documentation_url: https://nodejs.org/api/n-api.html
+  topics:
+  - Node.js, Node-API, native addon
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.9.0+1
+    upstream_version: 1.9.0
+    packaging_revision: '1'
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/node-api-headers/libnode-api-headers-1.9.0+1.tar.gz
+      checksums:
+      - sha256:dd89b6d1c12435ec7c7a6918bf8e3027658583bee92137361f27906f87c5ccb7
+  recipe_url: https://cppget.org/libnode-api-headers
 - id: cppget:libnvvm
   registry: cppget
   name: libnvvm
@@ -27655,7 +27713,7 @@ packages:
   registry: cppget
   name: libpng
   summary: The official PNG reference C library
-  description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz or if you want UNIX-style line endings in the text files, or lpng.7z or lpng.zip if you want DOS-style line endings.</p>
+  description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz or if you want UNIX-style line endings in the text files, or lpng*.7z or lpng*.zip if you want DOS-style line endings.</p>
   description_format: html
   licenses:
   - libpng-2.0; PNG reference library version 2
@@ -27683,7 +27741,7 @@ packages:
     upstream_version: 1.6.58
     packaging_revision: '2'
     channel: testing
-    description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz if you want UNIX-style line endings in the text files, or lpng.7z or lpng.zip if you want DOS-style line endings.</p>
+    description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz if you want UNIX-style line endings in the text files, or lpng*.7z or lpng*.zip if you want DOS-style line endings.</p>
     dependencies:
     - name: bpkg
     - name: build2
@@ -30738,7 +30796,7 @@ packages:
     upstream_version: 0.7.3
     packaging_revision: '1'
     channel: alpha
-    description: <p>text __ __ _ __ | \/ | () | | / <strong><em>_| _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ </em>|/ _ | |/ | | | | ' \| | | | ' ` _ \ | | | | | | | | | (| | (| | | ( | |_| | | | || | | | | | | | |</strong><strong>|| || || ||<em>,|_, ||</em></strong>| |<strong><em>_</em><em>|| ||</em>,|| || || </strong>| <em>/ | |</em>/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
+    description: <p>text __ __ _ ______ _____ | \/ | () | | / | _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ |/ _ | |/ | | | | ' \| | | | ' ` _ \ | | |_ | | | | | | (| | (| | | ( | || | | | || | | | | | | | |____|| || || ||<em>,|</em>, ||<em>| ||| ||</em>,|| || || _| / | |/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
     dependencies:
     - name: bpkg
     - name: build2
@@ -30749,7 +30807,7 @@ packages:
       - sha256:c57cd73ce94d9e06dfde9f50a98c0f773647636a79306c6f91cc2043eb3a266d
   - version: 0.8.1
     channel: alpha
-    description: <p>text __ __ _ __ | \/ | () | | / <strong><em>_| _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ </em>|/ _ | |/ | | | | ' \| | | | ' ` _ \ | | | | | | | | | (| | (| | | ( | |_| | | | || | | | | | | | |</strong><strong>|| || || ||<em>,|_, ||</em></strong>| |<strong><em>_</em><em>|| ||</em>,|| || || </strong>| <em>/ | |</em>/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
+    description: <p>text __ __ _ ______ _____ | \/ | () | | / | _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ |/ _ | |/ | | | | ' \| | | | ' ` _ \ | | |_ | | | | | | (| | (| | | ( | || | | | || | | | | | | | |____|| || || ||<em>,|</em>, ||<em>| ||| ||</em>,|| || || _| / | |/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
     dependencies:
     - name: bpkg
     - name: build2
@@ -30791,7 +30849,7 @@ packages:
     upstream_version: 0.7.3
     packaging_revision: '1'
     channel: alpha
-    description: <p>text __ __ _ __ | \/ | () | | / <strong><em>_| _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ </em>|/ _ | |/ | | | | ' \| | | | ' ` _ \ | | | | | | | | | (| | (| | | ( | |_| | | | || | | | | | | | |</strong><strong>|| || || ||<em>,|_, ||</em></strong>| |<strong><em>_</em><em>|| ||</em>,|| || || </strong>| <em>/ | |</em>/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
+    description: <p>text __ __ _ ______ _____ | \/ | () | | / | _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ |/ _ | |/ | | | | ' \| | | | ' ` _ \ | | |_ | | | | | | (| | (| | | ( | || | | | || | | | | | | | |____|| || || ||<em>,|</em>, ||<em>| ||| ||</em>,|| || || _| / | |/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
     dependencies:
     - name: bpkg
     - name: build2
@@ -30803,7 +30861,7 @@ packages:
       - sha256:dcb97a4c3d89092e591ed75ca4e2f1149d970ecde704ecb05ded7d260745b392
   - version: 0.8.1
     channel: alpha
-    description: <p>text __ __ _ __ | \/ | () | | / <strong><em>_| _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ </em>|/ _ | |/ | | | | ' \| | | | ' ` _ \ | | | | | | | | | (| | (| | | ( | |_| | | | || | | | | | | | |</strong><strong>|| || || ||<em>,|_, ||</em></strong>| |<strong><em>_</em><em>|| ||</em>,|| || || </strong>| <em>/ | |</em>/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
+    description: <p>text __ __ _ ______ _____ | \/ | () | | / | _ | \ / | __ _ __ _ _ ___ | | _ __ _ _ _ __ ___ | | | | | | | |\/| |/ |/ _ | |/ | | | | ' \| | | | ' ` _ \ | | |_ | | | | | | (| | (| | | ( | || | | | || | | | | | | | |____|| || || ||<em>,|</em>, ||<em>| ||| ||</em>,|| || || _| / | |/</p><p>Header-only C++17 library provides static reflection for enums, work with any\ enum type without any macro or boilerplate code.</p>
     dependencies:
     - name: bpkg
     - name: build2
@@ -32371,6 +32429,19 @@ packages:
       url: https://pkg.cppget.org/1/stable/pugixml/pugixml-1.12.1.tar.gz
       checksums:
       - sha256:15c878096befcafb7b08f8a4ca4bed45029ffe4a5e409e219ac8889e021b681b
+  - version: 1.12.1+1
+    upstream_version: 1.12.1
+    packaging_revision: '1'
+    channel: testing
+    description: <p>pugixml \ \</p><p>pugixml is a C++ XML processing library, which consists of a DOM-like\ interface with rich traversal/modification capabilities, an extremely fast XML parser which constructs the DOM tree from\ an XML file/buffer, and an XPath 1.0 implementation for complex data-driven tree queries. Full Unicode support is\ also available, with Unicode interface variants and conversions between different Unicode encodings (which happen\ automatically during parsing/saving).</p>
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/pugixml/pugixml-1.12.1+1.tar.gz
+      checksums:
+      - sha256:0df9abf396171294007c9ef063e56b3ea14adb0dd34b9dcea841a7e0a7587f6d
   recipe_url: https://cppget.org/pugixml
 - id: cppget:pxart
   registry: cppget

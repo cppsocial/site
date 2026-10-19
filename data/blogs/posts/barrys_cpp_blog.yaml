@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: QPzpWxLrQv6eROcx
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: Generating Operator Functions
+  url: https://brevzin.github.io/c++/2026/10/14/push-vs-pull-ii/
+  published: 2026-10-14 05:00:00+00:00
+  updated: 2026-10-14 18:01:06+00:00
+  description: In a previous post, I discussed the differences between push-based and pull-based customization in the context of trying to implement support for formatting and structured bindings. For those problems, pull-based customization (adding an annotation to a type and having a partial…
+  tags:
+  - c++
 - post_id: s9ANKPrsQGAUep0c
   source_id: barrys_cpp_blog
   source_title: Barry's C++ Blog

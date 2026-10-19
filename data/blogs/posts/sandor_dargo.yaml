@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: TOTD83eWT6n_dNGI
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26 Ranges: Four New Views'
+  url: https://www.sandordargo.com/blog/2026/10/14/cpp26-ranges-part-1-new-views
+  published: 2026-10-13 22:00:00+00:00
+  updated: 2026-10-13 22:00:00+00:00
+  description: C++20 shipped a powerful ranges library, but the set of view adaptors had some obvious gaps. Want to get the output as a container? No luck. At least C++23 helped with that. Want to iterate over two vectors as one sequence? Write your own. Want to avoid redundant evaluations in…
+  tags:
+  - dev
 - post_id: fW6FeNlgKlmJkW0j
   source_id: sandor_dargo
   source_title: Sandor Dargo's Blog

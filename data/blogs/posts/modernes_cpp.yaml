@@ -1,5 +1,14 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: lMCRmXJ7L49OKgf1
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'The Problem with C++ Safety (Part 1): Why “It Works” Isn’t Good Enough'
+  url: https://www.modernescpp.com/index.php/cpp-and-memory-safety-part-1/
+  published: 2026-10-18 13:58:39+00:00
+  description: Rainer Grimm’s blog continues. In this first article of a new series, Klaus Iglberger looks at why C++ is called memory unsafe and argues that the real problem isn’t the language itself, but how we write and teach it.
+  tags:
+  - Safety
 - post_id: j2w1k_kF6EN4mXoA
   source_id: modernes_cpp
   source_title: Modernes C++

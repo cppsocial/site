@@ -1,5 +1,55 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: 5jvZ4ieWbTU1dTNL
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ futures part 5: std::future and std::shared_future'
+  url: https://devblogs.microsoft.com/oldnewthing/20261016-00/?p=112778/
+  published: 2026-10-16 14:00:00+00:00
+  description: 'Getting the results back out. The post C++ futures part 5: <CODE>std::<WBR>future</CODE> and <CODE>std::<WBR>shared_future</CODE> appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: ZNY9DorHc5__CR_j
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ futures part 4: What if I want an immediate on-thread std::async?'
+  url: https://devblogs.microsoft.com/oldnewthing/20261015-00/?p=112776/
+  published: 2026-10-15 14:00:00+00:00
+  description: 'Providing the case that the C++ language won''t do. The post C++ futures part 4: What if I want an immediate on-thread <CODE>std::async</CODE>? appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: yawqw9KExRPrVwaV
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ futures part 3: The mental model for std::async'
+  url: https://devblogs.microsoft.com/oldnewthing/20261014-00/?p=112774/
+  published: 2026-10-14 14:00:00+00:00
+  description: 'Doing things later in different ways. The post C++ futures part 3: The mental model for <CODE>std::async</CODE> appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: 7C1BudRapsZ-Qf2l
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ futures part 2: The mental model for std::promise, std::packaged_task'
+  url: https://devblogs.microsoft.com/oldnewthing/20261013-00/?p=112769/
+  published: 2026-10-13 14:00:00+00:00
+  description: 'Building things out of the state. The post C++ futures part 2: The mental model for <CODE>std::promise</CODE>, <CODE>std::packaged_task</CODE> appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
+- post_id: s0mW_zxk59gvGVoq
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: 'C++ futures part 1: The mental model'
+  url: https://devblogs.microsoft.com/oldnewthing/20261012-00/?p=112767/
+  published: 2026-10-12 14:00:00+00:00
+  description: 'Managing a value that is produced later. The post C++ futures part 1: The mental model appeared first on The Old New Thing .'
+  tags:
+  - Code
+  - Old New Thing
 - post_id: bOzUoGjjH8Q85SA_
   source_id: oldnewthing
   source_title: The Old New Thing

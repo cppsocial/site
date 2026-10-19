@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: hCDged6kuJa70Q36
+  source_id: ganetsky
+  source_title: Braden++
+  title: I can't use generic lambdas at compile-time, now what?
+  url: https://blog.ganets.ky/ClangGenericLambdas/
+  published: 2026-10-11 00:00:00+00:00
+  description: This is a direct follow-up to my previous article, “Break MSVC and Clang with this one weird trick!”. In that article, I showed a solution for the problem in MSVC, but the problem in Clang seemed a lot more involved.As of the time of writing, the problem in Clang still hasn’t be…
+  tags:
+  - k3tchup
+  - tok3n
 - post_id: OeII_uz46xNGKvK2
   source_id: ganetsky
   source_title: Braden++

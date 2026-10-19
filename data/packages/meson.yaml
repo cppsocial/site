@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: meson
 repository: https://github.com/mesonbuild/wrapdb
-revision: f7a6fa7e0940e9d81978bfd50f95ef3b2103cfa9
+revision: 3db35f869fe7bd496ad651904b342093a971e7b3
 packages:
 - id: meson:abseil-cpp
   registry: meson
@@ -6041,12 +6041,19 @@ packages:
     capabilities:
     - cpp-httplib
     artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.60.1.tar.gz
-      checksums:
-      - sha256:f42fc046e55f968a9dd43b272251f033b08538d3e359235608f980f551053215
-      filename: cpp-httplib-0.60.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.60.1-1/cpp-httplib.wrap
+  - version: 0.61.0
+    packaging_revision: '1'
+    capabilities:
+    - cpp-httplib
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.61.0.tar.gz
+      checksums:
+      - sha256:f03bdb0bee4911d6db0335bc103f0f441ae70c527e993c1f4b3f177586b042d3
+      filename: cpp-httplib-0.61.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.61.0-1/cpp-httplib.wrap
   - version: 0.8.9
     packaging_revision: '2'
     capabilities:
@@ -8382,6 +8389,13 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/freetype2_2.14.3-1/freetype2.wrap
+  - version: 2.15.0
+    packaging_revision: '1'
+    capabilities:
+    - freetype2
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/freetype2_2.15.0-1/freetype2.wrap
   - version: 2.9.1
     packaging_revision: '2'
     capabilities:
@@ -11954,6 +11968,17 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/imgui_1.92.5-1/imgui.wrap
+  - version: 1.92.8
+    packaging_revision: '2'
+    capabilities:
+    - imgui
+    artifacts:
+    - url: https://github.com/ocornut/imgui/archive/refs/tags/v1.92.8.tar.gz
+      checksums:
+      - sha256:fecb33d33930e12ff53a34064e9d3a06c8f7c3e04408f14cd36c80e3faac863b
+      filename: imgui-1.92.8.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/imgui_1.92.8-2/imgui.wrap
   - version: 1.92.8
     packaging_revision: '1'
     capabilities:
@@ -20956,12 +20981,19 @@ packages:
     capabilities:
     - libpkgconf
     artifacts:
-    - url: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.7.tar.xz
-      checksums:
-      - sha256:c926ff491cbd9a331a589160811bd97ab1749b4d5198a519338f2cdfabe6940a
-      filename: pkgconf-3.0.7.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.7-1/pkgconf.wrap
+  - version: 3.0.9
+    packaging_revision: '1'
+    capabilities:
+    - libpkgconf
+    artifacts:
+    - url: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.9.tar.xz
+      checksums:
+      - sha256:6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd
+      filename: pkgconf-3.0.9.tar.xz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.9-1/pkgconf.wrap
   recipe_path: subprojects/pkgconf.wrap
 - id: meson:protobuf
   registry: meson
@@ -21899,12 +21931,19 @@ packages:
     capabilities:
     - quill
     artifacts:
-    - url: https://github.com/odygrd/quill/archive/refs/tags/v13.0.0.tar.gz
-      checksums:
-      - sha256:88b4a1542125577a4d51cf444c51e34d63618c422ba6a4fa9bd23894b49d696b
-      filename: quill-13.0.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/quill_13.0.0-1/quill.wrap
+  - version: 13.1.0
+    packaging_revision: '1'
+    capabilities:
+    - quill
+    artifacts:
+    - url: https://github.com/odygrd/quill/archive/refs/tags/v13.1.0.tar.gz
+      checksums:
+      - sha256:a08b93bafc7e712b28eb47e4a1ed9b60fc01ac7fad3ce269f1f100560a506a85
+      filename: quill-13.1.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/quill_13.1.0-1/quill.wrap
   - version: 4.2.0
     packaging_revision: '1'
     capabilities:
@@ -23263,6 +23302,13 @@ packages:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sdl3_3.4.12-1/sdl3.wrap
   - version: 3.4.14
+    packaging_revision: '2'
+    capabilities:
+    - sdl3
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/sdl3_3.4.14-2/sdl3.wrap
+  - version: 3.4.14
     packaging_revision: '1'
     capabilities:
     - sdl3
@@ -24566,6 +24612,13 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sqlite3_3.54.0-1/sqlite3.wrap
+  - version: 3.54.1
+    packaging_revision: '1'
+    capabilities:
+    - sqlite3
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/sqlite3_3.54.1-1/sqlite3.wrap
   recipe_path: subprojects/sqlite3.wrap
 - id: meson:sqlitecpp
   registry: meson

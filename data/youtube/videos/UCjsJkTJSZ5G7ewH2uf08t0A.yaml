@@ -1,5 +1,24 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: 1Ech8ILGutI
+  title: Creative Theming in QML
+  url: https://www.youtube.com/shorts/1Ech8ILGutI
+  published: 2026-10-15 08:16:31+00:00
+  updated: 2026-10-15 21:25:02+00:00
+  description: 'How much room should a UI framework leave for ideas that don''t fit today''s conventions?
+
+
+    Watch the whole video! in which KDAB designer Nuno Pinheiro shares his experiments with theming in QM - from Inkscape mockups to a working prototype.'
+  thumbnail_url: https://i2.ytimg.com/vi/1Ech8ILGutI/hqdefault.jpg
+- video_id: pZ22_PxGtV0
+  title: How Much Freedom Should a UI Framework Give You? A QML Theming Experiment
+  url: https://www.youtube.com/watch?v=pZ22_PxGtV0
+  published: 2026-10-14 06:30:23+00:00
+  updated: 2026-10-14 13:56:39+00:00
+  description: "How much room should a UI framework leave for ideas that don't fit today's conventions?\n\nIn this video, KDAB designer Nuno Pinheiro shares his experiments with theming in QML. He follows one idea from Inkscape mockups to a working prototype. It has real transparency, a texture lit by a light that follows the mouse, and buttons that deform when you press them.\n\nHe then walks through the code, built with Shape, a styled Qt Quick Controls Button and MultiEffect. Along the way, he looks at the cost of flexibility and argues that good tools should leave room for exploration, including bad ideas.\n\nChapters\n00:00 Introduction and motivation\n04:58 The cost of flexibility\n07:12 Concept mockups in Inkscape\n10:04 The live QML prototype\n14:31 Code walkthrough\n20:39 Why exploration matters\n24:32 Conclusion\n\nLinks  \nPaula Scher Ted Talk: https://www.youtube.com/watch?v=atn22-bmTPU\n\nAbout the host:\nNuno Pinheiro, Senior UX/UI Designer at KDAB\n\nNuno Pinheiro is a Portuguese\
+    \ graphic designer and illustrator. He is best known for leading KDE’s award-winning Oxygen project, which defined the look of the Plasma 4 desktop. At KDAB since 2009, he specializes in QML prototyping and UI design, and also teaches design workshops.\n\nEvery month our newsletter is featuring technical blogs on Qt, C++ and 3D topics: https://www.kdab.com/development-resources/sign-up-for-our-newsletter/    \n\nAbout KDAB:   \nTrusted software excellence across embedded and desktop platforms      \n\nThe KDAB Group is a globally recognized provider for software consulting, development and training, specializing in embedded devices and complex cross-platform desktop applications. In addition to being leading experts in Qt, C++ and 3D technologies for over two decades, KDAB provides deep expertise across the stack, including Linux, Rust and modern UI frameworks. https://www.kdab.com/software-services.      \n\nKDAB experts regularly take time out to deliver KDAB’s world class training,\
+    \ in-house or at open enrollment courses around the world. We are the market leaders for training in Qt/QML, Modern C++, Rust and OpenGL. https://training.kdab.com/      \n\nWith over 100 employees from 20 countries and offices in Sweden, Germany, USA, France and UK, we serve clients around the world. https://www.kdab.com/about/contact/"
+  thumbnail_url: https://i1.ytimg.com/vi/pZ22_PxGtV0/hqdefault.jpg
 - video_id: m6gOag_Rtdg
   title: 'Embedded C++ development in CLion: Toolchains, CMake, and Remote Debugging'
   url: https://www.youtube.com/watch?v=m6gOag_Rtdg

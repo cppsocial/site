@@ -1566,6 +1566,11 @@ entities:
   packages:
   - spack:arpack-ng
   - vcpkg:arpack-ng
+- id: array-record
+  name: array_record
+  aliases: []
+  packages:
+  - bazel:array_record
 - id: arrayfire
   name: arrayfire
   aliases:
@@ -2074,6 +2079,11 @@ entities:
   aliases: []
   packages:
   - spack:atop
+- id: attica
+  name: attica
+  aliases: []
+  packages:
+  - vcpkg:attica
 - id: attr
   name: attr
   aliases: []
@@ -5260,6 +5270,7 @@ entities:
   name: bqlog
   aliases: []
   packages:
+  - vcpkg:bqlog
   - xmake:bqlog
 - id: bracken
   name: bracken
@@ -5806,6 +5817,11 @@ entities:
   aliases: []
   packages:
   - conan:caches
+- id: cadical
+  name: cadical
+  aliases: []
+  packages:
+  - bazel:cadical
 - id: cadons-ctus
   name: cadons-ctus
   aliases: []
@@ -6009,6 +6025,7 @@ entities:
   name: casadi
   aliases: []
   packages:
+  - conan:casadi
   - vcpkg:casadi
 - id: casbin
   name: casbin
@@ -6508,6 +6525,11 @@ entities:
   aliases: []
   packages:
   - spack:chaco
+- id: chadwick
+  name: chadwick
+  aliases: []
+  packages:
+  - vcpkg:chadwick
 - id: chafa
   name: chafa
   aliases: []
@@ -7265,6 +7287,7 @@ entities:
   name: cnats
   aliases: []
   packages:
+  - bazel:cnats
   - conan:cnats
   - vcpkg:cnats
   - xmake:cnats
@@ -7940,6 +7963,11 @@ entities:
   aliases: []
   packages:
   - spack:countdown
+- id: countly-sdk-cpp
+  name: countly-sdk-cpp
+  aliases: []
+  packages:
+  - vcpkg:countly-sdk-cpp
 - id: covfie
   name: covfie
   aliases: []
@@ -8991,6 +9019,11 @@ entities:
   aliases: []
   packages:
   - bazel:cucumber-cpp
+- id: cucumberswift-expressions
+  name: cucumberswift_expressions
+  aliases: []
+  packages:
+  - bazel:cucumberswift_expressions
 - id: cuda
   name: cuda
   aliases: []
@@ -9583,8 +9616,10 @@ entities:
   - xmake:daw_json_link
 - id: dawn
   name: dawn
-  aliases: []
+  aliases:
+  - emdawnwebgpu
   packages:
+  - bazel:emdawnwebgpu
   - vcpkg:dawn
   - xmake:dawn
 - id: daxa
@@ -11425,6 +11460,7 @@ entities:
   name: enchantum
   aliases: []
   packages:
+  - conan:enchantum
   - vcpkg:enchantum
 - id: energyplus
   name: energyplus
@@ -16646,6 +16682,11 @@ entities:
   packages:
   - spack:hashcat
   - xmake:hashcat
+- id: hashes-bzl
+  name: hashes.bzl
+  aliases: []
+  packages:
+  - bazel:hashes.bzl
 - id: hashids
   name: hashids
   aliases: []
@@ -17124,6 +17165,11 @@ entities:
   aliases: []
   packages:
   - spack:hipfft
+- id: hipfile
+  name: hipfile
+  aliases: []
+  packages:
+  - spack:hipfile
 - id: hipfort
   name: hipfort
   aliases: []
@@ -19493,6 +19539,11 @@ entities:
   aliases: []
   packages:
   - spack:kbd
+- id: kbookmarks
+  name: kbookmarks
+  aliases: []
+  packages:
+  - vcpkg:kbookmarks
 - id: kbproto
   name: kbproto
   aliases: []
@@ -19514,6 +19565,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:kcodecs
+- id: kcompletion
+  name: kcompletion
+  aliases: []
+  packages:
+  - vcpkg:kcompletion
 - id: kconfig
   name: kconfig
   aliases: []
@@ -20084,6 +20140,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:knncolle-kmknn
+- id: knotifications
+  name: knotifications
+  aliases: []
+  packages:
+  - vcpkg:knotifications
 - id: kokkos
   name: kokkos
   aliases: []
@@ -21880,6 +21941,7 @@ entities:
   name: libfido2
   aliases: []
   packages:
+  - conan:libfido2
   - vcpkg:libfido2
   - xmake:libfido2
 - id: libfirefly
@@ -24434,6 +24496,7 @@ entities:
   name: libsocketcan
   aliases: []
   packages:
+  - bazel:libsocketcan
   - conan:libsocketcan
 - id: libsodium
   name: libsodium
@@ -25683,6 +25746,7 @@ entities:
   name: libyang
   aliases: []
   packages:
+  - bazel:libyang
   - conan:libyang
 - id: libyogrt
   name: libyogrt
@@ -26013,12 +26077,15 @@ entities:
   - spack:lksctp-tools
 - id: llama-cpp
   name: llama-cpp
-  aliases:
-  - llama.cpp
+  aliases: []
   packages:
   - conan:llama-cpp
   - spack:llama-cpp
   - vcpkg:llama-cpp
+- id: llama-cpp-d39a6008
+  name: llama.cpp
+  aliases: []
+  packages:
   - xmake:llama.cpp
 - id: llfio
   name: llfio
@@ -26477,6 +26544,11 @@ entities:
   aliases: []
   packages:
   - spack:lua-luafilesystem
+- id: lua-luajit
+  name: lua-luajit
+  aliases: []
+  packages:
+  - spack:lua-luajit
 - id: lua-luaposix
   name: lua-luaposix
   aliases: []
@@ -26510,13 +26582,11 @@ entities:
   - vcpkg:luafilesystem
 - id: luajit
   name: luajit
-  aliases:
-  - lua-luajit
+  aliases: []
   packages:
   - bazel:luajit
   - conan:luajit
   - meson:luajit
-  - spack:lua-luajit
   - vcpkg:luajit
   - xmake:luajit
 - id: luasec
@@ -28922,6 +28992,11 @@ entities:
   aliases: []
   packages:
   - spack:mpsolve
+- id: mpss
+  name: mpss
+  aliases: []
+  packages:
+  - vcpkg:mpss
 - id: mpt
   name: mpt
   aliases: []
@@ -29122,6 +29197,7 @@ entities:
   name: msquic
   aliases: []
   packages:
+  - conan:msquic
   - vcpkg:msquic
   - xmake:msquic
 - id: msr-safe
@@ -29498,6 +29574,11 @@ entities:
   aliases: []
   packages:
   - conan:naive-tsearch
+- id: naja
+  name: naja
+  aliases: []
+  packages:
+  - bazel:naja
 - id: naja-if
   name: naja-if
   aliases: []
@@ -31880,11 +31961,21 @@ entities:
   aliases: []
   packages:
   - bazel:openconfig_gnoi
+- id: openconfig-gnpsi
+  name: openconfig_gnpsi
+  aliases: []
+  packages:
+  - bazel:openconfig_gnpsi
 - id: openconfig-gnsi
   name: openconfig_gnsi
   aliases: []
   packages:
   - bazel:openconfig_gnsi
+- id: openconfig-goyang
+  name: openconfig_goyang
+  aliases: []
+  packages:
+  - bazel:openconfig_goyang
 - id: opencore-amr
   name: opencore-amr
   aliases: []
@@ -36326,6 +36417,11 @@ entities:
   aliases: []
   packages:
   - spack:phist
+- id: phloem
+  name: phloem
+  aliases: []
+  packages:
+  - spack:phloem
 - id: phnt
   name: phnt
   aliases: []
@@ -37932,6 +38028,11 @@ entities:
   - spack:psimd
   - vcpkg:psimd
   - xmake:psimd
+- id: psimpl
+  name: psimpl
+  aliases: []
+  packages:
+  - bazel:psimpl
 - id: psipred
   name: psipred
   aliases: []
@@ -38687,6 +38788,11 @@ entities:
   aliases: []
   packages:
   - spack:py-array-api-compat
+- id: py-array-api-extra
+  name: py-array-api-extra
+  aliases: []
+  packages:
+  - spack:py-array-api-extra
 - id: py-arrow
   name: py-arrow
   aliases: []
@@ -45638,6 +45744,11 @@ entities:
   aliases: []
   packages:
   - spack:py-mne-bids
+- id: py-mne-icalabel
+  name: py-mne-icalabel
+  aliases: []
+  packages:
+  - spack:py-mne-icalabel
 - id: py-mo-pack
   name: py-mo-pack
   aliases: []
@@ -52971,6 +53082,11 @@ entities:
   aliases: []
   packages:
   - spack:py-vcrpy
+- id: py-vcs-versioning
+  name: py-vcs-versioning
+  aliases: []
+  packages:
+  - spack:py-vcs-versioning
 - id: py-vcstool
   name: py-vcstool
   aliases: []
@@ -53956,7 +54072,6 @@ entities:
   aliases: []
   packages:
   - spack:qnnpack
-  - vcpkg:qnnpack
 - id: qoa
   name: qoa
   aliases: []
@@ -57354,6 +57469,16 @@ entities:
   aliases: []
   packages:
   - spack:r-htmlwidgets
+- id: r-htscluster
+  name: r-htscluster
+  aliases: []
+  packages:
+  - spack:r-htscluster
+- id: r-htsfilter
+  name: r-htsfilter
+  aliases: []
+  packages:
+  - spack:r-htsfilter
 - id: r-httpcode
   name: r-httpcode
   aliases: []
@@ -59434,6 +59559,11 @@ entities:
   aliases: []
   packages:
   - spack:r-rminer
+- id: r-rmixmod
+  name: r-rmixmod
+  aliases: []
+  packages:
+  - spack:r-rmixmod
 - id: r-rmpfr
   name: r-rmpfr
   aliases: []
@@ -63855,6 +63985,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_tf
+- id: rules-tofu
+  name: rules_tofu
+  aliases: []
+  packages:
+  - bazel:rules_tofu
 - id: rules-tsickle
   name: rules_tsickle
   aliases: []
@@ -64467,6 +64602,7 @@ entities:
   name: sciplot
   aliases: []
   packages:
+  - conan:sciplot
   - vcpkg:sciplot
 - id: scipoptsuite
   name: scipoptsuite
@@ -65711,6 +65847,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:slick-stream-buffer-multiplexer
+- id: slickquant-alpaca-cpp
+  name: slickquant-alpaca-cpp
+  aliases: []
+  packages:
+  - vcpkg:slickquant-alpaca-cpp
 - id: slickquant-hyperliquid-cpp
   name: slickquant-hyperliquid-cpp
   aliases: []
@@ -65782,6 +65923,11 @@ entities:
   aliases: []
   packages:
   - spack:smartmontools
+- id: smax-clib
+  name: smax-clib
+  aliases: []
+  packages:
+  - vcpkg:smax-clib
 - id: smee-client
   name: smee-client
   aliases: []
@@ -66257,6 +66403,7 @@ entities:
   name: sparrow-ipc
   aliases: []
   packages:
+  - conan:sparrow-ipc
   - vcpkg:sparrow-ipc
 - id: sparrowhawk
   name: sparrowhawk
@@ -66388,6 +66535,7 @@ entities:
   name: speexdsp
   aliases: []
   packages:
+  - conan:speexdsp
   - meson:speexdsp
   - spack:speexdsp
   - vcpkg:speexdsp
@@ -69783,6 +69931,7 @@ entities:
   name: trng
   aliases: []
   packages:
+  - conan:trng
   - spack:trng
 - id: troldal-zippy
   name: troldal-zippy
@@ -70456,6 +70605,7 @@ entities:
   - openusd
   packages:
   - bazel:openusd
+  - conan:openusd
   - vcpkg:usd
   - xmake:usd
 - id: usearch
@@ -71126,6 +71276,11 @@ entities:
   - conan:vincentlaucsb-csv-parser
   - vcpkg:vincentlaucsb-csv-parser
   - xmake:csvparser
+- id: vins-z-backtesting-engine
+  name: vins-z-backtesting-engine
+  aliases: []
+  packages:
+  - vcpkg:vins-z-backtesting-engine
 - id: vir-simd
   name: vir-simd
   aliases: []
@@ -73999,6 +74154,7 @@ entities:
   name: zmij
   aliases: []
   packages:
+  - conan:zmij
   - vcpkg:zmij
   - xmake:zmij
 - id: zmqpb
@@ -74205,6 +74361,7 @@ entities:
   - libzycore-tests
   - zycore-c
   packages:
+  - conan:zycore
   - cppget:libzycore
   - cppget:libzycore-tests
   - meson:zycore
@@ -74216,6 +74373,7 @@ entities:
   aliases:
   - libzydis
   packages:
+  - conan:zydis
   - cppget:libzydis
   - meson:zydis
   - spack:zydis

@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: meson
 repository: https://github.com/mesonbuild/wrapdb
-revision: 3db35f869fe7bd496ad651904b342093a971e7b3
+revision: 8c1b13c0a587ffaaa4750b0f42f68a935f1b903a
 packages:
 - id: meson:abseil-cpp
   registry: meson
@@ -6048,12 +6048,19 @@ packages:
     capabilities:
     - cpp-httplib
     artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.61.0.tar.gz
-      checksums:
-      - sha256:f03bdb0bee4911d6db0335bc103f0f441ae70c527e993c1f4b3f177586b042d3
-      filename: cpp-httplib-0.61.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.61.0-1/cpp-httplib.wrap
+  - version: 0.63.0
+    packaging_revision: '1'
+    capabilities:
+    - cpp-httplib
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.63.0.tar.gz
+      checksums:
+      - sha256:44ab42e16926e95f7641d286bc90d739ab1c16886114d7cc5bc7a9f905c5edf8
+      filename: cpp-httplib-0.63.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.63.0-1/cpp-httplib.wrap
   - version: 0.8.9
     packaging_revision: '2'
     capabilities:
@@ -20017,12 +20024,19 @@ packages:
     capabilities:
     - openh264
     artifacts:
-    - url: https://github.com/cisco/openh264/archive/refs/tags/v2.6.0.tar.gz
-      checksums:
-      - sha256:558544ad358283a7ab2930d69a9ceddf913f4a51ee9bf1bfb9e377322af81a69
-      filename: openh264-2.6.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/openh264_2.6.0-1/openh264.wrap
+  - version: 2.7.0
+    packaging_revision: '1'
+    capabilities:
+    - openh264
+    artifacts:
+    - url: https://github.com/cisco/openh264/archive/refs/tags/v2.7.0.tar.gz
+      checksums:
+      - sha256:5178775c8b440073e70920e97d195efff721c0e56d0a78cc82c919e95d54924d
+      filename: openh264-2.7.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/openh264_2.7.0-1/openh264.wrap
   recipe_path: subprojects/openh264.wrap
 - id: meson:openssl
   registry: meson
@@ -20948,6 +20962,17 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.1-1/pkgconf.wrap
+  - version: 3.0.10
+    packaging_revision: '1'
+    capabilities:
+    - libpkgconf
+    artifacts:
+    - url: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.10.tar.xz
+      checksums:
+      - sha256:9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de
+      filename: pkgconf-3.0.10.tar.xz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.10-1/pkgconf.wrap
   - version: 3.0.3
     packaging_revision: '1'
     capabilities:
@@ -20988,10 +21013,6 @@ packages:
     capabilities:
     - libpkgconf
     artifacts:
-    - url: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.9.tar.xz
-      checksums:
-      - sha256:6ab2d3b8087dcf500e34003a6a8934dca55d0a3d6066aeafb03c352db3e68bfd
-      filename: pkgconf-3.0.9.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.9-1/pkgconf.wrap
   recipe_path: subprojects/pkgconf.wrap
@@ -23653,6 +23674,13 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/slirp_4.9.5-1/slirp.wrap
+  - version: 4.9.6
+    packaging_revision: '1'
+    capabilities:
+    - slirp
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/slirp_4.9.6-1/slirp.wrap
   recipe_path: subprojects/slirp.wrap
 - id: meson:snitch
   registry: meson

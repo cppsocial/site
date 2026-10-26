@@ -27713,7 +27713,7 @@ packages:
   registry: cppget
   name: libpng
   summary: The official PNG reference C library
-  description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz or if you want UNIX-style line endings in the text files, or lpng*.7z or lpng*.zip if you want DOS-style line endings.</p>
+  description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz or if you want UNIX-style line endings in the text files, or lpng.7z or lpng.zip if you want DOS-style line endings.</p>
   description_format: html
   licenses:
   - libpng-2.0; PNG reference library version 2
@@ -27741,7 +27741,7 @@ packages:
     upstream_version: 1.6.58
     packaging_revision: '2'
     channel: testing
-    description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz if you want UNIX-style line endings in the text files, or lpng*.7z or lpng*.zip if you want DOS-style line endings.</p>
+    description: <p>See the note about version numbers near the top of png.h. See INSTALL for instructions on how to install libpng.</p><p>Libpng comes in several distribution formats. Get libpng-.tar.gz or libpng-.tar.xz if you want UNIX-style line endings in the text files, or lpng.7z or lpng.zip if you want DOS-style line endings.</p>
     dependencies:
     - name: bpkg
     - name: build2

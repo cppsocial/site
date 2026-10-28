@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: MQyfzgH6jtsjB3i4
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26 Ranges: Better Infrastructure'
+  url: https://www.sandordargo.com/blog/2026/10/21/cpp26-ranges-part-2-infrastructure
+  published: 2026-10-20 22:00:00+00:00
+  updated: 2026-10-20 22:00:00+00:00
+  description: 'C++26 ranges isn’t only about new view adaptors. Three changes landed that don’t give you new ways to compose pipelines but fix real problems: containers can now reserve space for lazy ranges that don’t know their exact size, <random> finally works with ranges, and ranges::to no…'
+  tags:
+  - dev
 - post_id: TOTD83eWT6n_dNGI
   source_id: sandor_dargo
   source_title: Sandor Dargo's Blog

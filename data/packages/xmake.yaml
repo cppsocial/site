@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: 46a5f3595b8d824b5073e6948a3de1586fb22b83
+revision: 58f6e9c1bd2e930aadb332fec7c37281edd798b3
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -575,6 +575,11 @@ packages:
     artifacts:
     - url: https://github.com/ada-url/ada.git
     - url: https://github.com/ada-url/ada/archive/refs/tags/v3.4.4.tar.gz
+  - version: v4.0.0
+    upstream_version: 4.0.0
+    artifacts:
+    - url: https://github.com/ada-url/ada.git
+    - url: https://github.com/ada-url/ada/archive/refs/tags/v4.0.0.tar.gz
   recipe_path: packages/a/ada/xmake.lua
 - id: xmake:adaptive_cpp
   registry: xmake
@@ -4756,6 +4761,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-mqtt.git
     - url: https://github.com/awslabs/aws-c-mqtt/archive/refs/tags/v1.1.1.tar.gz
+  - version: v1.1.2
+    upstream_version: 1.1.2
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-mqtt.git
+    - url: https://github.com/awslabs/aws-c-mqtt/archive/refs/tags/v1.1.2.tar.gz
   recipe_path: packages/a/aws-c-mqtt/xmake.lua
 - id: xmake:aws-c-s3
   registry: xmake
@@ -5054,6 +5064,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-sdkutils.git
     - url: https://github.com/awslabs/aws-c-sdkutils/archive/refs/tags/v1.0.0.tar.gz
+  - version: v1.0.1
+    upstream_version: 1.0.1
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-sdkutils.git
+    - url: https://github.com/awslabs/aws-c-sdkutils/archive/refs/tags/v1.0.1.tar.gz
   recipe_path: packages/a/aws-c-sdkutils/xmake.lua
 - id: xmake:aws-checksums
   registry: xmake
@@ -5331,6 +5346,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-crt-cpp.git
     - url: https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.43.9.tar.gz
+  - version: v0.44.2
+    upstream_version: 0.44.2
+    artifacts:
+    - url: https://github.com/awslabs/aws-crt-cpp.git
+    - url: https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.44.2.tar.gz
   recipe_path: packages/a/aws-crt-cpp/xmake.lua
 - id: xmake:aws-lc
   registry: xmake
@@ -5515,6 +5535,11 @@ packages:
     artifacts:
     - url: https://github.com/aws/aws-lc.git
     - url: https://github.com/aws/aws-lc/archive/refs/tags/v5.11.0.tar.gz
+  - version: v5.12.0
+    upstream_version: 5.12.0
+    artifacts:
+    - url: https://github.com/aws/aws-lc.git
+    - url: https://github.com/aws/aws-lc/archive/refs/tags/v5.12.0.tar.gz
   - version: v5.3.0
     upstream_version: 5.3.0
     artifacts:
@@ -5614,6 +5639,10 @@ packages:
     artifacts:
     - url: https://github.com/aws/aws-sdk-cpp.git
     - url: https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.850.tar.gz
+  - version: 1.11.916
+    artifacts:
+    - url: https://github.com/aws/aws-sdk-cpp.git
+    - url: https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.916.tar.gz
   recipe_path: packages/a/aws-sdk-cpp/xmake.lua
 - id: xmake:b2
   registry: xmake
@@ -10054,6 +10083,10 @@ packages:
     artifacts:
     - url: https://github.com/artem-ogre/CDT.git
     - url: https://github.com/artem-ogre/CDT/archive/refs/tags/2.0.0.tar.gz
+  - version: 2.0.1
+    artifacts:
+    - url: https://github.com/artem-ogre/CDT.git
+    - url: https://github.com/artem-ogre/CDT/archive/refs/tags/2.0.1.tar.gz
   recipe_path: packages/c/cdt/xmake.lua
 - id: xmake:cef
   registry: xmake
@@ -13725,6 +13758,11 @@ packages:
     artifacts:
     - url: https://github.com/yhirose/cpp-httplib.git
     - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.59.0.tar.gz
+  - version: v0.63.0
+    upstream_version: 0.63.0
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib.git
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.63.0.tar.gz
   - version: v0.8.5
     upstream_version: 0.8.5
     artifacts:
@@ -14466,6 +14504,11 @@ packages:
     - url: https://github.com/danmar/cppcheck/archive/refs/tags/2.21.1.tar.gz
       checksums:
       - sha256:ba750bd872ad7c01f951ff2d9dc8c68ea5852654545ec7a62a4c318d690c8e22
+  - version: 2.22.0
+    artifacts:
+    - url: https://github.com/danmar/cppcheck/archive/refs/tags/2.22.0.tar.gz
+      checksums:
+      - sha256:d74945deb2d50393430e07596b766f8a779512c7f60dac2a30ea64e059ece57b
   recipe_path: packages/c/cppcheck/xmake.lua
 - id: xmake:cppcodec
   registry: xmake
@@ -16196,7 +16239,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x55e761e86480'
+    default: 'table: 0x561d44a9aab0'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -17468,6 +17511,9 @@ packages:
     description: Enable the Direct3D 11 backend.
   - name: d3d12
     description: Enable the Direct3D 12 backend.
+  - name: glfw
+    description: Enable GLFW windowing utilities.
+    default: 'false'
   - name: metal
     description: Enable the Metal backend.
   - name: opengl
@@ -18863,6 +18909,11 @@ packages:
     artifacts:
     - url: https://github.com/facebookincubator/dispenso.git
     - url: https://github.com/facebookincubator/dispenso/archive/refs/tags/v1.4.0.tar.gz
+  - version: v1.6.2
+    upstream_version: 1.6.2
+    artifacts:
+    - url: https://github.com/facebookincubator/dispenso.git
+    - url: https://github.com/facebookincubator/dispenso/archive/refs/tags/v1.6.2.tar.gz
   recipe_path: packages/d/dispenso/xmake.lua
 - id: xmake:distorm
   registry: xmake
@@ -24093,7 +24144,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x55e75d147be0'
+    default: 'table: 0x561d30797670'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -24103,7 +24154,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x55e75d3dae50'
+    default: 'table: 0x561d30643920'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -29786,6 +29837,11 @@ packages:
     - url: https://go.dev/dl/go1.26.1.linux-amd64.tar.gz
       checksums:
       - sha256:031f088e5d955bab8657ede27ad4e3bc5b7c1ba281f05f245bcc304f327c987a
+  - version: 1.26.10
+    artifacts:
+    - url: https://go.dev/dl/go1.26.10.linux-amd64.tar.gz
+      checksums:
+      - sha256:ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5
   - version: 1.26.2
     artifacts:
     - url: https://go.dev/dl/go1.26.2.linux-amd64.tar.gz
@@ -29831,6 +29887,11 @@ packages:
     - url: https://go.dev/dl/go1.27.1.linux-amd64.tar.gz
       checksums:
       - sha256:63d339f0da5ab53635a56f2490a7984dfe12dfcff22ad749f63edaf590168445
+  - version: 1.27.3
+    artifacts:
+    - url: https://go.dev/dl/go1.27.3.linux-amd64.tar.gz
+      checksums:
+      - sha256:65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40
   recipe_path: packages/g/go/xmake.lua
 - id: xmake:gobject-introspection
   registry: xmake
@@ -29996,7 +30057,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x55e77259ffd0'
+    default: 'table: 0x561d44c61890'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -32445,7 +32506,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x55e7683b91f0'
+    default: 'table: 0x561d3bcffeb0'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -36503,6 +36564,10 @@ packages:
     artifacts:
     - url: https://github.com/pboettch/json-schema-validator.git
     - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.4.0.tar.gz
+  - version: 2.4.1
+    artifacts:
+    - url: https://github.com/pboettch/json-schema-validator.git
+    - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.4.1.tar.gz
   recipe_path: packages/j/json-schema-validator/xmake.lua
 - id: xmake:json.h
   registry: xmake
@@ -42690,6 +42755,11 @@ packages:
     artifacts:
     - url: https://github.com/libigl/libigl.git
     - url: https://github.com/libigl/libigl/archive/refs/tags/v2.6.0.tar.gz
+  - version: v2.6.4
+    upstream_version: 2.6.4
+    artifacts:
+    - url: https://github.com/libigl/libigl.git
+    - url: https://github.com/libigl/libigl/archive/refs/tags/v2.6.4.tar.gz
   recipe_path: packages/l/libigl/xmake.lua
 - id: xmake:libimagequant
   registry: xmake
@@ -44908,6 +44978,10 @@ packages:
     artifacts:
     - url: https://github.com/open-quantum-safe/liboqs.git
     - url: https://github.com/open-quantum-safe/liboqs/archive/refs/tags/0.15.0.tar.gz
+  - version: 0.16.0
+    artifacts:
+    - url: https://github.com/open-quantum-safe/liboqs.git
+    - url: https://github.com/open-quantum-safe/liboqs/archive/refs/tags/0.16.0.tar.gz
   recipe_path: packages/l/liboqs/xmake.lua
 - id: xmake:libp11
   registry: xmake
@@ -58149,10 +58223,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x55e775011f30'
+    default: 'table: 0x561d480f2910'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x55e7750129b0'
+    default: 'table: 0x561d480f3330'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -68781,6 +68855,10 @@ packages:
     artifacts:
     - url: https://github.com/orocos/orocos_kinematics_dynamics.git
     - url: https://github.com/orocos/orocos_kinematics_dynamics/archive/refs/tags/1.5.3.tar.gz
+  - version: 1.5.4
+    artifacts:
+    - url: https://github.com/orocos/orocos_kinematics_dynamics.git
+    - url: https://github.com/orocos/orocos_kinematics_dynamics/archive/refs/tags/1.5.4.tar.gz
   recipe_path: packages/o/orocos-kdl/xmake.lua
 - id: xmake:osip
   registry: xmake
@@ -75352,6 +75430,11 @@ packages:
     artifacts:
     - url: https://github.com/odygrd/quill.git
     - url: https://github.com/odygrd/quill/archive/refs/tags/v12.0.0.tar.gz
+  - version: v13.1.0
+    upstream_version: 13.1.0
+    artifacts:
+    - url: https://github.com/odygrd/quill.git
+    - url: https://github.com/odygrd/quill/archive/refs/tags/v13.1.0.tar.gz
   - version: v2.8.0
     upstream_version: 2.8.0
     artifacts:
@@ -75784,6 +75867,11 @@ packages:
     artifacts:
     - url: https://github.com/d99kris/rapidcsv.git
     - url: https://github.com/d99kris/rapidcsv/archive/refs/tags/v8.92.zip
+  - version: v9.07
+    upstream_version: '9.07'
+    artifacts:
+    - url: https://github.com/d99kris/rapidcsv.git
+    - url: https://github.com/d99kris/rapidcsv/archive/refs/tags/v9.07.zip
   recipe_path: packages/r/rapidcsv/xmake.lua
 - id: xmake:rapidfuzz
   registry: xmake
@@ -77422,6 +77510,8 @@ packages:
   registry: xmake
   name: riscv32-esp-elf
   summary: crosstool-NG with support for RISC-V (esp32c*/esp32h*/esp32p4)
+  description: crosstool-NG with support for RISC-V (esp32c/esp32h/esp32p4)
+  description_format: html
   licenses:
   - GPL-3.0-with-GCC-exception
   homepage: https://github.com/espressif/crosstool-NG
@@ -87164,7 +87254,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x55e75fb5fef0'
+    default: 'table: 0x561d317f5a40'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -89221,6 +89311,11 @@ packages:
     artifacts:
     - url: https://github.com/wolfpld/tracy.git
     - url: https://github.com/wolfpld/tracy/archive/refs/tags/v0.13.1.tar.gz
+  - version: v0.14.1
+    upstream_version: 0.14.1
+    artifacts:
+    - url: https://github.com/wolfpld/tracy.git
+    - url: https://github.com/wolfpld/tracy/archive/refs/tags/v0.14.1.tar.gz
   - version: v0.8.2
     upstream_version: 0.8.2
     artifacts:
@@ -90183,7 +90278,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x55e770920410'
+    default: 'table: 0x561d4032f1f0'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -90573,6 +90668,11 @@ packages:
     artifacts:
     - url: https://github.com/upa-url/upa.git
     - url: https://github.com/upa-url/upa/archive/refs/tags/v2.5.0.tar.gz
+  - version: v2.6.0
+    upstream_version: 2.6.0
+    artifacts:
+    - url: https://github.com/upa-url/upa.git
+    - url: https://github.com/upa-url/upa/archive/refs/tags/v2.6.0.tar.gz
   recipe_path: packages/u/upa-url/xmake.lua
 - id: xmake:urdfdom
   registry: xmake
@@ -93844,7 +93944,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x55e781d18cd0'
+    default: 'table: 0x561d55acfc80'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -94437,6 +94537,10 @@ packages:
     artifacts:
     - url: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.48/downloads/wayland-protocols-1.48.tar.xz
     - url: https://wayland.freedesktop.org/releases/wayland-protocols-1.48.tar.xz
+  - version: '1.49'
+    artifacts:
+    - url: https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.49/downloads/wayland-protocols-1.49.tar.xz
+    - url: https://wayland.freedesktop.org/releases/wayland-protocols-1.49.tar.xz
   recipe_path: packages/w/wayland-protocols/xmake.lua
 - id: xmake:webdriverxx
   registry: xmake
@@ -96897,6 +97001,10 @@ packages:
     artifacts:
     - url: https://github.com/brechtsanders/xlsxio.git
     - url: https://github.com/brechtsanders/xlsxio/archive/refs/tags/0.2.36.tar.gz
+  - version: 0.2.37
+    artifacts:
+    - url: https://github.com/brechtsanders/xlsxio.git
+    - url: https://github.com/brechtsanders/xlsxio/archive/refs/tags/0.2.37.tar.gz
   recipe_path: packages/x/xlsxio/xmake.lua
 - id: xmake:xmlto
   registry: xmake
@@ -98433,6 +98541,10 @@ packages:
     artifacts:
     - url: https://github.com/ibireme/yyjson.git
     - url: https://github.com/ibireme/yyjson/archive/refs/tags/0.12.0.tar.gz
+  - version: 0.13.0
+    artifacts:
+    - url: https://github.com/ibireme/yyjson.git
+    - url: https://github.com/ibireme/yyjson/archive/refs/tags/0.13.0.tar.gz
   - version: 0.2.0
     artifacts:
     - url: https://github.com/ibireme/yyjson.git
@@ -98556,7 +98668,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x55e76b1c11f0'
+    default: 'table: 0x561d36798f40'
   versions:
   - version: 0.23.93
     artifacts:

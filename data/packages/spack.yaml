@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: 7ec9e6d2fb15b25c9af9dbfcfe605abee603f2c3
+revision: ec33c8840c64bd5449f34d9f42fd96790ddb7569
 packages:
 - id: spack:3dtk
   registry: spack
@@ -4304,6 +4304,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2d30a43594c55067297947b0ec83300e4f2899497464c5cc6f142c823f3ea1b2
+  - version: 2.2.0
+    artifacts:
+    - checksums:
+      - sha256:b38dc3f461da261a746956bd84ae85c62a9b3ef13c078c94bceb9783ae94d1f2
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/alpaka/package.py
 - id: spack:alpgen
@@ -26704,13 +26708,19 @@ packages:
     - checksums:
       - sha256:64dfd5b1026700e0a0a324964749da9adc69ae5e51e899bf16ff47d6fd0e9a5e
   - version: '2026-03-19'
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:b6e66569cc3d438dd5abe514d0df50005d570bfc96c14dca8f768d020cb96171
   - version: '2026-05-14'
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:86a1f3366afac7c6f8ae9f3c779ac221129328c43f0ab2b8817eb2f362a5025c
+  - version: '2026-10-20'
+    artifacts:
+    - checksums:
+      - sha256:796f1389bfea13c0ed78f663b765baaff54a508e5483786bd6ece73c5e3e3cbe
   recipe_path: repos/spack_repo/builtin/packages/ca_certificates_mozilla/package.py
 - id: spack:cabana
   registry: spack
@@ -27469,6 +27479,10 @@ packages:
   - name: python
     constraint: python
     kind: build
+  - name: python
+    constraint: python@:3.14
+    kind: build
+    condition: '@:2.15'
   - name: python
     constraint: python@3
     kind: build,link,run
@@ -31566,13 +31580,21 @@ packages:
     artifacts:
     - checksums:
       - sha256:988d94f80d723506bd061fbdfecdce2412afab37f7b5cf01a379a458a8799234
+  - version: 2.6.5
+    artifacts:
+    - checksums:
+      - sha256:bbb58a519b463aa54477346794754a9936f2f09059a83fa9c82e76f1a13a5caf
+  - version: 2.6.6
+    artifacts:
+    - checksums:
+      - sha256:ed95f4ba9e5125e93a7c190185700e8cfb91da66991288a6d4a526e84d735f66
   recipe_path: repos/spack_repo/builtin/packages/cdo/package.py
 - id: spack:cdt
   registry: spack
   name: cdt
   summary: CDT is a C++ library for generating constraint or conforming Delaunay triangulations.
   licenses:
-  - MPL-2.0-no-copyleft-exception
+  - MPL-2.0 AND BSD-3-Clause AND Apache-2.0 WITH LLVM-exception
   homepage: https://artem-ogre.github.io/CDT
   repository_url: https://github.com/artem-ogre/cdt
   maintainers:
@@ -31647,6 +31669,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:81ed0c7a8cbdc059b26948a160c3ce68c7a147976334093fe3175c8fa161a447
+  - version: 2.0.1
+    artifacts:
+    - checksums:
+      - sha256:5e3c45715e55b5f2d4390082c8c1ac026f635ddee233516fdcf94b197954367d
   recipe_path: repos/spack_repo/builtin/packages/cdt/package.py
 - id: spack:ceed
   registry: spack
@@ -31998,6 +32024,7 @@ packages:
   - cxx
   - dd4hep
   - g4vg
+  - googletest
   - hepmc3
   - nlohmann-json
   - python
@@ -32026,6 +32053,9 @@ packages:
   - name: g4vg
     constraint: 'g4vg@1.0.2:'
     condition: '@0.6: +geant4 +vecgeom'
+  - name: googletest
+    constraint: googletest
+    kind: test
   - name: hepmc3
     constraint: hepmc3
     condition: +hepmc3
@@ -32054,9 +32084,11 @@ packages:
   - hepmc3
   - openmp
   - perfetto
+  - real_type
   - root
   - shared
   - swig
+  - units
   - vecgeom
   default_options:
     covfie: 'true'
@@ -32068,9 +32100,11 @@ packages:
     hepmc3: 'true'
     openmp: 'false'
     perfetto: 'false'
+    real_type: double
     root: 'false'
     shared: 'true'
     swig: 'false'
+    units: clhep
     vecgeom: 'true'
   features:
   - name: covfie
@@ -32103,6 +32137,13 @@ packages:
     description: Use Perfetto profiling
     default: 'false'
     condition: '@0.5:'
+  - name: real_type
+    description: Floating point precision
+    values:
+    - double
+    - float
+    default: double
+    condition: '@0.4:'
   - name: root
     description: Use ROOT I/O
     default: 'false'
@@ -32113,6 +32154,14 @@ packages:
     description: Generate SWIG Python bindings
     default: 'false'
     condition: '@:0.4'
+  - name: units
+    description: Native unit system
+    values:
+    - cgs
+    - clhep
+    - si
+    default: clhep
+    condition: '@0.5:'
   - name: vecgeom
     description: Use VecGeom geometry
     default: 'true'
@@ -34853,6 +34902,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e30fc1e921e5cbf3406e792d5b0ca5f211c5d8ffbfc56e56d5501d8118abcaf6
+  - version: 8.1.0
+    artifacts:
+    - checksums:
+      - sha256:cc078d3c2fbffcdae04dad00b6c3fc71dce27fb359edb39739c720b8867e6f7e
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/charmpp/package.py
 - id: spack:chatterbug
@@ -36366,14 +36419,14 @@ packages:
   - precompiled
   default_options:
     pic: 'true'
-    precompiled: 'false'
+    precompiled: 'true'
   features:
   - name: pic
     description: Produce position-independent code
     default: 'true'
   - name: precompiled
     description: Library is compiled into a static library
-    default: 'false'
+    default: 'true'
   versions:
   - version: 1.9.1
     artifacts:
@@ -36423,6 +36476,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c02abe5c5fed9b9c9192bff3c74d2c0d19755253f9ca9e3c44484c1cf5ce6568
+  - version: 2.7.2
+    artifacts:
+    - checksums:
+      - sha256:46eef3101da70852ec7af026e09d485ccee81813331c8c6052d39344443b83da
   recipe_path: repos/spack_repo/builtin/packages/cli11/package.py
 - id: spack:clinfo
   registry: spack
@@ -37264,10 +37321,6 @@ packages:
     artifacts:
     - checksums:
       - sha256:65f765bb87c8019316cabe67cbe5e8f45ede334eeb5afd161ca6874d17994e0d
-  - version: 3.31.11
-    artifacts:
-    - checksums:
-      - sha256:c0a3b3f2912b2166f522d5010ffb6029d8454ee635f5ad7a3247e0be7f9a15c9
   - version: 3.31.12
     preferred: true
     artifacts:
@@ -37305,42 +37358,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:50ce77215cf266630fa5de97c360f4c313bb79f94b35236b63c1216de3196356
-  - version: 4.2.3
-    artifacts:
-    - checksums:
-      - sha256:7efaccde8c5a6b2968bad6ce0fe60e19b6e10701a12fce948c2bf79bac8a11e9
-  - version: 4.2.4
-    artifacts:
-    - checksums:
-      - sha256:93e02d41330250d12362541c63963a469e7c24fb894fab6dbb30082a0a1f0edd
   - version: 4.2.8
     artifacts:
     - checksums:
       - sha256:f1fbcf2756029e14fb4ff37b4582d6c81a51f43d5ffa7b0849fccbf53cf39bf9
-  - version: 4.3.3
-    artifacts:
-    - checksums:
-      - sha256:cba4bb7a44edf2877bb6f059932896383babe435b3a8c3b5df48b4aa41c9bb85
-  - version: 4.3.4
-    artifacts:
-    - checksums:
-      - sha256:fdeff897b9eb49d764539f2b1edc6eb7e1440df325678a97c1978499e931adda
   - version: 4.3.5
     artifacts:
     - checksums:
       - sha256:24fc974191ef48da4ff309671fdb5989f43e07ecde0e2589eaf9d72672d8612b
-  - version: 4.4.1
-    artifacts:
-    - checksums:
-      - sha256:95d4721f3625fb0d9d6ca480dd59a46c84b4c157f7fadd2e9b179ef9c871174d
-  - version: 4.4.2
-    artifacts:
-    - checksums:
-      - sha256:1db9e61e60b6e0874c86386340b910382f3c5e75b9fbfb44d122063129a2789d
-  - version: 4.4.3
-    artifacts:
-    - checksums:
-      - sha256:c46400618b4f1f2b43507f24fb22f3ae830c3416cf23b776e16e1d413aa892f0
   - version: 4.4.4
     artifacts:
     - checksums:
@@ -39066,12 +39091,6 @@ packages:
   licenses:
   - Apache-2.0
   homepage: https://commons.apache.org/proper/commons-lang/
-  dependencies:
-  - java
-  dependency_details:
-  - name: java
-    constraint: 'java@2:'
-    kind: run
   versions:
   - version: '2.4'
     artifacts:
@@ -39091,12 +39110,6 @@ packages:
   licenses:
   - Apache-2.0
   homepage: https://commons.apache.org/proper/commons-lang/
-  dependencies:
-  - java
-  dependency_details:
-  - name: java
-    constraint: 'java@7:'
-    kind: run
   versions:
   - version: 3.12.0
     artifacts:
@@ -39120,12 +39133,6 @@ packages:
   licenses:
   - Apache-2.0
   homepage: https://commons.apache.org/proper/commons-logging/
-  dependencies:
-  - java
-  dependency_details:
-  - name: java
-    constraint: java
-    kind: run
   versions:
   - version: 1.1.1
     artifacts:
@@ -48553,7 +48560,7 @@ packages:
   - name: expat
     constraint: expat
   - name: glib
-    constraint: glib
+    constraint: 'glib@2.6:'
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -48566,6 +48573,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:7d550dccdfcd286e33895501829ed971eeb65c614e73aadb4a08aeef719b143a
+  - version: '0.116'
+    artifacts:
+    - checksums:
+      - sha256:e3f3d4487e2883800770ed5899ed111bdc4ba7056af34a255c4c46ad8a2486f3
   recipe_path: repos/spack_repo/builtin/packages/dbus_glib/package.py
 - id: spack:dbxtool
   registry: spack
@@ -49354,6 +49365,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2a335eac5061c77f9b0a770176f2d8dc7343f24b7c44bb7ec5e1f2f92cbe6a61
+  - version: 0.17.0
+    artifacts:
+    - checksums:
+      - sha256:90a96ee1e5e0521847a754822baf1179af6f62a12eb3103d640a872eea12a109
   - version: 0.7.0
     artifacts:
     - checksums:
@@ -50199,12 +50214,17 @@ packages:
   - mkrack
   dependencies:
   - c
+  - cmake
   - cxx
   - py-torch
   dependency_details:
   - name: c
     constraint: c
     kind: build
+  - name: cmake
+    constraint: 'cmake@3.25.2:'
+    kind: build
+    condition: '@3.1.1:'
   - name: cxx
     constraint: cxx
     kind: build
@@ -50261,6 +50281,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4387128aab98d9819b3484957a8857030f805cbab90c035c509ea87a72b182fa
+  - version: 3.2.0
+    artifacts:
+    - checksums:
+      - sha256:37a86e487c9d4fd3dff497cbbb3cdecc346b01a3381dc65545ffe5182aa5e030
   recipe_path: repos/spack_repo/builtin/packages/deepmdkit/package.py
 - id: spack:dejagnu
   registry: spack
@@ -58347,6 +58371,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:14165219c74c48549cdd1ad7ea5e3cf0e7bed86688a1e037fde39a51d2e7edd0
+  - version: '1.2'
+    artifacts:
+    - checksums:
+      - sha256:de20ce7ac6af486224fd9ffaa2c9dd367ad89cf55f19cd47f83459fde2d9b1c9
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/edm4hep/package.py
 - id: spack:eem
@@ -58805,6 +58833,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3307b104c205399786edbba203906de9517e36297709fe747faf9478d55fbb91
+  - version: '3.12'
+    artifacts:
+    - checksums:
+      - sha256:caf49f3bf55a9c99c98ebea4b05c79281875783802e892729eea0415505f68c4
   - version: '3.7'
     artifacts:
     - checksums:
@@ -62939,7 +62971,7 @@ packages:
   homepage: https://github.com/stamatak/ExaML
   repository_url: https://github.com/stamatak/examl
   maintainers:
-  - robqiao
+  - manifestoso
   dependencies:
   - c
   - mpi
@@ -66124,6 +66156,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:9a4154163e72041dee3fdde9cb24e814625e178091a8734a6ad5375e5371b423
+  - version: 3.5.2
+    artifacts:
+    - checksums:
+      - sha256:0b8884a394186a39bd27cef0645a65dd0398d695ae20d29e0559294ee2a44de7
+  - version: 3.5.3
+    artifacts:
+    - checksums:
+      - sha256:279cce38e6ba01811b2f1913e582e50c3845acf68e97f92413ed45ac4bb8de9c
   recipe_path: repos/spack_repo/builtin/packages/fastjet/package.py
 - id: spack:fastjson
   registry: spack
@@ -67886,7 +67926,7 @@ packages:
   homepage: https://feqparse.fluidnumerics.com
   repository_url: https://github.com/fluidnumerics/feq-parse
   maintainers:
-  - fluidnumerics-joe
+  - fluidnumericsJoe
   dependencies:
   - cmake
   - fortran
@@ -70582,7 +70622,7 @@ packages:
   homepage: https://github.com/szaghi/FLAP
   repository_url: https://github.com/szaghi/flap
   maintainers:
-  - fluidnumerics-joe
+  - fluidnumericsJoe
   dependencies:
   - fortran
   dependency_details:
@@ -71939,7 +71979,7 @@ packages:
   homepage: https://self.fluidnumerics.com
   repository_url: https://github.com/fluidnumerics/self
   maintainers:
-  - fluidnumerics_joe
+  - fluidnumericsJoe
   - garrettbyrd
   dependencies:
   - c
@@ -73989,6 +74029,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f5f359d6332861bd497570848fcb42520964a9e83d5e3abe397b6b6db9bcaaf4
+  - version: 2.18.3
+    artifacts:
+    - checksums:
+      - sha256:4f7b554a38cdf78c033f666c8871f3749e14a094f65a07f630c91ed0b43d35e3
   recipe_path: repos/spack_repo/builtin/packages/fontconfig/package.py
 - id: spack:fontsproto
   registry: spack
@@ -76381,7 +76425,7 @@ packages:
   homepage: https://github.com/trixi-framework/FTObjectLibrary
   repository_url: https://github.com/trixi-framework/ftobjectlibrary
   maintainers:
-  - schoonovernumerics
+  - fluidnumericsJoe
   dependencies:
   - fortran
   dependency_details:
@@ -93762,7 +93806,7 @@ packages:
   homepage: https://github.com/arq5x/grabix
   repository_url: https://github.com/arq5x/grabix
   maintainers:
-  - robqiao
+  - manifestoso
   dependencies:
   - c
   - cxx
@@ -96247,6 +96291,18 @@ packages:
   - name: cp2k
     constraint: 'cp2k@8.1:'
     condition: +cp2k
+  - name: cuda
+    constraint: cuda@7:12
+    condition: '@2019.6 +cuda'
+  - name: cuda
+    constraint: cuda@11:12
+    condition: '@2024 +cuda'
+  - name: cuda
+    constraint: cuda@12.1:12
+    condition: '@2025.0:2025.2 +cuda'
+  - name: cuda
+    constraint: 'cuda@12.1:'
+    condition: '@2025.3: +cuda'
   - name: cuda
     constraint: cuda
     condition: +cuda
@@ -104881,7 +104937,6 @@ packages:
   dependencies:
   - c
   - cxx
-  - fortran
   - numactl
   dependency_details:
   - name: c
@@ -104889,9 +104944,6 @@ packages:
     kind: build
   - name: cxx
     constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
     kind: build
   - name: numactl
     constraint: numactl
@@ -105431,6 +105483,72 @@ packages:
     - checksums:
       - sha256:300cc50720d40bad7c7ed1f6d67e8c5ebecaba62c07a6ea1cc5813c0ea2e41b5
   recipe_path: repos/spack_repo/builtin/packages/hipfft/package.py
+- id: spack:hipfile
+  registry: spack
+  name: hipfile
+  summary: hipFile is AMD’s Infinity Storage library that provides direct-to-GPU I/O without requiring a host-side buffer. The library provides C and Python APIs for...
+  description: hipFile is AMD’s Infinity Storage library that provides direct-to-GPU I/O without requiring a host-side buffer. The library provides C and Python APIs for synchronous, asynchronous, and batch I/O operations. hipFile automatically falls back to POSIX I/O when operations are unable to use the direct-to-GPU path.
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/ROCm/rocm-systems
+  repository_url: https://github.com/rocm/rocm-systems
+  maintainers:
+  - afzpatel
+  - renjithravindrankannath
+  - srekolam
+  topics:
+  - rocm
+  dependencies:
+  - boost
+  - c
+  - cmake
+  - cxx
+  - util-linux
+  dependency_details:
+  - name: boost
+    constraint: boost+program_options
+    kind: build
+  - name: c
+    constraint: c
+    kind: build
+  - name: cmake
+    constraint: 'cmake@3.16.8:'
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: util-linux
+    constraint: util-linux
+  options:
+  - amdgpu_target
+  - rocm
+  default_options:
+    rocm: 'true'
+  features:
+  - name: amdgpu_target
+    description: AMD GPU architecture
+  - name: rocm
+    description: Enable ROCm support
+    default: 'true'
+  versions:
+  - version: 10.0.0
+    artifacts:
+    - checksums:
+      - sha256:f30517ed6d9e18cde104eb487f173e62fed0175083a9498ca383f8136a9f4eec
+  - version: 7.13.0
+    artifacts:
+    - checksums:
+      - sha256:86162d975c59c2f43eb79187378a9b10615db5c1d73441e7e0b7621a7ef8962c
+  - version: 7.14.0
+    artifacts:
+    - checksums:
+      - sha256:8cadf0d5c0f53f334b7b940a78619d1746c913b26ae719e2a09e20a6f7128330
+  - version: 7.2.3
+    artifacts:
+    - checksums:
+      - sha256:e90cfd8694af28a56433c8827a581ee12a4ba835f0d952436741d9e0f3f8685b
+  recipe_path: repos/spack_repo/builtin/packages/hipfile/package.py
 - id: spack:hipfort
   registry: spack
   name: hipfort
@@ -105758,7 +105876,6 @@ packages:
   dependencies:
   - cmake
   - cxx
-  - fortran
   - googletest
   - hip
   dependency_details:
@@ -105767,9 +105884,6 @@ packages:
     kind: build
   - name: cxx
     constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
     kind: build
   - name: googletest
     constraint: 'googletest@1.10.0:'
@@ -106928,7 +107042,7 @@ packages:
   homepage: https://github.com/trixi-framework/HOHQMesh
   repository_url: https://github.com/trixi-framework/hohqmesh
   maintainers:
-  - fluidnumerics-joe
+  - fluidnumericsJoe
   dependencies:
   - fortran
   - ftobjectlibrary
@@ -110308,6 +110422,7 @@ packages:
   - py-psutil
   - py-scipy
   - py-seaborn
+  - py-setuptools
   - python
   - samtools
   - spades
@@ -110370,6 +110485,10 @@ packages:
     constraint: py-seaborn
     kind: build,run
     condition: '@2.1:'
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+    condition: '@2.1:'
   - name: python
     constraint: 'python@2.7:'
     kind: build,run
@@ -110380,7 +110499,7 @@ packages:
   - name: samtools
     constraint: samtools
   - name: samtools
-    constraint: samtools@1.14
+    constraint: 'samtools@1.14:'
     condition: '@2.1:'
   - name: spades
     constraint: spades
@@ -110400,6 +110519,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ff358a560d6dbbec4fdac67457451cb4e6ca21b8661044c43902aa013d805e47
+  - version: 2.3.4
+    artifacts:
+    - checksums:
+      - sha256:2b4233af37f508342a420112a71416d5518b3fae7aec086680f35ee49e051180
   recipe_path: repos/spack_repo/builtin/packages/hybpiper/package.py
 - id: spack:hybrid-lambda
   registry: spack
@@ -114031,6 +114154,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/advisor.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.4.0
@@ -114134,6 +114259,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/oneccl.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - intel-oneapi-mpi
@@ -114264,6 +114391,8 @@ packages:
   summary: 'Intel oneAPI Compilers. Includes: icx, icpx, ifx, and ifort. Releases before 2024.0 include icc/icpc'
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - gcc languages=c,c
@@ -114301,6 +114430,8 @@ packages:
   summary: Relies on intel-oneapi-compilers to install the compilers, and configures modules for icc/icpc/ifort.
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   recipe_path: repos/spack_repo/builtin/packages/intel_oneapi_compilers_classic/package.py
 - id: spack:intel-oneapi-dal
@@ -114311,6 +114442,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onedal.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - tbb
@@ -114423,6 +114556,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onednn.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - tbb
@@ -114539,6 +114674,8 @@ packages:
   description_format: html
   homepage: https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compatibility-tool.html#gs.2p8km6
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2022.1.0
@@ -114615,6 +114752,8 @@ packages:
   homepage: https://github.com/oneapi-src/oneDPL
   repository_url: https://github.com/oneapi-src/onedpl
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.4.0
@@ -114706,6 +114845,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/inspector.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.3.0
@@ -114761,6 +114902,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/ipp.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - tbb
@@ -114869,6 +115012,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/ipp.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.1.1
@@ -114968,6 +115113,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/trace-analyzer.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.10.0
@@ -115011,6 +115158,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - mpi
@@ -115173,6 +115322,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/mpi-library.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   dependencies:
   - libfabric
@@ -115326,6 +115477,8 @@ packages:
   - https://intel.ly/393CijO
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   topics:
   - runtime
@@ -115358,6 +115511,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onetbb.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.1.1
@@ -115461,6 +115616,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onevpl.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.1.1
@@ -115504,6 +115661,8 @@ packages:
   description_format: html
   homepage: https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/vtune-profiler.html
   maintainers:
+  - lukaszstolarczuk
+  - rbanka1
   - rscohn2
   versions:
   - version: 2021.6.0
@@ -118583,6 +118742,10 @@ packages:
     constraint: gmake
     kind: build
   - name: go
+    constraint: 'go@1.26:'
+    kind: build
+    condition: '@0.30.0:'
+  - name: go
     constraint: 'go@1.25:'
     kind: build
     condition: '@0.27.4:'
@@ -118605,43 +118768,15 @@ packages:
     constraint: libseccomp
     kind: link
   versions:
-  - version: 0.23.0
+  - version: 0.30.1
     artifacts:
     - checksums:
-      - sha256:796679e13ece5f88dd7d4a4f40a27a87a6f3273085bb07043b258a612a4b43d3
-  - version: 0.24.1
+      - sha256:68c6093cfd5b7e87c78e1e577505357baec4a5c2d49d13e3cb33268965e07ff0
+  - version: 0.31.0
     artifacts:
     - checksums:
-      - sha256:fe1036fee2e97e38457212bf1246895803eeb6e1a6aa1ecd24eba1d3ea994029
-  - version: 0.24.2
-    artifacts:
-    - checksums:
-      - sha256:d2b8be464b88a92df0ad2ba1e846226b993c4162779432cb8366fb9bca5c40db
-  - version: 0.25.0
-    artifacts:
-    - checksums:
-      - sha256:20626ed931f5bf6ba1d5a2dd56af5793efa69a4f355bdac9b8bf742aaf806653
-  - version: 0.26.0
-    artifacts:
-    - checksums:
-      - sha256:da63c396726af313804da5ec3704ce3754ba3eef5ca267746b594422f542dbea
-  - version: 0.26.2
-    artifacts:
-    - checksums:
-      - sha256:23e1c7367eb1514ee0c7802123c5fd5559182acc2f84d76cf831b06e5ab39d7f
-  - version: 0.27.0
-    artifacts:
-    - checksums:
-      - sha256:1a530931bda840a421d361e07b4e956750c3e569c55244981bafdb8436530bf9
-  - version: 0.27.1
-    artifacts:
-    - checksums:
-      - sha256:15e506eeec62de1adb4a6547135f3fef6496898d8b6773f694c53bba6269614b
-  - version: 0.27.4
-    artifacts:
-    - checksums:
-      - sha256:3e9983015340c5e0572a8e64e8740f18386e3eccd7186264817b7e9db56cf6ee
-  - version: develop
+      - sha256:ac5f67196d403ebd9e8100783b2e5021e05f0026bb1debede89639eb8340ad4a
+  - version: main
   recipe_path: repos/spack_repo/builtin/packages/jacamar_ci/package.py
 - id: spack:jackcess
   registry: spack
@@ -118651,7 +118786,6 @@ packages:
   dependencies:
   - commons-lang
   - commons-logging
-  - java
   dependency_details:
   - name: commons-lang
     constraint: commons-lang@2.6
@@ -118669,9 +118803,6 @@ packages:
     constraint: commons-logging@1.1.1
     kind: run
     condition: '@1.2.14.3'
-  - name: java
-    constraint: java
-    kind: run
   versions:
   - version: 1.2.14.3
     artifacts:
@@ -119063,15 +119194,6 @@ packages:
   homepage: https://openjfx.io/
   maintainers:
   - snehring
-  dependencies:
-  - openjdk
-  dependency_details:
-  - name: openjdk
-    constraint: 'openjdk@17:'
-    condition: '@20:21'
-  - name: openjdk
-    constraint: 'openjdk@11:'
-    condition: '@17'
   recipe_path: repos/spack_repo/builtin/packages/javafx/package.py
 - id: spack:jbigkit
   registry: spack
@@ -123106,6 +123228,7 @@ packages:
   dependencies:
   - cmake
   - cxx
+  - googletest
   - hpx
   - intel-oneapi-dpl
   - kokkos-nvcc-wrapper
@@ -123126,6 +123249,10 @@ packages:
   - name: cxx
     constraint: cxx
     kind: build
+  - name: googletest
+    constraint: googletest@1.14:1
+    kind: test
+    condition: '@5:'
   - name: hpx
     constraint: 'hpx@1.7:'
     condition: +hpx
@@ -123880,6 +124007,7 @@ packages:
   - perl
   - rsync
   - wget
+  - zlib-api
   dependency_details:
   - name: c
     constraint: c
@@ -123900,6 +124028,9 @@ packages:
   - name: wget
     constraint: wget
     kind: run
+  - name: zlib-api
+    constraint: zlib-api
+    condition: build_system=cmake
   versions:
   - version: 2.0.6-beta
     artifacts:
@@ -123925,6 +124056,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4dc64ead045b5ae9180731c260046aa37b6642244be085a9ba9b15db78ab442d
+  - version: 2.17.2
+    artifacts:
+    - checksums:
+      - sha256:84ff95cd6d8a4c9e93ab6bf1d9b3892099baaefb0277bcf2edc3eb4948566035
   recipe_path: repos/spack_repo/builtin/packages/kraken2/package.py
 - id: spack:krakenuniq
   registry: spack
@@ -124012,7 +124147,7 @@ packages:
   repository_url: https://github.com/kratosmultiphysics/kratos
   maintainers:
   - loumalouomega
-  - pooyandadvand
+  - pooyan-dadvand
   - riccardorossi
   dependencies:
   - boost
@@ -126624,6 +126759,10 @@ packages:
   - name: texlive
     constraint: texlive
     kind: build,run
+  - name: texlive
+    constraint: texlive+dvipng
+    kind: build,run
+    condition: +png
   options:
   - gif
   - png
@@ -130350,29 +130489,18 @@ packages:
 - id: spack:libbeagle
   registry: spack
   name: libbeagle
-  summary: Beagle performs genotype calling, genotype phasing, imputation of ungenotyped markers, and identity-by-descent segment detection.
+  summary: BEAGLE is a high-performance library for evaluating phylogenetic likelihoods on CPUs and GPUs, used by programs such as BEAST and MrBayes.
   licenses:
   - LGPL-3.0-or-later
+  - MIT
   homepage: https://github.com/beagle-dev/beagle-lib
   repository_url: https://github.com/beagle-dev/beagle-lib
   dependencies:
-  - autoconf
-  - automake
   - c
   - cxx
   - java
-  - libtool
-  - m4
   - opencl
-  - pkgconfig
-  - subversion
   dependency_details:
-  - name: autoconf
-    constraint: autoconf
-    kind: build
-  - name: automake
-    constraint: automake
-    kind: build
   - name: c
     constraint: c
     kind: build
@@ -130382,21 +130510,9 @@ packages:
   - name: java
     constraint: java
     kind: build
-  - name: libtool
-    constraint: libtool
-    kind: build
-  - name: m4
-    constraint: m4
-    kind: build
   - name: opencl
     constraint: opencl
     condition: +opencl
-  - name: pkgconfig
-    constraint: pkgconfig
-    kind: build
-  - name: subversion
-    constraint: subversion
-    kind: build
   options:
   - cuda_arch
   - opencl
@@ -130419,6 +130535,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:dd872b484a3a9f0bce369465e60ccf4e4c0cd7bd5ce41499415366019f236275
+  - version: 4.0.1
+    artifacts:
+    - checksums:
+      - sha256:9d258cd9bedd86d7c28b91587acd1132f4e01d4f095c657ad4dc93bd83d4f120
   recipe_path: repos/spack_repo/builtin/packages/libbeagle/package.py
 - id: spack:libbeato
   registry: spack
@@ -131624,6 +131744,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:68757e37c567fd026330c8a8449aa5f9cac08a642f213f2687186b903bd7e94e
+  - version: '1.8'
+    artifacts:
+    - checksums:
+      - sha256:22e13253e652ec583ba0dd5b474bd9c7bd85dc724f2deb0d76a6299c421358ef
+  - version: 1.8.1
+    artifacts:
+    - checksums:
+      - sha256:e95798d2992a66ecd547ce3651d7e10642ff2211427c43a7238186ff4c372627
+  - version: 1.8.2
+    artifacts:
+    - checksums:
+      - sha256:8e71983761b08c65b15b769b3ec1d980036c461fdfd415c7183378a4b3eac8f4
   recipe_path: repos/spack_repo/builtin/packages/libconfig/package.py
 - id: spack:libconfuse
   registry: spack
@@ -133950,6 +134082,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f3a3082a23b37c293a4fcd1053147b371f2ff91fa7ea1b2a52e335676bac82dc
+  - version: 3.8.0
+    artifacts:
+    - checksums:
+      - sha256:7da3e2d9a171eb0a038f592ecad3ff2bb2550f3496d87b3b29ad0cf4430c0db4
   recipe_path: repos/spack_repo/builtin/packages/libffi/package.py
 - id: spack:libffs
   registry: spack
@@ -135132,7 +135268,7 @@ packages:
   homepage: https://github.com/COMBINE-lab/libgff/
   repository_url: https://github.com/combine-lab/libgff
   maintainers:
-  - ajxander12
+  - alexander-baumgarten
   dependencies:
   - c
   - cxx
@@ -144628,7 +144764,7 @@ packages:
   homepage: https://signal.org/en/
   repository_url: https://github.com/signalapp/libsignal-protocol-c
   maintainers:
-  - pwablito
+  - spenpw
   dependencies:
   - c
   dependency_details:
@@ -146888,6 +147024,7 @@ packages:
   - version: 1.44.3
   - version: 1.48.0
   - version: 1.48.1rc1
+  - version: 1.48.1rc2
   recipe_path: repos/spack_repo/builtin/packages/libuv_julia/package.py
 - id: spack:libva
   registry: spack
@@ -154156,6 +154293,10 @@ packages:
   - name: cmake
     constraint: 'cmake@3.13.4:'
     kind: build
+  - name: cmake
+    constraint: cmake@:3
+    kind: build
+    condition: '@:7.1'
   - name: cxx
     constraint: cxx
     kind: build
@@ -155461,8 +155602,13 @@ packages:
   - zlib-api
   dependency_details:
   - name: boost
-    constraint: boost@1.48.0:1.64.0
+    constraint: boost@1.48.0:1.64.0+graph
     kind: build,link
+    condition: '%gatb-core@1.4.1'
+  - name: boost
+    constraint: boost@1.48.0:1.71+graph
+    kind: build,link
+    condition: '%gatb-core@1.4.2:'
   - name: cxx
     constraint: cxx
     kind: build
@@ -158638,7 +158784,7 @@ packages:
     constraint: c
     kind: build
   - name: cli11
-    constraint: 'cli11@2.2:'
+    constraint: 'cli11@2.2: ~precompiled'
   - name: cmake
     constraint: 'cmake@3.16:'
     kind: build
@@ -164389,6 +164535,7 @@ packages:
   - radiuss
   dependencies:
   - blas
+  - caliper
   - conduit
   - cuda
   - cudss
@@ -164428,6 +164575,9 @@ packages:
   - name: blas
     constraint: blas
     condition: +lapack
+  - name: caliper
+    constraint: caliper
+    condition: +caliper
   - name: conduit
     constraint: 'conduit@0.3.1:,master:'
     condition: +conduit
@@ -164629,6 +164779,7 @@ packages:
     condition: +zlib
   options:
   - amgx
+  - caliper
   - conduit
   - cudss
   - cxxstd
@@ -164669,6 +164820,7 @@ packages:
   - zlib
   default_options:
     amgx: 'false'
+    caliper: 'false'
     conduit: 'false'
     cudss: 'false'
     cxxstd: auto
@@ -164710,6 +164862,9 @@ packages:
   features:
   - name: amgx
     description: Enable NVIDIA AmgX solver support
+    default: 'false'
+  - name: caliper
+    description: Build Caliper support
     default: 'false'
   - name: conduit
     description: Enable binary data I/O using Conduit
@@ -166007,6 +166162,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4162b8f6861b6a52ca4d6a781d6632f6f64832c672c5f8a169ff21e91d35389a
+  - version: 05-01-07
+    artifacts:
+    - checksums:
+      - sha256:da12ea524d75129d87aded7afd3f39bfb76cc1fe8a5def7557e16ccd0d2d6a74
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/millepede/package.py
 - id: spack:mimalloc
@@ -173644,7 +173803,7 @@ packages:
   homepage: https://github.com/stschiff/msmc2
   repository_url: https://github.com/stschiff/msmc2
   maintainers:
-  - robqiao
+  - manifestoso
   dependencies:
   - dmd
   - gsl
@@ -173770,6 +173929,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ce0743cc33d1dc8484193268d9220e8624ed015e521903b9228b3b38a5981291
+  - version: 0.11.0
+    artifacts:
+    - checksums:
+      - sha256:0f4e8276cacc26eb6abef47982dcb39a6d98d17c5a20b34488d6fd8676d4822d
   - version: 0.9.3
     artifacts:
     - checksums:
@@ -174421,6 +174584,8 @@ packages:
   registry: spack
   name: mummer4
   summary: MUMmer is a versatil alignment tool for DNA and protein sequences.
+  licenses:
+  - Artistic-2.0
   homepage: https://github.com/mummer4/mummer
   repository_url: https://github.com/mummer4/mummer
   dependencies:
@@ -179260,6 +179425,7 @@ packages:
   dependencies:
   - c
   - cmake
+  - cuda
   - cxx
   - fortran
   - git
@@ -179270,6 +179436,9 @@ packages:
     kind: build
   - name: cmake
     constraint: cmake
+  - name: cuda
+    constraint: cuda@:12
+    condition: '@:23+cuda'
   - name: cxx
     constraint: cxx
     kind: build
@@ -188086,7 +188255,6 @@ packages:
   - openfoam
   - pkgconfig
   - precice
-  - yaml-cpp
   dependency_details:
   - name: c
     constraint: c
@@ -188110,8 +188278,6 @@ packages:
   - name: precice
     constraint: 'precice@3:'
     condition: '@1.3.0:'
-  - name: yaml-cpp
-    constraint: yaml-cpp
   versions:
   - version: 1.0.0
     artifacts:
@@ -188141,6 +188307,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b5af9f9ea92c20141b93bb54d99ef1386a7caced5289f0fb0144955267e2a000
+  - version: 1.4.0
+    artifacts:
+    - checksums:
+      - sha256:399c89ab0fc5dfcff87f77433dddb60d4de0b2071de9b78b0e756e4079fd6a21
   - version: develop
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/of_precice/package.py
@@ -188543,6 +188713,7 @@ packages:
     - checksums:
       - sha256:2eadfd6d634abc0b50396a82fd446f8f0b586ba6e64788c47827162c2aadec02
   - version: main
+  - version: master-scorec
   recipe_path: repos/spack_repo/builtin/packages/omega_h/package.py
 - id: spack:omm
   registry: spack
@@ -199709,7 +199880,7 @@ packages:
   - name: cudss
     description: Build with cuDSS sparse direct solver
     default: 'false'
-    condition: '@0.18:'
+    condition: '@0.19:'
   - name: cxxstd
     description: C++ standard
     values:
@@ -203025,14 +203196,18 @@ packages:
     - checksums:
       - sha256:1a562ed28b16f8a00456b5f9ee573bb1af7c39c1beea01d94fc0c7b3256b0406
   - version: 0.17.2
-    preferred: true
     artifacts:
     - checksums:
       - sha256:20427b718dd130e4b66d95072c2a2bd5e17232e20dad58c1bea9da81fae330e0
   - version: 0.18.0
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:64de10e4c6b8b8379db7e87f58030f336ea747c0515f381132e810dbf84a86e7
+  - version: 0.19.2
+    artifacts:
+    - checksums:
+      - sha256:78cb26bda2b89fababfe189c2f6507240340f1aa45dec2eb49a39473a50ceea1
   - version: '0.8'
     artifacts:
     - checksums:
@@ -220830,6 +221005,51 @@ packages:
   - version: develop
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/phist/package.py
+- id: spack:phloem
+  registry: spack
+  name: phloem
+  summary: A suite of MPI benchmarks with Umpire memory allocation.
+  licenses:
+  - MIT
+  homepage: https://github.com/LLNL/phloem
+  repository_url: https://github.com/llnl/phloem
+  maintainers:
+  - nhanford
+  dependencies:
+  - blt
+  - c
+  - cxx
+  - mpi
+  - umpire
+  dependency_details:
+  - name: blt
+    constraint: blt
+    kind: build
+  - name: c
+    constraint: c
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: mpi
+    constraint: mpi
+  - name: umpire
+    constraint: umpire
+  options:
+  - man
+  default_options:
+    man: 'true'
+  features:
+  - name: man
+    description: Install manual pages
+    default: 'true'
+  versions:
+  - version: 2.0.0
+    artifacts:
+    - checksums:
+      - sha256:f1d01297c9a814108406d51c9ac3dd0e97193abde708153a88c97f898d8e0bb4
+  - version: main
+  recipe_path: repos/spack_repo/builtin/packages/phloem/package.py
 - id: spack:phoenix
   registry: spack
   name: phoenix
@@ -220985,48 +221205,32 @@ packages:
   repository_url: https://github.com/php/php-src
   dependencies:
   - autoconf
-  - automake
   - bash
   - bison
   - c
-  - cxx
   - libiconv
-  - libtool
   - libxml2
-  - m4
   - pkgconfig
   - re2c
   - sqlite
   dependency_details:
   - name: autoconf
-    constraint: autoconf
-    kind: build
-  - name: automake
-    constraint: automake
+    constraint: 'autoconf@2.68:'
     kind: build
   - name: bash
     constraint: bash
     kind: build
   - name: bison
-    constraint: bison
+    constraint: 'bison@3:'
     kind: build
   - name: c
     constraint: c
     kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
   - name: libiconv
     constraint: libiconv
     condition: '@8:'
-  - name: libtool
-    constraint: libtool
-    kind: build
   - name: libxml2
     constraint: libxml2
-  - name: m4
-    constraint: m4
-    kind: build
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -221036,14 +221240,18 @@ packages:
   - name: sqlite
     constraint: sqlite
   versions:
-  - version: 7.4.33
+  - version: 8.3.36
     artifacts:
     - checksums:
-      - sha256:dfbb2111160589054768a37086bda650a0041c89878449d078684d70d6a0e411
-  - version: 8.3.12
+      - sha256:132154b55122efe74ed55c6a51486dcf6a7797a2a8df66e5361c2bb6f0f1b527
+  - version: 8.4.27
     artifacts:
     - checksums:
-      - sha256:d5d4e6ffc6d6b2f02a87c45741623e08045ec6509ade44a1033e0f8bbb374119
+      - sha256:ae5896236c1b5bba6c36dcdd2e30c87ccda595d28650d18e6c007eebb0db68ab
+  - version: 8.5.12
+    artifacts:
+    - checksums:
+      - sha256:914702592c81f85cb3f6c2bca0cbe4217d3fe5f5a4b8ca34a8f93f74a3575fc7
   recipe_path: repos/spack_repo/builtin/packages/php/package.py
 - id: spack:phrap-crossmatch-swat
   registry: spack
@@ -222831,6 +223039,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:cd05c9589b9f86ecf044c10a2269822bc9eb001eced2582cfffd658b0a50c243
+  - version: 3.0.10
+    artifacts:
+    - checksums:
+      - sha256:9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de
   recipe_path: repos/spack_repo/builtin/packages/pkgconf/package.py
 - id: spack:pktools
   registry: spack
@@ -224863,6 +225075,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b6e2ffed29ae0821951179496e69e2be42eb7dbaf55f8080258447f3812c4a73
+  - version: '1.9'
+    artifacts:
+    - checksums:
+      - sha256:47aaabd0b1044e2100202437453da8b67c3e529621d85bbe79e024594a5be83a
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/podio/package.py
 - id: spack:podman
@@ -225315,7 +225531,7 @@ packages:
   homepage: https://github.com/BGI-shenzhen/PopLDdecay
   repository_url: https://github.com/bgi-shenzhen/poplddecay
   maintainers:
-  - robqiao
+  - manifestoso
   versions:
   - version: '3.40'
     artifacts:
@@ -228582,6 +228798,9 @@ packages:
   - cxx
   - zlib-api
   dependency_details:
+  - name: abseil-cpp
+    constraint: 'abseil-cpp@20250512.1:'
+    condition: '@35.1:'
   - name: abseil-cpp
     constraint: 'abseil-cpp@20230125.3:'
     condition: '@22.5:'
@@ -232231,22 +232450,11 @@ packages:
   - Apache-2.0
   homepage: https://github.com/aio-libs/aiohttp
   repository_url: https://github.com/aio-libs/aiohttp
-  dependencies:
-  - python
-  dependency_details:
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build,run
-    condition: '@3.11:'
-  - name: python
-    constraint: 'python@3.8:'
-    kind: build,run
-    condition: '@3.9:'
   versions:
-  - version: 3.14.3
+  - version: 3.14.5
     artifacts:
     - checksums:
-      - sha256:9491196535a88924a60afd5b5f434b5b203b6cc616250878dbdb223a8f7844bc
+      - sha256:5558a7f5a05af9ecf744af91e5baefc436f93c9333e656c27ec253f9a6bbe178
   recipe_path: repos/spack_repo/builtin/packages/py_aiohttp/package.py
 - id: spack:py-aiohttp-cors
   registry: spack
@@ -233653,7 +233861,6 @@ packages:
   - WeiqunZhang
   - atmyers
   - ax3l
-  - sayerhs
   topics:
   - e4s
   - hpsf
@@ -233841,6 +234048,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4d4e7fad1f7df16c45e2fdaeda368b60df0c289a6aa023793892c529a6478641
+  - version: '26.10'
+    artifacts:
+    - checksums:
+      - sha256:47a2aed5522d0925d2ec4c7576945a35e974d1b8d3c84575a9548da747d23cf5
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/py_amrex/package.py
 - id: spack:py-angel
@@ -234749,18 +234960,6 @@ packages:
   - MIT
   homepage: https://github.com/agronholm/anyio
   repository_url: https://github.com/agronholm/anyio
-  dependencies:
-  - python
-  dependency_details:
-  - name: python
-    constraint: 'python@3.8:'
-    condition: '@4:'
-  - name: python
-    constraint: 'python@3.9:'
-    condition: '@4.6:'
-  - name: python
-    constraint: 'python@3.10:'
-    condition: '@4.13:'
   versions:
   - version: 3.2.1
     artifacts:
@@ -234790,6 +234989,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:41cfcc3a4c85d3f05c932da7c26d0201ac36f72abd4435ba90d0464a3ffed703
+  - version: 4.15.1
+    artifacts:
+    - checksums:
+      - sha256:9f28306018cbd6d329e64a36d58256edff76dd996fe423bc957326e578b82a94
   - version: 4.9.0
     artifacts:
     - checksums:
@@ -236207,6 +236410,20 @@ packages:
     - checksums:
       - sha256:53c5f922491bf15f62847afafc4e39eedfae57d218988fefb8cce39c2a9b3dea
   recipe_path: repos/spack_repo/builtin/packages/py_array_api_compat/package.py
+- id: spack:py-array-api-extra
+  registry: spack
+  name: py-array-api-extra
+  summary: Extra array functions built on top of the array API standard.
+  licenses:
+  - MIT
+  homepage: https://github.com/data-apis/array-api-extra
+  repository_url: https://github.com/data-apis/array-api-extra
+  versions:
+  - version: 0.11.4
+    artifacts:
+    - checksums:
+      - sha256:66236f72aaa4cdf97a3c5581696e3a9c89513714612a9bc6010e19fad1a22012
+  recipe_path: repos/spack_repo/builtin/packages/py_array_api_extra/package.py
 - id: spack:py-arrow
   registry: spack
   name: py-arrow
@@ -245687,8 +245904,6 @@ packages:
   - MIT
   homepage: https://github.com/psf/black
   repository_url: https://github.com/psf/black
-  maintainers:
-  - spack/spack-releasers
   dependencies:
   - py-click
   - py-dataclasses
@@ -249559,22 +249774,10 @@ packages:
   homepage: https://github.com/certifi/python-certifi
   repository_url: https://github.com/certifi/python-certifi
   versions:
-  - version: 2025.4.26
+  - version: 2026.10.19
     artifacts:
     - checksums:
-      - sha256:0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6
-  - version: 2025.7.14
-    artifacts:
-    - checksums:
-      - sha256:8ea99dbdfaaf2ba2f9bac77b9249ef62ec5218e7c2b2e903378ed5fccf765995
-  - version: 2026.1.4
-    artifacts:
-    - checksums:
-      - sha256:ac726dd470482006e014ad384921ed6438c457018f4b3d204aea4281258b2120
-  - version: 2026.2.25
-    artifacts:
-    - checksums:
-      - sha256:e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7
+      - sha256:035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae
   recipe_path: repos/spack_repo/builtin/packages/py_certifi/package.py
 - id: spack:py-certipy
   registry: spack
@@ -252478,7 +252681,7 @@ packages:
     constraint: py-bcbio-gff
     kind: build,run
   - name: py-biopython
-    constraint: py-biopython@:1.76
+    constraint: py-biopython
     kind: build,run
   - name: py-numpy
     constraint: py-numpy
@@ -252493,7 +252696,7 @@ packages:
     constraint: py-scipy
     kind: build,run
   - name: py-setuptools
-    constraint: py-setuptools@:57
+    constraint: py-setuptools
     kind: build
   - name: samtools
     constraint: 'samtools@1.2:'
@@ -265623,6 +265826,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:dbd5ba1ce2fff58e28a154a725a4a5574eb2bbb3cca07dda15fce0363eeedc1f
+  - version: 2.2.1
+    artifacts:
+    - checksums:
+      - sha256:49c2bc6d30b2bc969012e155c101e43134a0a74652458e2aff658f25df627c7d
   recipe_path: repos/spack_repo/builtin/packages/py_elecsolver/package.py
 - id: spack:py-elephant
   registry: spack
@@ -269959,6 +270166,10 @@ packages:
     kind: build
     condition: '@3.1:3.7'
   - name: python
+    constraint: 'python@3.11:'
+    kind: build,run
+    condition: '@4.1.1:'
+  - name: python
     constraint: 'python@3.10:'
     kind: build,run
     condition: '@3.20:'
@@ -269971,82 +270182,10 @@ packages:
     kind: build,run
     condition: '@3.12.3:'
   versions:
-  - version: 2.0.10
+  - version: 4.2.4
     artifacts:
     - checksums:
-      - sha256:c73bf706d8a0c5722de0b745495fed9cda0e46c0eabb44eb18ee3f00520fa85f
-  - version: 2.0.11
-    artifacts:
-    - checksums:
-      - sha256:e9e370efe86c30b19a2c8c36dd9fcce8e5ce294ef4ed6ac86664b666eaf852ca
-  - version: 2.0.12
-    artifacts:
-    - checksums:
-      - sha256:eb4314a9a032707a914b037433ce866d4ed363fce8605d45f0c9d2cd6ac52f98
-  - version: 2.0.13
-    artifacts:
-    - checksums:
-      - sha256:d05079e7d7cae7576e192749d3461999ca6b0843d35b0f79f1fa956b0f6fc7d8
-  - version: 2.0.8
-    artifacts:
-    - checksums:
-      - sha256:7e48e4906de3c9a5d64d8f235eb3ae1050dfefa63fd65eaf318cc915c935212b
-  - version: 2.0.9
-    artifacts:
-    - checksums:
-      - sha256:0f91dce339c9f25d6f2e0733a17e4f9a47b139dffda52619a0e61e013e5c6782
-  - version: 3.0.0
-    artifacts:
-    - checksums:
-      - sha256:b3ad481724adfb2280773edd95ce501e497e88fa4489c6e41e637ab3fd9a456c
-  - version: 3.0.12
-    artifacts:
-    - checksums:
-      - sha256:18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59
-  - version: 3.0.3
-    artifacts:
-    - checksums:
-      - sha256:7d8a86350736aa0efea0730e6a7f774195cbb1c2d61134c15f6be576399e87ff
-  - version: 3.0.4
-    artifacts:
-    - checksums:
-      - sha256:011327d4ed939693a5b28c0fdf2fd9bda1f68614c1d6d0643a89382ce9843a71
-  - version: 3.12.0
-    artifacts:
-    - checksums:
-      - sha256:fc03ae43288c013d2ea83c8597001b1129db351aad9c57fe2409327916b8e718
-  - version: 3.12.4
-    artifacts:
-    - checksums:
-      - sha256:2e6f249f1f3654291606e046b09f1fd5eac39b360664c27f5aad072012f8bcbd
-  - version: 3.19.1
-    artifacts:
-    - checksums:
-      - sha256:66eda1888b0171c998b35be2bcc0f6d75c388a7ce20c3f3f37aa8e96c2dddf58
-  - version: 3.25.2
-    artifacts:
-    - checksums:
-      - sha256:b64ece2b38f4ca29dd3e810287aa8c48182bbecd1ae6e9ae126c9b35f1382694
-  - version: 3.29.0
-    artifacts:
-    - checksums:
-      - sha256:69974355e960702e789734cb4871f884ea6fe50bd8404051a3530bc07809cf90
-  - version: 3.29.1
-    artifacts:
-    - checksums:
-      - sha256:d97e6b1b9757569626c58caa07dc4beb1613f4a2938b1e8cc81afca398906c9e
-  - version: 3.4.0
-    artifacts:
-    - checksums:
-      - sha256:93d512b32a23baf4cac44ffd72ccf70732aeff7b8050fcaf6d3ec406d954baf4
-  - version: 3.5.0
-    artifacts:
-    - checksums:
-      - sha256:137b661e657f7850eec9def2a001efadba3414be523b87cd3f9a037372d80a15
-  - version: 3.8.0
-    artifacts:
-    - checksums:
-      - sha256:55447caa666f2198c5b6b13a26d2084d26fa5b115c00d065664b2124680c4edc
+      - sha256:c6d8663535e1650ee430507b4ffbac7b464dd64b7647ea0112a9f406499d163d
   recipe_path: repos/spack_repo/builtin/packages/py_filelock/package.py
 - id: spack:py-filemagic
   registry: spack
@@ -273252,66 +273391,10 @@ packages:
     default: 'false'
     condition: '@0.8.1:'
   versions:
-  - version: 0.4.4
+  - version: 2026.9.0
     artifacts:
     - checksums:
-      - sha256:97697a46e8bf8be34461c2520d6fc4bfca0ed749b22bb2b7c21939fd450a7d63
-  - version: 0.7.3
-    artifacts:
-    - checksums:
-      - sha256:1b540552c93b47e83c568e87507d6e02993e6d1b30bc7285f2336c81c5014103
-  - version: 0.8.0
-    artifacts:
-    - checksums:
-      - sha256:176f3fc405471af0f1f1e14cffa3d53ab8906577973d068b976114433c010d9d
-  - version: 0.9.0
-    artifacts:
-    - checksums:
-      - sha256:3f7a62547e425b0b336a6ac2c2e6c6ac824648725bc8391af84bb510a63d1a56
-  - version: 2021.4.0
-    artifacts:
-    - checksums:
-      - sha256:8b1a69884855d1a8c038574292e8b861894c3373282d9a469697a2b41d5289a6
-  - version: 2021.7.0
-    artifacts:
-    - checksums:
-      - sha256:792ebd3b54de0b30f1ce73f0ba0a8bcc864724f2d9f248cb8d0ece47db0cbde8
-  - version: 2022.11.0
-    artifacts:
-    - checksums:
-      - sha256:259d5fd5c8e756ff2ea72f42e7613c32667dc2049a4ac3d84364a7ca034acb8b
-  - version: 2023.1.0
-    artifacts:
-    - checksums:
-      - sha256:fbae7f20ff801eb5f7d0bedf81f25c787c0dfac5e982d98fa3884a9cde2b5411
-  - version: 2023.10.0
-    artifacts:
-    - checksums:
-      - sha256:330c66757591df346ad3091a53bd907e15348c2ba17d63fd54f5c39c4457d2a5
-  - version: 2024.10.0
-    artifacts:
-    - checksums:
-      - sha256:eda2d8a4116d4f2429db8550f2457da57279247dd930bb12f821b58391359493
-  - version: 2024.2.0
-    artifacts:
-    - checksums:
-      - sha256:b6ad1a679f760dda52b1168c859d01b7b80648ea6f7f7c7f5a8a91dc3f3ecb84
-  - version: 2024.3.1
-    artifacts:
-    - checksums:
-      - sha256:f39780e282d7d117ffb42bb96992f8a90795e4d0fb0f661a70ca39fe9c43ded9
-  - version: 2024.5.0
-    artifacts:
-    - checksums:
-      - sha256:1d021b0b0f933e3b3029ed808eb400c08ba101ca2de4b3483fbc9ca23fcee94a
-  - version: 2025.9.0
-    artifacts:
-    - checksums:
-      - sha256:19fd429483d25d28b65ec68f9f4adc16c17ea2c7c7bf54ec61360d478fb19c19
-  - version: 2026.3.0
-    artifacts:
-    - checksums:
-      - sha256:1ee6a0e28677557f8c2f994e3eea77db6392b4de9cd1f5d7a9e87a0ae9d01b41
+      - sha256:0f08147951c8cb31d844c3547d631053b127863b60be04cf06e121333ee0e2fe
   recipe_path: repos/spack_repo/builtin/packages/py_fsspec/package.py
 - id: spack:py-fsspec-xrootd
   registry: spack
@@ -286599,7 +286682,7 @@ packages:
     kind: build,run
     condition: +prodigal
   - name: py-biopython
-    constraint: py-biopython@:1.74
+    constraint: py-biopython
     kind: build,run
   - name: py-h5py
     constraint: py-h5py
@@ -286616,6 +286699,7 @@ packages:
   - name: py-numba
     constraint: py-numba
     kind: build,run
+    condition: '@:1.7.0'
   - name: py-numpy
     constraint: py-numpy
     kind: build,run
@@ -286634,6 +286718,7 @@ packages:
   - name: py-scikit-learn
     constraint: py-scikit-learn
     kind: build,run
+    condition: '@:1.7.0'
   - name: py-seaborn
     constraint: py-seaborn
     kind: build,run
@@ -286658,6 +286743,10 @@ packages:
     description: Enables profiling on a gene by gene level
     default: 'false'
   versions:
+  - version: 1.10.0
+    artifacts:
+    - checksums:
+      - sha256:f40f1d439914ec85cec83ce4c3f2fbf2ce064132109be9f2d3bfd048899b5a8e
   - version: 1.5.7
     artifacts:
     - checksums:
@@ -286829,7 +286918,7 @@ packages:
   registry: spack
   name: py-intel-openmp
   summary: Intel OpenMP* Runtime Library x86_64 dynamic libraries for macOS*. Intel OpenMP* Runtime Library provides OpenMP API specification support in Intel C...
-  description: Intel OpenMP* Runtime Library x86_64 dynamic libraries for macOS*. Intel OpenMP* Runtime Library provides OpenMP API specification support in Intel C Compiler, Intel C++ Compiler and Intel Fortran Compiler. It helps to improve performance by creating multithreaded software using shared memory and running on multi-core processor systems.
+  description: Intel OpenMP* Runtime Library x86_64 dynamic libraries for macOS. Intel OpenMP Runtime Library provides OpenMP API specification support in Intel C Compiler, Intel C++ Compiler and Intel Fortran Compiler. It helps to improve performance by creating multithreaded software using shared memory and running on multi-core processor systems.
   description_format: html
   homepage: https://pypi.org/project/intel-openmp/
   recipe_path: repos/spack_repo/builtin/packages/py_intel_openmp/package.py
@@ -301443,9 +301532,14 @@ packages:
     condition: ~launcher_only
   versions:
   - version: 3.0.0
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:9146ac9eff2ae029a189a0fc944b1857f3fd9230000e151a693e73e10943486c
+  - version: 3.1.1
+    artifacts:
+    - checksums:
+      - sha256:acdffb2431e4fa5456a3b4044ca1371758ea3e234038b856ad1a342a22bf111f
   - version: develop
     preferred: true
   recipe_path: repos/spack_repo/builtin/packages/py_melissa_online/package.py
@@ -304574,6 +304668,20 @@ packages:
     - checksums:
       - sha256:9db6bbeabc8b465ce17c2356ad11606b871a0116054866a2413a9b313421134a
   recipe_path: repos/spack_repo/builtin/packages/py_mne_bids/package.py
+- id: spack:py-mne-icalabel
+  registry: spack
+  name: py-mne-icalabel
+  summary: 'MNE-ICALabel: Automatic labeling of ICA components from MEG, EEG and iEEG data with MNE.'
+  licenses:
+  - BSD-3-Clause
+  homepage: https://github.com/mne-tools/mne-icalabel
+  repository_url: https://github.com/mne-tools/mne-icalabel
+  versions:
+  - version: 0.10.0
+    artifacts:
+    - checksums:
+      - sha256:6cad9b1fb3df7fa6b3199c0fa434c8db24bff28903698ceeeb46a149f1be6f3f
+  recipe_path: repos/spack_repo/builtin/packages/py_mne_icalabel/package.py
 - id: spack:py-mo-pack
   registry: spack
   name: py-mo-pack
@@ -308616,78 +308724,10 @@ packages:
     description: Include a webserver
     default: 'true'
   versions:
-  - version: 6.0.1
+  - version: 7.17.2
     artifacts:
     - checksums:
-      - sha256:db94117fbac29153834447e31b30cda337d4450e46e0bdb1a36eafbbf4435156
-  - version: 6.2.0
-    artifacts:
-    - checksums:
-      - sha256:16ceecd0afaa8fd26c245fa32e2c52066c02f13aa73387fffafd84750baea863
-  - version: 6.3.0
-    artifacts:
-    - checksums:
-      - sha256:5e77d6203854944520105e38f2563a813a4a3708e8563aa598928a3b5ee1081a
-  - version: 6.4.2
-    artifacts:
-    - checksums:
-      - sha256:eb2803db18f6facce6bf3b01b684fe47907994bd156d15eaccdf011e3d7f8164
-  - version: 6.5.0
-    artifacts:
-    - checksums:
-      - sha256:223e46e27abe8596b8aed54301fadbba433b7ffea8196a68fd7b1ff509eee99d
-  - version: 6.5.1
-    artifacts:
-    - checksums:
-      - sha256:2c01f3f518fee736c3d3f999dd20e0a16febba17a0d60a3b0fd28fbdec14115d
-  - version: 7.0.0
-    artifacts:
-    - checksums:
-      - sha256:fd1e361da30e30e4c5a5ae89f7cae95ca2a4d4407389672473312249a7ba0060
-  - version: 7.14.1
-    artifacts:
-    - checksums:
-      - sha256:20cba10e0448dc76b3bebfe1adf923663e3b98338daf77b97b42511ef5a88618
-  - version: 7.14.2
-    artifacts:
-    - checksums:
-      - sha256:a7f8808fd4e082431673ac538400218dd45efd076fbeb07cc6e5aa5a3a4e949e
-  - version: 7.15.0
-    artifacts:
-    - checksums:
-      - sha256:ff3f54a1a5e1e024beb9fde8946d05b6d0bf68cd14b5f2f9dc5b545c8bc71055
-  - version: 7.16.0
-    artifacts:
-    - checksums:
-      - sha256:813e6553796362489ae572e39ba1bff978536192fb518e10826b0e8cadf03ec8
-  - version: 7.16.1
-    artifacts:
-    - checksums:
-      - sha256:e79e6a074f49ba3ed29428ed86487bf51509d9aab613bd8522ac08f6d28fd7fd
-  - version: 7.16.2
-    artifacts:
-    - checksums:
-      - sha256:8310edd41e1c43947e4ecf16614c61469ebc024898eb808cce0999860fc9fb16
-  - version: 7.16.3
-    artifacts:
-    - checksums:
-      - sha256:a6733b78ce3d47c3f85e504998495b07e6ea9cf9bf6ec1c98dda63ec6ad19142
-  - version: 7.16.4
-    artifacts:
-    - checksums:
-      - sha256:86ca91ba266b0a448dc96fa6c5b9d98affabde2867b363258703536807f9f7f4
-  - version: 7.16.6
-    artifacts:
-    - checksums:
-      - sha256:576a7e37c6480da7b8465eefa66c17844243816ce1ccc372633c6b71c3c0f582
-  - version: 7.17.1
-    artifacts:
-    - checksums:
-      - sha256:34d0d0a7e73ce3cbab6c5aae8f4f468797280b01fd8bd2ca746da8569eddd7d2
-  - version: 7.4.0
-    artifacts:
-    - checksums:
-      - sha256:51b6c77b507b177b73f6729dba15676e42c4e92bcb00edc8cc982ee72e7d89d7
+      - sha256:344a218e8595117ce37396ed025d994f146d076226ebac59255a2fa085ab24d8
   recipe_path: repos/spack_repo/builtin/packages/py_nbconvert/package.py
 - id: spack:py-nbdime
   registry: spack
@@ -311016,21 +311056,6 @@ packages:
   - Apache-2.0
   homepage: https://github.com/nipy/nipype
   repository_url: https://github.com/nipy/nipype
-  dependencies:
-  - python
-  dependency_details:
-  - name: python
-    constraint: 'python@3.10:'
-    kind: build,run
-    condition: '@1.11:'
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build,run
-    condition: '@1.9:'
-  - name: python
-    constraint: 'python@3.7:'
-    kind: build,run
-    condition: '@1.8:'
   versions:
   - version: 1.10.0
     artifacts:
@@ -311040,6 +311065,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:6707ec4c3cf8e1983aef7f8eea79627ee7b7ab4aa49649991550e129c165b7a7
+  - version: 1.12.0
+    artifacts:
+    - checksums:
+      - sha256:784098a8a54839836fa0eba2fa1c2040a365a272d0b28692578b5b15b475aeeb
   - version: 1.4.2
     artifacts:
     - checksums:
@@ -317766,6 +317795,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:66b07ef7315a31bfe1089cd3d71a7de781c9dca986762d0b4fe7c0ef17465d10
+  - version: 3.1.0
+    artifacts:
+    - checksums:
+      - sha256:ecb9b2d8a817b1e1ba1fdb90c0abe9eab31b4fdf2562b7a56b86ac66ace17e49
   recipe_path: repos/spack_repo/builtin/packages/py_pandas/package.py
 - id: spack:py-pandas-datareader
   registry: spack
@@ -322768,114 +322801,10 @@ packages:
   topics:
   - build-tools
   versions:
-  - version: 10.0.1
+  - version: 26.2.2
     artifacts:
     - checksums:
-      - sha256:717cdffb2833be8409433a93746744b59505f42146e8d37de6c62b430e25d6d7
-  - version: '18.1'
-    artifacts:
-    - checksums:
-      - sha256:7909d0a0932e88ea53a7014dfd14522ffef91a464daaaf5c573343852ef98550
-  - version: 19.0.3
-    artifacts:
-    - checksums:
-      - sha256:bd812612bbd8ba84159d9ddc0266b7fbce712fc9bc98c82dee5750546ec8ec64
-  - version: 19.1.1
-    artifacts:
-    - checksums:
-      - sha256:993134f0475471b91452ca029d4390dc8f298ac63a712814f101cd1b6db46676
-  - version: '19.3'
-    artifacts:
-    - checksums:
-      - sha256:e100a7eccf085f0720b4478d3bb838e1c179b1e128ec01c0403f84e86e0e2dfb
-  - version: '20.2'
-    artifacts:
-    - checksums:
-      - sha256:d75f1fc98262dabf74656245c509213a5d0f52137e40e8f8ed5cc256ddd02923
-  - version: 21.1.2
-    artifacts:
-    - checksums:
-      - sha256:f8ea1baa693b61c8ad1c1d8715e59ab2b93cd3c4769bacab84afcc4279e7a70e
-  - version: 21.3.1
-    artifacts:
-    - checksums:
-      - sha256:deaf32dcd9ab821e359cd8330786bcd077604b5c5730c0b096eda46f95c24a2d
-  - version: 22.1.2
-    artifacts:
-    - checksums:
-      - sha256:a3edacb89022ef5258bf61852728bf866632a394da837ca49eb4303635835f17
-  - version: 22.2.2
-    artifacts:
-    - checksums:
-      - sha256:b61a374b5bc40a6e982426aede40c9b5a08ff20e640f5b56977f4f91fed1e39a
-  - version: '23.0'
-    artifacts:
-    - checksums:
-      - sha256:b5f88adff801f5ef052bcdef3daa31b55eb67b0fccd6d0106c206fa248e0463c
-  - version: 23.1.2
-    artifacts:
-    - checksums:
-      - sha256:3ef6ac33239e4027d9a5598a381b9d30880a1477e50039db2eac6e8a8f6d1b18
-  - version: 23.2.1
-    artifacts:
-    - checksums:
-      - sha256:7ccf472345f20d35bdc9d1841ff5f313260c2c33fe417f48c30ac46cccabf5be
-  - version: 23.3.2
-    artifacts:
-    - checksums:
-      - sha256:5052d7889c1f9d05224cd41741acb7c5d6fa735ab34e339624a614eaaa7e7d76
-  - version: '24.0'
-    artifacts:
-    - checksums:
-      - sha256:ba0d021a166865d2265246961bec0152ff124de910c5cc39f1156ce3fa7c69dc
-  - version: 24.1.2
-    artifacts:
-    - checksums:
-      - sha256:7cd207eed4c60b0f411b444cd1464198fe186671c323b6cd6d433ed80fc9d247
-  - version: '24.2'
-    artifacts:
-    - checksums:
-      - sha256:2cd581cf58ab7fcfca4ce8efa6dcacd0de5bf8d0a3eb9ec927e07405f4d9e2a2
-  - version: 24.3.1
-    artifacts:
-    - checksums:
-      - sha256:3790624780082365f47549d032f3770eeb2b1e8bd1f7b2e02dace1afa361b4ed
-  - version: '25.0'
-    artifacts:
-    - checksums:
-      - sha256:b6eb97a803356a52b2dd4bb73ba9e65b2ba16caa6bcb25a7497350a4e5859b65
-  - version: 25.0.1
-    artifacts:
-    - checksums:
-      - sha256:c46efd13b6aa8279f33f2864459c8ce587ea6a1a59ee20de055868d8f7688f7f
-  - version: '25.1'
-    artifacts:
-    - checksums:
-      - sha256:13b4aa0aaad055020a11bec8a1c2a70a2b2d080e12d89b962266029fff0a16ba
-  - version: 25.1.1
-    artifacts:
-    - checksums:
-      - sha256:2913a38a2abf4ea6b64ab507bd9e967f3b53dc1ede74b01b0931e1ce548751af
-  - version: 26.0.1
-    artifacts:
-    - checksums:
-      - sha256:bdb1b08f4274833d62c1aa29e20907365a2ceb950410df15fc9521bad440122b
-  - version: '26.1'
-    artifacts:
-    - checksums:
-      - sha256:4e8486d821d814b77319acb7b9e8bf5a4ee7590a643e7cb21029f209be8573c1
-  - version: 26.1.2
-    artifacts:
-    - checksums:
-      - sha256:382ff9f685ee3bc25864f820aa50505825f10f5458ffff07e30a6d96e5715cab
-  - version: 26.2.1
-    artifacts:
-    - checksums:
-      - sha256:71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e
-  - version: 9.0.1
-    artifacts:
-    - checksums:
-      - sha256:690b762c0a8460c303c089d5d0be034fb15a5ea2b75bdf565f40421f542fefb0
+      - sha256:fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70
   recipe_path: repos/spack_repo/builtin/packages/py_pip/package.py
 - id: spack:py-pipcl
   registry: spack
@@ -323585,6 +323514,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:967ad33e8c704fed051800d11d985eb206a9c795c14206b30a6f463ed9c67d0d
+  - version: 7.1.0
+    artifacts:
+    - checksums:
+      - sha256:f860166a4a3d78c69cb1f4a15f28a5c8283eade98a282a698f3bb853a449ace5
   recipe_path: repos/spack_repo/builtin/packages/py_plotly/package.py
 - id: spack:py-plotnine
   registry: spack
@@ -339026,10 +338959,20 @@ packages:
     constraint: htslib@1.17
     condition: '@0.21.0'
   - name: htslib
+    constraint: htslib@1.15.1
+    condition: '@0.19.1'
+  - name: htslib
+    constraint: htslib@1.14
+    condition: '@0.18.0'
+  - name: htslib
+    constraint: htslib@1.9
+    condition: '@0.15'
+  - name: htslib
+    constraint: htslib@1.7
+    condition: '@0.14.1'
+  - name: htslib
     constraint: htslib@:1.6
     condition: '@:0.13'
-  - name: htslib
-    constraint: htslib
   - name: py-cython
     constraint: py-cython@3
     kind: build
@@ -344791,9 +344734,13 @@ packages:
     kind: build,run
     condition: '%apple-clang'
   - name: py-beniget
+    constraint: py-beniget@0.5
+    kind: build,run
+    condition: '@0.19:'
+  - name: py-beniget
     constraint: py-beniget@0.4
     kind: build,run
-    condition: '@0.9.12:'
+    condition: '@0.9.12:0.18'
   - name: py-beniget
     constraint: py-beniget@0.3
     kind: build,run
@@ -344815,9 +344762,13 @@ packages:
     kind: build,run
     condition: '@:0.9.11'
   - name: py-gast
+    constraint: py-gast@0.7
+    kind: build,run
+    condition: '@0.19:'
+  - name: py-gast
     constraint: py-gast@0.6
     kind: build,run
-    condition: '@0.17:'
+    condition: '@0.17:0.18'
   - name: py-gast
     constraint: py-gast@0.5
     kind: build,run
@@ -346562,6 +346513,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ac0765e3d44455adb6ddbf4417dcce460fc40a05978c08efdf2948072f6db540
+  - version: 27.2.0
+    artifacts:
+    - checksums:
+      - sha256:54d4259d1bfae24ecdb5ca79f7acc2eac6c286a02d6a0ae617797cb45f0726d3
   recipe_path: repos/spack_repo/builtin/packages/py_pyzmq/package.py
 - id: spack:py-qdldl
   registry: spack
@@ -346619,6 +346574,10 @@ packages:
   maintainers:
   - LydDeb
   versions:
+  - version: 1.4.6
+    artifacts:
+    - checksums:
+      - sha256:e004df4eb0a4bba61e75e6b1d71813341b35f04ccb49673fe62df3ff7f79ba2b
   - version: 2.5.1
     artifacts:
     - checksums:
@@ -356833,6 +356792,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:49ab4685589986a42da85706b3311a2f74f1af567d39fee6cb1e088d7a75fb5f
+  - version: 10.3.4
+    artifacts:
+    - checksums:
+      - sha256:a69f28bfc245608781205e912faae437c2b2165773afa4e7b979d77447a69dd2
   - version: 3.5.0
     artifacts:
     - checksums:
@@ -361782,13 +361745,6 @@ packages:
   homepage: https://www.sphinx-doc.org/en/master/
   maintainers:
   - adamjstewart
-  dependencies:
-  - py-setuptools
-  dependency_details:
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-    condition: '@4.4:5.1'
   versions:
   - version: 1.3.1
     artifacts:
@@ -362158,6 +362114,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:7741722357dd75f8190766926071fed3bdc211c74dd2d7d4df5404da95930ddb
+  - version: 9.1.1
+    artifacts:
+    - checksums:
+      - sha256:48b627f02908f22c601b3ba9c7b17265b4f315dd05c8bc64cd4da41183f44fbc
+  - version: 9.2.0
+    artifacts:
+    - checksums:
+      - sha256:90470459f3cab15d9dfed146c71cf77694b0445df17b2e0e69059cb9f7fc9ee4
   recipe_path: repos/spack_repo/builtin/packages/py_sphinx/package.py
 - id: spack:py-sphinx-argparse
   registry: spack
@@ -364574,11 +364538,23 @@ packages:
   - MIT
   homepage: https://github.com/lnccbrown/ssm-simulators
   repository_url: https://github.com/lnccbrown/ssm-simulators
+  options:
+  - gsl
+  default_options:
+    gsl: 'false'
+  features:
+  - name: gsl
+    description: Enable gsl support
+    default: 'false'
   versions:
   - version: 0.14.0
     artifacts:
     - checksums:
       - sha256:521d260491ba894a57945518bf362919888ea482188b0082839ce0c0aa17a840
+  - version: 0.15.0
+    artifacts:
+    - checksums:
+      - sha256:2d9be260e0d7041c8dc4b3fbf1ea84021eaac15eaf52b4f2239408500ea12812
   recipe_path: repos/spack_repo/builtin/packages/py_ssm_simulators/package.py
 - id: spack:py-sspilib
   registry: spack
@@ -373576,13 +373552,6 @@ packages:
   - MIT
   homepage: https://github.com/tiangolo/typer
   repository_url: https://github.com/tiangolo/typer
-  dependencies:
-  - py-typing-extensions
-  dependency_details:
-  - name: py-typing-extensions
-    constraint: 'py-typing-extensions@3.7.4.3:'
-    kind: build,run
-    condition: '@0.9.0:'
   versions:
   - version: 0.12.5
     artifacts:
@@ -373596,6 +373565,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:68585eb1b01203689c4199bc440d6be616f0851e9f0eb41e4a778845c5a0fd5b
+  - version: 0.27.3
+    artifacts:
+    - checksums:
+      - sha256:d0396f770a560ab1b0a8504e13b5f254b728cedb05c61cf0359e944e50ce8901
   - version: 0.5.0
     artifacts:
     - checksums:
@@ -374130,6 +374103,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466
+  - version: 4.16.0
+    artifacts:
+    - checksums:
+      - sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5
   - version: 4.2.0
     artifacts:
     - checksums:
@@ -375938,118 +375915,10 @@ packages:
   - adamjstewart
   - mcmehrtens
   versions:
-  - version: 0.10.1
+  - version: 0.13.4
     artifacts:
     - checksums:
-      - sha256:c89e7fd708fb3474332d6fc54beb2ea48313ebdc82c6931df92a884fcb636d9d
-  - version: 0.11.10
-    artifacts:
-    - checksums:
-      - sha256:9b3a2ce56c4a22065462473acee0b729140370650974de4e781a5273f49371fa
-  - version: 0.11.11
-    artifacts:
-    - checksums:
-      - sha256:2ba46a912a1775957c579a1a42c8c8b480418502326b72427b1cad972c8f659f
-  - version: 0.11.12
-    artifacts:
-    - checksums:
-      - sha256:2d85d1fe06bafddf9632ec5c8ac24f86bd6eb7ec21e650be8c3565b600b502c9
-  - version: 0.11.13
-    artifacts:
-    - checksums:
-      - sha256:c30889b6a4417f94a0315371ec5bf8af151f062406ad3fb4b2cbf13d645d825c
-  - version: 0.11.14
-    artifacts:
-    - checksums:
-      - sha256:0ea006a117b586b2681b6dfd9703a540d2ad2a136ec0f48d272767e599cc3dfb
-  - version: 0.11.15
-    artifacts:
-    - checksums:
-      - sha256:755f959ec6a2fd8ccb6ee76ad90ab759d2eb1f4797444078645dd1ee4bca92d6
-  - version: 0.11.16
-    artifacts:
-    - checksums:
-      - sha256:4b435fcb0af8f34833dcc1903a8a223856437efd0d515c2160a2871def221238
-  - version: 0.11.17
-    artifacts:
-    - checksums:
-      - sha256:1d1be74deec997db1dda05a7e67541c904d65cbfd72e455d3c0a2a1e4bf2cddf
-  - version: 0.11.18
-    artifacts:
-    - checksums:
-      - sha256:61f2bc99898383f9bf04e24b984e42e19cde378dd79192935ca21d75563368a8
-  - version: 0.11.19
-    artifacts:
-    - checksums:
-      - sha256:f56f5bf853626a30423052d7ee00bf5cc940a08347d6ee7ede96862d084054a5
-  - version: 0.11.20
-    artifacts:
-    - checksums:
-      - sha256:a246f30931cbc93d0a39d0cfc75be045fddd45773a734ddf8afa869aabc46c63
-  - version: 0.11.21
-    artifacts:
-    - checksums:
-      - sha256:083882c73373a16de4c136d54e3386a52388dead5048a07505e25578b157182f
-  - version: 0.11.22
-    artifacts:
-    - checksums:
-      - sha256:32e31cb70bada3ad03d99614ead365cd36b2ac9455a6fc232f6d50b619a964e1
-  - version: 0.11.23
-    artifacts:
-    - checksums:
-      - sha256:f2476dda35866ea3ded3a5905759da2d32dfac36dfd5b3428191a99a8ce15b02
-  - version: 0.11.24
-    artifacts:
-    - checksums:
-      - sha256:8602a1b6300a3a948afacc62e1cb933c8394c27966db85ed7e29483300b69dc4
-  - version: 0.11.25
-    artifacts:
-    - checksums:
-      - sha256:458e731778e7b5cc870710397859c23e766703e7bc0695f23b3eb15080745ba6
-  - version: 0.11.26
-    artifacts:
-    - checksums:
-      - sha256:2a433ece2ace088dd572d8abb0e6bd9a4ecb0e10bc9856447bbb37545f384f29
-  - version: 0.11.27
-    artifacts:
-    - checksums:
-      - sha256:3469204521869f0e6bdea17b02c1d86db2d0150820895653a6152cab206fb00b
-  - version: 0.11.28
-    artifacts:
-    - checksums:
-      - sha256:df86cfd135542a833e9f84708b3b8dbaa987a3b9db85b267062db49ab639d242
-  - version: 0.11.29
-    artifacts:
-    - checksums:
-      - sha256:a4ca34dc3b247740e511ca7c718181d5300e7899bbef755db45bb6c993610a64
-  - version: 0.11.30
-    artifacts:
-    - checksums:
-      - sha256:06f4b824c6123df1cd00a68367f970870e7252b0b11a4d03a06b2b4b433afcda
-  - version: 0.11.31
-    artifacts:
-    - checksums:
-      - sha256:763609d59721af5b8522e16deac6cffe8055f82bb837740c708917506f305185
-  - version: 0.11.32
-    artifacts:
-    - checksums:
-      - sha256:5359a7b0de78ba99b2519d33c173e004c39111c4baebe1b7c3d111a2de2011e1
-  - version: 0.11.6
-    artifacts:
-    - checksums:
-      - sha256:e3b21b7e80024c95ff339fcd147ac6fc3dd98d3613c9d45d3a1f4fd1057f127b
-  - version: 0.11.7
-    artifacts:
-    - checksums:
-      - sha256:46d971489b00bdb27e0aa715e4a5cd4ef2c28ea5b6ef78f2b67bf861eb44b405
-  - version: 0.11.8
-    artifacts:
-    - checksums:
-      - sha256:bb2cf302b8503629aab6f0090a05551e6f8cfc2d687ca059cad7ec9e11214335
-  - version: 0.11.9
-    artifacts:
-    - checksums:
-      - sha256:43edb4b3eb43a9780f9232110dfbcc0bed9367ce5b24d37a315817d3faf3c913
+      - sha256:b0bff5b9a5061f7a35b1d0c1a94c19af134222c48eb7aadc42f85a038be1b248
   recipe_path: repos/spack_repo/builtin/packages/py_uv/package.py
 - id: spack:py-uv-build
   registry: spack
@@ -376063,22 +375932,27 @@ packages:
   - build-tools
   dependencies:
   - bzip2
-  - py-maturin
   - python
   dependency_details:
   - name: bzip2
     constraint: bzip2
-  - name: py-maturin
-    constraint: py-maturin@1
-    kind: build
+    condition: '@:0.11'
   - name: python
     constraint: 'python@3.8:'
     kind: build,run
   versions:
+  - version: 0.11.33
+    artifacts:
+    - checksums:
+      - sha256:b09dcd86e4bbb31f4d85470892771e7c8786b3bd9b6519f7ce7480517b4d1381
   - version: 0.11.6
     artifacts:
     - checksums:
       - sha256:3ca25d4fca52e0598084fab352a4cafe737043f5682e3cb654164f033ba6d736
+  - version: 0.13.0
+    artifacts:
+    - checksums:
+      - sha256:bd2614f24a58dccd4865d4f86ddd91dd01fd0efab4632e033186a8423b8a3515
   - version: 0.8.2
     artifacts:
     - checksums:
@@ -376810,6 +376684,20 @@ packages:
     - checksums:
       - sha256:176391ad0425edde1680c5b20738ea3dc7fb942520a48d2993448050986b3a50
   recipe_path: repos/spack_repo/builtin/packages/py_vcrpy/package.py
+- id: spack:py-vcs-versioning
+  registry: spack
+  name: py-vcs-versioning
+  summary: The blessed package to manage your versions by vcs metadata.
+  licenses:
+  - MIT
+  homepage: https://github.com/pypa/setuptools-scm
+  repository_url: https://github.com/pypa/setuptools-scm
+  versions:
+  - version: 2.5.0
+    artifacts:
+    - checksums:
+      - sha256:956a796e31f80fe714d219d6d1df15a6bf247d10f6d851bf4b98279d0a42da55
+  recipe_path: repos/spack_repo/builtin/packages/py_vcs_versioning/package.py
 - id: spack:py-vcstool
   registry: spack
   name: py-vcstool
@@ -380620,6 +380508,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:361b495928fdbf5b58d0969bb6775339019da5e93ca74d61ddf4eb5edd6ce604
+  - version: 2026.9.0
+    artifacts:
+    - checksums:
+      - sha256:6abc69694c22fa1f0fb2f357ff4e41d88beb4477ed71091f944b7dbf67ed54fe
   recipe_path: repos/spack_repo/builtin/packages/py_xarray/package.py
 - id: spack:py-xarray-einstats
   registry: spack
@@ -381128,6 +381020,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f72f148f54442c6b056bf931dbc34f986fd0c3b0b6b5a58d013c9aef274d0c88
+  - version: 2.0.2
+    artifacts:
+    - checksums:
+      - sha256:08b5e25de58f21ce71dc7db3b3b8106c1fa776f3024c54e45b45b374e89234c9
   recipe_path: repos/spack_repo/builtin/packages/py_xlrd/package.py
 - id: spack:py-xlsxwriter
   registry: spack
@@ -381800,6 +381696,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:bebf8557577d4401ba8bd9ff33906f1376c877aa78d1fe216ad01b4d6745af71
+  - version: 1.25.1
+    artifacts:
+    - checksums:
+      - sha256:03dd38de09bc213e9a8b29761eec33ee1d5318dac0e49d8af36e4d27830e23a7
   - version: 1.3.0
     artifacts:
     - checksums:
@@ -383934,26 +383834,30 @@ packages:
     default: 'true'
     condition: '@3.14:'
   versions:
-  - version: 3.10.20
+  - version: 3.10.22
     artifacts:
     - checksums:
-      - sha256:4ff5fd4c5bab803b935019f3e31d7219cebd6f870d00389cea53b88bbe935d1a
-  - version: 3.11.15
+      - sha256:9448b34d16f8e3db0964ac3ed9fb283197747543c2c021f283ffd2c8b7287357
+  - version: 3.11.17
     artifacts:
     - checksums:
-      - sha256:f4de1b10bd6c70cbb9fa1cd71fc5038b832747a74ee59d599c69ce4846defb50
-  - version: 3.12.14
+      - sha256:53cdee63ac4bf12387b7b33a53d3b1f8f4941cad73807a7b4fe91bb001ef004a
+  - version: 3.12.15
     artifacts:
     - checksums:
-      - sha256:6c6df908d2c3fd24e6d76869e92542abd0f33aec9dfc18df8875f89660286d43
-  - version: 3.13.13
+      - sha256:de1a241a519e0a3374fea98988d0b52c886743f9d953f23be8269cc7b59c5fab
+  - version: 3.13.17
     artifacts:
     - checksums:
-      - sha256:f9cde7b0e2ec8165d7326e2a0f59ea2686ce9d0c617dbbb3d66a7e54d31b74b9
-  - version: 3.14.5
+      - sha256:9cb057caa588f122577a5054a22531cd9c23ab6706f1a19bc95a55380a895177
+  - version: 3.14.9
     artifacts:
     - checksums:
-      - sha256:9c22bfe9939a6c5418fc74b289a5f1cc41859ae82ac6b163016b5844bd0a86bc
+      - sha256:8b47e85ee67e93945e93620a051a8f44bfc1e9735ed67075d166f4a74b7a060b
+  - version: 3.15.1
+    artifacts:
+    - checksums:
+      - sha256:133d85e118dc32621cda1d9d1d7d9694fe0c5e82bc339a7d528c109fe8b36387
   recipe_path: repos/spack_repo/builtin/packages/python/package.py
 - id: spack:python-venv
   registry: spack
@@ -391532,7 +391436,7 @@ packages:
   registry: spack
   name: r-ape
   summary: Analyses of Phylogenetics and Evolution. Functions for reading, writing, plotting, and manipulating phylogenetic trees, analyses of comparative data in a...
-  description: <p>Analyses of Phylogenetics and Evolution.</p><p>Functions for reading, writing, plotting, and manipulating phylogenetic trees, analyses of comparative data in a phylogenetic framework, ancestral character analyses, analyses of diversification and macroevolution, computing distances from DNA sequences, reading and writing nucleotide sequences as well as importing from BioConductor, and several tools such as Mantel's test, generalized skyline plots, graphical exploration of phylogenetic data (alex, trex, kronoviz), estimation of absolute evolutionary rates and clock-like trees using mean path lengths and penalized likelihood, dating trees with non-contemporaneous sequences, translating DNA into AA sequences, and assessing sequence alignments. Phylogeny estimation can be done with the NJ, BIONJ, ME, MVR, SDM, and triangle methods, and several methods handling incomplete distance matrices (NJ*, BIONJ*, MVR*, and the corresponding triangle method). Some functions call external
+  description: <p>Analyses of Phylogenetics and Evolution.</p><p>Functions for reading, writing, plotting, and manipulating phylogenetic trees, analyses of comparative data in a phylogenetic framework, ancestral character analyses, analyses of diversification and macroevolution, computing distances from DNA sequences, reading and writing nucleotide sequences as well as importing from BioConductor, and several tools such as Mantel's test, generalized skyline plots, graphical exploration of phylogenetic data (alex, trex, kronoviz), estimation of absolute evolutionary rates and clock-like trees using mean path lengths and penalized likelihood, dating trees with non-contemporaneous sequences, translating DNA into AA sequences, and assessing sequence alignments. Phylogeny estimation can be done with the NJ, BIONJ, ME, MVR, SDM, and triangle methods, and several methods handling incomplete distance matrices (NJ, BIONJ, MVR*, and the corresponding triangle method). Some functions call external
     applications (PhyML, Clustal, T-Coffee, Muscle) whose results are returned into R.</p>
   description_format: html
   licenses:
@@ -404595,47 +404499,6 @@ packages:
   description_format: html
   licenses:
   - GPL-2.0-only OR GPL-3.0-only
-  dependencies:
-  - r
-  - r-estimability
-  - r-mvtnorm
-  - r-numderiv
-  - r-plyr
-  - r-rlang
-  - r-xtable
-  dependency_details:
-  - name: r
-    constraint: 'r@4.1.0:'
-    kind: build,run
-    condition: '@1.8.1-1:'
-  - name: r
-    constraint: 'r@3.5.0:'
-    kind: build,run
-  - name: r-estimability
-    constraint: 'r-estimability@1.4.1:'
-    kind: build,run
-    condition: '@1.8.1-1:'
-  - name: r-estimability
-    constraint: 'r-estimability@1.3:'
-    kind: build,run
-  - name: r-mvtnorm
-    constraint: r-mvtnorm
-    kind: build,run
-  - name: r-numderiv
-    constraint: r-numderiv
-    kind: build,run
-  - name: r-plyr
-    constraint: r-plyr
-    kind: build,run
-    condition: '@:1.6'
-  - name: r-rlang
-    constraint: r-rlang
-    kind: build,run
-    condition: '@2:'
-  - name: r-xtable
-    constraint: 'r-xtable@1.8-2:'
-    kind: build,run
-    condition: '@:1.8.2'
   versions:
   - version: 1.10.4
     artifacts:
@@ -404681,6 +404544,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:58d8586687a2aa4ad3f818904e059ea158e1853f3930994886143c2ce7944a46
+  - version: 2.0.4
+    artifacts:
+    - checksums:
+      - sha256:5da4b75d85bd1551e7547b0b39abfc220fc9fcb5ad400e9d58cdfdaa35b428cd
   recipe_path: repos/spack_repo/builtin/packages/r_emmeans/package.py
 - id: spack:r-emmli
   registry: spack
@@ -415302,6 +415169,72 @@ packages:
     - checksums:
       - sha256:7cb08f0b30485dac26f72e4056ec4ed8825d1398e8b9f25ed63db228fe3a0ed0
   recipe_path: repos/spack_repo/builtin/packages/r_htmlwidgets/package.py
+- id: spack:r-htscluster
+  registry: spack
+  name: r-htscluster
+  summary: Clustering High-Throughput Transcriptome Sequencing (HTS) Data A Poisson mixture model is implemented to cluster genes from high-throughput transcriptome...
+  description: <p>Clustering High-Throughput Transcriptome Sequencing (HTS) Data</p><p>A Poisson mixture model is implemented to cluster genes from high-throughput transcriptome sequencing (RNA-seq) data. Parameter estimation is performed using either the EM or CEM algorithm, and the slope heuristics are used for model selection (i.e., to choose the number of clusters).</p>
+  description_format: html
+  licenses:
+  - GPL-3.0-or-later
+  homepage: https://cran.r-project.org/package=HTSCluster
+  dependencies:
+  - r
+  - r-capushe
+  - r-edger
+  - r-plotrix
+  dependency_details:
+  - name: r
+    constraint: 'r@2.10.0:'
+    kind: build,run
+  - name: r-capushe
+    constraint: r-capushe
+    kind: build,run
+  - name: r-edger
+    constraint: r-edger
+    kind: build,run
+  - name: r-plotrix
+    constraint: r-plotrix
+    kind: build,run
+  versions:
+  - version: 2.0.11
+    artifacts:
+    - checksums:
+      - sha256:77dd865197c859a3f47f68f5786fa0e24ce06a73ef9801e76c7425453d843a75
+  recipe_path: repos/spack_repo/builtin/packages/r_htscluster/package.py
+- id: spack:r-htsfilter
+  registry: spack
+  name: r-htsfilter
+  summary: Filter replicated high-throughput transcriptome sequencing data This package implements a filtering procedure for replicated transcriptome sequencing data...
+  description: <p>Filter replicated high-throughput transcriptome sequencing data</p><p>This package implements a filtering procedure for replicated transcriptome sequencing data based on a global Jaccard similarity index in order to identify genes with low, constant levels of expression across one or more experimental conditions.</p>
+  description_format: html
+  licenses:
+  - Artistic-2.0
+  dependencies:
+  - r
+  - r-biobase
+  - r-biocparallel
+  - r-deseq2
+  - r-edger
+  dependency_details:
+  - name: r
+    constraint: 'r@4.0.0:'
+    kind: build,run
+  - name: r-biobase
+    constraint: r-biobase
+    kind: build,run
+  - name: r-biocparallel
+    constraint: r-biocparallel
+    kind: build,run
+  - name: r-deseq2
+    constraint: r-deseq2
+    kind: build,run
+  - name: r-edger
+    constraint: r-edger
+    kind: build,run
+  versions:
+  - version: 1.52.0
+  recipe_path: repos/spack_repo/builtin/packages/r_htsfilter/package.py
 - id: spack:r-httpcode
   registry: spack
   name: r-httpcode
@@ -437059,6 +436992,47 @@ packages:
     - checksums:
       - sha256:1f8bf7b3fbc887fd766568c1ec1f861021c962259354bd8967a61c1d0761cdf7
   recipe_path: repos/spack_repo/builtin/packages/r_rminer/package.py
+- id: spack:r-rmixmod
+  registry: spack
+  name: r-rmixmod
+  summary: Classification with Mixture Modelling Interface of 'MIXMOD' software for supervised, unsupervised and semi-supervised classification with mixture modelling.
+  description: <p>Classification with Mixture Modelling</p><p>Interface of 'MIXMOD' software for supervised, unsupervised and semi-supervised classification with mixture modelling.</p>
+  description_format: html
+  licenses:
+  - GPL-3.0-only
+  homepage: https://cran.r-project.org/package=Rmixmod
+  dependencies:
+  - c
+  - cxx
+  - gmake
+  - r
+  - r-rcpp
+  - r-rcppeigen
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: gmake
+    constraint: gmake
+    kind: build
+  - name: r
+    constraint: 'r@2.12.0:'
+    kind: build,run
+  - name: r-rcpp
+    constraint: 'r-rcpp@0.8.0:'
+    kind: build,run
+  - name: r-rcppeigen
+    constraint: r-rcppeigen
+    kind: build,run
+  versions:
+  - version: 2.1.10
+    artifacts:
+    - checksums:
+      - sha256:96d592c36a456ab744b5e885dbbc929e4d1d2a5f4d8489c9c224fe353f0af189
+  recipe_path: repos/spack_repo/builtin/packages/r_rmixmod/package.py
 - id: spack:r-rmpfr
   registry: spack
   name: r-rmpfr
@@ -456363,6 +456337,7 @@ packages:
   - version: 2025.03.0
   - version: 2025.12.0
   - version: 2025.12.1
+  - version: 2026.07.0
   - version: develop
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/raja_perf/package.py
@@ -461204,7 +461179,6 @@ packages:
   summary: 'The University of Tokyo, CISS Project: Library for refining of model meshes'
   homepage: https://www.frontistr.com
   maintainers:
-  - inagaki.kazuhisa
   - k-tokunaga
   - kgoto
   - tuna
@@ -464528,7 +464502,6 @@ packages:
   - c
   - cmake
   - cxx
-  - fortran
   - llvm-amdgpu
   - rocm-cmake
   - texinfo
@@ -464540,11 +464513,12 @@ packages:
   - name: cmake
     constraint: 'cmake@3.13.4:'
     kind: build
+  - name: cmake
+    constraint: cmake@:3
+    kind: build
+    condition: '@:7.1'
   - name: cxx
     constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
     kind: build
   - name: 'llvm-amdgpu '
     constraint: llvm-amdgpu ~rocm-device-libs
@@ -464844,7 +464818,6 @@ packages:
   - cxx
   - expat
   - flex
-  - fortran
   - gmp
   - libunwind
   - mpfr
@@ -464873,9 +464846,6 @@ packages:
     kind: build,link
   - name: flex
     constraint: 'flex@2.6.4:'
-    kind: build
-  - name: fortran
-    constraint: fortran
     kind: build
   - name: gmp
     constraint: gmp
@@ -466915,7 +466885,6 @@ packages:
   - cxx
   - dyninst
   - elfutils
-  - fortran
   - intel-tbb
   - libiberty
   - libtool
@@ -466961,9 +466930,6 @@ packages:
     condition: '@7 ~internal-dyninst'
   - name: elfutils
     constraint: elfutils
-  - name: fortran
-    constraint: fortran
-    kind: build
   - name: intel-tbb
     constraint: intel-tbb@2019:2020.3
     condition: '@:7.13 ~internal-tbb'
@@ -470473,13 +470439,19 @@ packages:
 - id: spack:rsync
   registry: spack
   name: rsync
-  summary: An open source utility that provides fast incremental file transfer.
+  summary: Rsync is a fast and versatile file copying tool. It can copy locally, to/from another host over a remote shell, or to/from a remote rsync daemon. It offers a...
+  description: Rsync is a fast and versatile file copying tool. It can copy locally, to/from another host over a remote shell, or to/from a remote rsync daemon. It offers a large number of options that control every aspect of its behavior and permit flexible specification of the set of files to be copied. It uses a delta-transfer algorithm to reduce the amount of data sent over the network by sending only the differences between the source files and the existing files in the destination. Rsync is widely used for backups and mirroring and as an improved copy command for everyday use.
+  description_format: html
   licenses:
   - GPL-3.0-or-later
   homepage: https://rsync.samba.org
+  maintainers:
+  - drkrynstrng
   dependencies:
+  - awk
   - c
   - cxx
+  - libidn2
   - lz4
   - openssl
   - popt
@@ -470487,12 +470459,18 @@ packages:
   - zlib-api
   - zstd
   dependency_details:
+  - name: awk
+    constraint: awk
+    kind: build
   - name: c
     constraint: c
     kind: build
   - name: cxx
     constraint: cxx
     kind: build
+  - name: libidn2
+    constraint: libidn2
+    condition: '@3.5.1:'
   - name: lz4
     constraint: lz4
     condition: '@3.2:'
@@ -470530,6 +470508,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:bd88cf82fa653da32314fb229136407c5c90f80d1758d8f4b091767877d8fa96
+  - version: 3.5.0
+    artifacts:
+    - checksums:
+      - sha256:c7ffd1ef653e99540f661e47cb00b7f9cad1ee6b972399b16f93d672656e0d33
+  - version: 3.5.1
+    artifacts:
+    - checksums:
+      - sha256:c55f9c9dc10fb8bec397b399a0fdded53cc9a2d8e30891bb0d63724d25c37bef
   recipe_path: repos/spack_repo/builtin/packages/rsync/package.py
 - id: spack:rsyslog
   registry: spack
@@ -472713,6 +472699,9 @@ packages:
     constraint: gmake
     kind: build
   - name: htslib
+    constraint: htslib@1.24
+    condition: '@1.24'
+  - name: htslib
     constraint: htslib@1.23.1
     condition: '@1.23.1'
   - name: htslib
@@ -472850,6 +472839,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:32266198a4bc6a6df395d8526688c9697d9c8e472f888c749fdde2e08ea88dd2
+  - version: '1.24'
+    artifacts:
+    - checksums:
+      - sha256:89b2a440123eeaa400392ce1736e7d60ce9041843027d76819753c5a8246bfdd
   - version: 1.3.1
     artifacts:
     - checksums:
@@ -474997,8 +474990,6 @@ packages:
   dependencies:
   - binutils
   - c
-  - cubelib
-  - cubew
   - cuda
   - cxx
   - fortran
@@ -475007,13 +474998,12 @@ packages:
   - libunwind
   - llvm
   - mpi
-  - opari2
-  - otf2
   - papi
   - pdt
   - rocm-smi-lib
   - rocprofiler-dev
   - rocprofiler-sdk
+  - zlib-api
   dependency_details:
   - name: binutils
     constraint: binutils
@@ -475022,30 +475012,6 @@ packages:
   - name: c
     constraint: c
     kind: build,run
-  - name: cubelib
-    constraint: 'cubelib@4.9:'
-    condition: '@9:'
-  - name: cubelib
-    constraint: cubelib@4.8.2:4.8
-    condition: '@8.3:8'
-  - name: cubelib
-    constraint: cubelib@4.8
-    condition: '@8:8.2'
-  - name: cubelib
-    constraint: cubelib@4.6:4.7.99
-    condition: '@7.0:7'
-  - name: cubew
-    constraint: 'cubew@4.9:'
-    condition: '@9:'
-  - name: cubew
-    constraint: cubew@4.8.2:4.8
-    condition: '@8.3:8'
-  - name: cubew
-    constraint: cubew@4.8
-    condition: '@8:8.2'
-  - name: cubew
-    constraint: cubew@4.6:4.7.99
-    condition: '@7.0:7'
   - name: cuda
     constraint: 'cuda@11.6:'
     condition: '@10.0+cuda'
@@ -475079,24 +475045,6 @@ packages:
     constraint: 'mpi@2.2:'
     kind: build,run
     condition: +mpi
-  - name: opari2
-    constraint: 'opari2@2.0.9:'
-    condition: '@9:'
-  - name: opari2
-    constraint: 'opari2@2.0.6:'
-    condition: '@7:'
-  - name: otf2
-    constraint: 'otf2@3.2:'
-    condition: '@10:'
-  - name: otf2
-    constraint: 'otf2@3.1:'
-    condition: '@9:'
-  - name: otf2
-    constraint: 'otf2@3:'
-    condition: '@8:'
-  - name: otf2
-    constraint: otf2@2.3:2.3.99
-    condition: '@7.0:7'
   - name: papi
     constraint: papi
     condition: +papi
@@ -475112,8 +475060,12 @@ packages:
   - name: rocprofiler-sdk
     constraint: rocprofiler-sdk
     condition: '@10:+hip'
+  - name: zlib-api
+    constraint: zlib-api
+    condition: +bundled
   options:
   - binutils
+  - bundled
   - cuda
   - fortran
   - gcc-plugin
@@ -475129,6 +475081,7 @@ packages:
   - xray
   default_options:
     binutils: 'true'
+    bundled: 'false'
     cuda: 'false'
     fortran: 'true'
     gcc-plugin: 'true'
@@ -475147,6 +475100,9 @@ packages:
     description: Enable debug info lookup via binutils
     default: 'true'
     condition: ^binutils
+  - name: bundled
+    description: Build and install Score-P's bundled OTF2, CubeLib, CubeW and OPARI2 in the Score-P prefix
+    default: 'false'
   - name: cuda
     description: Enable CUDA support
     default: 'false'
@@ -475238,6 +475194,7 @@ packages:
     artifacts:
     - checksums:
       - sha256:bea58d8c47a7512eca0a5858179377f3f0861f30eafb342a29aa97c05de8f623
+  - version: master
   recipe_path: repos/spack_repo/builtin/packages/scorep/package.py
 - id: spack:scorpio
   registry: spack
@@ -479022,12 +478979,10 @@ packages:
   - openloops
   - pythia6
   - pythia8
-  - python
   - recola
   - rivet
   - root
   - sqlite
-  - swig
   - texinfo
   dependency_details:
   - name: autoconf
@@ -479095,9 +479050,6 @@ packages:
   - name: pythia8
     constraint: pythia8
     condition: '+pythia @3:'
-  - name: python
-    constraint: python
-    condition: +python
   - name: recola
     constraint: recola@1
     condition: +recola
@@ -479109,10 +479061,6 @@ packages:
     condition: +root
   - name: sqlite
     constraint: sqlite
-  - name: swig
-    constraint: swig
-    kind: build
-    condition: +python
   - name: texinfo
     constraint: texinfo
     kind: build
@@ -479274,6 +479222,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:57484a09a99ff1b58a89153675230e69cab9698179291fecd67a7bd26309c4ea
+  - version: 3.0.4
+    artifacts:
+    - checksums:
+      - sha256:a9ddc4ee35087c5a669cf6fae151ea72bcc6882270aa7e7c7a37f9574ceea197
+  - version: 3.0.5
+    artifacts:
+    - checksums:
+      - sha256:6c3804d48e1955ee82f713b3d3ffd16b013a9912752f488aab0ba6c1b1634288
   recipe_path: repos/spack_repo/builtin/packages/sherpa/package.py
 - id: spack:shiro
   registry: spack
@@ -483008,7 +482964,7 @@ packages:
   homepage: https://github.com/natefoo/slurm-drmaa
   repository_url: https://github.com/natefoo/slurm-drmaa
   maintainers:
-  - pwablito
+  - spenpw
   dependencies:
   - autoconf
   - automake
@@ -488896,7 +488852,7 @@ packages:
   summary: The NCBI SRA Toolkit enables reading ("dumping") of sequencing files from the SRA database and writing ("loading") files into the .sra format.
   homepage: https://trace.ncbi.nlm.nih.gov/Traces/sra
   maintainers:
-  - robqiao
+  - manifestoso
   versions:
   - version: 2.10.7
     artifacts:
@@ -509929,7 +509885,6 @@ packages:
   homepage: https://uwtools.readthedocs.io/en/stable/
   repository_url: https://github.com/ufs-community/uwtools
   maintainers:
-  - NaureenBharwaniNOAA
   - christinaholtNOAA
   - elcarpenterNOAA
   - maddenp-cu
@@ -511880,6 +511835,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:19edde5fdb4ffa8716e5c947ac16b925c15a824c05bac21eece6813ea37f6adc
+  - version: 1.29.0
+    artifacts:
+    - checksums:
+      - sha256:cf5fbf78be82cfe9e3e81fd55318545baf4d188b9e3edec3774eea6a5136a1f9
   - version: 1.3.0
     artifacts:
     - checksums:
@@ -515826,7 +515785,7 @@ packages:
   - MIT
   homepage: https://w3m.sourceforge.net/index.en.html
   maintainers:
-  - ronin_gw
+  - ronin-gw
   dependencies:
   - bdw-gc
   - c
@@ -516221,6 +516180,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ea0c0c01883a8b8cc8c60dcce60c0c103b2abf873d6a63bffcf41c8762ae5be0
+  - version: '26.10'
+    artifacts:
+    - checksums:
+      - sha256:63401a099c186f6e56e487b9c1da5e5c05bf8a582b1fbef399f9947fa8427141
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/warpx/package.py
 - id: spack:wasi-sdk-prebuilt
@@ -517571,7 +517534,7 @@ packages:
   repository_url: https://github.com/cea-hpc/wi4mpi
   maintainers:
   - adrien-cotte
-  - marcjoos-cea
+  - marc-joos
   dependencies:
   - c
   - cxx
@@ -523427,6 +523390,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:06dcd87d9c88374559369ffbe83b3139cf41418c1a2d03f20e08808085f89fd0
+  - version: 1.64.04
+    artifacts:
+    - checksums:
+      - sha256:509c3a3bffb77c81e2c364175ac70b95b799e5b695cc37d4bf833ec28fdfe0b6
   recipe_path: repos/spack_repo/builtin/packages/xmlrpc_c/package.py
 - id: spack:xmlto
   registry: spack

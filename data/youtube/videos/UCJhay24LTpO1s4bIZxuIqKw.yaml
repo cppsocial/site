@@ -1,5 +1,233 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: u8te1UQOxQY
+  title: What static, inline, const, constexpr Mean and When to Use Them - Andreas Fertig - ACCU 2026
+  url: https://www.youtube.com/watch?v=u8te1UQOxQY
+  published: 2026-10-24 12:00:21+00:00
+  updated: 2026-10-26 02:05:46+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    What static, inline, const, constexpr Mean and When to Use Them - Andreas Fertig - ACCU 2026
+
+    ---
+
+
+    C++ comes with a whole toolbox of keywords you can apply to types and functions. You think it''s straightforward? My experience says otherwise. There are false-friends like static, which I often see misapplied.
+
+
+    In this talk, I will demystify those tricky little keywords. You''ll learn what they really mean, how they behave in different contexts, and — most importantly — when to use them (and when not to). Think const, constexpr, consteval, constinit: yes, C++ has more flavors of constness than your local ice cream shop. We''ll explore them all.
+
+
+    We''ll go beyond syntax and dive into what''s actually happening in the language.
+
+
+    While the talk includes some features from C++23, most of what we cover is rooted in C++11 or even classic C++98. We''ll touch on important concepts like the One Definition Rule (ODR) and top-level qualifiers, giving you a deeper understanding of how these keywords shape your code.
+
+
+    After this session, you''ll walk away knowing exactly where each keyword belongs. No more guesswork. Just the right keyword in the right place.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Andreas Fertig
+
+
+    Andreas Fertig is an expert C++ trainer and consultant who delivers engaging and impactful training sessions, both on-site and remotely, to teams around the globe.
+
+
+    As an active member of the C++ standardization committee, Andreas contributes directly to shaping the future of the language. He shares insights on writing cleaner, more efficient C++ code at international conferences. He publishes specialist articles, e.g., for iX magazine, and has published several C++ textbooks.
+
+
+    With C++ Insights (https://cppinsights.io), Andreas has created an internationally recognized tool that enables users to look behind the scenes of C++ and thus understand constructs even better.
+
+
+    Discover more about Andreas and his work at andreasfertig.com.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/u8te1UQOxQY/hqdefault.jpg
+- video_id: h40xp211BCw
+  title: C++ Magic Statics Demystified - History, Internals, Pitfalls, and Optimizations - ACCU 2026
+  url: https://www.youtube.com/watch?v=h40xp211BCw
+  published: 2026-10-22 16:05:56+00:00
+  updated: 2026-10-23 19:52:24+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    C++ Magic Statics Demystified - History, Internals, Pitfalls, and Optimizations - Kathleen Baker & Chandranath Bhattacharyya - ACCU 2026
+
+    ---
+
+
+    Function-local static variables, colloquially known as ""magic statics"", have been a staple of thread-safe initialization since C++11, yet their internal mechanics remain a mystery to many. This talk explores the historical challenges with static initialization, including broken double-checked locking patterns and inefficient atomic-based solutions. We will deep dive into Mike Burrows’ algorithm, the foundation of the magic statics proposal, and compare real-world implementations of magic statics in MSVC and Clang. Furthermore, we will address the "dark side" of magic statics, including non-deterministic destruction and platform-specific hurdles on Windows and discuss robust solutions. Finally, we will look beyond magic statics toward compile-time data structures, offering practical techniques for safer and more efficient C++ code.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Kathleen Baker
+
+
+    I''m a senior software engineer at Microsoft, currently working on the Edge browser team. I joined Microsoft after completing my undergraduate degree at the University of Alberta.
+
+
+    Chandranath Bhattacharyya
+
+
+    Chandranath Bhattacharyya has been a professional programmer since 2000, with most of his career focused on C++. He currently works at Microsoft on the Edge browser team and is a dedicated internal educator. Over the past five years, he has delivered around 40 C++ talks to an internal audience of more than 100 engineers, emphasizing clear explanations of language features and practical best practices.
+
+
+    He has also begun presenting at public C++ conferences, including one talk at C++Now 2025 and two talks at CppCon 2025. Chandranath serves as a reviewer for submissions to C++Now, C++OnSea, and CppCon.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/h40xp211BCw/hqdefault.jpg
+- video_id: 4amZ_ZWqpA8
+  title: Serial C++ Can Be Parallel Too - Eran Gilad - ACCU 2026
+  url: https://www.youtube.com/watch?v=4amZ_ZWqpA8
+  published: 2026-10-19 14:20:42+00:00
+  updated: 2026-10-20 17:55:45+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Serial C++ Can Be Parallel Too - Eran Gilad - ACCU 2026
+
+    ---
+
+
+    In this talk, we will see how serial C++ can utilize hardware parallelism. We will begin with SIMD (Single Instruction, Multiple Data), where one instruction processes a whole batch of values at once. The path will run from hand-written vectorized assembly, to compiler intrinsics, to the new C++26 std::simd feature, and finally to auto-parallelization, with examples of what works, what doesn’t, and how to verify the compiler’s choices. We will see why SIMD shines in structured compute-bound code, and why it sometimes falls short.
+
+
+    We will then broaden the scope to memory-level parallelism (MLP) - a hardware feature that overlaps multiple independent memory accesses to reduce overall latency. We will discuss how to take advantage of MLP in C++ through bulk operations and APIs, and show how this approach can bring substantial benefits even in less structured code with irregular memory access patterns.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Eran Gilad
+
+
+    Eran Gilad is a software engineer at Regatta Data, where he works on one of the most fascinating areas of software: database internals. Before diving deep into database engineering, Eran was a principal research engineer at Yahoo Research and a member of a systems research group. He holds a PhD in Computer Science from the Technion, where his work centered on various aspects of parallel programming and execution.
+
+
+    Beyond his professional work, Eran is passionate about developer communities. He co-organizes the Core C++ conference, the Haifa::C++ meetup group, and the Medabrim C++ WhatsApp group. His involvement in these communities stems from his first job experience, where he was the sole C++ developer at his company for several years.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/4amZ_ZWqpA8/hqdefault.jpg
 - video_id: 3nd4RIH5okA
   title: The Not-So-Hidden Corners of C++ ABI Stability - Luis Caro Campos - ACCU 2026
   url: https://www.youtube.com/watch?v=3nd4RIH5okA

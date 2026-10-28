@@ -1,5 +1,224 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: aas2DSxHrT8
+  title: CMake’s Recent Evolution - Modules, CPS, and Build Optimization - Bill Hoffman - C++Now 2026
+  url: https://www.youtube.com/watch?v=aas2DSxHrT8
+  published: 2026-10-25 16:00:11+00:00
+  updated: 2026-10-25 17:12:25+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    CMake’s Recent Evolution - Modules, CPS, and Build Optimization - Bill Hoffman - C++Now 2026
+
+    ---
+
+
+    After more than 26 years, CMake continues to evolve alongside the C++ ecosystem. To remain effective, it has had to adapt to significant language changes, increasingly complex package management, and the sheer scale of modern codebases. This talk examines four major areas of recent development: C++ modules, the Common Package Specification (CPS), build instrumentation, and distributed execution. For each area, we will cover the challenges involved in implementing the feature, the solutions that have been developed, and how CMake helps you apply those solutions in real-world projects.
+
+
+    C++ modules place new demands on build systems, requiring earlier and more accurate knowledge of dependencies and tighter integration with compilers. Both named modules and import std are supported in CMake today. We will explore how CMake performs dynamic dependency scanning and the coordination needed to turn module semantics into a practical build graph. This work required close cooperation with compiler vendors and has helped extend module support across the broader ecosystem.
+
+
+    We will also examine CPS (the Common Package Specification), which addresses the fragility of ad-hoc metadata used in traditional package discovery. As dependency graphs grow, manual configuration becomes a liability. We will discuss the current state of CPS support in CMake and how a machine-readable package description format improves reproducibility and toolchain interoperability.
+
+
+    The latter half of the talk shifts from modeling to performance. In large projects, identifying bottlenecks is the first step toward meaningful optimization. We will demonstrate how to use the CMake Instrumentation API to generate detailed traces showing where time is spent, both during configuration and the build.
+
+
+    Finally, we examine how to act on that data through distributed builds. We will look at scaling across machine farms using the native FASTBuild generator, compiler-launcher integration, and other distributed execution strategies supported by CMake.
+
+
+    This talk focuses on real-world constraints, trade-offs, and lessons learned from evolving a long-lived tool to meet the practical demands of modern C++ development.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/CMakes_Recent_Evolution.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Bill Hoffman
+
+
+    Mr. Hoffman is a founder of Kitware and currently serves as Chairman of the Board, Vice President, and Chief Technical Officer (CTO). He is the original author and la ead architect of CMake, an open source, cross-platform build and configuration tool that is used by millions of developers around the world, and he is the co-author of the accompanying text, Mastering CMake. Using his 20+ years of experience with large software systems development, Mr. Hoffman is also a major technical contributor to Kitware’s Visualization Toolkit, Insight Toolkit, and ParaView projects.
+
+
+    As CTO, Mr. Hoffman’s emphasis is on software development methodologies and establishing best practices across the breadth of Kitware’s development efforts. As one of the visionaries leading the quality software process efforts at Kitware, Bill has been instrumental in adopting agile programming practices, fueling Kitware’s software development. He is a frequent speaker on these subjects at CppCon, C++Now, and other conferences.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/aas2DSxHrT8/hqdefault.jpg
+- video_id: LgTEvW61J70
+  title: Code C++ Like a Library Author - Jon Kalb - C++Now 2026
+  url: https://www.youtube.com/watch?v=LgTEvW61J70
+  published: 2026-10-23 15:47:10+00:00
+  updated: 2026-10-24 17:58:52+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Code C++ Like a Library Author - Jon Kalb - C++Now 2026
+
+    ---
+
+
+    To write the best C++ application code, you must think like a library author. This talk reframes application development as a form of library design, where every component is a potential asset for future maintenance and extension.
+
+
+    We''ll survey the C++ language features that empower library authors to create powerful, flexible, and safe abstractions. From there, we''ll distill the ''library author mindset.’ You will leave with concrete principles and techniques to make your application code more modular, maintainable, composable, reusable, testable, and ultimately, more valuable.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Code_Like_a_Library_Author.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jon Kalb
+
+
+    Jon Kalb is using his decades of software engineering experience and knowledge about C++ to make other people better software engineers. He trains experienced software engineers to be better programmers. He presents at and helps run technical conferences and local user groups.
+
+
+    Jon is passionate about quality code and wants to inspire others to achieve their best engineering work. He is excited about modern C++ and how we can exploit the latest hardware developments with standard, portable C++.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/LgTEvW61J70/hqdefault.jpg
+- video_id: kV6TbuRMIVg
+  title: C++ Magic Statics Demystified - History, Internals, Pitfalls, and Optimizations - C++Now 2026
+  url: https://www.youtube.com/watch?v=kV6TbuRMIVg
+  published: 2026-10-20 15:24:35+00:00
+  updated: 2026-10-22 03:40:42+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    C++ Magic Statics Demystified - History, Internals, Pitfalls, and Optimizations - Chandranath Bhattacharyya - C++Now 2026
+
+    ---
+
+
+    Function-local static variables, colloquially known as "magic statics", have been a staple of thread-safe initialization since C++11, yet their internal mechanics remain a mystery to many. This talk explores the historical challenges with static initialization, including broken double-checked locking patterns and inefficient atomic-based solutions. We will deep dive into Mike Burrows’ algorithm, the foundation of the magic statics proposal, and compare real-world implementations of magic statics in MSVC and Clang. Furthermore, we will address the "dark side" of magic statics, including non-deterministic destruction and platform-specific hurdles on Windows and discuss robust solutions. Finally, we will look beyond magic statics toward compile-time data structures, offering practical techniques for safer and more efficient C++ code.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Cpp_Magic_Statics_Demystified.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Chandranath Bhattacharyya
+
+
+    Chandranath Bhattacharyya has been a professional programmer since 2000, with most of his career focused on C++. He currently works at Microsoft on the Edge browser team and is a dedicated internal educator. Over the past five years, he has delivered around 40 C++ talks to an internal audience of more than 100 engineers, emphasizing clear explanations of language features and practical best practices.
+
+
+    He has also begun presenting at public C++ conferences, including one talk at C++Now 2025 and two talks at CppCon 2025. Chandranath serves as a reviewer for submissions to C++Now, C++OnSea, and CppCon.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/kV6TbuRMIVg/hqdefault.jpg
 - video_id: cIt4D_SJcI8
   title: Co-Designing Integrated AI-Enabled Compiler-Runtime Systems - Hartmut Kaiser - C++Now 2026
   url: https://www.youtube.com/watch?v=cIt4D_SJcI8

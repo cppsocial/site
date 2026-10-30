@@ -1,5 +1,382 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: aas2DSxHrT8
+  title: CMake’s Recent Evolution - Modules, CPS, and Build Optimization - Bill Hoffman - C++Now 2026
+  url: https://www.youtube.com/watch?v=aas2DSxHrT8
+  published: 2026-10-25 16:00:11+00:00
+  updated: 2026-10-25 17:12:25+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    CMake’s Recent Evolution - Modules, CPS, and Build Optimization - Bill Hoffman - C++Now 2026
+
+    ---
+
+
+    After more than 26 years, CMake continues to evolve alongside the C++ ecosystem. To remain effective, it has had to adapt to significant language changes, increasingly complex package management, and the sheer scale of modern codebases. This talk examines four major areas of recent development: C++ modules, the Common Package Specification (CPS), build instrumentation, and distributed execution. For each area, we will cover the challenges involved in implementing the feature, the solutions that have been developed, and how CMake helps you apply those solutions in real-world projects.
+
+
+    C++ modules place new demands on build systems, requiring earlier and more accurate knowledge of dependencies and tighter integration with compilers. Both named modules and import std are supported in CMake today. We will explore how CMake performs dynamic dependency scanning and the coordination needed to turn module semantics into a practical build graph. This work required close cooperation with compiler vendors and has helped extend module support across the broader ecosystem.
+
+
+    We will also examine CPS (the Common Package Specification), which addresses the fragility of ad-hoc metadata used in traditional package discovery. As dependency graphs grow, manual configuration becomes a liability. We will discuss the current state of CPS support in CMake and how a machine-readable package description format improves reproducibility and toolchain interoperability.
+
+
+    The latter half of the talk shifts from modeling to performance. In large projects, identifying bottlenecks is the first step toward meaningful optimization. We will demonstrate how to use the CMake Instrumentation API to generate detailed traces showing where time is spent, both during configuration and the build.
+
+
+    Finally, we examine how to act on that data through distributed builds. We will look at scaling across machine farms using the native FASTBuild generator, compiler-launcher integration, and other distributed execution strategies supported by CMake.
+
+
+    This talk focuses on real-world constraints, trade-offs, and lessons learned from evolving a long-lived tool to meet the practical demands of modern C++ development.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/CMakes_Recent_Evolution.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Bill Hoffman
+
+
+    Mr. Hoffman is a founder of Kitware and currently serves as Chairman of the Board, Vice President, and Chief Technical Officer (CTO). He is the original author and la ead architect of CMake, an open source, cross-platform build and configuration tool that is used by millions of developers around the world, and he is the co-author of the accompanying text, Mastering CMake. Using his 20+ years of experience with large software systems development, Mr. Hoffman is also a major technical contributor to Kitware’s Visualization Toolkit, Insight Toolkit, and ParaView projects.
+
+
+    As CTO, Mr. Hoffman’s emphasis is on software development methodologies and establishing best practices across the breadth of Kitware’s development efforts. As one of the visionaries leading the quality software process efforts at Kitware, Bill has been instrumental in adopting agile programming practices, fueling Kitware’s software development. He is a frequent speaker on these subjects at CppCon, C++Now, and other conferences.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/aas2DSxHrT8/hqdefault.jpg
+- video_id: LgTEvW61J70
+  title: Code C++ Like a Library Author - Jon Kalb - C++Now 2026
+  url: https://www.youtube.com/watch?v=LgTEvW61J70
+  published: 2026-10-23 15:47:10+00:00
+  updated: 2026-10-24 17:58:52+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Code C++ Like a Library Author - Jon Kalb - C++Now 2026
+
+    ---
+
+
+    To write the best C++ application code, you must think like a library author. This talk reframes application development as a form of library design, where every component is a potential asset for future maintenance and extension.
+
+
+    We''ll survey the C++ language features that empower library authors to create powerful, flexible, and safe abstractions. From there, we''ll distill the ''library author mindset.’ You will leave with concrete principles and techniques to make your application code more modular, maintainable, composable, reusable, testable, and ultimately, more valuable.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Code_Like_a_Library_Author.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jon Kalb
+
+
+    Jon Kalb is using his decades of software engineering experience and knowledge about C++ to make other people better software engineers. He trains experienced software engineers to be better programmers. He presents at and helps run technical conferences and local user groups.
+
+
+    Jon is passionate about quality code and wants to inspire others to achieve their best engineering work. He is excited about modern C++ and how we can exploit the latest hardware developments with standard, portable C++.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/LgTEvW61J70/hqdefault.jpg
+- video_id: kV6TbuRMIVg
+  title: C++ Magic Statics Demystified - History, Internals, Pitfalls, and Optimizations - C++Now 2026
+  url: https://www.youtube.com/watch?v=kV6TbuRMIVg
+  published: 2026-10-20 15:24:35+00:00
+  updated: 2026-10-22 03:40:42+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    C++ Magic Statics Demystified - History, Internals, Pitfalls, and Optimizations - Chandranath Bhattacharyya - C++Now 2026
+
+    ---
+
+
+    Function-local static variables, colloquially known as "magic statics", have been a staple of thread-safe initialization since C++11, yet their internal mechanics remain a mystery to many. This talk explores the historical challenges with static initialization, including broken double-checked locking patterns and inefficient atomic-based solutions. We will deep dive into Mike Burrows’ algorithm, the foundation of the magic statics proposal, and compare real-world implementations of magic statics in MSVC and Clang. Furthermore, we will address the "dark side" of magic statics, including non-deterministic destruction and platform-specific hurdles on Windows and discuss robust solutions. Finally, we will look beyond magic statics toward compile-time data structures, offering practical techniques for safer and more efficient C++ code.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Cpp_Magic_Statics_Demystified.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Chandranath Bhattacharyya
+
+
+    Chandranath Bhattacharyya has been a professional programmer since 2000, with most of his career focused on C++. He currently works at Microsoft on the Edge browser team and is a dedicated internal educator. Over the past five years, he has delivered around 40 C++ talks to an internal audience of more than 100 engineers, emphasizing clear explanations of language features and practical best practices.
+
+
+    He has also begun presenting at public C++ conferences, including one talk at C++Now 2025 and two talks at CppCon 2025. Chandranath serves as a reviewer for submissions to C++Now, C++OnSea, and CppCon.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/kV6TbuRMIVg/hqdefault.jpg
+- video_id: cIt4D_SJcI8
+  title: Co-Designing Integrated AI-Enabled Compiler-Runtime Systems - Hartmut Kaiser - C++Now 2026
+  url: https://www.youtube.com/watch?v=cIt4D_SJcI8
+  published: 2026-10-18 15:00:39+00:00
+  updated: 2026-10-18 15:00:41+00:00
+  description: "https://www.cppnow.org\n---\n\nCo-Designing Integrated AI-Enabled Compiler-Runtime Systems - Hartmut Kaiser - C++Now 2026\n---\n\nHPC is entering a post-Exascale era marked by heterogeneous hardware (accelerators, disaggregated memory, quantum units) and increasingly dynamic, data‑intensive, AI‑driven workloads. Current fragmented software stacks (MPI, OpenMP, CUDA) limit portability, adaptivity, and performance. The talk will outline a strategy and first steps towards a co‑designed compiler–runtime–AI ecosystem, with HPX as the integration foundation, to close the optimization loop between static analysis and runtime feedback and to deliver performant, resource‑efficient, adaptive, and portable execution for next‑generation HPC.\n\nWe instrument compiler analyses with runtime‑visible metadata via LLVM/Clang extensions and an HPX MLIR dialect, enabling executors and schedulers to query detailed task characteristics. The compiler emits multiple kernel variants (scheduling,\
+    \ layouts, vectorization, communication patterns) stored in a VariantRegistry; the runtime selects and refines variants using current system state and light‑weight ML models. An embedded JIT service supports dynamic specialization triggered by runtime telemetry; compiled variants are cached and distributable across nodes. Compiler‑assisted memory management (layout descriptors, arena allocation, prefetch annotations) and communication annotations (message counts, latency sensitivity) allow the runtime to perform NUMA‑aware placement, predictive scheduling, buffer preallocation, and adaptive protocol selection (MPI/UCX/libfabric) for critical transfers.\n\nAI augments this stack by combining static features (loop depth, dependence structure) with dynamic counters (memory pressure, network state) to train offline models (gradient‑boosted trees, compact neural nets, and RL agents) and deploy microsecond‑scale inference for frequent scheduling and placement decisions. Applied to irregular,\
+    \ dynamic workloads (graph analytics, adaptive mesh refinement, particle methods, sparse solvers), the integrated stack enables adaptive data‑layout switching (AoS/SoA/CSR variants), multi‑variant kernel selection with JIT refinement, proactive load redistribution, and communication batching and consistency tuning. Preliminary projections indicate substantial reductions in critical‑path latency and end‑to‑end performance improvements (single‑digit to mid‑double‑digit percent gains) and energy savings versus static policies.\n\nBy leveraging HPX’s standards‑aligned C++ model, fine‑grained async tasks, global address space, rich telemetry, and extensible executors, this compiler‑runtime co‑design provides a practical blueprint for a unified programming model spanning CPUs, GPUs, accelerators, and distributed nodes. We invite collaboration to implement prototypes, build benchmark suites, and engage the community to validate and evolve this integrated stack for post‑Exascale and AI‑centric\
+    \ HPC systems.\n---\n\nSlides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Co-Designing_Integrated_AI_Enabled_Compiler_Runtime_Systems.pdf\n\nthink-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech\n---\n\nHartmut Kaiser\n\nHartmut is a professor at Louisiana State University. He is best known for his involvement in open-source software projects, such as being the author of several C++ libraries that are in use by thousands of developers worldwide. In his current research he focusses on leading the [STE||AR Group](https://stellar-group.org/) at LSU’s Center for Computation and Technology working on the practical design and implementation of future execution models and programming methods\
+    \ using the [HPX runtime system](https://github.com/STEllAR-GROUP/hpx) - a modern C++ library for concurrency and parallelism. \n---\n\nC++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.\nAnnual CppNow Conference - https://www.cppnow.org\nhttps://www.linkedin.com/company/cppnow\nhttps://twitter.com/cppnow\nhttps://www.facebook.com/CppNow\nhttps://www.reddit.com/r/CppNow\nhttps://mastodon.social/@cppnow\nVideo Sponsors: Bloomberg\n---\n\nVideos Filmed & Edited By Bash Films: https://bashfilms.com/\nYouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus\
+    \ #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i4.ytimg.com/vi/cIt4D_SJcI8/hqdefault.jpg
+- video_id: OW_h9oyHQ-0
+  title: 'The Secret to C++ Reflection Now: CMake Code Generation - Bret Brown - C++Now 2026'
+  url: https://www.youtube.com/watch?v=OW_h9oyHQ-0
+  published: 2026-10-16 15:00:24+00:00
+  updated: 2026-10-18 10:18:20+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    The Secret to C++ Reflection Now: CMake Code Generation - Bret Brown - C++Now 2026
+
+    ---
+
+
+    There is growing excitement around Reflection in C++26 and the promise of language-integrated code generation. While these features will be valuable, it often takes nearly a decade for new C++ standards to see widespread, production-grade adoption. But what can we do now? Many of us need robust solutions between now and 2036.
+
+    That is why C and C++ projects already rely heavily on code generation today. At Bloomberg, we routinely integrate code generation into C++ systems for use cases such as feature flag APIs, schema-driven transport layers, cross-language interop layers, and embedding data directly into applications.
+
+
+    These systems are large, long-lived, and built using existing tools — most notably CMake.
+
+
+    This talk focuses on how to integrate code generation cleanly and maintainably into a C++ project using CMake. We will look at patterns for treating code generators as first-class build dependencies, managing generated source code, integrating into packaging systems, supporting a great developer experience, and avoiding common pitfalls that lead to fragile build systems.
+
+
+    This talk covers principles for how generators, build systems, and code consumption need to cooperate. An open source reference project will also be shared to demonstrate these ideas concretely. Attendees will leave with tools, examples, and ideas they can adapt to their own projects today.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/Until_Reflection.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Bret Brown
+
+
+    Bret likes making authoring and maintaining C++ codebases simpler and more intuitive by treating projects more like cattle and less like pets. He is especially interested in the software development lifecycle, development automation, modern build systems, packaging, code transformation, software governance, and code analysis.
+
+
+    Bret is currently an engineer in Bloomberg''s developer experience department. He has worked in embedded C++ and safety critical C++ for previous employers.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/OW_h9oyHQ-0/hqdefault.jpg
+- video_id: 3ffgtI31iKw
+  title: Implementing Logic in C++ - Hans de Nivelle - C++Now 2026
+  url: https://www.youtube.com/watch?v=3ffgtI31iKw
+  published: 2026-10-13 15:41:03+00:00
+  updated: 2026-10-15 15:01:19+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Implementing Logic in C++ - Hans de Nivelle - C++Now 2026
+
+    ---
+
+
+    For most logicians, C++ will not be the language of choice for implementing their algorithms. In the best case, they will admit that using an imperative language like C++ may be needed for efficiency, but at the same time they believe that this will always result in ugly code. I will show that implementation of logic in C++ is very well possible, and can be done elegantly with help of the proper tools.
+
+
+    I will explain what is special about logic: It uses trees that are very heterogeneous in form. This creates memory management problems, problems with static type checking, efficiency problems, and problems with value semantics. There is a lot of similar code, which can be automatically generated. At this moment, I use a tool that generates source code. I hope to be able to replace this by reflection in the future.
+
+    ---
+
+
+    Slides: https://github.com/jeandenivelle/cppnow2026
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Hans de Nivelle
+
+
+    Hans de Nivelle is interested in implementation of logic algorithms, modeling of mathematics in logic, and programming language design. He regularly teaches data structures, C++, Java, Python, and Prolog. He also often teaches formal language theory, flight simulation, and compiler construction. He is currently employed at Nazarbayev University, in Astana, Kazakhstan. From 2007 until 2017, he worked at University of Wroclaw in Poland. From 1999 until 2007 he worked at Max-Planck Institute of Computer Science in Saarbruecken, where he worked on automated theorem proving. His first contact with C++ was in 2002.  In 2022, he spoke at CppNow and CppCon about automatic generation of bottom-up parsers in C++.
+
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/3ffgtI31iKw/hqdefault.jpg
 - video_id: xwnRPyRK5h4
   title: Cutting Some Slack for our Programs - Lisa Lippincott - C++Now 2026
   url: https://www.youtube.com/watch?v=xwnRPyRK5h4

@@ -22,7 +22,7 @@ The updater imports individual occurrences from that feed.
 >
 > Set `type: meetup_card` on the entry itself. The event importer does not use the group's `card_type` default.
 
-Use the group name from `meetup.com/<group-name>/` as `source_id`, lowercased.
+Use the group name from `meetup.com/<group-name>/` as `source_id`, in lowercase.
 Choose the group's timezone from [IANA's list](https://data.iana.org/time-zones/tzdb/zone1970.tab), for example `Europe/Paris`.
 Copy the group calendar feed using [Meetup's export instructions](https://help.meetup.com/hc/en-us/articles/39237118960013-Exporting-an-event-to-your-calendar).
 Include exactly one calendar link ending in `/events/ical/` (the trailing slash is optional).
@@ -67,7 +67,7 @@ Add a specific conference, workshop, committee meeting, or one-off meetup to the
 - Provide `ical_uid`, `title`, `start_date`, `event_type`, and `source_url`
 - Provide the canonical event URL, format, organizer, location, and a useful factual description when available
 - Keep `ical_uid` globally unique and stable; use a readable slug and year followed by `@cpp.social`
-- Use ISO `YYYY-MM-DD` dates; `end_date` is the final day of the event
+- Use ISO 8601 `YYYY-MM-DD` dates; `end_date` is the final day of the event
 - Allowed `format` values are `in_person`, `online`, and `hybrid`
 - Allowed `event_type` values are `conference`, `meetup`, `committee`, and `workshop`
 - Omit `registration_url` or `venue` when they are not known

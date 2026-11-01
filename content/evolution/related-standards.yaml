@@ -4,6 +4,9 @@ id: related-standards
 title: Related standards
 description: Other standards and specifications referenced by the C++ standard or related to it
 cards:
+  - title: POSIX.1-2024
+    path: https://pubs.opengroup.org/onlinepubs/9799919799/
+    description: The Open Group Base Specifications for portable operating-system interfaces and utilities
   - title: ISO C working group (WG14)
     path: https://www.open-std.org/jtc1/sc22/wg14/
     description: Documents and papers of WG14, the C committee

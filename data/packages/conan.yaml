@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: conan
 repository: https://github.com/conan-io/conan-center-index
-revision: 44537eadd32abd8d5f04dcd6e2f8fb6c22ee0953
+revision: dac5727363071a58ff7b2b137cf77837cfbe1ba4
 packages:
 - id: conan:7bitconf
   registry: conan
@@ -450,6 +450,18 @@ packages:
     - url: https://github.com/abseil/abseil-cpp/archive/20260526.0.tar.gz
       checksums:
       - sha256:6e1aee535473414164bf83e4ebc40240dec71a4701f8a642d906e95bea1aea0c
+  - version: '20260817.0'
+    dependencies:
+    - name: cmake
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/abseil/abseil-cpp/archive/20260817.0.tar.gz
+      checksums:
+      - sha256:f7e05179df39c45434cad433f5783840bb3788ef322976f9138bc6b72b3a107d
   recipe_path: recipes/abseil/config.yml
   native_url: https://conan.io/center/recipes/abseil
 - id: conan:absent
@@ -5278,7 +5290,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.9.1
+  - version: 0.10.4
     dependencies:
     - name: aws-c-cal
     - name: aws-c-common
@@ -5291,9 +5303,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-auth/archive/v0.9.1.tar.gz
+    - url: https://github.com/awslabs/aws-c-auth/archive/v0.10.4.tar.gz
       checksums:
-      - sha256:adae1e725d9725682366080b8bf8e49481650c436b846ceeb5efe955d5e03273
+      - sha256:6fb567f496a450d4b6d3f5749d735977a0156957e8ccbca9af7a5ee15d1ffda7
   recipe_path: recipes/aws-c-auth/config.yml
   native_url: https://conan.io/center/recipes/aws-c-auth
 - id: conan:aws-c-cal
@@ -5323,7 +5335,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.9.8
+  - version: 0.9.15
     dependencies:
     - name: aws-c-common
     - name: openssl
@@ -5333,9 +5345,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-cal/archive/v0.9.8.tar.gz
+    - url: https://github.com/awslabs/aws-c-cal/archive/v0.9.15.tar.gz
       checksums:
-      - sha256:4a2a0918c763639f18d971367df6b528a1f3a0660f1c66d5791e435e8e671db9
+      - sha256:215dd31c12ea49c4f40aa7882a800f9648e4095cfcb2d6abdd27e957574ad6e2
   recipe_path: recipes/aws-c-cal/config.yml
   native_url: https://conan.io/center/recipes/aws-c-cal
 - id: conan:aws-c-common
@@ -5362,7 +5374,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.12.5
+  - version: 0.14.5
     features:
     - name: cpu_extensions
       default: 'true'
@@ -5371,9 +5383,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-common/archive/v0.12.5.tar.gz
+    - url: https://github.com/awslabs/aws-c-common/archive/v0.14.5.tar.gz
       checksums:
-      - sha256:02d1ab905d43a33008a63f273b27dbe4859e9f090eac6f0e3eeaf8c64a083937
+      - sha256:103273767fea478545b75a0835c7dc60842baee0a191a112c72f904d22693c84
   recipe_path: recipes/aws-c-common/config.yml
   native_url: https://conan.io/center/recipes/aws-c-common
 - id: conan:aws-c-compression
@@ -5402,7 +5414,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.3.1
+  - version: 0.3.2
     dependencies:
     - name: aws-c-common
     features:
@@ -5411,9 +5423,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-compression/archive/v0.3.1.tar.gz
+    - url: https://github.com/awslabs/aws-c-compression/archive/v0.3.2.tar.gz
       checksums:
-      - sha256:d89fca17a37de762dc34f332d2da402343078da8dbd2224c46a11a88adddf754
+      - sha256:f93f5a5d8b3fee3a6d97b14ba279efacd4d4016ef9cc7dc4be7d43519ecfbe93
   recipe_path: recipes/aws-c-compression/config.yml
   native_url: https://conan.io/center/recipes/aws-c-compression
 - id: conan:aws-c-event-stream
@@ -5442,7 +5454,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.5.7
+  - version: 0.7.1
     dependencies:
     - name: aws-c-common
     - name: aws-c-io
@@ -5453,9 +5465,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-event-stream/archive/v0.5.7.tar.gz
+    - url: https://github.com/awslabs/aws-c-event-stream/archive/v0.7.1.tar.gz
       checksums:
-      - sha256:5d92abed2ed89cc1efaba3963e888d9df527296f1dbfe21c569f84ea731aa3c2
+      - sha256:334b2abfe0cb5c68d79d52525598fdd5f6052b93a17a78a4b1ada7fa1be252c0
   recipe_path: recipes/aws-c-event-stream/config.yml
   native_url: https://conan.io/center/recipes/aws-c-event-stream
 - id: conan:aws-c-http
@@ -5487,7 +5499,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.10.5
+  - version: 0.11.0
     dependencies:
     - name: aws-c-cal
     - name: aws-c-common
@@ -5499,9 +5511,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-http/archive/v0.10.5.tar.gz
+    - url: https://github.com/awslabs/aws-c-http/archive/v0.11.0.tar.gz
       checksums:
-      - sha256:02e8e67f5f03fa6458f8921232dc7a9076792d2822ad86f19c3f984fc1a073a8
+      - sha256:4ccbdd33c798b590288330dec9e93abe2ff6cfb198b7a4db036c9d362f2e6506
   recipe_path: recipes/aws-c-http/config.yml
   native_url: https://conan.io/center/recipes/aws-c-http
 - id: conan:aws-c-io
@@ -5532,7 +5544,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.23.2
+  - version: 0.27.6
     dependencies:
     - name: aws-c-cal
     - name: aws-c-common
@@ -5543,9 +5555,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-io/archive/v0.23.2.tar.gz
+    - url: https://github.com/awslabs/aws-c-io/archive/v0.27.6.tar.gz
       checksums:
-      - sha256:3a335b812411c30bcc64072f148ddf6cd632d8261799cd04e54051b44506feb9
+      - sha256:2a6890715ccecaa0df6e9d074b186a7156b35360ded9db973064e2e00d45fcc3
   recipe_path: recipes/aws-c-io/config.yml
   native_url: https://conan.io/center/recipes/aws-c-io
 - id: conan:aws-c-mqtt
@@ -5574,7 +5586,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.13.3
+  - version: 0.16.1
     dependencies:
     - name: aws-c-common
     - name: aws-c-http
@@ -5584,9 +5596,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-mqtt/archive/v0.13.3.tar.gz
+    - url: https://github.com/awslabs/aws-c-mqtt/archive/v0.16.1.tar.gz
       checksums:
-      - sha256:1dfc11d6b3dc1a6d408df64073e8238739b4c50374078d36d3f2d30491d15527
+      - sha256:48fd84e6ff51fdce5cdc4250593d7b0f10db91f8592737c0fe69e0177ee48144
   recipe_path: recipes/aws-c-mqtt/config.yml
   native_url: https://conan.io/center/recipes/aws-c-mqtt
 - id: conan:aws-c-s3
@@ -5619,7 +5631,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.9.2
+  - version: 0.13.5
     dependencies:
     - name: aws-c-auth
     - name: aws-c-cal
@@ -5633,9 +5645,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-s3/archive/v0.9.2.tar.gz
+    - url: https://github.com/awslabs/aws-c-s3/archive/v0.13.5.tar.gz
       checksums:
-      - sha256:70ddd1e69fed7788ff5499b03158f36fb8137d82bd7b1af7bcdf57facbdb1557
+      - sha256:d61313aa30575141afd9dfb207b7594e30d0473885719417c7c8a2a53d3ebb5f
   recipe_path: recipes/aws-c-s3/config.yml
   native_url: https://conan.io/center/recipes/aws-c-s3
 - id: conan:aws-c-sdkutils
@@ -5664,7 +5676,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.2.4
+  - version: 0.2.9
     dependencies:
     - name: aws-c-common
     features:
@@ -5673,9 +5685,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-c-sdkutils/archive/v0.2.4.tar.gz
+    - url: https://github.com/awslabs/aws-c-sdkutils/archive/v0.2.9.tar.gz
       checksums:
-      - sha256:493cbed4fa57e0d4622fcff044e11305eb4fc12445f32c8861025597939175fc
+      - sha256:14fe900f80c3b9f5e53a783d9ac0865ed9ba1ae63b67744b9f82a8b3194a4388
   recipe_path: recipes/aws-c-sdkutils/config.yml
   native_url: https://conan.io/center/recipes/aws-c-sdkutils
 - id: conan:aws-cdi-sdk
@@ -5728,7 +5740,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.2.6
+  - version: 0.2.10
     dependencies:
     - name: aws-c-common
     features:
@@ -5737,9 +5749,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-checksums/archive/v0.2.6.tar.gz
+    - url: https://github.com/awslabs/aws-checksums/archive/v0.2.10.tar.gz
       checksums:
-      - sha256:e9d94f6f57bfadec7164943aecc4d7d1d8f74b95a626ba5edabfc7df66888cf4
+      - sha256:cb6509f75e42ee25c372a6d379e8582ce5179e5335183842e808f7d8abb0c314
   recipe_path: recipes/aws-checksums/config.yml
   native_url: https://conan.io/center/recipes/aws-checksums
 - id: conan:aws-crt-cpp
@@ -5775,7 +5787,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.35.2
+  - version: 0.43.9
     dependencies:
     - name: aws-c-auth
     - name: aws-c-cal
@@ -5794,9 +5806,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/awslabs/aws-crt-cpp/archive/v0.35.2.tar.gz
+    - url: https://github.com/awslabs/aws-crt-cpp/archive/v0.43.9.tar.gz
       checksums:
-      - sha256:9d53d7018994a5f7fc879d397032b72ad88b1585a8cc07e2c8c339ae427f0577
+      - sha256:5f52adf2f2b4e3038eb2a2b4eba2af961f3498d870c4e48d3f0509bad0a4e9c2
   recipe_path: recipes/aws-crt-cpp/config.yml
   native_url: https://conan.io/center/recipes/aws-crt-cpp
 - id: conan:aws-kvs-pic
@@ -6081,8 +6093,11 @@ packages:
   - access-management
   - accessanalyzer
   - account
+  - account-access
   - acm
   - acm-pca
+  - agent-registry
+  - agent-registry-control
   - aiops
   - amp
   - amplify
@@ -6155,6 +6170,7 @@ packages:
   - cloudsearchdomain
   - cloudtrail
   - cloudtrail-data
+  - cloudwatchomni
   - codeartifact
   - codebuild
   - codecatalyst
@@ -6173,12 +6189,14 @@ packages:
   - comprehend
   - comprehendmedical
   - compute-optimizer
+  - compute-optimizer-automation
   - config
   - connect
   - connect-contact-lens
   - connectcampaigns
   - connectcampaignsv2
   - connectcases
+  - connecthealth
   - connectparticipant
   - controlcatalog
   - controltower
@@ -6194,6 +6212,7 @@ packages:
   - deadline
   - detective
   - devicefarm
+  - devops-agent
   - devops-guru
   - directconnect
   - directory-service-data
@@ -6221,19 +6240,18 @@ packages:
   - elasticloadbalancing
   - elasticloadbalancingv2
   - elasticmapreduce
-  - elastictranscoder
+  - elementalinference
   - email
   - emr-containers
   - emr-serverless
+  - endusermessaging
   - entityresolution
   - es
   - eventbridge
+  - eventbridgev2
   - events
-  - evidently
   - evs
   - fPIC
-  - finspace
-  - finspace-data
   - firehose
   - fis
   - fms
@@ -6258,6 +6276,7 @@ packages:
   - health
   - healthlake
   - iam
+  - iam-toolbox
   - identity-management
   - identitystore
   - imagebuilder
@@ -6265,16 +6284,14 @@ packages:
   - inspector
   - inspector-scan
   - inspector2
+  - interconnect
   - internetmonitor
   - invoicing
   - iot
   - iot-data
   - iot-jobs-data
   - iot-managed-integrations
-  - iotanalytics
   - iotdeviceadvisor
-  - iotevents
-  - iotevents-data
   - iotfleetwise
   - iotsecuretunneling
   - iotsitewise
@@ -6301,6 +6318,9 @@ packages:
   - kms
   - lakeformation
   - lambda
+  - lambda-core
+  - lambda-microvms
+  - lambda-web
   - launch-wizard
   - lex
   - lex-models
@@ -6322,6 +6342,7 @@ packages:
   - marketplace-agreement
   - marketplace-catalog
   - marketplace-deployment
+  - marketplace-discovery
   - marketplace-entitlement
   - marketplace-reporting
   - marketplacecommerceanalytics
@@ -6348,15 +6369,18 @@ packages:
   - mq
   - mturk-requester
   - mwaa
+  - mwaa-serverless
   - neptune
   - neptune-graph
   - neptunedata
   - network-firewall
+  - network-security-manager
   - networkflowmonitor
   - networkmanager
   - networkmonitor
   - notifications
   - notificationscontacts
+  - nova-act
   - oam
   - observabilityadmin
   - odb
@@ -6366,7 +6390,10 @@ packages:
   - organizations
   - osis
   - outposts
-  - panorama
+  - partnercentral-account
+  - partnercentral-benefits
+  - partnercentral-channel
+  - partnercentral-revenue-measurement
   - partnercentral-selling
   - payment-cryptography
   - payment-cryptography-data
@@ -6383,6 +6410,7 @@ packages:
   - pipes
   - polly
   - pricing
+  - pricing-plan-manager
   - proton
   - qapps
   - qbusiness
@@ -6399,6 +6427,7 @@ packages:
   - rekognition
   - repostspace
   - resiliencehub
+  - resiliencehubv2
   - resource-explorer-2
   - resource-groups
   - resourcegroupstaggingapi
@@ -6408,6 +6437,7 @@ packages:
   - route53-recovery-control-config
   - route53-recovery-readiness
   - route53domains
+  - route53globalresolver
   - route53profiles
   - route53resolver
   - rtbfabric
@@ -6415,7 +6445,9 @@ packages:
   - s3
   - s3-crt
   - s3-encryption
+  - s3-transfer
   - s3control
+  - s3files
   - s3outposts
   - s3tables
   - s3vectors
@@ -6426,12 +6458,16 @@ packages:
   - sagemaker-geospatial
   - sagemaker-metrics
   - sagemaker-runtime
+  - sagemaker-runtime-http2
+  - sagemakerjobruntime
+  - sagemakertrainingsessionruntime
   - savingsplans
   - scheduler
   - schemas
   - sdb
   - secretsmanager
   - security-ir
+  - securityagent
   - securityhub
   - securitylake
   - serverlessrepo
@@ -6443,7 +6479,9 @@ packages:
   - shared
   - shield
   - signer
-  - simspaceweaver
+  - signer-data
+  - signin
+  - simpledbv2
   - sms-voice
   - snow-device-management
   - snowball
@@ -6465,6 +6503,8 @@ packages:
   - supplychain
   - support
   - support-app
+  - supportauthz
+  - sustainability
   - swf
   - synthetics
   - taxsettings
@@ -6473,12 +6513,12 @@ packages:
   - timestream-influxdb
   - timestream-query
   - timestream-write
-  - tnb
   - transcribe
   - transcribestreaming
   - transfer
   - translate
   - trustedadvisor
+  - uxc
   - verifiedpermissions
   - voice-id
   - vpc-lattice
@@ -6486,6 +6526,7 @@ packages:
   - waf-regional
   - wafv2
   - wellarchitected
+  - wickr
   - wisdom
   - workdocs
   - workmail
@@ -6500,8 +6541,11 @@ packages:
     access-management: 'null'
     accessanalyzer: 'null'
     account: 'null'
+    account-access: 'null'
     acm: 'null'
     acm-pca: 'null'
+    agent-registry: 'null'
+    agent-registry-control: 'null'
     aiops: 'null'
     amp: 'null'
     amplify: 'null'
@@ -6574,6 +6618,7 @@ packages:
     cloudsearchdomain: 'null'
     cloudtrail: 'null'
     cloudtrail-data: 'null'
+    cloudwatchomni: 'null'
     codeartifact: 'null'
     codebuild: 'null'
     codecatalyst: 'null'
@@ -6592,12 +6637,14 @@ packages:
     comprehend: 'null'
     comprehendmedical: 'null'
     compute-optimizer: 'null'
+    compute-optimizer-automation: 'null'
     config: 'null'
     connect: 'null'
     connect-contact-lens: 'null'
     connectcampaigns: 'null'
     connectcampaignsv2: 'null'
     connectcases: 'null'
+    connecthealth: 'null'
     connectparticipant: 'null'
     controlcatalog: 'null'
     controltower: 'null'
@@ -6613,6 +6660,7 @@ packages:
     deadline: 'null'
     detective: 'null'
     devicefarm: 'null'
+    devops-agent: 'null'
     devops-guru: 'null'
     directconnect: 'null'
     directory-service-data: 'null'
@@ -6640,19 +6688,18 @@ packages:
     elasticloadbalancing: 'null'
     elasticloadbalancingv2: 'null'
     elasticmapreduce: 'null'
-    elastictranscoder: 'null'
+    elementalinference: 'null'
     email: 'null'
     emr-containers: 'null'
     emr-serverless: 'null'
+    endusermessaging: 'null'
     entityresolution: 'null'
     es: 'null'
     eventbridge: 'null'
+    eventbridgev2: 'null'
     events: 'null'
-    evidently: 'null'
     evs: 'null'
     fPIC: 'true'
-    finspace: 'null'
-    finspace-data: 'null'
     firehose: 'null'
     fis: 'null'
     fms: 'null'
@@ -6677,6 +6724,7 @@ packages:
     health: 'null'
     healthlake: 'null'
     iam: 'null'
+    iam-toolbox: 'null'
     identity-management: 'null'
     identitystore: 'null'
     imagebuilder: 'null'
@@ -6684,16 +6732,14 @@ packages:
     inspector: 'null'
     inspector-scan: 'null'
     inspector2: 'null'
+    interconnect: 'null'
     internetmonitor: 'null'
     invoicing: 'null'
     iot: 'null'
     iot-data: 'null'
     iot-jobs-data: 'null'
     iot-managed-integrations: 'null'
-    iotanalytics: 'null'
     iotdeviceadvisor: 'null'
-    iotevents: 'null'
-    iotevents-data: 'null'
     iotfleetwise: 'null'
     iotsecuretunneling: 'null'
     iotsitewise: 'null'
@@ -6720,6 +6766,9 @@ packages:
     kms: 'null'
     lakeformation: 'null'
     lambda: 'null'
+    lambda-core: 'null'
+    lambda-microvms: 'null'
+    lambda-web: 'null'
     launch-wizard: 'null'
     lex: 'null'
     lex-models: 'null'
@@ -6741,6 +6790,7 @@ packages:
     marketplace-agreement: 'null'
     marketplace-catalog: 'null'
     marketplace-deployment: 'null'
+    marketplace-discovery: 'null'
     marketplace-entitlement: 'null'
     marketplace-reporting: 'null'
     marketplacecommerceanalytics: 'null'
@@ -6767,15 +6817,18 @@ packages:
     mq: 'null'
     mturk-requester: 'null'
     mwaa: 'null'
+    mwaa-serverless: 'null'
     neptune: 'null'
     neptune-graph: 'null'
     neptunedata: 'null'
     network-firewall: 'null'
+    network-security-manager: 'null'
     networkflowmonitor: 'null'
     networkmanager: 'null'
     networkmonitor: 'null'
     notifications: 'null'
     notificationscontacts: 'null'
+    nova-act: 'null'
     oam: 'null'
     observabilityadmin: 'null'
     odb: 'null'
@@ -6785,7 +6838,10 @@ packages:
     organizations: 'null'
     osis: 'null'
     outposts: 'null'
-    panorama: 'null'
+    partnercentral-account: 'null'
+    partnercentral-benefits: 'null'
+    partnercentral-channel: 'null'
+    partnercentral-revenue-measurement: 'null'
     partnercentral-selling: 'null'
     payment-cryptography: 'null'
     payment-cryptography-data: 'null'
@@ -6802,6 +6858,7 @@ packages:
     pipes: 'null'
     polly: 'null'
     pricing: 'null'
+    pricing-plan-manager: 'null'
     proton: 'null'
     qapps: 'null'
     qbusiness: 'null'
@@ -6818,6 +6875,7 @@ packages:
     rekognition: 'null'
     repostspace: 'null'
     resiliencehub: 'null'
+    resiliencehubv2: 'null'
     resource-explorer-2: 'null'
     resource-groups: 'null'
     resourcegroupstaggingapi: 'null'
@@ -6827,6 +6885,7 @@ packages:
     route53-recovery-control-config: 'null'
     route53-recovery-readiness: 'null'
     route53domains: 'null'
+    route53globalresolver: 'null'
     route53profiles: 'null'
     route53resolver: 'null'
     rtbfabric: 'null'
@@ -6834,7 +6893,9 @@ packages:
     s3: 'null'
     s3-crt: 'null'
     s3-encryption: 'null'
+    s3-transfer: 'null'
     s3control: 'null'
+    s3files: 'null'
     s3outposts: 'null'
     s3tables: 'null'
     s3vectors: 'null'
@@ -6845,12 +6906,16 @@ packages:
     sagemaker-geospatial: 'null'
     sagemaker-metrics: 'null'
     sagemaker-runtime: 'null'
+    sagemaker-runtime-http2: 'null'
+    sagemakerjobruntime: 'null'
+    sagemakertrainingsessionruntime: 'null'
     savingsplans: 'null'
     scheduler: 'null'
     schemas: 'null'
     sdb: 'null'
     secretsmanager: 'null'
     security-ir: 'null'
+    securityagent: 'null'
     securityhub: 'null'
     securitylake: 'null'
     serverlessrepo: 'null'
@@ -6862,7 +6927,9 @@ packages:
     shared: 'false'
     shield: 'null'
     signer: 'null'
-    simspaceweaver: 'null'
+    signer-data: 'null'
+    signin: 'null'
+    simpledbv2: 'null'
     sms-voice: 'null'
     snow-device-management: 'null'
     snowball: 'null'
@@ -6884,6 +6951,8 @@ packages:
     supplychain: 'null'
     support: 'null'
     support-app: 'null'
+    supportauthz: 'null'
+    sustainability: 'null'
     swf: 'null'
     synthetics: 'null'
     taxsettings: 'null'
@@ -6892,12 +6961,12 @@ packages:
     timestream-influxdb: 'null'
     timestream-query: 'null'
     timestream-write: 'null'
-    tnb: 'null'
     transcribe: 'null'
     transcribestreaming: 'null'
     transfer: 'null'
     translate: 'null'
     trustedadvisor: 'null'
+    uxc: 'null'
     verifiedpermissions: 'null'
     voice-id: 'null'
     vpc-lattice: 'null'
@@ -6905,6 +6974,7 @@ packages:
     waf-regional: 'null'
     wafv2: 'null'
     wellarchitected: 'null'
+    wickr: 'null'
     wisdom: 'null'
     workdocs: 'null'
     workmail: 'null'
@@ -6915,7 +6985,7 @@ packages:
     workspaces-web: 'null'
     xray: 'null'
   versions:
-  - version: 1.11.692
+  - version: 1.11.915
     dependencies:
     - name: aws-c-auth
     - name: aws-c-cal
@@ -6942,9 +7012,15 @@ packages:
       default: 'null'
     - name: account
       default: 'null'
+    - name: account-access
+      default: 'null'
     - name: acm
       default: 'null'
     - name: acm-pca
+      default: 'null'
+    - name: agent-registry
+      default: 'null'
+    - name: agent-registry-control
       default: 'null'
     - name: aiops
       default: 'null'
@@ -7090,6 +7166,8 @@ packages:
       default: 'null'
     - name: cloudtrail-data
       default: 'null'
+    - name: cloudwatchomni
+      default: 'null'
     - name: codeartifact
       default: 'null'
     - name: codebuild
@@ -7126,6 +7204,8 @@ packages:
       default: 'null'
     - name: compute-optimizer
       default: 'null'
+    - name: compute-optimizer-automation
+      default: 'null'
     - name: config
       default: 'null'
     - name: connect
@@ -7137,6 +7217,8 @@ packages:
     - name: connectcampaignsv2
       default: 'null'
     - name: connectcases
+      default: 'null'
+    - name: connecthealth
       default: 'null'
     - name: connectparticipant
       default: 'null'
@@ -7167,6 +7249,8 @@ packages:
     - name: detective
       default: 'null'
     - name: devicefarm
+      default: 'null'
+    - name: devops-agent
       default: 'null'
     - name: devops-guru
       default: 'null'
@@ -7222,7 +7306,7 @@ packages:
       default: 'null'
     - name: elasticmapreduce
       default: 'null'
-    - name: elastictranscoder
+    - name: elementalinference
       default: 'null'
     - name: email
       default: 'null'
@@ -7230,24 +7314,22 @@ packages:
       default: 'null'
     - name: emr-serverless
       default: 'null'
+    - name: endusermessaging
+      default: 'null'
     - name: entityresolution
       default: 'null'
     - name: es
       default: 'null'
     - name: eventbridge
       default: 'null'
-    - name: events
+    - name: eventbridgev2
       default: 'null'
-    - name: evidently
+    - name: events
       default: 'null'
     - name: evs
       default: 'null'
     - name: fPIC
       default: 'true'
-    - name: finspace
-      default: 'null'
-    - name: finspace-data
-      default: 'null'
     - name: firehose
       default: 'null'
     - name: fis
@@ -7296,6 +7378,8 @@ packages:
       default: 'null'
     - name: iam
       default: 'null'
+    - name: iam-toolbox
+      default: 'null'
     - name: identity-management
       default: 'null'
     - name: identitystore
@@ -7310,6 +7394,8 @@ packages:
       default: 'null'
     - name: inspector2
       default: 'null'
+    - name: interconnect
+      default: 'null'
     - name: internetmonitor
       default: 'null'
     - name: invoicing
@@ -7322,13 +7408,7 @@ packages:
       default: 'null'
     - name: iot-managed-integrations
       default: 'null'
-    - name: iotanalytics
-      default: 'null'
     - name: iotdeviceadvisor
-      default: 'null'
-    - name: iotevents
-      default: 'null'
-    - name: iotevents-data
       default: 'null'
     - name: iotfleetwise
       default: 'null'
@@ -7382,6 +7462,12 @@ packages:
       default: 'null'
     - name: lambda
       default: 'null'
+    - name: lambda-core
+      default: 'null'
+    - name: lambda-microvms
+      default: 'null'
+    - name: lambda-web
+      default: 'null'
     - name: launch-wizard
       default: 'null'
     - name: lex
@@ -7423,6 +7509,8 @@ packages:
     - name: marketplace-catalog
       default: 'null'
     - name: marketplace-deployment
+      default: 'null'
+    - name: marketplace-discovery
       default: 'null'
     - name: marketplace-entitlement
       default: 'null'
@@ -7476,6 +7564,8 @@ packages:
       default: 'null'
     - name: mwaa
       default: 'null'
+    - name: mwaa-serverless
+      default: 'null'
     - name: neptune
       default: 'null'
     - name: neptune-graph
@@ -7483,6 +7573,8 @@ packages:
     - name: neptunedata
       default: 'null'
     - name: network-firewall
+      default: 'null'
+    - name: network-security-manager
       default: 'null'
     - name: networkflowmonitor
       default: 'null'
@@ -7493,6 +7585,8 @@ packages:
     - name: notifications
       default: 'null'
     - name: notificationscontacts
+      default: 'null'
+    - name: nova-act
       default: 'null'
     - name: oam
       default: 'null'
@@ -7512,7 +7606,13 @@ packages:
       default: 'null'
     - name: outposts
       default: 'null'
-    - name: panorama
+    - name: partnercentral-account
+      default: 'null'
+    - name: partnercentral-benefits
+      default: 'null'
+    - name: partnercentral-channel
+      default: 'null'
+    - name: partnercentral-revenue-measurement
       default: 'null'
     - name: partnercentral-selling
       default: 'null'
@@ -7546,6 +7646,8 @@ packages:
       default: 'null'
     - name: pricing
       default: 'null'
+    - name: pricing-plan-manager
+      default: 'null'
     - name: proton
       default: 'null'
     - name: qapps
@@ -7578,6 +7680,8 @@ packages:
       default: 'null'
     - name: resiliencehub
       default: 'null'
+    - name: resiliencehubv2
+      default: 'null'
     - name: resource-explorer-2
       default: 'null'
     - name: resource-groups
@@ -7596,6 +7700,8 @@ packages:
       default: 'null'
     - name: route53domains
       default: 'null'
+    - name: route53globalresolver
+      default: 'null'
     - name: route53profiles
       default: 'null'
     - name: route53resolver
@@ -7610,7 +7716,11 @@ packages:
       default: 'null'
     - name: s3-encryption
       default: 'null'
+    - name: s3-transfer
+      default: 'null'
     - name: s3control
+      default: 'null'
+    - name: s3files
       default: 'null'
     - name: s3outposts
       default: 'null'
@@ -7632,6 +7742,12 @@ packages:
       default: 'null'
     - name: sagemaker-runtime
       default: 'null'
+    - name: sagemaker-runtime-http2
+      default: 'null'
+    - name: sagemakerjobruntime
+      default: 'null'
+    - name: sagemakertrainingsessionruntime
+      default: 'null'
     - name: savingsplans
       default: 'null'
     - name: scheduler
@@ -7643,6 +7759,8 @@ packages:
     - name: secretsmanager
       default: 'null'
     - name: security-ir
+      default: 'null'
+    - name: securityagent
       default: 'null'
     - name: securityhub
       default: 'null'
@@ -7666,7 +7784,11 @@ packages:
       default: 'null'
     - name: signer
       default: 'null'
-    - name: simspaceweaver
+    - name: signer-data
+      default: 'null'
+    - name: signin
+      default: 'null'
+    - name: simpledbv2
       default: 'null'
     - name: sms-voice
       default: 'null'
@@ -7710,6 +7832,10 @@ packages:
       default: 'null'
     - name: support-app
       default: 'null'
+    - name: supportauthz
+      default: 'null'
+    - name: sustainability
+      default: 'null'
     - name: swf
       default: 'null'
     - name: synthetics
@@ -7726,8 +7852,6 @@ packages:
       default: 'null'
     - name: timestream-write
       default: 'null'
-    - name: tnb
-      default: 'null'
     - name: transcribe
       default: 'null'
     - name: transcribestreaming
@@ -7737,6 +7861,8 @@ packages:
     - name: translate
       default: 'null'
     - name: trustedadvisor
+      default: 'null'
+    - name: uxc
       default: 'null'
     - name: verifiedpermissions
       default: 'null'
@@ -7751,6 +7877,8 @@ packages:
     - name: wafv2
       default: 'null'
     - name: wellarchitected
+      default: 'null'
+    - name: wickr
       default: 'null'
     - name: wisdom
       default: 'null'
@@ -7771,9 +7899,9 @@ packages:
     - name: xray
       default: 'null'
     artifacts:
-    - url: https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.692.tar.gz
+    - url: https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.915.tar.gz
       checksums:
-      - sha256:48af03fe2b19b439344f422015c6f37296920f1972422d94f404001bd9781949
+      - sha256:14aae4edf6c1b389c2e43ed077889e767dd768495846a3f506c240a1e478f460
   recipe_path: recipes/aws-sdk-cpp/config.yml
   native_url: https://conan.io/center/recipes/aws-sdk-cpp
 - id: conan:azure-sdk-for-cpp
@@ -8058,6 +8186,16 @@ packages:
     - url: https://github.com/bfgroup/b2/releases/download/5.5.3/b2-5.5.3.tar.bz2
       checksums:
       - sha256:d3b914917f8ccf615ee7ec78e59b96c7b49c39f551d5b73525871b2f44cf70d5
+  - version: 5.6.1
+    features:
+    - name: toolset
+      default: auto
+    - name: use_cxx_env
+      default: 'false'
+    artifacts:
+    - url: https://github.com/bfgroup/b2/releases/download/5.6.1/b2-5.6.1.tar.bz2
+      checksums:
+      - sha256:2020bd49c65b474d8bda141a3d13b7aacd442fe390d66eb7b8f6b0042dae3dc1
   recipe_path: recipes/b2/config.yml
   native_url: https://conan.io/center/recipes/b2
 - id: conan:b64
@@ -9182,7 +9320,7 @@ packages:
   - parser
   languages:
   - C
-  package_type: None
+  package_type: application
   dependencies:
   - automake
   - flex
@@ -15364,7 +15502,7 @@ packages:
     - url: https://github.com/catchorg/Catch2/archive/v2.13.10.tar.gz
       checksums:
       - sha256:d54a712b7b1d7708bc7a819a8e6e47b2fde9536f487b89ccbca295072a7d9943
-  - version: 3.16.0
+  - version: 3.16.1
     dependencies:
     - name: cmake
     features:
@@ -15383,9 +15521,9 @@ packages:
     - name: with_prefix
       default: 'false'
     artifacts:
-    - url: https://github.com/catchorg/Catch2/archive/refs/tags/v3.16.0.tar.gz
+    - url: https://github.com/catchorg/Catch2/archive/refs/tags/v3.16.1.tar.gz
       checksums:
-      - sha256:0957cae5821b17ce07f0833aaa52b5137643a8382203221f363a8303c109af34
+      - sha256:d16bd1b8b2364918bd472cb216394acb93bde6784890df0d91bccfb3f28d777d
   recipe_path: recipes/catch2/config.yml
   native_url: https://conan.io/center/recipes/catch2
 - id: conan:cc65
@@ -27601,6 +27739,7 @@ packages:
   - libpq
   - mariadb-connector-c
   - openssl
+  - spdlog
   - sqlite3
   - trantor
   - util-linux-libuuid
@@ -27618,6 +27757,7 @@ packages:
   - with_postgres_batch
   - with_profile
   - with_redis
+  - with_spdlog
   - with_sqlite
   - with_yaml_cpp
   default_options:
@@ -27632,10 +27772,11 @@ packages:
     with_postgres_batch: 'false'
     with_profile: 'false'
     with_redis: 'false'
+    with_spdlog: 'false'
     with_sqlite: 'false'
     with_yaml_cpp: 'false'
   versions:
-  - version: 1.9.13
+  - version: 1.9.14
     dependencies:
     - name: boost
     - name: brotli
@@ -27645,6 +27786,7 @@ packages:
     - name: libpq
     - name: mariadb-connector-c
     - name: openssl
+    - name: spdlog
     - name: sqlite3
     - name: trantor
     - name: util-linux-libuuid
@@ -27673,14 +27815,16 @@ packages:
       default: 'false'
     - name: with_redis
       default: 'false'
+    - name: with_spdlog
+      default: 'false'
     - name: with_sqlite
       default: 'false'
     - name: with_yaml_cpp
       default: 'false'
     artifacts:
-    - url: https://github.com/drogonframework/drogon/archive/v1.9.13.tar.gz
+    - url: https://github.com/drogonframework/drogon/archive/v1.9.14.tar.gz
       checksums:
-      - sha256:c3bd0e276b82576151dc7376c8d4027dd1fcec282d784849e11f84a7e977b2f5
+      - sha256:3831bfae74eb6b47965a424e5c9d593d5efa31e9f7e6a5e02d4754039facff5e
   recipe_path: recipes/drogon/config.yml
   native_url: https://conan.io/center/recipes/drogon
 - id: conan:drwav
@@ -43948,7 +44092,7 @@ packages:
     - url: https://download.open-mpi.org/release/hwloc/v2.12/hwloc-2.12.2.tar.bz2
       checksums:
       - sha256:563e61d70febb514138af0fac36b97621e01a4aacbca07b86e7bd95b85055ba0
-  - version: 2.14.0
+  - version: 2.15.0
     dependencies:
     - name: libxml2
     features:
@@ -43959,9 +44103,9 @@ packages:
     - name: with_libxml2
       default: 'false'
     artifacts:
-    - url: https://download.open-mpi.org/release/hwloc/v2.14/hwloc-2.14.0.tar.bz2
+    - url: https://download.open-mpi.org/release/hwloc/v2.15/hwloc-2.15.0.tar.bz2
       checksums:
-      - sha256:966b9bb3e9f29f8d65ce8d106779e457f40e246a645e584b100772a42f9ae94b
+      - sha256:0084b926fff9a960ddbf175654db39054ed60afbb830d2039d8a60686ca06a7f
   recipe_path: recipes/hwloc/config.yml
   native_url: https://conan.io/center/recipes/hwloc
 - id: conan:hyperscan
@@ -44508,6 +44652,28 @@ packages:
     - url: https://github.com/unicode-org/icu/releases/download/release-78.2/icu4c-78.2-sources.tgz
       checksums:
       - sha256:3e99687b5c435d4b209630e2d2ebb79906c984685e78635078b672e03c89df35
+  - version: '79.1'
+    dependencies:
+    - name: msys2
+    features:
+    - name: dat_package_file
+      default: 'null'
+    - name: data_packaging
+      default: archive
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_dyload
+      default: 'true'
+    - name: with_extras
+      default: 'false'
+    - name: with_icuio
+      default: 'true'
+    artifacts:
+    - url: https://github.com/unicode-org/icu/releases/download/release-79.1/icu4c-79.1-sources.tgz
+      checksums:
+      - sha256:06fa63ecb521048f8082f12ad988f6b678d90cbd88aafce24cbc94902b191d99
   recipe_path: recipes/icu/config.yml
   native_url: https://conan.io/center/recipes/icu
 - id: conan:id3v2lib
@@ -47817,55 +47983,13 @@ packages:
   dependencies:
   - cmake
   options:
-  - debug_renderer
   - fPIC
-  - profile
   - shared
-  - simd
   default_options:
-    debug_renderer: 'false'
     fPIC: 'true'
-    profile: 'false'
     shared: 'false'
-    simd: sse42
   versions:
-  - version: 2.0.1
-    dependencies:
-    - name: cmake
-    features:
-    - name: debug_renderer
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: profile
-      default: 'false'
-    - name: shared
-      default: 'false'
-    - name: simd
-      default: sse42
-    artifacts:
-    - url: https://github.com/jrouwe/JoltPhysics/archive/refs/tags/v2.0.1.tar.gz
-      checksums:
-      - sha256:96ae2e8691c4802e56bf2587da30f2cc86b8abe82a78bc2398065bd87dd718af
-  - version: 3.0.1
-    dependencies:
-    - name: cmake
-    features:
-    - name: debug_renderer
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: profile
-      default: 'false'
-    - name: shared
-      default: 'false'
-    - name: simd
-      default: sse42
-    artifacts:
-    - url: https://github.com/jrouwe/JoltPhysics/archive/refs/tags/v3.0.1.tar.gz
-      checksums:
-      - sha256:7ebb40bf2dddbcf0515984582aaa197ddd06e97581fd55b98cb64f91b243b8a6
-  - version: 5.2.0
+  - version: 5.6.0
     dependencies:
     - name: cmake
     features:
@@ -47874,9 +47998,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/jrouwe/JoltPhysics/archive/refs/tags/v5.2.0.tar.gz
+    - url: https://github.com/jrouwe/JoltPhysics/archive/refs/tags/v5.6.0.tar.gz
       checksums:
-      - sha256:f478afe3050c885e21403748e10ab18e3e8df8b0982c540e75f1e078ef8b2c88
+      - sha256:6e069ee0172478cc78182047aac87e5310ba14a67a53348ae14cc37801fd3f8e
   recipe_path: recipes/joltphysics/config.yml
   native_url: https://conan.io/center/recipes/joltphysics
 - id: conan:jom
@@ -48128,48 +48252,6 @@ packages:
     json_diagnostics: 'false'
     shared: 'false'
   versions:
-  - version: 2.0.0
-    dependencies:
-    - name: nlohmann_json
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: json_diagnostics
-      default: 'false'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.0.0.tar.gz
-      checksums:
-      - sha256:ca8e4ca5a88c49ea52b5f5c2a08a293dbf02b2fc66cb8c09d4cce5810ee98b57
-  - version: 2.1.0
-    dependencies:
-    - name: nlohmann_json
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: json_diagnostics
-      default: 'false'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.1.0.tar.gz
-      checksums:
-      - sha256:83f61d8112f485e0d3f1e72d51610ba3924b179926a8376aef3c038770faf202
-  - version: 2.2.0
-    dependencies:
-    - name: nlohmann_json
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: json_diagnostics
-      default: 'false'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.2.0.tar.gz
-      checksums:
-      - sha256:03897867bd757ecac1db7545babf0c6c128859655b496582a9cea4809c2260aa
   - version: 2.3.0
     dependencies:
     - name: nlohmann_json
@@ -53728,39 +53810,39 @@ packages:
   - h.265
   - video
   package_type: library
+  dependencies:
+  - cmake
   options:
+  - avx2
+  - avx512
   - fPIC
   - shared
-  - sse
+  - simd
   default_options:
+    avx2: 'true'
+    avx512: 'true'
     fPIC: 'true'
     shared: 'false'
-    sse: 'true'
+    simd: 'true'
   versions:
-  - version: 1.0.12
+  - version: 1.1.3
+    dependencies:
+    - name: cmake
     features:
+    - name: avx2
+      default: 'true'
+    - name: avx512
+      default: 'true'
     - name: fPIC
       default: 'true'
     - name: shared
       default: 'false'
-    - name: sse
+    - name: simd
       default: 'true'
     artifacts:
-    - url: https://github.com/strukturag/libde265/releases/download/v1.0.12/libde265-1.0.12.tar.gz
+    - url: https://github.com/strukturag/libde265/releases/download/v1.1.3/libde265-1.1.3.tar.gz
       checksums:
-      - sha256:62185ea2182e68cf68bba20cc6eb4c287407b509cf0a827d7ddb75614db77b5c
-  - version: 1.0.15
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: sse
-      default: 'true'
-    artifacts:
-    - url: https://github.com/strukturag/libde265/releases/download/v1.0.15/libde265-1.0.15.tar.gz
-      checksums:
-      - sha256:00251986c29d34d3af7117ed05874950c875dd9292d016be29d3b3762666511d
+      - sha256:554228bd17788c99a7e63b37ab5634722190e6e2bf60c1dcb01cef328e133905
   recipe_path: recipes/libde265/config.yml
   native_url: https://conan.io/center/recipes/libde265
 - id: conan:libdeflate
@@ -53843,6 +53925,16 @@ packages:
     - url: https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.25.tar.gz
       checksums:
       - sha256:d11473c1ad4c57d874695e8026865e38b47116bbcb872bfc622ec8f37a86017d
+  - version: '1.26'
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/ebiggers/libdeflate/releases/download/v1.26/libdeflate-1.26.tar.gz
+      checksums:
+      - sha256:125856d4656e0feab660f94842f835923410c9281fedbcee64598c918da42b5a
   - version: '1.7'
     dependencies:
     - name: msys2
@@ -65459,58 +65551,15 @@ packages:
   - msys2
   options:
   - enable_udev
+  - enable_windows_hotplug
   - fPIC
   - shared
   default_options:
     enable_udev: 'true'
+    enable_windows_hotplug: 'false'
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.0.23
-    dependencies:
-    - name: libudev
-    - name: msys2
-    features:
-    - name: enable_udev
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libusb/libusb/releases/download/v1.0.23/libusb-1.0.23.tar.bz2
-      checksums:
-      - sha256:db11c06e958a82dac52cf3c65cb4dd2c3f339c8a988665110e0d24d19312ad8d
-  - version: 1.0.24
-    dependencies:
-    - name: libudev
-    - name: msys2
-    features:
-    - name: enable_udev
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libusb/libusb/releases/download/v1.0.24/libusb-1.0.24.tar.bz2
-      checksums:
-      - sha256:7efd2685f7b327326dcfb85cee426d9b871fd70e22caa15bb68d595ce2a2b12a
-  - version: 1.0.25
-    dependencies:
-    - name: libudev
-    - name: msys2
-    features:
-    - name: enable_udev
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libusb/libusb/releases/download/v1.0.25/libusb-1.0.25.tar.bz2
-      checksums:
-      - sha256:8a28ef197a797ebac2702f095e81975e2b02b2eeff2774fa909c78a74ef50849
   - version: 1.0.26
     dependencies:
     - name: libudev
@@ -65518,6 +65567,8 @@ packages:
     features:
     - name: enable_udev
       default: 'true'
+    - name: enable_windows_hotplug
+      default: 'false'
     - name: fPIC
       default: 'true'
     - name: shared
@@ -65533,6 +65584,8 @@ packages:
     features:
     - name: enable_udev
       default: 'true'
+    - name: enable_windows_hotplug
+      default: 'false'
     - name: fPIC
       default: 'true'
     - name: shared
@@ -65541,6 +65594,23 @@ packages:
     - url: https://github.com/libusb/libusb/releases/download/v1.0.29/libusb-1.0.29.tar.bz2
       checksums:
       - sha256:5977fc950f8d1395ccea9bd48c06b3f808fd3c2c961b44b0c2e6e29fc3a70a85
+  - version: 1.0.30
+    dependencies:
+    - name: libudev
+    - name: msys2
+    features:
+    - name: enable_udev
+      default: 'true'
+    - name: enable_windows_hotplug
+      default: 'false'
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/libusb/libusb/releases/download/v1.0.30/libusb-1.0.30.tar.bz2
+      checksums:
+      - sha256:fea36f34f9156400209595e300840767ab1a385ede1dc7ee893015aea9c6dbaf
   recipe_path: recipes/libusb/config.yml
   native_url: https://conan.io/center/recipes/libusb
 - id: conan:libusb-compat
@@ -68546,6 +68616,33 @@ packages:
     artifacts:
     - url: https://github.com/nih-at/libzip/releases/download/v1.11.4/libzip-1.11.4.tar.gz
     - url: https://libzip.org/download/libzip-1.11.4.tar.gz
+  - version: 1.12.1
+    dependencies:
+    - name: bzip2
+    - name: gnutls
+    - name: mbedtls
+    - name: openssl
+    - name: xz_utils
+    - name: zlib
+    - name: zstd
+    features:
+    - name: crypto
+      default: openssl
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: tools
+      default: 'true'
+    - name: with_bzip2
+      default: 'true'
+    - name: with_lzma
+      default: 'true'
+    - name: with_zstd
+      default: 'true'
+    artifacts:
+    - url: https://github.com/nih-at/libzip/releases/download/v1.12.1/libzip-1.12.1.tar.xz
+    - url: https://libzip.org/download/libzip-1.12.1.tar.xz
   recipe_path: recipes/libzip/config.yml
   native_url: https://conan.io/center/recipes/libzip
 - id: conan:libzippp
@@ -69764,6 +69861,7 @@ packages:
   licenses:
   - OLDAP-2.8
   homepage: https://symas.com/lmdb/
+  repository_url: https://github.com/openldap/openldap
   topics:
   - database
   - key-value
@@ -69788,8 +69886,8 @@ packages:
       default: 'false'
     artifacts:
     - url: https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.32/openldap-LMDB_0.9.32.tar.gz
-      checksums:
-      - sha256:c0937223bba3c37c896809883a3c9b43049354578b239d6ed2476236a87f40c9
+    - url: https://github.com/openldap/openldap/archive/refs/tags/LMDB_0.9.32.tar.gz
+    - url: https://gitlab.com/openldap/openldap/-/archive/LMDB_0.9.32/openldap-LMDB_0.9.32.tar.gz
   - version: 1.0.2
     features:
     - name: enable_robust_mutex
@@ -69800,8 +69898,8 @@ packages:
       default: 'false'
     artifacts:
     - url: https://git.openldap.org/openldap/openldap/-/archive/LMDB_1.0.2/openldap-LMDB_1.0.2.tar.gz
-      checksums:
-      - sha256:38a029bb3e29820380e18a2dfdbe906bbc5b322132c63274c5e4ed7833821752
+    - url: https://github.com/openldap/openldap/archive/refs/tags/LMDB_1.0.2.tar.gz
+    - url: https://gitlab.com/openldap/openldap/-/archive/LMDB_1.0.2/openldap-LMDB_1.0.2.tar.gz
   recipe_path: recipes/lmdb/config.yml
   native_url: https://conan.io/center/recipes/lmdb
 - id: conan:lodepng
@@ -72277,6 +72375,30 @@ packages:
     - url: https://dlm.mariadb.com/Connectors/c/connector-c-3.3.8/mariadb-connector-c-3.3.8-src.tar.gz
       checksums:
       - sha256:f9f076b4aa9fb22cc94b24f82c80f9ef063805ecd6533a2eb5d5060cf93833e8
+  - version: 3.4.11
+    dependencies:
+    - name: libcurl
+    - name: libiconv
+    - name: openssl
+    - name: zlib
+    - name: zstd
+    features:
+    - name: dyncol
+      default: 'true'
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_curl
+      default: 'true'
+    - name: with_iconv
+      default: 'false'
+    - name: with_ssl
+      default: openssl
+    artifacts:
+    - url: https://archive.mariadb.org/connector-c-3.4.11/mariadb-connector-c-3.4.11-src.tar.gz
+      checksums:
+      - sha256:521c0712e9291fa96558df9e2ff431376a3a79329f13751896b694cae12765b4
   - version: 3.4.3
     dependencies:
     - name: libcurl
@@ -75802,6 +75924,39 @@ packages:
     - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.5.5/mongo-c-driver-2.5.5.tar.gz
       checksums:
       - sha256:fa255802fe748b98d4464e07223e87a44c88c02c35398d7607b2f02e967395b1
+  - version: 2.5.7
+    dependencies:
+    - name: cyrus-sasl
+    - name: icu
+    - name: libressl
+    - name: openssl
+    - name: pkgconf
+    - name: snappy
+    - name: zlib
+    - name: zstd
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: srv
+      default: 'true'
+    - name: with_icu
+      default: 'true'
+    - name: with_sasl
+      default: 'false'
+    - name: with_snappy
+      default: 'true'
+    - name: with_ssl
+      default: openssl
+    - name: with_zlib
+      default: 'true'
+    - name: with_zstd
+      default: 'true'
+    artifacts:
+    - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.5.7/mongo-c-driver-2.5.7.tar.gz
+      checksums:
+      - sha256:fdd7c23b3d95f1ea08400e5a72e48419ce03d478aa12b28b4b66066867ee35ee
   recipe_path: recipes/mongo-c-driver/config.yml
   native_url: https://conan.io/center/recipes/mongo-c-driver
 - id: conan:mongo-cxx-driver
@@ -77669,8 +77824,8 @@ packages:
       default: 'false'
     - name: packages
     artifacts:
-    - url: http://repo.msys2.org/distrib/x86_64/msys2-base-x86_64-20251213.tar.xz
-    - url: https://github.com/msys2/msys2-installer/releases/download/2025-12-13/msys2-base-x86_64-20251213.tar.xz
+    - url: http://repo.msys2.org/distrib/x86_64/msys2-base-x86_64-20260927.tar.xz
+    - url: https://github.com/msys2/msys2-installer/releases/download/2026-09-27/msys2-base-x86_64-20260927.tar.xz
   recipe_path: recipes/msys2/config.yml
   native_url: https://conan.io/center/recipes/msys2
 - id: conan:mtdev
@@ -78308,23 +78463,27 @@ packages:
   package_type: library
   dependencies:
   - boost
+  - cmake
   - odbc
   options:
   - async
   - fPIC
   - shared
   - unicode
+  - utf8
   - with_boost
   default_options:
     async: 'true'
     fPIC: 'true'
     shared: 'false'
     unicode: 'false'
+    utf8: 'false'
     with_boost: 'false'
   versions:
-  - version: 2.13.0
+  - version: 2.20.0
     dependencies:
     - name: boost
+    - name: cmake
     - name: odbc
     features:
     - name: async
@@ -78335,15 +78494,18 @@ packages:
       default: 'false'
     - name: unicode
       default: 'false'
+    - name: utf8
+      default: 'false'
     - name: with_boost
       default: 'false'
     artifacts:
-    - url: https://github.com/nanodbc/nanodbc/archive/v2.13.0.zip
+    - url: https://github.com/nanodbc/nanodbc/archive/v2.20.0.tar.gz
       checksums:
-      - sha256:1287869b6ca82728cb6cc53c54f836c72cde15370c16f32d81c9ef6c257f7e43
-  - version: 2.14.0
+      - sha256:9ff08bf1b7386e15e73f8c9146c91960c7dbce518feed353682799dbe55bd6f3
+  - version: 3.0.8
     dependencies:
     - name: boost
+    - name: cmake
     - name: odbc
     features:
     - name: async
@@ -78354,12 +78516,14 @@ packages:
       default: 'false'
     - name: unicode
       default: 'false'
+    - name: utf8
+      default: 'false'
     - name: with_boost
       default: 'false'
     artifacts:
-    - url: https://github.com/nanodbc/nanodbc/archive/v2.14.0.tar.gz
+    - url: https://github.com/nanodbc/nanodbc/archive/v3.0.8.tar.gz
       checksums:
-      - sha256:56228372042b689beccd96b0ac3476643ea85b3f57b3f23fb11ca4314e68b9a5
+      - sha256:bbb8ec400f0f84a7f6d61d4a4360e4c90eece6add3735e6b0b451ab90ca76f3e
   recipe_path: recipes/nanodbc/config.yml
   native_url: https://conan.io/center/recipes/nanodbc
 - id: conan:nanoflann
@@ -87527,6 +87691,26 @@ packages:
     - url: https://github.com/openssl/openssl/releases/download/openssl-4.0.3/openssl-4.0.3.tar.gz
       checksums:
       - sha256:325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9
+  - version: 4.1.0
+    dependencies:
+    - name: jom
+    - name: nasm
+    - name: strawberryperl
+    features:
+    - name: extra_build_opts
+      default: 'null'
+    - name: fPIC
+      default: 'true'
+    - name: no_fips
+      default: 'false'
+    - name: openssldir
+      default: 'null'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/openssl/openssl/releases/download/openssl-4.1.0/openssl-4.1.0.tar.gz
+      checksums:
+      - sha256:50c17baf54cb008f6ce42d50deb4b28050a1aad711636cabd4b241c7e90cc2fd
   recipe_path: recipes/openssl/config.yml
   native_url: https://conan.io/center/recipes/openssl
 - id: conan:opensubdiv
@@ -87861,56 +88045,6 @@ packages:
     - url: https://github.com/open-telemetry/opentelemetry-cpp/archive/v1.21.0.tar.gz
       checksums:
       - sha256:98e5546f577a11b52a57faed1f4cc60d8c1daa44760eba393f43eab5a8ec46a2
-  - version: 1.22.0
-    dependencies:
-    - name: cmake
-    - name: grpc
-    - name: libcurl
-    - name: ms-gsl
-    - name: nlohmann_json
-    - name: opentelemetry-proto
-    - name: prometheus-cpp
-    - name: protobuf
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_abi_v2
-      default: 'false'
-    - name: with_async_export_preview
-      default: 'false'
-    - name: with_elasticsearch
-      default: 'false'
-    - name: with_etw
-      default: 'false'
-    - name: with_gsl
-      default: 'false'
-    - name: with_metrics_exemplar_preview
-      default: 'false'
-    - name: with_no_deprecated_code
-      default: 'false'
-    - name: with_no_getenv
-      default: 'false'
-    - name: with_otlp_file
-      default: 'false'
-    - name: with_otlp_grpc
-      default: 'false'
-    - name: with_otlp_http
-      default: 'true'
-    - name: with_otlp_http_compression
-      default: 'false'
-    - name: with_prometheus
-      default: 'false'
-    - name: with_stl
-      default: 'false'
-    - name: with_zipkin
-      default: 'true'
-    artifacts:
-    - url: https://github.com/open-telemetry/opentelemetry-cpp/archive/v1.22.0.tar.gz
-      checksums:
-      - sha256:3428f433f4b435ed1fad64cbdbe75b7288c06f6297786a7036d65d5b9a1d215b
   - version: 1.24.0
     dependencies:
     - name: cmake
@@ -89611,7 +89745,7 @@ packages:
     with_ipopt: 'false'
     with_nlopt: 'false'
   versions:
-  - version: 2.19.0
+  - version: 2.20.0
     dependencies:
     - name: boost
     - name: eigen
@@ -89629,9 +89763,9 @@ packages:
     - name: with_nlopt
       default: 'false'
     artifacts:
-    - url: https://github.com/esa/pagmo2/archive/refs/tags/v2.19.0.tar.gz
+    - url: https://github.com/esa/pagmo2/archive/refs/tags/v2.20.0.tar.gz
       checksums:
-      - sha256:701ada528de7d454201e92a5d88903dd1c22ea64f43861d9694195ddfef82a70
+      - sha256:8d684e9a3667dcccc844489083906c35aba7610594c5fce0f4eccce9c2264f4d
   recipe_path: recipes/pagmo2/config.yml
   native_url: https://conan.io/center/recipes/pagmo2
 - id: conan:paho-mqtt-c
@@ -92190,7 +92324,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.5.85
+  - version: 1.6.10
     dependencies:
     - name: glib
     - name: meson
@@ -92201,9 +92335,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.5.85/pipewire-1.5.85.tar.gz
+    - url: https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.10/pipewire-1.6.10.tar.gz
       checksums:
-      - sha256:8ca7613a29730ce49367baf29057ccad0fadc45f0ba657c91b7621078644667f
+      - sha256:93b7c4f1e62fd9ec3a921846c6bfc64442872bb2366c2bbc3ea69a427b79a4f9
   recipe_path: recipes/pipewire/config.yml
   native_url: https://conan.io/center/recipes/pipewire
 - id: conan:pistache
@@ -96715,7 +96849,7 @@ packages:
     - url: https://qt.mirror.constant.com/archive/qt/5.15/5.15.19/single/qt-everywhere-opensource-src-5.15.19.tar.xz
     - url: https://qtproject.mirror.liquidtelecom.com/archive/qt/5.15/5.15.19/single/qt-everywhere-opensource-src-5.15.19.tar.xz
     - url: https://www.nic.funet.fi/pub/mirrors/download.qt-project.org/archive/qt/5.15/5.15.19/single/qt-everywhere-opensource-src-5.15.19.tar.xz
-  - version: 6.10.3
+  - version: 6.11.3
     dependencies:
     - name: bison
     - name: brotli
@@ -96890,26 +97024,26 @@ packages:
     - name: with_zstd
       default: 'false'
     artifacts:
-    - url: https://download.qt.io/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://download.qt.io/official_releases/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://ftp.acc.umu.se/mirror/qt.io/qtproject/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://ftp.fau.de/qtproject/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://ftp.icm.edu.pl/packages/qt/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://ftp.jaist.ac.jp/pub/qtproject/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://ftp.nluug.nl/languages/qt/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://ftp.yz.yamagata-u.ac.jp/pub/qtproject/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirror.bjtu.edu.cn/qt/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirror.netcologne.de/qtproject/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirrors.20i.com/pub/qt.io/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirrors.cloud.tencent.com/qt/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirrors.dotsrc.org/qtproject/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirrors.sau.edu.cn/qt/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirrors.sjtug.sjtu.edu.cn/qt/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://qt-mirror.dannhauer.de/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://qt.mirror.constant.com/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-    - url: https://www.nic.funet.fi/pub/mirrors/download.qt-project.org/archive/qt/6.10/6.10.3/single/qt-everywhere-src-6.10.3.tar.xz
-  - version: 6.11.1
+    - url: https://download.qt.io/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://download.qt.io/official_releases/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://ftp.acc.umu.se/mirror/qt.io/qtproject/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://ftp.fau.de/qtproject/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://ftp.icm.edu.pl/packages/qt/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://ftp.jaist.ac.jp/pub/qtproject/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://ftp.nluug.nl/languages/qt/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://ftp.yz.yamagata-u.ac.jp/pub/qtproject/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirror.bjtu.edu.cn/qt/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirror.netcologne.de/qtproject/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirrors.20i.com/pub/qt.io/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirrors.cloud.tencent.com/qt/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirrors.dotsrc.org/qtproject/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirrors.sau.edu.cn/qt/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirrors.sjtug.sjtu.edu.cn/qt/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://qt-mirror.dannhauer.de/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://qt.mirror.constant.com/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+    - url: https://www.nic.funet.fi/pub/mirrors/download.qt-project.org/archive/qt/6.11/6.11.3/single/qt-everywhere-src-6.11.3.tar.xz
+  - version: 6.12.0
     dependencies:
     - name: bison
     - name: brotli
@@ -97084,25 +97218,25 @@ packages:
     - name: with_zstd
       default: 'false'
     artifacts:
-    - url: https://download.qt.io/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://download.qt.io/official_releases/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://ftp.acc.umu.se/mirror/qt.io/qtproject/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://ftp.fau.de/qtproject/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://ftp.icm.edu.pl/packages/qt/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://ftp.jaist.ac.jp/pub/qtproject/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://ftp.nluug.nl/languages/qt/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://ftp.yz.yamagata-u.ac.jp/pub/qtproject/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirror.bjtu.edu.cn/qt/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirror.netcologne.de/qtproject/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirrors.20i.com/pub/qt.io/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirrors.cloud.tencent.com/qt/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirrors.dotsrc.org/qtproject/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirrors.sau.edu.cn/qt/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirrors.sjtug.sjtu.edu.cn/qt/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://qt-mirror.dannhauer.de/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://qt.mirror.constant.com/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
-    - url: https://www.nic.funet.fi/pub/mirrors/download.qt-project.org/archive/qt/6.11/6.11.1/single/qt-everywhere-src-6.11.1.tar.xz
+    - url: https://download.qt.io/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://download.qt.io/official_releases/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://ftp.acc.umu.se/mirror/qt.io/qtproject/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://ftp.fau.de/qtproject/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://ftp.icm.edu.pl/packages/qt/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://ftp.jaist.ac.jp/pub/qtproject/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://ftp.nluug.nl/languages/qt/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://ftp.yz.yamagata-u.ac.jp/pub/qtproject/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirror.bjtu.edu.cn/qt/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirror.netcologne.de/qtproject/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirrors.20i.com/pub/qt.io/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirrors.cloud.tencent.com/qt/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirrors.dotsrc.org/qtproject/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirrors.sau.edu.cn/qt/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirrors.sjtug.sjtu.edu.cn/qt/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://qt-mirror.dannhauer.de/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://qt.mirror.constant.com/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
+    - url: https://www.nic.funet.fi/pub/mirrors/download.qt-project.org/archive/qt/6.12/6.12.0/single/qt-everywhere-src-6.12.0.tar.xz
   - version: 6.8.3
     dependencies:
     - name: bison
@@ -97735,6 +97869,11 @@ packages:
     - url: https://github.com/odygrd/quill/releases/download/v13.0.0/quill-13.0.0.zip
       checksums:
       - sha256:efb6ac9eea48633b05ebffae1dfee00fb065199bdc7686ea3353f77de09bbfa9
+  - version: 13.1.0
+    artifacts:
+    - url: https://github.com/odygrd/quill/releases/download/v13.1.0/quill-13.1.0.zip
+      checksums:
+      - sha256:f4dbdc05f4cb65964a46cfd0b0a3f6508cadd9f1022dd50f026bf207d3f5e183
   recipe_path: recipes/quill/config.yml
   native_url: https://conan.io/center/recipes/quill
 - id: conan:quirc
@@ -102209,7 +102348,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.5.27
+  - version: 1.7.7
     dependencies:
     - name: openssl
     features:
@@ -102218,9 +102357,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/aws/s2n-tls/archive/refs/tags/v1.5.27.tar.gz
+    - url: https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.7.tar.gz
       checksums:
-      - sha256:95d6e5ada2d66108653e91de3ceea800987fde9eb190ef219034ab4fd06b114c
+      - sha256:a6f77d2e3343b554bfc2cce27e0407b3c758bb105533c8f0a56e233036b7541d
   recipe_path: recipes/s2n/config.yml
   native_url: https://conan.io/center/recipes/s2n
 - id: conan:safe
@@ -102375,49 +102514,6 @@ packages:
       - sha256:dc0d6fa87cb4fa8b514f450a3fb13cee6e3e60f03250f683564fabbec0f722e3
   recipe_path: recipes/sail/config.yml
   native_url: https://conan.io/center/recipes/sail
-- id: conan:samarium
-  registry: conan
-  name: samarium
-  summary: 2-D physics simulation library
-  licenses:
-  - MIT
-  homepage: https://strangequark1041.github.io/samarium/
-  repository_url: https://github.com/strangequark1041/samarium
-  topics:
-  - 2d
-  - cpp20
-  - physics
-  - simulation
-  package_type: None
-  options:
-  - fPIC
-  - shared
-  default_options:
-    fPIC: 'true'
-    shared: 'false'
-  versions:
-  - version: 1.0.0
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/strangeQuark1041/samarium/archive/refs/tags/v1.0.0.tar.gz
-      checksums:
-      - sha256:943de75803f492f78c5d55fe43be298fbb66156cc22946a3c6cc6b0634efc2e2
-  - version: 1.0.1
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/strangeQuark1041/samarium/archive/refs/tags/v1.0.1.tar.gz
-      checksums:
-      - sha256:3748ad1095805338d0d54ca7b60a155520188970946b247d56cc9b5eeb397358
-  recipe_path: recipes/samarium/config.yml
-  native_url: https://conan.io/center/recipes/samarium
 - id: conan:samurai
   registry: conan
   name: samurai
@@ -105254,7 +105350,7 @@ packages:
     - url: https://github.com/simdutf/simdutf/archive/v8.2.0.tar.gz
       checksums:
       - sha256:033a91b1d7d1cb818c1eff49e61faaa1b64a3a530d59ef9efef0195e56bda8b1
-  - version: 9.0.0
+  - version: 9.3.2
     dependencies:
     - name: cmake
     features:
@@ -105263,9 +105359,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/simdutf/simdutf/archive/v9.0.0.tar.gz
+    - url: https://github.com/simdutf/simdutf/archive/v9.3.2.tar.gz
       checksums:
-      - sha256:fd2ce975f29809a975a8da8843cfb3a7265af3f71be548f199d23cf65e101764
+      - sha256:d92a0a4ce216dcebf18af20fed7ea7279fa535683f790fdaeed39827a234f567
   recipe_path: recipes/simdutf/config.yml
   native_url: https://conan.io/center/recipes/simdutf
 - id: conan:simfil
@@ -108259,7 +108355,7 @@ packages:
     - url: https://sqlite.org/2026/sqlite-amalgamation-3530400.zip
       checksums:
       - sha256:1e71ddf93849c6a6ecf58b827c0692073d2dd7ee40196158068f7b29f422e87d
-  - version: 3.54.0
+  - version: 3.54.1
     dependencies:
     - name: icu
     features:
@@ -108324,9 +108420,9 @@ packages:
     - name: use_uri
       default: 'false'
     artifacts:
-    - url: https://sqlite.org/2026/sqlite-amalgamation-3540000.zip
+    - url: https://sqlite.org/2026/sqlite-amalgamation-3540100.zip
       checksums:
-      - sha256:68e913b0fe8ec6b4e5f391c594a28872884e80d6cd042a1e50c957be46b5aa4d
+      - sha256:0a9c8e34352dad46006aa82836d5383bff9dc6bc9ce5a60553c05aa30e6ad1f9
   recipe_path: recipes/sqlite3/config.yml
   native_url: https://conan.io/center/recipes/sqlite3
 - id: conan:sqlite3mc
@@ -109954,6 +110050,14 @@ packages:
     - url: https://github.com/nothings/stb/archive/013ac3beddff3dbffafd5177e7972067cd2b5083.zip
       checksums:
       - sha256:b7f476902bbef1b30f8ecc2d9d95c459c32302c8b559d09b589b5955463b7af8
+  - version: cci.20261021
+    features:
+    - name: with_deprecated
+      default: 'true'
+    artifacts:
+    - url: https://github.com/nothings/stb/archive/a7d4c2175630e1ea5b6f8dd00ab96fed0b97b96d.zip
+      checksums:
+      - sha256:fc6e7c840a0e025ee238fc09e136452614a4b765afa6ff4177d2e9e1b3493675
   recipe_path: recipes/stb/config.yml
   native_url: https://conan.io/center/recipes/stb
 - id: conan:stc
@@ -110319,6 +110423,7 @@ packages:
   - version: 5.32.1.1
   - version: 5.38.2.2
   - version: 5.40.2.1
+  - version: 5.42.3.1
   recipe_path: recipes/strawberryperl/config.yml
   native_url: https://conan.io/center/recipes/strawberryperl
 - id: conan:streaming-percentiles
@@ -112575,6 +112680,7 @@ packages:
   - ocr
   package_type: library
   dependencies:
+  - cpu_features
   - leptonica
   - libarchive
   - libcurl
@@ -112598,6 +112704,7 @@ packages:
   versions:
   - version: 5.5.2
     dependencies:
+    - name: cpu_features
     - name: leptonica
     - name: libarchive
     - name: libcurl
@@ -112623,6 +112730,7 @@ packages:
       - sha256:6235ea0dae45ea137f59c09320406f5888383741924d98855bd2ce0d16b54f21
   - version: 5.5.3
     dependencies:
+    - name: cpu_features
     - name: leptonica
     - name: libarchive
     - name: libcurl
@@ -115404,6 +115512,24 @@ packages:
     - url: https://github.com/an-tao/trantor/archive/v1.5.28.tar.gz
       checksums:
       - sha256:8e3e493427a1704ee0d8cacb65e61b544d4b3a7159f5a4e55517272e1fb25c8f
+  - version: 1.5.29
+    dependencies:
+    - name: c-ares
+    - name: openssl
+    - name: spdlog
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_c_ares
+      default: 'true'
+    - name: with_spdlog
+      default: 'false'
+    artifacts:
+    - url: https://github.com/an-tao/trantor/archive/v1.5.29.tar.gz
+      checksums:
+      - sha256:0e6b9cc32720cbca61ac2e04d4d9b8e1afac3f4007b5978a91461d3eb21d653b
   recipe_path: recipes/trantor/config.yml
   native_url: https://conan.io/center/recipes/trantor
 - id: conan:tre
@@ -118809,14 +118935,26 @@ packages:
   - loader
   - vulkan
   package_type: static-library
+  dependencies:
+  - xorg
   options:
   - fPIC
+  - with_wayland
+  - with_x11
   default_options:
     fPIC: 'true'
+    with_wayland: 'true'
+    with_x11: 'true'
   versions:
   - version: 1.4.357.0
+    dependencies:
+    - name: xorg
     features:
     - name: fPIC
+      default: 'true'
+    - name: with_wayland
+      default: 'true'
+    - name: with_x11
       default: 'true'
     artifacts:
     - url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz
@@ -121622,6 +121760,37 @@ packages:
       - sha256:a3f2da3acf300fba43f51c8299dae71c4e0774cd6fdd96e264fad5777b12ae3a
   recipe_path: recipes/wyhash/config.yml
   native_url: https://conan.io/center/recipes/wyhash
+- id: conan:xad
+  registry: conan
+  name: xad
+  summary: 'Comprehensive C++ library for automatic differentiation: forward and adjoint modes, higher-order derivatives and checkpointing'
+  licenses:
+  - AGPL-3.0-or-later
+  homepage: https://auto-differentiation.github.io
+  repository_url: https://github.com/auto-differentiation/xad
+  topics:
+  - aad
+  - adjoint
+  - algorithmic-differentiation
+  - autodiff
+  - automatic-differentiation
+  - derivatives
+  package_type: static-library
+  options:
+  - fPIC
+  default_options:
+    fPIC: 'true'
+  versions:
+  - version: 2.1.0
+    features:
+    - name: fPIC
+      default: 'true'
+    artifacts:
+    - url: https://github.com/auto-differentiation/xad/archive/refs/tags/v2.1.0.tar.gz
+      checksums:
+      - sha256:110729586b1a097c9e4a7ec34c48e60f3aec7ec61ef192a417ce0774cc32be43
+  recipe_path: recipes/xad/config.yml
+  native_url: https://conan.io/center/recipes/xad
 - id: conan:xalan-c
   registry: conan
   name: xalan-c
@@ -122961,6 +123130,11 @@ packages:
     - url: https://github.com/xtensor-stack/xtl/archive/0.8.0.tar.gz
       checksums:
       - sha256:ee38153b7dd0ec84cee3361f5488a4e7e6ddd26392612ac8821cbc76e740273a
+  - version: 0.8.2
+    artifacts:
+    - url: https://github.com/xtensor-stack/xtl/archive/0.8.2.tar.gz
+      checksums:
+      - sha256:8fb38d6a5856aab5740d2ccb3d791d289f648d4cc506b94a1338fe5fce100c11
   recipe_path: recipes/xtl/config.yml
   native_url: https://conan.io/center/recipes/xtl
 - id: conan:xtr
@@ -124433,11 +124607,15 @@ packages:
   name: zint
   summary: Zint Barcode Generator
   licenses:
-  - GPL-3.0
-  homepage: https://sourceforge.net/p/zint/code
+  - BSD-3-Clause
+  - GPL-3.0-or-later
+  homepage: https://www.zint.org.uk
   topics:
+  - 2d-barcodes
   - barcode
-  - qt
+  - barcode-generator
+  - gs1
+  - qr-code
   package_type: library
   dependencies:
   - libpng
@@ -124454,7 +124632,7 @@ packages:
     with_libpng: 'true'
     with_qt: 'false'
   versions:
-  - version: 2.10.0
+  - version: 2.16.0
     dependencies:
     - name: libpng
     - name: qt
@@ -124469,9 +124647,9 @@ packages:
     - name: with_qt
       default: 'false'
     artifacts:
-    - url: https://sourceforge.net/projects/zint/files/zint/2.10.0/zint-2.10.0-src.tar.gz
+    - url: https://sourceforge.net/projects/zint/files/zint/2.16.0/zint-2.16.0-src.tar.gz
       checksums:
-      - sha256:bb97e98a32e140c344e92c8da84a9df413dca16083f2fcdc29791bec77350339
+      - sha256:37e767afada2403bb9ae49b93a19eb0a9e944a0c278d9f23522746b3d08a3c4b
   recipe_path: recipes/zint/config.yml
   native_url: https://conan.io/center/recipes/zint
 - id: conan:zlib

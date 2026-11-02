@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: meson
 repository: https://github.com/mesonbuild/wrapdb
-revision: 8c1b13c0a587ffaaa4750b0f42f68a935f1b903a
+revision: cb21768447ab48bb5f5401683a04a1fd028cc658
 packages:
 - id: meson:abseil-cpp
   registry: meson
@@ -5097,12 +5097,19 @@ packages:
     capabilities:
     - cglm
     artifacts:
-    - url: https://github.com/recp/cglm/archive/refs/tags/v0.9.6.tar.gz
-      checksums:
-      - sha256:be5e7d384561eb0fca59724a92b7fb44bf03e588a7eae5123a7d796002928184
-      filename: cglm-0.9.6.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cglm_0.9.6-1/cglm.wrap
+  - version: 0.9.7
+    packaging_revision: '1'
+    capabilities:
+    - cglm
+    artifacts:
+    - url: https://github.com/recp/cglm/archive/refs/tags/v0.9.7.tar.gz
+      checksums:
+      - sha256:cc0862eee2885d2a2b4870eb29b97c6e9b9ebc7c66e8854e1fa8f3d18d9d8475
+      filename: cglm-0.9.7.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cglm_0.9.7-1/cglm.wrap
   recipe_path: subprojects/cglm.wrap
 - id: meson:check
   registry: meson
@@ -6055,12 +6062,19 @@ packages:
     capabilities:
     - cpp-httplib
     artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.63.0.tar.gz
-      checksums:
-      - sha256:44ab42e16926e95f7641d286bc90d739ab1c16886114d7cc5bc7a9f905c5edf8
-      filename: cpp-httplib-0.63.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.63.0-1/cpp-httplib.wrap
+  - version: 0.64.0
+    packaging_revision: '1'
+    capabilities:
+    - cpp-httplib
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.64.0.tar.gz
+      checksums:
+      - sha256:1ada413782af5e67e80452c39b7c90beb6fa4fc8341e18c0896bf95684b9a620
+      filename: cpp-httplib-0.64.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.64.0-1/cpp-httplib.wrap
   - version: 0.8.9
     packaging_revision: '2'
     capabilities:
@@ -8451,12 +8465,19 @@ packages:
     capabilities:
     - fribidi
     artifacts:
-    - url: https://github.com/fribidi/fribidi/releases/download/v1.0.17/fribidi-1.0.17.tar.xz
-      checksums:
-      - sha256:6949dcde27d41cebad1fd741fcafc36d55a1020d2d872d4a6eb3914caabbada2
-      filename: fribidi-1.0.17.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/fribidi_1.0.17-1/fribidi.wrap
+  - version: 1.0.18
+    packaging_revision: '1'
+    capabilities:
+    - fribidi
+    artifacts:
+    - url: https://github.com/fribidi/fribidi/releases/download/v1.0.18/fribidi-1.0.18.tar.xz
+      checksums:
+      - sha256:1de5e8073d035388b71d0b2d452b1da1f8caeea8a7702997b401fe1b6250727f
+      filename: fribidi-1.0.18.tar.xz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/fribidi_1.0.18-1/fribidi.wrap
   recipe_path: subprojects/fribidi.wrap
 - id: meson:frozen
   registry: meson
@@ -13016,12 +13037,19 @@ packages:
     capabilities:
     - lcms2
     artifacts:
-    - url: https://github.com/mm2/Little-CMS/releases/download/lcms2.19.1/lcms2-2.19.1.tar.gz
-      checksums:
-      - sha256:bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8
-      filename: lcms2-2.19.1.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/lcms2_2.19.1-1/lcms2.wrap
+  - version: '2.20'
+    packaging_revision: '1'
+    capabilities:
+    - lcms2
+    artifacts:
+    - url: https://github.com/mm2/Little-CMS/releases/download/lcms2.20/lcms2-2.20.tar.gz
+      checksums:
+      - sha256:18ff5504fa9cc8a2b1f3591180d90ead16c8a2ea78e530523b46eab70e1ca6b9
+      filename: lcms2-2.20.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/lcms2_2.20-1/lcms2.wrap
   recipe_path: subprojects/lcms2.wrap
 - id: meson:leptonica
   registry: meson
@@ -23681,6 +23709,13 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/slirp_4.9.6-1/slirp.wrap
+  - version: 4.9.7
+    packaging_revision: '1'
+    capabilities:
+    - slirp
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/slirp_4.9.7-1/slirp.wrap
   recipe_path: subprojects/slirp.wrap
 - id: meson:snitch
   registry: meson

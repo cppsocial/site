@@ -3485,10 +3485,12 @@ entities:
   - xmake:blake2
 - id: blake3
   name: blake3
-  aliases: []
+  aliases:
+  - libblake3
   packages:
   - bazel:blake3
   - conan:blake3
+  - cppget:libblake3
   - spack:blake3
   - vcpkg:blake3
   - xmake:blake3
@@ -5753,6 +5755,11 @@ entities:
   aliases: []
   packages:
   - spack:c-raft
+- id: c-str-span
+  name: c-str-span
+  aliases: []
+  packages:
+  - vcpkg:c-str-span
 - id: c-vector
   name: c-vector
   aliases: []
@@ -6684,11 +6691,6 @@ entities:
   aliases: []
   packages:
   - spack:chlorop
-- id: chmlib
-  name: chmlib
-  aliases: []
-  packages:
-  - vcpkg:chmlib
 - id: choc
   name: choc
   aliases: []
@@ -7850,6 +7852,11 @@ entities:
   aliases: []
   packages:
   - spack:coral
+- id: coremltools
+  name: coremltools
+  aliases: []
+  packages:
+  - vcpkg:coremltools
 - id: corenlp
   name: corenlp
   aliases: []
@@ -7859,6 +7866,7 @@ entities:
   name: coreutils
   aliases: []
   packages:
+  - bazel:coreutils
   - spack:coreutils
 - id: coroutine
   name: coroutine
@@ -14737,6 +14745,11 @@ entities:
   - spack:ggml
   - vcpkg:ggml
   - xmake:ggml
+- id: gguf-tools
+  name: gguf-tools
+  aliases: []
+  packages:
+  - bazel:gguf-tools
 - id: gh
   name: gh
   aliases: []
@@ -15999,6 +16012,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:grppi
+- id: grub
+  name: grub
+  aliases: []
+  packages:
+  - bazel:grub
 - id: gsasl
   name: gsasl
   aliases: []
@@ -16947,6 +16965,7 @@ entities:
   name: hermes
   aliases: []
   packages:
+  - bazel:hermes
   - spack:hermes
 - id: hermes-shm
   name: hermes-shm
@@ -17277,6 +17296,7 @@ entities:
   aliases: []
   packages:
   - vcpkg:hnswlib
+  - xmake:hnswlib
 - id: hohqmesh
   name: hohqmesh
   aliases: []
@@ -19565,6 +19585,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:kcodecs
+- id: kcolorscheme
+  name: kcolorscheme
+  aliases: []
+  packages:
+  - vcpkg:kcolorscheme
 - id: kcompletion
   name: kcompletion
   aliases: []
@@ -19590,6 +19615,11 @@ entities:
   aliases: []
   packages:
   - cppget:kconfig-qconf
+- id: kconfigwidgets
+  name: kconfigwidgets
+  aliases: []
+  packages:
+  - vcpkg:kconfigwidgets
 - id: kcoreaddons
   name: kcoreaddons
   aliases: []
@@ -19963,6 +19993,11 @@ entities:
   aliases: []
   packages:
   - spack:khmer
+- id: kholidays
+  name: kholidays
+  aliases: []
+  packages:
+  - vcpkg:kholidays
 - id: khronosdataformat
   name: KhronosDataFormat
   aliases: []
@@ -19994,6 +20029,11 @@ entities:
   aliases: []
   packages:
   - conan:kickcat
+- id: kiconthemes
+  name: kiconthemes
+  aliases: []
+  packages:
+  - vcpkg:kiconthemes
 - id: kim-api
   name: kim-api
   aliases: []
@@ -20078,6 +20118,11 @@ entities:
   packages:
   - spack:py-kiwisolver
   - xmake:kiwisolver
+- id: kjobwidgets
+  name: kjobwidgets
+  aliases: []
+  packages:
+  - vcpkg:kjobwidgets
 - id: kleidiai
   name: kleidiai
   aliases: []
@@ -20203,6 +20248,11 @@ entities:
   aliases: []
   packages:
   - conan:kplot
+- id: kplotting
+  name: kplotting
+  aliases: []
+  packages:
+  - vcpkg:kplotting
 - id: krabs
   name: krabs
   aliases:
@@ -27563,11 +27613,6 @@ entities:
   aliases: []
   packages:
   - spack:megahit
-- id: melissa
-  name: melissa
-  aliases: []
-  packages:
-  - spack:melissa
 - id: melon
   name: melon
   aliases: []
@@ -27768,6 +27813,7 @@ entities:
   aliases:
   - libmetal-cpp
   packages:
+  - bazel:metal-cpp
   - conan:metal-cpp
   - cppget:libmetal-cpp
   - spack:metal-cpp
@@ -28446,7 +28492,13 @@ entities:
   name: mlx
   aliases: []
   packages:
+  - bazel:mlx
   - spack:mlx
+- id: mlx-c
+  name: mlx-c
+  aliases: []
+  packages:
+  - bazel:mlx-c
 - id: mm-file
   name: mm_file
   aliases: []
@@ -30110,6 +30162,11 @@ entities:
   aliases: []
   packages:
   - spack:nep
+- id: nepdate
+  name: nepdate
+  aliases: []
+  packages:
+  - xmake:nepdate
 - id: neper
   name: neper
   aliases: []
@@ -32160,6 +32217,11 @@ entities:
   - meson:openh264
   - vcpkg:openh264
   - xmake:openh264
+- id: openhtj2k
+  name: openhtj2k
+  aliases: []
+  packages:
+  - vcpkg:openhtj2k
 - id: openigtlink
   name: openigtlink
   aliases: []
@@ -32985,6 +33047,11 @@ entities:
   aliases: []
   packages:
   - spack:pace
+- id: pace-25b74c97
+  name: pace
+  aliases: []
+  packages:
+  - xmake:pace
 - id: pacifica-cli
   name: pacifica-cli
   aliases: []
@@ -38102,6 +38169,7 @@ entities:
   name: ptex
   aliases: []
   packages:
+  - bazel:ptex
   - conan:ptex
   - vcpkg:ptex
   - xmake:ptex
@@ -41881,6 +41949,11 @@ entities:
   aliases: []
   packages:
   - spack:py-einops
+- id: py-einops-exts
+  name: py-einops-exts
+  aliases: []
+  packages:
+  - spack:py-einops-exts
 - id: py-elastic-transport
   name: py-elastic-transport
   aliases: []
@@ -44300,6 +44373,11 @@ entities:
   aliases: []
   packages:
   - spack:py-jaxlib
+- id: py-jaxonnxruntime
+  name: py-jaxonnxruntime
+  aliases: []
+  packages:
+  - spack:py-jaxonnxruntime
 - id: py-jaxtyping
   name: py-jaxtyping
   aliases: []
@@ -45439,11 +45517,6 @@ entities:
   aliases: []
   packages:
   - spack:py-meldmd
-- id: py-melissa-core
-  name: py-melissa-core
-  aliases: []
-  packages:
-  - spack:py-melissa-core
 - id: py-melissa-online
   name: py-melissa-online
   aliases: []
@@ -49036,6 +49109,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pyrfr
+- id: py-pyriemann
+  name: py-pyriemann
+  aliases: []
+  packages:
+  - spack:py-pyriemann
 - id: py-pyro-api
   name: py-pyro-api
   aliases: []
@@ -50716,6 +50794,11 @@ entities:
   aliases: []
   packages:
   - spack:py-sarif-tools
+- id: py-scaffold
+  name: py-scaffold
+  aliases: []
+  packages:
+  - spack:py-scaffold
 - id: py-scandir
   name: py-scandir
   aliases: []
@@ -56134,6 +56217,11 @@ entities:
   aliases: []
   packages:
   - spack:r-corrplot
+- id: r-coseq
+  name: r-coseq
+  aliases: []
+  packages:
+  - spack:r-coseq
 - id: r-countrycode
   name: r-countrycode
   aliases: []
@@ -61208,6 +61296,11 @@ entities:
   packages:
   - vcpkg:rapidobj
   - xmake:rapidobj
+- id: rapids-cmake
+  name: rapids-cmake
+  aliases: []
+  packages:
+  - spack:rapids-cmake
 - id: rapidxml
   name: rapidxml
   aliases:
@@ -61960,6 +62053,11 @@ entities:
   - conan:ring-span-lite
   - vcpkg:ring-span-lite
   - xmake:ring-span-lite
+- id: rinx
+  name: rinx
+  aliases: []
+  packages:
+  - bazel:rinx
 - id: rioki-glow
   name: rioki-glow
   aliases: []
@@ -64090,6 +64188,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_webtesting
+- id: rules-wine
+  name: rules_wine
+  aliases: []
+  packages:
+  - bazel:rules_wine
 - id: rules-xcodeproj
   name: rules_xcodeproj
   aliases: []
@@ -64339,11 +64442,6 @@ entities:
   aliases: []
   packages:
   - spack:sam2p
-- id: samarium
-  name: samarium
-  aliases: []
-  packages:
-  - conan:samarium
 - id: sambamba
   name: sambamba
   aliases: []
@@ -64854,6 +64952,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:sdl3-shadercross
+- id: sdl3pp
+  name: sdl3pp
+  aliases: []
+  packages:
+  - vcpkg:sdl3pp
 - id: sdl3webgpu
   name: sdl3webgpu
   aliases: []
@@ -67537,6 +67640,11 @@ entities:
   packages:
   - conan:structopt
   - vcpkg:structopt
+- id: structural-interface
+  name: structural_interface
+  aliases: []
+  packages:
+  - xmake:structural_interface
 - id: structure
   name: structure
   aliases: []
@@ -68128,6 +68236,11 @@ entities:
   aliases: []
   packages:
   - spack:t8code
+- id: taar
+  name: taar
+  aliases: []
+  packages:
+  - vcpkg:taar
 - id: tabix
   name: tabix
   aliases: []
@@ -71766,6 +71879,7 @@ entities:
   name: wasmedge
   aliases: []
   packages:
+  - bazel:wasmedge
   - conan:wasmedge
   - vcpkg:wasmedge
 - id: wasmer
@@ -72478,7 +72592,9 @@ entities:
   name: xad
   aliases: []
   packages:
+  - conan:xad
   - spack:xad
+  - vcpkg:xad
 - id: xalan-c
   name: xalan-c
   aliases: []
@@ -73281,6 +73397,11 @@ entities:
   packages:
   - conan:xoshiro-cpp
   - xmake:xoshiro-cpp
+- id: xosview
+  name: xosview
+  aliases: []
+  packages:
+  - spack:xosview
 - id: xpack
   name: xpack
   aliases: []

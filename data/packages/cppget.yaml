@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: cppget
 repository: https://pkg.cppget.org/1/
-revision: 730157949abe08ccb11dd1930d51090401edf65dd5d84dc649695ea932692edc
+revision: 4722f34ed409d81ec3e33931a67203406b1040e710bc681179eb1cb716823a2f
 packages:
 - id: cppget:Eigen
   registry: cppget
@@ -5125,6 +5125,22 @@ packages:
       url: https://pkg.cppget.org/1/testing/abseil-cpp/libabseil-2025.127.2+1.tar.gz
       checksums:
       - sha256:6835a951afd518e05ad6ab6876b2a6be7d29d4fd490903bdf0179c57ab047a1c
+  - version: 2025.512.1+1
+    upstream_version: 2025.512.1
+    packaging_revision: '1'
+    channel: testing
+    summary: Abseil common C++ libraries augmenting the standard library
+    description: <p>The repository contains the Abseil C++ library code. Abseil is an open-source collection of C++ code (compliant to C++17) designed to augment the C++ standard library.</p><p>About Abseil</p>
+    homepage: https://abseil.io/
+    documentation_url: https://abseil.io/docs/cpp/
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/abseil-cpp/libabseil-2025.512.1+1.tar.gz
+      checksums:
+      - sha256:3e2cea8f3865c0bc6a962022c45eeaf18ad8c07c62e77a2a131ebe77ecfdc57e
   recipe_url: https://cppget.org/libabseil
 - id: cppget:libabseil-tests
   registry: cppget
@@ -5160,6 +5176,24 @@ packages:
       url: https://pkg.cppget.org/1/testing/abseil-cpp/libabseil-tests-2025.127.2+1.tar.gz
       checksums:
       - sha256:576f21cc9c962d20f8fed447389221ee1790d09c24e5acd791a73b5ec3ecde31
+  - version: 2025.512.1+1
+    upstream_version: 2025.512.1
+    packaging_revision: '1'
+    channel: testing
+    summary: Abseil common C++ libraries augmenting the standard library tests
+    description: Upstream tests for the libabseil package of abseil-cpp
+    homepage: https://abseil.io/
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: gmock
+    - name: gtest
+    - name: libabseil
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/abseil-cpp/libabseil-tests-2025.512.1+1.tar.gz
+      checksums:
+      - sha256:14d370ffefa6d2155e27a9d4ec017516437126f6eddb254d05b7ebd18473ee4e
   recipe_url: https://cppget.org/libabseil-tests
 - id: cppget:libadwaita
   registry: cppget
@@ -5800,6 +5834,40 @@ packages:
       checksums:
       - sha256:9d9be1bdeea97917967ef5e5f3878cdfc7e0aabb301d74e44cb4d40c2dea48d6
   recipe_url: https://cppget.org/libbbot
+- id: cppget:libblake3
+  registry: cppget
+  name: libblake3
+  summary: BLAKE3 cryptographic hash function C library
+  description: <p>The official C implementation of BLAKE3.</p><p>An example program that hashes bytes from standard input and prints the result:</p>
+  description_format: html
+  licenses:
+  - 'CC0-1.0 OR Apache-2.0 OR Apache-2.0 WITH LLVM-exception; Public
+
+    domain or Apache License 2.0 with or without LLVM exception.'
+  homepage: https://github.com/BLAKE3-team/BLAKE3
+  repository_url: https://github.com/blake3-team/blake3
+  documentation_url: https://github.com/BLAKE3-team/BLAKE3/blob/master/c/README.md; C API.
+  topics:
+  - 'cryptographic hash function, message authentication code, key
+
+    derivation function, extendable-output function'
+  languages:
+  - c
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.8.7
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/BLAKE3/libblake3-1.8.7.tar.gz
+      checksums:
+      - sha256:107e27633d62a1e49519c97e40f99a2ead6247cd8c55bd4e8936fc6af2f62b07
+  recipe_url: https://cppget.org/libblake3
 - id: cppget:libboost-accumulators
   registry: cppget
   name: libboost-accumulators
@@ -18925,6 +18993,20 @@ packages:
       url: https://pkg.cppget.org/1/stable/curl/libca-certificates-curl-1.0.5.tar.gz
       checksums:
       - sha256:4c203437da350be545fe99f741f961f82c5536903a38655903c60a711cfb8178
+  - version: 1.0.6
+    channel: stable
+    description: <p>cURL is a client-side software for transferring data using URLs. This is the Certificate Authorities (CA) certificate bundle for peer SSL certificate verification. For more information see:</p><p>https://curl.se/docs/caextract.html</p>
+    licenses:
+    - MPL-2.0; Mozilla Public License 2.0.
+    homepage: https://curl.se/docs/caextract.html
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/stable/curl/libca-certificates-curl-1.0.6.tar.gz
+      checksums:
+      - sha256:2836f703e89f1c6ddfe362e4cdb1db7a51bdb66a6675c63126dbc8f7d554ede7
   recipe_url: https://cppget.org/libca-certificates-curl
 - id: cppget:libcereal
   registry: cppget
@@ -27970,6 +28052,17 @@ packages:
       url: https://pkg.cppget.org/1/testing/quill/libquill-13.0.0.tar.gz
       checksums:
       - sha256:9179e6cb20ca96fc18f73df0745faac055b17cfce78f66459c3180ea352ce4a1
+  - version: 13.1.0
+    channel: testing
+    documentation_url: https://quillcpp.readthedocs.io/en/latest/
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/quill/libquill-13.1.0.tar.gz
+      checksums:
+      - sha256:70e292417a01bfc13fd755bdd47262c8a138789711c729f04ca188fcaf476189
   - version: 8.1.0
     channel: testing
     dependencies:

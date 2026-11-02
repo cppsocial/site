@@ -1,5 +1,157 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: cA0F3wRtZIU
+  title: CallMeMaybe - Building Modern Runtime Reflection via C++26 - Laurie Kirk - ACCU 2026
+  url: https://www.youtube.com/watch?v=cA0F3wRtZIU
+  published: 2026-10-31 20:57:06+00:00
+  updated: 2026-11-02 04:07:02+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    CallMeMaybe - Building Modern Runtime Reflection via C++26 - Laurie Kirk - ACCU 2026
+
+    ---
+
+
+    Upcoming native static reflection in C++26 opens the door to new dynamic reflection capabilities. Prior to built-in class introspection, runtime reflection libraries required manual, annotated class metadata. What if we built off new static reflection capabilities to create a runtime registry that is both automated and type-safe?
+
+
+    C++ has avoided the massive overhead seen in languages with fully-native runtime reflection. In most native implementations, such as Java, every class must store runtime metadata regardless of whether it will actually be reflected. In this talk, I will discuss how to harness compile-time std::meta functions to create a runtime reflection registry only for classes requiring reflection. This newly available technique eliminates the brittle, manual macro registration used by RTTR or the external requirements of the Qt moc model.
+
+
+    Bloated binary size and added runtime overhead remain the constant pitfalls of runtime reflection. To combat these, I will also introduce signature-based deduplication, benchmarks of various invocation strategies, and symbol stripping via granular reflection control. On top of that, simulating a runtime "reflectable" profile with attributes and concepts ensures classes attempting to register meet safe reflection requirements.
+
+
+    This talk will introduce a brand new, open-source runtime reflection library for C++ based on the most recent language additions. It will also cover a great deal of hands-on C++26 static reflection usage (currently experimental).
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Laurie Kirk
+
+
+    Laurie Kirk is a researcher at Google specializing in low-level programming, reverse engineering, and deobfuscation. She runs a YouTube channel (@LaurieWired) that covers all sorts of in-depth research topics on reverse engineering, programming, and software optimizations. She has spoken at multiple conferences including Strange Loop, DEFCON, REcon, Objective by the Sea, and TROOPERS.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/cA0F3wRtZIU/hqdefault.jpg
+- video_id: LMQ21X6_2FQ
+  title: Incrementally Migrating C++ to a Memory Safe Language with Swift - Tim Condon - ACCU 2026
+  url: https://www.youtube.com/watch?v=LMQ21X6_2FQ
+  published: 2026-10-29 13:27:29+00:00
+  updated: 2026-10-31 05:25:12+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nIncrementally Migrating C++ to a Memory Safe Language with Swift - Tim Condon - ACCU 2026\n---\n\nThere has been a desire in recent years to migrate to memory safe languages to counter common errors that can have a big impact. This talk looks at Swift and how it's being adopted in a number of critical applications and stacks, like kernels, operating systems and web browsers. We'll look at some of its features, its focus on safety that removes several classes of errors, such as data races and null pointer exceptions. We will see how its first-class interoperability with C++ means you can migrate incrementally without having to do a major rewrite in one go. Finally we'll look at the latest features that allow you to rewrite memory-safe code, even when crossing language boundaries. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nTim Condon\n\nTim is a Swift developer from Manchester, UK and one\
+    \ half of the Vapor Core Team. He sits on the Swift Ecosystem Steering Group and the Swift Server Workgroup and delivers talks and workshops on Vapor and server-side Swift around the world. He runs Broken Hands, a server-side Swift consultancy working with clients around the world. He also co-organises the ServerSide.swift conference.\n\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python,\
+    \ Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i1.ytimg.com/vi/LMQ21X6_2FQ/hqdefault.jpg
+- video_id: A4mMO5xeQDA
+  title: Creating Composable Callables in C++ - Using Senders / Receivers as a Frame Graph - Björn Fahller
+  url: https://www.youtube.com/watch?v=A4mMO5xeQDA
+  published: 2026-10-26 14:22:38+00:00
+  updated: 2026-10-28 04:50:01+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Creating Composable Callables in Contemporary C++ - Using Senders / Receivers as a Frame Graph - Björn Fahller - ACCU 2026
+
+    ---
+
+
+    C++ took a huge step in the direction of composability when Ranges were introduced in C++20. C++23 improved it, and C++26 looks to improve it even more.
+
+
+    However, function objects, sometimes referred to as Niebloids, after Eric Niebler who pioneered their use in the Ranges library, are still few and rarely composable. With function objects we can send functions, and even complete overload sets, as arguments to other functions, return them, and combine them.
+
+
+    I will show you compositions I want, how to write them and with gradual scope creep end up with a very powerful set of utilities that are easy to use and require surprisingly little code when using recent additions to the C++ language.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Björn Fahller
+
+
+    Björn is a senior software developer at Net Insight, where he is keen on improving the skills of the teams he works in, by learning, and by sharing knowledge. Björn has worked full time with software development since 1994, mostly for networking products, and primarily in C++. He is the creator of the popular open source C++ libraries, Trompeloeil for mocking, and strong_type for type safety.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/A4mMO5xeQDA/hqdefault.jpg
 - video_id: u8te1UQOxQY
   title: What static, inline, const, constexpr Mean and When to Use Them - Andreas Fertig - ACCU 2026
   url: https://www.youtube.com/watch?v=u8te1UQOxQY

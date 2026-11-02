@@ -1,5 +1,234 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: TLj6NVx5xvk
+  title: 'Lightning Talk: ?: - Jonathan Müller - C++Now 2026'
+  url: https://www.youtube.com/watch?v=TLj6NVx5xvk
+  published: 2026-11-01 16:00:02+00:00
+  updated: 2026-11-01 17:17:50+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: ?: - Jonathan Müller - C++Now 2026
+
+    ---
+
+
+    The conditional operator ?: returns either the first or the second operand based on a condition.
+
+
+    But what is its type?
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jonathan Müller
+
+
+    Jonathan is a Software Engineer at LSEG. There he develops low-latency market data feed handlers in C++ for high-frequency trading applications. Previously, he maintained think-cell’s core C++ libraries built around a custom range implementation.
+
+
+    He is also the chair of the std::ranges study group in the C++ standardization committee, a frequent speaker at conferences and universities, and the author of multiple open-source C++ libraries.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/TLj6NVx5xvk/hqdefault.jpg
+- video_id: bNipVnNaDdk
+  title: C++ Libraries - The Road Ahead - Jeffrey Garland - C++Now 2026
+  url: https://www.youtube.com/watch?v=bNipVnNaDdk
+  published: 2026-10-30 16:00:15+00:00
+  updated: 2026-11-01 07:48:39+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    C++ Libraries - The Road Ahead - Jeffrey Garland - C++Now 2026
+
+    ---
+
+
+    With the adoption of reflection and contracts in C++26 a new era in C++ library development is dawning. Meanwhile an older feature, modules is finally getting momentum. These features are poised to rewrite the landscape of C++ development -- and in particular library development -- in the next few years. We''ll review the details of reflection and modules and their impact on library design.
+
+
+    Meanwhile the standards committee already has a large backlog of library proposals for c++29. We''ll survey those libraries and deep dive on a few of them based on audience input.
+
+
+    - Part 0 Introduction
+
+    - Part 1 Reflection
+
+    - Part 2 Modules
+
+    - Part 3 C++ 29 Libraries
+
+
+    Attendees will leave with
+
+    - an introduction to reflection and modules and how to apply them
+
+    - a view of where the C++ standard library is headed for C++29
+
+    - how to influence proposals during standardization
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jeff Garland
+
+
+    Jeff Garland has worked on many large-scale, distributed software projects over the past 40 years. The systems span many different domains including telephone switching, industrial process control, satellite ground control, ip-based communications, and financial systems. He has written C++ networked code for several large systems including the development high performance network servers and data distribution frameworks.
+
+
+    Mr. Garland is currently the Vice-Convenor of the C++ Committe, a member if the Directions Group, and a vice-chair of the Library Working Group. He is a co-founder and lead of the Beman project as well as the executive director of the C++Next Foundation.
+
+
+    Mr. Garland holds a Master’s degree in Computer Science from Arizona State University and a Bachelor of Science in Systems Engineering from the University of Arizona. He is co-author of Large Scale Software Architecture: A Practical Guide Using UML. He is currently Principal Consultant for his own company: CrystalClear Software, Inc.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/bNipVnNaDdk/hqdefault.jpg
+- video_id: CiaZq4kCH08
+  title: AI is Forcing us to Obey Scott Meyers - Jody Hagins - C++Now 2026
+  url: https://www.youtube.com/watch?v=CiaZq4kCH08
+  published: 2026-10-27 16:47:08+00:00
+  updated: 2026-10-28 18:23:55+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    AI is Forcing us to Obey Scott Meyers - Jody Hagins - C++Now 2026
+
+    ---
+
+
+    This talk argues that Scott Meyers'' mantra "make interfaces easy to use correctly and difficult to use incorrectly" isn''t just good practice for humans.
+
+    It''s essential infrastructure for a world where AI generates C++ at scale.
+
+
+    When there''s only one right way to call a function, both humans and machines get it right.
+
+    If there are multiple ways, and some lead to disaster, AI increases the probability of disaster.
+
+
+    Through concrete redesigns of real APIs and parts of the standard library, we demonstrate how interfaces designed specifically to provide "one right way" act as implicit guardrails for generated code, and why the principles we should have been following all along are now urgent.
+
+    ---
+
+
+    Slides: https://github.com/boostcon/cppnow_presentations_2026/blob/main/Presentations/AI_is_Forcing_us_to_Obey_Scott_Meyers.pdf
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jody Hagins
+
+
+    Jody Hagins started using C++ back in the mid 1980s, with cfront. In 1993, he enjoyed writing enough C++ support code to enable writing loadable unix device drivers in C++. Since then, he has been applying C++ to various problems within the fintech space.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/CiaZq4kCH08/hqdefault.jpg
 - video_id: aas2DSxHrT8
   title: CMake’s Recent Evolution - Modules, CPS, and Build Optimization - Bill Hoffman - C++Now 2026
   url: https://www.youtube.com/watch?v=aas2DSxHrT8

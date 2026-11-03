@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: 8vDPXKVgm0S5yZNw
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26 Ranges: Parallel Algorithms and Safer Filters'
+  url: https://www.sandordargo.com/blog/2026/10/28/cpp26-ranges-part-3-parallel-and-safety
+  published: 2026-10-27 23:00:00+00:00
+  updated: 2026-10-27 23:00:00+00:00
+  description: 'In part 1 we looked at the new views C++26 adds, and in part 2 we covered the infrastructure improvements. This final part is about the biggest gap in C++20 ranges: you couldn’t run them in parallel. C++17 added execution policies to the classic std:: algorithms, but C++20 range…'
+  tags:
+  - dev
 - post_id: MQyfzgH6jtsjB3i4
   source_id: sandor_dargo
   source_title: Sandor Dargo's Blog

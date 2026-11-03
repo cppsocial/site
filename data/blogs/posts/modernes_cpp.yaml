@@ -1,5 +1,14 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: mf4iBeBQjywo3At9
+  source_id: modernes_cpp
+  source_title: Modernes C++
+  title: 'The Problem with C++ Safety (Part 2): Modern C++ Is a Mindset, Not a Standard'
+  url: https://www.modernescpp.com/index.php/cpp-and-memory-safety-part-2/
+  published: 2026-11-01 14:59:51+00:00
+  description: In the first part, we saw how hard it is to be certain that loop-based C++ code is correct. Now Klaus presents the modern solution, a single algorithm call that is correct by inspection, and explains why the real problem in our community is an educational one, made worse by AI t…
+  tags:
+  - Safety
 - post_id: lMCRmXJ7L49OKgf1
   source_id: modernes_cpp
   source_title: Modernes C++

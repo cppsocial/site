@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: 58f6e9c1bd2e930aadb332fec7c37281edd798b3
+revision: 92354eaa4147ee2f508c48c194c5c14cc640a8d1
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -1235,6 +1235,10 @@ packages:
     artifacts:
     - url: https://github.com/AMReX-Codes/amrex.git
     - url: https://github.com/AMReX-Codes/amrex/releases/download/26.09/amrex-26.09.tar.gz
+  - version: '26.10'
+    artifacts:
+    - url: https://github.com/AMReX-Codes/amrex.git
+    - url: https://github.com/AMReX-Codes/amrex/releases/download/26.10/amrex-26.10.tar.gz
   recipe_path: packages/a/amrex/xmake.lua
 - id: xmake:anari
   registry: xmake
@@ -5643,6 +5647,10 @@ packages:
     artifacts:
     - url: https://github.com/aws/aws-sdk-cpp.git
     - url: https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.916.tar.gz
+  - version: 1.11.921
+    artifacts:
+    - url: https://github.com/aws/aws-sdk-cpp.git
+    - url: https://github.com/aws/aws-sdk-cpp/archive/refs/tags/1.11.921.tar.gz
   recipe_path: packages/a/aws-sdk-cpp/xmake.lua
 - id: xmake:b2
   registry: xmake
@@ -9933,6 +9941,11 @@ packages:
     artifacts:
     - url: https://github.com/catchorg/Catch2.git
     - url: https://github.com/catchorg/Catch2/archive/refs/tags/v3.16.0.zip
+  - version: v3.16.1
+    upstream_version: 3.16.1
+    artifacts:
+    - url: https://github.com/catchorg/Catch2.git
+    - url: https://github.com/catchorg/Catch2/archive/refs/tags/v3.16.1.zip
   - version: v3.2.0
     upstream_version: 3.2.0
     artifacts:
@@ -13129,7 +13142,7 @@ packages:
 - id: xmake:coost
   registry: xmake
   name: coost
-  summary: A tiny boost library in C++11.
+  summary: A tiny boost library in C++.
   licenses:
   - MIT
   homepage: https://github.com/idealvin/coost
@@ -13173,6 +13186,11 @@ packages:
     artifacts:
     - url: https://github.com/idealvin/coost.git
     - url: https://github.com/idealvin/coost/archive/refs/tags/v3.0.2.tar.gz
+  - version: v4.0.1
+    upstream_version: 4.0.1
+    artifacts:
+    - url: https://github.com/idealvin/coost.git
+    - url: https://github.com/idealvin/coost/archive/refs/tags/v4.0.1.tar.gz
   recipe_path: packages/c/coost/xmake.lua
 - id: xmake:corrade
   registry: xmake
@@ -15275,6 +15293,10 @@ packages:
     artifacts:
     - url: https://github.com/keithpotz/CrashCatch.git
     - url: https://github.com/keithpotz/CrashCatch/archive/refs/tags/v1.5.0.tar.gz
+  - version: 1.6.0
+    artifacts:
+    - url: https://github.com/keithpotz/CrashCatch.git
+    - url: https://github.com/keithpotz/CrashCatch/archive/refs/tags/v1.6.0.tar.gz
   recipe_path: packages/c/crashcatch/xmake.lua
 - id: xmake:crashpad
   registry: xmake
@@ -16239,7 +16261,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x561d44a9aab0'
+    default: 'table: 0x5640cfd29ec0'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -22758,6 +22780,10 @@ packages:
     artifacts:
     - url: https://github.com/knik0/faad2.git
     - url: https://github.com/knik0/faad2/archive/refs/tags/2.11.3.tar.gz
+  - version: 2.11.4
+    artifacts:
+    - url: https://github.com/knik0/faad2.git
+    - url: https://github.com/knik0/faad2/archive/refs/tags/2.11.4.tar.gz
   recipe_path: packages/f/faad2/xmake.lua
 - id: xmake:fadec
   registry: xmake
@@ -24144,7 +24170,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x561d30797670'
+    default: 'table: 0x5640d3e0b190'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -24154,7 +24180,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x561d30643920'
+    default: 'table: 0x5640d3e0c7f0'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -30057,7 +30083,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x561d44c61890'
+    default: 'table: 0x5640dbe253e0'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -32395,6 +32421,35 @@ packages:
     - url: https://github.com/redorav/hlslpp.git
     - url: https://github.com/redorav/hlslpp/archive/refs/tags/3.9.tar.gz
   recipe_path: packages/h/hlslpp/xmake.lua
+- id: xmake:hnswlib
+  registry: xmake
+  name: hnswlib
+  summary: Header-only C++/python library for fast approximate nearest neighbors
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/nmslib/hnswlib
+  repository_url: https://github.com/nmslib/hnswlib
+  package_type: library
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: v0.9.0
+    upstream_version: 0.9.0
+    artifacts:
+    - url: https://github.com/nmslib/hnswlib.git
+    - url: https://github.com/nmslib/hnswlib/archive/refs/tags/v0.9.0.tar.gz
+  recipe_path: packages/h/hnswlib/xmake.lua
 - id: xmake:hookmanager
   registry: xmake
   name: hookmanager
@@ -32506,7 +32561,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x561d3bcffeb0'
+    default: 'table: 0x5640d02f6d40'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -33043,8 +33098,8 @@ packages:
   summary: C++20 media stack for real-time video, signalling, TURN, and media servers
   licenses:
   - LGPL-2.1-or-later
-  homepage: https://0state.com/icey/
-  repository_url: https://github.com/nilstate/icey
+  homepage: https://auscaster.com/icey/
+  repository_url: https://github.com/auscaster/icey
   platforms:
   - android
   - bsd
@@ -33069,7 +33124,7 @@ packages:
   versions:
   - version: 2.5.1
     artifacts:
-    - url: https://github.com/nilstate/icey/archive/refs/tags/2.5.1.tar.gz
+    - url: https://github.com/auscaster/icey/archive/refs/tags/2.5.1.tar.gz
       checksums:
       - sha256:2df5f802db160212de78a1bdfba01c9275b5d5d0ca8f58b00298779d50a5e02a
   recipe_path: packages/i/icey/xmake.lua
@@ -34657,6 +34712,11 @@ packages:
     artifacts:
     - url: https://github.com/brenocq/implot3d.git
     - url: https://github.com/brenocq/implot3d/archive/refs/tags/v0.4.tar.gz
+  - version: v0.5
+    upstream_version: '0.5'
+    artifacts:
+    - url: https://github.com/brenocq/implot3d.git
+    - url: https://github.com/brenocq/implot3d/archive/refs/tags/v0.5.tar.gz
   recipe_path: packages/i/implot3d/xmake.lua
 - id: xmake:incbin
   registry: xmake
@@ -39439,6 +39499,11 @@ packages:
     artifacts:
     - url: https://github.com/pjk/libcbor.git
     - url: https://github.com/pjk/libcbor/archive/refs/tags/v0.13.0.tar.gz
+  - version: v0.14.0
+    upstream_version: 0.14.0
+    artifacts:
+    - url: https://github.com/pjk/libcbor.git
+    - url: https://github.com/pjk/libcbor/archive/refs/tags/v0.14.0.tar.gz
   recipe_path: packages/l/libcbor/xmake.lua
 - id: xmake:libccd
   registry: xmake
@@ -45286,6 +45351,10 @@ packages:
     artifacts:
     - url: https://github.com/LudovicRousseau/PCSC.git
     - url: https://github.com/LudovicRousseau/PCSC/archive/refs/tags/2.5.2.tar.gz
+  - version: 2.5.3
+    artifacts:
+    - url: https://github.com/LudovicRousseau/PCSC.git
+    - url: https://github.com/LudovicRousseau/PCSC/archive/refs/tags/2.5.3.tar.gz
   recipe_path: packages/l/libpcsclite/xmake.lua
 - id: xmake:libpeconv
   registry: xmake
@@ -48022,6 +48091,10 @@ packages:
     artifacts:
     - url: https://github.com/openSUSE/libsolv.git
     - url: https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.39.tar.gz
+  - version: 0.7.41
+    artifacts:
+    - url: https://github.com/openSUSE/libsolv.git
+    - url: https://github.com/openSUSE/libsolv/archive/refs/tags/0.7.41.tar.gz
   recipe_path: packages/l/libsolv/xmake.lua
 - id: xmake:libsoundio
   registry: xmake
@@ -52274,7 +52347,6 @@ packages:
   dependencies:
   - cmake
   - frozen
-  - mbedtls <3.6.0
   - nlohmann_json
   - spdlog
   - tcb-span
@@ -52370,10 +52442,22 @@ packages:
     artifacts:
     - url: https://github.com/lief-project/LIEF.git
     - url: https://github.com/lief-project/LIEF/archive/refs/tags/0.17.3.tar.gz
+  - version: 0.17.4
+    artifacts:
+    - url: https://github.com/lief-project/LIEF.git
+    - url: https://github.com/lief-project/LIEF/archive/refs/tags/0.17.4.tar.gz
+  - version: 0.17.5
+    artifacts:
+    - url: https://github.com/lief-project/LIEF.git
+    - url: https://github.com/lief-project/LIEF/archive/refs/tags/0.17.5.tar.gz
   - version: 0.17.6
     artifacts:
     - url: https://github.com/lief-project/LIEF.git
     - url: https://github.com/lief-project/LIEF/archive/refs/tags/0.17.6.tar.gz
+  - version: 1.0.0
+    artifacts:
+    - url: https://github.com/lief-project/LIEF.git
+    - url: https://github.com/lief-project/LIEF/archive/refs/tags/1.0.0.tar.gz
   recipe_path: packages/l/lief/xmake.lua
 - id: xmake:lightgbm
   registry: xmake
@@ -53281,39 +53365,30 @@ packages:
     description: Build shared library.
     default: 'false'
   versions:
-  - version: 11.0.0
+  - version: 18.1.8
     artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-11.0.0/llvm-project-11.0.0.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/11.0.0/clang+llvm-11.0.0-win64.zip
-  - version: 14.0.0
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-Linux-X64.tar.xz
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/clang+llvm-18.1.8-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+  - version: 19.1.7
     artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/llvm-project-14.0.0.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/14.0.0/clang+llvm-14.0.0-win64.zip
-  - version: 15.0.7
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/LLVM-19.1.7-Linux-X64.tar.xz
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.7/clang+llvm-19.1.7-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+  - version: 20.1.8
     artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.7/llvm-project-15.0.7.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/15.0.7/clang+llvm-15.0.7-win64.zip
-  - version: 16.0.5
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/LLVM-20.1.8-Linux-X64.tar.xz
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/clang+llvm-20.1.8-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+  - version: 21.1.8
     artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.5/llvm-project-16.0.5.src.tar.xz
-      checksums:
-      - sha256:37f540124b9cfd4680666e649f557077f9937c9178489cea285a672e714b2863
-  - version: 16.0.6
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-21.1.8-Linux-X64.tar.xz
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/clang+llvm-21.1.8-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+  - version: 22.1.8
     artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.6/llvm-project-16.0.6.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/16.0.6/clang+llvm-16.0.6-win64.zip
-  - version: 17.0.6
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/LLVM-22.1.8-Linux-X64.tar.xz
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.8/clang+llvm-22.1.8-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+  - version: 23.1.4
     artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-17.0.6/llvm-project-17.0.6.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/17.0.6/clang+llvm-17.0.6-win64.zip
-  - version: 18.1.1
-    artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.1/llvm-project-18.1.1.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/18.1.1/clang+llvm-18.1.1-win64.zip
-  - version: 21.1.0
-    artifacts:
-    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.0/llvm-project-21.1.0.src.tar.xz
-    - url: https://github.com/xmake-mirror/llvm-windows/releases/download/21.1.0/clang+llvm-21.1.0-win64.zip
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/LLVM-23.1.4-Linux-X64.tar.xz
+    - url: https://github.com/llvm/llvm-project/releases/download/llvmorg-23.1.4/clang+llvm-23.1.4-x86_64-linux-gnu-ubuntu-18.04.tar.xz
   recipe_path: packages/l/llvm/xmake.lua
 - id: xmake:llvm-arm
   registry: xmake
@@ -54684,6 +54759,10 @@ packages:
     artifacts:
     - url: https://github.com/avaneev/lzav.git
     - url: https://github.com/avaneev/lzav/archive/refs/tags/5.17.tar.gz
+  - version: '5.20'
+    artifacts:
+    - url: https://github.com/avaneev/lzav.git
+    - url: https://github.com/avaneev/lzav/archive/refs/tags/5.20.tar.gz
   - version: '5.3'
     artifacts:
     - url: https://github.com/avaneev/lzav.git
@@ -58223,10 +58302,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x561d480f2910'
+    default: 'table: 0x5640f3273110'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x561d480f3330'
+    default: 'table: 0x5640f3273b30'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -62183,6 +62262,37 @@ packages:
     - url: https://github.com/tidwall/neco.git
     - url: https://github.com/tidwall/neco/archive/refs/tags/v0.3.2.tar.gz
   recipe_path: packages/n/neco/xmake.lua
+- id: xmake:nepdate
+  registry: xmake
+  name: nepdate
+  summary: Bikram Sambat (Nepali calendar) dates for C++20, with an optional patro library for tithi, public holidays and events.
+  licenses:
+  - MIT
+  homepage: https://github.com/sanamhub/nepdate-cpp
+  repository_url: https://github.com/sanamhub/nepdate-cpp
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  features:
+  - name: patro
+    description: Build the compiled nepdate::patro library (tithi, public holidays, events).
+    default: 'true'
+  versions:
+  - version: 0.1.0-beta.1
+    artifacts:
+    - url: https://github.com/sanamhub/nepdate-cpp.git
+    - url: https://github.com/sanamhub/nepdate-cpp/archive/refs/tags/v0.1.0-beta.1.tar.gz
+  recipe_path: packages/n/nepdate/xmake.lua
 - id: xmake:netcdf-c
   registry: xmake
   name: netcdf-c
@@ -67148,6 +67258,10 @@ packages:
     artifacts:
     - url: https://github.com/aous72/OpenJPH.git
     - url: https://github.com/aous72/OpenJPH/archive/refs/tags/0.31.0.tar.gz
+  - version: 0.32.0
+    artifacts:
+    - url: https://github.com/aous72/OpenJPH.git
+    - url: https://github.com/aous72/OpenJPH/archive/refs/tags/0.32.0.tar.gz
   recipe_path: packages/o/openjph/xmake.lua
 - id: xmake:openldap
   registry: xmake
@@ -69190,6 +69304,69 @@ packages:
     - url: https://github.com/p11-glue/p11-kit.git
     - url: https://github.com/p11-glue/p11-kit/releases/download/0.26.5/p11-kit-0.26.5.tar.xz
   recipe_path: packages/p/p11-kit/xmake.lua
+- id: xmake:pace
+  registry: xmake
+  name: pace
+  summary: 'Parallel Async Coroutine Engine: C++20 coroutine networking from sockets to HTTP/3.'
+  licenses:
+  - MIT
+  homepage: https://github.com/TabNahida/PACE
+  repository_url: https://github.com/tabnahida/pace
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  features:
+  - name: dns
+    description: Enable asynchronous DNS with c-ares.
+    default: 'false'
+  - name: http1
+    description: Enable HTTP/1.0 and HTTP/1.1.
+    default: 'true'
+  - name: http2
+    description: Enable HTTP/2 with nghttp2.
+    default: 'false'
+  - name: http3
+    description: Enable HTTP/3 and QUIC (POSIX only).
+    default: 'false'
+  - name: profiling
+    description: Enable intrusive per-thread stage timings.
+    default: 'false'
+  - name: quic
+    description: Enable QUIC (POSIX only).
+    default: 'false'
+  - name: shared
+    description: Build shared libraries.
+    default: 'false'
+  - name: tls
+    description: Enable TLS/HTTPS with OpenSSL.
+    default: 'false'
+  - name: websocket
+    description: Enable WebSocket.
+    default: 'true'
+  versions:
+  - version: 0.3.0
+    artifacts:
+    - url: https://github.com/TabNahida/PACE.git
+    - url: https://github.com/TabNahida/PACE/archive/refs/tags/v0.3.0.tar.gz
+  - version: 0.3.1
+    artifacts:
+    - url: https://github.com/TabNahida/PACE.git
+    - url: https://github.com/TabNahida/PACE/archive/refs/tags/v0.3.1.tar.gz
+  - version: 0.4.0
+    artifacts:
+    - url: https://github.com/TabNahida/PACE.git
+    - url: https://github.com/TabNahida/PACE/archive/refs/tags/v0.4.0.tar.gz
+  recipe_path: packages/p/pace/xmake.lua
 - id: xmake:pagmo
   registry: xmake
   name: pagmo
@@ -76276,6 +76453,11 @@ packages:
     - url: https://github.com/raysan5/raylib.git
     - url: https://github.com/raysan5/raylib/archive/6.0.tar.gz
     - url: https://github.com/raysan5/raylib/releases/download/6.0/raylib-6.0_macos.tar.gz
+  - version: '6.2'
+    artifacts:
+    - url: https://github.com/raysan5/raylib.git
+    - url: https://github.com/raysan5/raylib/archive/6.2.tar.gz
+    - url: https://github.com/raysan5/raylib/releases/download/6.2/raylib-6.2_macos.tar.gz
   recipe_path: packages/r/raylib/xmake.lua
 - id: xmake:raylib-cpp
   registry: xmake
@@ -76439,6 +76621,11 @@ packages:
     artifacts:
     - url: https://github.com/Genivia/RE-flex.git
     - url: https://github.com/Genivia/RE-flex/archive/refs/tags/v6.2.0.tar.gz
+  - version: v6.5.0
+    upstream_version: 6.5.0
+    artifacts:
+    - url: https://github.com/Genivia/RE-flex.git
+    - url: https://github.com/Genivia/RE-flex/archive/refs/tags/v6.5.0.tar.gz
   recipe_path: packages/r/re-flex/xmake.lua
 - id: xmake:re-spirv
   registry: xmake
@@ -77309,14 +77496,8 @@ packages:
   - wasm
   - windows
   dependencies:
-  - asio
   - cmake
   - expected-lite
-  - fmt
-  - http_parser
-  - optional-lite
-  - string-view-lite
-  - variant-lite
   versions:
   - version: 0.6.17
     artifacts:
@@ -77330,6 +77511,14 @@ packages:
     artifacts:
     - url: https://github.com/Stiffstream/restinio.git
     - url: https://github.com/Stiffstream/restinio/archive/refs/tags/v.0.6.19.tar.gz
+  - version: 0.7.0
+    artifacts:
+    - url: https://github.com/Stiffstream/restinio.git
+    - url: https://github.com/Stiffstream/restinio/archive/refs/tags/v.0.7.0.tar.gz
+  - version: 0.7.10
+    artifacts:
+    - url: https://github.com/Stiffstream/restinio.git
+    - url: https://github.com/Stiffstream/restinio/archive/refs/tags/v0.7.10.tar.gz
   recipe_path: packages/r/restinio/xmake.lua
 - id: xmake:rewolf-wow64ext
   registry: xmake
@@ -77935,6 +78124,11 @@ packages:
     artifacts:
     - url: https://github.com/facebook/rocksdb.git
     - url: https://github.com/facebook/rocksdb/archive/refs/tags/v11.1.2.tar.gz
+  - version: v11.12
+    upstream_version: '11.12'
+    artifacts:
+    - url: https://github.com/facebook/rocksdb.git
+    - url: https://github.com/facebook/rocksdb/archive/refs/tags/v11.12.tar.gz
   - version: v9.0.0
     upstream_version: 9.0.0
     artifacts:
@@ -83263,6 +83457,11 @@ packages:
     - url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.19.0.tar.gz
       checksums:
       - sha256:7075f96cbabe45b4ecfc2e6b1745a625f856f695b0827a5506ce9ed85b906aa0
+  - version: 4.20.0
+    artifacts:
+    - url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.20.0.tar.gz
+      checksums:
+      - sha256:38705f51b61ac0636a5fd064f9a77fafabc7227b2aa2513f1b14c8bb1102affc
   - version: 4.5.3
     artifacts:
     - url: https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.5.3.tar.gz
@@ -85267,6 +85466,35 @@ packages:
     artifacts:
     - url: https://github.com/ArashPartow/strtk.git
   recipe_path: packages/s/strtk/xmake.lua
+- id: xmake:structural_interface
+  registry: xmake
+  name: structural_interface
+  summary: Header-only C++26 library for structural interfaces and type erasure
+  licenses:
+  - MIT
+  homepage: https://github.com/Maltose0118/structural_interface
+  repository_url: https://github.com/maltose0118/structural_interface
+  package_type: library
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: 0.1.0
+    artifacts:
+    - url: https://github.com/Maltose0118/structural_interface/archive/refs/tags/v0.1.0.tar.gz
+      checksums:
+      - sha256:a71b07193d9fdfc1bf74b5898a057331ead982ee8896567ea51761af4ba184e1
+  recipe_path: packages/s/structural_interface/xmake.lua
 - id: xmake:stv
   registry: xmake
   name: stv
@@ -86994,6 +87222,10 @@ packages:
     artifacts:
     - url: https://github.com/tesseract-ocr/tesseract.git
     - url: https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.2.tar.gz
+  - version: 5.5.4
+    artifacts:
+    - url: https://github.com/tesseract-ocr/tesseract.git
+    - url: https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.4.tar.gz
   recipe_path: packages/t/tesseract/xmake.lua
 - id: xmake:tetgen
   registry: xmake
@@ -87254,7 +87486,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x561d317f5a40'
+    default: 'table: 0x5640cff083a0'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -90278,7 +90510,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x561d4032f1f0'
+    default: 'table: 0x5640d67f3980'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -93944,7 +94176,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x561d55acfc80'
+    default: 'table: 0x5640dbbbf8e0'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -98082,6 +98314,10 @@ packages:
     artifacts:
     - url: https://github.com/jbeder/yaml-cpp.git
     - url: https://github.com/jbeder/yaml-cpp/archive/refs/tags/0.8.0.tar.gz
+  - version: 0.9.0
+    artifacts:
+    - url: https://github.com/jbeder/yaml-cpp.git
+    - url: https://github.com/jbeder/yaml-cpp/archive/refs/tags/yaml-cpp-0.9.0.tar.gz
   recipe_path: packages/y/yaml-cpp/xmake.lua
 - id: xmake:yaml_cpp_struct
   registry: xmake
@@ -98150,6 +98386,10 @@ packages:
     artifacts:
     - url: https://github.com/VirusTotal/yara.git
     - url: https://github.com/VirusTotal/yara/archive/refs/tags/v4.5.8.tar.gz
+  - version: 4.6.0
+    artifacts:
+    - url: https://github.com/VirusTotal/yara.git
+    - url: https://github.com/VirusTotal/yara/archive/refs/tags/v4.6.0.tar.gz
   recipe_path: packages/y/yara/xmake.lua
 - id: xmake:yas
   registry: xmake
@@ -98668,7 +98908,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x561d36798f40'
+    default: 'table: 0x5640d5174c90'
   versions:
   - version: 0.23.93
     artifacts:

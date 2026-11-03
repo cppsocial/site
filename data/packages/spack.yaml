@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: ec33c8840c64bd5449f34d9f42fd96790ddb7569
+revision: c52e8e032892e9434adb34c05ab260c219008bf6
 packages:
 - id: spack:3dtk
   registry: spack
@@ -1672,7 +1672,6 @@ packages:
   - cuda
   - cxx
   - dd4hep
-  - detray
   - edm4hep
   - eigen
   - geant4
@@ -1680,6 +1679,7 @@ packages:
   - gperftools
   - hepmc3
   - intel-tbb
+  - mille
   - millepede
   - nlohmann-json
   - podio
@@ -1718,6 +1718,10 @@ packages:
   - name: 'cmake '
     constraint: 'cmake @3.14:'
     kind: build
+  - name: 'cmake '
+    constraint: 'cmake @3.19:'
+    kind: build
+    condition: '@47:'
   - name: 'covfie '
     constraint: 'covfie @0.10:'
     condition: +traccc
@@ -1745,24 +1749,15 @@ packages:
   - name: 'dd4hep '
     constraint: dd4hep +ddg4
     condition: +dd4hep +geant4 +examples
-  - name: 'detray '
-    constraint: 'detray @0.75.3:'
-    condition: +traccc
-  - name: 'detray '
-    constraint: 'detray @0.101.0:'
-    condition: '@42.1: +traccc'
-  - name: 'detray '
-    constraint: 'detray @0.103.0:'
-    condition: '@44.1: +traccc'
-  - name: 'detray '
-    constraint: 'detray @1.0.1:'
-    condition: '@46.4: +traccc'
   - name: 'edm4hep '
     constraint: 'edm4hep @0.7:'
     condition: +edm4hep
   - name: 'edm4hep '
     constraint: 'edm4hep @0.10.5:'
     condition: '@42: +edm4hep'
+  - name: 'edm4hep '
+    constraint: 'edm4hep @0.99:'
+    condition: '@48: +edm4hep'
   - name: 'edm4hep '
     constraint: edm4hep @:0
     condition: '@:44 +edm4hep'
@@ -1798,9 +1793,24 @@ packages:
   - name: 'intel-tbb '
     constraint: 'intel-tbb @2020.1:'
     condition: +examples
-  - name: millepede
-    constraint: 'millepede@01-00-00:'
+  - name: mille
+    constraint: 'mille@01-00-00:'
     condition: +mille
+  - name: mille
+    constraint: 'mille@01-00-05:'
+    condition: '@47.1: +mille'
+  - name: mille
+    constraint: 'mille@01-01-01:'
+    condition: '@48: +mille'
+  - name: mille
+    constraint: 'mille@01-01-02:'
+    condition: '@48.2: +mille'
+  - name: millepede
+    constraint: 'millepede@05-01-05:'
+    condition: '@47.1: +mille'
+  - name: millepede
+    constraint: 'millepede@05-01-06:'
+    condition: '@48.2: +mille'
   - name: 'nlohmann-json '
     constraint: 'nlohmann-json @3.10.5:'
     condition: +json
@@ -1821,16 +1831,16 @@ packages:
     condition: '@:44.1.0'
   - name: py-hatchling
     constraint: py-hatchling
-    condition: '@44.1.1:'
+    condition: '@44.1.1:47.4,main'
   - name: 'py-numpy '
     constraint: py-numpy @2.2
-    condition: '@44:'
+    condition: '@44:47.4,main'
   - name: py-onnxruntime
     constraint: 'py-onnxruntime@1.12:'
     condition: +onnx
   - name: 'py-particle '
     constraint: py-particle @0.24
-    condition: '@44:'
+    condition: '@44:47.4,main'
   - name: 'py-pybind11 '
     constraint: 'py-pybind11 @2.13.1:'
     condition: +python
@@ -1845,7 +1855,7 @@ packages:
     condition: '@44:44.1.0'
   - name: 'py-sympy '
     constraint: py-sympy @1.13
-    condition: '@44:'
+    condition: '@44:47.4,main'
   - name: py-torch
     constraint: py-torch
     condition: +gnn +torch
@@ -1860,7 +1870,14 @@ packages:
     condition: '+python @21:'
   - name: python
     constraint: 'python@3.12:'
-    condition: '@44:'
+    condition: '@44:47.4,main'
+  - name: python
+    constraint: python
+    condition: '@47.5: +dd4hep'
+  - name: python
+    constraint: python
+    kind: build
+    condition: '@47.5: +traccc'
   - name: torch-scatter
     constraint: torch-scatter
     condition: +gnn
@@ -1876,6 +1893,15 @@ packages:
   - name: vecmem
     constraint: 'vecmem@1.24.0:'
     condition: '@46.4: +traccc'
+  - name: vecmem
+    constraint: 'vecmem@1.25.0:'
+    condition: '@47: +traccc'
+  - name: vecmem
+    constraint: 'vecmem@1.27.0:'
+    condition: '@47.5: +traccc'
+  - name: vecmem
+    constraint: 'vecmem@1.28.0:'
+    condition: '@48.2: +traccc'
   options:
   - alignment
   - analysis
@@ -2080,6 +2106,47 @@ packages:
   - version: 46.7.0
   - version: 46.8.0
   - version: 46.8.1
+  - version: 47.0.0
+  - version: 47.1.0
+  - version: 47.2.0
+  - version: 47.3.0
+  - version: 47.4.0
+  - version: 47.5.0
+    artifacts:
+    - checksums:
+      - sha256:5234b28511147e96481fb355886c207f1b7e43e67f0092a589e6e1ef6067f1ce
+  - version: 47.6.0
+    artifacts:
+    - checksums:
+      - sha256:7f0f5658f4b918d6048a0b13ec01cd6fac9ef6d808cd0f7addbc70ee060d9ae9
+  - version: 47.6.1
+    artifacts:
+    - checksums:
+      - sha256:817c7a10b26ab239b3cec9093057826274880f61bd0b8d5afd6944210d9257e5
+  - version: 47.7.0
+    artifacts:
+    - checksums:
+      - sha256:1b0484698715c38cf32055d0a2ff6ea50771d541b728dc58b2e9a086d4c858e9
+  - version: 48.0.0
+    artifacts:
+    - checksums:
+      - sha256:0117aee534a8b0b52851818ebcf69f8c7b5487982669a4ca33731e0e90e47100
+  - version: 48.0.1
+    artifacts:
+    - checksums:
+      - sha256:cb9b196345119cbdbb73e4f53fae6c3ce6480560f9fd47a7164a17b51629a694
+  - version: 48.1.0
+    artifacts:
+    - checksums:
+      - sha256:29f7434dcdae60c0d029e3135b56ee1f866ec3894ddfd05920f9f0bb2c5b0da5
+  - version: 48.2.0
+    artifacts:
+    - checksums:
+      - sha256:a0dc7b5ff588de55c1e80b6254b1f065c54e751a29001970a2d96d46b5d21e85
+  - version: 48.3.0
+    artifacts:
+    - checksums:
+      - sha256:df50eee0789079acaa64fa8b1d8333428d77e1d9f2ab653c0c45f6e457fffa4a
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/acts/package.py
 - id: spack:acts-algebra-plugins
@@ -3055,6 +3122,7 @@ packages:
   - libcatalyst
   - libpressio
   - mgard
+  - mgard-mdr
   - mpi
   - pic
   - png
@@ -3080,6 +3148,7 @@ packages:
     hdf5: 'false'
     kokkos: 'false'
     libpressio: 'false'
+    mgard-mdr: 'false'
     mpi: 'true'
     pic: 'true'
     png: 'true'
@@ -3143,6 +3212,10 @@ packages:
   - name: mgard
     description: Enable MGARD compression
     condition: '@2.8:'
+  - name: mgard-mdr
+    description: Enable MGARD Multi-precision data refactoring
+    default: 'false'
+    condition: '@2.12:'
   - name: mpi
     description: Enable MPI
     default: 'true'
@@ -11129,7 +11202,11 @@ packages:
   - name: chapel
     constraint: chapel@2.5:2.9 +hdf5 +zmq
     kind: build,link,run,test
-    condition: '@2026.07.15:'
+    condition: '@2026.07.15'
+  - name: chapel
+    constraint: chapel@2.5:2.10 +hdf5 +zmq
+    kind: build,link,run,test
+    condition: '@2026.10.14:'
   - name: cmake
     constraint: 'cmake@3.13.4:'
     kind: build
@@ -11159,7 +11236,11 @@ packages:
   - name: python
     constraint: python@3.10:3.14
     kind: build,link,run,test
-    condition: '@2026.07.15:'
+    condition: '@2026.07.15'
+  - name: python
+    constraint: python@3.10:3.14
+    kind: build,link,run,test
+    condition: '@2026.10.14:'
   options:
   - array_nd_max
   - distributed
@@ -11217,6 +11298,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:483574978fd3a91c5532076cce4698170726f6717c8896f230024fd7722fc6f9
+  - version: 2026.10.14
+    artifacts:
+    - checksums:
+      - sha256:b8208f86bdedd4a55c0e43303c9e862f8dd31e98e11455893a80ac40c9503e89
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/arkouda/package.py
 - id: spack:arm-forge
@@ -13238,6 +13323,7 @@ packages:
   - tjhei
   dependencies:
   - c
+  - cmake
   - cxx
   - dealii
   - dealii-parameter-gui
@@ -13247,14 +13333,27 @@ packages:
   - name: c
     constraint: c
     kind: build
+  - name: cmake
+    constraint: 'cmake@3.13.4:'
+    kind: build
+    condition: '@3.0:'
   - name: cxx
     constraint: cxx
     kind: build
   - name: dealii
     constraint: dealii+p4est+trilinos+mpi
   - name: dealii
+    constraint: 'dealii@9.6:'
+    condition: '@3.1:'
+  - name: dealii
+    constraint: 'dealii@9.5:'
+    condition: '@3.0:'
+  - name: dealii
+    constraint: 'dealii@9.4:'
+    condition: '@2.5:'
+  - name: dealii
     constraint: dealii+p4est+trilinos+mpi+sundials
-    condition: '@3.0'
+    condition: '@3.0:'
   - name: dealii-parameter-gui
     constraint: dealii-parameter-gui
     condition: +gui
@@ -13287,6 +13386,7 @@ packages:
   - name: gui
     description: Enable the deal.II parameter GUI
     default: 'false'
+    condition: '@:2.5'
   - name: opendap
     description: Enable OPeNDAP support for remote file access
     default: 'false'
@@ -13323,6 +13423,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:15c62575603f88f2061dafe06e37a47a2347d5242ea8328854304a0bd54b8888
+  - version: 3.1.0
+    artifacts:
+    - checksums:
+      - sha256:3f7c3e2f23f4de3d48b624aaec5223fa263893f45a461c5943e800dce4095f8d
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/aspect/package.py
 - id: spack:aspell
@@ -13741,10 +13845,11 @@ packages:
   description_format: html
   licenses:
   - LGPL-2.1-or-later
-  homepage: https://www.linuxfromscratch.org/blfs/view/cvs/x/at-spi2-core.html
+  homepage: https://gitlab.gnome.org/GNOME/at-spi2-core
   dependencies:
   - c
   - dbus
+  - dbus-glib
   - fixesproto
   - gettext
   - glib
@@ -13753,6 +13858,7 @@ packages:
   - libx11
   - libxi
   - libxml2
+  - libxres
   - libxtst
   - meson
   - pkgconfig
@@ -13767,15 +13873,18 @@ packages:
   - name: dbus
     constraint: 'dbus@1.12.20:'
     condition: '@2.51.91:'
+  - name: dbus-glib
+    constraint: 'dbus-glib@0.104:'
+    condition: +dbus_glib
   - name: fixesproto
     constraint: fixesproto
   - name: gettext
     constraint: gettext
   - name: glib
-    constraint: 'glib@2.56.1:'
+    constraint: 'glib@2.67.4:'
+    condition: '@2.45:'
   - name: glib
-    constraint: 'glib@2.68.1:'
-    condition: '@2.51.91:'
+    constraint: 'glib@2.56.1:'
   - name: gobject-introspection
     constraint: gobject-introspection
   - name: gobject-introspection
@@ -13788,11 +13897,18 @@ packages:
   - name: libxi
     constraint: libxi
   - name: libxml2
-    constraint: libxml2
+    constraint: 'libxml2@2.9.1:'
     kind: build
-    condition: '@2.47:'
+    condition: '@2.45:'
+  - name: libxres
+    constraint: libxres
+    condition: '@2.59.90:'
   - name: libxtst
     constraint: libxtst
+  - name: meson
+    constraint: 'meson@0.64.0:'
+    kind: build
+    condition: '@2.47:'
   - name: meson
     constraint: 'meson@0.46.0:'
     kind: build
@@ -13804,6 +13920,15 @@ packages:
     kind: build
   - name: recordproto
     constraint: recordproto
+  options:
+  - dbus_glib
+  default_options:
+    dbus_glib: 'false'
+  features:
+  - name: dbus_glib
+    description: Use dbus-glib for main loop integration instead of the bundled copy
+    default: 'false'
+    condition: '@2.59.1:'
   versions:
   - version: 2.28.0
     artifacts:
@@ -13845,6 +13970,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:d7eee7e75beddcc272cedc2b60535600f3aae6e481589ebc667afc437c0a6079
+  - version: 2.62.1
+    artifacts:
+    - checksums:
+      - sha256:cca6b6a86e4389d89b370288761ce2385ddeceb10c4412da78689bc30c88af2d
   recipe_path: repos/spack_repo/builtin/packages/at_spi2_core/package.py
 - id: spack:atf
   registry: spack
@@ -19184,6 +19313,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e7334dd254434c6668e33a54c8f839194c7c61840d52f4b6258eee28e9f3b20e
+  - version: 1.10.0
+    artifacts:
+    - checksums:
+      - sha256:acc5c7c0fbed855c4aaa2d7c3c36fb82b0c15c28f4e151e3f679c2fc0aa404af
   - version: 1.2.0
     artifacts:
     - checksums:
@@ -27796,7 +27929,7 @@ packages:
   repository_url: https://github.com/llnl/camp
   maintainers:
   - adrienbernede
-  - kab163
+  - smithsg84
   - trws
   dependencies:
   - blt
@@ -27898,6 +28031,7 @@ packages:
   - version: 2025.12.0
   - version: 2026.07.0
   - version: 2026.07.1
+  - version: 2026.07.2
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/camp/package.py
 - id: spack:camx
@@ -28601,8 +28735,11 @@ packages:
   - name: chai
     constraint: chai+raja
   - name: chai
-    constraint: 'chai@2026.07:'
-    condition: '@2026.07.0:'
+    constraint: 'chai@2026.07.1:'
+    condition: '@2026.07.1:'
+  - name: chai
+    constraint: chai@2026.07
+    condition: '@2026.07.0'
   - name: chai
     constraint: chai@2025.12
     condition: '@0.15.3'
@@ -28659,8 +28796,11 @@ packages:
   - name: raja
     constraint: raja
   - name: raja
-    constraint: 'raja@2026.07:'
-    condition: '@2026.07.0:'
+    constraint: 'raja@2026.07.1:'
+    condition: '@2026.07.1:'
+  - name: raja
+    constraint: raja@2026.07
+    condition: '@2026.07.0'
   - name: raja
     constraint: raja@2025.12
     condition: '@0.15.3'
@@ -28691,8 +28831,11 @@ packages:
     constraint: umpire+mpi
     condition: +mpi
   - name: umpire
-    constraint: 'umpire@2026.07.1:'
-    condition: '@2026.07.0:'
+    constraint: 'umpire@2026.07.2:'
+    condition: '@2026.07.1:'
+  - name: umpire
+    constraint: umpire@2026.07.1
+    condition: '@2026.07.0'
   - name: umpire
     constraint: umpire@2025.12
     condition: '@0.15.3'
@@ -28784,6 +28927,7 @@ packages:
   - version: 0.2.0
   - version: 0.3.0
   - version: 2026.07.0
+  - version: 2026.07.1
   - version: develop
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/care/package.py
@@ -33804,8 +33948,11 @@ packages:
   - name: umpire
     constraint: umpire
   - name: umpire
-    constraint: 'umpire@2026.07.1:'
-    condition: '@2026.07:'
+    constraint: 'umpire@2026.07.2:'
+    condition: '@2026.07.1:'
+  - name: umpire
+    constraint: umpire@2026.07.1
+    condition: '@2026.07.0'
   - name: umpire
     constraint: umpire@2025.12
     condition: '@2025.12'
@@ -33925,6 +34072,7 @@ packages:
   - version: 2025.09.1
   - version: 2025.12.0
   - version: 2026.07.0
+  - version: 2026.07.1
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/chai/package.py
 - id: spack:chameleon
@@ -34680,7 +34828,7 @@ packages:
   - Apache-2.0 WITH LLVM-exception
   - LicenseRef-Charmpp-Non-Commercial
   homepage: https://charmplusplus.org
-  repository_url: https://github.com/uiuc-ppl/charm
+  repository_url: https://github.com/charmplusplus/charm
   maintainers:
   - matthiasdiener
   dependencies:
@@ -50586,10 +50734,31 @@ packages:
 - id: spack:deno
   registry: spack
   name: deno
-  summary: A modern runtime for JavaScript and TypeScript.
+  summary: 'Python redistribution of Deno binaries. Deno: A modern runtime for JavaScript and TypeScript.'
+  description: '<p>Python redistribution of Deno binaries.</p><p>Deno: A modern runtime for JavaScript and TypeScript.</p>'
+  description_format: html
   licenses:
   - MIT
-  homepage: https://docs.deno.com/
+  homepage: https://deno.com/
+  dependencies:
+  - py-hatchling
+  - python
+  dependency_details:
+  - name: py-hatchling
+    constraint: py-hatchling
+    kind: build
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+  versions:
+  - version: 2.8.1
+    artifacts:
+    - checksums:
+      - sha256:fb65e568bef30b1a7e63f033713f1a6792a8456e339febdb7d638c6bb2c4c008
+  - version: 2.9.7
+    artifacts:
+    - checksums:
+      - sha256:79f4b7acdd9a37e98a4d1e0ca08d71c4e55f6c0cb13bd1e0946fa9b5497be2d9
   recipe_path: repos/spack_repo/builtin/packages/deno/package.py
 - id: spack:denovogear
   registry: spack
@@ -51051,6 +51220,9 @@ packages:
   - name: mctc-lib
     constraint: 'mctc-lib@0.6:'
     condition: '@4.3:'
+  - name: mctc-lib
+    constraint: 'mctc-lib@0.7:'
+    condition: '@4.4:'
   - name: meson
     constraint: 'meson@0.57.1:'
     kind: build
@@ -51058,6 +51230,9 @@ packages:
   - name: multicharge
     constraint: multicharge@0.3
     condition: '@:3.7'
+  - name: multicharge
+    constraint: 'multicharge@0.6:'
+    condition: '@4.3.1:'
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -51154,6 +51329,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:e94c5d021c0a4b4aa9b5587e36fda2f398271dc2dc1abfbe097fdb04022bef35
+  - version: 4.3.1
+    artifacts:
+    - checksums:
+      - sha256:32c0b498a7b07b1552e727333d9c83ab627d1bdf4ff46b7b8b31af9159fb2928
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/dftd4/package.py
 - id: spack:dftfe
@@ -59023,6 +59202,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:09e2ff033d39baa8b388a2d7fbc5390bfde99ae3b7c67c7daaf7433fbcf0f01e
+  - version: '0.195'
+    artifacts:
+    - checksums:
+      - sha256:37629fdf7f1f3dc2818e138fca2b8094177d6c2d0f701d3bb650a561218dc026
+  - version: '0.196'
+    artifacts:
+    - checksums:
+      - sha256:fd5cc6b77ad6773cac93cb3f415f9318ac3b3455eecf801f6b4a742c4f6c7209
+  - version: '0.197'
+    artifacts:
+    - checksums:
+      - sha256:1fdf525f22dcf796d99a99ba3ea00a1f7b1ae5421bc62e8443a708920b99b904
   recipe_path: repos/spack_repo/builtin/packages/elfutils/package.py
 - id: spack:elk
   registry: spack
@@ -60627,6 +60818,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:174fd65b7aabf6b964582a3785dd638a1ffbf17c195ebd99288e60e58e620236
+  - version: 0.0.303
+    artifacts:
+    - checksums:
+      - sha256:0ca3114d008e524cd3b13152bbc172794b20af643d1628161655373eba4554de
   - version: 0.0.32
     artifacts:
     - checksums:
@@ -61210,6 +61405,7 @@ packages:
   homepage: https://erf.readthedocs.io/en/latest/index.html
   repository_url: https://github.com/erf-model/erf
   maintainers:
+  - jmsexton03
   - larenspear
   options:
   - fcompare
@@ -69245,6 +69441,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c9cc77c7c560c543135edc555af609d5619dbef011997e988ce40a3d75d86088
+  - version: '5.48'
+    artifacts:
+    - checksums:
+      - sha256:ed14656883b23a364b4057c05595d93252da9bc473d30106519519d0da141283
   recipe_path: repos/spack_repo/builtin/packages/file/package.py
 - id: spack:filebench
   registry: spack
@@ -69500,6 +69700,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1387e0b67ff247d2abde998f90dfbf70c1491391a59ddfecb8ae698789f0a4f5
+  - version: 4.11.0
+    artifacts:
+    - checksums:
+      - sha256:bfd19cb06cc71f3352d567e90284d8cdac02ac89774bbeadf0b533b0c11432fd
   - version: 4.2.15
     artifacts:
     - checksums:
@@ -69815,18 +70019,6 @@ packages:
     artifacts:
     - checksums:
       - sha256:ea9dd3614bb0346829ce7319437c6a93e3e1dfde3b7f6a469b543b0d2c68f2cf
-  - version: 3.1.0
-    artifacts:
-    - checksums:
-      - sha256:e5db1e6839685c56f172e1000c138e290add4aa521f187df4cd79d4eab294368
-  - version: 3.1.2
-    artifacts:
-    - checksums:
-      - sha256:d5b927203b5ca95da16f514969e2a91a537b2f75bec9b21a584c4cd1c7aa74ed
-  - version: 3.3.1
-    artifacts:
-    - checksums:
-      - sha256:b5b4ee1a5269762cbbe993a4bd6507e675e4100ce9bbe84214a5eeb2b19fae89
   - version: 3.4.1
     artifacts:
     - checksums:
@@ -69895,6 +70087,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:6c43be5a9274963c06ba4cd55a109dfcc4d5d3a8054ed0e0a3666388581ec252
+  - version: 4.9.3
+    artifacts:
+    - checksums:
+      - sha256:20998a25f73217ddcc19f499055fd587e9912d1ad6e7109120fbcf2871f0b98c
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/fish/package.py
 - id: spack:fixesproto
@@ -84253,6 +84449,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:19482e850fc6a38145e0c516ded2e07826d010ae098cf2236f98125581b1c803
+  - version: 6.32.0
+    artifacts:
+    - checksums:
+      - sha256:05fcdd939d6f6200f5fd6565843f501395c44783c700c19a5f9a1ff023cb5b88
   - version: 6.4.0
     artifacts:
     - checksums:
@@ -91618,6 +91818,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3172293d04b209dc1144698e7ba13f0477f6ba8c5ffd0be66c20fdbc9785dfbb
+  - version: 1.26.10
+    artifacts:
+    - checksums:
+      - sha256:fd63e883ba2f2bfca93c1646b31ebef63e2b1e4d2b317c9789d976a68d81f36f
   - version: 1.26.2
     artifacts:
     - checksums:
@@ -91662,6 +91866,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:03495da2ba64894d40f5c4992e49454fa78b50690604ff92b6afff5081b76e62
+  - version: 1.27.3
+    artifacts:
+    - checksums:
+      - sha256:6e7749035cf360f06b2575d162ea79df9fda8ef671889e5c375f8e50777f26bb
   recipe_path: repos/spack_repo/builtin/packages/go/package.py
 - id: spack:go-bootstrap
   registry: spack
@@ -94702,17 +94910,9 @@ packages:
   homepage: https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_home
   repository_url: https://github.com/silnrsi/graphite
   dependencies:
-  - c
-  - cxx
   - freetype
   - python
   dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
   - name: freetype
     constraint: freetype
   - name: python
@@ -94727,6 +94927,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:f99d1c13aa5fa296898a181dff9b82fb25f6cc0933dbaa7a475d8109bd54209d
+  - version: 1.3.15
+    artifacts:
+    - checksums:
+      - sha256:c6bc8b4252724665297f7cad0c55897285c673f9b8e6db3522ace833593fe0b1
   recipe_path: repos/spack_repo/builtin/packages/graphite2/package.py
 - id: spack:graphlib
   registry: spack
@@ -106878,6 +107082,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:48e933330d4d8470d2b3dfe7ec3918f2e98a75f7381891e23b7df1fb4f135eb1
+  - version: 2.2.3
+    artifacts:
+    - checksums:
+      - sha256:b53107422e5b44ebea4b20b1a77bb9e240d6b92d654fcd7e6a6ab5d1aae86c45
   recipe_path: repos/spack_repo/builtin/packages/hisat2/package.py
 - id: spack:hisea
   registry: spack
@@ -116153,6 +116361,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:191288b52e1e6b17198000b64d77d194bb65e791be46ebc606e9b091781e2070
+  - version: 2023.2.0
+    artifacts:
+    - checksums:
+      - sha256:80cb62e62defeee67ea1885a6f72d97ac81404f8fde9cded62fb51524808a30c
   - version: '4.4'
     artifacts:
     - checksums:
@@ -125121,6 +125333,7 @@ packages:
     description: Enable SYCL backend for Kynema-SGF
     default: 'false'
   versions:
+  - version: 2.2.0
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/kynema_driver/package.py
 - id: spack:kynema-fmb
@@ -125533,6 +125746,9 @@ packages:
     description: Enable Waves2AMR support for ocean wave input
     default: 'false'
   versions:
+  - version: 4.0.0
+  - version: 4.1.0
+  - version: 4.2.0
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/kynema_sgf/package.py
 - id: spack:kynema-ugf
@@ -125702,6 +125918,7 @@ packages:
     description: Build wind-utils
     default: 'false'
   versions:
+  - version: 2.4.0
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/kynema_ugf/package.py
 - id: spack:kyotocabinet
@@ -129458,6 +129675,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:2be0b3806a18c15b55083fecd9930c5e9188832a01ed2b91614315939e705fb2
+  - version: 0.66.0
+    artifacts:
+    - checksums:
+      - sha256:961d84f49d07951a279b7835e0f9864489a167a80a8c3c502a797fb6c61669c7
+  - version: 0.67.0
+    artifacts:
+    - checksums:
+      - sha256:d9d9fa328c396e31707896cc1e2a4f80ffc70227ed7662b961a86c8c91547381
+  - version: 0.68.0
+    artifacts:
+    - checksums:
+      - sha256:0fdb58f9e0f442530b274d001c7fcdf53a62ee65fa87b7ca26b96c56dd3c7d64
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/lfortran/package.py
 - id: spack:lftp
@@ -130243,6 +130472,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:191b5b24811499d5c2e5efa3248975fa6daa5e6a227700cc7b8e54d6d7c06eef
+  - version: 3.8.10
+    artifacts:
+    - checksums:
+      - sha256:a1bffbe5152cfe869751179e7b16648c87c461cb8c46eee75062efbe164cc57c
   - version: 3.8.5
     artifacts:
     - checksums:
@@ -132770,6 +133003,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:45ba9983b51c896406a3d654de81d313b953b76e6391e2797073d543c5f617d5
+  - version: 2.4.134
+    artifacts:
+    - checksums:
+      - sha256:ac5e74d157830eb8bee44c6a6bf3ad49774ef0dd2a72bdad74a8f20308b52a95
   - version: 2.4.33
     artifacts:
     - checksums:
@@ -133422,6 +133659,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb
+  - version: 2.1.13
+    artifacts:
+    - checksums:
+      - sha256:f7e9383b8c0baa81b687e5b5eecc01beefaf1b19b64151d95ed61647fe7a315c
   - version: 2.1.8
     artifacts:
     - checksums:
@@ -135311,13 +135552,13 @@ packages:
     constraint: c
     kind: build
   - name: cmake
+    constraint: 'cmake@3.5.1:'
+    kind: build
+    condition: '@0.99:'
+  - name: cmake
     constraint: 'cmake@2.8:'
     kind: build
     condition: '@:0.28'
-  - name: cmake
-    constraint: 'cmake@3.5:'
-    kind: build
-    condition: '@0.99:'
   - name: curl
     constraint: curl
     condition: +curl
@@ -135572,6 +135813,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:14cab3014b2b7ad75970ff4548e83615f74d719afe00aa479b4a889c1e13fc00
+  - version: 1.9.7
+    artifacts:
+    - checksums:
+      - sha256:1a4fbe7589e814777ae76b64734ad80f4ecad22cd33a22682a2aaea4ae5375e7
   recipe_path: repos/spack_repo/builtin/packages/libgit2/package.py
 - id: spack:libgit2-glib
   registry: spack
@@ -145992,8 +146237,6 @@ packages:
   maintainers:
   - adamjstewart
   dependencies:
-  - c
-  - cxx
   - jbigkit
   - jpeg
   - lerc
@@ -146002,12 +146245,6 @@ packages:
   - zlib-api
   - zstd
   dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
   - name: jbigkit
     constraint: jbigkit
     condition: +jbig
@@ -146142,9 +146379,14 @@ packages:
     - checksums:
       - sha256:67160e3457365ab96c5b3286a0903aa6e78bdc44c4bc737d2e486bcecb6ba976
   - version: 4.7.1
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:f698d94f3103da8ca7438d84e0344e453fe0ba3b7486e04c5bf7a9a3fabe9b69
+  - version: 4.7.2
+    artifacts:
+    - checksums:
+      - sha256:672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a
   recipe_path: repos/spack_repo/builtin/packages/libtiff/package.py
 - id: spack:libtirpc
   registry: spack
@@ -150457,7 +150699,10 @@ packages:
     constraint: libgcrypt
     condition: +crypto
   - name: libxml2
-    constraint: libxml2
+    constraint: 'libxml2@2.6.27:'
+  - name: libxml2
+    constraint: 'libxml2@2.15.1:'
+    condition: '@1.1.44:'
   - name: libxml2
     constraint: libxml2+python
     condition: +python
@@ -161329,6 +161574,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:0499733af21015c022e8af0b5c477d779d27b58843c2a4c47644a683df2f3e42
+  - version: 0.7.0
+    artifacts:
+    - checksums:
+      - sha256:b625a4e04a41eecdf437a123e66930d770674bc2e3f9a5af330c32b62013a457
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/mctc_lib/package.py
 - id: spack:mcutils
@@ -162040,41 +162289,6 @@ packages:
     - checksums:
       - sha256:09026eb07cc4e2d24f58b0a13f7a826ae8bb73da735a47cb1cbe6e4693118852
   recipe_path: repos/spack_repo/builtin/packages/megahit/package.py
-- id: spack:melissa
-  registry: spack
-  name: melissa
-  summary: 'Melissa is a file-avoiding, adaptive, fault-tolerant and elastic framework, to run large-scale sensitivity analysis on supercomputers. Note: This package is...'
-  description: '<p>Melissa is a file-avoiding, adaptive, fault-tolerant and elastic framework, to run large-scale sensitivity analysis on supercomputers.</p><p>Note: This package is now unified as py-melissa-online from version 3+.</p>'
-  description_format: html
-  homepage: https://gitlab.inria.fr/melissa/melissa
-  maintainers:
-  - abhishek1297
-  - raffino
-  dependencies:
-  - c
-  - cxx
-  - fortran
-  - pkgconfig
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
-    kind: build
-  - name: pkgconfig
-    constraint: pkgconfig
-    kind: build
-  versions:
-  - version: 2.4.1
-    lifecycle: deprecated
-    artifacts:
-    - checksums:
-      - sha256:92a8c7f823ef79c8a5eb05b67120e130c9b03bf7fecd635b4ae9501eb32b2fd7
-  recipe_path: repos/spack_repo/builtin/packages/melissa/package.py
 - id: spack:memaxes
   registry: spack
   name: memaxes
@@ -162451,6 +162665,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:70088348f0671bd339b93dc22bbd0c8325387193a799218c794990987a848d1a
+  - version: 2.5.0
+    artifacts:
+    - checksums:
+      - sha256:2a38b3acf9c47ae26c6e2d1b7c110af36740d7f6d48f3c078a8203719c14118d
+  - version: 2.6.0
+    artifacts:
+    - checksums:
+      - sha256:506da99e4f25c088cb3411bb0b5ea650952e6cdcdd421edb6c1d128b6e8ae9f6
   recipe_path: repos/spack_repo/builtin/packages/mepo/package.py
 - id: spack:meraculous
   registry: spack
@@ -164606,12 +164828,19 @@ packages:
     constraint: fortran
     kind: build
     condition: +strumpack
+  - name: fortran
+    constraint: fortran
+    kind: build
+    condition: +mumps
   - name: ginkgo
     constraint: ginkgo@1.4.0:1.8
     condition: '@:4.7+ginkgo'
   - name: ginkgo
     constraint: 'ginkgo@1.9.0:'
     condition: '@4.8:+ginkgo'
+  - name: ginkgo
+    constraint: 'ginkgo+mpi@1.11.0:'
+    condition: '@4.10:+ginkgo+mpi'
   - name: gmake
     constraint: gmake
     kind: build
@@ -164624,6 +164853,9 @@ packages:
   - name: gslib
     constraint: gslib~mpi~mpiio
     condition: +gslib~mpi
+  - name: gslib
+    constraint: gslib+shared
+    condition: +gslib+shared
   - name: gslib
     constraint: gslib@1.0.5:1.0.6
     condition: '@:4.2+gslib'
@@ -164682,7 +164914,7 @@ packages:
     constraint: mpi
     condition: +mpi
   - name: mumps
-    constraint: 'mumps@5.1.1:'
+    constraint: 'mumps+mpi@5.1.1:'
     condition: +mumps
   - name: netcdf-c
     constraint: 'netcdf-c@4.1.3:'
@@ -165294,16 +165526,22 @@ packages:
   - name: zstd
     constraint: zstd
   options:
+  - mdr
   - openmp
   - serial
   - timing
   - unstructured
   default_options:
+    mdr: 'true'
     openmp: 'true'
     serial: 'true'
     timing: 'false'
     unstructured: 'false'
   features:
+  - name: mdr
+    description: Enable multi-precision data refactoring
+    default: 'true'
+    condition: '@1.5:'
   - name: openmp
     description: Enable OpenMP support
     default: 'true'
@@ -174219,6 +174457,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8cbae54a47339de0f47457d7d0931fb5ac23a6cfc8b54872b925528cf5138523
+  - version: 0.4.0
+    artifacts:
+    - checksums:
+      - sha256:683d42d33b16f839ced63e2cc651bcf82621c75a43208afe798606ffa0d40a83
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/mstore/package.py
 - id: spack:msvc
@@ -174361,6 +174603,9 @@ packages:
   - name: lapack
     constraint: lapack
   - name: mctc-lib
+    constraint: 'mctc-lib@0.7:'
+    condition: '@0.6:'
+  - name: mctc-lib
     constraint: 'mctc-lib@0.4:'
     condition: '@0.4:'
   - name: mctc-lib
@@ -174402,6 +174647,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:fc6dee93fd6957a516137205f5a6754b218904bc38bf60f5a509f2a1b14735be
+  - version: 0.6.0
+    artifacts:
+    - checksums:
+      - sha256:4d883d42d5faf826b99e552ac9eab4c4fd8c3c5b12aced66c295b78006222ede
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/multicharge/package.py
 - id: spack:multichase
@@ -184118,6 +184367,9 @@ packages:
   - name: openssl
     constraint: 'openssl@1.1:'
     condition: +openssl
+  - name: openssl
+    constraint: openssl@:3
+    condition: '@:24.14,25.0:25.8 +openssl'
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -196116,18 +196368,26 @@ packages:
     artifacts:
     - checksums:
       - sha256:22db04f3c8f9a808c9795dcf7d2713ff40c12c410ea2d1f6435c6c9c8558958b
-  - version: 3.4.4
+  - version: 3.4.8
     artifacts:
     - checksums:
-      - sha256:7bdf55ac20f2779e99e5eca306f824fad2b37dee5a06cc35ed5a8b85a6060010
-  - version: 3.5.5
+      - sha256:9de9ce2f29e584044ae07ab93fc601637be01fdc91d109c5a655ec7419e6022b
+  - version: 3.5.9
     artifacts:
     - checksums:
-      - sha256:b28c91532a8b65a1f983b4c28b7488174e4a01008e29ce8e69bd789f28bc2a89
+      - sha256:603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a
   - version: 3.6.1
     artifacts:
     - checksums:
       - sha256:b1bfedcd5b289ff22aee87c9d600f515767ebf45f77168cb6d64f231f518a82e
+  - version: 3.6.5
+    artifacts:
+    - checksums:
+      - sha256:a2157c2830efdec3788939b00c9b0638306d3f0bbb76dc4832ee503bb397df98
+  - version: 4.0.3
+    artifacts:
+    - checksums:
+      - sha256:325b5c806167c13b40b1ffeadfe0248197c00eccc4cf123ec1e28d2d2fd216d9
   recipe_path: repos/spack_repo/builtin/packages/openssl/package.py
 - id: spack:opensta
   registry: spack
@@ -200432,26 +200692,24 @@ packages:
   licenses:
   - LGPL-2.1-or-later
   homepage: https://www.pango.org
+  repository_url: https://github.com/gnome/pango
   dependencies:
-  - c
   - cairo
-  - cxx
   - fontconfig
   - freetype
   - fribidi
   - glib
-  - gmake
   - gobject-introspection
   - harfbuzz
   - json-glib
   - libffi
   - libxft
-  - meson
-  - pkgconfig
   dependency_details:
-  - name: c
-    constraint: c
-    kind: build
+  - name: cairo
+    constraint: 'cairo@1.18:'
+    condition: '@1.56:'
+  - name: cairo
+    constraint: 'cairo@1.12.10:'
   - name: cairo
     constraint: cairo+ft+fc
   - name: cairo
@@ -200460,81 +200718,59 @@ packages:
   - name: cairo
     constraint: cairo+X
     condition: +X
-  - name: cairo
-    constraint: 'cairo@1.12.10:'
-  - name: cxx
-    constraint: cxx
-    kind: build
   - name: fontconfig
-    constraint: fontconfig
-  - name: fontconfig
-    constraint: 'fontconfig@2.11.91:'
+    constraint: 'fontconfig@2.17.0:'
+    condition: '@1.57:'
   - name: fontconfig
     constraint: 'fontconfig@2.13.0:'
     condition: '@1.49:'
+  - name: fontconfig
+    constraint: 'fontconfig@2.11.91:'
   - name: freetype
     constraint: 'freetype@2:'
   - name: fribidi
-    constraint: 'fribidi@0.19.7:'
-  - name: fribidi
     constraint: 'fribidi@1.0.6:'
     condition: '@1.49:'
+  - name: fribidi
+    constraint: 'fribidi@0.19.7:'
   - name: glib
-    constraint: glib
+    constraint: 'glib@2.88:'
+    condition: '@1.58.2:'
   - name: glib
     constraint: 'glib@2.62:'
-  - name: gmake
-    constraint: gmake
-    kind: build
+    condition: '@1.48.1:'
+  - name: glib
+    constraint: 'glib@2.60:'
+  - name: gobject-introspection
+    constraint: 'gobject-introspection@1.83.2:'
+    condition: '@1.56.4:'
   - name: gobject-introspection
     constraint: gobject-introspection
   - name: harfbuzz
-    constraint: harfbuzz
-  - name: harfbuzz
-    constraint: harfbuzz+coretext
-    condition: platform=darwin
-  - name: harfbuzz
-    constraint: 'harfbuzz@2.0.0:'
-  - name: harfbuzz
-    constraint: 'harfbuzz@2.2.0:'
-    condition: '@1.48'
+    constraint: 'harfbuzz@11:'
+    condition: '@1.58:'
   - name: harfbuzz
     constraint: 'harfbuzz@2.6.0:'
     condition: '@1.49:'
+  - name: harfbuzz
+    constraint: 'harfbuzz@2.2.0:'
+    condition: '@1.48:'
+  - name: harfbuzz
+    constraint: 'harfbuzz@2:'
+  - name: harfbuzz
+    constraint: harfbuzz+coretext
+    condition: platform=darwin
   - name: json-glib
     constraint: 'json-glib@1.6.0:'
-    condition: '@1.49:'
+    condition: '@1.49.4'
   - name: libffi
     constraint: libffi
   - name: libxft
-    constraint: libxft
-    condition: +X
-  - name: libxft
     constraint: 'libxft@2.0.0:'
     condition: +X
-  - name: meson
-    constraint: 'meson@0.50:'
-    kind: build
-    condition: '@1.44.4:'
-  - name: meson
-    constraint: 'meson@0.54:'
-    kind: build
-    condition: '@1.48.0:'
-  - name: meson
-    constraint: 'meson@0.55.3:'
-    kind: build
-    condition: '@1.48.1:'
-  - name: meson
-    constraint: 'meson@0.60:'
-    kind: build
-    condition: '@1.50.13:'
-  - name: meson
-    constraint: 'meson@0.63:'
-    kind: build
-    condition: '@1.54:'
-  - name: pkgconfig
-    constraint: pkgconfig
-    kind: build
+  - name: libxft
+    constraint: libxft
+    condition: +X
   options:
   - X
   default_options:
@@ -200580,6 +200816,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8a9eed75021ee734d7fc0fdf3a65c3bba51dfefe4ae51a9b414a60c70b2d1ed8
+  - version: 1.58.2
+    artifacts:
+    - checksums:
+      - sha256:342385b6ca3b7c73455d7c80a13b7dbe4489e00bc3bd4c5bd6ed4dce421e374a
   recipe_path: repos/spack_repo/builtin/packages/pango/package.py
 - id: spack:pangolin
   registry: spack
@@ -265653,6 +265893,34 @@ packages:
     - checksums:
       - sha256:609da665570e5e265e27283aab09e7f279ade90c4f01bcfca111f3d3e13f2827
   recipe_path: repos/spack_repo/builtin/packages/py_einops/package.py
+- id: spack:py-einops-exts
+  registry: spack
+  name: py-einops-exts
+  summary: Einops extensions.
+  licenses:
+  - MIT
+  homepage: https://github.com/lucidrains/einops-exts
+  repository_url: https://github.com/lucidrains/einops-exts
+  dependencies:
+  - py-einops
+  - py-setuptools
+  - py-torch
+  dependency_details:
+  - name: py-einops
+    constraint: 'py-einops@0.4:'
+    kind: build,run
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+  - name: py-torch
+    constraint: py-torch
+    kind: build,run
+  versions:
+  - version: 0.0.4
+    artifacts:
+    - checksums:
+      - sha256:616f145b3411f8e9e3be5da5c968bbe372e55c249de11faa909c7a4b74580a6c
+  recipe_path: repos/spack_repo/builtin/packages/py_einops_exts/package.py
 - id: spack:py-elastic-transport
   registry: spack
   name: py-elastic-transport
@@ -284442,10 +284710,10 @@ packages:
     kind: build
     condition: '@:1.3.2'
   versions:
-  - version: 1.3.7
+  - version: 1.3.8
     artifacts:
     - checksums:
-      - sha256:d4ff629c7e23b64a9db5fe5b027cf7c55b633b737f03be51ef41b77ed016f75e
+      - sha256:18d5dfb841734a936507e75e7b8390b406ed22494f7fb8b4b7b7c122102de3d5
   recipe_path: repos/spack_repo/builtin/packages/py_hydra_core/package.py
 - id: spack:py-hypercorn
   registry: spack
@@ -289631,6 +289899,20 @@ packages:
     - checksums:
       - sha256:9e67faaa74be4539e397fe61317568545f9ea325ddf1f7f534929d508786f29e
   recipe_path: repos/spack_repo/builtin/packages/py_jaxlib/package.py
+- id: spack:py-jaxonnxruntime
+  registry: spack
+  name: py-jaxonnxruntime
+  summary: 'Jaxonnxruntime: JAX based ONNX Runtime.'
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/google/jaxonnxruntime
+  repository_url: https://github.com/google/jaxonnxruntime
+  versions:
+  - version: 0.3.0
+    artifacts:
+    - checksums:
+      - sha256:64340d83f280f725ef068326aedc87489a39f5da67ceebcdbcb24ce777cf8198
+  recipe_path: repos/spack_repo/builtin/packages/py_jaxonnxruntime/package.py
 - id: spack:py-jaxtyping
   registry: spack
   name: py-jaxtyping
@@ -293826,6 +294108,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c06887374eaf39fb614a77ca054383e6cc2092cb7225e45437111b4984d0f866
+  - version: 0.9.0
+    artifacts:
+    - checksums:
+      - sha256:65e82219b10e73289fb8cb3c739879d917e6908c0a977b1d65f388cba1741f71
   recipe_path: repos/spack_repo/builtin/packages/py_kornia/package.py
 - id: spack:py-kornia-rs
   registry: spack
@@ -296249,6 +296535,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2c19c0e5841b7477323ef3ffca234a60a57c0aaf6753a55c2a75d72cde9c0719
+  - version: 1.6.0
+    artifacts:
+    - checksums:
+      - sha256:57d036d02ddf737f6b0bfb2f43f289f6e34efc99b137c275295b29f631254377
   recipe_path: repos/spack_repo/builtin/packages/py_lightly/package.py
 - id: spack:py-lightly-utils
   registry: spack
@@ -301441,57 +301731,6 @@ packages:
     - checksums:
       - sha256:aae8e5bfbdacc1e6de61768a3298314c51575cda477a511e98dc11f5730fd918
   recipe_path: repos/spack_repo/builtin/packages/py_meldmd/package.py
-- id: spack:py-melissa-core
-  registry: spack
-  name: py-melissa-core
-  summary: Melissa is a file-avoiding, adaptive, fault-tolerant and elastic framework, to run large-scale sensitivity analysis or deep-surrogate training on...
-  description: <p>Melissa is a file-avoiding, adaptive, fault-tolerant and elastic framework, to run large-scale sensitivity analysis or deep-surrogate training on supercomputers.</p><p>This package builds the launcher and server modules.</p>
-  description_format: html
-  licenses:
-  - BSD-3-Clause
-  homepage: https://gitlab.inria.fr/melissa/melissa
-  maintainers:
-  - abhishek1297
-  - raffino
-  dependencies:
-  - c
-  - cxx
-  - fortran
-  - py-setuptools
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
-    kind: build
-  - name: py-setuptools
-    constraint: 'py-setuptools@46.4:'
-    kind: build
-  options:
-  - tf
-  - torch
-  default_options:
-    tf: 'true'
-    torch: 'false'
-  features:
-  - name: tf
-    description: Install Deep Learning requirements with TensorFlow only
-    default: 'true'
-    condition: ~torch
-  - name: torch
-    description: Install Deep Learning requirements with Pytorch only
-    default: 'false'
-  versions:
-  - version: 2.4.1
-    lifecycle: deprecated
-    artifacts:
-    - checksums:
-      - sha256:92a8c7f823ef79c8a5eb05b67120e130c9b03bf7fecd635b4ae9501eb32b2fd7
-  recipe_path: repos/spack_repo/builtin/packages/py_melissa_core/package.py
 - id: spack:py-melissa-online
   registry: spack
   name: py-melissa-online
@@ -304155,15 +304394,29 @@ packages:
   homepage: https://github.com/jax-ml/ml_dtypes
   repository_url: https://github.com/jax-ml/ml_dtypes
   dependencies:
+  - cmake
   - cxx
+  - eigen
   - py-numpy
   - py-pybind11
+  - py-scikit-build-core
   - py-setuptools
   - python
   dependency_details:
+  - name: cmake
+    constraint: 'cmake@3.15:'
+    kind: build
+    condition: '@0.6.0:'
   - name: cxx
     constraint: cxx
     kind: build
+  - name: eigen
+    constraint: 'eigen@5.0:'
+    kind: build
+  - name: eigen
+    constraint: 'eigen@5.0.1:'
+    kind: build
+    condition: '@0.6.0:'
   - name: py-numpy
     constraint: 'py-numpy@1.21:'
     kind: build,link,run
@@ -304175,9 +304428,14 @@ packages:
     constraint: py-pybind11
     kind: build,link
     condition: '@:0.3.1'
+  - name: py-scikit-build-core
+    constraint: py-scikit-build-core
+    kind: build
+    condition: '@0.6.0:'
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
+    condition: '@:0.5'
   - name: python
     constraint: 'python@3.9:'
     kind: build,link,run
@@ -304187,6 +304445,7 @@ packages:
   - version: 0.3.1
   - version: 0.4.0
   - version: 0.5.1
+  - version: 0.6.0
   recipe_path: repos/spack_repo/builtin/packages/py_ml_dtypes/package.py
 - id: spack:py-mlflow
   registry: spack
@@ -305719,6 +305978,14 @@ packages:
   - name: py-setuptools
     constraint: 'py-setuptools@40.9:'
     kind: build
+  - name: py-setuptools
+    constraint: 'py-setuptools@42:'
+    kind: build
+    condition: '@4:'
+  - name: py-setuptools
+    constraint: 'py-setuptools@77:'
+    kind: build
+    condition: '@master'
   versions:
   - version: 1.3.1
     artifacts:
@@ -305792,6 +306059,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:eb2c8489bdbc47fdc6b26ca7576e927a11b070b6de196a443132766b3d0a2a22
+  - version: 4.1.2
+    artifacts:
+    - checksums:
+      - sha256:56860286dc45f20e8821e93cb06669e30462348bf866f685553fa4b712d58d02
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_mpi4py/package.py
 - id: spack:py-mpld3
@@ -309887,6 +310158,22 @@ packages:
     artifacts:
     - checksums:
       - sha256:a4c6375540b19989896136943abb6d44850ff6f1fa7d3f063253b1ad3f8b7fce
+  - version: 1.7.3
+    artifacts:
+    - checksums:
+      - sha256:83f122fc3415e92b1d4904fd6a0898468b5404c09432c34beb6b16c533884673
+  - version: 1.7.4
+    artifacts:
+    - checksums:
+      - sha256:cdbfdc92d6f4d7192ca8506c9b3d4c1d9892969ff28d8e8e1fc97ca08bf12164
+  - version: 1.7.5
+    artifacts:
+    - checksums:
+      - sha256:1fb34cff123893145b690f390b02305b31db1872983229443ef2c9c1ed9e99c8
+  - version: 1.7.5.1.post1
+    artifacts:
+    - checksums:
+      - sha256:9823076013fd54e7984d3ae8f431671fd199b15eeb267f91b8c4b057fd8324ab
   recipe_path: repos/spack_repo/builtin/packages/py_netcdf4/package.py
 - id: spack:py-netifaces
   registry: spack
@@ -338291,6 +338578,20 @@ packages:
     - checksums:
       - sha256:c18a6e8f0bd971c1ea449b6dd0997a6ec1fe9a031883400bdcc95fa5ddd65975
   recipe_path: repos/spack_repo/builtin/packages/py_pyrfr/package.py
+- id: spack:py-pyriemann
+  registry: spack
+  name: py-pyriemann
+  summary: Machine learning for multivariate data with Riemannian geometry.
+  licenses:
+  - BSD-3-Clause
+  homepage: https://pyriemann.readthedocs.io
+  repository_url: https://github.com/pyriemann/pyriemann
+  versions:
+  - version: '0.12'
+    artifacts:
+    - checksums:
+      - sha256:a1450307bf3360fafe4e2e11a5db81889245f34b0042094bf8b59b7fe2bdeb9f
+  recipe_path: repos/spack_repo/builtin/packages/py_pyriemann/package.py
 - id: spack:py-pyro-api
   registry: spack
   name: py-pyro-api
@@ -349435,8 +349736,20 @@ packages:
     constraint: c
     kind: build
   - name: py-setuptools
+    constraint: 'py-setuptools@77.0.3:'
+    kind: build
+    condition: '@2025.7.32:'
+  - name: py-setuptools
+    constraint: 'py-setuptools@62:'
+    kind: build
+    condition: '@2024.11.7:'
+  - name: py-setuptools
     constraint: py-setuptools
     kind: build
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@2025.5.18:'
   - name: python
     constraint: 'python@3.8:'
     kind: build,run
@@ -349474,6 +349787,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:7ab159b063c52a0333c884e4679f8d7a85112ee3078fe3d9004b2dd875585519
+  - version: 2025.10.22
+    artifacts:
+    - checksums:
+      - sha256:cc50db098b9d678ace33176a3ab4099616726ae4680fee6ac292302e8950fc4c
   recipe_path: repos/spack_repo/builtin/packages/py_regex/package.py
 - id: spack:py-regionmask
   registry: spack
@@ -353545,6 +353862,62 @@ packages:
     - checksums:
       - sha256:52d09c101121231fb3489ad8c7af56896b8a95415cef726a6db5e7d74c6834d2
   recipe_path: repos/spack_repo/builtin/packages/py_sarif_tools/package.py
+- id: spack:py-scaffold
+  registry: spack
+  name: py-scaffold
+  summary: Scale-Free Fractal benchmark
+  licenses:
+  - Apache-2.0
+  repository_url: https://github.com/lbann/scaffold
+  maintainers:
+  - michaelmckinsey1
+  dependencies:
+  - adiak
+  - c
+  - caliper
+  - cxx
+  - mpi
+  - py-setuptools
+  - python
+  dependency_details:
+  - name: adiak
+    constraint: adiak+python
+    kind: build,run
+    condition: +caliper
+  - name: c
+    constraint: c
+    kind: build
+  - name: caliper
+    constraint: caliper+python
+    kind: build,run
+    condition: +caliper
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: mpi
+    constraint: mpi
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+  - name: python
+    constraint: python@3.11
+    kind: build,run
+  options:
+  - caliper
+  - mpi
+  default_options:
+    caliper: 'false'
+    mpi: 'true'
+  features:
+  - name: caliper
+    description: Build with Caliper support enabled.
+    default: 'false'
+  - name: mpi
+    description: MPI support
+    default: 'true'
+  versions:
+  - version: main
+  recipe_path: repos/spack_repo/builtin/packages/py_scaffold/package.py
 - id: spack:py-scandir
   registry: spack
   name: py-scandir
@@ -355748,14 +356121,10 @@ packages:
   maintainers:
   - adamjstewart
   versions:
-  - version: 0.4.0
+  - version: 0.6.0
     artifacts:
     - checksums:
-      - sha256:8833e63f0846090667be6fce05a2bbebbd1537776d3dea72916aa3db9e22e55b
-  - version: 0.5.0
-    artifacts:
-    - checksums:
-      - sha256:cabba8aced6ef7bdcd6288dd9e1dc2840848aa819d539c455bd07aeceb2fdf96
+      - sha256:5f90a7a43fac608f85a9dce66f65297d887605da9c2caafb44aa875c30180424
   recipe_path: repos/spack_repo/builtin/packages/py_segmentation_models_pytorch/package.py
 - id: spack:py-selenium
   registry: spack
@@ -367603,21 +367972,19 @@ packages:
   - Apache-2.0
   homepage: https://github.com/google/tensorstore
   repository_url: https://github.com/google/tensorstore
-  dependencies:
-  - bazel
-  - cxx
-  dependency_details:
-  - name: bazel
-    constraint: bazel@6.4.0
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
   versions:
   - version: 0.1.54
     artifacts:
     - checksums:
       - sha256:e1a9dcb0be7c828f752375409537d4b39c658dd6c6a0873fe21a24a556ec0e2a
+  - version: 0.1.76
+    artifacts:
+    - checksums:
+      - sha256:ed0d565e7a038a84b1b5b5d9f7397caec200b53941d8889f44b7f63dd6abffe7
+  - version: 0.1.85
+    artifacts:
+    - checksums:
+      - sha256:26698bded0278e98e0988eb8f7d76ad248762afc5f55a38b9122ffd1474e505f
   recipe_path: repos/spack_repo/builtin/packages/py_tensorstore/package.py
 - id: spack:py-termcolor
   registry: spack
@@ -371256,10 +371623,10 @@ packages:
   homepage: https://github.com/tornadoweb/tornado
   repository_url: https://github.com/tornadoweb/tornado
   versions:
-  - version: 6.5.10
+  - version: '6.6'
     artifacts:
     - checksums:
-      - sha256:a6b1ccd08c04b4a06fb5aeb381be99de5ad1e5375c1785e31d78c880feb57687
+      - sha256:34c4aa916d7f2b2d5cadee2c6850f5a4a7f3d688cbf58399ea9bd3057af4abd5
   recipe_path: repos/spack_repo/builtin/packages/py_tornado/package.py
 - id: spack:py-tox
   registry: spack
@@ -383715,6 +384082,7 @@ packages:
   - bz2
   - crypt
   - ctypes
+  - curses
   - dbm
   - debug
   - freethreading
@@ -383772,6 +384140,8 @@ packages:
   - name: ctypes
     description: Build ctypes module
     default: 'true'
+  - name: curses
+    description: Build curses modules
   - name: dbm
     description: Build dbm module
     default: 'true'
@@ -386128,7 +386498,13 @@ packages:
     constraint: harfbuzz
     condition: '@5:'
   - name: icu4c
+    constraint: icu4c
+  - name: icu4c
     constraint: icu4c@:74
+    condition: '%gcc@:10'
+  - name: icu4c
+    constraint: icu4c@:74
+    condition: '@5.11: +location'
   - name: jpeg
     constraint: jpeg
   - name: libpng
@@ -399590,6 +399966,83 @@ packages:
     - checksums:
       - sha256:8e855daf7392dfec8dab7da2845b6d01e24030837a66ce7d8d4673eb0a7e55f4
   recipe_path: repos/spack_repo/builtin/packages/r_corrplot/package.py
+- id: spack:r-coseq
+  registry: spack
+  name: r-coseq
+  summary: Co-Expression Analysis of Sequencing Data Co-expression analysis for expression profiles arising from high-throughput sequencing data. Feature (e.g., gene)...
+  description: <p>Co-Expression Analysis of Sequencing Data</p><p>Co-expression analysis for expression profiles arising from high-throughput sequencing data. Feature (e.g., gene) profiles are clustered using adapted transformations and mixture models or a K-means algorithm, and model selection criteria (to choose an appropriate number of clusters) are provided.</p>
+  description_format: html
+  licenses:
+  - GPL-3.0-only
+  dependencies:
+  - r
+  - r-biocparallel
+  - r-capushe
+  - r-compositions
+  - r-corrplot
+  - r-deseq2
+  - r-e1071
+  - r-edger
+  - r-ggplot2
+  - r-htscluster
+  - r-htsfilter
+  - r-mvtnorm
+  - r-rmixmod
+  - r-s4vectors
+  - r-scales
+  - r-summarizedexperiment
+  dependency_details:
+  - name: r
+    constraint: 'r@4.0.0:'
+    kind: build,run
+  - name: r-biocparallel
+    constraint: r-biocparallel
+    kind: build,run
+  - name: r-capushe
+    constraint: r-capushe
+    kind: build,run
+  - name: r-compositions
+    constraint: r-compositions
+    kind: build,run
+  - name: r-corrplot
+    constraint: r-corrplot
+    kind: build,run
+  - name: r-deseq2
+    constraint: r-deseq2
+    kind: build,run
+  - name: r-e1071
+    constraint: r-e1071
+    kind: build,run
+  - name: r-edger
+    constraint: r-edger
+    kind: build,run
+  - name: r-ggplot2
+    constraint: r-ggplot2
+    kind: build,run
+  - name: r-htscluster
+    constraint: r-htscluster
+    kind: build,run
+  - name: r-htsfilter
+    constraint: r-htsfilter
+    kind: build,run
+  - name: r-mvtnorm
+    constraint: r-mvtnorm
+    kind: build,run
+  - name: r-rmixmod
+    constraint: r-rmixmod
+    kind: build,run
+  - name: r-s4vectors
+    constraint: r-s4vectors
+    kind: build,run
+  - name: r-scales
+    constraint: r-scales
+    kind: build,run
+  - name: r-summarizedexperiment
+    constraint: r-summarizedexperiment
+    kind: build,run
+  versions:
+  - version: 1.36.0
+  recipe_path: repos/spack_repo/builtin/packages/r_coseq/package.py
 - id: spack:r-countrycode
   registry: spack
   name: r-countrycode
@@ -425554,35 +426007,10 @@ packages:
   - GPL-2.0-or-later
   dependencies:
   - c
-  - r
-  - r-mass
-  - r-matrix
-  - r-nlme
-  - r-numderiv
-  - r-ucminf
   dependency_details:
   - name: c
     constraint: c
     kind: build
-  - name: r
-    constraint: 'r@2.13.0:'
-    kind: build,run
-  - name: r-mass
-    constraint: r-mass
-    kind: build,run
-  - name: r-matrix
-    constraint: r-matrix
-    kind: build,run
-  - name: r-nlme
-    constraint: r-nlme
-    kind: build,run
-    condition: '@2022.11-16:'
-  - name: r-numderiv
-    constraint: r-numderiv
-    kind: build,run
-  - name: r-ucminf
-    constraint: r-ucminf
-    kind: build,run
   versions:
   - version: 2019.12-10
     artifacts:
@@ -425600,6 +426028,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2c9dcfa438c964ff1825033d0759d25f404a2a4c5252b81e40f19cffc18e38b1
+  - version: 2026.7-26
+    artifacts:
+    - checksums:
+      - sha256:8b5210c33fd20a877c92310a56a3a77812ed250f645e3ff9a20cec3ac81fc02f
   recipe_path: repos/spack_repo/builtin/packages/r_ordinal/package.py
 - id: spack:r-org-dr-eg-db
   registry: spack
@@ -455880,7 +456312,8 @@ packages:
   maintainers:
   - adrienbernede
   - davidbeckingsale
-  - kab163
+  - johnbowen42
+  - smithsg84
   topics:
   - e4s
   - radiuss
@@ -455960,8 +456393,11 @@ packages:
     constraint: camp+sycl
     condition: +sycl
   - name: camp
-    constraint: 'camp@2026.07.1:'
-    condition: '@2026.07.0:'
+    constraint: 'camp@2026.07.2:'
+    condition: '@2026.07.1:'
+  - name: camp
+    constraint: camp@2026.07.1
+    condition: '@2026.07.0'
   - name: camp
     constraint: camp@2025.12
     condition: '@2025.12.0:2025.12.2'
@@ -456067,7 +456503,7 @@ packages:
     shared: 'false'
     sycl: 'false'
     tests: 'false'
-    vectorization: 'true'
+    vectorization: 'false'
   features:
   - name: caliper
     description: Enable caliper support
@@ -456116,7 +456552,7 @@ packages:
     default: 'false'
   - name: vectorization
     description: Build SIMD/SIMT intrinsics support
-    default: 'true'
+    default: 'false'
   versions:
   - version: 0.10.0
   - version: 0.10.1
@@ -456153,6 +456589,7 @@ packages:
   - version: 2025.12.1
   - version: 2025.12.2
   - version: 2026.07.0
+  - version: 2026.07.1
   - version: develop
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/raja/package.py
@@ -456167,6 +456604,8 @@ packages:
   maintainers:
   - adrienbernede
   - davidbeckingsale
+  - rhornung67
+  - smithsg84
   topics:
   - radiuss
   dependencies:
@@ -456710,6 +457149,19 @@ packages:
   - version: 1.2.0-2022-03-09
   - version: 1.2.0-2024-08-16
   recipe_path: repos/spack_repo/builtin/packages/rapidjson/package.py
+- id: spack:rapids-cmake
+  registry: spack
+  name: rapids-cmake
+  summary: NVIDIA rapids-cmake is a collection of CMake modules that are useful for all RAPIDS projects.
+  licenses:
+  - Apache-2.0
+  homepage: https://docs.nvidia.com/rapids-cmake
+  repository_url: https://github.com/rapidsai/rapids-cmake
+  maintainers:
+  - rbberger
+  versions:
+  - version: 26.10.00
+  recipe_path: repos/spack_repo/builtin/packages/rapids_cmake/package.py
 - id: spack:rapidxml
   registry: spack
   name: rapidxml
@@ -472345,7 +472797,11 @@ packages:
   - name: llvm
     constraint: llvm@19:22 +clang
     kind: build,link,run
-    condition: '@0.4.0:'
+    condition: '@0.4.0:0.5'
+  - name: llvm
+    constraint: llvm@19:23 +clang
+    kind: build,link,run
+    condition: '@0.6.0:'
   options:
   - flang
   default_options:
@@ -472375,6 +472831,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:124748eb14456fccae83935daef136d6f3f01b96be874e69725e875833b94c10
+  - version: 0.6.0
+    artifacts:
+    - checksums:
+      - sha256:6554dcf18a65c94c5a14be4217a9d8fd2e00f1cb18c92115b70618af27b251b4
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/saltfm/package.py
 - id: spack:sam2p
@@ -480538,6 +480998,7 @@ packages:
   - c
   - fortran
   - meson
+  - mpi
   - pkgconfig
   - py-cffi
   - py-numpy
@@ -480556,6 +481017,9 @@ packages:
     constraint: 'meson@0.57.1:'
     kind: build
     condition: build_system=meson
+  - name: mpi
+    constraint: mpi
+    condition: +mpi
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -480573,14 +481037,20 @@ packages:
     constraint: 'python@3.6:'
     condition: +python
   options:
+  - mpi
   - openmp
   - python
   - shared
   default_options:
+    mpi: 'false'
     openmp: 'true'
     python: 'false'
     shared: 'true'
   features:
+  - name: mpi
+    description: Enable MPI support
+    default: 'false'
+    condition: '@1.6:'
   - name: openmp
     description: Use OpenMP parallelisation
     default: 'true'
@@ -480648,6 +481118,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:534919ebc44bb59de323513f41d1c1fba5f457008323d2e67087351a76c8fd9f
+  - version: 1.7.0
+    artifacts:
+    - checksums:
+      - sha256:4d733eb6dbe8266fcfad67cef31de932a079f7c911f24f4b6efc594cd3d28803
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/simple_dftd3/package.py
 - id: spack:simplemoc
@@ -481092,9 +481566,6 @@ packages:
   - name: kokkos
     constraint: kokkos+pic
     condition: +kokkos-kernels
-  - name: kokkos
-    constraint: kokkos+cuda_lambda
-    condition: +cuda+kokkos
   - name: mpark-variant
     constraint: mpark-variant
     condition: '@:1.10'
@@ -481223,16 +481694,8 @@ packages:
     default: default
     condition: '@1.9.0:'
   versions:
-  - version: 1.10.0
-  - version: 1.11.0
   - version: 1.11.1
-  - version: 1.12.0
   - version: 1.12.1
-  - version: 1.7.0
-  - version: 1.8.0
-  - version: 1.9.0
-  - version: 1.9.1
-  - version: 1.9.2
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/singularity_eos/package.py
 - id: spack:singularity-hpc
@@ -485284,13 +485747,18 @@ packages:
     kind: run
   options:
   - development_tools
+  - docs
   - fetchers
   - modules
   default_options:
     development_tools: 'false'
+    docs: 'false'
   features:
   - name: development_tools
     description: Build development dependencies
+    default: 'false'
+  - name: docs
+    description: Build documentation dependencies
     default: 'false'
   - name: fetchers
     description: Fetchers for sources and binaries. By default, urllib is used since Spack 0.17
@@ -485365,6 +485833,74 @@ packages:
     artifacts:
     - checksums:
       - sha256:9a66bc8b59d436d5c0bd7b052c36d2177b228665ece6c9a2c339c2acb3f9103e
+  - version: 0.21.2
+    artifacts:
+    - checksums:
+      - sha256:b1860537ba00c55fa0b2517ce9dbfe0e415600892c48e3dc4e15ee8da0f50dd3
+  - version: 0.21.3
+    artifacts:
+    - checksums:
+      - sha256:b4badebfd57c30524badb230894b6de07015cb18d0167344ac76671f11d68e02
+  - version: 0.22.0
+    artifacts:
+    - checksums:
+      - sha256:81d0d25ba022d5a8b2f4852cefced92743fe0cae8c18a54e82bd0ec67ee96cac
+  - version: 0.22.1
+    artifacts:
+    - checksums:
+      - sha256:374968461ea95fcf22f230aa818cf99cd79af4cd3d28fb0927d5444525b143b3
+  - version: 0.22.2
+    artifacts:
+    - checksums:
+      - sha256:aef1a5ce16fe1a8bcced54c40012b19a0f4ade1cd9c5379aca081e96ec5b18ac
+  - version: 0.22.3
+    artifacts:
+    - checksums:
+      - sha256:533738b657ff5cca65af72e9b3e970c12fc489a3b1a3916f87ec922aee08a0fb
+  - version: 0.22.5
+    artifacts:
+    - checksums:
+      - sha256:7c27b0bce0d74c9e09db6efd70ed7e359d50c3c94b40c1bd2129ef3029bbaf94
+  - version: 0.23.0
+    artifacts:
+    - checksums:
+      - sha256:ddb8220c46743e45c9484622370a1e17e193acba6a43230868c2dbc717e88b56
+  - version: 0.23.1
+    artifacts:
+    - checksums:
+      - sha256:32ca622c49448a3b4e398eb1397d8ff9a6aa987a248de621261e24e65f287593
+  - version: 1.0.0
+    artifacts:
+    - checksums:
+      - sha256:70dceb9abdf1225d596714522a0fc4d0290e8c5496f1bae8192ffe611b60cfa1
+  - version: 1.0.1
+    artifacts:
+    - checksums:
+      - sha256:dd1345427dbc9281f359bdb6d0d53cb38edb94fd2ebee3256fda441c8242205e
+  - version: 1.0.2
+    artifacts:
+    - checksums:
+      - sha256:c0d4f142ba45160b7cb3fa0c6bb23633734cef689a4a193eb91d08c233ba1f1b
+  - version: 1.0.4
+    artifacts:
+    - checksums:
+      - sha256:6ee1b77427966eff67e1f04019a07f1a67e94f5e3441edd2719aba603f862b0f
+  - version: 1.1.0
+    artifacts:
+    - checksums:
+      - sha256:518474f546e87723c43b80143d83a51c065a8d54333c8140da6f48bc7d9e50c1
+  - version: 1.1.1
+    artifacts:
+    - checksums:
+      - sha256:a0160ae5e84adc81ac7832562a65ad79053d5c135996815dbb0d2eee6b2fca1c
+  - version: 1.2.0
+    artifacts:
+    - checksums:
+      - sha256:8704e2be0e1d101dc84541b7723394d0caf513a74dd19af26a22d0c0110ffb7a
+  - version: 1.2.1
+    artifacts:
+    - checksums:
+      - sha256:17c833b6935fceab87423f00b5548d38788656ebd5ef3ead8a628ced67f2c019
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/spack/package.py
 - id: spack:spack-configs-dav-sdk
@@ -491011,12 +491547,16 @@ packages:
   dependencies:
   - cmake
   - cxx
+  - rapids-cmake
   dependency_details:
   - name: cmake
     constraint: 'cmake@3.23.1:'
     kind: build
   - name: cxx
     constraint: cxx
+    kind: build
+  - name: rapids-cmake
+    constraint: rapids-cmake
     kind: build
   versions:
   - version: '23.03'
@@ -497478,12 +498018,15 @@ packages:
   - fortran
   - hdf5
   - lapack
+  - mctc-lib
   - meson
+  - mpi
   - pkgconfig
   - py-cffi
   - py-numpy
   - py-setuptools
   - python
+  - scalapack
   - trexio
   dependency_details:
   - name: blas
@@ -497502,10 +498045,16 @@ packages:
     condition: +hdf5
   - name: lapack
     constraint: lapack
+  - name: mctc-lib
+    constraint: 'mctc-lib@0.7:'
+    condition: '@0.8:'
   - name: meson
     constraint: 'meson@0.57.2:'
     kind: build
     condition: build_system=meson
+  - name: mpi
+    constraint: mpi
+    condition: +mpi
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -497522,19 +498071,26 @@ packages:
   - name: python
     constraint: 'python@3.6:'
     condition: +python
+  - name: scalapack
+    constraint: scalapack
+    condition: +scalapack
   - name: trexio
     constraint: trexio
     condition: +trexio
   options:
   - hdf5
+  - mpi
   - openmp
   - python
+  - scalapack
   - shared
   - trexio
   default_options:
     hdf5: 'false'
+    mpi: 'false'
     openmp: 'true'
     python: 'false'
+    scalapack: 'false'
     shared: 'true'
     trexio: 'false'
   features:
@@ -497542,12 +498098,20 @@ packages:
     description: Enable HDF5 support
     default: 'false'
     condition: '@0.7.0:'
+  - name: mpi
+    description: Enable MPI support
+    default: 'false'
+    condition: '@0.8:'
   - name: openmp
     description: Use OpenMP parallelisation
     default: 'true'
   - name: python
     description: Build Python extension module
     default: 'false'
+  - name: scalapack
+    description: Enable ScaLAPACK support
+    default: 'false'
+    condition: +mpi
   - name: shared
     description: Build shared libraries
     default: 'true'
@@ -497576,6 +498140,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3a7cb4602101e828caf41c38ca5e30f82de82d0d26d5db40168acdcad3462b92
+  - version: 0.8.0
+    artifacts:
+    - checksums:
+      - sha256:2d00fd612b3fcbb69365de53577080457ceae221cd151be52e7a9977b4832ad3
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/tblite/package.py
 - id: spack:tcl
@@ -498112,6 +498680,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:666d72b26f896a61915ae49a7a239f9206ccbcc73e81b116ca85f9b95f22dcbc
+  - version: 0.3.0
+    artifacts:
+    - checksums:
+      - sha256:5b8f01d92b30a2dfaca906b5482954e9bae04492f88e1f71f563ac165a03a572
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/tdls/package.py
 - id: spack:tealeaf
@@ -508008,8 +508580,11 @@ packages:
     constraint: camp~rocm
     condition: ~rocm
   - name: camp
-    constraint: 'camp@2026.07.1:'
-    condition: '@2026.07:'
+    constraint: 'camp@2026.07.2:'
+    condition: '@2026.07.2:'
+  - name: camp
+    constraint: camp@2026.07.1
+    condition: '@2026.07.0:2026.07.1'
   - name: camp
     constraint: camp@2025.12
     condition: '@2025.12'
@@ -508241,6 +508816,7 @@ packages:
   - version: 2025.12.0
   - version: 2026.07.0
   - version: 2026.07.1
+  - version: 2026.07.2
   - version: 3.0.0
   - version: 4.0.0
   - version: 4.0.1
@@ -509700,10 +510276,8 @@ packages:
     kind: build
   - name: libxcrypt
     constraint: libxcrypt
-    kind: link
   - name: ncurses
     constraint: ncurses
-    kind: link
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -509712,7 +510286,6 @@ packages:
     kind: build
   - name: zlib-api
     constraint: zlib-api
-    kind: link
   options:
   - bash
   default_options:
@@ -511847,6 +512420,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:09b108b0b48d564bbc1b9893ad9c3f7fa0b7914179f55be4c81f88a93e25f2e2
+  - version: 1.30.0
+    artifacts:
+    - checksums:
+      - sha256:30ea70145669adfa0bf6e3354e3f38011e0c1ead4344066e26ee73b0409d7bf5
   - version: 1.4.0
     artifacts:
     - checksums:
@@ -524151,7 +524728,43 @@ packages:
     artifacts:
     - checksums:
       - sha256:4f6b9b4faf91e5df8265b71843a91fc73dc895be6210c84117a996545df296ce
+  - version: '2026.1'
+    artifacts:
+    - checksums:
+      - sha256:7fa90e48cbaca6bc4c99d176e88c5c147ab0ed42358e14a0869ee9c8a610ae7e
   recipe_path: repos/spack_repo/builtin/packages/xorgproto/package.py
+- id: spack:xosview
+  registry: spack
+  name: xosview
+  summary: Classic X11 system monitoring tool
+  licenses:
+  - GPL-2.0-only
+  homepage: https://www.pogo.org.uk/~mark/xosview/
+  repository_url: https://github.com/hills/xosview
+  maintainers:
+  - schallee
+  dependencies:
+  - cxx
+  - gmake
+  - libx11
+  - libxpm
+  dependency_details:
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: gmake
+    constraint: gmake
+    kind: build
+  - name: libx11
+    constraint: libx11
+  - name: libxpm
+    constraint: libxpm
+  versions:
+  - version: '1.25'
+    artifacts:
+    - checksums:
+      - sha256:e5f5ec03a0611397f8aafd07f05d4763726d9911139d9e267c5f308af9a6955b
+  recipe_path: repos/spack_repo/builtin/packages/xosview/package.py
 - id: spack:xphelloworld
   registry: spack
   name: xphelloworld
@@ -524796,10 +525409,11 @@ packages:
     constraint: 'nlohmann-json@3.10.2:'
     condition: '@6:'
   - name: openssl
-    constraint: openssl
-  - name: openssl
     constraint: 'openssl@1.1.1:'
     condition: '@6:'
+  - name: openssl
+    constraint: openssl@:3
+    condition: '@:6.0'
   - name: pkgconfig
     constraint: pkgconfig
     kind: build

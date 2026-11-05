@@ -50,6 +50,51 @@ def clean_list(values: Iterable[object]) -> list[str]:
     )
 
 
+def _canonical_list(values: list[Any]) -> list[Any]:
+    """Return registry metadata in a stable, lexicographical order."""
+    normalized = [canonicalize_package_metadata(value) for value in values]
+
+    def sort_key(value: Any) -> str:
+        if isinstance(value, dict):
+            # These are the identities used by the typed collection records in
+            # schemas.packages. Prefer them over unrelated optional metadata.
+            identity = next(
+                (
+                    str(value[field])
+                    for field in ("id", "version", "name", "package_id", "signal")
+                    if value.get(field) is not None
+                ),
+                "",
+            )
+            if identity:
+                return identity
+        return json.dumps(
+            value, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+        )
+
+    return sorted(
+        normalized,
+        key=sort_key,
+    )
+
+
+def canonicalize_package_metadata(value: Any) -> Any:
+    """Canonicalize every collection emitted in package metadata.
+
+    Registry repositories frequently reorder declarations without changing their
+    meaning. Sorting recursively here keeps those upstream-only changes from
+    rewriting generated catalogs.
+    """
+    if isinstance(value, list):
+        return _canonical_list(value)
+    if isinstance(value, dict):
+        return {
+            key: canonicalize_package_metadata(item)
+            for key, item in sorted(value.items())
+        }
+    return value
+
+
 def clean_licenses(values: Iterable[object]) -> list[str]:
     missing = {"noassertion", "unknown", "unspecified"}
     aliases = {
@@ -210,7 +255,7 @@ def normalize_package_record(package: dict[str, Any]) -> dict[str, Any]:
     else:
         result.pop("versions", None)
     result.pop("source_urls", None)
-    return _without_empty(result)
+    return canonicalize_package_metadata(_without_empty(result))
 
 
 def _without_empty(values: dict[str, Any]) -> dict[str, Any]:
@@ -222,10 +267,6 @@ def _without_empty(values: dict[str, Any]) -> dict[str, Any]:
             continue
         result[key] = value
     return result
-
-
-def github_url(repository: str, revision: str, relative: Path) -> str:
-    return f"{repository}/blob/{revision or 'HEAD'}/{relative.as_posix()}"
 
 
 def _literal(node: ast.AST) -> Any:

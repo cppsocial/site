@@ -14,15 +14,12 @@ import yaml
 
 from ..shared.text import render_text
 from .common import (
-    REPOSITORIES,
     _class_metadata,
     _literal,
     clean_licenses,
     clean_list,
-    github_url,
     option_value,
     repository_identity,
-    repository_revision,
     scalar_strings,
     source_checksums,
 )
@@ -84,7 +81,6 @@ def _conan_dependencies(recipe: Path, metadata: dict[str, Any]) -> list[str]:
 def parse_conan(
     root: Path, package_names: set[str] | None = None
 ) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     records = []
     config_paths = [
         path
@@ -242,7 +238,7 @@ def parse_conan(
                 "default_options": package_defaults,
                 "versions": version_rows,
                 "native_url": f"https://conan.io/center/recipes/{name}",
-                "recipe_url": github_url(REPOSITORIES["conan"], revision, relative),
+                "recipe_path": relative.as_posix(),
             }
         )
     return records

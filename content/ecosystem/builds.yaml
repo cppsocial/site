@@ -3,4 +3,167 @@ type: card_group
 id: build-systems
 title: Build systems and generators
 description: Tools for building C++ projects and managing build configurations
-cards: []
+cards:
+  - title: CMake
+    path: https://cmake.org/
+    icon: https://cdn.simpleicons.org/cmake
+    description: CMake is the de-facto standard for building C++ code, with over 2 million downloads a month. It’s a powerful, comprehensive solution for managing the software build process
+    metadata: { License: BSD-3-Clause }
+    links:
+      - { label: Documentation, path: https://cmake.org/documentation/ }
+      - { label: Issues, path: https://gitlab.kitware.com/cmake/cmake/-/issues }
+      - { label: Source, path: https://gitlab.kitware.com/cmake/cmake }
+  - title: GNU Make
+    path: https://www.gnu.org/software/make/
+    icon: https://cdn.simpleicons.org/gnu
+    description: GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files
+    metadata: { License: GPL-3.0+ }
+    links:
+      - { label: Manual, path: https://www.gnu.org/software/make/manual/ }
+      - { label: Source, path: "https://savannah.gnu.org/git/?group=make" }
+  - title: Ninja
+    path: https://ninja-build.org/
+    icon: /static/images/ninja.svg
+    description: Ninja is a small build system with a focus on speed
+    metadata: { License: Apache-2.0 }
+    links:
+      - { label: Manual, path: https://ninja-build.org/manual.html }
+      - { label: Issues, path: https://github.com/ninja-build/ninja/issues }
+      - { label: Source, path: https://github.com/ninja-build/ninja }
+  - title: Meson
+    path: https://mesonbuild.com/
+    description: Meson is an open source build system meant to be both extremely fast, and, even more importantly, as user friendly as possible
+    metadata: { License: Apache-2.0 }
+    links:
+      - { label: Documentation, path: https://mesonbuild.com/Manual.html }
+      - { label: Issues, path: https://github.com/mesonbuild/meson/issues }
+      - { label: Source, path: https://github.com/mesonbuild/meson }
+  - title: Bazel
+    path: https://bazel.build/
+    icon: https://cdn.simpleicons.org/bazel
+    description: Hermetic, cache-aware build and test system aimed at large, multi-language monorepos
+    metadata: { License: Apache-2.0 }
+    links:
+      - { label: C++ guide, path: https://bazel.build/start/cpp }
+      - { label: Issues, path: https://github.com/bazelbuild/bazel/issues }
+      - { label: Source, path: https://github.com/bazelbuild/bazel }
+  - title: SCons
+    path: https://scons.org/
+    description: SCons is an improved, cross-platform substitute for the classic Make utility with integrated functionality similar to autoconf/automake and compiler caches such as ccache
+    metadata: { License: MIT }
+    links:
+      - { label: Documentation, path: https://scons.org/documentation.html }
+      - { label: Issues, path: https://github.com/SCons/scons/issues }
+      - { label: Source, path: https://github.com/SCons/scons }
+  - title: qmake
+    path: https://doc.qt.io/qt-5/qmake-manual.html
+    icon: https://cdn.simpleicons.org/qt
+    description: Qt's legacy project generator, retained for existing projects while new Qt projects generally use CMake
+    metadata: { Status: Legacy }
+    links:
+      - { label: Documentation, path: https://doc.qt.io/qt-6/qmake-manual.html }
+      - {
+          label: Source,
+          path: https://code.qt.io/cgit/qt/qtbase.git/tree/qmake,
+        }
+  - title: GNU Autotools
+    path: https://www.gnu.org/software/autoconf/
+    icon: https://cdn.simpleicons.org/gnu
+    description: Suite of Autoconf, Automake, and Libtool for producing portable source packages and configure-driven builds
+    metadata: { License: "GPL licenses vary by component" }
+    links:
+      - { label: Autoconf, path: https://www.gnu.org/software/autoconf/ }
+      - { label: Automake, path: https://www.gnu.org/software/automake/ }
+      - { label: Libtool, path: https://www.gnu.org/software/libtool/ }
+  - title: Buck2
+    path: https://buck2.build/
+    description: A large-scale build tool. The successor to Buck. Ready for users ∈ {C++, Python, Rust, Haskell, Erlang, OCaml, Java, Kotlin, Go}
+    metadata: { License: Apache-2.0 OR MIT }
+    links:
+      - { label: Documentation, path: https://buck2.build/docs/ }
+      - { label: Issues, path: https://github.com/facebook/buck2/issues }
+      - { label: Source, path: https://github.com/facebook/buck2 }
+  - title: Gradle C++
+    path: https://docs.gradle.org/current/userguide/building_cpp_projects.html
+    description: Gradle's C++ application and library plugins provide variant-aware compilation, linking, testing, and dependency management
+    metadata: { License: Apache-2.0 }
+    links:
+      - {
+          label: C++ application plugin,
+          path: https://docs.gradle.org/current/userguide/cpp_application_plugin.html,
+        }
+      - {
+          label: C++ library plugin,
+          path: https://docs.gradle.org/current/userguide/cpp_library_plugin.html,
+        }
+      - { label: Source, path: https://github.com/gradle/gradle }
+  - title: Xcode Build System
+    path: https://developer.apple.com/documentation/xcode/build-system
+    description: Xcode's integrated system for compiling and linking code, processing resources, and assembling products for Apple platforms
+    links:
+      - {
+          label: Build settings reference,
+          path: https://developer.apple.com/documentation/xcode/build-settings-reference,
+        }
+  - title: Visual Studio Build Tools
+    path: https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022
+    description: Standalone command-line toolchain for Visual Studio projects, including optional MSVC C++ compilers, libraries, and Windows SDKs
+    metadata: { License: Proprietary, Platform: Windows }
+    links:
+      - {
+          label: C++ command-line builds,
+          path: "https://learn.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=msvc-170",
+        }
+  - title: MSBuild
+    path: https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild
+    description: Microsoft's extensible build platform and project-file format, used by Visual Studio for C++ and other project types
+    metadata: { License: MIT, Best for: Visual Studio projects }
+    links:
+      - {
+          label: C++ walkthrough,
+          path: "https://learn.microsoft.com/en-us/cpp/build/walkthrough-using-msbuild-to-create-a-visual-cpp-project?view=msvc-170",
+        }
+      - { label: Source, path: https://github.com/dotnet/msbuild }
+  - title: Xmake
+    path: https://xmake.io/
+    description: A cross-platform build utility based on Lua
+    metadata: { License: Apache-2.0 }
+    links:
+      - { label: Documentation, path: https://xmake.io/#/guide/installation }
+      - { label: Source, path: https://github.com/xmake-io/xmake }
+  - title: Premake
+    path: https://premake.github.io/
+    description: Lua-scripted project generator for toolchains and IDEs including Visual Studio, Xcode, and GNU Make
+    metadata: { License: BSD-3-Clause }
+    links:
+      - { label: Documentation, path: https://premake.github.io/docs/ }
+      - { label: Source, path: https://github.com/premake/premake-core }
+  - title: build2
+    path: https://build2.org/
+    icon: https://avatars.githubusercontent.com/u/39628269?s=128
+    description: Powerfully simple build configuration
+    metadata: { License: MIT }
+    links:
+      - { label: Documentation, path: https://build2.org/doc.xhtml }
+      - { label: Source, path: https://github.com/build2 }
+  - title: GN
+    path: https://gn.googlesource.com/gn/
+    icon: https://cdn.simpleicons.org/google
+    description: GN is a meta-build system that generates build files for Ninja
+    metadata: { License: BSD-3-Clause }
+    links:
+      - {
+          label: Documentation,
+          path: https://gn.googlesource.com/gn/+/main/docs/,
+        }
+      - { label: Source, path: https://gn.googlesource.com/gn/ }
+  - title: B2
+    path: https://www.bfgroup.xyz/b2/
+    description: B2 makes it easy to build C++ projects, everywhere
+    metadata: { License: BSL-1.0 }
+    links:
+      - {
+          label: Documentation,
+          path: https://www.bfgroup.xyz/b2/manual/release/index.html,
+        }
+      - { label: Source, path: https://github.com/bfgroup/b2 }

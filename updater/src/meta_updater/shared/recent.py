@@ -139,12 +139,25 @@ class RecentCache:
                         exclude_defaults=True,
                     )
                 )
+        data.sort(key=self._sort_key)
         text = (
             f"# Maintained by {self.producer}. Manual edits are preserved.\n"
             f"# Set hidden: true and retain only {self.id_field} to suppress an item.\n"
             + yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=1000)
         )
         return update_bytes(path, text.encode(), check=check)
+
+    def _sort_key(self, item: dict[str, Any]) -> tuple[bool, float, str]:
+        """Order recent items newest-first, with their stable ID as a tie-breaker."""
+        published = item.get("published")
+        if isinstance(published, str):
+            published = datetime.fromisoformat(published.replace("Z", "+00:00"))
+        if isinstance(published, datetime):
+            if published.tzinfo is None:
+                published = published.replace(tzinfo=UTC)
+            timestamp = published.timestamp()
+            return False, -timestamp, str(item[self.id_field])
+        return True, 0, str(item[self.id_field])
 
     def load_all(self) -> dict[str, list[dict[str, Any]]]:
         result = {}

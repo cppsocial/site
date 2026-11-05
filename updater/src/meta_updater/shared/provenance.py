@@ -27,7 +27,7 @@ class Provenance:
     def finish(self):
         provenance = ProvenanceSchema(
             retrieved_at=datetime.now(UTC).date().isoformat(),
-            source_urls=list(dict.fromkeys(self.source_urls))
+            source_urls=sorted(set(self.source_urls)),
         )
         self.dataset.update(provenance, check=False)
 

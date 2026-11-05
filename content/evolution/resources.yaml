@@ -3,4 +3,21 @@ type: card_group
 id: resources
 title: Resources
 description: Links to C++ standardization resources and documentation
-cards: []
+cards:
+  - title: C++ Standards Committee (WG21)
+    path: https://isocpp.org/std/the-committee
+    description: "Overview of the committee's structure"
+  - title: C++ Standard Working Draft
+    icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
+    path: https://github.com/cplusplus/draft
+    description: Latest draft standard LaTeX sources
+  - title: C++ Standards Committee Papers
+    path: https://www.open-std.org/jtc1/sc22/wg21/docs/papers/
+    description: An archive of mailed WG21 papers and old X3J16 papers
+  - title: Paper status
+    icon: https://avatars.githubusercontent.com/u/59276?s=60&v=4
+    path: https://github.com/cplusplus/papers
+    description: When papers progress through groups, the paper status is updated in this repository
+  - title: wg21.org
+    path: https://wg21.org/
+    description: A volunteer resource by the C++ Alliance with an improved mailing view

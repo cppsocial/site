@@ -17,6 +17,7 @@ from site_plugins.catalog import (
 
 from meta_updater.commands.packages import (
     apply_corrections,
+    canonical_packages,
     filter_ignored,
     run,
 )
@@ -33,6 +34,46 @@ from meta_updater.packages.common import normalize_package_record, version_ident
 
 
 class PackageParserTests(unittest.TestCase):
+    def test_package_metadata_has_recursive_lexicographical_order(self) -> None:
+        packages = canonical_packages(
+            [
+                {
+                    "id": "spack:aaa-id",
+                    "registry": "spack",
+                    "name": "zlib",
+                },
+                {
+                    "id": "spack:zzz-id",
+                    "registry": "spack",
+                    "name": "fmt",
+                    "maintainers": ["zoe", "amy"],
+                    "default_options": {"zeta": "on", "alpha": "off"},
+                    "versions": [
+                        {
+                            "version": "2.0",
+                            "artifacts": [{"checksums": ["sha256:z", "sha256:a"]}],
+                        },
+                        {"version": "1.0"},
+                    ],
+                },
+            ]
+        )
+
+        self.assertEqual(
+            [item["id"] for item in packages],
+            ["spack:zzz-id", "spack:aaa-id"],
+        )
+        self.assertEqual(packages[0]["maintainers"], ["amy", "zoe"])
+        self.assertEqual(list(packages[0]["default_options"]), ["alpha", "zeta"])
+        self.assertEqual(
+            [item["version"] for item in packages[0]["versions"]],
+            ["1.0", "2.0"],
+        )
+        self.assertEqual(
+            packages[0]["versions"][1]["artifacts"][0]["checksums"],
+            ["sha256:a", "sha256:z"],
+        )
+
     def test_refresh_does_not_write_ignored_packages(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -123,7 +164,13 @@ class PackageParserTests(unittest.TestCase):
             recipe.parent.mkdir(parents=True)
             recipe.write_text("class Package:\n    pass\n")
 
-            self.assertEqual(parse_spack(root)[0]["id"], "spack:py-example")
+            package = parse_spack(root)[0]
+            self.assertEqual(package["id"], "spack:py-example")
+            self.assertEqual(
+                package["recipe_path"],
+                "repos/spack_repo/builtin/packages/py_example/package.py",
+            )
+            self.assertNotIn("recipe_url", package)
 
     @patch("meta_updater.commands.packages.source_paths", side_effect=OSError("offline"))
     def test_failed_refresh_leaves_saved_catalog_untouched(self, _source_paths) -> None:
@@ -429,7 +476,7 @@ class PackageParserTests(unittest.TestCase):
                     "checksums": ["sha256:abcdef"],
                 },
             )
-            self.assertEqual(package["dependencies"], ["zlib", "cmake"])
+            self.assertEqual(package["dependencies"], ["cmake", "zlib"])
             RegistryPackage.model_validate(package)
 
     def test_spack_and_meson(self) -> None:

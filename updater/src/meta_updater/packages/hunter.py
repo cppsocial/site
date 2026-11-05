@@ -2,11 +2,8 @@ from pathlib import Path
 from typing import Any
 
 from .common import (
-    REPOSITORIES,
     clean_list,
-    github_url,
     repository_identity,
-    repository_revision,
 )
 
 
@@ -170,7 +167,6 @@ def _hunter_versions(path: Path):
 
 
 def parse_hunter(root: Path) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     records = []
     defaults = {}
     defaults_path = root / "cmake" / "configs" / "default.cmake"
@@ -227,11 +223,7 @@ def parse_hunter(root: Path) -> list[dict[str, Any]]:
                     "https://hunter.readthedocs.io/en/latest/packages/pkg/"
                     f"{name}.html"
                 ),
-                "recipe_url": github_url(
-                    REPOSITORIES["hunter"],
-                    revision,
-                    recipe.relative_to(root),
-                ),
+                "recipe_path": recipe.relative_to(root).as_posix(),
             }
         )
 

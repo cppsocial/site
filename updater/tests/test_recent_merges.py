@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError
 
+from schemas.blocks import CachedVideo
 from schemas.blogs import CachedBlogPost
 
 from meta_updater.commands.blogs import merged as merged_posts
@@ -17,6 +18,31 @@ from meta_updater.youtube import channel_videos
 
 
 class RecentMergeTests(unittest.TestCase):
+    def test_recent_cache_orders_by_time_then_stable_id(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            cache = RecentCache(
+                Path(temporary),
+                CachedVideo,
+                id_field="video_id",
+                producer="test",
+            )
+            older = datetime(2025, 1, 1, tzinfo=UTC)
+            newer = datetime(2026, 1, 1, tzinfo=UTC)
+            cache.update(
+                "channel",
+                [
+                    {"video_id": "z", "title": "Z", "url": "z", "published": newer},
+                    {"video_id": "old", "title": "Old", "url": "old", "published": older},
+                    {"video_id": "a", "title": "A", "url": "a", "published": newer},
+                    {"video_id": "hidden", "hidden": True},
+                ],
+            )
+
+            self.assertEqual(
+                [item["video_id"] for item in cache.load("channel")],
+                ["a", "z", "old", "hidden"],
+            )
+
     def test_prune_records_preserves_hidden_stubs_and_applies_visible_limit(
         self,
     ) -> None:

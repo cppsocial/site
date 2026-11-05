@@ -13,7 +13,7 @@ import yaml
 from schemas.blocks import BookMetadata
 
 from ..config import MetaUpdaterConfig
-from ..shared.dataset import YamlDataset
+from ..shared.dataset import YamlDataset, sorted_mapping
 from ..shared.provenance import (
     cancel_provenance_tracking,
     finish_provenance_tracking,
@@ -183,7 +183,7 @@ def clean_subjects(values: list[Any]) -> list[str]:
             continue
         if name.casefold() not in {item.casefold() for item in result}:
             result.append(name)
-    return result[:12]
+    return sorted(result[:12])
 
 
 def metadata(isbn: str, timeout: float) -> dict[str, Any]:
@@ -241,6 +241,7 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
         "Edition metadata, descriptions, covers, and ratings come from Open Library.",
         exclude_none=True,
         exclude_defaults=True,
+        canonicalize=sorted_mapping,
     )
     start_provenance_tracking(
         config.data / "books" / "provenance.yaml",

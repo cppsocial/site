@@ -1,5 +1,132 @@
 $schema: ../schemas/pages/article.json
-title: Under construction
+title: The C++ world, all in one place.
+seo_title: C++ Resources, Communities, Events & Tools
+description: cpp.social brings together C++ resources, communities, technical writing, events, tools, libraries, books and standardization information
 config: !import "config/pages/home.yaml"
+hero:
+  eyebrow: The C++ index
+  actions:
+    - { label: Explore C++ resources, path: /resources/ }
+    - { label: See what's happening, path: /events/ }
+  tabs:
+    - name: hello_world.cpp
+      code: !include "hello_world.cpp"
+    - name: ranges.cpp
+      code: !include "ranges.cpp"
+
+sections:
+  - type: split
+    id: community
+    intro:
+      eyebrow: Events & communities
+      title: C++ lives where people meet
+      description: Find upcoming events and active C++ communities on many platforms
+    panels:
+      - type: event_list
+        title: Next on the calendar
+        link: { label: All events, path: /events/ }
+      - type: text_list
+        title: Community platforms
+        description: Browse the directory to find the communities that suit you
+        link: { label: Browse all, path: /communities/ }
+        items: [Discord, Slack, IRC, Reddit, Forums and Q&A]
+  - type: feeds
+    id: content
+    intro:
+      eyebrow: The wider C++ community
+      title: New ideas and insights, published regularly
+      description: cpp.social follows independent blogs, educators, conference archives, and technical channels so recent C++ material is easier to find
+    feeds:
+      - source: blogs
+        count_label: blog sources
+        title: Recent writing
+        link: { label: Browse blogs, path: /blogs/ }
+      - source: videos
+        count_label: video channels
+        title: Recent video
+        link: { label: Browse channels, path: /youtube/ }
+  - type: split
+    id: about
+    intro:
+      eyebrow: About C++
+      title: One standard, many tools and implementations
+      description: |
+        The C++ ecosystem includes multiple mature compilers, standard-library implementations, build systems, analysis tools, package managers and a lot more.
+        The choice is yours - to make an informed one, the vast amounts of educational material around C++ and its huge tooling landscape can help.
+        cpp.social aims to collect every resource you should be aware of in one place.
+    panels:
+      - type: metric_bars
+        content:
+          title: What developers report using
+          description: All data is from survey responses and does not represent actual market share
+          groups:
+            - title: Compilers
+              bars:
+                - { label: GCC, value: 76.2%, percent: 76 }
+                - { label: Clang, value: 71.9%, percent: 72 }
+                - { label: MSVC, value: 59.7%, percent: 60 }
+            - title: Build systems
+              bars:
+                - { label: CMake, value: 81.9%, percent: 82 }
+                - { label: MSBuild, value: 33.5%, percent: 33 }
+            - title: Package managers
+              bars:
+                - { label: vcpkg, value: 21.8%, percent: 22 }
+                - { label: Conan, value: 17.5%, percent: 18 }
+          note: Build-system and package-manager figures come from the [2026 Annual C++ Developer Survey summary](https://isocpp.org/blog/2026/05/2026-survey-summary). Compiler statistics are combined primary and secondary compiler responses.
+      - type: link_grid
+        title: Find the right starting point
+        description: Reference material, implementation status, ecosystem directories, and the standards process live side by side
+        items:
+          - {
+              label: Resources,
+              title: "References, guides & books",
+              path: /resources/,
+            }
+          - { label: Books, title: Browse the C++ bookshelf, path: /books/ }
+          - {
+              label: Ecosystem,
+              title: "Compilers, libraries & tools",
+              path: /ecosystem/,
+            }
+          - {
+              label: Language evolution,
+              title: How C++ evolves,
+              path: /evolution/,
+            }
+          - {
+              label: Packages,
+              title: Libraries across package managers,
+              path: /packages/,
+            }
+  - type: package_showcase
+    id: packages
+    intro:
+      eyebrow: Package search
+      title: Search C++ libraries across package managers
+      description: cpp.social's package catalog brings several registries into one searchable view, so a library can be compared across the package managers that distribute it
+    action: { label: Open package search, path: /packages/ }
+    demo:
+      search: { label: Search packages & libraries, path: /packages/ }
+      previews:
+        - {
+            title: gtest,
+            description: Google Testing Framework,
+            managers:
+              [Bazel, Conan, build2, Hunter, Meson, Spack, vcpkg, xmake],
+          }
+        - {
+            title: fmt,
+            description: fmt is an open-source formatting library for C++.,
+            managers:
+              [Bazel, Conan, build2, Hunter, Meson, Spack, vcpkg, xmake],
+          }
+        - {
+            title: tensorflow,
+            description: Library for computation using data flow graphs for scalable machine learning,
+            managers: [Conan, vcpkg],
+          }
+      note: Catalog sources include Conan, vcpkg, Spack, Meson WrapDB, Bazel Central Registry, build2, Hunter, and xmake
+
 navigation: !import "ui/navigation.yaml"
 footer: !import "ui/footer.yaml"

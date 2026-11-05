@@ -4,4 +4,16 @@ card_type: meetup_card
 id: meetups
 title: User Groups
 description: Local user groups and meetups
-cards: []
+cards:
+  - source_id: mucplusplus
+    timezone: Europe/Berlin
+    title: Munich C++ Meetup
+    path: https://www.meetup.com/MUCplusplus/
+    description: Regular meetup for C++ developers in Munich
+    metadata:
+      Location: Munich, Germany
+    links:
+      - label: RSS feed
+        path: https://www.meetup.com/MUCplusplus/events/rss/
+      - label: Calendar
+        path: https://www.meetup.com/MUCplusplus/events/ical/

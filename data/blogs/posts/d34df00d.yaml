@@ -1,0 +1,72 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: 8mzFEWgzPFtdj00z
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: What's up with cross-module optimizations?
+  url: https://0xd34df00d.me//posts/2024/10/xmod-inlining.html
+  published: 2024-10-31 00:00:00+00:00
+  description: 'Last time , we implemented a simple regexp engine and looked at how it could be optimized. Truth is, I cheated a little: all the code, from the regexp definition to calling the regexp engine, was in the same module. However, it’s unlikely you’d write your production code like th…'
+- post_id: hMFemP6jZMnnAbDZ
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: Let's run some NFAs
+  url: https://0xd34df00d.me//posts/2024/09/naive-nfas.html
+  published: 2024-09-12 00:00:00+00:00
+  description: Lately, I’ve been playing around with memoized NFAs for optimized regular expression matching, with features like lookahead and atomic groups, based on this paper . The original authors have their code in Scala, and I thought it’d be fun to code something in Haskell to see how i…
+- post_id: 8On_fz7_s0CLwC5W
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: Nubbing lists in C++
+  url: https://0xd34df00d.me//posts/2023/07/nubbing-lists.html
+  published: 2023-07-23 00:00:00+00:00
+  description: 'It’s been a while since I last used C++ for anything serious, but once a C++ guy, you’re always a C++ guy, right? So, I decided to see how modern C++ fares in a seemingly simple task: eliminating duplicate list elements. That sounds trivial, so why bother with a whole blog post?…'
+- post_id: yIWsmeBKruLgux-2
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: 'Haskell is quite OK for images: encoding QOI'
+  url: https://0xd34df00d.me//posts/2022/01/haskell-is-quite-ok-encoding.html
+  published: 2022-01-29 00:00:00+00:00
+  description: 'Last time we’ve looked at writing a decoder for the QOI format . Today, we’ll look at the inverse: encoding QOI images and all that it entails. Like the last time, this post describes both the final result and the road there. So, there will be lots of code and lots of diffs, bew…'
+- post_id: _a3-jqMZgALsaPiO
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: 'Haskell is quite OK for images: decoding QOI'
+  url: https://0xd34df00d.me//posts/2021/12/haskell-is-quite-ok-decoding.html
+  published: 2021-12-18 00:00:00+00:00
+  description: 'I’ve recently come across the new “Quite OK Image” format — a fast lossless image compression algorithm. It’s a very straightforward algorithm that’s a pleasure to work with, so, naturally, I got curious what would be the performance of a Haskell implementation if: I just write…'
+- post_id: i6yAA2S3npS8VMYt
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: (neo)vim and Haskell, 2021 edition
+  url: https://0xd34df00d.me//posts/2021/10/vim-and-haskell-in-2021.html
+  published: 2021-10-04 00:00:00+00:00
+  description: 'In this post, I’ll describe my setup for doing Haskell (which I almost exclusively do with stack -based projects). Spoiler: it’s much, much more straightforward than a few years ago, almost to the point of “vim and Haskell” posts being no longer necessary. Before delving into de…'
+- post_id: evdyf95Dnwdpgam8
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: Grokking recursion
+  url: https://0xd34df00d.me//posts/2020/09/agda-wf-rec.html
+  published: 2020-09-25 00:00:00+00:00
+  description: If we want to use dependently typed languages as proof checkers, we better be sure they are consistent as a logic, so that we don’t accidentally prove ⊥ and, as a consequence, any proposition. One huge source of inconsistency is non-terminating computations; hence languages like…
+- post_id: I-JZl7AFGjX9o8B_
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: Call stacks aren't really call stacks
+  url: https://0xd34df00d.me//posts/2020/08/callstacks.html
+  published: 2020-08-29 00:00:00+00:00
+  description: Haskell is a very special language, and one of the peculiarities setting it aside is its evaluation model. In fact, the thing I, for one, find most complicated about Haskell is not monads nor all the countless type system extensions, but rather reasoning about space and time com…
+- post_id: 20kpMuRxDnZQ3Q7w
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: 'The joys and perils of beating C with Haskell: productionizing wc'
+  url: https://0xd34df00d.me//posts/2020/03/the-joys-and-perils.html
+  published: 2020-03-10 00:00:00+00:00
+  description: 'Last time we’ve looked at implementing a toy wc -like program, and our implementation managed to beat wc by a factor of 5. Of course, that’s quite an unfair comparison: our implementation is hardcoded to count just the bytes, lines and words, while wc supports selecting specific…'
+- post_id: knTNDVIHfDz0NMji
+  source_id: d34df00d
+  source_title: 0xd34df00d.me
+  title: 'Further beating C with 20 lines of Haskell: wc'
+  url: https://0xd34df00d.me//posts/2020/02/beating-c-with-20-lines-of-haskell.html
+  published: 2020-02-02 00:00:00+00:00
+  description: 'tl;dr: today we’ll look at implementing a toy wc command that is about 4-5 times faster than the corresponding GNU Coreutils implementation. So I’ve recently come across a post by Chris Penner describing a Haskell implementation of the Unix wc command. Chris did a great job opti…'

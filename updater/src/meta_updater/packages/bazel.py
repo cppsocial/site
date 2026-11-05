@@ -5,11 +5,8 @@ from pathlib import Path
 from typing import Any
 
 from .common import (
-    REPOSITORIES,
     clean_list,
-    github_url,
     repository_identity,
-    repository_revision,
 )
 
 
@@ -138,7 +135,6 @@ def _bazel_maintainers(values: object) -> list[str]:
 
 
 def parse_bazel(root: Path) -> list[dict[str, Any]]:
-    revision = repository_revision(root)
     records = []
 
     for metadata_path in sorted((root / "modules").glob("*/metadata.json")):
@@ -232,11 +228,7 @@ def parse_bazel(root: Path) -> list[dict[str, Any]]:
                 "dependencies": dependencies,
                 "components": [],
                 "versions": versions,
-                "recipe_url": github_url(
-                    REPOSITORIES["bazel"],
-                    revision,
-                    metadata_path.relative_to(root),
-                ),
+                "recipe_path": metadata_path.relative_to(root).as_posix(),
             }
         )
 

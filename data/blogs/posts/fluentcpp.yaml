@@ -1,0 +1,150 @@
+# Maintained by meta-updater blogs. Manual edits are preserved.
+# Set hidden: true and retain only post_id to suppress an item.
+- post_id: hLn82Oowd4I2cHKX
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: 'Usage First, Implementation After: A Principle of Software Development'
+  url: https://www.fluentcpp.com/2022/06/25/usage-first-implementation-after-a-principle-of-software-development/
+  published: 2022-06-25 01:00:54+00:00
+  description: You know when you work on various projects, and you use various tricks and techniques, and they all seem independent from one another, until the big picture jumps at you and you realize it’s all connected? I experienced this kind of aha moment, that emerged from several (apparen…
+  tags:
+  - Expressive code
+  - design
+  - expressive
+  - principle
+  - software
+  - usage first
+  - user first
+- post_id: 3qjZMPM46TFAknzG
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: 'Design Patterns VS Design Principles: Factory method'
+  url: https://www.fluentcpp.com/2022/06/05/design-patterns-vs-design-principles-factory-method/
+  published: 2022-06-05 01:00:49+00:00
+  description: Let’s examine another design pattern in our “Design Patterns VS Design Principles” series, where we relate design patterns to design principles. Today, we focus on the Factory method design pattern. We’ll see the various forms the Factory method design pattern can take, the diff…
+  tags:
+  - C++
+  - Expressive code
+  - GoF
+  - design
+  - design pattern
+  - factory
+  - factory method
+  - grasp
+- post_id: DiygPDZE9Z0JmibR
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: How to Store an lvalue or an rvalue in the Same Object
+  url: https://www.fluentcpp.com/2022/05/16/how-to-store-an-lvalue-or-an-rvalue-in-the-same-object/
+  published: 2022-05-16 01:00:43+00:00
+  description: 'There seems to be a problem coming up every so often C++ code: how can an object keep track of a value, given that this value can come from either an lvalue or an rvalue? In short, if we keep the value as a reference then we can’t bind to temporary objects. And if we […] The pos…'
+  tags:
+  - C++
+  - C++17
+  - Expressive code
+  - lvalue
+  - rvalue
+  - variant
+- post_id: jFX8EXpKKxPcnfYB
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: Copy-Paste Developments
+  url: https://www.fluentcpp.com/2022/04/26/copy-paste-developments/
+  published: 2022-04-26 01:00:54+00:00
+  description: 'Amongst the many tasks a programmer does, one of them is to add a new feature in a location of the application where there are already many similar exising features. The temptation is then to warm up very specific muscles of our left hand: the pinky muscles that will press on th…'
+  tags:
+  - DRY
+  - Expressive code
+  - copy
+  - development
+  - duplication
+  - legacy
+  - past
+- post_id: L8NvKyJ2c7e_rYLj
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: 'Design Patterns VS Design Principles: Abstract Factory'
+  url: https://www.fluentcpp.com/2022/04/06/design-patterns-vs-design-principles-abstract-factory/
+  published: 2022-04-06 01:00:50+00:00
+  description: In the “Design Pattens VS Design Principles” series, we look at design patterns and relate them to design principles. In this episode, we examine the Abstract Factory pattern. Let’s see how Abstract Factory works and what it is useful for, then relate it to a design principle. W…
+  tags:
+  - Expressive code
+  - GoF
+  - abstract factory
+  - design patterns
+  - grasp
+  - principles
+- post_id: XAOljjWwVx8pWRWC
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: How to Generate All the Combinations from Several Collections
+  url: https://www.fluentcpp.com/2022/03/18/how-to-generate-all-the-combinations-from-several-collections/
+  published: 2022-03-18 01:00:58+00:00
+  description: Generating all the possible combinations from a set of collections and applying a function to each combination is a need that comes up often in programming. This is called a “Cartesian product”. For example, this kind of operation is necessary in the cartesian_product range adap…
+  tags:
+  - C++
+  - Expressive code
+  - cartesian product
+  - collections
+  - combinations
+- post_id: FwHyGb9nTMV7b-LK
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: 'Code It Yourself: Generate All the Combinations from Several Collections'
+  url: https://www.fluentcpp.com/2022/03/14/code-it-yourself-generate-all-the-combinations-from-several-collections/
+  published: 2022-03-14 01:00:56+00:00
+  description: 'A Cartesian product consists in applying a function to all the possible combinations of the elements of several collections. For example, consider the three following collections: auto const inputs1 = std::vector<int> {1, 2, 3}; auto const inputs2 = std::vector<std::string>{"up"…'
+  tags:
+  - Expressive code
+  - cartesian product
+  - code it yourself
+- post_id: 4oUy0dING5ZYyd9E
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: A Good Way to Handle Errors Is To Prevent Them from Happening in the First Place
+  url: https://www.fluentcpp.com/2022/02/25/a-good-way-to-handle-errors-is-to-prevent-them-from-happening-in-the-first-place/
+  published: 2022-02-25 01:00:27+00:00
+  description: 'Error handling is a tricky part of software programming. It’s tricky in several aspects: it’s difficult to get right, and it can make code less expressive. But it doesn’t always have to be that way. Sometimes asking the question “how can we prevent the error from happening in th…'
+  tags:
+  - C++
+  - Expressive code
+  - UI
+  - UX
+  - code
+  - error
+  - exceptions
+  - expressive
+  - handling
+  - optional
+- post_id: t_BwkZ0RnSLT_snx
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: 'Design Patterns VS Design Principles: Visitor'
+  url: https://www.fluentcpp.com/2022/02/09/design-patterns-vs-design-principles-visitor/
+  published: 2022-02-09 01:00:23+00:00
+  description: 'In today’s episode of the series “Design Pattens VS Design Principles”, we’re focusing on the last behavioural design pattern: Visitor, and see how it relates to the High Cohesion design principle. The GoF meets the GRASP If you’re just joining the series, The GoF meets the GRAS…'
+  tags:
+  - Expressive code
+  - GoF
+  - design patterns
+  - design principles
+  - grasp
+  - visitor
+- post_id: qRg2dDLz8VLSQCO_
+  source_id: fluentcpp
+  source_title: Fluent C++
+  title: Which Programming Paradigm Gives the Most Expressive Code?
+  url: https://www.fluentcpp.com/2022/01/24/programming-paradigm-gives-expressive-code/
+  published: 2022-01-24 01:00:16+00:00
+  description: 'Warning: this post gets into a very opinionated subject. You may agree with some points, you may disagree with others, it may trigger controversy, and you may be tempted to seize your keyboard to tell how you have a completely different view on programming. This is exactly what…'
+  tags:
+  - Expressive code
+  - OO
+  - best code
+  - declarative
+  - expressive
+  - functional
+  - imperative
+  - object
+  - oriented
+  - paradigm

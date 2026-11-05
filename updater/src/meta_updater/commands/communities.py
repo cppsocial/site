@@ -6,7 +6,7 @@ from schemas.blocks import CommunityMetadata
 
 from ..config import MetaUpdaterConfig
 from ..shared.communities import metadata
-from ..shared.dataset import YamlDataset
+from ..shared.dataset import YamlDataset, sorted_mapping
 from ..shared.provenance import (
     cancel_provenance_tracking,
     finish_provenance_tracking,
@@ -55,6 +55,7 @@ def run(args: argparse.Namespace, config: MetaUpdaterConfig) -> int:
         dict[str, CommunityMetadata],
         "meta-updater communities",
         "Descriptions, artwork, and activity figures come from the linked platforms.",
+        canonicalize=sorted_mapping,
     )
     start_provenance_tracking(config.data / "communities" / "provenance.yaml")
     curated = communities(config.content / "communities")

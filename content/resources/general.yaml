@@ -7,6 +7,9 @@ cards:
   - title: Compiler Explorer
     path: https://godbolt.org/
     description: Compile and inspect C++ across compilers, versions, architectures, and optimization levels
+  - title: ABI Explorer
+    path: https://abiexplorer.org/
+    description: Visualize C and C++ type layouts, member offsets, padding, and alignment across target platforms in your browser
   - title: Decompiler Explorer
     path: https://dogbolt.org/
     description: An interactive online decompiler which shows equivalent C-like output of decompiled programs from many popular decompilers

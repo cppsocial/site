@@ -1,5 +1,206 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: 6n_mOFP_kBA
+  title: 'Lightning Talk: A Metaprogramming Checklist - Ben Deane - C++Now 2026'
+  url: https://www.youtube.com/watch?v=6n_mOFP_kBA
+  published: 2026-11-08 16:00:04+00:00
+  updated: 2026-11-08 16:00:05+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: A Metaprogramming Checklist - Ben Deane - C++Now 2026
+
+    ---
+
+
+    Metaprogramming fun
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Ben Deane
+
+
+    Ben has been programming in C++ for this whole millennium. He spent just over 20 years in the games industry working for companies like EA and Blizzard; many of the games he worked on used to be fondly remembered but now he’s accepted that they are probably mostly forgotten. After getting more interested in modern C++, in the teens he started giving internal company talks and then talks at various conferences, spreading ideas about types, algorithms and declarative and functional techniques.
+
+
+    In 2018 he left the games industry and worked in finance for a short spell, writing high-frequency trading platforms using the most modern C++ that compilers could support. Now he is a Principal Engineer at Intel where he puts monads inside your CPU.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/6n_mOFP_kBA/hqdefault.jpg
+- video_id: VEIJkIEKEQ4
+  title: 'Lightning Talk: When Weird Things Happen - Ruslan Arutyunyan - C++Now 2026'
+  url: https://www.youtube.com/watch?v=VEIJkIEKEQ4
+  published: 2026-11-05 16:20:50+00:00
+  updated: 2026-11-06 19:34:22+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: When Weird Things Happen - Ruslan Arutyunyan - C++Now 2026
+
+    ---
+
+
+    The talk is about the changed answer of a trait based on where it is in the code. We are going to play a bit with lambdas, views and trivially_copyable
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Ruslan Arutyunyan
+
+
+    Ruslan is a Senior Middleware Development Engineer specializing in parallel and threading runtimes. He joined Intel in 2017 and has experience in the autonomous driving domain, where he led the development of two libraries.
+
+
+    Currently, Ruslan is the lead developer of oneAPI DPC++ library (oneDPL) while also contributing to other Intel products, including oneAPI Threading Building Blocks (oneTBB). He is an active member of the C++ Standard Committee (WG21), focusing on the C++ standard library, concurrency, and parallelism, with multiple accepted proposals. His current priorities are standardizing std::simd enhancements, extending C++ parallel algorithms, and contributing to Senders/Receivers.
+
+
+    Ruslan is a chair of SG1 (Concurrency and Parallelism) in the C++ Standards Committee since April 2026.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/VEIJkIEKEQ4/hqdefault.jpg
+- video_id: WZl7tMBBn3U
+  title: The Hidden Superpower of Modern CPUs - Why ILP Can Make “More Work” Run Faster - Sampad Acharya
+  url: https://www.youtube.com/watch?v=WZl7tMBBn3U
+  published: 2026-11-03 16:35:49+00:00
+  updated: 2026-11-05 21:20:13+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: The Hidden Superpower of Modern CPUs - Why ILP Can Make “More Work” Run Faster - Sampad Acharya - C++Now 2026
+
+    ---
+
+
+    Instruction-Level Parallelism (ILP) is the most underused performance lever in modern C++. Every modern CPU has it — multiple pipelines, wide superscalar issue, deep out-of-order execution — but it only helps you if your code exposes independent work. Hide ILP behind a dependency chain, and your CPU sits idle. Expose it, and your code flies.
+
+
+    Here''s how dramatic the difference is: a loop that does more arithmetic can run 4× faster than a loop that does less, simply because it exposes more ILP. Same algorithm, same math, same final result — but the slower version chains every operation into a dependency, while the faster version splits the work across independent accumulators the CPU can pipeline in parallel. The instruction count goes up. The runtime goes down.
+
+
+    In 5 minutes, I''ll show you the benchmark, the assembly, and the one-line change that unlocks the ILP — plus a bonus FMA trick that exposes even more parallelism for another ~2×. You''ll leave with a new instinct: ILP isn''t a micro-optimization, it''s a fundamental performance lever, and once you see it in action, you can''t unsee it.
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Sampad Acharya
+
+
+    I’m a Senior Software Engineer at Bloomberg, specializing in low‑latency, cache‑optimized C++ systems for trading and real‑time environments. I have been in the software development industry for 6 years now.
+
+
+    I’m deeply interested in how algorithms behave in the real world—across CPU caches, branch predictors, and memory hierarchies—and I enjoy sharing insights that connect theoretical expectations with actual performance. Outside of work, I spend time on robotics, embedded systems, and building end‑to‑end C++ control stacks.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i4.ytimg.com/vi/WZl7tMBBn3U/hqdefault.jpg
 - video_id: TLj6NVx5xvk
   title: 'Lightning Talk: ?: - Jonathan Müller - C++Now 2026'
   url: https://www.youtube.com/watch?v=TLj6NVx5xvk

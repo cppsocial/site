@@ -1,5 +1,101 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: EwgkN3an1Gs
+  title: The Biggest Misconception of Computer Science - Alex Dathskovsky - ACCU 2026
+  url: https://www.youtube.com/watch?v=EwgkN3an1Gs
+  published: 2026-11-07 16:06:05+00:00
+  updated: 2026-11-09 02:40:47+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    The Biggest Misconception of Computer Science - Alex Dathskovsky - ACCU 2026
+
+    ---
+
+
+    From our very first algorithms class, we are taught a simple rule: a better Big-O complexity means a faster algorithm. We spend years mastering asymptotic analysis, memorizing complexity tables, and losing sleep over worst-case scenarios. Big-O becomes a mental shortcut for “good” and “bad” code.
+
+
+    But the real world doesn’t run on whiteboards.
+
+
+    Modern performance is shaped far more by hardware realities than by asymptotic notation alone. CPUs have deep cache hierarchies, wide vector units, speculative execution, and memory systems that punish the “theoretically optimal” solution. GPUs thrive on massive parallelism where simple linear work can outperform asymptotically superior algorithms. Even on regular CPUs, cache-friendly linear scans often beat clever sub-linear approaches that fight memory latency.
+
+
+    In this talk, we will challenge the traditional Big-O mindset. We’ll look at classic algorithms through a modern lens and explore how hardware-aware designs cache-efficient layouts, SIMD/AVX vectorization, and parallel execution models can outperform algorithms with “worse” theoretical complexity. You’ll see why a higher Big-O algorithm can be faster, more scalable, and more predictable in practice.
+
+
+    The goal is not to dismiss Big-O, but to put it back in its proper place: as a tool, not a truth. By the end of this talk, you’ll think differently about performance and start writing code that works with the hardware, not against it.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Alex Dathskovsky
+
+
+    Alex has over 20 years of software development experience, working on systems, low-level generic tools and high-level applications. Alex has worked as an integration/software developer at Elbit, senior software developer at Rafael, technical leader at Axxana, Software manager at Abbott Israel Director of Software Engineering at Speedata.io and Now a Director of Software Engineering at ScyllaDB, The fastest data base for big data.
+
+
+    Alex is a C++ expert with a strong experience in template meta-programming. Alex also teaches a course about the new features of modern C++, trying to motivate companies to move to the latest standards.
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/EwgkN3an1Gs/hqdefault.jpg
+- video_id: TLk4mm4u02A
+  title: Why C++ Invariants Are Impossible to Maintain
+  url: https://www.youtube.com/watch?v=TLk4mm4u02A
+  published: 2026-11-06 10:11:07+00:00
+  updated: 2026-11-08 11:06:59+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nHow Invariant are Invariants? - David Olsen - ACCU 2026\n---\n\nClass invariants are a vital tool when writing robust code. Classes are easier to use and easier to maintain if you know that some conditions are always true. But C++ makes it impossible to maintain invariants in all cases. We will look at a simple class with a seemingly simple invariant. Then we'll discover why that class is impossible to implement correctly and explore techniques for dealing with the situation. You will come away with new insights on class invariants and guidelines for writing and using classes in robust code. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nDavid Olsen\n\nDavid Olsen has three decades of software development experience in a variety of programming languages and development environments. For the last decade he has been the lead engineer for the NVIDIA HPC C++ compiler, focusing on running standard\
+    \ parallel algorithms on GPUs.\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\n\
+    https://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i1.ytimg.com/vi/TLk4mm4u02A/hqdefault.jpg
+- video_id: 9efvPYY7CuY
+  title: 'Optimising C++: How We Built the Modern Standard Library'
+  url: https://www.youtube.com/watch?v=9efvPYY7CuY
+  published: 2026-11-02 13:00:28+00:00
+  updated: 2026-11-04 12:52:08+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nImplementing C++ Standard Library - Design and Optimisations in Libc++ - Hui Xie - ACCU 2026\n---\n\nThis presentation covers various practical examples in the designs and optimisations in libc++, a standard library implementation. It presents various examples of using compact type, reusing tail padding bytes, reusing unused bits in existing bytes. It also presents some optimisations in algorithms and containers. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nHui Xie\n\nHui is a software developer at a hedge fund Qube Reseach & Technologies. He is an active contributor and code reviewer of libc++, a Standard Library implementation as part of LLVM project and shipped with clang. He regularly goes to WG21 SG9 (Ranges study group) meetings and sometimes write C++ proposals. He is also a member of BSI, the UK national body of WG21.\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n\
+    ---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\n\
+    https://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i2.ytimg.com/vi/9efvPYY7CuY/hqdefault.jpg
 - video_id: cA0F3wRtZIU
   title: CallMeMaybe - Building Modern Runtime Reflection via C++26 - Laurie Kirk - ACCU 2026
   url: https://www.youtube.com/watch?v=cA0F3wRtZIU

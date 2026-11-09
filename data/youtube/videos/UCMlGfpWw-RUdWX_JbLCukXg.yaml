@@ -1,5 +1,102 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: 7sAGdjEDD60
+  title: 'Why C++ will never be simple #cpp #coding #tech'
+  url: https://www.youtube.com/shorts/7sAGdjEDD60
+  published: 2026-11-07 15:00:06+00:00
+  updated: 2026-11-07 17:41:35+00:00
+  description: 'Why C++ will never be simple
+
+
+    Ever wondered why learning C++ can feel like such a monumental challenge? In this video, we explore the complexities of the C++ language and why it will likely never be simple. Whether you are looking to learn C++ for the first time or you are a seasoned professional diving into advanced software engineering, understanding the history and design philosophy of this powerful tool is essential.
+
+
+    We examine the evolution of the C++ language, from its core fundamentals to the massive ecosystem provided by libraries like Boost. If you are interested in C++ software development, we break down why the language maintains such a high barrier to entry compared to other modern alternatives. We also touch upon key concepts discussed at major industry events like CppCon, providing insight into why C++ best practices are so critical for writing stable, efficient C++ code.
+
+
+    This video serves as a deep dive for anyone pursuing a career in C++ programming. We discuss the nuances of C++ software, the intricacies of memory management, and why the complexity of the language is actually a feature that enables high-performance computing. Join us as we analyze the current state of C++ in 2024 and why it remains the backbone of modern tech. If you want to improve your skills in C++ coding, this overview will help you navigate the difficult landscape of the language.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    CppCon is the annual, week-long face-to-face gathering for the entire C++ community. The conference is organized by the C++ community for the community. You will enjoy inspirational talks and a friendly atmosphere designed to help attendees learn from each other, meet interesting people, and generally have a stimulating experience. Taking place this year in Aurora, Colorado, near the Denver airport, and including multiple diverse tracks, the conference will appeal to anyone from C++ novices to experts.
+
+    Annual CppCon Conference - https://www.cppcon.org
+
+    https://www.linkedin.com/company/cppcon
+
+    https://x.com/cppcon
+
+    https://www.facebook.com/CppConference
+
+    https://www.reddit.com/r/cppcon/
+
+    https://mastodon.social/@CppCon
+
+    ---
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i4.ytimg.com/vi/7sAGdjEDD60/hqdefault.jpg
+- video_id: 41USGJaGsAo
+  title: Profiles for Simplicity and Guarantees - Bjarne Stroustrup - CppCon 2026
+  url: https://www.youtube.com/watch?v=41USGJaGsAo
+  published: 2026-11-06 15:00:26+00:00
+  updated: 2026-11-06 18:02:55+00:00
+  description: 'https://cppcon.org/
+
+    ---
+
+
+    Profiles for Simplicity and Guarantees - Bjarne Stroustrup - CppCon 2026
+
+
+    The C++ community is growing fast. C++ is being used in critical applications. C++ can be used in ways that ensures correctness, simplicity, performance, and maintainability. How can we ensure that it is used is such desirable ways? How can we teach new and old C++ developers to do so?
+
+
+    The general strategy is called “subset of superset” and is based on the idea that by extending (“supersetting”) by adding libraries, we can simplify static analysis to where we can remove undesirable uses (“subsetting”) without damaging expressiveness or efficiency. Where run-time checks are necessary, such as to catch out-of-range accesses in hardened libraries, static analysis can be used to minimize the number of checks.
+
+
+    The strategy is supported by the “Profiles” framework, that allows us to require or suppress specific sets of guarantees, called profiles.
+
+
+    As examples, I show how to eliminate uninitialized-object errors and container-invalidation errors (a kind of dangling pointer errors) using the profiles framework and implementations of the “Initialization” and “invalidation” profiles. Both with zero run-time cost.
+
+    ---
+
+
+    Work at Hudson River Trading (HRT): https://tinyurl.com/safxfctf
+
+    ---
+
+
+    Bjarne Stroustrup
+
+
+    Bjarne Stroustrup is the designer and original implementer of C++ as well as the author of The C++ Programming Language (4th Edition) and A Tour of C++ (3rd edition), Programming: Principles and Practice using C++ (2nd Edition), and many popular and academic publications. He is a professor of Computer Science in Columbia University in New York City. Dr. Stroustrup is a member of the US National Academy of Engineering, and an IEEE, ACM, and CHM fellow. He received the 2018 Charles Stark Draper Prize, the IEEE Computer Society''s 2018 Computer Pioneer Award, and the 2017 IET Faraday Medal. He did much of his most important work in Bell Labs. His research interests include distributed systems, design, programming techniques, software development tools, and programming languages. To make C++ a stable and up-to-date base for real-world software development, he has been a leading figure with the ISO C++ standards effort for more than 30 years. He holds a master’s in Mathematics from Aarhus
+    University, where he is an honorary professor in the Computer Science Department, and a PhD in Computer Science from Cambridge University, where he is an honorary fellow of Churchill College.
+
+    __
+
+
+
+    Videos Filmed & Edited by Bash Films: http://www.BashFilms.com
+
+    YouTube Channel Managed by Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    Registration for CppCon: https://cppcon.org/registration/
+
+
+    #cpp #cplusplus #cppcon #cppprogramming #cplusplusprogramming #softwaredevelopment #softwareengineering #coding #code #computerscience #technology #technews #programming #programmer'
+  thumbnail_url: https://i1.ytimg.com/vi/41USGJaGsAo/hqdefault.jpg
 - video_id: lv8dazZ6hsM
   title: 'Master Linux Debugging: Essential GDB & System Tools'
   url: https://www.youtube.com/shorts/lv8dazZ6hsM

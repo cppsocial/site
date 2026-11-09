@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: 92354eaa4147ee2f508c48c194c5c14cc640a8d1
+revision: 511a3c4536a12318e7c1effa012dc8d7b5637526
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -4659,6 +4659,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-io.git
     - url: https://github.com/awslabs/aws-c-io/archive/refs/tags/v1.1.0.tar.gz
+  - version: v1.1.2
+    upstream_version: 1.1.2
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-io.git
+    - url: https://github.com/awslabs/aws-c-io/archive/refs/tags/v1.1.2.tar.gz
   recipe_path: packages/a/aws-c-io/xmake.lua
 - id: xmake:aws-c-mqtt
   registry: xmake
@@ -9226,6 +9231,11 @@ packages:
     - url: https://github.com/c-ares/c-ares/releases/download/v1.34.8/c-ares-1.34.8.tar.gz
       checksums:
       - sha256:c222b6d681096f9444d2c4863d2c1174019e27cacca0a4a5c114d36dd7d7bf78
+  - version: 1.34.9
+    artifacts:
+    - url: https://github.com/c-ares/c-ares/releases/download/v1.34.9/c-ares-1.34.9.tar.gz
+      checksums:
+      - sha256:9364b70a12eb59a06830fb488d9357f90100dff0d98b23ea3593a183d43e6f2f
   recipe_path: packages/c/c-ares/xmake.lua
 - id: xmake:c-blosc2
   registry: xmake
@@ -16261,7 +16271,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x5640cfd29ec0'
+    default: 'table: 0x561873604300'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -22450,6 +22460,11 @@ packages:
     - wchar_t
     default: char
   versions:
+  - version: 2.10.0
+    artifacts:
+    - url: https://github.com/libexpat/libexpat/releases/download/R_2_10_0/expat-2.10.0.tar.bz2
+      checksums:
+      - sha256:44e0139015f1c9908d0876b5516235136f16b14932d8f6634a16737a12742f53
   - version: 2.2.10
     artifacts:
     - url: https://github.com/libexpat/libexpat/releases/download/R_2_2_10/expat-2.2.10.tar.bz2
@@ -23540,6 +23555,11 @@ packages:
     artifacts:
     - url: https://github.com/spnda/fastgltf.git
     - url: https://github.com/spnda/fastgltf/archive/refs/tags/v0.9.0.tar.gz
+  - version: v0.9.1
+    upstream_version: 0.9.1
+    artifacts:
+    - url: https://github.com/spnda/fastgltf.git
+    - url: https://github.com/spnda/fastgltf/archive/refs/tags/v0.9.1.tar.gz
   recipe_path: packages/f/fastgltf/xmake.lua
 - id: xmake:fastmod
   registry: xmake
@@ -23571,6 +23591,11 @@ packages:
     artifacts:
     - url: https://github.com/lemire/fastmod.git
     - url: https://github.com/lemire/fastmod/archive/refs/tags/v0.1.0.tar.gz
+  - version: v0.2.0
+    upstream_version: 0.2.0
+    artifacts:
+    - url: https://github.com/lemire/fastmod.git
+    - url: https://github.com/lemire/fastmod/archive/refs/tags/v0.2.0.tar.gz
   recipe_path: packages/f/fastmod/xmake.lua
 - id: xmake:fastor
   registry: xmake
@@ -24170,7 +24195,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x5640d3e0b190'
+    default: 'table: 0x561865959500'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -24180,7 +24205,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x5640d3e0c7f0'
+    default: 'table: 0x56186595ab30'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -24867,6 +24892,11 @@ packages:
     artifacts:
     - url: https://github.com/SanderMertens/flecs.git
     - url: https://github.com/SanderMertens/flecs/archive/refs/tags/v4.1.6.tar.gz
+  - version: v4.2.0
+    upstream_version: 4.2.0
+    artifacts:
+    - url: https://github.com/SanderMertens/flecs.git
+    - url: https://github.com/SanderMertens/flecs/archive/refs/tags/v4.2.0.tar.gz
   recipe_path: packages/f/flecs/xmake.lua
 - id: xmake:flex
   registry: xmake
@@ -26016,6 +26046,10 @@ packages:
     artifacts:
     - url: https://github.com/FreeRDP/FreeRDP.git
     - url: https://github.com/FreeRDP/FreeRDP/releases/download/3.32.2/freerdp-3.32.2.tar.gz
+  - version: 3.33.0
+    artifacts:
+    - url: https://github.com/FreeRDP/FreeRDP.git
+    - url: https://github.com/FreeRDP/FreeRDP/releases/download/3.33.0/freerdp-3.33.0.tar.gz
   recipe_path: packages/f/freerdp/xmake.lua
 - id: xmake:freetype
   registry: xmake
@@ -27159,6 +27193,11 @@ packages:
     artifacts:
     - url: https://github.com/malaterre/GDCM.git
     - url: https://github.com/malaterre/GDCM/archive/refs/tags/v3.2.10.tar.gz
+  - version: v3.2.11
+    upstream_version: 3.2.11
+    artifacts:
+    - url: https://github.com/malaterre/GDCM.git
+    - url: https://github.com/malaterre/GDCM/archive/refs/tags/v3.2.11.tar.gz
   - version: v3.2.5
     upstream_version: 3.2.5
     artifacts:
@@ -30083,7 +30122,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x5640dbe253e0'
+    default: 'table: 0x561864079940'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -32561,7 +32600,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x5640d02f6d40'
+    default: 'table: 0x56185e3f35a0'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -35841,6 +35880,11 @@ packages:
     artifacts:
     - url: https://github.com/machinezone/IXWebSocket.git
     - url: https://github.com/machinezone/IXWebSocket/archive/refs/tags/v12.0.1.tar.gz
+  - version: v12.1.0
+    upstream_version: 12.1.0
+    artifacts:
+    - url: https://github.com/machinezone/IXWebSocket.git
+    - url: https://github.com/machinezone/IXWebSocket/archive/refs/tags/v12.1.0.tar.gz
   recipe_path: packages/i/ixwebsocket/xmake.lua
 - id: xmake:jack2
   registry: xmake
@@ -36390,6 +36434,11 @@ packages:
     artifacts:
     - url: https://github.com/jrl-umi3218/jrl-cmakemodules.git
     - url: https://github.com/jrl-umi3218/jrl-cmakemodules/archive/refs/tags/v2.3.0.tar.gz
+  - version: v2.4.0
+    upstream_version: 2.4.0
+    artifacts:
+    - url: https://github.com/jrl-umi3218/jrl-cmakemodules.git
+    - url: https://github.com/jrl-umi3218/jrl-cmakemodules/archive/refs/tags/v2.4.0.tar.gz
   recipe_path: packages/j/jrl-cmakemodules/xmake.lua
 - id: xmake:jrtplib
   registry: xmake
@@ -40803,6 +40852,10 @@ packages:
     artifacts:
     - url: https://github.com/davea42/libdwarf-code.git
     - url: https://github.com/davea42/libdwarf-code/releases/download/v2.3.2/libdwarf-2.3.2.tar.xz
+  - version: 2.3.3
+    artifacts:
+    - url: https://github.com/davea42/libdwarf-code.git
+    - url: https://github.com/davea42/libdwarf-code/releases/download/v2.3.3/libdwarf-2.3.3.tar.xz
   recipe_path: packages/l/libdwarf/xmake.lua
 - id: xmake:libebur128
   registry: xmake
@@ -40890,6 +40943,11 @@ packages:
     artifacts:
     - url: https://github.com/openSUSE/libeconf.git
     - url: https://github.com/openSUSE/libeconf/archive/refs/tags/v0.8.4.tar.gz
+  - version: v0.8.6
+    upstream_version: 0.8.6
+    artifacts:
+    - url: https://github.com/openSUSE/libeconf.git
+    - url: https://github.com/openSUSE/libeconf/archive/refs/tags/v0.8.6.tar.gz
   recipe_path: packages/l/libeconf/xmake.lua
 - id: xmake:libedit
   registry: xmake
@@ -46512,6 +46570,11 @@ packages:
     artifacts:
     - url: https://github.com/IlyaGrebnov/libsais.git
     - url: https://github.com/IlyaGrebnov/libsais/archive/refs/tags/v2.10.4.tar.gz
+  - version: v2.12.1
+    upstream_version: 2.12.1
+    artifacts:
+    - url: https://github.com/IlyaGrebnov/libsais.git
+    - url: https://github.com/IlyaGrebnov/libsais/archive/refs/tags/v2.12.1.tar.gz
   - version: v2.7.1
     upstream_version: 2.7.1
     artifacts:
@@ -54685,6 +54748,11 @@ packages:
     artifacts:
     - url: https://github.com/lz4/lz4.git
     - url: https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz
+  - version: v1.11.0
+    upstream_version: 1.11.0
+    artifacts:
+    - url: https://github.com/lz4/lz4.git
+    - url: https://github.com/lz4/lz4/archive/refs/tags/v1.11.0.tar.gz
   - version: v1.9.3
     upstream_version: 1.9.3
     artifacts:
@@ -56371,6 +56439,11 @@ packages:
     artifacts:
     - url: https://github.com/tbeu/matio.git
     - url: https://github.com/tbeu/matio/archive/refs/tags/v1.5.30.tar.gz
+  - version: v1.6.0
+    upstream_version: 1.6.0
+    artifacts:
+    - url: https://github.com/tbeu/matio.git
+    - url: https://github.com/tbeu/matio/archive/refs/tags/v1.6.0.tar.gz
   recipe_path: packages/m/matio/xmake.lua
 - id: xmake:matlab
   registry: xmake
@@ -58302,10 +58375,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x5640f3273110'
+    default: 'table: 0x561869be72f0'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x5640f3273b30'
+    default: 'table: 0x561869be7d70'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -60664,6 +60737,10 @@ packages:
     artifacts:
     - url: https://github.com/google-deepmind/mujoco.git
     - url: https://github.com/google-deepmind/mujoco/archive/refs/tags/3.12.0.tar.gz
+  - version: 3.17.0
+    artifacts:
+    - url: https://github.com/google-deepmind/mujoco.git
+    - url: https://github.com/google-deepmind/mujoco/archive/refs/tags/3.17.0.tar.gz
   - version: 3.4.0
     artifacts:
     - url: https://github.com/google-deepmind/mujoco.git
@@ -61429,6 +61506,11 @@ packages:
     artifacts:
     - url: https://github.com/wjakob/nanobind.git
     - url: https://github.com/wjakob/nanobind/archive/refs/tags/v3.0.1.tar.gz
+  - version: v3.1.0
+    upstream_version: 3.1.0
+    artifacts:
+    - url: https://github.com/wjakob/nanobind.git
+    - url: https://github.com/wjakob/nanobind/archive/refs/tags/v3.1.0.tar.gz
   recipe_path: packages/n/nanobind/xmake.lua
 - id: xmake:nanoflann
   registry: xmake
@@ -62622,6 +62704,11 @@ packages:
     - url: https://github.com/nghttp2/nghttp2/releases/download/v1.70.0/nghttp2-1.70.0.tar.gz
       checksums:
       - sha256:aa317e2cf9dca6afa0aed68f8fad6ff303ec6982e25a78c75c0b65e2b9b3ded5
+  - version: 1.71.0
+    artifacts:
+    - url: https://github.com/nghttp2/nghttp2/releases/download/v1.71.0/nghttp2-1.71.0.tar.gz
+      checksums:
+      - sha256:0cdd35ecec77919b4b7b245f87fe8d2216e3d62da854eb0838c594ff058042fc
   recipe_path: packages/n/nghttp2/xmake.lua
 - id: xmake:nghttp3
   registry: xmake
@@ -62692,6 +62779,11 @@ packages:
     artifacts:
     - url: https://github.com/ngtcp2/nghttp3.git
     - url: https://github.com/ngtcp2/nghttp3/archive/refs/tags/v1.18.0.tar.gz
+  - version: v1.19.0
+    upstream_version: 1.19.0
+    artifacts:
+    - url: https://github.com/ngtcp2/nghttp3.git
+    - url: https://github.com/ngtcp2/nghttp3/archive/refs/tags/v1.19.0.tar.gz
   - version: v1.3.0
     upstream_version: 1.3.0
     artifacts:
@@ -62746,6 +62838,14 @@ packages:
   - windows
   dependencies:
   - cmake
+  features:
+  - name: openssl
+    description: Select the OpenSSL crypto backend.
+    values:
+    - 'false'
+    - openssl3
+    - openssl4
+    default: 'false'
   versions:
   - version: 0.1.0
     artifacts:
@@ -62847,6 +62947,11 @@ packages:
     - url: https://github.com/ngtcp2/ngtcp2/releases/download/v1.25.0/ngtcp2-1.25.0.tar.gz
       checksums:
       - sha256:1c0843076528a87b65e9a9d455100941f4cb65d44f96c5da6ae56df146043955
+  - version: 1.26.0
+    artifacts:
+    - url: https://github.com/ngtcp2/ngtcp2/releases/download/v1.26.0/ngtcp2-1.26.0.tar.gz
+      checksums:
+      - sha256:85174d674e7f8fd911a827c6e483fd417b21b1f54d7853dac464cee446c8d35f
   - version: 1.3.0
     artifacts:
     - url: https://github.com/ngtcp2/ngtcp2/releases/download/v1.3.0/ngtcp2-1.3.0.tar.gz
@@ -69350,6 +69455,9 @@ packages:
   - name: tls
     description: Enable TLS/HTTPS with OpenSSL.
     default: 'false'
+  - name: uring
+    description: Enable the Linux io_uring readiness backend (PACE >= 0.5.0).
+    default: 'false'
   - name: websocket
     description: Enable WebSocket.
     default: 'true'
@@ -69366,6 +69474,10 @@ packages:
     artifacts:
     - url: https://github.com/TabNahida/PACE.git
     - url: https://github.com/TabNahida/PACE/archive/refs/tags/v0.4.0.tar.gz
+  - version: 0.5.0
+    artifacts:
+    - url: https://github.com/TabNahida/PACE.git
+    - url: https://github.com/TabNahida/PACE/archive/refs/tags/v0.5.0.tar.gz
   recipe_path: packages/p/pace/xmake.lua
 - id: xmake:pagmo
   registry: xmake
@@ -71251,6 +71363,10 @@ packages:
     description: Enable the x11xfixes integration.
     default: 'false'
   versions:
+  - version: 1.6.11
+    artifacts:
+    - url: https://github.com/PipeWire/pipewire.git
+    - url: https://github.com/PipeWire/pipewire/archive/refs/tags/1.6.11.tar.gz
   - version: 1.6.8
     artifacts:
     - url: https://github.com/PipeWire/pipewire.git
@@ -72155,6 +72271,12 @@ packages:
     - url: https://github.com/pocketpy/pocketpy/releases/download/v2.1.8/pocketpy.h
       checksums:
       - sha256:b27e264e6dd3a7597f75452ee7980879cfcae88b0782d0b4ce0ad9315781f7b1
+  - version: v2.2.0
+    upstream_version: 2.2.0
+    artifacts:
+    - url: https://github.com/pocketpy/pocketpy/releases/download/v2.2.0/pocketpy.h
+      checksums:
+      - sha256:43864cfa090d65b80915467900430dfae52c769f13d6edb137d0227d1fbe03ad
   recipe_path: packages/p/pocketpy/xmake.lua
 - id: xmake:poco
   registry: xmake
@@ -78662,6 +78784,36 @@ packages:
     - url: https://github.com/rttrorg/rttr.git
     - url: https://github.com/rttrorg/rttr/archive/7edbd580cfad509a3253c733e70144e36f02ecd4.tar.gz
   recipe_path: packages/r/rttr/xmake.lua
+- id: xmake:rtxui
+  registry: xmake
+  name: rtxui
+  summary: C++ terminal user interfaces built from HTML templates, CSS and reactive state
+  licenses:
+  - MIT
+  homepage: https://github.com/ArthurSonzogni/RTXUI
+  repository_url: https://github.com/arthursonzogni/rtxui
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  versions:
+  - version: v0.1.4
+    upstream_version: 0.1.4
+    artifacts:
+    - url: https://github.com/ArthurSonzogni/RTXUI.git
+    - url: https://github.com/ArthurSonzogni/RTXUI/archive/refs/tags/v0.1.4.tar.gz
+  recipe_path: packages/r/rtxui/xmake.lua
 - id: xmake:ruapu
   registry: xmake
   name: ruapu
@@ -80990,6 +81142,11 @@ packages:
     artifacts:
     - url: https://github.com/simdjson/simdjson.git
     - url: https://github.com/simdjson/simdjson/archive/refs/tags/v4.6.8.tar.gz
+  - version: v5.1.1
+    upstream_version: 5.1.1
+    artifacts:
+    - url: https://github.com/simdjson/simdjson.git
+    - url: https://github.com/simdjson/simdjson/archive/refs/tags/v5.1.1.tar.gz
   recipe_path: packages/s/simdjson/xmake.lua
 - id: xmake:simdutf
   registry: xmake
@@ -87486,7 +87643,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x5640cff083a0'
+    default: 'table: 0x5618878c0050'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -90510,7 +90667,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x5640d67f3980'
+    default: 'table: 0x56186b552180'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -91997,6 +92154,11 @@ packages:
     artifacts:
     - url: https://github.com/uNetworking/uWebSockets.git
     - url: https://github.com/uNetworking/uWebSockets/archive/refs/tags/v20.80.0.tar.gz
+  - version: v20.81.0
+    upstream_version: 20.81.0
+    artifacts:
+    - url: https://github.com/uNetworking/uWebSockets.git
+    - url: https://github.com/uNetworking/uWebSockets/archive/refs/tags/v20.81.0.tar.gz
   recipe_path: packages/u/uwebsockets/xmake.lua
 - id: xmake:v8
   registry: xmake
@@ -92722,6 +92884,11 @@ packages:
     artifacts:
     - url: https://github.com/verilator/verilator.git
     - url: https://github.com/verilator/verilator/archive/refs/tags/v5.052.tar.gz
+  - version: v5.054
+    upstream_version: '5.054'
+    artifacts:
+    - url: https://github.com/verilator/verilator.git
+    - url: https://github.com/verilator/verilator/archive/refs/tags/v5.054.tar.gz
   recipe_path: packages/v/verilator/xmake.lua
 - id: xmake:vexcl
   registry: xmake
@@ -94176,7 +94343,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x5640dbbbf8e0'
+    default: 'table: 0x561870353c60'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -98908,7 +99075,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x5640d5174c90'
+    default: 'table: 0x56185eb0f620'
   versions:
   - version: 0.23.93
     artifacts:

@@ -3629,6 +3629,11 @@ entities:
   aliases: []
   packages:
   - xmake:bluez
+- id: bluez-qt
+  name: bluez-qt
+  aliases: []
+  packages:
+  - vcpkg:bluez-qt
 - id: bmake
   name: bmake
   aliases: []
@@ -8368,6 +8373,7 @@ entities:
   name: cppmicroservices
   aliases: []
   packages:
+  - conan:cppmicroservices
   - vcpkg:cppmicroservices
 - id: cppnetlib
   name: CppNetlib
@@ -9027,6 +9033,11 @@ entities:
   aliases: []
   packages:
   - bazel:cucumber-cpp
+- id: cucumberswift
+  name: cucumberswift
+  aliases: []
+  packages:
+  - bazel:cucumberswift
 - id: cucumberswift-expressions
   name: cucumberswift_expressions
   aliases: []
@@ -12806,6 +12817,11 @@ entities:
   aliases: []
   packages:
   - xmake:fgt
+- id: fhhos4
+  name: fhhos4
+  aliases: []
+  packages:
+  - spack:fhhos4
 - id: fiat
   name: fiat
   aliases: []
@@ -13206,6 +13222,11 @@ entities:
   - spack:flux
   - vcpkg:flux
   - xmake:flux
+- id: flux-accounting
+  name: flux-accounting
+  aliases: []
+  packages:
+  - spack:flux-accounting
 - id: flux-core
   name: flux-core
   aliases: []
@@ -13884,6 +13905,11 @@ entities:
   aliases: []
   packages:
   - spack:fusion-io
+- id: futhark
+  name: futhark
+  aliases: []
+  packages:
+  - spack:futhark
 - id: future-config
   name: future-config
   aliases: []
@@ -19575,6 +19601,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:kbreezeicons
+- id: kcalendarcore
+  name: kcalendarcore
+  aliases: []
+  packages:
+  - vcpkg:kcalendarcore
 - id: kcenon-common-system
   name: kcenon-common-system
   aliases: []
@@ -19666,6 +19697,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:kddockwidgets
+- id: kdeclarative
+  name: kdeclarative
+  aliases: []
+  packages:
+  - vcpkg:kdeclarative
 - id: kdgpu
   name: kdgpu
   aliases: []
@@ -19750,6 +19786,11 @@ entities:
   aliases: []
   packages:
   - spack:kentutils
+- id: kepler-formal
+  name: kepler-formal
+  aliases: []
+  packages:
+  - bazel:kepler-formal
 - id: kerbal
   name: kerbal
   aliases: []
@@ -20034,6 +20075,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:kiconthemes
+- id: kidletime
+  name: kidletime
+  aliases: []
+  packages:
+  - vcpkg:kidletime
 - id: kim-api
   name: kim-api
   aliases: []
@@ -20065,6 +20111,11 @@ entities:
   packages:
   - spack:kineto
   - vcpkg:kineto
+- id: kirigami
+  name: kirigami
+  aliases: []
+  packages:
+  - vcpkg:kirigami
 - id: kiss-icp
   name: kiss-icp
   aliases: []
@@ -20243,6 +20294,11 @@ entities:
   aliases: []
   packages:
   - xmake:kotlin-native
+- id: kpackage
+  name: kpackage
+  aliases: []
+  packages:
+  - vcpkg:kpackage
 - id: kplot
   name: kplot
   aliases: []
@@ -20318,6 +20374,11 @@ entities:
   aliases: []
   packages:
   - vcpkg:krpc-cnano
+- id: kservice
+  name: kservice
+  aliases: []
+  packages:
+  - vcpkg:kservice
 - id: ktx
   name: ktx
   aliases: []
@@ -20384,6 +20445,11 @@ entities:
   aliases: []
   packages:
   - spack:kvtree
+- id: kwallet
+  name: kwallet
+  aliases: []
+  packages:
+  - vcpkg:kwallet
 - id: kwidgetsaddons
   name: kwidgetsaddons
   aliases: []
@@ -24380,6 +24446,7 @@ entities:
   name: libserialport
   aliases: []
   packages:
+  - conan:libserialport
   - meson:libserialport
 - id: libsersi
   name: libsersi
@@ -26850,6 +26917,11 @@ entities:
   aliases: []
   packages:
   - conan:lzma_sdk
+- id: lzmainfo
+  name: lzmainfo
+  aliases: []
+  packages:
+  - cppget:lzmainfo
 - id: lzo
   name: lzo
   aliases: []
@@ -30780,6 +30852,11 @@ entities:
   aliases: []
   packages:
   - spack:normaliz
+- id: notcurses
+  name: notcurses
+  aliases: []
+  packages:
+  - conan:notcurses
 - id: notmuch
   name: notmuch
   aliases: []
@@ -33114,16 +33191,13 @@ entities:
   name: paho-mqtt
   aliases:
   - paho-mqtt-c
+  - paho.mqtt.c
   - pahomqttc
   packages:
+  - bazel:paho.mqtt.c
   - conan:paho-mqtt-c
   - vcpkg:paho-mqtt
   - xmake:pahomqttc
-- id: paho-mqtt-c
-  name: paho.mqtt.c
-  aliases: []
-  packages:
-  - bazel:paho.mqtt.c
 - id: paho-mqtt-cpp
   name: paho.mqtt.cpp
   aliases: []
@@ -37757,6 +37831,11 @@ entities:
   aliases: []
   packages:
   - bazel:prismo
+- id: prison
+  name: prison
+  aliases: []
+  packages:
+  - vcpkg:prison
 - id: prjoxide
   name: prjoxide
   aliases: []
@@ -41784,6 +41863,11 @@ entities:
   aliases: []
   packages:
   - spack:py-dryscrape
+- id: py-duckdb
+  name: py-duckdb
+  aliases: []
+  packages:
+  - spack:py-duckdb
 - id: py-duecredit
   name: py-duecredit
   aliases: []
@@ -50934,6 +51018,11 @@ entities:
   aliases: []
   packages:
   - spack:py-scoop
+- id: py-scotchpy
+  name: py-scotchpy
+  aliases: []
+  packages:
+  - spack:py-scotchpy
 - id: py-scp
   name: py-scp
   aliases: []
@@ -62343,6 +62432,11 @@ entities:
   aliases: []
   packages:
   - spack:rockstar
+- id: rocm
+  name: rocm
+  aliases: []
+  packages:
+  - vcpkg:rocm
 - id: rocm-bandwidth-test
   name: rocm-bandwidth-test
   aliases: []
@@ -62513,11 +62607,6 @@ entities:
   aliases: []
   packages:
   - spack:rodinia
-- id: rohit-singh-gautam-serializer
-  name: rohit-singh-gautam-serializer
-  aliases: []
-  packages:
-  - vcpkg:rohit-singh-gautam-serializer
 - id: roms
   name: roms
   aliases: []
@@ -62872,6 +62961,11 @@ entities:
   - conan:rttr
   - vcpkg:rttr
   - xmake:rttr
+- id: rtxui
+  name: rtxui
+  aliases: []
+  packages:
+  - xmake:rtxui
 - id: ruapu
   name: ruapu
   aliases: []
@@ -63188,6 +63282,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_csharp
+- id: rules-csharp-proto
+  name: rules_csharp_proto
+  aliases: []
+  packages:
+  - bazel:rules_csharp_proto
 - id: rules-cuda
   name: rules_cuda
   aliases: []
@@ -63468,6 +63567,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_jni
+- id: rules-js
+  name: rules_js
+  aliases: []
+  packages:
+  - bazel:rules_js
 - id: rules-js-rust-wasm-bindgen
   name: rules_js_rust_wasm_bindgen
   aliases: []
@@ -63558,6 +63662,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_mjml
+- id: rules-mkosi
+  name: rules_mkosi
+  aliases: []
+  packages:
+  - bazel:rules_mkosi
 - id: rules-ml-toolchain
   name: rules_ml_toolchain
   aliases: []
@@ -66327,6 +66436,11 @@ entities:
   aliases: []
   packages:
   - spack:sonlib
+- id: sonnet
+  name: sonnet
+  aliases: []
+  packages:
+  - vcpkg:sonnet
 - id: sophus
   name: sophus
   aliases: []
@@ -66807,6 +66921,11 @@ entities:
   aliases: []
   packages:
   - spack:spm
+- id: spookyhash
+  name: spookyhash
+  aliases: []
+  packages:
+  - vcpkg:spookyhash
 - id: spooles
   name: spooles
   aliases: []
@@ -66894,6 +67013,7 @@ entities:
   name: sqlite-vec
   aliases: []
   packages:
+  - vcpkg:sqlite-vec
   - xmake:sqlite-vec
 - id: sqlite3
   name: sqlite3
@@ -73827,9 +73947,13 @@ entities:
   aliases:
   - liblzma
   - xz_utils
+  - xzdec
   packages:
   - bazel:xz
   - conan:xz_utils
+  - cppget:liblzma
+  - cppget:xz
+  - cppget:xzdec
   - meson:liblzma
   - spack:xz
   - vcpkg:liblzma

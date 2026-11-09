@@ -1,5 +1,55 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: 9-t3-esN1EeZegNu
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Why are we all worked up about atomicity when applying hot-patches if we can just suspend all the threads?
+  url: https://devblogs.microsoft.com/oldnewthing/20261106-00/?p=112838/
+  published: 2026-11-06 15:00:00+00:00
+  description: Suspending all the threads stops the threads that are there now, those are not the only possible sources of change. The post Why are we all worked up about atomicity when applying hot-patches if we can just suspend all the threads? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: SGfsTK_4Vg_cVk7Q
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: You shouldn’t change the style of a Win32 static control after it has been created
+  url: https://devblogs.microsoft.com/oldnewthing/20261105-00/?p=112835/
+  published: 2026-11-05 15:00:00+00:00
+  description: It doesn't really handle that case. The post You shouldn’t change the style of a Win32 static control after it has been created appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: JrpvLcYXs_M1-cjG
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: There are things with ranks, but it’s not always clear what the ranks mean
+  url: https://devblogs.microsoft.com/oldnewthing/20261104-00/?p=112830/
+  published: 2026-11-04 15:00:00+00:00
+  description: The problem with documentation written by people who know the feature too well. The post There are things with ranks, but it’s not always clear what the ranks mean appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: imrxO50PWqqchwtM
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: How do you implement a random-access database when you don’t have random-access external storage?
+  url: https://devblogs.microsoft.com/oldnewthing/20261103-00/?p=112825/
+  published: 2026-11-03 15:00:00+00:00
+  description: You just store it all in memory, in your own program. The post How do you implement a random-access database when you don’t have random-access external storage? appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: M1ckq_wp38EhKsbR
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Sneaking into the auditorium for the Windows 2000 launch rehearsal
+  url: https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/
+  published: 2026-11-02 15:00:00+00:00
+  description: Wait, that's not him. The post Sneaking into the auditorium for the Windows 2000 launch rehearsal appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
 - post_id: pbLZNC6elUll1iqc
   source_id: oldnewthing
   source_title: The Old New Thing

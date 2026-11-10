@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: conan
 repository: https://github.com/conan-io/conan-center-index
-revision: dac5727363071a58ff7b2b137cf77837cfbe1ba4
+revision: a21d8b533ef56f100907a9fe61689204db1c58a5
 packages:
 - id: conan:7bitconf
   registry: conan
@@ -1225,6 +1225,14 @@ packages:
     - url: https://github.com/alpaka-group/alpaka/archive/refs/tags/2.1.1.tar.gz
       checksums:
       - sha256:2d30a43594c55067297947b0ec83300e4f2899497464c5cc6f142c823f3ea1b2
+  - version: 2.2.0
+    dependencies:
+    - name: boost
+    - name: cmake
+    artifacts:
+    - url: https://github.com/alpaka-group/alpaka/archive/refs/tags/2.2.0.tar.gz
+      checksums:
+      - sha256:b38dc3f461da261a746956bd84ae85c62a9b3ef13c078c94bceb9783ae94d1f2
   recipe_path: recipes/alpaka/config.yml
   native_url: https://conan.io/center/recipes/alpaka
 - id: conan:amf-headers
@@ -3551,6 +3559,131 @@ packages:
     - url: https://www.apache.org/dyn/closer.lua/arrow/arrow-26.0.0/apache-arrow-26.0.0.tar.gz?action=download
       checksums:
       - sha256:b153ef472dd89ef4cb84867ca238f2a3a9347d8f4a78913d16ca2201606f0425
+  - version: 26.0.1
+    dependencies:
+    - name: aws-sdk-cpp
+    - name: boost
+    - name: brotli
+    - name: bzip2
+    - name: cmake
+    - name: gflags
+    - name: glog
+    - name: google-cloud-cpp
+    - name: grpc
+    - name: jemalloc
+    - name: libbacktrace
+    - name: llvm-core
+    - name: lz4
+    - name: mimalloc
+    - name: openssl
+    - name: opentelemetry-cpp
+    - name: orc
+    - name: protobuf
+    - name: rapidjson
+    - name: re2
+    - name: simdjson
+    - name: snappy
+    - name: thrift
+    - name: uriparser
+    - name: utf8proc
+    - name: xsimd
+    - name: zlib
+    - name: zstd
+    features:
+    - name: acero
+      default: 'false'
+    - name: cli
+      default: 'false'
+    - name: compute
+      default: 'false'
+    - name: dataset_modules
+      default: 'false'
+    - name: deprecated
+      default: 'true'
+    - name: encryption
+      default: 'false'
+    - name: fPIC
+      default: 'true'
+    - name: filesystem_layer
+      default: 'true'
+    - name: gandiva
+      default: 'false'
+    - name: hdfs_bridgs
+      default: 'false'
+    - name: parquet
+      default: 'true'
+    - name: plasma
+      default: deprecated
+    - name: runtime_simd_level
+      default: max
+    - name: shared
+      default: 'false'
+    - name: simd_level
+      default: default
+    - name: skyhook
+      default: 'false'
+    - name: substrait
+      default: 'false'
+    - name: with_backtrace
+      default: 'false'
+    - name: with_boost
+      default: 'true'
+    - name: with_brotli
+      default: 'false'
+    - name: with_bz2
+      default: 'false'
+    - name: with_csv
+      default: 'false'
+    - name: with_cuda
+      default: 'false'
+    - name: with_flight_rpc
+      default: 'false'
+    - name: with_flight_sql
+      default: 'false'
+    - name: with_gcs
+      default: 'false'
+    - name: with_gflags
+      default: 'false'
+    - name: with_glog
+      default: 'false'
+    - name: with_grpc
+      default: 'false'
+    - name: with_jemalloc
+      default: 'false'
+    - name: with_json
+      default: 'false'
+    - name: with_llvm
+      default: 'false'
+    - name: with_lz4
+      default: 'false'
+    - name: with_mimalloc
+      default: 'true'
+    - name: with_openssl
+      default: 'false'
+    - name: with_opentelemetry
+      default: 'false'
+    - name: with_orc
+      default: 'false'
+    - name: with_protobuf
+      default: 'false'
+    - name: with_re2
+      default: 'false'
+    - name: with_s3
+      default: 'false'
+    - name: with_snappy
+      default: 'false'
+    - name: with_thrift
+      default: 'true'
+    - name: with_utf8proc
+      default: 'false'
+    - name: with_zlib
+      default: 'true'
+    - name: with_zstd
+      default: 'false'
+    artifacts:
+    - url: https://www.apache.org/dyn/closer.lua/arrow/arrow-26.0.1/apache-arrow-26.0.1.tar.gz?action=download
+      checksums:
+      - sha256:1dd1b6701d9de58a4ed82b107539682f46ef6b9e22747e18e03204125c05a987
   recipe_path: recipes/arrow/config.yml
   native_url: https://conan.io/center/recipes/arrow
 - id: conan:arsenalgear
@@ -8521,6 +8654,16 @@ packages:
     - url: https://github.com/aklomp/base64/archive/v0.5.2.tar.gz
       checksums:
       - sha256:723a0f9f4cf44cf79e97bcc315ec8f85e52eb104c8882942c3f2fba95acc080d
+  - version: 0.5.3
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/aklomp/base64/archive/v0.5.3.tar.gz
+      checksums:
+      - sha256:74f83a5396660dfe5a09f0339982c03c44ef018e459a8bfcde8b31ca7444aa42
   recipe_path: recipes/base64/config.yml
   native_url: https://conan.io/center/recipes/base64
 - id: conan:basu
@@ -8969,6 +9112,25 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
+  - version: 1.10.0
+    dependencies:
+    - name: cmake
+    - name: libpfm4
+    features:
+    - name: enable_exceptions
+      default: 'true'
+    - name: enable_libpfm
+      default: 'false'
+    - name: enable_lto
+      default: 'false'
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/google/benchmark/archive/v1.10.0.tar.gz
+      checksums:
+      - sha256:acc5c7c0fbed855c4aaa2d7c3c36fb82b0c15c28f4e151e3f679c2fc0aa404af
   - version: 1.8.4
     dependencies:
     - name: cmake
@@ -12527,71 +12689,6 @@ packages:
     - url: https://github.com/randombit/botan/archive/2.19.5.tar.gz
       checksums:
       - sha256:8d4a3826787f9febbdc225172ad2d39d7d3960346c5721fe46cb27d480d7e1de
-  - version: 3.12.0
-    dependencies:
-    - name: boost
-    - name: bzip2
-    - name: sqlite3
-    - name: zlib
-    features:
-    - name: amalgamation
-      default: 'false'
-    - name: disable_modules
-      default: 'null'
-    - name: enable_deprecated_features
-      default: 'true'
-    - name: enable_experimental_features
-      default: 'false'
-    - name: enable_modules
-      default: 'null'
-    - name: fPIC
-      default: 'true'
-    - name: module_policy
-      default: 'null'
-    - name: shared
-      default: 'false'
-    - name: system_cert_bundle
-      default: 'null'
-    - name: with_aes_ni
-      default: 'true'
-    - name: with_altivec
-      default: 'true'
-    - name: with_armv8crypto
-      default: 'true'
-    - name: with_avx2
-      default: 'true'
-    - name: with_bmi2
-      default: 'true'
-    - name: with_boost
-      default: 'false'
-    - name: with_bzip2
-      default: 'false'
-    - name: with_neon
-      default: 'true'
-    - name: with_powercrypto
-      default: 'true'
-    - name: with_rdrand
-      default: 'true'
-    - name: with_rdseed
-      default: 'true'
-    - name: with_sha_ni
-      default: 'true'
-    - name: with_sqlite3
-      default: 'false'
-    - name: with_sse2
-      default: 'true'
-    - name: with_sse4_1
-      default: 'true'
-    - name: with_sse4_2
-      default: 'true'
-    - name: with_ssse3
-      default: 'true'
-    - name: with_zlib
-      default: 'false'
-    artifacts:
-    - url: https://github.com/randombit/botan/archive/3.12.0.tar.gz
-      checksums:
-      - sha256:cf152f47723876a7b8544925fc37183089933b95b9b30f41e79ab2f263ab7995
   - version: 3.13.0
     dependencies:
     - name: boost
@@ -12657,6 +12754,71 @@ packages:
     - url: https://github.com/randombit/botan/archive/3.13.0.tar.gz
       checksums:
       - sha256:9fbff1cd4fe7caff9bc146304dabf551e05a8beefdf03062b63d02cbb61f2e22
+  - version: 3.14.0
+    dependencies:
+    - name: boost
+    - name: bzip2
+    - name: sqlite3
+    - name: zlib
+    features:
+    - name: amalgamation
+      default: 'false'
+    - name: disable_modules
+      default: 'null'
+    - name: enable_deprecated_features
+      default: 'true'
+    - name: enable_experimental_features
+      default: 'false'
+    - name: enable_modules
+      default: 'null'
+    - name: fPIC
+      default: 'true'
+    - name: module_policy
+      default: 'null'
+    - name: shared
+      default: 'false'
+    - name: system_cert_bundle
+      default: 'null'
+    - name: with_aes_ni
+      default: 'true'
+    - name: with_altivec
+      default: 'true'
+    - name: with_armv8crypto
+      default: 'true'
+    - name: with_avx2
+      default: 'true'
+    - name: with_bmi2
+      default: 'true'
+    - name: with_boost
+      default: 'false'
+    - name: with_bzip2
+      default: 'false'
+    - name: with_neon
+      default: 'true'
+    - name: with_powercrypto
+      default: 'true'
+    - name: with_rdrand
+      default: 'true'
+    - name: with_rdseed
+      default: 'true'
+    - name: with_sha_ni
+      default: 'true'
+    - name: with_sqlite3
+      default: 'false'
+    - name: with_sse2
+      default: 'true'
+    - name: with_sse4_1
+      default: 'true'
+    - name: with_sse4_2
+      default: 'true'
+    - name: with_ssse3
+      default: 'true'
+    - name: with_zlib
+      default: 'false'
+    artifacts:
+    - url: https://github.com/randombit/botan/archive/3.14.0.tar.gz
+      checksums:
+      - sha256:1c129721621920ffa33b8e150090dd32b850463b98f5b0e034d7ae17c5813669
   - version: 3.7.1+rscs1
     dependencies:
     - name: boost
@@ -13965,7 +14127,7 @@ packages:
     - url: https://github.com/Blosc/c-blosc2/archive/v2.23.1.tar.gz
       checksums:
       - sha256:3a1a55d1e3794fb2b51a12e722d611b3e577443abb7ff9951666511f576ea3da
-  - version: 3.1.2
+  - version: 3.4.1
     dependencies:
     - name: cmake
     - name: lz4
@@ -13988,9 +14150,9 @@ packages:
     - name: with_zstd
       default: 'true'
     artifacts:
-    - url: https://github.com/Blosc/c-blosc2/archive/v3.1.2.tar.gz
+    - url: https://github.com/Blosc/c-blosc2/archive/v3.4.1.tar.gz
       checksums:
-      - sha256:b4fbad51de56abf2f4660bd1cb9801bc044662db3ea009ede454b4fd36fd98eb
+      - sha256:a7abc7c2b31e42fb659b11aa960a3a1a1329a9a1d724574138a97b575574ed49
   recipe_path: recipes/c-blosc2/config.yml
   native_url: https://conan.io/center/recipes/c-blosc2
 - id: conan:c-client
@@ -17014,56 +17176,6 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 2.1.0
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/team-charls/charls/archive/2.1.0.tar.gz
-      checksums:
-      - sha256:0d6af23928ba4f1205b1b74754111e5f5f6b47d192199ffa7a70d14b824ad97d
-  - version: 2.2.0
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/team-charls/charls/archive/2.2.0.tar.gz
-      checksums:
-      - sha256:e1d7dd70cd9d6d46de5abbf22278dc8169707995a21e8bf705f5746c04c76891
-  - version: 2.3.4
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/team-charls/charls/archive/2.3.4.tar.gz
-      checksums:
-      - sha256:28e895a6e22daee76c24cf4d36c62bb20fd60fad0c9cfefc2eb8fa9b6045ae84
-  - version: 2.4.0
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/team-charls/charls/archive/2.4.0.tar.gz
-      checksums:
-      - sha256:721f4fd6a8dc3ec6a334d1c3c15d1cb9faa149afddd0eff703466c20e775c294
-  - version: 2.4.1
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/team-charls/charls/archive/2.4.1.tar.gz
-      checksums:
-      - sha256:f313f556b5acb9215961d9718c21235aafcd43bce6b357bf66f772e5692bba75
   - version: 2.4.2
     features:
     - name: fPIC
@@ -17074,16 +17186,16 @@ packages:
     - url: https://github.com/team-charls/charls/archive/2.4.2.tar.gz
       checksums:
       - sha256:d1c2c35664976f1e43fec7764d72755e6a50a80f38eca70fcc7553cad4fe19d9
-  - version: 2.4.4
+  - version: 2.4.5
     features:
     - name: fPIC
       default: 'true'
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/team-charls/charls/archive/2.4.4.tar.gz
+    - url: https://github.com/team-charls/charls/archive/2.4.5.tar.gz
       checksums:
-      - sha256:fbd712903d61306ad00d5fa5029a9882630c7311ca487f48d2d76000956e8ff9
+      - sha256:b55c742ef96b5e9d63f813a75d0ba29944302abb5a6ab59756ad61fa017b1dd3
   recipe_path: recipes/charls/config.yml
   native_url: https://conan.io/center/recipes/charls
 - id: conan:chef-fun
@@ -20002,35 +20114,6 @@ packages:
     - url: https://github.com/yhirose/cpp-httplib/archive/v0.28.0.tar.gz
       checksums:
       - sha256:ccb32f9832c906d571f61794f453223dbb724ba738265551e3cd28ca325b529d
-  - version: 0.47.0
-    dependencies:
-    - name: brotli
-    - name: mbedtls
-    - name: openssl
-    - name: wolfssl
-    - name: zlib
-    - name: zstd
-    features:
-    - name: use_macos_keychain_certs
-      default: 'true'
-    - name: use_non_blocking_getaddrinfo
-      default: 'true'
-    - name: with_brotli
-      default: 'false'
-    - name: with_mbedtls
-      default: 'false'
-    - name: with_openssl
-      default: 'false'
-    - name: with_wolfssl
-      default: 'false'
-    - name: with_zlib
-      default: 'false'
-    - name: with_zstd
-      default: 'false'
-    artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/v0.47.0.tar.gz
-      checksums:
-      - sha256:f6676dd6539c1d05978aa8ecfae86d71e73c46f48c7766a04b991aa545c2f065
   - version: 0.53.1
     dependencies:
     - name: brotli
@@ -20060,35 +20143,6 @@ packages:
     - url: https://github.com/yhirose/cpp-httplib/archive/v0.53.1.tar.gz
       checksums:
       - sha256:185af9587e270de9a3bfee234c6740f02e82265da33c7a41f97e02ee42f979d2
-  - version: 0.56.0
-    dependencies:
-    - name: brotli
-    - name: mbedtls
-    - name: openssl
-    - name: wolfssl
-    - name: zlib
-    - name: zstd
-    features:
-    - name: use_macos_keychain_certs
-      default: 'true'
-    - name: use_non_blocking_getaddrinfo
-      default: 'true'
-    - name: with_brotli
-      default: 'false'
-    - name: with_mbedtls
-      default: 'false'
-    - name: with_openssl
-      default: 'false'
-    - name: with_wolfssl
-      default: 'false'
-    - name: with_zlib
-      default: 'false'
-    - name: with_zstd
-      default: 'false'
-    artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/v0.56.0.tar.gz
-      checksums:
-      - sha256:41f214d844e3b9117b734a8cc305b6141c5b47d63009681944e03bc31d92b9ca
   - version: 0.59.0
     dependencies:
     - name: brotli
@@ -20118,35 +20172,6 @@ packages:
     - url: https://github.com/yhirose/cpp-httplib/archive/v0.59.0.tar.gz
       checksums:
       - sha256:7c8cc7df044abb837d75f7c1e56333305acb40335c3788b8f5fbf5927e63e148
-  - version: 0.61.0
-    dependencies:
-    - name: brotli
-    - name: mbedtls
-    - name: openssl
-    - name: wolfssl
-    - name: zlib
-    - name: zstd
-    features:
-    - name: use_macos_keychain_certs
-      default: 'true'
-    - name: use_non_blocking_getaddrinfo
-      default: 'true'
-    - name: with_brotli
-      default: 'false'
-    - name: with_mbedtls
-      default: 'false'
-    - name: with_openssl
-      default: 'false'
-    - name: with_wolfssl
-      default: 'false'
-    - name: with_zlib
-      default: 'false'
-    - name: with_zstd
-      default: 'false'
-    artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/v0.61.0.tar.gz
-      checksums:
-      - sha256:f03bdb0bee4911d6db0335bc103f0f441ae70c527e993c1f4b3f177586b042d3
   - version: 0.62.0
     dependencies:
     - name: brotli
@@ -20176,6 +20201,35 @@ packages:
     - url: https://github.com/yhirose/cpp-httplib/archive/v0.62.0.tar.gz
       checksums:
       - sha256:7bba5949c56e772236432f69da03197fd4c12dc443455b9d81f6a05575431fc8
+  - version: 0.65.0
+    dependencies:
+    - name: brotli
+    - name: mbedtls
+    - name: openssl
+    - name: wolfssl
+    - name: zlib
+    - name: zstd
+    features:
+    - name: use_macos_keychain_certs
+      default: 'true'
+    - name: use_non_blocking_getaddrinfo
+      default: 'true'
+    - name: with_brotli
+      default: 'false'
+    - name: with_mbedtls
+      default: 'false'
+    - name: with_openssl
+      default: 'false'
+    - name: with_wolfssl
+      default: 'false'
+    - name: with_zlib
+      default: 'false'
+    - name: with_zstd
+      default: 'false'
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/v0.65.0.tar.gz
+      checksums:
+      - sha256:6fda8f23ff811a751c2b6e694fe2f1aa1625df53a317110329ef57a18f9fa5fb
   recipe_path: recipes/cpp-httplib/config.yml
   native_url: https://conan.io/center/recipes/cpp-httplib
 - id: conan:cpp-ipc
@@ -21127,6 +21181,52 @@ packages:
       - sha256:45770ae0404cb9ba73d659618c51cd55b574c66ed3c7b148360222fb524b0ff7
   recipe_path: recipes/cppkafka/config.yml
   native_url: https://conan.io/center/recipes/cppkafka
+- id: conan:cppmicroservices
+  registry: conan
+  name: cppmicroservices
+  summary: An OSGi-like C++ dynamic module system and service registry
+  licenses:
+  - Apache-2.0
+  homepage: https://cppmicroservices.org/
+  repository_url: https://github.com/cppmicroservices/cppmicroservices
+  topics:
+  - microservice
+  - microservices-framework
+  - osgi
+  package_type: library
+  dependencies:
+  - boost
+  - cli11
+  - cmake
+  - miniz
+  - rapidjson
+  - spdlog
+  options:
+  - fPIC
+  - shared
+  default_options:
+    fPIC: 'true'
+    shared: 'false'
+  versions:
+  - version: 3.8.13
+    dependencies:
+    - name: boost
+    - name: cli11
+    - name: cmake
+    - name: miniz
+    - name: rapidjson
+    - name: spdlog
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/CppMicroServices/CppMicroServices/archive/refs/tags/v3.8.13.tar.gz
+      checksums:
+      - sha256:cefe869a8f504d118f190cfdb2503ffb8c422feb7de4cf1131401fade8165336
+  recipe_path: recipes/cppmicroservices/config.yml
+  native_url: https://conan.io/center/recipes/cppmicroservices
 - id: conan:cpprestsdk
   registry: conan
   name: cpprestsdk
@@ -24261,21 +24361,27 @@ packages:
   package_type: library
   dependencies:
   - cmake
+  - directx-headers
   options:
   - shared
+  - with_dxheaders
   default_options:
     shared: 'false'
+    with_dxheaders: 'false'
   versions:
-  - version: 3.0.1
+  - version: 3.2.1
     dependencies:
     - name: cmake
+    - name: directx-headers
     features:
     - name: shared
       default: 'false'
+    - name: with_dxheaders
+      default: 'false'
     artifacts:
-    - url: https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/refs/tags/v3.0.1.tar.gz
+    - url: https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/refs/tags/v3.2.1.tar.gz
       checksums:
-      - sha256:5182c59068e31183490f5c28b7257e6d46bdeb91c215eb54eb88b2ed4683f4a2
+      - sha256:2f259ebef317ca3c9ec9cce4c0c9e138dd2ca287087332259c79ddec0fdd1483
   recipe_path: recipes/d3d12-memory-allocator/config.yml
   native_url: https://conan.io/center/recipes/d3d12-memory-allocator
 - id: conan:dacap-clip
@@ -25367,7 +25473,7 @@ packages:
     - url: https://dicom.offis.de/download/dcmtk/dcmtk367/dcmtk-3.6.7.tar.gz
       checksums:
       - sha256:7c58298e3e8d60232ee6fc8408cfadd14463cc11a3c4ca4c59af5988c7e9710a
-  - version: 3.7.0
+  - version: 3.7.1
     dependencies:
     - name: icu
     - name: libiconv
@@ -25415,9 +25521,9 @@ packages:
     - name: with_zlib
       default: 'true'
     artifacts:
-    - url: https://dicom.offis.de/download/dcmtk/dcmtk370/dcmtk-3.7.0.tar.gz
+    - url: https://dicom.offis.de/download/dcmtk/dcmtk371/dcmtk-3.7.1.tar.gz
       checksums:
-      - sha256:f103df876040a4f904f01d2464f7868b4feb659d8cd3f46a5f1f61aa440be415
+      - sha256:eb8ea1ae79a8423033efec28ebb2306a2bbb9d59bad1c6e529f3d50015276afc
   recipe_path: recipes/dcmtk/config.yml
   native_url: https://conan.io/center/recipes/dcmtk
 - id: conan:dd-opentracing-cpp
@@ -25961,17 +26067,18 @@ packages:
   homepage: https://github.com/DiligentGraphics/DiligentCore
   repository_url: https://github.com/diligentgraphics/diligentcore
   topics:
+  - directx
   - graphics
-  package_type: None
+  - opengl
+  - openxr
+  - raytracing
+  - shaders
+  - vulkan
+  package_type: library
   dependencies:
   - cmake
-  - glslang
+  - glew
   - opengl
-  - spirv-cross
-  - spirv-tools
-  - volk
-  - vulkan-headers
-  - vulkan-validationlayers
   - wayland
   - xkbcommon
   - xorg
@@ -25985,16 +26092,11 @@ packages:
     shared: 'false'
     with_glslang: 'true'
   versions:
-  - version: 2.5.1
+  - version: api.256019
     dependencies:
     - name: cmake
-    - name: glslang
+    - name: glew
     - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
     - name: wayland
     - name: xkbcommon
     - name: xorg
@@ -26007,159 +26109,9 @@ packages:
     - name: with_glslang
       default: 'true'
     artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/v2.5.1.tar.gz
+    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/API256019.tar.gz
       checksums:
-      - sha256:56a577d5273539f88cc27fb74ab61e42f407da77ef4d0876f83a9f8e763c0f64
-  - version: 2.5.2
-    dependencies:
-    - name: cmake
-    - name: glslang
-    - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
-    - name: wayland
-    - name: xkbcommon
-    - name: xorg
-    - name: xxhash
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_glslang
-      default: 'true'
-    artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/v2.5.2.tar.gz
-      checksums:
-      - sha256:6767a6b4f5750c3801ccdba8f7793ac79fa429c8d4518d79717f68ef9dd0ed2a
-  - version: api.250014
-    dependencies:
-    - name: cmake
-    - name: glslang
-    - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
-    - name: wayland
-    - name: xkbcommon
-    - name: xorg
-    - name: xxhash
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_glslang
-      default: 'true'
-    artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/API250014.tar.gz
-      checksums:
-      - sha256:8f85fc55c6241f9215875df58a077f797e9134c9b51f330f1489df91d8553b7d
-  - version: api.252003
-    dependencies:
-    - name: cmake
-    - name: glslang
-    - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
-    - name: wayland
-    - name: xkbcommon
-    - name: xorg
-    - name: xxhash
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_glslang
-      default: 'true'
-    artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/API252003.tar.gz
-      checksums:
-      - sha256:18f17eaa0b6425022be4019c61fede441b9feec4b94c2b7e8ab73d86a7f6a913
-  - version: api.252004
-    dependencies:
-    - name: cmake
-    - name: glslang
-    - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
-    - name: wayland
-    - name: xkbcommon
-    - name: xorg
-    - name: xxhash
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_glslang
-      default: 'true'
-    artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/API252004.tar.gz
-      checksums:
-      - sha256:06e4ee5f95163ae74bbe62f59dcdf1da5e181ff2d6a8e3982319bb5c8f97c53b
-  - version: api.252005
-    dependencies:
-    - name: cmake
-    - name: glslang
-    - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
-    - name: wayland
-    - name: xkbcommon
-    - name: xorg
-    - name: xxhash
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_glslang
-      default: 'true'
-    artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/API252005.tar.gz
-      checksums:
-      - sha256:20d164b36ec6ff6f1ef69aa44210bb46f3244af1c0d9538ac3758ca2437fb2e1
-  - version: api.252009
-    dependencies:
-    - name: cmake
-    - name: glslang
-    - name: opengl
-    - name: spirv-cross
-    - name: spirv-tools
-    - name: volk
-    - name: vulkan-headers
-    - name: vulkan-validationlayers
-    - name: wayland
-    - name: xkbcommon
-    - name: xorg
-    - name: xxhash
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_glslang
-      default: 'true'
-    artifacts:
-    - url: https://github.com/DiligentGraphics/DiligentCore/archive/refs/tags/API252009.tar.gz
-      checksums:
-      - sha256:48d62ba72551166ea47eec4d2ad0589811e51c76c40d1998ad5049096efe8c19
+      - sha256:0acb449dc4ebf937dd7590e195efce895fc0334bdc3e3f8ef1baa939fdf5e395
   recipe_path: recipes/diligent-core/config.yml
   native_url: https://conan.io/center/recipes/diligent-core
 - id: conan:diligent-fx
@@ -30676,96 +30628,6 @@ packages:
     with_png: 'true'
     with_xmp: bundled
   versions:
-  - version: 0.27.5
-    dependencies:
-    - name: brotli
-    - name: expat
-    - name: inih
-    - name: libcurl
-    - name: libiconv
-    - name: libpng
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: win_unicode
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_curl
-      default: 'false'
-    - name: with_inih
-      default: 'true'
-    - name: with_png
-      default: 'true'
-    - name: with_xmp
-      default: bundled
-    artifacts:
-    - url: https://github.com/Exiv2/exiv2/releases/download/v0.27.5/exiv2-0.27.5-Source.tar.gz
-      checksums:
-      - sha256:35a58618ab236a901ca4928b0ad8b31007ebdc0386d904409d825024e45ea6e2
-  - version: 0.28.1
-    dependencies:
-    - name: brotli
-    - name: expat
-    - name: inih
-    - name: libcurl
-    - name: libiconv
-    - name: libpng
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: win_unicode
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_curl
-      default: 'false'
-    - name: with_inih
-      default: 'true'
-    - name: with_png
-      default: 'true'
-    - name: with_xmp
-      default: bundled
-    artifacts:
-    - url: https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.1.tar.gz
-      checksums:
-      - sha256:3078651f995cb6313b1041f07f4dd1bf0e9e4d394d6e2adc6e92ad0b621291fa
-  - version: 0.28.2
-    dependencies:
-    - name: brotli
-    - name: expat
-    - name: inih
-    - name: libcurl
-    - name: libiconv
-    - name: libpng
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: win_unicode
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_curl
-      default: 'false'
-    - name: with_inih
-      default: 'true'
-    - name: with_png
-      default: 'true'
-    - name: with_xmp
-      default: bundled
-    artifacts:
-    - url: https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.2.tar.gz
-      checksums:
-      - sha256:543bead934135f20f438e0b6d8858c55c5fcb7ff80f5d1d55489965f1aad58b9
   - version: 0.28.3
     dependencies:
     - name: brotli
@@ -30823,6 +30685,22 @@ packages:
     large_size: 'false'
     shared: 'false'
   versions:
+  - version: 2.10.0
+    dependencies:
+    - name: cmake
+    features:
+    - name: char_type
+      default: char
+    - name: fPIC
+      default: 'true'
+    - name: large_size
+      default: 'false'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/libexpat/libexpat/releases/download/R_2_10_0/expat-2.10.0.tar.xz
+      checksums:
+      - sha256:c624ba2998fc65df1163a49641ff3f9ab73138b11641d92c86bee0fb01b1bc7f
   - version: 2.4.8
     dependencies:
     - name: cmake
@@ -32698,7 +32576,7 @@ packages:
     - url: https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz
       checksums:
       - sha256:464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c
-  - version: 9.0.1
+  - version: 9.0.2
     dependencies:
     - name: bzip2
     - name: dav1d
@@ -32922,9 +32800,9 @@ packages:
     - name: with_zlib
       default: 'true'
     artifacts:
-    - url: https://ffmpeg.org/releases/ffmpeg-9.0.1.tar.xz
+    - url: https://ffmpeg.org/releases/ffmpeg-9.0.2.tar.xz
       checksums:
-      - sha256:cf38e0e28c7e5605942c4a77755349b0145804a397af37eb1fb4c77cb237f635
+      - sha256:8c3850283eb25fa026482078a04051e0be17347b09ef81a0849bec15a96e002e
   recipe_path: recipes/ffmpeg/config.yml
   native_url: https://conan.io/center/recipes/ffmpeg
 - id: conan:fft
@@ -33588,11 +33466,11 @@ packages:
   - zero-copy
   package_type: header-library
   versions:
-  - version: 1.6.0
+  - version: 1.7.0
     artifacts:
-    - url: https://github.com/chusitoo/flatbush/archive/refs/tags/v1.6.0.zip
+    - url: https://github.com/chusitoo/flatbush/archive/refs/tags/v1.7.0.zip
       checksums:
-      - sha256:ae411d51e708be2fd4df760faaf6446f9677a67fbd9791e6462c19d7e15c46ad
+      - sha256:06f08419c882dfa6b02ac430ad69966db024127a002268c2f56c2da8abf5e087
   recipe_path: recipes/flatbush/config.yml
   native_url: https://conan.io/center/recipes/flatbush
 - id: conan:flatc
@@ -35501,78 +35379,6 @@ packages:
     with_png: 'true'
     with_zlib: 'true'
   versions:
-  - version: 2.10.4
-    dependencies:
-    - name: brotli
-    - name: bzip2
-    - name: libpng
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: subpixel
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_bzip2
-      default: 'true'
-    - name: with_png
-      default: 'true'
-    - name: with_zlib
-      default: 'true'
-    artifacts:
-    - url: https://download.savannah.gnu.org/releases/freetype/freetype-2.10.4.tar.xz
-    - url: https://sourceforge.net/projects/freetype/files/freetype2/2.10.4/freetype-2.10.4.tar.xz
-  - version: 2.11.1
-    dependencies:
-    - name: brotli
-    - name: bzip2
-    - name: libpng
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: subpixel
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_bzip2
-      default: 'true'
-    - name: with_png
-      default: 'true'
-    - name: with_zlib
-      default: 'true'
-    artifacts:
-    - url: https://download.savannah.gnu.org/releases/freetype/freetype-2.11.1.tar.xz
-    - url: https://sourceforge.net/projects/freetype/files/freetype2/2.11.1/freetype-2.11.1.tar.xz
-  - version: 2.12.1
-    dependencies:
-    - name: brotli
-    - name: bzip2
-    - name: libpng
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: subpixel
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_bzip2
-      default: 'true'
-    - name: with_png
-      default: 'true'
-    - name: with_zlib
-      default: 'true'
-    artifacts:
-    - url: https://download.savannah.gnu.org/releases/freetype/freetype-2.12.1.tar.xz
-    - url: https://sourceforge.net/projects/freetype/files/freetype2/2.12.1/freetype-2.12.1.tar.xz
   - version: 2.13.2
     dependencies:
     - name: brotli
@@ -38865,6 +38671,13 @@ packages:
     - url: https://github.com/stephenberry/glaze/archive/refs/tags/v8.4.0.tar.gz
       checksums:
       - sha256:4ee6f2ec68e8c763553d6a16e0d79cd51fac7c58cbd98783760f418ce82c9a91
+  - version: 9.1.0
+    dependencies:
+    - name: cmake
+    artifacts:
+    - url: https://github.com/stephenberry/glaze/archive/refs/tags/v9.1.0.tar.gz
+      checksums:
+      - sha256:55f8a675397c505f9bee6c160e1c26b0085868f185d04d7a7727531fdbff4bd4
   recipe_path: recipes/glaze/config.yml
   native_url: https://conan.io/center/recipes/glaze
 - id: conan:glbinding
@@ -40008,37 +39821,6 @@ packages:
     with_zlib: 'true'
     with_zstd: 'true'
   versions:
-  - version: 3.7.8
-    dependencies:
-    - name: brotli
-    - name: gmp
-    - name: libiconv
-    - name: msys2
-    - name: nettle
-    - name: pkgconf
-    - name: zlib
-    - name: zstd
-    features:
-    - name: enable_cxx
-      default: 'true'
-    - name: enable_openssl_compatibility
-      default: 'false'
-    - name: enable_tools
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_brotli
-      default: 'true'
-    - name: with_zlib
-      default: 'true'
-    - name: with_zstd
-      default: 'true'
-    artifacts:
-    - url: http://www.ring.gr.jp/pub/net/gnupg/gnutls/v3.7/gnutls-3.7.8.tar.xz
-    - url: https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz
-    - url: https://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/gnutls/v3.7/gnutls-3.7.8.tar.xz
   - version: 3.8.2
     dependencies:
     - name: brotli
@@ -42644,8 +42426,10 @@ packages:
   - gettext
   - glib
   - icu
+  - libpng
   - meson
   - pkgconf
+  - zlib
   options:
   - fPIC
   - shared
@@ -42655,8 +42439,10 @@ packages:
   - with_gdi
   - with_glib
   - with_icu
+  - with_png
   - with_subset
   - with_uniscribe
+  - with_zlib
   default_options:
     fPIC: 'true'
     shared: 'false'
@@ -42666,17 +42452,21 @@ packages:
     with_gdi: 'true'
     with_glib: 'true'
     with_icu: 'false'
+    with_png: 'true'
     with_subset: 'true'
     with_uniscribe: 'true'
+    with_zlib: 'true'
   versions:
-  - version: 12.3.0
+  - version: 15.0.0
     dependencies:
     - name: freetype
     - name: gettext
     - name: glib
     - name: icu
+    - name: libpng
     - name: meson
     - name: pkgconf
+    - name: zlib
     features:
     - name: fPIC
       default: 'true'
@@ -42694,14 +42484,18 @@ packages:
       default: 'true'
     - name: with_icu
       default: 'false'
+    - name: with_png
+      default: 'true'
     - name: with_subset
       default: 'true'
     - name: with_uniscribe
       default: 'true'
+    - name: with_zlib
+      default: 'true'
     artifacts:
-    - url: https://github.com/harfbuzz/harfbuzz/releases/download/12.3.0/harfbuzz-12.3.0.tar.xz
+    - url: https://github.com/harfbuzz/harfbuzz/releases/download/15.0.0/harfbuzz-15.0.0.tar.xz
       checksums:
-      - sha256:8660ebd3c27d9407fc8433b5d172bafba5f0317cb0bb4339f28e5370c93d42b7
+      - sha256:968536e9abd782f07f7954044c0c4020199fcdd39b41d221ec42d2a3be4a44df
   recipe_path: recipes/harfbuzz/config.yml
   native_url: https://conan.io/center/recipes/harfbuzz
 - id: conan:hash-library
@@ -43010,6 +42804,41 @@ packages:
     - url: https://github.com/HDFGroup/hdf5/archive/refs/tags/hdf5_1.14.6.tar.gz
       checksums:
       - sha256:09ee1c671a87401a5201c06106650f62badeea5a3b3941e9b1e2e1e08317357f
+  - version: 2.2.0
+    dependencies:
+    - name: cmake
+    - name: libaec
+    - name: openmpi
+    - name: szip
+    - name: zlib
+    - name: zlib-ng
+    features:
+    - name: enable_cxx
+      default: 'true'
+    - name: enable_unsupported
+      default: 'false'
+    - name: fPIC
+      default: 'true'
+    - name: hl
+      default: 'true'
+    - name: parallel
+      default: 'false'
+    - name: shared
+      default: 'false'
+    - name: szip_encoding
+      default: 'false'
+    - name: szip_support
+      default: 'null'
+    - name: threadsafe
+      default: 'false'
+    - name: with_zlib
+      default: 'true'
+    - name: with_zlibng
+      default: 'false'
+    artifacts:
+    - url: https://github.com/HDFGroup/hdf5/archive/refs/tags/2.2.0.tar.gz
+      checksums:
+      - sha256:5b8d75125ae7b4fef55d3b39e8d3dbfd238cdf63b6518afd67fa69ac80f06542
   recipe_path: recipes/hdf5/config.yml
   native_url: https://conan.io/center/recipes/hdf5
 - id: conan:hdrhistogram-c
@@ -45040,14 +44869,15 @@ packages:
   licenses:
   - ImageMagick
   homepage: https://imagemagick.org
+  repository_url: https://github.com/imagemagick/imagemagick
   topics:
-  - imagemagick
   - images
   - manipulating
+  package_type: library
   dependencies:
   - bzip2
+  - fontconfig
   - freetype
-  - jbig
   - lcms
   - libheif
   - libjpeg
@@ -45059,6 +44889,7 @@ packages:
   - openexr
   - openjpeg
   - pango
+  - pkgconf
   - xz_utils
   - zlib
   options:
@@ -45067,50 +44898,38 @@ packages:
   - quantum_depth
   - shared
   - utilities
-  - with_bzlib
-  - with_djvu
   - with_freetype
   - with_heic
-  - with_jbig
   - with_jpeg
   - with_lcms
-  - with_lzma
   - with_openexr
   - with_openjp2
   - with_pango
-  - with_png
   - with_tiff
   - with_webp
   - with_xml2
-  - with_zlib
   default_options:
     fPIC: 'true'
     hdri: 'true'
     quantum_depth: '16'
     shared: 'false'
     utilities: 'true'
-    with_bzlib: 'true'
-    with_djvu: 'false'
     with_freetype: 'true'
     with_heic: 'true'
-    with_jbig: 'true'
     with_jpeg: libjpeg
     with_lcms: 'true'
-    with_lzma: 'true'
     with_openexr: 'true'
     with_openjp2: 'true'
     with_pango: 'true'
-    with_png: 'true'
     with_tiff: 'true'
     with_webp: 'false'
     with_xml2: 'true'
-    with_zlib: 'true'
   versions:
-  - version: 7.0.11-14
+  - version: 7.1.2.35
     dependencies:
     - name: bzip2
+    - name: fontconfig
     - name: freetype
-    - name: jbig
     - name: lcms
     - name: libheif
     - name: libjpeg
@@ -45122,6 +44941,7 @@ packages:
     - name: openexr
     - name: openjpeg
     - name: pango
+    - name: pkgconf
     - name: xz_utils
     - name: zlib
     features:
@@ -45135,21 +44955,13 @@ packages:
       default: 'false'
     - name: utilities
       default: 'true'
-    - name: with_bzlib
-      default: 'true'
-    - name: with_djvu
-      default: 'false'
     - name: with_freetype
       default: 'true'
     - name: with_heic
       default: 'true'
-    - name: with_jbig
-      default: 'true'
     - name: with_jpeg
       default: libjpeg
     - name: with_lcms
-      default: 'true'
-    - name: with_lzma
       default: 'true'
     - name: with_openexr
       default: 'true'
@@ -45157,16 +44969,16 @@ packages:
       default: 'true'
     - name: with_pango
       default: 'true'
-    - name: with_png
-      default: 'true'
     - name: with_tiff
       default: 'true'
     - name: with_webp
       default: 'false'
     - name: with_xml2
       default: 'true'
-    - name: with_zlib
-      default: 'true'
+    artifacts:
+    - url: https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-35/ImageMagick-7.1.2-35.tar.xz
+      checksums:
+      - sha256:9554556c8cbf7d347cbd6bedae931ccf323a2bd5e0f08d4834856568ee19f080
   recipe_path: recipes/imagemagick/config.yml
   native_url: https://conan.io/center/recipes/imagemagick
 - id: conan:imagl
@@ -45725,6 +45537,18 @@ packages:
     - url: https://github.com/epezent/implot/archive/v0.17.tar.gz
       checksums:
       - sha256:0aa3ff4fb97e553608e6758e77980eedf01745628fe6c025e647f941ae674127
+  - version: '1.1'
+    dependencies:
+    - name: imgui
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/epezent/implot/archive/v1.1.tar.gz
+      checksums:
+      - sha256:f13e1e111db2df1687e1568644429c2184eb5115867dc76bb0a8bd17a2e72ae8
   recipe_path: recipes/implot/config.yml
   native_url: https://conan.io/center/recipes/implot
 - id: conan:imutils-cpp
@@ -48266,7 +48090,7 @@ packages:
     - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.3.0.tar.gz
       checksums:
       - sha256:2c00b50023c7d557cdaa71c0777f5bcff996c4efd7a539e58beaa4219fa2a5e1
-  - version: 2.4.0
+  - version: 2.4.1
     dependencies:
     - name: nlohmann_json
     features:
@@ -48277,9 +48101,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.4.0.tar.gz
+    - url: https://github.com/pboettch/json-schema-validator/archive/refs/tags/2.4.1.tar.gz
       checksums:
-      - sha256:24cbb114609cc9b43d4018b8d03e082ff5d2f26f5dce8bd36538097267b63af9
+      - sha256:0c8bf7ba59bd50e312d82da4bab1d49cf3e2211cfbd659472f9c90505d2a4e4c
   recipe_path: recipes/json-schema-validator/config.yml
   native_url: https://conan.io/center/recipes/json-schema-validator
 - id: conan:json_dto
@@ -56060,7 +55884,7 @@ packages:
   name: libgd
   summary: GD is an open source code library for the dynamiccreation of images by programmers.
   licenses:
-  - BSD-like
+  - GD
   homepage: https://libgd.github.io
   repository_url: https://github.com/libgd/libgd
   topics:
@@ -56101,154 +55925,6 @@ packages:
     with_webp: 'false'
     with_xpm: 'false'
   versions:
-  - version: 2.2.5
-    dependencies:
-    - name: freetype
-    - name: getopt-for-visual-studio
-    - name: libavif
-    - name: libheif
-    - name: libjpeg
-    - name: libpng
-    - name: libtiff
-    - name: libwebp
-    - name: libxpm
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_avif
-      default: 'false'
-    - name: with_freetype
-      default: 'false'
-    - name: with_heif
-      default: 'false'
-    - name: with_jpeg
-      default: 'false'
-    - name: with_png
-      default: 'false'
-    - name: with_tiff
-      default: 'false'
-    - name: with_webp
-      default: 'false'
-    - name: with_xpm
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libgd/libgd/releases/download/gd-2.2.5/libgd-2.2.5.tar.gz
-      checksums:
-      - sha256:a66111c9b4a04e818e9e2a37d7ae8d4aae0939a100a36b0ffb52c706a09074b5
-  - version: 2.3.0
-    dependencies:
-    - name: freetype
-    - name: getopt-for-visual-studio
-    - name: libavif
-    - name: libheif
-    - name: libjpeg
-    - name: libpng
-    - name: libtiff
-    - name: libwebp
-    - name: libxpm
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_avif
-      default: 'false'
-    - name: with_freetype
-      default: 'false'
-    - name: with_heif
-      default: 'false'
-    - name: with_jpeg
-      default: 'false'
-    - name: with_png
-      default: 'false'
-    - name: with_tiff
-      default: 'false'
-    - name: with_webp
-      default: 'false'
-    - name: with_xpm
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libgd/libgd/archive/gd-2.3.0.tar.gz
-      checksums:
-      - sha256:a77dfbbf8bfa7f19c935c11f3b939321f8c1059953a91203158cb2dbf27a0f9e
-  - version: 2.3.1
-    dependencies:
-    - name: freetype
-    - name: getopt-for-visual-studio
-    - name: libavif
-    - name: libheif
-    - name: libjpeg
-    - name: libpng
-    - name: libtiff
-    - name: libwebp
-    - name: libxpm
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_avif
-      default: 'false'
-    - name: with_freetype
-      default: 'false'
-    - name: with_heif
-      default: 'false'
-    - name: with_jpeg
-      default: 'false'
-    - name: with_png
-      default: 'false'
-    - name: with_tiff
-      default: 'false'
-    - name: with_webp
-      default: 'false'
-    - name: with_xpm
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libgd/libgd/archive/gd-2.3.1.tar.gz
-      checksums:
-      - sha256:795978dcec1bf931148ebcdca9ed1e9cdfa9e71acff8bf035a8867dd1f7af6cd
-  - version: 2.3.2
-    dependencies:
-    - name: freetype
-    - name: getopt-for-visual-studio
-    - name: libavif
-    - name: libheif
-    - name: libjpeg
-    - name: libpng
-    - name: libtiff
-    - name: libwebp
-    - name: libxpm
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_avif
-      default: 'false'
-    - name: with_freetype
-      default: 'false'
-    - name: with_heif
-      default: 'false'
-    - name: with_jpeg
-      default: 'false'
-    - name: with_png
-      default: 'false'
-    - name: with_tiff
-      default: 'false'
-    - name: with_webp
-      default: 'false'
-    - name: with_xpm
-      default: 'false'
-    artifacts:
-    - url: https://github.com/libgd/libgd/archive/gd-2.3.2.tar.gz
-      checksums:
-      - sha256:dcc22244d775f469bee21dce1ea42552adbb72ba0cc423f9fa6a64601b3a1893
   - version: 2.3.3
     dependencies:
     - name: freetype
@@ -59204,6 +58880,20 @@ packages:
     - url: https://github.com/stephane/libmodbus/releases/download/v3.1.12/libmodbus-3.1.12.tar.gz
       checksums:
       - sha256:2f4d4191cd196c1fba131daec03b621db75129d8255c832fc66b259d9fc46e7b
+  - version: 3.2.0
+    dependencies:
+    - name: automake
+    - name: libtool
+    - name: msys2
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/stephane/libmodbus/releases/download/v3.2.0/libmodbus-3.2.0.tar.gz
+      checksums:
+      - sha256:72239f319b9b8483e3d393c5a60865d734fcff18a8abbb2486e389834a2f6ef1
   recipe_path: recipes/libmodbus/config.yml
   native_url: https://conan.io/center/recipes/libmodbus
 - id: conan:libmodplug
@@ -59956,31 +59646,6 @@ packages:
     with_hpack: 'false'
     with_jemalloc: 'false'
   versions:
-  - version: 1.66.0
-    dependencies:
-    - name: brotli
-    - name: c-ares
-    - name: jansson
-    - name: jemalloc
-    - name: libev
-    - name: libxml2
-    - name: openssl
-    - name: zlib
-    features:
-    - name: fPIC
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: with_app
-      default: 'false'
-    - name: with_hpack
-      default: 'false'
-    - name: with_jemalloc
-      default: 'false'
-    artifacts:
-    - url: https://github.com/nghttp2/nghttp2/releases/download/v1.66.0/nghttp2-1.66.0.tar.bz2
-      checksums:
-      - sha256:1d484ad37354df9fcab970814e93a5dca91a53256e83f4f58dd73119c6321017
   - version: 1.68.1
     dependencies:
     - name: brotli
@@ -62596,6 +62261,45 @@ packages:
       - sha256:2b83141630c76e119b19d85958c8685efab6eff3e2af3435933b8f2ac147f62a
   recipe_path: recipes/libserial/config.yml
   native_url: https://conan.io/center/recipes/libserial
+- id: conan:libserialport
+  registry: conan
+  name: libserialport
+  summary: Minimal cross-platform serial port library in C
+  licenses:
+  - LGPL-3.0-or-later
+  homepage: https://sigrok.org/wiki/libserialport
+  repository_url: https://github.com/sigrokproject/libserialport
+  topics:
+  - rs232
+  - serial
+  - sigrok
+  - usb
+  package_type: library
+  dependencies:
+  - libtool
+  - msys2
+  options:
+  - fPIC
+  - shared
+  default_options:
+    fPIC: 'true'
+    shared: 'false'
+  versions:
+  - version: 0.1.2
+    dependencies:
+    - name: libtool
+    - name: msys2
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/sigrokproject/libserialport/archive/refs/tags/libserialport-0.1.2.tar.gz
+      checksums:
+      - sha256:cbb1192a09ff31d34e7efdb17a2f50d9d1974461c0b81c29bb449515d78d8950
+  recipe_path: recipes/libserialport/config.yml
+  native_url: https://conan.io/center/recipes/libserialport
 - id: conan:libsersi
   registry: conan
   name: libsersi
@@ -63938,7 +63642,7 @@ packages:
   licenses:
   - LGPL-2.1-or-later
   homepage: https://www.freedesktop.org/wiki/Software/systemd/
-  repository_url: https://github.com/systemd/systemd-stable
+  repository_url: https://github.com/systemd/systemd
   topics:
   - manager
   - service
@@ -64121,6 +63825,36 @@ packages:
     - url: https://github.com/systemd/systemd-stable/archive/v255.2.tar.gz
       checksums:
       - sha256:ba7354a742dc9a8bb7dbeaa40cbf7cf2ca84f506d5b7ae5ab8d14c8eecb7aca0
+  - version: '262.2'
+    dependencies:
+    - name: gperf
+    - name: libcap
+    - name: libmount
+    - name: libselinux
+    - name: libxcrypt
+    - name: lz4
+    - name: m4
+    - name: meson
+    - name: pkgconf
+    - name: xz_utils
+    - name: zstd
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: with_lz4
+      default: 'true'
+    - name: with_selinux
+      default: 'true'
+    - name: with_xz
+      default: 'true'
+    - name: with_zstd
+      default: 'true'
+    artifacts:
+    - url: https://github.com/systemd/systemd/archive/refs/tags/v262.2.tar.gz
+      checksums:
+      - sha256:116432ee9dce9bfef4c7da7963c6de41899ab44197f2876ee99545707a5c7c1f
   recipe_path: recipes/libsystemd/config.yml
   native_url: https://conan.io/center/recipes/libsystemd
 - id: conan:libtar
@@ -67603,7 +67337,7 @@ packages:
     shared: 'false'
     tmpfile: 'false'
   versions:
-  - version: 1.0.0
+  - version: 1.2.4
     dependencies:
     - name: cmake
     - name: minizip
@@ -67623,170 +67357,9 @@ packages:
     - name: tmpfile
       default: 'false'
     artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/RELEASE_1.0.0.tar.gz
+    - url: https://github.com/jmcnamara/libxlsxwriter/archive/v1.2.4.tar.gz
       checksums:
-      - sha256:8b353379333c323d14a9d265cd2491d3a6c0032c8d6ec2141f10b82ab66a087c
-  - version: 1.1.3
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/RELEASE_1.1.3.tar.gz
-      checksums:
-      - sha256:bd7a3d38c6a8ef5e31d07a61fded23ac00d29d758417ca42db89da60bf796d78
-  - version: 1.1.4
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/RELEASE_1.1.4.tar.gz
-      checksums:
-      - sha256:b379eb35fdd9c653ebe72485b9c992f612c7ea66f732784457997d6e782f619b
-  - version: 1.1.5
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/RELEASE_1.1.5.tar.gz
-      checksums:
-      - sha256:12843587d591cf679e6ec63ecc629245befec2951736804a837696cdb5d61946
-  - version: 1.1.7
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/RELEASE_1.1.7.tar.gz
-      checksums:
-      - sha256:1f378e25d8bb5be258d3e04d3d24b8c23ff21bf206e6e206661844a96ca25eda
-  - version: 1.1.8
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/v1.1.8.tar.gz
-      checksums:
-      - sha256:122c98353e5b69284a1cd782be7ae67bdefde2146f8197ef89a1aaf886058e86
-  - version: 1.1.9
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/v1.1.9.tar.gz
-      checksums:
-      - sha256:03ae330d50f74c8a70be0b06b52bd50868f7cd1251ed040fe3b68d1ad6fd11dc
-  - version: 1.2.2
-    dependencies:
-    - name: cmake
-    - name: minizip
-    - name: openssl
-    - name: zlib
-    features:
-    - name: dtoa
-      default: 'false'
-    - name: fPIC
-      default: 'true'
-    - name: fmemopen
-      default: 'false'
-    - name: md5
-      default: openwall
-    - name: shared
-      default: 'false'
-    - name: tmpfile
-      default: 'false'
-    artifacts:
-    - url: https://github.com/jmcnamara/libxlsxwriter/archive/v1.2.2.tar.gz
-      checksums:
-      - sha256:8ab0aced8a6e82f12f567b48d2cb3ca7b925893126607a619666da467e9ac14f
+      - sha256:e0db59fc248a5ffa465a05ea83a9d466d4bca0e53ab42771515d4ebb467a41c1
   recipe_path: recipes/libxlsxwriter/config.yml
   native_url: https://conan.io/center/recipes/libxlsxwriter
 - id: conan:libxml2
@@ -68662,6 +68235,7 @@ packages:
   package_type: library
   dependencies:
   - cmake
+  - libzip
   - zlib
   options:
   - fPIC
@@ -68675,6 +68249,7 @@ packages:
   - version: 7.1-1.10.1
     dependencies:
     - name: cmake
+    - name: libzip
     - name: zlib
     features:
     - name: fPIC
@@ -69876,7 +69451,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.9.32
+  - version: 0.9.36
     features:
     - name: enable_robust_mutex
       default: 'true'
@@ -69885,9 +69460,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.32/openldap-LMDB_0.9.32.tar.gz
-    - url: https://github.com/openldap/openldap/archive/refs/tags/LMDB_0.9.32.tar.gz
-    - url: https://gitlab.com/openldap/openldap/-/archive/LMDB_0.9.32/openldap-LMDB_0.9.32.tar.gz
+    - url: https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.36/openldap-LMDB_0.9.36.tar.gz
+    - url: https://github.com/openldap/openldap/archive/refs/tags/LMDB_0.9.36.tar.gz
+    - url: https://gitlab.com/openldap/openldap/-/archive/LMDB_0.9.36/openldap-LMDB_0.9.36.tar.gz
   - version: 1.0.2
     features:
     - name: enable_robust_mutex
@@ -73453,7 +73028,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 0.4.8
+  - version: 0.5.3
     features:
     - name: encoding
       default: utf-8
@@ -73463,10 +73038,10 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/mity/md4c/archive/refs/tags/release-0.4.8.tar.gz
+    - url: https://github.com/mity/md4c/archive/refs/tags/release-0.5.3.tar.gz
       checksums:
-      - sha256:4a457df853425b6bb6e3457aa1d1a13bccec587a04c38c622b1013a0da41439f
-  - version: 0.5.1
+      - sha256:353c346f376b87c954a13f3415ede2d51264cc61dc5abcd38ff1d2aa0d059b9e
+  - version: 0.6.0
     features:
     - name: encoding
       default: utf-8
@@ -73476,22 +73051,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/mity/md4c/archive/refs/tags/release-0.5.1.tar.gz
+    - url: https://github.com/mity/md4c/archive/refs/tags/v0.6.0.tar.gz
       checksums:
-      - sha256:2dca17c6175a7f11182943079c2a4f9adb5071433e3d3d05ba801ff794993f34
-  - version: 0.5.2
-    features:
-    - name: encoding
-      default: utf-8
-    - name: fPIC
-      default: 'true'
-    - name: md2html
-    - name: shared
-      default: 'false'
-    artifacts:
-    - url: https://github.com/mity/md4c/archive/refs/tags/release-0.5.2.tar.gz
-      checksums:
-      - sha256:55d0111d48fb11883aaee91465e642b8b640775a4d6993c2d0e7a8092758ef21
+      - sha256:4d151298125a81da3b2efa2e0eed8bdb7a9318569804e4fa4d7a2375ab83ef70
   recipe_path: recipes/md4c/config.yml
   native_url: https://conan.io/center/recipes/md4c
 - id: conan:md4qt
@@ -73519,7 +73081,7 @@ packages:
   default_options:
     fPIC: 'true'
   versions:
-  - version: 5.3.0
+  - version: 5.4.0
     dependencies:
     - name: cmake
     - name: qt
@@ -73527,9 +73089,9 @@ packages:
     - name: fPIC
       default: 'true'
     artifacts:
-    - url: https://download.kde.org/stable/md4qt/5.3.0/md4qt-5.3.0.tar.xz
+    - url: https://download.kde.org/stable/md4qt/5.4.0/md4qt-5.4.0.tar.xz
       checksums:
-      - sha256:08399eedf8671391b27e31f71e037171334ee5a0cd8815bff182b8f6dbee620e
+      - sha256:03f65b6a4c2963e27a3b46b81a41c6a7c710286bad297202bc590b723fc72b72
   recipe_path: recipes/md4qt/config.yml
   native_url: https://conan.io/center/recipes/md4qt
 - id: conan:mdns
@@ -74074,12 +73636,23 @@ packages:
   - jit
   - math
   package_type: header-library
+  dependencies:
+  - libsodium
+  options:
+  - with_protected
+  default_options:
+    with_protected: 'false'
   versions:
-  - version: 1.0.1
+  - version: 1.2.2
+    dependencies:
+    - name: libsodium
+    features:
+    - name: with_protected
+      default: 'false'
     artifacts:
-    - url: https://github.com/imakris/mexce/archive/refs/tags/v1.0.1.tar.gz
+    - url: https://github.com/imakris/mexce/archive/refs/tags/1.2.2.tar.gz
       checksums:
-      - sha256:35e057ebb4e0378d18287d5a9e7beea612d8fe97f53eac85d49e1e5496247a3e
+      - sha256:634866540159f524bfd6e5eb496a51f46732dc7a81492a9abf1a926e6114a5b0
   recipe_path: recipes/mexce/config.yml
   native_url: https://conan.io/center/recipes/mexce
 - id: conan:mfast
@@ -75957,6 +75530,39 @@ packages:
     - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.5.7/mongo-c-driver-2.5.7.tar.gz
       checksums:
       - sha256:fdd7c23b3d95f1ea08400e5a72e48419ce03d478aa12b28b4b66066867ee35ee
+  - version: 2.5.8
+    dependencies:
+    - name: cyrus-sasl
+    - name: icu
+    - name: libressl
+    - name: openssl
+    - name: pkgconf
+    - name: snappy
+    - name: zlib
+    - name: zstd
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: srv
+      default: 'true'
+    - name: with_icu
+      default: 'true'
+    - name: with_sasl
+      default: 'false'
+    - name: with_snappy
+      default: 'true'
+    - name: with_ssl
+      default: openssl
+    - name: with_zlib
+      default: 'true'
+    - name: with_zstd
+      default: 'true'
+    artifacts:
+    - url: https://github.com/mongodb/mongo-c-driver/releases/download/2.5.8/mongo-c-driver-2.5.8.tar.gz
+      checksums:
+      - sha256:ea63ec9535f1a425b288b2d72ac3a57c7f3b5d606afde73ff532a175a0774f55
   recipe_path: recipes/mongo-c-driver/config.yml
   native_url: https://conan.io/center/recipes/mongo-c-driver
 - id: conan:mongo-cxx-driver
@@ -78414,6 +78020,11 @@ packages:
     - url: https://github.com/martinus/nanobench/archive/v4.3.9.tar.gz
       checksums:
       - sha256:4a7fd8fdd5819e4d1c34ae558df010a0ccf36db0508c41c51cd0181bc04c6356
+  - version: 4.6.0
+    artifacts:
+    - url: https://github.com/martinus/nanobench/archive/v4.6.0.tar.gz
+      checksums:
+      - sha256:80fe0835e85da6acc57285354d86b17d5d1dc7182432a5eaea3b2098a17d4c26
   recipe_path: recipes/nanobench/config.yml
   native_url: https://conan.io/center/recipes/nanobench
 - id: conan:nanobind
@@ -79080,7 +78691,7 @@ packages:
     - url: https://ftpmirror.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz
     - url: https://invisible-mirror.net/archives/ncurses/ncurses-6.4.tar.gz
     - url: https://www.mirrorservice.org/sites/ftp.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz
-  - version: '6.5'
+  - version: '6.6'
     dependencies:
     - name: dirent
     - name: getopt-for-visual-studio
@@ -79110,10 +78721,10 @@ packages:
     - name: with_widec
       default: 'true'
     artifacts:
-    - url: https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.5.tar.gz
-    - url: https://ftpmirror.gnu.org/gnu/ncurses/ncurses-6.5.tar.gz
-    - url: https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
-    - url: https://www.mirrorservice.org/sites/ftp.gnu.org/gnu/ncurses/ncurses-6.5.tar.gz
+    - url: https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.6.tar.gz
+    - url: https://ftpmirror.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz
+    - url: https://invisible-mirror.net/archives/ncurses/ncurses-6.6.tar.gz
+    - url: https://www.mirrorservice.org/sites/ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz
   recipe_path: recipes/ncurses/config.yml
   native_url: https://conan.io/center/recipes/ncurses
 - id: conan:neargye-semver
@@ -79239,7 +78850,7 @@ packages:
     shared: 'false'
     with_ipv6: 'true'
   versions:
-  - version: 5.9.4
+  - version: 5.9.5.2
     dependencies:
     - name: autoconf
     - name: automake
@@ -79258,9 +78869,9 @@ packages:
     - name: with_ipv6
       default: 'true'
     artifacts:
-    - url: https://sourceforge.net/projects/net-snmp/files/net-snmp/5.9.4/net-snmp-5.9.4.zip/download
+    - url: https://sourceforge.net/projects/net-snmp/files/net-snmp/5.9.5.2/net-snmp-5.9.5.2.zip/download
       checksums:
-      - sha256:ceea0c876f23b87731de2073e6a3a683ea610c66a5a67b5cabf4986b7813c22b
+      - sha256:3818c4394f68219a060cf07fdbfe78acfbb9721e4537cf42c659e60836a0f63d
   recipe_path: recipes/net-snmp/config.yml
   native_url: https://conan.io/center/recipes/net-snmp
 - id: conan:netcdf
@@ -80225,6 +79836,19 @@ packages:
     - url: https://github.com/paceholder/nodeeditor/archive/refs/tags/3.0.11.tar.gz
       checksums:
       - sha256:9810137d576d8d1049df29c0a8869a0dce4ae10636e3b042a841f5696f26187d
+  - version: 3.0.16
+    dependencies:
+    - name: cmake
+    - name: qt
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/paceholder/nodeeditor/archive/refs/tags/3.0.16.tar.gz
+      checksums:
+      - sha256:453e6eb783379fee6edf9282283576eaa7d27349b8731e638926ccbd8331f7ef
   recipe_path: recipes/nodeeditor/config.yml
   native_url: https://conan.io/center/recipes/nodeeditor
 - id: conan:nodejs
@@ -80323,6 +79947,52 @@ packages:
       - sha256:ef6d7bbb7b278584e057acefe3bc764d30122e83fa41d41d8211e39f25b6e3fa
   recipe_path: recipes/norm/config.yml
   native_url: https://conan.io/center/recipes/norm
+- id: conan:notcurses
+  registry: conan
+  name: notcurses
+  summary: blingful character graphics/TUI library. definitely not curses
+  licenses:
+  - Apache-2.0
+  homepage: https://notcurses.com/
+  repository_url: https://github.com/dankamongmen/notcurses
+  topics:
+  - ncurses
+  - terminal
+  - tui
+  package_type: library
+  dependencies:
+  - cmake
+  - ffmpeg
+  - libunistring
+  - ncurses
+  - pkgconf
+  - zlib
+  options:
+  - fPIC
+  - shared
+  default_options:
+    fPIC: 'true'
+    shared: 'false'
+  versions:
+  - version: 3.0.17
+    dependencies:
+    - name: cmake
+    - name: ffmpeg
+    - name: libunistring
+    - name: ncurses
+    - name: pkgconf
+    - name: zlib
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/dankamongmen/notcurses/releases/download/v3.0.17/notcurses_3.0.17+dfsg.orig.tar.xz
+      checksums:
+      - sha256:c056420ac634c8c71870ece6d7ab3986f406d1495c009fce5e14559acebc754f
+  recipe_path: recipes/notcurses/config.yml
+  native_url: https://conan.io/center/recipes/notcurses
 - id: conan:npcap
   registry: conan
   name: npcap
@@ -97470,6 +97140,19 @@ packages:
     - url: https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/archive/refs/tags/4.5.0.tar.gz
       checksums:
       - sha256:a438810b9749684232fa29721857bb700167006f44407ab4dd51f5c90d171f09
+  - version: 5.1.1
+    dependencies:
+    - name: cmake
+    - name: qt
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/archive/refs/tags/v5.1.1.tar.gz
+      checksums:
+      - sha256:9ce947acbb1984946f9145c976e42e6984f99b98fb414dd7354a290af6d4ff04
   recipe_path: recipes/qt-advanced-docking-system/config.yml
   native_url: https://conan.io/center/recipes/qt-advanced-docking-system
 - id: conan:qtawesome
@@ -99809,7 +99492,7 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.21.1
+  - version: 1.21.2
     dependencies:
     - name: cmake
     - name: concurrentqueue
@@ -99823,9 +99506,9 @@ packages:
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/reductstore/reduct-cpp/archive/refs/tags/v1.21.1.tar.gz
+    - url: https://github.com/reductstore/reduct-cpp/archive/refs/tags/v1.21.2.tar.gz
       checksums:
-      - sha256:b9f3c0ab49a055399c443d86ae5d648c1f52ad041c5a55026fb013d2ba51d897
+      - sha256:f7b6bccf2d2f32cd9c9a9577defa002e589f230cf059f61791e28aa4a7599a41
   recipe_path: recipes/reduct-cpp/config.yml
   native_url: https://conan.io/center/recipes/reduct-cpp
 - id: conan:refl-cpp
@@ -100965,7 +100648,7 @@ packages:
     shared: 'false'
     with_lua_bindings: 'false'
   versions:
-  - version: '6.2'
+  - version: '6.3'
     dependencies:
     - name: freetype
     - name: itlib
@@ -100983,9 +100666,9 @@ packages:
     - name: with_lua_bindings
       default: 'false'
     artifacts:
-    - url: https://github.com/mikke89/RmlUi/archive/refs/tags/6.2.tar.gz
+    - url: https://github.com/mikke89/RmlUi/archive/refs/tags/6.3.tar.gz
       checksums:
-      - sha256:814c3ff7b9666280338d8f0dda85979f5daf028d01c85fc8975431d1e2fd8e8b
+      - sha256:d977298bb6147610e5984d5db85ddf284020d655a8713913f6982074f1dbdede
   recipe_path: recipes/rmlui/config.yml
   native_url: https://conan.io/center/recipes/rmlui
 - id: conan:rmm
@@ -101778,6 +101461,11 @@ packages:
     - url: https://github.com/nfrechette/rtm/archive/v2.3.0.tar.gz
       checksums:
       - sha256:2b5f2c3761bb52ae89802a574e9dc9949aec3b183f7e100b9b66a65adcc6f5ab
+  - version: 2.4.0
+    artifacts:
+    - url: https://github.com/nfrechette/rtm/archive/v2.4.0.tar.gz
+      checksums:
+      - sha256:f3fe8bfe4457db9f55605921919f7c8f5d90674ed9b9b42a8c3bf02123d4d7d8
   recipe_path: recipes/rtm/config.yml
   native_url: https://conan.io/center/recipes/rtm
 - id: conan:rtmidi
@@ -104386,7 +104074,7 @@ packages:
     with_breakpad: sentry
     with_crashpad: sentry
   versions:
-  - version: 0.14.2
+  - version: 0.16.8
     dependencies:
     - name: breakpad
     - name: cmake
@@ -104416,9 +104104,9 @@ packages:
     - name: with_crashpad
       default: sentry
     artifacts:
-    - url: https://github.com/getsentry/sentry-native/releases/download/0.14.2/sentry-native.zip
+    - url: https://github.com/getsentry/sentry-native/releases/download/0.16.8/sentry-native.zip
       checksums:
-      - sha256:65ebb14fa305dcef7b56347cdd5afcbac3c2d0f129c0e23b53933fae4e39c508
+      - sha256:ad14e09822464c91f7722ea299f69aef29eb61b5b71e15f5fb557bc25359cd48
   recipe_path: recipes/sentry-native/config.yml
   native_url: https://conan.io/center/recipes/sentry-native
 - id: conan:seqan
@@ -104748,90 +104436,6 @@ packages:
     shared: 'false'
     window: 'true'
   versions:
-  - version: 2.5.1
-    dependencies:
-    - name: flac
-    - name: freetype
-    - name: libudev
-    - name: minimp3
-    - name: openal-soft
-    - name: opengl
-    - name: stb
-    - name: vorbis
-    - name: xorg
-    features:
-    - name: audio
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: graphics
-      default: 'true'
-    - name: network
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: window
-      default: 'true'
-    artifacts:
-    - url: https://www.sfml-dev.org/files/SFML-2.5.1-sources.zip
-      checksums:
-      - sha256:bf1e0643acb92369b24572b703473af60bac82caf5af61e77c063b779471bb7f
-  - version: 2.6.0
-    dependencies:
-    - name: flac
-    - name: freetype
-    - name: libudev
-    - name: minimp3
-    - name: openal-soft
-    - name: opengl
-    - name: stb
-    - name: vorbis
-    - name: xorg
-    features:
-    - name: audio
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: graphics
-      default: 'true'
-    - name: network
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: window
-      default: 'true'
-    artifacts:
-    - url: https://www.sfml-dev.org/files/SFML-2.6.0-sources.zip
-      checksums:
-      - sha256:dc477fc7266641709046bd38628c909f5748bd2564b388cf6c750a9e20cdfef1
-  - version: 2.6.1
-    dependencies:
-    - name: flac
-    - name: freetype
-    - name: libudev
-    - name: minimp3
-    - name: openal-soft
-    - name: opengl
-    - name: stb
-    - name: vorbis
-    - name: xorg
-    features:
-    - name: audio
-      default: 'true'
-    - name: fPIC
-      default: 'true'
-    - name: graphics
-      default: 'true'
-    - name: network
-      default: 'true'
-    - name: shared
-      default: 'false'
-    - name: window
-      default: 'true'
-    artifacts:
-    - url: https://www.sfml-dev.org/files/SFML-2.6.1-sources.zip
-      checksums:
-      - sha256:5bf19e5c303516987f7f54d4ff1b208a0f9352ffa1cd55f992527016de0e8cb7
   - version: 2.6.2
     dependencies:
     - name: flac
@@ -105306,6 +104910,18 @@ packages:
     - url: https://github.com/simdjson/simdjson/archive/v5.0.5.tar.gz
       checksums:
       - sha256:50bb17769e1054ff1bfcd5dbbfcf33544c77f6ebdb31a318436ea0e47f78f571
+  - version: 5.1.1
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    - name: threads
+      default: 'true'
+    artifacts:
+    - url: https://github.com/simdjson/simdjson/archive/v5.1.1.tar.gz
+      checksums:
+      - sha256:d669fa399613c20bbf7705f057a72984331b223cd5e8d20666ef063dbf97f3e6
   recipe_path: recipes/simdjson/config.yml
   native_url: https://conan.io/center/recipes/simdjson
 - id: conan:simdutf
@@ -112797,6 +112413,21 @@ packages:
     - url: https://github.com/reo7sp/tgbot-cpp/archive/v1.13.tar.gz
       checksums:
       - sha256:3d249ec11b7bf01f12cd5976a9003cf28cf0d593e35327e302dda8a2838c2671
+  - version: 1.13.1
+    dependencies:
+    - name: boost
+    - name: cmake
+    - name: libcurl
+    - name: nlohmann_json
+    features:
+    - name: fPIC
+      default: 'true'
+    - name: shared
+      default: 'false'
+    artifacts:
+    - url: https://github.com/reo7sp/tgbot-cpp/archive/v1.13.1.tar.gz
+      checksums:
+      - sha256:d986febe6a9f4be2200a37e245e736d97ab1e09d9e646e458c27ec2a81453630
   recipe_path: recipes/tgbot/config.yml
   native_url: https://conan.io/center/recipes/tgbot
 - id: conan:tgc
@@ -122946,16 +122577,12 @@ packages:
   - simd-intrinsics
   - vectorization
   package_type: header-library
-  dependencies:
-  - xtl
   options:
   - xtl_complex
   default_options:
     xtl_complex: 'false'
   versions:
   - version: 13.0.0
-    dependencies:
-    - name: xtl
     features:
     - name: xtl_complex
       default: 'false'
@@ -122964,8 +122591,6 @@ packages:
       checksums:
       - sha256:8bdbbad0c3e7afa38d88d0d484d70a1671a1d8aefff03f4223ab2eb6a41110a3
   - version: 13.2.0
-    dependencies:
-    - name: xtl
     features:
     - name: xtl_complex
       default: 'false'
@@ -122974,8 +122599,6 @@ packages:
       checksums:
       - sha256:edd8cd3d548c185adc70321c53c36df41abe64c1fe2c67bc6d93c3ecda82447a
   - version: 14.1.0
-    dependencies:
-    - name: xtl
     features:
     - name: xtl_complex
       default: 'false'
@@ -122984,8 +122607,6 @@ packages:
       checksums:
       - sha256:8da77b66214e73565f6111ba494322c853552b7b40cff69779b42e2100eed16f
   - version: 14.2.0
-    dependencies:
-    - name: xtl
     features:
     - name: xtl_complex
       default: 'false'
@@ -122993,6 +122614,14 @@ packages:
     - url: https://github.com/xtensor-stack/xsimd/archive/14.2.0.tar.gz
       checksums:
       - sha256:21e841ab684b05331e81e7f782431753a029ef7b7d9d6d3ddab837e7782a40ee
+  - version: 14.3.0
+    features:
+    - name: xtl_complex
+      default: 'false'
+    artifacts:
+    - url: https://github.com/xtensor-stack/xsimd/archive/14.3.0.tar.gz
+      checksums:
+      - sha256:b3d50e7a73fbf4642ceef30131c93414901d69eee41c2a5302db650b03e2c792
   recipe_path: recipes/xsimd/config.yml
   native_url: https://conan.io/center/recipes/xsimd
 - id: conan:xtensor
@@ -124671,15 +124300,15 @@ packages:
     fPIC: 'true'
     shared: 'false'
   versions:
-  - version: 1.3.2
+  - version: '1.4'
     features:
     - name: fPIC
       default: 'true'
     - name: shared
       default: 'false'
     artifacts:
-    - url: https://github.com/madler/zlib/releases/download/v1.3.2/zlib-1.3.2.tar.gz
-    - url: https://zlib.net/fossils/zlib-1.3.2.tar.gz
+    - url: https://github.com/madler/zlib/releases/download/v1.4/zlib-1.4.tar.gz
+    - url: https://zlib.net/fossils/zlib-1.4.tar.gz
   recipe_path: recipes/zlib/config.yml
   native_url: https://conan.io/center/recipes/zlib
 - id: conan:zlib-ng

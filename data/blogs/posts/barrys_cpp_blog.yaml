@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: 1Z4stwKvrYYwLCpb
+  source_id: barrys_cpp_blog
+  source_title: Barry's C++ Blog
+  title: From Token Sequences to operator for
+  url: https://brevzin.github.io/c++/2026/11/04/operator-for/
+  published: 2026-11-04 06:00:00+00:00
+  updated: 2026-11-04 06:00:00+00:00
+  description: A year and a half ago now, I wrote a post about using token sequences to iterate ranges. In that post, I talked about the overhead that certain range adaptors fundamentally have because they don’t neatly fit into the regular C++ for loop (particularly views::take_while and views…
+  tags:
+  - c++
 - post_id: QPzpWxLrQv6eROcx
   source_id: barrys_cpp_blog
   source_title: Barry's C++ Blog

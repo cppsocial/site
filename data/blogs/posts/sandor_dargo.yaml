@@ -1,5 +1,15 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: YjG0FAkQgle7RJTN
+  source_id: sandor_dargo
+  source_title: Sandor Dargo's Blog
+  title: 'C++26: std::constant_wrapper'
+  url: https://www.sandordargo.com/blog/2026/11/04/cpp26-constant-wrapper
+  published: 2026-11-03 23:00:00+00:00
+  updated: 2026-11-08 21:56:28+00:00
+  description: 'There’s a fundamental gap in C++ that trips up everyone who reaches for it: you can’t pass a constexpr value through a function boundary and have it remain constexpr on the other side. The value is known at compile time, the function is constexpr, but the parameter inside the fu…'
+  tags:
+  - dev
 - post_id: 8vDPXKVgm0S5yZNw
   source_id: sandor_dargo
   source_title: Sandor Dargo's Blog

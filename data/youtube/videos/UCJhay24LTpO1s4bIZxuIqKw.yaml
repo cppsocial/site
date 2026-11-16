@@ -1,5 +1,154 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: -FP6tLlCxWE
+  title: Fearless Concurrency in C++ - Tristan Brindle - ACCU 2026
+  url: https://www.youtube.com/watch?v=-FP6tLlCxWE
+  published: 2026-11-14 13:00:28+00:00
+  updated: 2026-11-16 08:11:13+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    Fearless Concurrency in C++ - Tristan Brindle - ACCU 2026
+
+    ---
+
+
+    “Fearless concurrency” — the absence of data races, statically guaranteed by the compiler — is one of the major selling points of the Rust programming language.
+
+
+    What if we could get those same guarantees in C++ as well?
+
+
+    In this talk we’ll dive into how Rust uses the Send and Sync traits, in combination with its borrow checker and specialised library types, to prevent shared mutable state across threads. We’ll look at how we can adapt these techniques for C++, and present an approach which uses cutting-edge C++26 facilities to provide equivalent guarantees to Rust, helping to make your concurrent coding as fearless as possible.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Tristan Brindle
+
+
+    Tristan Brindle is a C++ consultant and trainer based in London. With over 15 years C++ experience, he started his career working in high-performance computing in the oil industry in Australia before returning home to his native UK in 2018. He is an active member of the ISO C++ Standards Committee (WG21) and the BSI C++ Panel. He is a regular speaker at C++ conferences around the world, and is a former director of C++ London Uni, a non-profit organisation which offered free introductory programming classes in London and online.
+
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/-FP6tLlCxWE/hqdefault.jpg
+- video_id: rQgj9agTqok
+  title: Are Your C++ Templates Broken? Two-Phase Lookup Explained
+  url: https://www.youtube.com/watch?v=rQgj9agTqok
+  published: 2026-11-12 13:00:04+00:00
+  updated: 2026-11-16 07:25:38+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    C++ Templates  - Two-Phase Lookup - Amir Kirsh - ACCU 2026
+
+    ---
+
+
+    Nearly 30 years after the rules were set in C++98, even advanced developers still trip over templates'' internal name lookup. Why does calling a base function sometimes fail inside templates? And how does adding Base＜T＞::, or even this-＞, suddenly fix it?
+
+
+    The answer is two-phase name lookup: non-dependent names are resolved at definition time, while dependent names are resolved at instantiation time.
+
+
+    In this talk, we will walk through the complete timeline of name resolution in templates: non-dependent lookup at parse time, argument deduction at point of use, and dependent lookup during instantiation. You will see concrete examples of what can go wrong if you don''t pay attention to the rules, and the simple way of doing things right. This talk will help you avoid pitfalls and obscure bugs and gain better control over your templates instead of relying on "trial and error" coding or the "it just works" approach (which, especially with generic code, may actually push bugs into production).
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Amir Kirsh
+
+
+    Amir Kirsh is a C++ lecturer at the Academic College of Tel-Aviv-Yaffo and Tel-Aviv University, previously the Chief Programmer at Comverse, after being CTO and VP R&D at a startup acquired by Comverse. He is also a co-organizer of the annual Core C++ conference and a trainer and consultant for C++ and SW development in general.
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/rQgj9agTqok/hqdefault.jpg
+- video_id: 1r5Hl1EoaYo
+  title: C++26 Uncovered - Everything You Need to Know About the New Standard - Inbal Levi - ACCU 2026
+  url: https://www.youtube.com/watch?v=1r5Hl1EoaYo
+  published: 2026-11-09 13:00:24+00:00
+  updated: 2026-11-11 09:55:19+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nC++26 Uncovered - Everything You Need to Know About the New Standard - Inbal Levi - ACCU 2026\n---\n\nC++26 is here, bringing one of the most feature-rich standards in the history of the language. This talk will uncover everything you need to know about the new standard from within—spanning core language improvements, powerful compile-time capabilities, safer programming models, and major library additions. We’ll explore features such as compile-time reflection, design-by-contract, saturating arithmetic, SIMD enhancements, BLAS-style linear algebra, async execution frameworks, and new debugging tools. Along the way, we’ll examine not just what these features are, but why they were added, how they fit into the evolving design of modern C++, and the real-world problems they solve. Whether you write performance-critical code, maintain large systems, or simply want to stay at the forefront of the language, you'll leave with\
+    \ a picture of the changes in C++26 and how to apply them effectively in your own projects. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nInbal Levi\n\nInbal Levi is a Lead Win OS Internals Security Software Engineer at Microsoft with an interest in code readability, language and software design and compilers. She is an active member of the ISO C++ Standards Committee as Library Evolution Work Group Chair, and as the ISO C++ and SG22 (programming languages) Israeli NB Chair. Inbal is also a director at ISO C++ Foundation and the Boost Foundation and puts effort into evolving both the local and international C++ communities, as an organizer of the CoreC++ conference and meetup group, and as the program chair of C++Now.\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming',\
+    \ which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\
+    \n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i2.ytimg.com/vi/1r5Hl1EoaYo/hqdefault.jpg
 - video_id: EwgkN3an1Gs
   title: The Biggest Misconception of Computer Science - Alex Dathskovsky - ACCU 2026
   url: https://www.youtube.com/watch?v=EwgkN3an1Gs

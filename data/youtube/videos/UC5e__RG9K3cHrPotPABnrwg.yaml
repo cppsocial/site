@@ -1,5 +1,142 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: degCN1CSd5w
+  title: 'Lightning Talk: Our Most Treacherous Adversary - James McNellis - C++Now 2026'
+  url: https://www.youtube.com/watch?v=degCN1CSd5w
+  published: 2026-11-15 15:00:10+00:00
+  updated: 2026-11-15 15:00:11+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: Our Most Treacherous Adversary - James McNellis - C++Now 2026
+
+    ---
+
+
+    The wild things compiler developers like to do when our programs have undefined behavior
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    James McNellis
+
+
+    James McNellis is software engineer at Roblox, where he works on C++ software security. Prior to joining Roblox in 2022, he was a software engineer at Microsoft where he worked on the Visual C++ compiler and runtime libraries, and Microsoft''s Time Travel Debugging (TTD) reverse debugging toolkit.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i1.ytimg.com/vi/degCN1CSd5w/hqdefault.jpg
+- video_id: Be1RA_ypYrU
+  title: 'Lightning Talk: Mixed-Mode Rings: io_uring_context for Kernel 7.x - Robert Leahy - C++Now 2026'
+  url: https://www.youtube.com/watch?v=Be1RA_ypYrU
+  published: 2026-11-13 16:00:20+00:00
+  updated: 2026-11-15 02:32:28+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: Mixed-Mode Rings: io_uring_context for Kernel 7.x - Robert Leahy - C++Now 2026
+
+    ---
+
+
+    Recent Linux kernels add mixed-mode io_uring rings: rings whose submission and completion entries may have different shapes within the same queue.
+
+
+    This talk walks through updating a sender-based io_uring_context for IORING_SETUP_CQE_MIXED and IORING_SETUP_SQE_MIXED, showing how variable-size SQEs and CQEs map naturally onto std::execution.
+
+
+    Rather than forcing a new abstraction, mixed-mode rings demonstrate one of std::execution’s strengths: operations can expose heterogeneous completion signatures while preserving static type information, composability, and a direct correspondence with the kernel interface.
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Robert Leahy
+
+
+    Robert is a graduate of the University of Victoria where he specialized in graphics, gaming, and digital geometry processing. After spending 4.5 years in full stack web development he pivoted to financial infrastructure in late 2016 whereafter he spent nearly nine years at a start up working on next generation financial market data storage and retrieval mechanisms. In 2019 he became involved in the ISO C++ committee with a particular focus on library evolution. Since summer 2025 he has worked as a core developer at Hudson River Trading.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/Be1RA_ypYrU/hqdefault.jpg
+- video_id: dlFSJbtY49I
+  title: 'Lightning Talk: Bool - Implicitly Dangerous - Jeff Garland - C++Now 2026'
+  url: https://www.youtube.com/watch?v=dlFSJbtY49I
+  published: 2026-11-10 16:00:32+00:00
+  updated: 2026-11-13 20:43:11+00:00
+  description: "https://www.cppnow.org\n---\n\nLightning Talk: Bool - Implicitly Dangerous - Jeff Garland - C++Now 2026\n---\n\nReally, boolean should be the easiest thing to understand in C++. It's two possible states -- true and false -- what could possibly go wrong?  Unfortunately, plenty. If you're still a C++ programmer after reveal how using bool can be risky business, I'll provide some simple strategies for taming your bools.  \n---\n\nthink-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech\n---\n\nJeff Garland\n\nJeff Garland has worked on many large-scale, distributed software projects over the past 40 years. The systems span many different domains including telephone switching, industrial process control, satellite\
+    \ ground control, ip-based communications, and financial systems. He has written C++ networked code for several large systems including the development high performance network servers and data distribution frameworks.\n\nMr. Garland is currently the Vice-Convenor of the C++ Committe, a member if the Directions Group, and a vice-chair of the Library Working Group. He is a co-founder and lead of the Beman project as well as the executive director of the C++Next Foundation.\n\nMr. Garland holds a Master’s degree in Computer Science from Arizona State University and a Bachelor of Science in Systems Engineering from the University of Arizona. He is co-author of Large Scale Software Architecture: A Practical Guide Using UML. He is currently Principal Consultant for his own company: CrystalClear Software, Inc.\n---\n\nC++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with\
+    \ the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.\nAnnual CppNow Conference - https://www.cppnow.org\nhttps://www.linkedin.com/company/cppnow\nhttps://twitter.com/cppnow\nhttps://www.facebook.com/CppNow\nhttps://www.reddit.com/r/CppNow\nhttps://mastodon.social/@cppnow\nVideo Sponsors: Bloomberg\n---\n\nVideos Filmed & Edited By Bash Films: https://bashfilms.com/\nYouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i1.ytimg.com/vi/dlFSJbtY49I/hqdefault.jpg
 - video_id: 6n_mOFP_kBA
   title: 'Lightning Talk: A Metaprogramming Checklist - Ben Deane - C++Now 2026'
   url: https://www.youtube.com/watch?v=6n_mOFP_kBA

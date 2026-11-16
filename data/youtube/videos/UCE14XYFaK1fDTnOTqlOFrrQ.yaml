@@ -1,5 +1,29 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: 9yk--hL0Tco
+  title: 'The Future of C++ in a Heterogeneous World: Lessons from Android OS at Scale :: Dori Exterman'
+  url: https://www.youtube.com/watch?v=9yk--hL0Tco
+  published: 2026-11-12 22:00:11+00:00
+  updated: 2026-11-12 23:13:41+00:00
+  description: 'Presented at Core C++ 2026 conference, Tel Aviv.
+
+    As one of the world''s largest open-source codebases, the Android Open Source Project (AOSP) serves as a benchmark for large-scale, real-time C++ engineering. But while C++ remains the foundational backbone of the platform, modern AOSP has transformed into a massive multi-language system orchestrated by over 20 distinct build tools.
+
+
+    This evolution offers a clear glimpse into the future of C++ in enterprise projects, where C++ must co-exist and "play in the playground" alongside Rust, Java, Kotlin, automated code generators and others.
+
+
+    Drawing on build telemetry across AOSP 15, 16, and 17, this session explores the practical implications of this shift for C++ developers. We will examine how multi-language dependency graphs impact day-to-day troubleshooting, bottleneck diagnosis, and project health, and look at how the world’s top engineering teams are adapting C++ pipelines to maintain velocity in the agentic coding era.
+
+
+
+    =====
+
+    Dori Exterman
+
+
+    Dori Exterman is a software architect, technology strategist, and speaker with over 20 years of experience shaping platform engineering, high-performance computing, and developer velocity. Having served as CTO and Chief Evangelist across the software industry, Dori guided the architectural vision for high-performance build platforms relied on by global tech enterprises worldwide. A veteran presenter on the global conference circuit, Dori has delivered keynotes and technical sessions at Meeting C++, ACCU, CPP-Summit, C++ CoreHard, the Jenkins User Conference, and various software development and DevOps podcasts.'
+  thumbnail_url: https://i2.ytimg.com/vi/9yk--hL0Tco/hqdefault.jpg
 - video_id: bTOePls0eP4
   title: Branch prediction case study [Lightning Talk]
   url: https://www.youtube.com/watch?v=bTOePls0eP4

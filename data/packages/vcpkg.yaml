@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: vcpkg
 repository: https://github.com/microsoft/vcpkg
-revision: ec48c11eae9448c8c6e7739d93e06fa2433aa95f
+revision: 8f363bdc11359ede4bc51e5eb32a2617538049c8
 packages:
 - id: vcpkg:3fd
   registry: vcpkg
@@ -160,16 +160,18 @@ packages:
   - version: '26.4'
     recipe_revision: 4704cd13c64140e4a2edb5095ef2a89246028d9b
   - version: '26.5'
+    recipe_revision: 7f5e5f3ff93f5f838f667deb416a6de0a2cc92c6
+  - version: '26.6'
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     compatibility:
     - '!uwp & !xbox'
     artifacts:
-    - url: https://github.com/ip7z/7zip/archive/26.05.tar.gz
+    - url: https://github.com/ip7z/7zip/archive/26.06.tar.gz
       checksums:
-      - sha512:871e9b4794b03568462d43aa8706dcfcc5cbf3d5852b1846c76fca34b3d8fbad3f6c61f163361f9e143e83cd15b6454eeed29d3f86dbe9c9f9c03a213b1eaae9
-    recipe_revision: 7f5e5f3ff93f5f838f667deb416a6de0a2cc92c6
+      - sha512:7b9228a3fd9b719e4f83472e764276deb708e34b53726e615cf6e7b5db2ba10453dc7729776c8a813f8de99c601f68fd7046aabbf4538e106b2417477e1afe91
+    recipe_revision: 0a4ddb9f5a41a576394d7e4522c72677fd7cafbd
   recipe_path: ports/7zip/vcpkg.json
 - id: vcpkg:abcmake
   registry: vcpkg
@@ -2396,6 +2398,7 @@ packages:
   licenses:
   - Zlib
   homepage: https://angelcode.com/angelscript
+  repository_url: https://github.com/anjo76/angelscript
   dependencies:
   - vcpkg-cmake
   - vcpkg-cmake-config
@@ -2432,6 +2435,8 @@ packages:
   - version: 2.37.0
     recipe_revision: cb5cf64b9cd72cbcebfb4e68d3e82627541a39c6
   - version: 2.38.0
+    recipe_revision: dfa3e0abfe1b7e0f09eb0930df41d258668cb61e
+  - version: 2.39.0
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -2439,10 +2444,10 @@ packages:
     - name: addons
       description: Installs all addons for use in compiling scripts addons
     artifacts:
-    - url: https://angelcode.com/angelscript/sdk/files/angelscript_2.38.0.zip
+    - url: https://github.com/anjo76/angelscript/archive/v2.39.0.tar.gz
       checksums:
-      - sha512:87c94042932f15d07fe6ede4c3671b1f73ac757b68ab360187591497eeabc56a4ddb7901e4567108e44886a2011a29c2884d4b7389557826f36a6c384f4a9c69
-    recipe_revision: dfa3e0abfe1b7e0f09eb0930df41d258668cb61e
+      - sha512:50797b0626377a403fcbb3bffbc349e06c95081d4f3cba5a465e31990fdaeea051fefecfb7ead1a4fcf77419eb54b9c22a4632f968f62d36349890971e4f5796
+    recipe_revision: 4b8d64d1d6f38545376ef494c8fd852e1c9adb5e
   recipe_path: ports/angelscript/vcpkg.json
 - id: vcpkg:angle
   registry: vcpkg
@@ -5477,6 +5482,8 @@ packages:
   - version: 6.0.4
     recipe_revision: 844278e86f9a397d023eec5b4395f81f5739c3ad
   - version: 6.0.5
+    recipe_revision: 6ae8381bbc3636f3010498fb16ecfcebaded3f26
+  - version: 6.0.6
     dependencies:
     - name: draco
     - name: jhasse-poly2tri
@@ -5494,10 +5501,10 @@ packages:
     - name: draco
       description: Enable Draco compressed mesh support
     artifacts:
-    - url: https://github.com/assimp/assimp/commit/9a486a72e43f92222969bfac7054554f97dd253f.patch?full_index=1
+    - url: https://github.com/assimp/assimp/archive/v6.0.6.tar.gz
       checksums:
-      - sha512:209d79e2366567cc8090e06684ef2da795a317c81d17694590e95051a62123219ab9b700bd0640e5ae0dd0d8bb9d8c9377dadc9168f08968d3b970244dbdc353
-    recipe_revision: 6ae8381bbc3636f3010498fb16ecfcebaded3f26
+      - sha512:58c34e74721feb4cd2951c317ec08653e574d1d9fd9551c2752f0733482b602e51b27da379d3ff3a596eba77a6366efb02e6d98cc3f244faa946b7634acaff60
+    recipe_revision: 36027dadf2ad8162f50e62ed500891a608e33612
   recipe_path: ports/assimp/vcpkg.json
 - id: vcpkg:astr
   registry: vcpkg
@@ -7148,6 +7155,8 @@ packages:
   - version: 1.0.2
     recipe_revision: 61ee567b08b9cfb1725b06f1de8706f3906596f8
   - version: 1.0.3
+    recipe_revision: 3aad4f32f9e49aa8b99dc612f365d3475caec669
+  - version: 1.0.4
     dependencies:
     - name: aws-c-cal
     - name: aws-c-common
@@ -7157,10 +7166,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/awslabs/aws-c-auth/archive/v1.0.3.tar.gz
+    - url: https://github.com/awslabs/aws-c-auth/archive/v1.0.4.tar.gz
       checksums:
-      - sha512:aa1d7b79239bc7f88c82e04999c157084b6efe26783311a39dbe9dc7853b610179e9d3c9e1b0dbf8ce91aa8ad3620eac3020264d03244690c54f80fa8516ba52
-    recipe_revision: 3aad4f32f9e49aa8b99dc612f365d3475caec669
+      - sha512:77f3024451811581a71af8c78915f8f3af4427ee521d4ef1335c75981b09ec25322f8c25d41fd5bc46523153c964d6c74258b92db22f2ae17ca4f9baf964a110
+    recipe_revision: 376ad7b5ffaa3947e34b8d9c74200a89d9871be5
   recipe_path: ports/aws-c-auth/vcpkg.json
 - id: vcpkg:aws-c-cal
   registry: vcpkg
@@ -7925,6 +7934,8 @@ packages:
   - version: 1.4.1
     recipe_revision: c6aba468fbd2eeabaefcd2c278d60a048d3bca6b
   - version: 1.5.1
+    recipe_revision: 5152570cb4330a9884f69863dd52f752a4591134
+  - version: 1.5.2
     dependencies:
     - name: aws-c-auth
     - name: aws-c-http
@@ -7938,10 +7949,10 @@ packages:
     - name: endpoint-resolver
       description: Whether to include the s3 endpoint resolver and related config files
     artifacts:
-    - url: https://github.com/awslabs/aws-c-s3/archive/v1.5.1.tar.gz
+    - url: https://github.com/awslabs/aws-c-s3/archive/v1.5.2.tar.gz
       checksums:
-      - sha512:2e204eda1b4d26315b3aca74d941a31df28937cf1fb45d23049cd426fb75dff46c29207897d597911efec2ec7adc92ce8477a1ce134b64359573247dcb891e16
-    recipe_revision: 5152570cb4330a9884f69863dd52f752a4591134
+      - sha512:46254fef1865a043c0959d6009d4d04bf69b5aec32d1a9bd36440acc9a3a9b9c3deda47c1f105a44bf3698081d634b6bc61eabf96630e1132857847f0e0368b5
+    recipe_revision: 2499439271be66be7264c4fbfb2e526a9bc3962b
   recipe_path: ports/aws-c-s3/vcpkg.json
 - id: vcpkg:aws-c-sdkutils
   registry: vcpkg
@@ -8211,6 +8222,8 @@ packages:
   - version: 0.44.2
     recipe_revision: 7fc568b254bd2bccbbe6452205de92afc8540bc0
   - version: 0.44.3
+    recipe_revision: b229df5b3051b46a9f036e3bc3296b74aaef64b9
+  - version: 0.44.4
     dependencies:
     - name: aws-c-auth
     - name: aws-c-cal
@@ -8226,10 +8239,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/awslabs/aws-crt-cpp/archive/v0.44.3.tar.gz
+    - url: https://github.com/awslabs/aws-crt-cpp/archive/v0.44.4.tar.gz
       checksums:
-      - sha512:3e436c6bb95c2ac94d8d0021fbd4d7e329bde6b29830f2d34dde8d7808e3ebb12584262ec54a75fe34a2f569cbc60ed3819f7cf1a75f1efaea85a08181ef7662
-    recipe_revision: b229df5b3051b46a9f036e3bc3296b74aaef64b9
+      - sha512:c45c9bbda8a3544b3b396d5226fb8bc41062d51bbb0eff6bca4d53fcbeffa12cdf37ad396a1a0b76153d6f3c0fdb425e063164ab5e0a6f0edcc525a0167d3edf
+    recipe_revision: 096c34e9e09fa52c0b884282fcde6a00c8b4e418
   recipe_path: ports/aws-crt-cpp/vcpkg.json
 - id: vcpkg:aws-lambda-cpp
   registry: vcpkg
@@ -10188,6 +10201,8 @@ packages:
   - version: 1.0.0-beta.12
     recipe_revision: 7072faf1f3ed29ec0a3136ca9daeaf0cdbc372ee
   - version: 1.0.0-beta.13
+    recipe_revision: ce4fb191d692b40ef5102e6a4dbd88876eab7748
+  - version: 1.0.0-beta.14
     dependencies:
     - name: azure-c-shared-utility
     - name: azure-core-cpp
@@ -10198,10 +10213,10 @@ packages:
     compatibility:
     - '!uwp'
     artifacts:
-    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-core-amqp_1.0.0-beta.13.tar.gz
+    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-core-amqp_1.0.0-beta.14.tar.gz
       checksums:
-      - sha512:2b0cf1d1a590a1c8e5de5ccd9bbb0667bd37ac7fc7bf87e0e342c575b1439a195dbcdad61b83595c4c606030f4c62f068e15a07ff35ee9e5e7f331f421fc5775
-    recipe_revision: ce4fb191d692b40ef5102e6a4dbd88876eab7748
+      - sha512:595158f69298dbfa0600ede52ff8b0ac67245a5f2c566a53ffa223fa97edd1d0c4eec9dee2c4c34e6f19c6d48b3c153b5464cf109c11a30cf2c8e2e7353adf06
+    recipe_revision: 04e9d74f58ec844c85ae95384c1ff0c7962b59c7
   - version: 1.0.0-beta.2
     packaging_revision: 1
     recipe_revision: 88712b0277f9501bbeab4d9244338fd5411eef93
@@ -10507,6 +10522,8 @@ packages:
   - version: 1.0.0-beta.6
     recipe_revision: 6b1c91c8c8fa88e99e366f7af96a5d8410c55fe4
   - version: 1.0.0-beta.7
+    recipe_revision: d3de72d76bf0dd6dc67e368ad1da8365fc0b1af6
+  - version: 1.0.0-beta.8
     dependencies:
     - name: azure-core-cpp
     - name: libxml2
@@ -10514,10 +10531,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-data-tables_1.0.0-beta.7.tar.gz
+    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-data-tables_1.0.0-beta.8.tar.gz
       checksums:
-      - sha512:a68724f9125e110afe26406e3f329e6e473edf4567c8b6d19ef7c0aaf36a3b750fab349235085f4c1e7560f854dbba07bb9b8e2b516049bcbedfab0ba253ab52
-    recipe_revision: d3de72d76bf0dd6dc67e368ad1da8365fc0b1af6
+      - sha512:71db8f45a2ba2c1ab8b90ff039652f86fadc2544f46ad3c103d0cbebcf67d8cf2f818e34d4aaf8909c2f489226aae810ce7700a1d56778ada02108c04b2ff71f
+    recipe_revision: 5b2a48e663dbc7e168a917947aeadd0c8e5f076e
   recipe_path: ports/azure-data-tables-cpp/vcpkg.json
 - id: vcpkg:azure-identity-cpp
   registry: vcpkg
@@ -10965,6 +10982,8 @@ packages:
   - version: 1.0.0-beta.1
     recipe_revision: 9289b19329d8fc1b12ef5a71d1cf2d743a32cc2a
   - version: 1.0.0-beta.2
+    recipe_revision: 41699242129e6a903a6c44096bb0ea99598a66a3
+  - version: 1.0.0-beta.5
     dependencies:
     - name: azure-core-amqp-cpp
     - name: azure-messaging-eventhubs-cpp
@@ -10972,10 +10991,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-messaging-eventhubs-checkpointstore-blob_1.0.0-beta.2.tar.gz
+    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-messaging-eventhubs-checkpointstore-blob_1.0.0-beta.5.tar.gz
       checksums:
-      - sha512:bf060947c511b3f3c5dc8d7d58744e267809e74d6d14e3703f0a154ea6cf363d14f59fe4d75ad59dd6693202e658c2d6ab96b346dd56d264f8dc159b07e96541
-    recipe_revision: 41699242129e6a903a6c44096bb0ea99598a66a3
+      - sha512:78e53b1c355b83bd1fee9b7344939000e83b809a82794cddee4bf3b795bdab685b4e7d463385d2f1b408925dbc19bbba41b36771a570fe2802b91f48c183317c
+    recipe_revision: 0560a935632439462ee0a1c951b0db369e25ebcf
   recipe_path: ports/azure-messaging-eventhubs-checkpointstore-blob-cpp/vcpkg.json
 - id: vcpkg:azure-messaging-eventhubs-cpp
   registry: vcpkg
@@ -11007,22 +11026,20 @@ packages:
     recipe_revision: 12337a0d0993cb69c3d583fdc3a3c609f568c7b8
   - version: 1.0.0-beta.15
     packaging_revision: 1
+    recipe_revision: 18216b8b17e9e75facd7075b3c07256139ad9085
+  - version: 1.0.0-beta.15
+    recipe_revision: 71cd240c581faf75ef36c15410442954b10f64b6
+  - version: 1.0.0-beta.16
     dependencies:
     - name: azure-core-amqp-cpp
     - name: azure-core-cpp
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-messaging-eventhubs_1.0.0-beta.15.tar.gz
+    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-messaging-eventhubs_1.0.0-beta.16.tar.gz
       checksums:
-      - sha512:3dd7abc471bda9b1e23c3d4e489e94c1f3b2959dc0ea988ad0b13abc7007166664a2d9c836445d2edf7c4d0e7285b187bf2c7e779e39bf600d0fcca8098443dc
-    recipe_revision: 18216b8b17e9e75facd7075b3c07256139ad9085
-  - version: 1.0.0-beta.15
-    artifacts:
-    - url: https://github.com/Azure/azure-sdk-for-cpp/archive/azure-messaging-eventhubs_1.0.0-beta.15.tar.gz
-      checksums:
-      - sha512:3dd7abc471bda9b1e23c3d4e489e94c1f3b2959dc0ea988ad0b13abc7007166664a2d9c836445d2edf7c4d0e7285b187bf2c7e779e39bf600d0fcca8098443dc
-    recipe_revision: 71cd240c581faf75ef36c15410442954b10f64b6
+      - sha512:d87c312124630d90f192e0448f0d3df2fd7b9198842bc1164e9972585222a1c73dfa44d5c0ca113a25cced84022f79f5b3e07213f9b93217a85bbc019c23fddd
+    recipe_revision: 2c7c48a61fd42e25c9ae009e18b5f5ffa3bf422d
   - version: 1.0.0-beta.2
     packaging_revision: 1
     recipe_revision: 2e4e38f8b37bd9c3c6af8bd95887d9108ba1ca67
@@ -12851,6 +12868,10 @@ packages:
   - version: 4.1.1
     recipe_revision: 66a97129b31a5e70e45a40c767ea96b1e0477a93
   - version: 4.10.0
+    recipe_revision: 20fe3189af122ba6e459ac42e8d70f851463073f
+  - version: 4.11.0
+    recipe_revision: b125c91f2c70bf643c485afdf6deabc7e320f0a4
+  - version: 4.11.1
     dependencies:
     - name: cppzmq
     - name: flatbuffers
@@ -12866,7 +12887,7 @@ packages:
       description: Enable SQLite logging.
     compatibility:
     - '!uwp'
-    recipe_revision: 20fe3189af122ba6e459ac42e8d70f851463073f
+    recipe_revision: 2ddeb0a25f92254308f291a2bb1af3ac09cfe72c
   - version: 4.3.7
     recipe_revision: 4cacd1d5f1a465b3ca9d23ebb0b9b4626a26db63
   - version: 4.6.2
@@ -14387,13 +14408,15 @@ packages:
     recipe_revision: f06f8feee872cd3a196d20113ed1f77c39554910
   - version: 3.25.1
     recipe_revision: 23a89d5eb01a5855e931fe5a8405aaca71a5f32e
-  - version: 3.26.9
+  - version: 3.26.10
     compatibility:
     - ((linux | (windows & !uwp)) & !static & (x86 | x64)) | (osx & arm64)
     artifacts:
-    - url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_3.26.9.1-linux.tar.gz
+    - url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_3.26.10.1-linux.tar.gz
       checksums:
-      - sha512:33f19761c71a42528e090c5fc8831898b6616a530bc3dad071ffbca23f3b6a038022da41a0339275c3001b21688e9d9dc010aae3050ddd2df8823c92a16546c6
+      - sha512:c08fd319ad531a6c1bb39286349a8ad5ffb3e557559d370888baa5d73e347fb9ed64f0fa73cd77f26f2e87e69709b1abb840c3a61723da59c6b0640d9d0031f6
+    recipe_revision: d481f36fcd32e56b99461f13ea265ff8d43f67ba
+  - version: 3.26.9
     recipe_revision: a2dd1899bb6d97a9a923150004a12a5f700e6f13
   recipe_path: ports/blpapi/vcpkg.json
 - id: vcpkg:bluescarni-tanuki
@@ -14433,7 +14456,7 @@ packages:
   - qml
   versions:
   - version: 6.31.0
-    packaging_revision: 1
+    packaging_revision: 2
     dependencies:
     - name: ecm
     - name: qtbase
@@ -14445,6 +14468,13 @@ packages:
       description: Build the QML module
     compatibility:
     - linux
+    artifacts:
+    - url: https://github.com/KDE/bluez-qt/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:8e9766fc1e23cb1b6f5db6ff78a484fe69f80a2872b98736ed4a62d6e8dc30688222c3d7751b57f540b4c89f492fc38924017c1fe5bbe298f14b704885ec97d6
+    recipe_revision: f8dcd21f241b6f74e24714930d2a75219e17f873
+  - version: 6.31.0
+    packaging_revision: 1
     artifacts:
     - url: https://github.com/KDE/bluez-qt/archive/v6.31.0.tar.gz
       checksums:
@@ -33691,6 +33721,8 @@ packages:
   - version: 2.7.1
     recipe_revision: b6d69712e17ea475d433d7a787616ac1ca405d1c
   - version: 2.7.3
+    recipe_revision: 2954a2ddd24e798834d84b653bbaf411877e7b84
+  - version: 2.8.0
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -33700,10 +33732,10 @@ packages:
     compatibility:
     - '!(windows & x86) & !android'
     artifacts:
-    - url: https://github.com/Tencent/BqLog/archive/Release_2.7.3.tar.gz
+    - url: https://github.com/Tencent/BqLog/archive/Release_2.8.0.tar.gz
       checksums:
-      - sha512:a3335074cf781e3d4fcf8a2950f9028bfa144ba03fae59813e1fda0e2b22d90d82d3a39fca0d177da79b26c6d914491d5802819dcd93a8b3578d6acc5e658c96
-    recipe_revision: 2954a2ddd24e798834d84b653bbaf411877e7b84
+      - sha512:2476a900276ff773e0f175bbbc92943ad99c8f7245f5df2c1f3f497bc777ea6c8d7d55430f68330a428f2dda6302af1de02e977f7c148d60703d518b8d019d07
+    recipe_revision: fb0c6695b2b7c60698515db74a11a181ebbc53ec
   recipe_path: ports/bqlog/vcpkg.json
 - id: vcpkg:braft
   registry: vcpkg
@@ -33792,6 +33824,106 @@ packages:
       - sha512:245470404885cc8a903893fbcde201b892d0b160d7c1f09758f20c83a0d8f476f4512ee8091aa7a1d3798c8315eb0dae8e9a8da7af8425df62ab6f837b025392
     recipe_revision: d9afe1afea46ce35f64aaed5c2702c34113fe683
   recipe_path: ports/braft/vcpkg.json
+- id: vcpkg:brazier-core
+  registry: vcpkg
+  name: brazier-core
+  summary: Core library for brazier
+  licenses:
+  - LGPL-3.0-or-later
+  homepage: https://github.com/brazier-tech/brazier
+  repository_url: https://github.com/brazier-tech/brazier
+  platforms:
+  - '!bsd'
+  dependencies:
+  - boost-asio
+  - boost-beast
+  - boost-config
+  - boost-filesystem
+  - boost-system
+  - boost-thread
+  - brazier-logger
+  - fmt
+  - hiredis
+  - nlohmann-json
+  - openssl
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  - zlib
+  versions:
+  - version: 0.2.2
+    dependencies:
+    - name: boost-asio
+    - name: boost-beast
+    - name: boost-config
+    - name: boost-filesystem
+    - name: boost-system
+    - name: boost-thread
+    - name: brazier-logger
+    - name: fmt
+    - name: hiredis
+    - name: nlohmann-json
+    - name: openssl
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    - name: zlib
+    compatibility:
+    - '!bsd'
+    artifacts:
+    - url: https://github.com/brazier-tech/brazier/archive/v0.2.2.tar.gz
+      checksums:
+      - sha512:254b10e917ff6dcbfbd030f1ec712a6d711f0d83b314c1c09311dc5a2a199f19e172c07e5c95d173837ae44e8409412c01fef4dcce393eb6b799c6ee6b33d20e
+    recipe_revision: 03da9b8c9895581ceb845621e06c65193649eef6
+  recipe_path: ports/brazier-core/vcpkg.json
+- id: vcpkg:brazier-logger
+  registry: vcpkg
+  name: brazier-logger
+  summary: Logging library for the brazier framework
+  licenses:
+  - LGPL-3.0-or-later
+  homepage: https://github.com/brazier-tech/brazier-logger
+  repository_url: https://github.com/brazier-tech/brazier-logger
+  dependencies:
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  versions:
+  - version: 0.1.1
+    dependencies:
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    artifacts:
+    - url: https://github.com/brazier-tech/brazier-logger/archive/v0.1.1.tar.gz
+      checksums:
+      - sha512:728d52e8d851b42b7940a21cdbacf8876b30fbab9c3e488722da05d662630b25d6aea9a623568658ba9e117ab47f75065c3870975f312e3616aba2dafe61bc09
+    recipe_revision: c38c61773fe02ce0cc578d9182be8cbce37b0014
+  recipe_path: ports/brazier-logger/vcpkg.json
+- id: vcpkg:brazier-orm
+  registry: vcpkg
+  name: brazier-orm
+  summary: ORM module for the brazier C++ MVC framework
+  licenses:
+  - LGPL-3.0-or-later
+  homepage: https://github.com/brazier-tech/brazier-orm
+  repository_url: https://github.com/brazier-tech/brazier-orm
+  dependencies:
+  - brazier-logger
+  - libpq
+  - nlohmann-json
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  versions:
+  - version: 0.1.1
+    dependencies:
+    - name: brazier-logger
+    - name: libpq
+    - name: nlohmann-json
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    artifacts:
+    - url: https://github.com/brazier-tech/brazier-orm/archive/v0.1.1.tar.gz
+      checksums:
+      - sha512:551423a68e30d2840f346e9e24367f0e6332070b4aa63a4925f1877ee1f26a7802ce386d110b3f24366900b7b71faf87e7f68ccd99a37ff33d6c27da8da8c4b2
+    recipe_revision: b693cd586537645b69e3e4b1ec1e67286b1e7427
+  recipe_path: ports/brazier-orm/vcpkg.json
 - id: vcpkg:breakpad
   registry: vcpkg
   name: breakpad
@@ -34274,6 +34406,54 @@ packages:
       - sha512:28b895b823d84203f4cec531ddd5bb49dc915e9a4eb26e064834d1e999b98e512b37d361e59029eb6d7e44fe99ba81f9c5729f119eab7eb928de1a1374f0b7df
     recipe_revision: f44938b5f2dcb43b73f40a5e9220db2a811bfb85
   recipe_path: ports/bsio/vcpkg.json
+- id: vcpkg:btoon
+  registry: vcpkg
+  name: btoon
+  summary: 'BTOON reference implementation: compact binary serialization, MessagePack plus columnar tables, canonical and hardened against hostile input.'
+  licenses:
+  - MIT
+  homepage: https://btoon.net
+  repository_url: https://github.com/BTOON-project/btoon-core
+  dependencies:
+  - brotli
+  - lz4
+  - snappy
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  - zlib
+  - zstd
+  options:
+  - brotli
+  - lz4
+  - snappy
+  - zstd
+  versions:
+  - version: 0.1.3
+    recipe_revision: 338ff40fd96b2cdc6411a8c053e7f3d3019fd4cc
+  - version: 0.1.4
+    dependencies:
+    - name: brotli
+    - name: lz4
+    - name: snappy
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    - name: zlib
+    - name: zstd
+    features:
+    - name: brotli
+      description: Brotli compression envelopes
+    - name: lz4
+      description: LZ4 compression envelopes
+    - name: snappy
+      description: Snappy compression envelopes
+    - name: zstd
+      description: Zstandard compression envelopes
+    artifacts:
+    - url: https://github.com/BTOON-project/btoon-core/archive/v0.1.4.tar.gz
+      checksums:
+      - sha512:cee47b8f3735c20666934964a5fbdfdc04162f319e7ce9c0db6e216caf3e884a712c084d65ef1a38a3fac4c6a349eede4050440a676a2e7f7bbc252dd1b0c229
+    recipe_revision: af24f56c9dd2a64818030df3a09d944c2d2ffada
+  recipe_path: ports/btoon/vcpkg.json
 - id: vcpkg:buck-yeh-bux
   registry: vcpkg
   name: buck-yeh-bux
@@ -34516,6 +34696,8 @@ packages:
   - version: 2.4.30
     recipe_revision: 6ccdc3a499aa692d1dcd2602d4f6fc36c6af9cb2
   - version: 2.4.35
+    recipe_revision: 04df8f2e21bdb96f22732f89d3978a06b1c36c65
+  - version: 2.4.39
     dependencies:
     - name: cxxopts
     - name: eigen3
@@ -34523,10 +34705,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/bungee-audio-stretch/bungee/archive/v2.4.35.tar.gz
+    - url: https://github.com/bungee-audio-stretch/bungee/archive/v2.4.39.tar.gz
       checksums:
-      - sha512:b86e9373c47dd8de8d38bdf54b1281b59a6b695de2595dfc4ac9502546d82c6726acbbfb1396b6065317f574c32e6d74cd08c425b39490cf292df9c1aa04cd23
-    recipe_revision: 04df8f2e21bdb96f22732f89d3978a06b1c36c65
+      - sha512:b4ee26c4b410792a003f5a8c5612752c2f9d8a425f09542edd2e857dcd4e21fe6804dfc605e557b428ebde103ad97fcbd7225033efb337a5ab93cbdf7f1ce842
+    recipe_revision: a43c6ce504655e844e404468752e57a33358d018
   recipe_path: ports/bungee/vcpkg.json
 - id: vcpkg:bustache
   registry: vcpkg
@@ -39710,14 +39892,16 @@ packages:
   - version: 1.3.13
     recipe_revision: c7f963f9fa2751c1078688c714d1a34e4cac599b
   - version: 1.3.14
+    recipe_revision: 94605426850725705df43b719818be4bb0463f00
+  - version: 1.3.15
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/devernay/cminpack/archive/v1.3.14.tar.gz
+    - url: https://github.com/devernay/cminpack/archive/v1.3.15.tar.gz
       checksums:
-      - sha512:3a3879cd396b9a6665eae2edd6976ab465173881341de350f77c4af9cee73f6d77d5eaf60a5666674b50181031aae661e9711e9dbaa9e20f90e21b4ef91151e7
-    recipe_revision: 94605426850725705df43b719818be4bb0463f00
+      - sha512:4a93ece7365e3ac9e9957b2c7ac1d0112314a0602eeaf312b78d7fdebc2208319f304e2fed140aa38fb6e179a9faef079e09b2f605fe0753b12751a3812a742b
+    recipe_revision: 6a36109fbee15be54c8c3dc494549e7e88dcd53d
   - version: 1.3.8
     packaging_revision: 4
     recipe_revision: 0401d2c926529b034913ab84852eef3fac28f6d4
@@ -40441,7 +40625,7 @@ packages:
   - zlib
   versions:
   - version: 2.5.0
-    packaging_revision: 12
+    packaging_revision: 13
     dependencies:
     - name: boost-filesystem
     - name: boost-system
@@ -40451,6 +40635,13 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     - name: zlib
+    artifacts:
+    - url: https://github.com/rdiankov/collada-dom/archive/d37ae7532e350b87c88712e9f6ab4b1f440d20cd.tar.gz
+      checksums:
+      - sha512:cb923d296219765096f5246cc7a2b69712931f58171ae885dbdbd215fca86d911c34d12748d3304d6a5a350dc737ff0caead2495acac488af5431b437cbacc7d
+    recipe_revision: 8518e524959bbadf87748b88372ddef529a80d90
+  - version: 2.5.0
+    packaging_revision: 12
     artifacts:
     - url: https://github.com/rdiankov/collada-dom/archive/d37ae7532e350b87c88712e9f6ab4b1f440d20cd.tar.gz
       checksums:
@@ -40528,15 +40719,13 @@ packages:
 - id: vcpkg:colmap
   registry: vcpkg
   name: colmap
-  summary: COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface. It offers a wide...
-  description: COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface. It offers a wide range of features for reconstruction of ordered and unordered image collections. The software is licensed under the new BSD license.
-  description_format: html
+  summary: COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface.
   licenses:
   - BSD-3-Clause
   homepage: https://colmap.github.io/
   repository_url: https://github.com/colmap/colmap
   platforms:
-  - (linux | (windows & !static) | osx) & (x86 | x64 | arm64)
+  - (linux | windows | osx) & (x86 | x64 | arm64)
   dependencies:
   - boost-algorithm
   - boost-graph
@@ -40546,17 +40735,22 @@ packages:
   - boost-property-tree
   - ceres
   - cgal
+  - cryptopp
   - cuda
+  - curl
   - eigen3
   - faiss
-  - freeimage
   - gflags
   - glew
   - glog
   - jasper
   - metis
+  - onnxruntime
+  - openimageio
+  - openssl
   - poselib
-  - qt5-base
+  - qtbase
+  - qtsvg
   - sqlite3
   - vcpkg-cmake
   - vcpkg-cmake-config
@@ -40564,9 +40758,9 @@ packages:
   - cgal
   - cuda
   - cuda-redist
+  - download
   - gui
-  default_options:
-    gui: enabled
+  - onnx
   versions:
   - version: '2022-03-14'
     packaging_revision: 2
@@ -40604,51 +40798,8 @@ packages:
     recipe_revision: e07255def3b7cf947532848a0edfe51f66cd6f66
   - version: 3.12.6
     packaging_revision: 1
-    dependencies:
-    - name: boost-algorithm
-    - name: boost-graph
-    - name: boost-heap
-    - name: boost-program-options
-    - name: boost-property-map
-    - name: boost-property-tree
-    - name: ceres
-    - name: cgal
-    - name: cuda
-    - name: eigen3
-    - name: faiss
-    - name: freeimage
-    - name: gflags
-    - name: glew
-    - name: glog
-    - name: jasper
-    - name: metis
-    - name: poselib
-    - name: qt5-base
-    - name: sqlite3
-    - name: vcpkg-cmake
-    - name: vcpkg-cmake-config
-    features:
-    - name: cgal
-      description: Build with CGAL.
-    - name: cuda
-      description: Build with CUDA.
-    - name: cuda-redist
-      description: Redistributable CUDA support for common supported compute architectures.
-    - name: gui
-      description: Build the GUI.
-      default: enabled
-    compatibility:
-    - (linux | (windows & !static) | osx) & (x86 | x64 | arm64)
-    artifacts:
-    - url: https://github.com/colmap/colmap/archive/3.12.6.tar.gz
-      checksums:
-      - sha512:718e4542a128fbe39dd36a5e2e6d013c201ef7e23d0f6f38acc10aa5f505185389d8c9b8a75f02846cac4fd426adb75250cc32d32d427496b275ad4632a05ddb
     recipe_revision: 868e9b94358a0830aad7c62adbc5beae1e52b6b7
   - version: 3.12.6
-    artifacts:
-    - url: https://github.com/colmap/colmap/archive/3.12.6.tar.gz
-      checksums:
-      - sha512:718e4542a128fbe39dd36a5e2e6d013c201ef7e23d0f6f38acc10aa5f505185389d8c9b8a75f02846cac4fd426adb75250cc32d32d427496b275ad4632a05ddb
     recipe_revision: 360970f724ed81ffbfa522c23b6a5ff6366b718a
   - version: '3.6'
     packaging_revision: 2
@@ -40662,6 +40813,55 @@ packages:
     recipe_revision: 81329023ad5f9b2bd27554d2d8a97f8e63aef708
   - version: 3.9.1
     recipe_revision: baca06856960d0b705e668bc376b84ebf565e3ce
+  - version: 4.1.1
+    dependencies:
+    - name: boost-algorithm
+    - name: boost-graph
+    - name: boost-heap
+    - name: boost-program-options
+    - name: boost-property-map
+    - name: boost-property-tree
+    - name: ceres
+    - name: cgal
+    - name: cryptopp
+    - name: cuda
+    - name: curl
+    - name: eigen3
+    - name: faiss
+    - name: gflags
+    - name: glew
+    - name: glog
+    - name: jasper
+    - name: metis
+    - name: onnxruntime
+    - name: openimageio
+    - name: openssl
+    - name: poselib
+    - name: qtbase
+    - name: qtsvg
+    - name: sqlite3
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    features:
+    - name: cgal
+      description: Build with CGAL support.
+    - name: cuda
+      description: Build with CUDA support for the native architecture.
+    - name: cuda-redist
+      description: Build with redistributable CUDA support for common supported compute architectures.
+    - name: download
+      description: Build with automatic resource download support.
+    - name: gui
+      description: Build with GUI support.
+    - name: onnx
+      description: Build with ONNX support.
+    compatibility:
+    - (linux | windows | osx) & (x86 | x64 | arm64)
+    artifacts:
+    - url: https://github.com/colmap/colmap/archive/4.1.1.tar.gz
+      checksums:
+      - sha512:0e0da65dfe422872ce0802e062226b38f36e6276f293156f7c16fe106eef785bab5816fb63b4c0a61ccd5b0a5848b19f7efbe8283bd0fa6acd941c70e4e643d1
+    recipe_revision: ba1a0f3c73f08b0382ce6e9c4ecb4cdde6dc4a2a
   recipe_path: ports/colmap/vcpkg.json
 - id: vcpkg:color-console
   registry: vcpkg
@@ -42017,6 +42217,8 @@ packages:
   - version: 0.64.0
     recipe_revision: f181308b8af5ff88cac7d4a507aeb1f75b1e309a
   - version: 0.65.0
+    recipe_revision: 95167951c6e4b6c5d3871c1d177939e2e0dca8a1
+  - version: 0.66.0
     dependencies:
     - name: brotli
     - name: openssl
@@ -42035,10 +42237,10 @@ packages:
     - name: zstd
       description: Enables zstd support
     artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/v0.65.0.tar.gz
+    - url: https://github.com/yhirose/cpp-httplib/archive/v0.66.0.tar.gz
       checksums:
-      - sha512:2c376d72a8cac477e80c78960a2abb49af9c41057cfc3dc5a7450333b52a9531c3f8a1d0bb2cb36b66021ee53d7b3587eecb6e0c3360a8b5fc8cf79917ef7f33
-    recipe_revision: 95167951c6e4b6c5d3871c1d177939e2e0dca8a1
+      - sha512:e131018fed8bd9bd857bc3037cf800ba47253ea05412dd53a97415d66e7e3fa846ebb91525b1ea8b6e97a5ef16e999122a47a9a7ade404501df5d79bff47a902
+    recipe_revision: d0ef5df0c2f3a386221c25301027bd52fe5682a5
   - version: 0.7.0
     recipe_revision: dbf92e33069d9fc4c7dfea6912f7f7550f11bc7a
   - version: 0.7.15
@@ -45080,6 +45282,10 @@ packages:
   - version: 1.32.0
     recipe_revision: 4952d2fe4a4bd8a77dc3f865869cc6ca3d3818c7
   - version: 1.32.1
+    recipe_revision: 30509180c52425c84b8d919eb448383d9feeb81d
+  - version: 1.32.2
+    recipe_revision: b74c4e70344f32c8eb8552ce879057ff2ad8b2ed
+  - version: 1.32.3
     dependencies:
     - name: cuda
     - name: cudnn
@@ -45087,10 +45293,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/NVIDIA/cudnn-frontend/archive/v1.32.1.tar.gz
+    - url: https://github.com/NVIDIA/cudnn-frontend/archive/v1.32.3.tar.gz
       checksums:
-      - sha512:204159ad1c6bb637c6c18ec57fd77b2d4a66483ee9b021cea9b9b9724048629b6940a260ae8912109e219f064980dce93f069383f7bb250c5b006255e995b1df
-    recipe_revision: 30509180c52425c84b8d919eb448383d9feeb81d
+      - sha512:923f39cd6a60c965ae1b7a895f1198ca81cccf556503f62dff318ea0179ba316e4990c192bf03609d13cb5955a2e15f7f1e7bc7cef4e2f7fbb545765279d95a5
+    recipe_revision: e9f3a554406d8957ea69c8c6a8780fe7b79e6653
   recipe_path: ports/cudnn-frontend/vcpkg.json
 - id: vcpkg:cunit
   registry: vcpkg
@@ -46385,6 +46591,8 @@ packages:
   - version: 3.2.0
     recipe_revision: d1a3cc4402d4da326b2d633c904bb51ab50ff79f
   - version: 3.2.1
+    recipe_revision: d3f3035220119c213e75799743bccbd80fb0ea1d
+  - version: 3.3.0
     dependencies:
     - name: directx-headers
     - name: vcpkg-cmake
@@ -46392,10 +46600,10 @@ packages:
     compatibility:
     - windows
     artifacts:
-    - url: https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/v3.2.1.tar.gz
+    - url: https://github.com/GPUOpen-LibrariesAndSDKs/D3D12MemoryAllocator/archive/v3.3.0.tar.gz
       checksums:
-      - sha512:d8b9b3a587c676cee216a92f49ca965edbbbf321d87bf6d88e44e4b268aad8d7278601500c56f976d14c8960b4934279545e3e7ba625d6f94c321fef24b98844
-    recipe_revision: d3f3035220119c213e75799743bccbd80fb0ea1d
+      - sha512:7c6afbb3e5c96f4a3ce624a3dc0ca12ab051e7d77aa512baa1d00e760efdcbde2118ffef36c6f1cc3b0ca297f4e9578d4e7710f630b37de0482a28559a06c6da
+    recipe_revision: a1c10d5e91cb1c1e71b24a8822160b162dd615d5
   recipe_path: ports/d3d12-memory-allocator/vcpkg.json
 - id: vcpkg:d3dx12
   registry: vcpkg
@@ -47274,6 +47482,10 @@ packages:
     recipe_revision: 7d0383eda09e0e597b0a720364905f5e45cd23b9
   - version: '20260911.162847'
     packaging_revision: 1
+    recipe_revision: a48dec4054bf534717bc1189f459996f9b515cfc
+  - version: '20260911.162847'
+    recipe_revision: 9aaf9b40d2e91c7ee31c4f437f88f9068484f3b7
+  - version: '20261111.144539'
     dependencies:
     - name: abseil
     - name: directx-dxc
@@ -47312,16 +47524,10 @@ packages:
       description: X11 support
       default: enabled
     artifacts:
-    - url: https://github.com/google/dawn/releases/download/v20260911.162847/emdawnwebgpu_pkg-v20260911.162847.zip
+    - url: https://github.com/google/dawn/releases/download/v20261111.144539/emdawnwebgpu_pkg-v20261111.144539.zip
       checksums:
-      - sha512:bd89894435f502d904955ad0207a4245c192dda183857eb87c6487cdb5a799ae3bbd19ab1f4c90e32b8f808dfcabf58a190e5c480de198dd7aa5728506bef6c1
-    recipe_revision: a48dec4054bf534717bc1189f459996f9b515cfc
-  - version: '20260911.162847'
-    artifacts:
-    - url: https://github.com/google/dawn/releases/download/v20260911.162847/emdawnwebgpu_pkg-v20260911.162847.zip
-      checksums:
-      - sha512:bd89894435f502d904955ad0207a4245c192dda183857eb87c6487cdb5a799ae3bbd19ab1f4c90e32b8f808dfcabf58a190e5c480de198dd7aa5728506bef6c1
-    recipe_revision: 9aaf9b40d2e91c7ee31c4f437f88f9068484f3b7
+      - sha512:9fe091b89f2375cb4bddf075385e34b58d263f359536d4b7cf13dd2b16eca1a1525faaf4adf73d6df91ab8da5c02e1f018898a06473087d9d91a8a1d507bb9e9
+    recipe_revision: 2aa15badfa260a95ffff5fc72c8c16bd6ef2b33e
   recipe_path: ports/dawn/vcpkg.json
 - id: vcpkg:daxa
   registry: vcpkg
@@ -47601,6 +47807,22 @@ packages:
     recipe_revision: a49c03bc95822c2f376e3f3758ac3087a428ddec
   - version: 1.16.2
     packaging_revision: 5
+    recipe_revision: 184441eb3d564d1b8fc9bf7585f15918235a3423
+  - version: 1.16.2
+    packaging_revision: 4
+    recipe_revision: 97f5572672fd8144ff918d0f54a53de2af8eaa7b
+  - version: 1.16.2
+    packaging_revision: 3
+    recipe_revision: 068e054e91c981d1e0759474b11581ac214d69fb
+  - version: 1.16.2
+    packaging_revision: 2
+    recipe_revision: a29fd7f168a1d2a3de4267941c2e28965ea1125e
+  - version: 1.16.2
+    packaging_revision: 1
+    recipe_revision: 53859bc14ee6f5ac022edc297a6569bc880abdec
+  - version: 1.16.2
+    recipe_revision: ef5eaa8192465a6bd08ec9e664f5f2f467295257
+  - version: 1.16.4
     dependencies:
     - name: expat
     - name: libsystemd
@@ -47618,42 +47840,8 @@ packages:
     artifacts:
     - url: https://gitlab.freedesktop.org/
       checksums:
-      - sha512:8ad3ab55bf6e2bbe6ff871302c2840c0cb82b4ec785b05f146c577ca1e931825084012ac90251e28c30e44d111e5ca5711b29349f4f0e68a09ba49392e63ac89
-    recipe_revision: 184441eb3d564d1b8fc9bf7585f15918235a3423
-  - version: 1.16.2
-    packaging_revision: 4
-    artifacts:
-    - url: https://gitlab.freedesktop.org/
-      checksums:
-      - sha512:8ad3ab55bf6e2bbe6ff871302c2840c0cb82b4ec785b05f146c577ca1e931825084012ac90251e28c30e44d111e5ca5711b29349f4f0e68a09ba49392e63ac89
-    recipe_revision: 97f5572672fd8144ff918d0f54a53de2af8eaa7b
-  - version: 1.16.2
-    packaging_revision: 3
-    artifacts:
-    - url: https://gitlab.freedesktop.org/
-      checksums:
-      - sha512:8ad3ab55bf6e2bbe6ff871302c2840c0cb82b4ec785b05f146c577ca1e931825084012ac90251e28c30e44d111e5ca5711b29349f4f0e68a09ba49392e63ac89
-    recipe_revision: 068e054e91c981d1e0759474b11581ac214d69fb
-  - version: 1.16.2
-    packaging_revision: 2
-    artifacts:
-    - url: https://gitlab.freedesktop.org/
-      checksums:
-      - sha512:8ad3ab55bf6e2bbe6ff871302c2840c0cb82b4ec785b05f146c577ca1e931825084012ac90251e28c30e44d111e5ca5711b29349f4f0e68a09ba49392e63ac89
-    recipe_revision: a29fd7f168a1d2a3de4267941c2e28965ea1125e
-  - version: 1.16.2
-    packaging_revision: 1
-    artifacts:
-    - url: https://gitlab.freedesktop.org/
-      checksums:
-      - sha512:8ad3ab55bf6e2bbe6ff871302c2840c0cb82b4ec785b05f146c577ca1e931825084012ac90251e28c30e44d111e5ca5711b29349f4f0e68a09ba49392e63ac89
-    recipe_revision: 53859bc14ee6f5ac022edc297a6569bc880abdec
-  - version: 1.16.2
-    artifacts:
-    - url: https://gitlab.freedesktop.org/
-      checksums:
-      - sha512:8ad3ab55bf6e2bbe6ff871302c2840c0cb82b4ec785b05f146c577ca1e931825084012ac90251e28c30e44d111e5ca5711b29349f4f0e68a09ba49392e63ac89
-    recipe_revision: ef5eaa8192465a6bd08ec9e664f5f2f467295257
+      - sha512:267c5346e5974682ade56f7bffaac74d356afaec9e569d49f3140eaeb6271d8c242fbe90f487f15c9bc5d656b742eb71e488c9137226be638d639fecdf6506a8
+    recipe_revision: 8556369dbbc286b26b7ed82cd0a7f48918e3ceea
   recipe_path: ports/dbus/vcpkg.json
 - id: vcpkg:dbus-cxx
   registry: vcpkg
@@ -48418,6 +48606,10 @@ packages:
   - version: '2026-02-20'
     recipe_revision: 368c493caa55971e68254b68ac7ce769aee0890b
   - version: '2026-05-27'
+    recipe_revision: 9755705e5026eecae165fcb535c00ba89e027cd6
+  - version: '2026-06-24'
+    recipe_revision: eb44fc70e424469759405d7ecc0681c0050dd0c6
+  - version: '2026-09-29'
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -48425,12 +48617,10 @@ packages:
     compatibility:
     - (windows & !arm32 & !uwp & !xbox) | (linux & x64)
     artifacts:
-    - url: https://github.com/microsoft/DirectXShaderCompiler/releases/download/v1.9.2602.24/linux_dxc_2026_05_26.x86_64.tar.gz
+    - url: https://github.com/microsoft/DirectXShaderCompiler/releases/download/v1.9.2609/linux_dxc_2026_09_28.x86_x64.tar.gz
       checksums:
-      - sha512:3da18b4b32899c65881276315411092fa1a076e25bbea20606bc247c5fa93c83f948785969e007115dc72afcd433ab76e54c392de6d37c11d93d8614a829e40a
-    recipe_revision: 9755705e5026eecae165fcb535c00ba89e027cd6
-  - version: '2026-06-24'
-    recipe_revision: eb44fc70e424469759405d7ecc0681c0050dd0c6
+      - sha512:b31acf9712354b6eb4e8d843108fe4949da10bf8c9cf6a93e418992d007e45ccf98d71c525537be5a61066d76cc334d0de675f8c5411893025878a92e8d73557
+    recipe_revision: d2e90a423513f081f67b6920fa62e33ff16a0fad
   recipe_path: ports/directx-dxc/vcpkg.json
 - id: vcpkg:directx-headers
   registry: vcpkg
@@ -48493,16 +48683,18 @@ packages:
     recipe_revision: 604aa5530f61c53f4ea0f456d935398f12429c93
   - version: 1.619.5
     recipe_revision: ae5de268690a6a9216cf835574d1da1b5ffacf87
-  - version: 1.721.2
+  - version: 1.620.2
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     compatibility:
     - (windows & !arm32 & !xbox) | linux
     artifacts:
-    - url: https://github.com/Microsoft/DirectX-Headers/archive/v1.721.2.tar.gz
+    - url: https://github.com/Microsoft/DirectX-Headers/archive/v1.620.2.tar.gz
       checksums:
-      - sha512:a802e548b0e5a332ac42e843020d16f6797bd5e85945d10115f9017ef85f1fedbadcb2b07437320eab3924970e7ea72792e43a8aa020545b31e5ea38556163be
+      - sha512:4ed51ee0efe65f9e27eb4ef22af934163d6fcb6d674dc56dcddc6e7b941acf1d3292332034f379179fe80e59cde94b9fceea36533d268e7df49d3656971254ef
+    recipe_revision: 4d1bd464353c0da754db08288722718e2dc75ce8
+  - version: 1.721.2
     recipe_revision: 573bc5666bd84b5955edd9126d77a8e48a19896c
   recipe_path: ports/directx-headers/vcpkg.json
 - id: vcpkg:directx12-agility
@@ -48552,6 +48744,8 @@ packages:
   - version: 1.619.4
     recipe_revision: c6d5764870d5cb3f67025ce4fbca6432f1e47180
   - version: 1.619.5
+    recipe_revision: 45f817bf50b8a179a86a396e1182e4fdaf8da33e
+  - version: 1.620.2
     dependencies:
     - name: directx-headers
     - name: vcpkg-cmake
@@ -48559,10 +48753,10 @@ packages:
     compatibility:
     - windows & !uwp & !xbox & !arm32
     artifacts:
-    - url: https://www.nuget.org/api/v2/package/Microsoft.Direct3D.D3D12/1.619.5
+    - url: https://www.nuget.org/api/v2/package/Microsoft.Direct3D.D3D12/1.620.2
       checksums:
-      - sha512:f7c0a819610066d7cf03d18a4349f51b4f1e9b4f1b3f8ff5f7fbd9490e683471696e6fe50a11f8639efe3247c16ae18799f30bd36096160797dd880a0fceb47f
-    recipe_revision: 45f817bf50b8a179a86a396e1182e4fdaf8da33e
+      - sha512:d683ff7f5726906c3f43d299f6cdd4b1cad22f8329ccd27b3492d0a1413d9904102b8d543419bec3b3545c86bf49f6a500ebf42d95c999aa0969e5d693032735
+    recipe_revision: f14350710a920d5ef77c6cbe201fbe78058c7499
   recipe_path: ports/directx12-agility/vcpkg.json
 - id: vcpkg:directxmath
   registry: vcpkg
@@ -50310,7 +50504,7 @@ packages:
   summary: A set of libraries and drivers for fast packet processing
   licenses:
   - BSD-3-Clause
-  homepage: https://www.dpdk.org/
+  homepage: https://www.dpdk.org
   repository_url: https://github.com/DPDK/dpdk
   documentation_url: https://doc.dpdk.org/guides/
   platforms:
@@ -50380,6 +50574,25 @@ packages:
     recipe_revision: cc65391748bf0876d288a5a18f8ac58798b367d0
   - version: '26.3'
     packaging_revision: 6
+    recipe_revision: cfa12b897cd38a2c86fa6fd7bbb4997914c04dbe
+  - version: '26.3'
+    packaging_revision: 5
+    recipe_revision: 207224e92310362a25a40ac5ba7e9fae7141d6e8
+  - version: '26.3'
+    packaging_revision: 4
+    recipe_revision: 3443c981274fca7554e7cec83b5fb7552c33af24
+  - version: '26.3'
+    packaging_revision: 3
+    recipe_revision: 1648404bf87ba2993a3d7395aaab019b08787bdd
+  - version: '26.3'
+    packaging_revision: 2
+    recipe_revision: 17d1ec9766dea33a0a556e51a1369a82b693fe21
+  - version: '26.3'
+    packaging_revision: 1
+    recipe_revision: bc5eb55c71122f48fd77ac874d09e0cc6b96bda7
+  - version: '26.3'
+    recipe_revision: 2f0e7f0a8441cfd2b7c64c76f70d599d657df8c1
+  - version: '26.7'
     dependencies:
     - name: cuda
     - name: dtc
@@ -50428,51 +50641,10 @@ packages:
     compatibility:
     - freebsd | linux | (windows & x64)
     artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
+    - url: https://github.com/DPDK/dpdk/archive/v26.07.tar.gz
       checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: cfa12b897cd38a2c86fa6fd7bbb4997914c04dbe
-  - version: '26.3'
-    packaging_revision: 5
-    artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
-      checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: 207224e92310362a25a40ac5ba7e9fae7141d6e8
-  - version: '26.3'
-    packaging_revision: 4
-    artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
-      checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: 3443c981274fca7554e7cec83b5fb7552c33af24
-  - version: '26.3'
-    packaging_revision: 3
-    artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
-      checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: 1648404bf87ba2993a3d7395aaab019b08787bdd
-  - version: '26.3'
-    packaging_revision: 2
-    artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
-      checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: 17d1ec9766dea33a0a556e51a1369a82b693fe21
-  - version: '26.3'
-    packaging_revision: 1
-    artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
-      checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: bc5eb55c71122f48fd77ac874d09e0cc6b96bda7
-  - version: '26.3'
-    artifacts:
-    - url: https://github.com/DPDK/dpdk/archive/v26.03.tar.gz
-      checksums:
-      - sha512:37b49b5b5481036e0d563794222fc37c358f3c81b449e4252adb3bb1365e5dde14d7310a1ace810ee2443902a1cc7b177dca76666dd324241142062532a7509d
-    recipe_revision: 2f0e7f0a8441cfd2b7c64c76f70d599d657df8c1
+      - sha512:6cedded34ea2b32db669dd0f038c97e303032a86b42e194e5681ca0af6e239e779b9de15ba67eb8a3599ee4fe36c873f3b8d29015ad9a2eea3c741161f7d9f96
+    recipe_revision: 2c361d5b9a472bd288394e3f505c898423e90d78
   recipe_path: ports/dpdk/vcpkg.json
 - id: vcpkg:dpetkov-semver
   registry: vcpkg
@@ -52733,16 +52905,18 @@ packages:
   - version: 1.6.3
     recipe_revision: 34d2de87ccaa366967171601454bbf9379d7821b
   - version: 1.7.2
+    recipe_revision: 091c51cf228795d269c98dd51eacbbba875508fc
+  - version: 1.7.3
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     compatibility:
     - '!uwp'
     artifacts:
-    - url: https://github.com/SpartanJ/efsw/archive/1.7.2.tar.gz
+    - url: https://github.com/SpartanJ/efsw/archive/1.7.3.tar.gz
       checksums:
-      - sha512:6614314b96efe983647f3bd21870165e9c26ecf555bea0916f993f93221a491d997a16e847b34bc6db097599667917e71f570f591899e650a510a82297f7b6ad
-    recipe_revision: 091c51cf228795d269c98dd51eacbbba875508fc
+      - sha512:a3c77869ea72564f029d620928e01cf9c43841ef9094e0519088e3a67af228f979ea43acccee28ee2c07944afbd15811380b9d418f60af39086bf75d9a0d005a
+    recipe_revision: 7db98ae6ee8b10911ae11c28af6d10d975964c0e
   - version: '2020-06-08'
     packaging_revision: 3
     recipe_revision: 6ebed2c2027b2500f01aa9f755df88098810826e
@@ -52962,9 +53136,33 @@ packages:
   - fontconfig
   - freetype
   - gtk3
+  - harfbuzz
+  - libunibreak
   - libwebp
+  - quill
   - vcpkg-cmake
   versions:
+  - version: 1.0.1
+    recipe_revision: b6f0b6275a4cca169d4a4ddc14298bf5f880c39d
+  - version: 1.0.2
+    dependencies:
+    - name: asio
+    - name: cairo
+    - name: fontconfig
+    - name: freetype
+    - name: gtk3
+    - name: harfbuzz
+    - name: libunibreak
+    - name: libwebp
+    - name: quill
+    - name: vcpkg-cmake
+    compatibility:
+    - (windows & staticcrt) | osx | linux
+    artifacts:
+    - url: https://github.com/cycfi/elements/archive/v1.0.2.tar.gz
+      checksums:
+      - sha512:ce47e36a07870bd0851ed1896a5fdf897b2eadcc8d215a4d7042c78062defa58f73c3985b86bfbeb1e76219ccd1cf1bedc0cd5fd2204cb2b74d01cf8b78426a6
+    recipe_revision: 3e76a9a7ba680e73c30f595de889c6469a651559
   - version: '2022-12-07'
     packaging_revision: 1
     recipe_revision: 1ab41f4881c43e4119c9f80141820e016db62ebf
@@ -52974,26 +53172,8 @@ packages:
     recipe_revision: c0514f653f33627cfd7cec2f34186f9128a5c571
   - version: '2025-11-18'
     packaging_revision: 1
-    dependencies:
-    - name: asio
-    - name: cairo
-    - name: fontconfig
-    - name: freetype
-    - name: gtk3
-    - name: libwebp
-    - name: vcpkg-cmake
-    compatibility:
-    - (windows & staticcrt) | osx | linux
-    artifacts:
-    - url: https://github.com/cycfi/elements/commit/c8c6a0d14b8deb79f6b0f56fff716285e2298395.patch?full_index=1
-      checksums:
-      - sha512:8c6ce837d69622d8f8e3d897fe23419110008061274a7c3bb2ba5947ffc476606eddf5dbfd261de840e1748cd4fa7efe6308014a7e48e2104a5cb49209a7219a
     recipe_revision: 6548c242a26455e10a1e127b48adbf828efcd295
   - version: '2025-11-18'
-    artifacts:
-    - url: https://github.com/cycfi/elements/commit/c8c6a0d14b8deb79f6b0f56fff716285e2298395.patch?full_index=1
-      checksums:
-      - sha512:8c6ce837d69622d8f8e3d897fe23419110008061274a7c3bb2ba5947ffc476606eddf5dbfd261de840e1748cd4fa7efe6308014a7e48e2104a5cb49209a7219a
     recipe_revision: 95e35536ab39e60813f3ff274c41323020027816
   recipe_path: ports/elements/vcpkg.json
 - id: vcpkg:elfio
@@ -53055,6 +53235,7 @@ packages:
   options:
   - libdebuginfod
   - nls
+  - stackprof
   versions:
   - version: '0.182'
     packaging_revision: 2
@@ -53089,6 +53270,10 @@ packages:
     recipe_revision: 3fcfd684585a393d6f0bb2a7c63aabf48c61af4e
   - version: '0.195'
     packaging_revision: 1
+    recipe_revision: 8e6a0b3de9b5932717234031687d5895c8ced9bf
+  - version: '0.195'
+    recipe_revision: c6b8117ba15e892493e6381f9e05e51a4629289c
+  - version: '0.197'
     dependencies:
     - name: bzip2
     - name: curl
@@ -53104,25 +53289,18 @@ packages:
       description: Build the debuginfod library.
     - name: nls
       description: Enable native language support
+    - name: stackprof
+      description: Build eu-stackprof (requires C++20 with <format> support).
     compatibility:
     - linux
     artifacts:
-    - url: https://sourceware.org/pub/elfutils/0.195/elfutils-0.195.tar.bz2
+    - url: https://sourceware.org/pub/elfutils/0.197/elfutils-0.197.tar.bz2
       checksums:
-      - sha512:e1e1fdf4f7f72bf520deb0103bb8fd208dc247bab14af100c6fb56d38c0ef6c6d54ff5bd15b84e4f70e2b2ea481e5999fea2842360f8932a861122df79b5fc8f
-    - url: https://www.mirrorservice.org/sites/sourceware.org/pub/elfutils/0.195/elfutils-0.195.tar.bz2
+      - sha512:66287a189cf939216e87781e3376908f5ac7ae0c1ba9f20424bbcf1696257475de736b01727ca3d1eba5c57197e141c6e46633546dd3aac30b7faed9b40f0782
+    - url: https://www.mirrorservice.org/sites/sourceware.org/pub/elfutils/0.197/elfutils-0.197.tar.bz2
       checksums:
-      - sha512:e1e1fdf4f7f72bf520deb0103bb8fd208dc247bab14af100c6fb56d38c0ef6c6d54ff5bd15b84e4f70e2b2ea481e5999fea2842360f8932a861122df79b5fc8f
-    recipe_revision: 8e6a0b3de9b5932717234031687d5895c8ced9bf
-  - version: '0.195'
-    artifacts:
-    - url: https://sourceware.org/pub/elfutils/0.195/elfutils-0.195.tar.bz2
-      checksums:
-      - sha512:e1e1fdf4f7f72bf520deb0103bb8fd208dc247bab14af100c6fb56d38c0ef6c6d54ff5bd15b84e4f70e2b2ea481e5999fea2842360f8932a861122df79b5fc8f
-    - url: https://www.mirrorservice.org/sites/sourceware.org/pub/elfutils/0.195/elfutils-0.195.tar.bz2
-      checksums:
-      - sha512:e1e1fdf4f7f72bf520deb0103bb8fd208dc247bab14af100c6fb56d38c0ef6c6d54ff5bd15b84e4f70e2b2ea481e5999fea2842360f8932a861122df79b5fc8f
-    recipe_revision: c6b8117ba15e892493e6381f9e05e51a4629289c
+      - sha512:66287a189cf939216e87781e3376908f5ac7ae0c1ba9f20424bbcf1696257475de736b01727ca3d1eba5c57197e141c6e46633546dd3aac30b7faed9b40f0782
+    recipe_revision: 8337974092dcd2424de23591eacbb70598ca6b04
   recipe_path: ports/elfutils/vcpkg.json
 - id: vcpkg:eljonny-testcpp
   registry: vcpkg
@@ -54134,6 +54312,14 @@ packages:
     recipe_revision: 2982d118ed6fd966d329162929f9318c3ab7d4f3
   - version: 2.1.1-1
     recipe_revision: 56a210e91dc39098760cbfb5beab008209f819d9
+  - version: 2.10.0
+    dependencies:
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    artifacts:
+    - checksums:
+      - sha512:c525248bad66c41355620f0f6e7ed9035e958dca0008edfa5c2d4b49bad443eea0482c1c8cad72e12925c0da481ade3e88d6f59b638f60c77380a6fd613c10c8
+    recipe_revision: 4c93a2f4217a3477d39baf0d6c39bd278029603e
   - version: 2.2.4
     recipe_revision: a103749efe13a8aa6497b7ec91f93a24d3fe1f77
   - version: 2.2.4-1
@@ -54209,12 +54395,6 @@ packages:
   - version: 2.8.5
     recipe_revision: 0d6214a6304781b24cbaf4138cf6e15e22c02a44
   - version: 2.9.0
-    dependencies:
-    - name: vcpkg-cmake
-    - name: vcpkg-cmake-config
-    artifacts:
-    - checksums:
-      - sha512:b4820866070eb2b6ea910ac7737cdc6bdec36462d4cf056dd1d84615a81cbafa88e4060c3c496207e60adc180086125f4aee5be8da5184867a1b40ae4e182d78
     recipe_revision: 416305561a3eca86da07c39ccb6bb8382ffbaae0
   - version: '2020-08-18'
     recipe_revision: f9cd8671e2436416fa63363267574f508aadee9b
@@ -55212,6 +55392,7 @@ packages:
   repository_url: https://github.com/spnda/fastgltf
   dependencies:
   - simdjson
+  - simdutf
   - vcpkg-cmake
   - vcpkg-cmake-config
   versions:
@@ -55241,15 +55422,18 @@ packages:
   - version: 0.9.0
     recipe_revision: 711af0690ff761db0fd1e35c1645f2bd00bb90ad
   - version: 0.9.1
+    recipe_revision: 114024e4534e01bbe1e13d9db1f4904015d86f77
+  - version: 1.0.1
     dependencies:
     - name: simdjson
+    - name: simdutf
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/spnda/fastgltf/archive/v0.9.1.tar.gz
+    - url: https://github.com/spnda/fastgltf/archive/v1.0.1.tar.gz
       checksums:
-      - sha512:e7af2eeefe6d4bca6d466f1fce1ff3d000b97fb84a6609cb8a20eab218b0f557e67acee31809e5e05d521c5330b8a97734536ebce24d0135954e07d9d6bd3807
-    recipe_revision: 114024e4534e01bbe1e13d9db1f4904015d86f77
+      - sha512:407f99ba7e6cc439b5255d780e12443775a4f2ea2f878ab6bb64e496d6e05d52def4bbb22a7cf43437e3454279b751c70f20423e16160387ff24e16fd0f5a1f3
+    recipe_revision: 6d1962535b8aae4f38f27b8b4b73ece57d3dd3a0
   recipe_path: ports/fastgltf/vcpkg.json
 - id: vcpkg:fastio
   registry: vcpkg
@@ -58194,16 +58378,18 @@ packages:
   - version: 4.1.5
     recipe_revision: a0af5c49aa74717ffe408171fb637a158183aa37
   - version: 4.1.6
+    recipe_revision: 6e13da0e6d446c34fef059953b4a947f04af748d
+  - version: 4.2.0
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     compatibility:
     - '!uwp'
     artifacts:
-    - url: https://github.com/SanderMertens/flecs/archive/v4.1.6.tar.gz
+    - url: https://github.com/SanderMertens/flecs/archive/v4.2.0.tar.gz
       checksums:
-      - sha512:a2843d72a4a7f7577e047eac60d492c8a6677dae404d9ec6a23a498f5d37f745897a0892a3a5ef7b66de5c5f862e55cf9ae6b50dc33d0bd7a674707ca93f2b30
-    recipe_revision: 6e13da0e6d446c34fef059953b4a947f04af748d
+      - sha512:875afea913247fe40a812bfd570e9091280e356f760e57d9aa02d93af1478e307650f5c4fcaf7938eec729b46aa82d9f845d5591a3b3956f9c70a087349e7a69
+    recipe_revision: 5b59da72c933b2765d075b5d3ff772809be3987b
   recipe_path: ports/flecs/vcpkg.json
 - id: vcpkg:flint
   registry: vcpkg
@@ -58720,7 +58906,7 @@ packages:
   - version: 2.0.3-2
     recipe_revision: 01fab530018dd2a3130c07f0805c82529d8591a3
   - version: 2.4.1
-    packaging_revision: 3
+    packaging_revision: 4
     dependencies:
     - name: expat
     - name: minizip
@@ -58728,6 +58914,13 @@ packages:
     - name: vcpkg-cmake-config
     compatibility:
     - '!uwp'
+    artifacts:
+    - url: https://github.com/modelon-community/fmi-library/archive/2.4.1.tar.gz
+      checksums:
+      - sha512:65c2dc11116737e4e2ee91a4ec58d2cf24003774fd6d9b8b1d6521f046be9e8f8a963ebedb50a161ad264927062f41ce757c84563cfe628d47614910e8730349
+    recipe_revision: adc1e7bfef54b1d490a761e5c7bfc6c4d2f29bf6
+  - version: 2.4.1
+    packaging_revision: 3
     artifacts:
     - url: https://github.com/modelon-community/fmi-library/archive/2.4.1.tar.gz
       checksums:
@@ -58795,6 +58988,10 @@ packages:
     recipe_revision: 936231a2c765082457d348a8781ea9d3610eb331
   - version: 12.2.0
     packaging_revision: 1
+    recipe_revision: 7ca0b8c0026883daf28a0db75f6b4964bae2979a
+  - version: 12.2.0
+    recipe_revision: 823af43db9df2c4be15c4331b36b3cc419afa02c
+  - version: 12.2.1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -58802,13 +58999,7 @@ packages:
     - url: https://github.com/fmtlib/fmt/commit/588b3a0f8f6a8bcf2a959cae882d5b2703e86737.patch?full_index=1
       checksums:
       - sha512:afda8fdfcdcb4b0dd5df4d4dae96a57a85fb9c4b65d0b49d51258f0913d4aed93ed146ebf96ed7b277490b1dde6c7117f43332013071441a96c3147520de8368
-    recipe_revision: 7ca0b8c0026883daf28a0db75f6b4964bae2979a
-  - version: 12.2.0
-    artifacts:
-    - url: https://github.com/fmtlib/fmt/commit/588b3a0f8f6a8bcf2a959cae882d5b2703e86737.patch?full_index=1
-      checksums:
-      - sha512:afda8fdfcdcb4b0dd5df4d4dae96a57a85fb9c4b65d0b49d51258f0913d4aed93ed146ebf96ed7b277490b1dde6c7117f43332013071441a96c3147520de8368
-    recipe_revision: 823af43db9df2c4be15c4331b36b3cc419afa02c
+    recipe_revision: 4a2eaa993a4f1f26f204d3b47ff3b2f2c5d29df4
   - version: 3.0.0
     recipe_revision: d75df7f1760ecaf26d0bc7afbb8181e05713dedc
   - version: 3.0.0-1
@@ -59702,7 +59893,6 @@ packages:
   dependencies:
   - boost-container-hash
   - fontconfig
-  - freeimage
   - freetype
   - glad
   - glfw3
@@ -59724,11 +59914,10 @@ packages:
   - version: 1.0.7
     recipe_revision: ca5513200ad2efb90936120fdfc7ea8bb6730f9d
   - version: 1.0.8
-    packaging_revision: 3
+    packaging_revision: 4
     dependencies:
     - name: boost-container-hash
     - name: fontconfig
-    - name: freeimage
     - name: freetype
     - name: glad
     - name: glfw3
@@ -59737,6 +59926,13 @@ packages:
     - name: vcpkg-cmake-config
     compatibility:
     - '!(windows & (arm | uwp))'
+    artifacts:
+    - url: https://github.com/arrayfire/forge/archive/v1.0.8.tar.gz
+      checksums:
+      - sha512:08e5eb89d80f7fa3310f0eb37481492b5c1dfff00b33c308169862d8b25cf93ad1d9c0db78667c0207a7f6f8ca4046c196bd3a987af839ea1864b49c738ee8e3
+    recipe_revision: 131100d47e0059bfa6359034f82a48d749cf196c
+  - version: 1.0.8
+    packaging_revision: 3
     artifacts:
     - url: https://github.com/arrayfire/forge/archive/v1.0.8.tar.gz
       checksums:
@@ -59979,157 +60175,6 @@ packages:
       - sha512:5e891e838a11ffbd5c2aea1f39004be6a0ccc1da11d661a37302c316734e0986ed86622f174ae91f40572ce9d0fbe9c43e0976ee8636f2de25aa8e1ecf256785
     recipe_revision: eadbd61aa08b1cd9936cf34a2869e31931080530
   recipe_path: ports/freeglut/vcpkg.json
-- id: vcpkg:freeimage
-  registry: vcpkg
-  name: freeimage
-  summary: Support library for graphics image formats
-  licenses:
-  - GPL-2.0-only OR GPL-3.0-only OR FreeImage
-  homepage: https://sourceforge.net/projects/freeimage/
-  dependencies:
-  - imath
-  - jxrlib
-  - libjpeg-turbo
-  - libpng
-  - libraw
-  - libwebp
-  - openexr
-  - openjpeg
-  - tiff
-  - vcpkg-cmake
-  - vcpkg-cmake-config
-  - zlib
-  versions:
-  - version: 3.17.0
-    recipe_revision: 10f466265fffc19a76dde5ee7ea86b6c71c2fcbf
-  - version: 3.17.0-1
-    recipe_revision: 6155a4de218f6bf2892fb4c342754d9161fc11df
-  - version: 3.17.0-2
-    recipe_revision: f6e5a2b99cf21bf265f6acee6ba0466fd07161fd
-  - version: 3.17.0-3
-    recipe_revision: 5e3985b261929ca6696c71847ec4e4f48af1317e
-  - version: 3.17.0-4
-    recipe_revision: 28e08beb392fe720d34ee7bfe59b9cc164553691
-  - version: 3.18.0
-    packaging_revision: 27
-    dependencies:
-    - name: imath
-    - name: jxrlib
-    - name: libjpeg-turbo
-    - name: libpng
-    - name: libraw
-    - name: libwebp
-    - name: openexr
-    - name: openjpeg
-    - name: tiff
-    - name: vcpkg-cmake
-    - name: vcpkg-cmake-config
-    - name: zlib
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: d1255d729b57a487ed7e6be58bb9feb8b8b3fd44
-  - version: 3.18.0
-    packaging_revision: 26
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: e7b2a65974c7375dc69526c2c5390f1c7932aa1b
-  - version: 3.18.0
-    packaging_revision: 25
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: 423daf86bc904882a1fa9c68d56d56d7c52ac35f
-  - version: 3.18.0
-    packaging_revision: 24
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: b72eaa94f12facf42b2180bf49ff9121d9477eaa
-  - version: 3.18.0
-    packaging_revision: 23
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: 748b7f37d074522ba08e6c4d6e6cf3afb3107da6
-  - version: 3.18.0
-    packaging_revision: 22
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: 9bad6f331c05331144e8bad4a2ef63d4c594cd5a
-  - version: 3.18.0
-    packaging_revision: 21
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: 7d0f28dd10d54f1f11d09875fbfafd1579e948c4
-  - version: 3.18.0
-    packaging_revision: 20
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: d223c6f4524784f9d87c7aa0815e5b99d2f66116
-  - version: 3.18.0
-    packaging_revision: 19
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: 100a12b0221593a3c5dae70231b7cd4145b73ca9
-  - version: 3.18.0
-    packaging_revision: 18
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: 76911a1130a9c099e49e9fc07a2f5f7cf4c86125
-  - version: 3.18.0
-    packaging_revision: 17
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: f5e71864bf889aee3b6b2491c96f38f0a3801eb0
-  - version: 3.18.0
-    packaging_revision: 16
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: b90040201b75af36504d2f32487a6ec83a666d5e
-  - version: 3.18.0
-    packaging_revision: 15
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: eeccf360adb2438749349ce1a4c8d7c6f3c812a2
-  - version: 3.18.0
-    packaging_revision: 13
-    artifacts:
-    - checksums:
-      - sha512:9d9cc7e2d57552c3115e277aeb036e0455204d389026b17a3f513da5be1fd595421655488bb1ec2f76faebed66049119ca55e26e2a6d37024b3fb7ef36ad4818
-    recipe_revision: f35c533652a98afb7b4510687aedc955d93907a6
-  - version: 3.18.0-1
-    recipe_revision: 5af0544aaa35eb89ed1f0682869d656c8c71daa6
-  - version: 3.18.0-10
-    recipe_revision: e823f80604efe17747d35e69fdef8459375f67ea
-  - version: 3.18.0-12
-    recipe_revision: 465abdea0090a91cb512e6dd3c860da6acc794c3
-  - version: 3.18.0-2
-    recipe_revision: 1b4990358cced937bf2625f3bb6061be2d0bc717
-  - version: 3.18.0-3
-    recipe_revision: 8d78bdc2db3ad483af50c8ab3a27d336114e45a9
-  - version: 3.18.0-4
-    recipe_revision: 5922381d2bbca21d42f08e55674a00b51b548850
-  - version: 3.18.0-5
-    recipe_revision: c1742fc4977130dbdf70f6616a2ba7be288bb5b7
-  - version: 3.18.0-6
-    recipe_revision: bc232e84ebe305816123682af33f4e6d247a245b
-  - version: 3.18.0-7
-    recipe_revision: f2c1ff7a5831bbc4f603efc956c411cb5116a3fc
-  - version: 3.18.0-8
-    recipe_revision: bb35665ba508c70cb816a7eded1c7e641637af9a
-  - version: 3.18.0-9
-    recipe_revision: b852b66cc5f11a9456af47e473983afdcf043b29
-  recipe_path: ports/freeimage/vcpkg.json
 - id: vcpkg:freerdp
   registry: vcpkg
   name: freerdp
@@ -65250,6 +65295,7 @@ packages:
   - version: 2.90.0
     recipe_revision: 144da0263279413e074c3400744d51d5e1f2ba92
   - version: 2.90.1
+    packaging_revision: 1
     dependencies:
     - name: dirent
     - name: gettext
@@ -65270,17 +65316,20 @@ packages:
     artifacts:
     - checksums:
       - sha512:d2d76deaad64e307034b09635c64a60537b0d625d1695b314bc33e9e3c9b20284270d2105333474eb1fbe5afcaa814d4c52ded3a1c2a46b4b2652f7b66a211c3
+    recipe_revision: 7a271d06faee4da3263e532b39fe41ea5372c205
+  - version: 2.90.1
+    artifacts:
+    - checksums:
+      - sha512:d2d76deaad64e307034b09635c64a60537b0d625d1695b314bc33e9e3c9b20284270d2105333474eb1fbe5afcaa814d4c52ded3a1c2a46b4b2652f7b66a211c3
     recipe_revision: e5174d2c0c514f742fc96e49761afa4e61108ce0
   recipe_path: ports/glib/vcpkg.json
 - id: vcpkg:glib-networking
   registry: vcpkg
   name: glib-networking
   summary: Network extensions for GLib
-  licenses:
-  - LGPL-2.1-only
   homepage: https://gitlab.gnome.org/GNOME/glib-networking
   platforms:
-  - '!uwp & !static'
+  - '!uwp'
   dependencies:
   - glib
   - libgnutls
@@ -65306,6 +65355,7 @@ packages:
   - version: 2.90.0
     recipe_revision: f757f7992dd1f4d28eeea88dc3874706196861be
   - version: 2.90.1
+    packaging_revision: 1
     dependencies:
     - name: glib
     - name: libgnutls
@@ -65324,7 +65374,12 @@ packages:
       description: support for OpenSSL networking configuration
       default: enabled
     compatibility:
-    - '!uwp & !static'
+    - '!uwp'
+    artifacts:
+    - checksums:
+      - sha512:9d5ef7bfaa9ee00b10c65959528def32a48212fc4abf835aab940f893c0bde2c023c916ae4b714c21e2038ec7bd27795b3c8ea62b8ef75cdef4b10571e1c74f6
+    recipe_revision: 9c07c755768a8becfdbb68a898615d01f28f7bd5
+  - version: 2.90.1
     artifacts:
     - checksums:
       - sha512:9d5ef7bfaa9ee00b10c65959528def32a48212fc4abf835aab940f893c0bde2c023c916ae4b714c21e2038ec7bd27795b3c8ea62b8ef75cdef4b10571e1c74f6
@@ -67654,48 +67709,6 @@ packages:
       - sha512:9be4a55168289d9724cb4eda203227a64637dc332e3443288a1df0ff5755ca4cf912b5f706f344d712a9f381e531f62f0846f2a98e0325cc2f263086c41b872c
     recipe_revision: a5d85805b6d0cab19db64d0484572a63252b8b1e
   recipe_path: ports/graaf/vcpkg.json
-- id: vcpkg:grantlee
-  registry: vcpkg
-  name: grantlee
-  summary: Libraries for text templating with Qt
-  licenses:
-  - LGPL-2.1-or-later
-  homepage: https://github.com/steveire/grantlee
-  repository_url: https://github.com/steveire/grantlee
-  platforms:
-  - '!staticcrt & !xbox'
-  dependencies:
-  - qtdeclarative
-  - vcpkg-cmake
-  - vcpkg-cmake-config
-  versions:
-  - version: 5.3.1
-    packaging_revision: 2
-    dependencies:
-    - name: qtdeclarative
-    - name: vcpkg-cmake
-    - name: vcpkg-cmake-config
-    compatibility:
-    - '!staticcrt & !xbox'
-    artifacts:
-    - url: https://github.com/steveire/grantlee/archive/v5.3.1.tar.gz
-      checksums:
-      - sha512:dc7192fe0553954fffc3e2c584e4fdd80fc1f22d25846cacc5f2dcd1db2673ca62464c8492a4ed3bfc9dfc3e62ef13322809dd29bd56fa4a3a153a8d373ddde5
-    recipe_revision: 5c8ada7d8eca1a8b8926d25e9cbcd861f3e00f24
-  - version: 5.3.1
-    packaging_revision: 1
-    artifacts:
-    - url: https://github.com/steveire/grantlee/archive/v5.3.1.tar.gz
-      checksums:
-      - sha512:dc7192fe0553954fffc3e2c584e4fdd80fc1f22d25846cacc5f2dcd1db2673ca62464c8492a4ed3bfc9dfc3e62ef13322809dd29bd56fa4a3a153a8d373ddde5
-    recipe_revision: 5828abf42559b6f3db682f7827f502cf75c7ec32
-  - version: 5.3.1
-    artifacts:
-    - url: https://github.com/steveire/grantlee/archive/v5.3.1.tar.gz
-      checksums:
-      - sha512:dc7192fe0553954fffc3e2c584e4fdd80fc1f22d25846cacc5f2dcd1db2673ca62464c8492a4ed3bfc9dfc3e62ef13322809dd29bd56fa4a3a153a8d373ddde5
-    recipe_revision: 36162cae49c2b9664a73f0e2a1f74544e4447a7b
-  recipe_path: ports/grantlee/vcpkg.json
 - id: vcpkg:graphene
   registry: vcpkg
   name: graphene
@@ -68569,6 +68582,8 @@ packages:
   - version: 1.28.6
     recipe_revision: bec4f2b0ed7aae63ec9e0cb938639f2438c45640
   - version: 1.28.7
+    recipe_revision: 5c6525dd20f132b75e0c8b4c9e11258df0d450dc
+  - version: 1.28.9
     dependencies:
     - name: glib
     - name: gstreamer
@@ -68578,8 +68593,8 @@ packages:
     artifacts:
     - url: https://gitlab.freedesktop.org
       checksums:
-      - sha512:58c666b3e298a7836dc13f87665d841dc11397d7e86cec53fcb36375041c4f7bec1eafb91190627c9cdc6a29495dbe8bbb5789ab15889e671aa03f4c004b6927
-    recipe_revision: 5c6525dd20f132b75e0c8b4c9e11258df0d450dc
+      - sha512:4ad7d88cecebff26a43ecc7bb1f31a403b303722d23ea02b175e733eadad7f27a4d0af5c7fbbc1e5555db756fec3dbb67f4b57248bd3b96b0271fc1b8be21b13
+    recipe_revision: e5d9d2b3391deb06245d1ceeaf8c3b6f3dc4c683
   recipe_path: ports/gst-rtsp-server/vcpkg.json
 - id: vcpkg:gstreamer
   registry: vcpkg
@@ -68862,6 +68877,8 @@ packages:
   - version: 1.28.6
     recipe_revision: e067fb02b0c4e9e5a41f94013922cb28052cca1c
   - version: 1.28.7
+    recipe_revision: 229f490491df0705c407ee214976fdfc43bbcffa
+  - version: 1.28.9
     dependencies:
     - name: alsa
     - name: amd-amf
@@ -69058,11 +69075,11 @@ packages:
     artifacts:
     - url: https://gitlab.freedesktop.org
       checksums:
-      - sha512:58c666b3e298a7836dc13f87665d841dc11397d7e86cec53fcb36375041c4f7bec1eafb91190627c9cdc6a29495dbe8bbb5789ab15889e671aa03f4c004b6927
+      - sha512:4ad7d88cecebff26a43ecc7bb1f31a403b303722d23ea02b175e733eadad7f27a4d0af5c7fbbc1e5555db756fec3dbb67f4b57248bd3b96b0271fc1b8be21b13
     - url: https://gitlab.freedesktop.org/gstreamer/gstreamer/-/merge_requests/11894
       checksums:
-      - sha512:58c666b3e298a7836dc13f87665d841dc11397d7e86cec53fcb36375041c4f7bec1eafb91190627c9cdc6a29495dbe8bbb5789ab15889e671aa03f4c004b6927
-    recipe_revision: 229f490491df0705c407ee214976fdfc43bbcffa
+      - sha512:4ad7d88cecebff26a43ecc7bb1f31a403b303722d23ea02b175e733eadad7f27a4d0af5c7fbbc1e5555db756fec3dbb67f4b57248bd3b96b0271fc1b8be21b13
+    recipe_revision: 706477947d119ce4ac0a98746dfd062905f369db
   recipe_path: ports/gstreamer/vcpkg.json
 - id: vcpkg:gtest
   registry: vcpkg
@@ -69536,7 +69553,7 @@ packages:
   name: gtl
   summary: Greg's Template Library of useful classes.
   licenses:
-  - Apache-2.0
+  - Apache-2.0 AND BSL-1.0 AND BSD-3-Clause AND MIT
   homepage: https://github.com/greg7mdp/gtl
   repository_url: https://github.com/greg7mdp/gtl
   dependencies:
@@ -69554,14 +69571,16 @@ packages:
   - version: 1.2.0
     recipe_revision: adf0008bd407b22ab2f5c90d2965cfa59d9b8292
   - version: 1.3.0
+    recipe_revision: fbe14bb4c474a26d2d572001293e0d241b7dd15a
+  - version: 1.3.1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/greg7mdp/gtl/archive/v1.3.0.tar.gz
+    - url: https://github.com/greg7mdp/gtl/archive/v1.3.1.tar.gz
       checksums:
-      - sha512:1682f6fd3b893f9985998269e6c32de4a7591ebd58aad8a08d0e6f3be8ce32f71b6bfaba5d5d6b49542094cf96255d894fcbd3decf828dec75b83b17cd80411f
-    recipe_revision: fbe14bb4c474a26d2d572001293e0d241b7dd15a
+      - sha512:565cbb88009c926e309d111051edeeba1972e0cb43ee421d285965cdd5a1f2fe1b9283e5d555a10175323ec9782f59bbbcac134370e829eb845289f13083efb9
+    recipe_revision: 41cf9d3a7195566866dde3afa398d4b672fbfd75
   recipe_path: ports/gtl/vcpkg.json
 - id: vcpkg:gts
   registry: vcpkg
@@ -69966,17 +69985,13 @@ packages:
   - Apache-2.0
   homepage: https://gazebosim.org/libs/common/
   dependencies:
-  - assimp
   - dlfcn-win32
   - ffmpeg
-  - freeimage
-  - gdal
   - gz-cmake
   - gz-math
   - gz-utils
   - ignition-modularscripts
   - libuuid
-  - tinyxml2
   versions:
   - version: 5.4.1
     recipe_revision: 77ad9232bc942cb683dc5d31c7d428dd0d7912ca
@@ -69991,18 +70006,17 @@ packages:
   - version: 6.1.0
     recipe_revision: e744ce9dfad415411c44017037cf85f7c5a80979
   - version: 6.3.0
+    packaging_revision: 1
     dependencies:
-    - name: assimp
     - name: dlfcn-win32
     - name: ffmpeg
-    - name: freeimage
-    - name: gdal
     - name: gz-cmake
     - name: gz-math
     - name: gz-utils
     - name: ignition-modularscripts
     - name: libuuid
-    - name: tinyxml2
+    recipe_revision: e342ca8397b5b44921ba4bd7cdf480c7520be20e
+  - version: 6.3.0
     recipe_revision: 030c3eb180e6aa6a1694b317fb3f799a7f4d46ef
   recipe_path: ports/gz-common/vcpkg.json
 - id: vcpkg:gz-fuel-tools
@@ -70038,59 +70052,6 @@ packages:
   - version: 8.1.0
     recipe_revision: ae31270d7849d3d7074d6bc3a8fcd05d672cf92b
   recipe_path: ports/gz-fuel-tools/vcpkg.json
-- id: vcpkg:gz-gui
-  registry: vcpkg
-  name: gz-gui
-  summary: Gazebo GUI builds on top of Qt to provide widgets which are useful when developing robotics applications, such as a 3D view, plots, dashboard, etc, and can...
-  description: Gazebo GUI builds on top of Qt to provide widgets which are useful when developing robotics applications, such as a 3D view, plots, dashboard, etc, and can be used together in a convenient unified interface.
-  description_format: html
-  licenses:
-  - Apache-2.0
-  homepage: https://gazebosim.org/libs/gui
-  dependencies:
-  - gz-cmake
-  - gz-common
-  - gz-math
-  - gz-msgs
-  - gz-plugin
-  - gz-rendering
-  - gz-transport
-  - gz-utils
-  - ignition-modularscripts
-  - protobuf
-  - qt5-base
-  - qt5-quickcontrols2
-  - sdformat
-  - tinyxml2
-  versions:
-  - version: 7.2.1
-    recipe_revision: b9031cbef55535e0bbc0c4aaa67cbde8f7af56e7
-  - version: 9.0.0
-    packaging_revision: 1
-    recipe_revision: ff1310cb6e15487d525ff301ccafad1af6a66c46
-  - version: 9.0.0
-    recipe_revision: 41832e3622c06b574473bf4d9355d2fd3429205c
-  - version: 9.0.2
-    packaging_revision: 1
-    dependencies:
-    - name: gz-cmake
-    - name: gz-common
-    - name: gz-math
-    - name: gz-msgs
-    - name: gz-plugin
-    - name: gz-rendering
-    - name: gz-transport
-    - name: gz-utils
-    - name: ignition-modularscripts
-    - name: protobuf
-    - name: qt5-base
-    - name: qt5-quickcontrols2
-    - name: sdformat
-    - name: tinyxml2
-    recipe_revision: 21231ac722f55e587e038d4be8d99aa2babd0c75
-  - version: 9.0.2
-    recipe_revision: 44b5628ed98e9c69b529177c6c2c06f4a25c28dc
-  recipe_path: ports/gz-gui/vcpkg.json
 - id: vcpkg:gz-math
   registry: vcpkg
   name: gz-math
@@ -70167,8 +70128,6 @@ packages:
   - Apache-2.0
   homepage: https://gazebosim.org/libs/physics
   dependencies:
-  - bullet3
-  - dartsim
   - eigen3
   - gz-cmake
   - gz-common
@@ -70194,9 +70153,8 @@ packages:
   - version: 8.3.0
     recipe_revision: a12c41131692785c6c7f99f6f8c925681766c904
   - version: 8.4.0
+    packaging_revision: 1
     dependencies:
-    - name: bullet3
-    - name: dartsim
     - name: eigen3
     - name: gz-cmake
     - name: gz-common
@@ -70205,6 +70163,8 @@ packages:
     - name: gz-utils
     - name: ignition-modularscripts
     - name: sdformat
+    recipe_revision: 14f3b9277dd118022b30b70022e7d3372b0129fb
+  - version: 8.4.0
     recipe_revision: 2a7e23c121652532afa26b2f120a62ffa1a87751
   recipe_path: ports/gz-physics/vcpkg.json
 - id: vcpkg:gz-plugin
@@ -70234,138 +70194,6 @@ packages:
     - '!arm & !android'
     recipe_revision: 8027e520894ed77d0e971e255409afd466f5aba2
   recipe_path: ports/gz-plugin/vcpkg.json
-- id: vcpkg:gz-rendering
-  registry: vcpkg
-  name: gz-rendering
-  summary: Gazebo Rendering is a C++ library designed to provide an abstraction for different rendering engines. It offers unified APIs for creating 3D graphics...
-  description: Gazebo Rendering is a C++ library designed to provide an abstraction for different rendering engines. It offers unified APIs for creating 3D graphics applications.
-  description_format: html
-  licenses:
-  - Apache-2.0
-  homepage: https://gazebosim.org/libs/rendering
-  dependencies:
-  - freeimage
-  - gz-cmake
-  - gz-common
-  - gz-math
-  - gz-plugin
-  - gz-utils
-  - ignition-modularscripts
-  - ogre-next
-  - opengl
-  versions:
-  - version: 7.4.1
-    recipe_revision: 089e04ab0f30479d02690cbc5809998a936a1a1b
-  - version: 9.0.0
-    recipe_revision: b7651382a17f484f80c2259c3fde3fc0dd49fa88
-  - version: 9.5.0
-    packaging_revision: 1
-    dependencies:
-    - name: freeimage
-    - name: gz-cmake
-    - name: gz-common
-    - name: gz-math
-    - name: gz-plugin
-    - name: gz-utils
-    - name: ignition-modularscripts
-    - name: ogre-next
-    - name: opengl
-    recipe_revision: f33ffcfa351af3241fdb8648f82bfc8891868307
-  - version: 9.5.0
-    recipe_revision: 9c0332b76dd24ea75d2384ea6f320d28db2faf44
-  recipe_path: ports/gz-rendering/vcpkg.json
-- id: vcpkg:gz-sensors
-  registry: vcpkg
-  name: gz-sensors
-  summary: Component of Gazebo, provides numerous sensor models designed to generate realistic data from simulation environments.
-  licenses:
-  - Apache-2.0
-  homepage: https://gazebosim.org/libs/sensors
-  dependencies:
-  - gz-cmake
-  - gz-common
-  - gz-math
-  - gz-msgs
-  - gz-rendering
-  - gz-transport
-  - ignition-modularscripts
-  - protobuf
-  - sdformat
-  versions:
-  - version: 7.3.0
-    recipe_revision: 5484dd5ac7fbd76b45cf4e6ebcf7ffdbe274dfab
-  - version: 9.0.0
-    recipe_revision: ebf9b2acdb4d027ddb9878ce193dc8534eb7cf70
-  - version: 9.2.0
-    packaging_revision: 1
-    dependencies:
-    - name: gz-cmake
-    - name: gz-common
-    - name: gz-math
-    - name: gz-msgs
-    - name: gz-rendering
-    - name: gz-transport
-    - name: ignition-modularscripts
-    - name: protobuf
-    - name: sdformat
-    recipe_revision: c94b9feea5c9cfd0a352bfba440328f39a3227a9
-  - version: 9.2.0
-    recipe_revision: 1e29d0c7a7fa6ed99a92a07886f2735cf994625a
-  recipe_path: ports/gz-sensors/vcpkg.json
-- id: vcpkg:gz-sim
-  registry: vcpkg
-  name: gz-sim
-  summary: Gazebo Sim is an open source robotics simulator.
-  licenses:
-  - Apache-2.0
-  homepage: https://gazebosim.org/libs/sim
-  dependencies:
-  - gz-cmake
-  - gz-common
-  - gz-fuel-tools
-  - gz-gui
-  - gz-math
-  - gz-msgs
-  - gz-physics
-  - gz-plugin
-  - gz-rendering
-  - gz-sensors
-  - gz-transport
-  - gz-utils
-  - ignition-modularscripts
-  - sdformat
-  versions:
-  - version: 9.0.0
-    packaging_revision: 1
-    recipe_revision: 30f5f5585d79bcf9abc50e4b1ddce5c8030bf464
-  - version: 9.0.0
-    recipe_revision: f4e987fd959e697589da3a4ecc77a1f805001dc4
-  - version: 9.5.0
-    packaging_revision: 2
-    recipe_revision: 9920e012d9466909fa51e303ad117c5cbb0f8e53
-  - version: 9.5.0
-    packaging_revision: 1
-    recipe_revision: 5e7bcc96d4c43d2abdee0ed9bd207e66995acec3
-  - version: 9.5.0
-    recipe_revision: daf4ff25d1f460f4197c55b870e92cf174cd4353
-  - version: 9.6.0
-    dependencies:
-    - name: gz-cmake
-    - name: gz-common
-    - name: gz-fuel-tools
-    - name: gz-gui
-    - name: gz-math
-    - name: gz-msgs
-    - name: gz-physics
-    - name: gz-plugin
-    - name: gz-rendering
-    - name: gz-sensors
-    - name: gz-transport
-    - name: gz-utils
-    - name: ignition-modularscripts
-    - name: sdformat
-    recipe_revision: cf229d405a2c903c71f143ae2c0e8adf5e89419e
-  recipe_path: ports/gz-sim/vcpkg.json
 - id: vcpkg:gz-tools
   registry: vcpkg
   name: gz-tools
@@ -71250,6 +71078,7 @@ packages:
   - version: 15.0.0
     recipe_revision: 4d3f8e1f6ad49bca16499f244b76a69af02ba2d3
   - version: 15.1.0
+    packaging_revision: 1
     dependencies:
     - name: cairo
     - name: freetype
@@ -71289,6 +71118,12 @@ packages:
       description: Use zlib library
     compatibility:
     - '!uwp'
+    artifacts:
+    - url: https://github.com/harfbuzz/harfbuzz/archive/15.1.0.tar.gz
+      checksums:
+      - sha512:65b7a0ca1a5fa6b1508384e8b777050e3370c88e48f82b2e90d2f194c9b9b49b0045b7106ad70d29f33a737848518dbb05892b2fac2b6ff2b6d33b30362b34d4
+    recipe_revision: 7256dcb28a5aa131e04404da3bf912761088fcca
+  - version: 15.1.0
     artifacts:
     - url: https://github.com/harfbuzz/harfbuzz/archive/15.1.0.tar.gz
       checksums:
@@ -71849,6 +71684,14 @@ packages:
   versions:
   - version: 0.11.10
     packaging_revision: 1
+    recipe_revision: 53068d224496e327c528fccce3cea76a0b9a4aab
+  - version: 0.11.10
+    recipe_revision: f26c8c20182c8861fa8784d84ede1719a90ada37
+  - version: 0.11.8
+    recipe_revision: e7c8179ec8d0d5a49010bea92f143f011de137da
+  - version: 0.11.9
+    recipe_revision: 9c0dc801c7e74345b09d622e5139dd1f5d9edc79
+  - version: 0.12.1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -71857,20 +71700,10 @@ packages:
     - name: log
       description: Logging support for HdrHistogram
     artifacts:
-    - url: https://github.com/HdrHistogram/HdrHistogram_c/archive/0.11.10.tar.gz
+    - url: https://github.com/HdrHistogram/HdrHistogram_c/archive/0.12.1.tar.gz
       checksums:
-      - sha512:f631876dd1871d5e90989523f198d93b8dc561c513e86724149fefd52603064c3687d57e60c77e5ccbdc5a54ab9e7397a8db7a34e23cc68948c6c1361de62031
-    recipe_revision: 53068d224496e327c528fccce3cea76a0b9a4aab
-  - version: 0.11.10
-    artifacts:
-    - url: https://github.com/HdrHistogram/HdrHistogram_c/archive/0.11.10.tar.gz
-      checksums:
-      - sha512:f631876dd1871d5e90989523f198d93b8dc561c513e86724149fefd52603064c3687d57e60c77e5ccbdc5a54ab9e7397a8db7a34e23cc68948c6c1361de62031
-    recipe_revision: f26c8c20182c8861fa8784d84ede1719a90ada37
-  - version: 0.11.8
-    recipe_revision: e7c8179ec8d0d5a49010bea92f143f011de137da
-  - version: 0.11.9
-    recipe_revision: 9c0dc801c7e74345b09d622e5139dd1f5d9edc79
+      - sha512:742b0ac20acd83a74f1dd0e28b021407d34989917618fb7cb7a16fd6c947e2093057b2e8b4d6cc37e4412ae070d649850e41002020db2d5788b135ed772da8f8
+    recipe_revision: 06616edcd2ced71359cb4417a48f44456db9c9de
   recipe_path: ports/hdr-histogram/vcpkg.json
 - id: vcpkg:healpix
   registry: vcpkg
@@ -72483,6 +72316,13 @@ packages:
     recipe_revision: ade8308af2c39213840e613146568b0e3ab5afe9
   - version: 1.15.1
     packaging_revision: 2
+    recipe_revision: 885950e2f3b1d4b6d4a3734e96240297b1035af7
+  - version: 1.15.1
+    packaging_revision: 1
+    recipe_revision: 9ce6b8be37e9ea56e12b9dcbc5eb87895c0569cd
+  - version: 1.15.1
+    recipe_revision: 0c70fd2590487bd56505ed8824ae764063330728
+  - version: 1.16.0
     dependencies:
     - name: blas
     - name: openblas
@@ -72493,23 +72333,10 @@ packages:
     - name: extras
       description: Build the HiPO interior point solver, using OpenBLAS on Windows/Linux and Accelerate on macOS
     artifacts:
-    - url: https://github.com/ERGO-Code/HiGHS/archive/v1.15.1.tar.gz
+    - url: https://github.com/ERGO-Code/HiGHS/archive/v1.16.0.tar.gz
       checksums:
-      - sha512:0ea407784bc6c8e31c72fbcdcab201e8a7cc7debbca57504e74177658208151e90637e5fb1e0cdf1b1ae6b677e7865e77771ec025b17f8223f74d00fc6420546
-    recipe_revision: 885950e2f3b1d4b6d4a3734e96240297b1035af7
-  - version: 1.15.1
-    packaging_revision: 1
-    artifacts:
-    - url: https://github.com/ERGO-Code/HiGHS/archive/v1.15.1.tar.gz
-      checksums:
-      - sha512:0ea407784bc6c8e31c72fbcdcab201e8a7cc7debbca57504e74177658208151e90637e5fb1e0cdf1b1ae6b677e7865e77771ec025b17f8223f74d00fc6420546
-    recipe_revision: 9ce6b8be37e9ea56e12b9dcbc5eb87895c0569cd
-  - version: 1.15.1
-    artifacts:
-    - url: https://github.com/ERGO-Code/HiGHS/archive/v1.15.1.tar.gz
-      checksums:
-      - sha512:0ea407784bc6c8e31c72fbcdcab201e8a7cc7debbca57504e74177658208151e90637e5fb1e0cdf1b1ae6b677e7865e77771ec025b17f8223f74d00fc6420546
-    recipe_revision: 0c70fd2590487bd56505ed8824ae764063330728
+      - sha512:4780fd4338e144b5639f00bffed4075ee7260479d904270c704c8220a6e2f0379a7ff167ba6a64587f897b86b99e24d5dea7b6817decfd8534fc832e2c925fa4
+    recipe_revision: 46801839ae5be8f7465078a216e1d16f23d637c6
   - version: 1.5.1
     recipe_revision: 0480e56032ae6758dd2e09528a02ab5bc175b537
   - version: 1.6.0
@@ -78415,8 +78242,8 @@ packages:
   summary: Open source implementation of the jpegxr image format standard.
   licenses:
   - BSD-2-Clause
-  homepage: https://github.com/4creators/jxrlib
-  repository_url: https://github.com/4creators/jxrlib
+  homepage: https://github.com/mircomir/jxrlib
+  repository_url: https://github.com/mircomir/jxrlib
   dependencies:
   - vcpkg-cmake
   versions:
@@ -78442,56 +78269,34 @@ packages:
     recipe_revision: f50863dde2b83c89c893d98e60c388686adac061
   - version: 2019.10.9
     packaging_revision: 7
-    dependencies:
-    - name: vcpkg-cmake
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: 4d6cb4015844afea80f96aa9cd6c43fb2bdd1cc1
   - version: 2019.10.9
     packaging_revision: 6
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: 3a114c06061c6e5a6e1dcc40eaadb21cecb7ac99
   - version: 2019.10.9
     packaging_revision: 5
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: 5e303b910797ec21313839eac286cf6baaf31c5a
   - version: 2019.10.9
     packaging_revision: 4
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: faadd72c2d406fce9c076c025285aa692995a8b5
   - version: 2019.10.9
     packaging_revision: 3
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: 2070ec06331c3cf93574ec82fa22791e3ba6172f
   - version: 2019.10.9
     packaging_revision: 2
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: c24ffcc58c1c28bef405da5b56adad3a25cd441b
   - version: 2019.10.9
-    artifacts:
-    - url: https://github.com/4creators/jxrlib/archive/f7521879862b9085318e814c6157490dd9dbbdb4.tar.gz
-      checksums:
-      - sha512:f5617cbe73b6b905cc6bba181e6a3efedd59584f7a8c90e0f34db580cfdad4239a2ab753df4e221f26a5c0db51475b021052e3b9e3ab3673573573b1d57f3fdb
     recipe_revision: 5e43604d8d9fa767e6399c00a7e7ed6e44c02b08
   - version: 2019.10.9-1
     recipe_revision: 50c0a8d9c0ca1df6f7b707f9768bb8d26f1f8486
+  - version: 2026.10.9
+    dependencies:
+    - name: vcpkg-cmake
+    artifacts:
+    - url: https://github.com/mircomir/jxrlib/archive/1.4.4.tar.gz
+      checksums:
+      - sha512:3b77a2cbcf000b6decf006097f415d86156ab6dc70d3fa3069ddee31f04e610e2d644dec0fae96bf73ee4e5d1ca0390129fc650356da3e7446d6211b22d7df99
+    recipe_revision: a05e0a53d7bebef8d2b05f5a5e71e303a3cd740e
   recipe_path: ports/jxrlib/vcpkg.json
 - id: vcpkg:kaitai-struct-cpp-stl-runtime
   registry: vcpkg
@@ -78921,6 +78726,7 @@ packages:
   - translations
   versions:
   - version: 6.31.0
+    packaging_revision: 1
     dependencies:
     - name: ecm
     - name: libical
@@ -78936,6 +78742,12 @@ packages:
       description: Build and install translation files
     compatibility:
     - '!android'
+    artifacts:
+    - url: https://github.com/KDE/kcalendarcore/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:0dce37c9cc2556989bd24690fb4b3e06f290ef49bc338e77755480c3cab6b6ec3337a54cca87a1e129cb7064aa728efe268413e026616ca43532eedce29c7b29
+    recipe_revision: 3fb6f7441755acfde072025c6ee20bd013903f30
+  - version: 6.31.0
     artifacts:
     - url: https://github.com/KDE/kcalendarcore/archive/v6.31.0.tar.gz
       checksums:
@@ -79638,7 +79450,7 @@ packages:
   - translations
   versions:
   - version: 6.31.0
-    packaging_revision: 1
+    packaging_revision: 2
     dependencies:
     - name: ecm
     - name: gettext
@@ -79655,6 +79467,13 @@ packages:
     features:
     - name: translations
       description: Build and install translation files
+    artifacts:
+    - url: https://github.com/KDE/kdeclarative/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:39af75d08636d99053ba832e8e2d4b576777ea93330adb713523e1202abf2869a24d5c055b80477a5cb5cb4d46fcb1f4d18ac6288789fc4fea70ab4a76ccdcd2
+    recipe_revision: d9338f8550fcffd82d56a6538338fb0d2c2c7c8e
+  - version: 6.31.0
+    packaging_revision: 1
     artifacts:
     - url: https://github.com/KDE/kdeclarative/archive/v6.31.0.tar.gz
       checksums:
@@ -82849,7 +82668,7 @@ packages:
   - translations
   versions:
   - version: 6.31.0
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: ecm
     - name: qtbase
@@ -82862,6 +82681,13 @@ packages:
       description: Build the QML module
     - name: translations
       description: Build and install translation files
+    artifacts:
+    - url: https://github.com/KDE/kholidays/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:1547173481b496ac2fbcda060e42ae8fd806a45ac59b675897c53d66808bbf2c00a643da13e756799fe876508d4c355acb8cfc0c448acce728d6fadfb2083519
+    recipe_revision: 021594dca6d3d1a8da62350c999281fe8466f500
+  - version: 6.31.0
+    packaging_revision: 2
     artifacts:
     - url: https://github.com/KDE/kholidays/archive/v6.31.0.tar.gz
       checksums:
@@ -82922,7 +82748,7 @@ packages:
   - version: 6.30.0
     recipe_revision: 978b8483a137480070b8946fa713ca9e6b419fe8
   - version: 6.31.0
-    packaging_revision: 5
+    packaging_revision: 6
     dependencies:
     - name: ecm
     - name: gettext
@@ -82938,6 +82764,13 @@ packages:
       description: Build with support for scripted translations
     compatibility:
     - '!android'
+    artifacts:
+    - url: https://github.com/KDE/ki18n/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:76a6dbe451f5d33f983eb3e76dde0607060519d01946d71f164cf776b7643408013ca37226cd6cfe43b831a51676c918eab8b5b84244ab8c34793078b9b0c174
+    recipe_revision: 0dc95c4f746680f5c4926e9abf5bd8a05839d1dc
+  - version: 6.31.0
+    packaging_revision: 5
     artifacts:
     - url: https://github.com/KDE/ki18n/archive/v6.31.0.tar.gz
       checksums:
@@ -83008,7 +82841,7 @@ packages:
   - translations
   versions:
   - version: 6.31.0
-    packaging_revision: 1
+    packaging_revision: 2
     dependencies:
     - name: ecm
     - name: gettext
@@ -83032,6 +82865,13 @@ packages:
       description: Build the QML plugin
     - name: translations
       description: Build translations
+    artifacts:
+    - url: https://github.com/KDE/kiconthemes/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:323555fca4696a12246fd42e1218c8e9445fcd4e4706433985687e4ad4337c7f01ef803f09bd3b2958effe7b69f7dd4f745828f513a12513f345a47ed372f31f
+    recipe_revision: 079d0b5d116973711e6daae57f2bf8bffca4cbda
+  - version: 6.31.0
+    packaging_revision: 1
     artifacts:
     - url: https://github.com/KDE/kiconthemes/archive/v6.31.0.tar.gz
       checksums:
@@ -83770,26 +83610,38 @@ packages:
   - libcanberra
   - libsnoretoast
   - qtbase
+  - qtdeclarative
   - qttools
   - vcpkg-cmake
   - vcpkg-cmake-config
   options:
+  - qml
   - translations
   versions:
   - version: 6.31.0
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: ecm
     - name: kconfig
     - name: libcanberra
     - name: libsnoretoast
     - name: qtbase
+    - name: qtdeclarative
     - name: qttools
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     features:
+    - name: qml
+      description: Build the QML module
     - name: translations
       description: Build and install translation files
+    artifacts:
+    - url: https://github.com/KDE/knotifications/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:f5529180d1a6bc06a4f68ab1318667d4af637576f39ee3a83d2a6dc71f59e4f6c2e559bf9fad7f7c94912a92f64e7b45272412a93b4f168ffe941c40557da801
+    recipe_revision: 56bfc1a8dea71acb5bd9f63124ea5277b84a676e
+  - version: 6.31.0
+    packaging_revision: 2
     artifacts:
     - url: https://github.com/KDE/knotifications/archive/v6.31.0.tar.gz
       checksums:
@@ -83916,6 +83768,37 @@ packages:
       - sha512:04508f38f63d915dd0af761b8805e42572b4dbbe2e5383e7f00206870a99f527ed36af7f6859d8e33874ea7868742b231aa0a061e4dd5fa5ccba6d3149fa49c8
     recipe_revision: 775b14b6485b184195aa8551dee25ee4dce6720e
   recipe_path: ports/kplotting/vcpkg.json
+- id: vcpkg:kquickcharts
+  registry: vcpkg
+  name: kquickcharts
+  summary: A QtQuick module providing high-performance charts
+  licenses:
+  - (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL) AND MIT
+  homepage: https://invent.kde.org/frameworks/kquickcharts
+  repository_url: https://github.com/KDE/kquickcharts
+  documentation_url: https://api.kde.org/kquickcharts-index.html
+  dependencies:
+  - ecm
+  - qtbase
+  - qtdeclarative
+  - qtshadertools
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  versions:
+  - version: 6.31.0
+    dependencies:
+    - name: ecm
+    - name: qtbase
+    - name: qtdeclarative
+    - name: qtshadertools
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    artifacts:
+    - url: https://github.com/KDE/kquickcharts/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:3af6ea79ae5395260be19b760702eb0bc3d214fc831809fcb3c54af66d1ac1a02b15fa9317b93f7b1d22885a7206eeb12425e65397f229a1e9c11b9956723946
+    recipe_revision: ab6476d7f0006139cd592a1f6216ff357d4f888a
+  recipe_path: ports/kquickcharts/vcpkg.json
 - id: vcpkg:krabsetw
   registry: vcpkg
   name: krabsetw
@@ -83990,38 +83873,26 @@ packages:
     recipe_revision: 20994b6f6cc0b70580c74fdc4e2e468a6840049a
   - version: 1.22.2
     packaging_revision: 2
+    recipe_revision: d9285e6e0ec6ac29cd42d0df2f50191a05297942
+  - version: 1.22.2
+    packaging_revision: 1
+    recipe_revision: 95f4778a75c8e514f20fcabea74e41a2e2664f1f
+  - version: 1.22.2
+    recipe_revision: 5420d395be8a889db192c014e5194947caf091e5
+  - version: 1.22.3
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-make
     compatibility:
     - linux | osx | (x64 & windows & !static & !uwp)
     artifacts:
-    - url: https://github.com/krb5/krb5/archive/krb5-1.22.2-final.tar.gz
+    - url: https://github.com/krb5/krb5/archive/krb5-1.22.3-final.tar.gz
       checksums:
-      - sha512:ca1e22a0aced71c004a51716a3237c83d683f81ead2456752079a50cd3406c665822f69bbdfd4999d2ff73ffda0922e4e8330c6c02bdb48ca2745f0ff33a88f1
+      - sha512:15f7fadf9a466ff747e821fa036c9dfa043d221e882d36d25d1782d4832169c2f4bd8ade49b5d398a2a8635105429fcf3b18ee6213e2ee003170f025820d44a9
     - url: https://github.com/krb5/krb5/commit/b7290e0cab5b7e39cd4aa7c098beb18a886d4a1d
       checksums:
-      - sha512:ca1e22a0aced71c004a51716a3237c83d683f81ead2456752079a50cd3406c665822f69bbdfd4999d2ff73ffda0922e4e8330c6c02bdb48ca2745f0ff33a88f1
-    recipe_revision: d9285e6e0ec6ac29cd42d0df2f50191a05297942
-  - version: 1.22.2
-    packaging_revision: 1
-    artifacts:
-    - url: https://github.com/krb5/krb5/archive/krb5-1.22.2-final.tar.gz
-      checksums:
-      - sha512:ca1e22a0aced71c004a51716a3237c83d683f81ead2456752079a50cd3406c665822f69bbdfd4999d2ff73ffda0922e4e8330c6c02bdb48ca2745f0ff33a88f1
-    - url: https://github.com/krb5/krb5/commit/b7290e0cab5b7e39cd4aa7c098beb18a886d4a1d
-      checksums:
-      - sha512:ca1e22a0aced71c004a51716a3237c83d683f81ead2456752079a50cd3406c665822f69bbdfd4999d2ff73ffda0922e4e8330c6c02bdb48ca2745f0ff33a88f1
-    recipe_revision: 95f4778a75c8e514f20fcabea74e41a2e2664f1f
-  - version: 1.22.2
-    artifacts:
-    - url: https://github.com/krb5/krb5/archive/krb5-1.22.2-final.tar.gz
-      checksums:
-      - sha512:ca1e22a0aced71c004a51716a3237c83d683f81ead2456752079a50cd3406c665822f69bbdfd4999d2ff73ffda0922e4e8330c6c02bdb48ca2745f0ff33a88f1
-    - url: https://github.com/krb5/krb5/commit/b7290e0cab5b7e39cd4aa7c098beb18a886d4a1d
-      checksums:
-      - sha512:ca1e22a0aced71c004a51716a3237c83d683f81ead2456752079a50cd3406c665822f69bbdfd4999d2ff73ffda0922e4e8330c6c02bdb48ca2745f0ff33a88f1
-    recipe_revision: 5420d395be8a889db192c014e5194947caf091e5
+      - sha512:15f7fadf9a466ff747e821fa036c9dfa043d221e882d36d25d1782d4832169c2f4bd8ade49b5d398a2a8635105429fcf3b18ee6213e2ee003170f025820d44a9
+    recipe_revision: c720ce80880de7591ff748fcd111b82931a312ca
   recipe_path: ports/krb5/vcpkg.json
 - id: vcpkg:krpc
   registry: vcpkg
@@ -84112,6 +83983,101 @@ packages:
       - sha512:9d63bec0f9e74d726564f2f853db764b2997029f3a8716b82595e4a2edb5c7d7575b809572417801415e8685914348627de4fe7f2d88b224469ea96a59e879da
     recipe_revision: fbb32c474e3c37a523e1d7c2df84bf8f1120d804
   recipe_path: ports/kservice/vcpkg.json
+- id: vcpkg:ktexttemplate
+  registry: vcpkg
+  name: ktexttemplate
+  summary: Libraries for text templating with Qt
+  licenses:
+  - LGPL-2.1-or-later AND LGPL-2.0-or-later
+  homepage: https://invent.kde.org/frameworks/ktexttemplate
+  repository_url: https://github.com/KDE/ktexttemplate
+  documentation_url: https://api.kde.org/ktexttemplate-index.html
+  platforms:
+  - '!staticcrt & !xbox'
+  dependencies:
+  - ecm
+  - qtbase
+  - qtdeclarative
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  options:
+  - qml
+  versions:
+  - version: 6.31.0
+    dependencies:
+    - name: ecm
+    - name: qtbase
+    - name: qtdeclarative
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    features:
+    - name: qml
+      description: Build the scriptable tags plugin, to write tags and filters in JavaScript
+    compatibility:
+    - '!staticcrt & !xbox'
+    artifacts:
+    - url: https://github.com/KDE/ktexttemplate/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:bfc89e572ffbb5f906c11888882e2d2e99f206ce5397fa9805de35f316709d0be2b20e58dc691077201784583bd5632bfb7ce0e82f50e6c527a5bf73fdc6dd24
+    recipe_revision: f3ee4a1982d983d21d8deb306f888852a3ed1c8a
+  recipe_path: ports/ktexttemplate/vcpkg.json
+- id: vcpkg:ktextwidgets
+  registry: vcpkg
+  name: ktextwidgets
+  summary: Advanced text editing widgets
+  licenses:
+  - LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-or-later
+  homepage: https://invent.kde.org/frameworks/ktextwidgets
+  repository_url: https://github.com/KDE/ktextwidgets
+  documentation_url: https://api.kde.org/ktextwidgets-index.html
+  dependencies:
+  - ecm
+  - gettext
+  - kcompletion
+  - kconfig
+  - ki18n
+  - kwidgetsaddons
+  - qtbase
+  - qtspeech
+  - qttools
+  - sonnet
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  options:
+  - designerplugin
+  - texttospeech
+  - translations
+  default_options:
+    texttospeech: enabled
+  versions:
+  - version: 6.31.0
+    dependencies:
+    - name: ecm
+    - name: gettext
+    - name: kcompletion
+    - name: kconfig
+    - name: ki18n
+    - name: kwidgetsaddons
+    - name: qtbase
+    - name: qtspeech
+    - name: qttools
+    - name: sonnet
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    features:
+    - name: designerplugin
+      description: Build Qt Designer plugin
+    - name: texttospeech
+      description: Text-to-speech support
+      default: enabled
+    - name: translations
+      description: Build and install translation files
+    artifacts:
+    - url: https://github.com/KDE/ktextwidgets/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:97d43b1ec348d77293f3a6a62c07fa5bdc5955fd1a5f98373cbc63906df5112127eac4ca0107029823d5c824e41f7e4029f2638e329d124dde7eafdd05dd3844
+    recipe_revision: d8d247ac541f1bd790c1373e38d5ed7981e29f16
+  recipe_path: ports/ktextwidgets/vcpkg.json
 - id: vcpkg:ktx
   registry: vcpkg
   name: ktx
@@ -84557,7 +84523,7 @@ packages:
   - version: 6.30.0
     recipe_revision: e3e3d92d2c659562545087d8cc1655c50e136cbd
   - version: 6.31.0
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: ecm
     - name: plasma-wayland-protocols
@@ -84573,6 +84539,13 @@ packages:
       description: Build QML bindings
     - name: translations
       description: Build and install translation files
+    artifacts:
+    - url: https://github.com/KDE/kwindowsystem/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:1ad5f49d3acca059486e5360c2ccd2c98a1ffd077714b5934e263780b876bac75b775d832f56786648aa07d49035e81d126cb3972ce1f6476edb3a34e858c2a5
+    recipe_revision: 919c74b43645476b5d3cf3de21801ae4d741cfbc
+  - version: 6.31.0
+    packaging_revision: 2
     artifacts:
     - url: https://github.com/KDE/kwindowsystem/archive/v6.31.0.tar.gz
       checksums:
@@ -84623,6 +84596,63 @@ packages:
       - sha512:98441866fd51f2d4d3974d3c37d4456ce9e50c6f6c2ab0691e55b268907611ef061562fc30b1baa42aa195caf2281aa0e1e0799abc545fe6dae70efe2050ea50
     recipe_revision: 376ae3a199ad4fdaad235b6e01b92ed217388550
   recipe_path: ports/kwsys/vcpkg.json
+- id: vcpkg:kxmlgui
+  registry: vcpkg
+  name: kxmlgui
+  summary: Framework for managing menu and toolbar actions
+  licenses:
+  - LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-or-later AND (LGPL-2.1-or-later OR BSD-2-Clause)
+  homepage: https://invent.kde.org/frameworks/kxmlgui
+  repository_url: https://github.com/KDE/kxmlgui
+  documentation_url: https://api.kde.org/kxmlgui-index.html
+  dependencies:
+  - ecm
+  - gettext
+  - kconfig
+  - kconfigwidgets
+  - kcoreaddons
+  - kglobalaccel
+  - kguiaddons
+  - ki18n
+  - kiconthemes
+  - kitemviews
+  - kwidgetsaddons
+  - qtbase
+  - qttools
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  options:
+  - designerplugin
+  - translations
+  versions:
+  - version: 6.31.0
+    dependencies:
+    - name: ecm
+    - name: gettext
+    - name: kconfig
+    - name: kconfigwidgets
+    - name: kcoreaddons
+    - name: kglobalaccel
+    - name: kguiaddons
+    - name: ki18n
+    - name: kiconthemes
+    - name: kitemviews
+    - name: kwidgetsaddons
+    - name: qtbase
+    - name: qttools
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    features:
+    - name: designerplugin
+      description: Build Qt Designer plugin
+    - name: translations
+      description: Build translations
+    artifacts:
+    - url: https://github.com/KDE/kxmlgui/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:5f6a33ac709269665eb2f635eb1768a4d1c0ab683697b484a388ef087d52bbd61abe696b1ee9fc9b3b00b979a8de08aad8bee8dfc6eb3fa5bcd3927d708669a1
+    recipe_revision: 8c71adcf2c1aeef843b0546ad8718a8e0760a98b
+  recipe_path: ports/kxmlgui/vcpkg.json
 - id: vcpkg:lager
   registry: vcpkg
   name: lager
@@ -84880,7 +84910,7 @@ packages:
   licenses:
   - Apache-2.0
   homepage: https://laszip.org/
-  repository_url: https://github.com/LASzip/LASzip
+  repository_url: https://github.com/laszip/laszip
   platforms:
   - '!uwp'
   dependencies:
@@ -84899,15 +84929,22 @@ packages:
   - version: 3.4.4
     recipe_revision: 775e13e090dcbf53186bfce9ddaf3a9f62afdf66
   - version: 3.5.0
+    packaging_revision: 1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     compatibility:
     - '!uwp'
     artifacts:
-    - url: https://github.com/LASzip/LASzip/archive/3.5.0.tar.gz
+    - url: https://github.com/LASzip/LASzip/commit/7b4c757aacf07d915a2c5fb5b05526c153977aaa.patch?full_index=1
       checksums:
-      - sha512:6cdc38249ace8191dae454817fe5f5a3cd22b24c7065daa0e4a3eaaca4d698540c56affa06e15de88aea2912a82033d1dc93f5d3904190a896edf1204af865f5
+      - sha512:0653a63daf1963df2c0e468b48cb7ace9613ea275bc06aad75206f9c8917a48f20eca0af0ab0e61e8d111f27e38fe89e4c876ca8b30f44e1e07532bd23e7a06a
+    recipe_revision: eefc72516cd4187d5792085c90eae10faf6d1217
+  - version: 3.5.0
+    artifacts:
+    - url: https://github.com/LASzip/LASzip/commit/7b4c757aacf07d915a2c5fb5b05526c153977aaa.patch?full_index=1
+      checksums:
+      - sha512:0653a63daf1963df2c0e468b48cb7ace9613ea275bc06aad75206f9c8917a48f20eca0af0ab0e61e8d111f27e38fe89e4c876ca8b30f44e1e07532bd23e7a06a
     recipe_revision: 2fdfbcdcbd5c1c0adef37ef34b1be173a7bb84c3
   recipe_path: ports/laszip/vcpkg.json
 - id: vcpkg:launch-darkly-server
@@ -85250,6 +85287,14 @@ packages:
   - vcpkg-cmake
   - vcpkg-cmake-config
   - zlib
+  options:
+  - gif
+  - openjpeg
+  - webp
+  default_options:
+    gif: enabled
+    openjpeg: enabled
+    webp: enabled
   versions:
   - version: 1.74.4
     recipe_revision: 67be31d07999377c75fda2b1208c749261294667
@@ -85297,6 +85342,7 @@ packages:
   - version: 1.85.0
     recipe_revision: 06712962f8bd3f195f1ece8fc02582de1643da0b
   - version: 1.87.0
+    packaging_revision: 1
     dependencies:
     - name: giflib
     - name: libjpeg-turbo
@@ -85307,8 +85353,30 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     - name: zlib
+    features:
+    - name: gif
+      description: Enable GIF support
+      default: enabled
+    - name: openjpeg
+      description: Enable JPEG 2000 support
+      default: enabled
+    - name: webp
+      description: Enable WebP support
+      default: enabled
     artifacts:
     - url: https://github.com/DanBloomberg/leptonica/archive/1.87.0.tar.gz
+      checksums:
+      - sha512:2a1953dd0c962a05dac9bb30eac311896f414c658d976008b0c2d1b3b85ec25c5fd811be3f98a37f2131ded134799ea609a667fb1eaacf42d1aca9cc5cf1bd92
+    - url: https://github.com/DanBloomberg/leptonica/pull/851
+      checksums:
+      - sha512:2a1953dd0c962a05dac9bb30eac311896f414c658d976008b0c2d1b3b85ec25c5fd811be3f98a37f2131ded134799ea609a667fb1eaacf42d1aca9cc5cf1bd92
+    recipe_revision: 40aa91bdb059832fa281c2faeda2d5455e7245b5
+  - version: 1.87.0
+    artifacts:
+    - url: https://github.com/DanBloomberg/leptonica/archive/1.87.0.tar.gz
+      checksums:
+      - sha512:2a1953dd0c962a05dac9bb30eac311896f414c658d976008b0c2d1b3b85ec25c5fd811be3f98a37f2131ded134799ea609a667fb1eaacf42d1aca9cc5cf1bd92
+    - url: https://github.com/DanBloomberg/leptonica/pull/851
       checksums:
       - sha512:2a1953dd0c962a05dac9bb30eac311896f414c658d976008b0c2d1b3b85ec25c5fd811be3f98a37f2131ded134799ea609a667fb1eaacf42d1aca9cc5cf1bd92
     recipe_revision: 68a12d4a7e128ae8deed60ec8758db92b02f4a08
@@ -85863,20 +85931,18 @@ packages:
     recipe_revision: 079348776feca19139961c20a5cbd02b82512f02
   - version: 1.1.7
     packaging_revision: 1
+    recipe_revision: 259c7e8019fc290edaf5b2e007b2627ede7ee2ff
+  - version: 1.1.7
+    recipe_revision: 72f26b8b97b73d8e560c2167058dbeeeeff91f37
+  - version: 1.1.8
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/Deutsches-Klimarechenzentrum/libaec/archive/v1.1.7.tar.gz
+    - url: https://github.com/Deutsches-Klimarechenzentrum/libaec/archive/v1.1.8.tar.gz
       checksums:
-      - sha512:55bd605590015e0f903a231268265051336c172c18935fdfecead5630454a99811f3f196117556ad1b62f3052d54894fd8e257a9ea9f45cc03f59c93cde00cda
-    recipe_revision: 259c7e8019fc290edaf5b2e007b2627ede7ee2ff
-  - version: 1.1.7
-    artifacts:
-    - url: https://github.com/Deutsches-Klimarechenzentrum/libaec/archive/v1.1.7.tar.gz
-      checksums:
-      - sha512:55bd605590015e0f903a231268265051336c172c18935fdfecead5630454a99811f3f196117556ad1b62f3052d54894fd8e257a9ea9f45cc03f59c93cde00cda
-    recipe_revision: 72f26b8b97b73d8e560c2167058dbeeeeff91f37
+      - sha512:c3e49f2bb1210871f70617297177e093d9026289a23beedc01da4ebeba97e690daa075111538ad3399b59bf0e160f542e4794a2dad7f8a49e5cef16bc2524f97
+    recipe_revision: ce061faf7db21aeb23a243804b9b89614076979f
   recipe_path: ports/libaec/vcpkg.json
 - id: vcpkg:libaes-siv
   registry: vcpkg
@@ -91248,6 +91314,8 @@ packages:
   - version: 5.12.0
     recipe_revision: 35c7f16cf8e9c02e65d9ce898690ef2b8b0691dd
   - version: 5.14.1
+    recipe_revision: 7ac9d38af5ef3ec67270248b2ac146dc2f4b2d92
+  - version: 5.14.3
     dependencies:
     - name: gettext
     - name: libgcrypt
@@ -91271,10 +91339,10 @@ packages:
     compatibility:
     - '!windows | mingw'
     artifacts:
-    - url: https://www.aquamaniac.de/rdm/attachments/download/630/gwenhywfar-5.14.1.tar.gz
+    - url: https://www.aquamaniac.de/rdm/attachments/download/662/gwenhywfar-5.14.3.tar.gz
       checksums:
-      - sha512:770a9f3aba84440526229375000b02cb938d2ccd4c75c25503e322ee717f3b738d2bdf17a1dff7f0486b37a60b0038406d336a3167c932a6336abc14d1bea6f0
-    recipe_revision: 7ac9d38af5ef3ec67270248b2ac146dc2f4b2d92
+      - sha512:60275e0255629454f2e2c1021e62116848ee42c2a8bcbf8a8446e4acee36a0f63a9173eebeb82d86542dd365dd14972c3dd5c4814ce1e0730b42a801dbf2e89d
+    recipe_revision: aa49947699358cda4aea193cd498aa9dc11c50b4
   - version: 5.6.0
     packaging_revision: 5
     recipe_revision: 8b4376fdc006cc932f5bc581b32479ebd273b275
@@ -93087,6 +93155,10 @@ packages:
     recipe_revision: 864e158b0697e23dfa15a1731d089ce62a4b0f53
   - version: 0.12.0
     packaging_revision: 1
+    recipe_revision: 30481191c0e65e92a71840803a1d0c90191ce2c1
+  - version: 0.12.0
+    recipe_revision: e503da30de672f62e17484da045558945bf3cfb7
+  - version: 0.13.0
     dependencies:
     - name: brotli
     - name: giflib
@@ -93099,16 +93171,10 @@ packages:
     - name: tools
       description: 'Build user tools: cjxl and djxl'
     artifacts:
-    - url: https://github.com/libjxl/libjxl/archive/v0.12.0.tar.gz
+    - url: https://github.com/libjxl/libjxl/archive/v0.13.0.tar.gz
       checksums:
-      - sha512:71d45123e47588c8028c0e01a7820c7a18d98df05c29b5318ab6858eaff5f249879763907201ba19a93f817c6ef75c393c1974d2a0cc8e461c4e2709ca6fa45f
-    recipe_revision: 30481191c0e65e92a71840803a1d0c90191ce2c1
-  - version: 0.12.0
-    artifacts:
-    - url: https://github.com/libjxl/libjxl/archive/v0.12.0.tar.gz
-      checksums:
-      - sha512:71d45123e47588c8028c0e01a7820c7a18d98df05c29b5318ab6858eaff5f249879763907201ba19a93f817c6ef75c393c1974d2a0cc8e461c4e2709ca6fa45f
-    recipe_revision: e503da30de672f62e17484da045558945bf3cfb7
+      - sha512:f5a6cc4c875c9cdd217001096d34e5912afffdf3a58bae816c1c28c7e241eb0909ea37af0bef6d4b2fb8fae20ae94e29b2ef30fb65f778d4a7d62e07e20e3f85
+    recipe_revision: 78da47953cb9e6042eb0d31936575f3678f907db
   - version: 0.6.1
     packaging_revision: 1
     recipe_revision: ebfc043511f10c6dbe25a298b403b56ef9a57f87
@@ -95304,14 +95370,16 @@ packages:
   - version: 2.8.4
     recipe_revision: 345812651e5d2a92a461960e676eb89b56e27e31
   - version: 2.8.5
+    recipe_revision: 4149615d40950d05d3f22c8364dc02be7dbc9b50
+  - version: 2.8.6
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/munt/munt/archive/libmt32emu_2.8.5.tar.gz
+    - url: https://github.com/munt/munt/archive/libmt32emu_2.8.6.tar.gz
       checksums:
-      - sha512:b28df7f0d08c37afbc71f9a3c03094a3d95e085c35b5edd3a2521fe05bc545f57a9658d003440183fcec18adb16fd29ce99c8047f0b2e455583b9ad7eca4e128
-    recipe_revision: 4149615d40950d05d3f22c8364dc02be7dbc9b50
+      - sha512:46c47438488613f9208de379bcba3becaf315dbc2248bd0f6db93f738c95a8d6d351f6c6e1857df2b2bf353b0f40752ab301fe3669d3a888a61408766618dda8
+    recipe_revision: 938b0e7c1a47ef2de9c8f9b114c21c4efca53e76
   recipe_path: ports/libmt32emu/vcpkg.json
 - id: vcpkg:libmtp
   registry: vcpkg
@@ -99286,6 +99354,8 @@ packages:
   - version: 4.3.3
     recipe_revision: d9c7ab987f22c19aafbc8b5a150f520c650f1d85
   - version: 4.4.0
+    recipe_revision: 12de0ac417df1a4359b2f008fd90d2c486a2f516
+  - version: 4.4.1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -99294,8 +99364,8 @@ packages:
       description: Build openssl and ocspcheck executables
     artifacts:
     - checksums:
-      - sha512:b00566439dd6614d1264f8df088aceb0f6dc99d198d628bf70efe04470f2cbde2d13c5042477c60b5c41d7e2222ca40138ced9b2ef63806fb4c90006905f49e2
-    recipe_revision: 12de0ac417df1a4359b2f008fd90d2c486a2f516
+      - sha512:0a77f737baedf6dc2735a6086b5f65250c1cf1f8937b09dd54c763655fcebf27682b25835f87eee51c5dec30ddb2c5977674dcfbf807efdc4c9194f96c4c3d49
+    recipe_revision: 833bdfe3f423f66a5edae664b3879658ca6790f5
   recipe_path: ports/libressl/vcpkg.json
 - id: vcpkg:librsvg
   registry: vcpkg
@@ -100655,6 +100725,7 @@ packages:
   - version: 3.8.0
     recipe_revision: 9ce4ff3d51d7b3881374d7721b4b75e49cc94248
   - version: 3.8.1
+    packaging_revision: 1
     dependencies:
     - name: brotli
     - name: glib
@@ -100671,6 +100742,11 @@ packages:
       description: Build with Zstandard decompression support
     compatibility:
     - '!uwp & !xbox'
+    artifacts:
+    - checksums:
+      - sha512:a52736ba2c42fd1202613edfe67998676dbd066079dd852de5fb61b87e48c5f31a7a6beb9bb0dc122e8ab08f25ad7b3ce1e944cc20d115a7144b0daf39545cb2
+    recipe_revision: 9e87d50e5802dcb75e77f54f4e59cac6878877d2
+  - version: 3.8.1
     artifacts:
     - checksums:
       - sha512:a52736ba2c42fd1202613edfe67998676dbd066079dd852de5fb61b87e48c5f31a7a6beb9bb0dc122e8ab08f25ad7b3ce1e944cc20d115a7144b0daf39545cb2
@@ -101816,6 +101892,10 @@ packages:
   - version: 2.2.1
     recipe_revision: 240d7afc67250e63feeac072316dd51c60a0acb0
   - version: 2.2.2
+    recipe_revision: 5ad27cec80859cd624e508b03182f0f7e4640951
+  - version: 2.3.1
+    recipe_revision: a9a2461b38c2aa90ac229a0eb3ca4cb2d94da7f0
+  - version: 2.3.2
     dependencies:
     - name: lodepng
     - name: sdl3
@@ -101840,10 +101920,10 @@ packages:
       description: Support for REXPaint files and TCODZip archives.
       default: enabled
     artifacts:
-    - url: https://github.com/libtcod/libtcod/archive/2.2.2.tar.gz
+    - url: https://github.com/libtcod/libtcod/archive/2.3.2.tar.gz
       checksums:
-      - sha512:e10d6d83e6057336efcc3f2a45dd7d2e287217c3c42f99f594a357668bac89dd8a235d8498d879168418c3b5fc1a3cb5ae2c9e0acadf4e3f95e247da3ab4de40
-    recipe_revision: 5ad27cec80859cd624e508b03182f0f7e4640951
+      - sha512:7fd6643f09467d9f4f446982c37352520f2edf7593a00f39e8ee35b6e2bc2daed4caa295f083c62a740cf8553e7fb338b479dbdab7632f2365e184291f24c7b1
+    recipe_revision: 7fcebde91fb5cc745e62ebca5afea8ec16e9173a
   recipe_path: ports/libtcod/vcpkg.json
 - id: vcpkg:libtess2
   registry: vcpkg
@@ -105541,7 +105621,7 @@ packages:
   - version: 1.2.3
     recipe_revision: 85ef88f2cdd221b32b244dce3108c21b58887668
   - version: 1.2.4
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: minizip
     - name: openssl
@@ -105554,6 +105634,13 @@ packages:
       description: Use memory files instead of temp files
     - name: openssl-md5
       description: Use Openssl MD5
+    artifacts:
+    - url: https://github.com/jmcnamara/libxlsxwriter/archive/v1.2.4.tar.gz
+      checksums:
+      - sha512:a961a6d8094cc9f9996c9cf6c143e0382422eb4b63ec68d4ee1cce76afef562656855ed08c630974b67d33a4af9706df602c4ababad0767466b43a3e0563f2cf
+    recipe_revision: 5c1f303e945e1a03027c8e3eae7fbf12bb8f9293
+  - version: 1.2.4
+    packaging_revision: 2
     artifacts:
     - url: https://github.com/jmcnamara/libxlsxwriter/archive/v1.2.4.tar.gz
       checksums:
@@ -105780,16 +105867,18 @@ packages:
   - version: 0.3.28
     recipe_revision: d262daf821065c3172f8c651716235eb9b5bb1c5
   - version: 0.3.29
+    recipe_revision: e32e4cd88b5eed0ab1d021d3c0cf923faf745511
+  - version: 0.3.30
     dependencies:
     - name: glib
     - name: vcpkg-tool-meson
     compatibility:
     - '!windows | mingw'
     artifacts:
-    - url: https://github.com/hughsie/libxmlb/archive/0.3.29.tar.gz
+    - url: https://github.com/hughsie/libxmlb/archive/0.3.30.tar.gz
       checksums:
-      - sha512:7e437ae7a7104eb2f8de36ea319fd79c130edd794d96243dbca50f839494e0aa5377954cd38618e310cea8b6a246b2049150b37f3d4da8dea56149baeb543e45
-    recipe_revision: e32e4cd88b5eed0ab1d021d3c0cf923faf745511
+      - sha512:79912466efa7c0a6db71a4fb66502a1665191d852a900dd666c9c5b780c9befb6270ebb1f3b7e1265115ac930a0bdbc0ba00bd8bbd25aaa843bd22aabbe7be19
+    recipe_revision: d476c5c6e3fabe963f57026fdf740f585ed801c5
   recipe_path: ports/libxmlb/vcpkg.json
 - id: vcpkg:libxmlmm
   registry: vcpkg
@@ -107819,14 +107908,16 @@ packages:
   - version: 9.2.1
     recipe_revision: d59b0801cd7dd4850fee67f24ae329c72db84458
   - version: 9.3.1
+    recipe_revision: eda1a9af9d7bd952048bc9aa85663d52ef250481
+  - version: 9.4.3
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/nodejs/llhttp/archive/refs/tags/release/v9.3.1.tar.gz
+    - url: https://github.com/nodejs/llhttp/archive/refs/tags/release/v9.4.3.tar.gz
       checksums:
-      - sha512:725332e20aace7215c3cb7a4973e6fe72e6ed80c451c513c4caade0f8e5a276e0725733637fe30c6e3312a68fba3dcdad50ab2f17f52d4120dbecef970fa4e70
-    recipe_revision: eda1a9af9d7bd952048bc9aa85663d52ef250481
+      - sha512:c34570cdda6c184648f9f8982bd5c11e4dcff585c481259509402997f7c2341f423e25034b8420498d0858d35f6ce2328cd850dd000e219dffba1c18f1c38801
+    recipe_revision: 5ad38e15cbaa913a9d397794e281bdfc4603c3a3
   recipe_path: ports/llhttp/vcpkg.json
 - id: vcpkg:llnl-units
   registry: vcpkg
@@ -108112,6 +108203,7 @@ packages:
   - version: 23.1.4
     recipe_revision: 39f63c93e64b21f10278d035bd9c04722e6259c4
   - version: 23.1.5
+    packaging_revision: 1
     dependencies:
     - name: atl
     - name: libffi
@@ -108255,6 +108347,12 @@ packages:
       description: Build LLVM utils.
     compatibility:
     - '!uwp & !(arm & windows)'
+    artifacts:
+    - url: https://github.com/llvm/llvm-project/archive/llvmorg-23.1.5.tar.gz
+      checksums:
+      - sha512:10cb5d9d95d7e8808ee180c6775526b731c69fac5a71342c7a99c0a02013a8e0c823e0e0482624c1eb38d4dbc16732562a9afb4cab4f7707d97fac92f5c53557
+    recipe_revision: 4e944bacbeec8d319d819850ab173476eda65c03
+  - version: 23.1.5
     artifacts:
     - url: https://github.com/llvm/llvm-project/archive/llvmorg-23.1.5.tar.gz
       checksums:
@@ -109679,6 +109777,8 @@ packages:
   - version: '0.744'
     recipe_revision: be821fed07df57e81e94d7662704e93d5e479945
   - version: '0.745'
+    recipe_revision: 78b9f43f1727b4120c279e35d853069d1ab326d8
+  - version: '0.746'
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -109686,10 +109786,10 @@ packages:
     - name: tool
       description: Builds luau executable
     artifacts:
-    - url: https://github.com/luau-lang/luau/archive/0.745.tar.gz
+    - url: https://github.com/luau-lang/luau/archive/0.746.tar.gz
       checksums:
-      - sha512:c18e3a8609f410ad937d56b9b6f247c52baffe559591b45a329e02abdada843896b2b48a0e3e8c901ec69ad7e3df04e2cf40f8fc1387845d0b23b86fb2b9660a
-    recipe_revision: 78b9f43f1727b4120c279e35d853069d1ab326d8
+      - sha512:44d114834b211131c1edcafe0c5d69f4e9427d2acce3ff7809d8f3efada2dcbd504d866541511baa25691005ae75cfc3e6b2dd8e7dbd8223f6e9d756316ea259
+    recipe_revision: ff36ab2b5af8f4b9c272665066e0e0b8a77dcec9
   recipe_path: ports/luau/vcpkg.json
 - id: vcpkg:lunarg-vulkantools
   registry: vcpkg
@@ -109930,6 +110030,8 @@ packages:
   - version: 1.10.0
     recipe_revision: 4f01eec10f515a428e914107c5188366380f8dd9
   - version: 1.11.0
+    recipe_revision: 7973b8c0d78828d994fa5f6e5d92d5ce1d8cf2ee
+  - version: 1.11.1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -109937,10 +110039,10 @@ packages:
     - name: tools
       description: Build lz4 binary
     artifacts:
-    - url: https://github.com/lz4/lz4/archive/v1.11.0.tar.gz
+    - url: https://github.com/lz4/lz4/archive/v1.11.1.tar.gz
       checksums:
-      - sha512:5638a9ca76f333bea718b457588eadafd8dddbc4c8afcd8e21992805afff7af283283642558e52d1f1d4655dbe26f2aa85fa89dc365041ca621baf79c552f364
-    recipe_revision: 7973b8c0d78828d994fa5f6e5d92d5ce1d8cf2ee
+      - sha512:1b9ecf6b5d0b53be6a7e28f85c63daeecfbf55dee2759dab5eb4647675975ccfe426152e382c30b8a8adb4038d40b312cceac4c56f348fb0977919869aa24669
+    recipe_revision: 5ddda387cefa6a056dce9c5072f2c8c4d02851a5
   - version: 1.7.4.2
     recipe_revision: 263a6d8657f96a86e5da840035aa3527d70233a2
   - version: 1.7.5
@@ -113443,6 +113545,8 @@ packages:
   - version: 26.2.5
     recipe_revision: 75d3bc873df72a9354577910dca1a8df5af3d959
   - version: 26.2.6
+    recipe_revision: 69849457b704bd9374f2fdfd885963f8355065c0
+  - version: 26.3.0
     dependencies:
     - name: directx-headers
     - name: egl-registry
@@ -113472,11 +113576,11 @@ packages:
     artifacts:
     - url: https://gitlab.freedesktop.org
       checksums:
-      - sha512:e70176e6ad6cb009eade907f13abebe94d9cdd24585b53ee2c2925c5d4980bcedfc71893f9e9e0400ccbe5dbfae8e1e8f655ad6872a2f1517feb6e58f4030f01
-    - url: https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/44850
+      - sha512:0e638a9351053df9e824860dc8680567c40dd6b3569c803d82cb4bfcf18b6151740eb03f6955ea596f86abbb062a64b4a893695b651b9c40d06be293f78537fc
+    - url: https://gitlab.freedesktop.org/mesa/mesa/-/work_items/16530
       checksums:
-      - sha512:e70176e6ad6cb009eade907f13abebe94d9cdd24585b53ee2c2925c5d4980bcedfc71893f9e9e0400ccbe5dbfae8e1e8f655ad6872a2f1517feb6e58f4030f01
-    recipe_revision: 69849457b704bd9374f2fdfd885963f8355065c0
+      - sha512:0e638a9351053df9e824860dc8680567c40dd6b3569c803d82cb4bfcf18b6151740eb03f6955ea596f86abbb062a64b4a893695b651b9c40d06be293f78537fc
+    recipe_revision: 1c937803a8ac6504bb5866c461a1caa54fbde66f
   recipe_path: ports/mesa/vcpkg.json
 - id: vcpkg:meschach
   registry: vcpkg
@@ -114050,6 +114154,40 @@ packages:
       - sha512:a3604c3019bde7ad1308df52a8b249f91d625138940a69252d7450de4c5ea6615f249294716a565bd144052c77acfadc5587f0b3d44a39523e7adb8cdcf2975d
     recipe_revision: 25a1eb3a4cd3cb567e7e11aaef6e965be9229507
   recipe_path: ports/microlog/vcpkg.json
+- id: vcpkg:microsoft-gacl
+  registry: vcpkg
+  name: microsoft-gacl
+  summary: Game Asset Conditioning Library - improves Zstandard compression of game assets such as BCn textures using shuffle transforms and rate-distortion optimization
+  licenses:
+  - MIT
+  homepage: https://github.com/microsoft/Game-Asset-Conditioning-Library
+  repository_url: https://github.com/microsoft/Game-Asset-Conditioning-Library
+  platforms:
+  - windows & x64 & !mingw & !uwp & !xbox
+  dependencies:
+  - directx-headers
+  - directxmath
+  - directxtex
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  - zstd
+  versions:
+  - version: 1.2.0
+    dependencies:
+    - name: directx-headers
+    - name: directxmath
+    - name: directxtex
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    - name: zstd
+    compatibility:
+    - windows & x64 & !mingw & !uwp & !xbox
+    artifacts:
+    - url: https://github.com/microsoft/Game-Asset-Conditioning-Library/archive/1.2.0.tar.gz
+      checksums:
+      - sha512:d856e666a71dd39818d089c6db94cf5e52450d51446065de64b85d01b5149d000db23845114f8372d5e9a406ed20933c1211f8eaff5017831e5488739237afdb
+    recipe_revision: 71803e4a1124967fc86289104aad9b459d07ed7c
+  recipe_path: ports/microsoft-gacl/vcpkg.json
 - id: vcpkg:microsoft-windows-devices-midi2
   registry: vcpkg
   name: microsoft-windows-devices-midi2
@@ -114233,6 +114371,8 @@ packages:
   - version: 3.5.2
     recipe_revision: 52ef9c971e1bde4c9b840d224853723b26d5f8cc
   - version: 3.5.3
+    recipe_revision: 905648b6cc7eceed8254c4005d8c9054e90a3af4
+  - version: 3.6.1
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -114244,10 +114384,13 @@ packages:
     compatibility:
     - '!uwp'
     artifacts:
-    - url: https://github.com/microsoft/mimalloc/archive/v3.5.3.tar.gz
+    - url: https://github.com/microsoft/mimalloc/archive/v3.6.1.tar.gz
       checksums:
-      - sha512:ef24d926153eb81c95e6c79c335eed12c6e14523a2dd817faddc3f666909a244eab5f4be43cc01a6d8c8d62b5695d29fb535b3762128cdef50a7ee55302b2886
-    recipe_revision: 905648b6cc7eceed8254c4005d8c9054e90a3af4
+      - sha512:03090fbcfe16aff6b640ef64f8d26551f0347c9e49fbca4efc48d6874ec87c109227fa05157e21e2031d58fe9374a8af9a5e34cf67a2255806f32e39ce4ca3ed
+    - url: https://github.com/microsoft/mimalloc/commit/23fced334cb0c3fbe43a847c895e1c0ebf20c873
+      checksums:
+      - sha512:03090fbcfe16aff6b640ef64f8d26551f0347c9e49fbca4efc48d6874ec87c109227fa05157e21e2031d58fe9374a8af9a5e34cf67a2255806f32e39ce4ca3ed
+    recipe_revision: 38c4d5f3eb8b8ae96769e08cdbc1ce13c0e7772c
   recipe_path: ports/mimalloc/vcpkg.json
 - id: vcpkg:mimicpp
   registry: vcpkg
@@ -114723,7 +114866,6 @@ packages:
   options:
   - bzip2
   - tools
-  - unofficial-iowin32
   versions:
   - version: 1.2.11
     packaging_revision: 11
@@ -114776,6 +114918,8 @@ packages:
   - version: 1.3.1
     recipe_revision: 8a421d5b61058bace21296039e5f5bcbe9c9010a
   - version: 1.3.2
+    recipe_revision: b485c18ad5b9ce53d790be6875324577d308e8b1
+  - version: '1.4'
     dependencies:
     - name: bzip2
     - name: vcpkg-cmake
@@ -114787,25 +114931,17 @@ packages:
       description: Support compression using bzip2 library
     - name: tools
       description: Install tools
-    - name: unofficial-iowin32
-      description: Include iowin32 API in minizip library. Deprecated. This feature only exists to support devendoring minizip in vcpkg ports.
     artifacts:
-    - url: https://github.com/madler/zlib/archive/v1.3.2.tar.gz
+    - url: https://github.com/madler/zlib/archive/v1.4.tar.gz
       checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
+      - sha512:67f3ce120210a69aa05cece6f76d5f45b50d947c095169f0d699732d0182d7d04aec1af56a3fc6bbcc2af91a57e099cd73980b17f7d96ad90aeabbeaafbf1cbc
     - url: https://github.com/madler/zlib/issues/1252
       checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    - url: https://github.com/madler/zlib/pull/1233
-      checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
+      - sha512:67f3ce120210a69aa05cece6f76d5f45b50d947c095169f0d699732d0182d7d04aec1af56a3fc6bbcc2af91a57e099cd73980b17f7d96ad90aeabbeaafbf1cbc
     - url: https://github.com/madler/zlib/pull/1242
       checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    - url: https://github.com/madler/zlib/pull/1243
-      checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    recipe_revision: b485c18ad5b9ce53d790be6875324577d308e8b1
+      - sha512:67f3ce120210a69aa05cece6f76d5f45b50d947c095169f0d699732d0182d7d04aec1af56a3fc6bbcc2af91a57e099cd73980b17f7d96ad90aeabbeaafbf1cbc
+    recipe_revision: 64b237dd805056162cd1e09cdc564f1b09388219
   recipe_path: ports/minizip/vcpkg.json
 - id: vcpkg:minizip-ng
   registry: vcpkg
@@ -117335,6 +117471,8 @@ packages:
   - version: '1.13'
     recipe_revision: c8017057d0cedef357157a7d38e14c05d419dd3f
   - version: 1.13+new-skia-api
+    recipe_revision: 40c00ae04d26998b11cefa6667445a036536fd27
+  - version: 1.13.1
     dependencies:
     - name: freetype
     - name: libpng
@@ -117355,10 +117493,10 @@ packages:
     - name: tools
       description: Generates an executable inside the tools folder.
     artifacts:
-    - url: https://github.com/Chlumsky/msdfgen/archive/v1.13+new-skia-api.tar.gz
+    - url: https://github.com/Chlumsky/msdfgen/archive/v1.13.1.tar.gz
       checksums:
-      - sha512:5a136996de6ae013d223cd246548613d2928adcd6c3357333447086817351816c1b49e3eb119f3fe299745a50684d312db9410adf7671120b9e38fee8b96ff29
-    recipe_revision: 40c00ae04d26998b11cefa6667445a036536fd27
+      - sha512:610e74675f5997a10e32eeed70cefa34f25649b56fed556e9c3ef4de9526633d0cda6dc156bfcd8f7b420b153f1e8cd1bf1633ac1f9c3afc9586bc63964a4089
+    recipe_revision: 61c49fa6142670afc5a7bda011ef67ef3a8dc129
   - version: '1.8'
     recipe_revision: 8b15da4b26ea13caeba60337d49e6d5ec17c3e11
   - version: 1.9.1
@@ -120516,50 +120654,32 @@ packages:
     recipe_revision: 64bcda2a7fb352a6d5a571097d868fabbdc80897
   - version: 4.3.1
     packaging_revision: 5
+    recipe_revision: e923110ddc48818ad472b7b577823caabfb203ab
+  - version: 4.3.1
+    packaging_revision: 4
+    recipe_revision: 58540066d5e44f206328ac7cc9744153dbd39a68
+  - version: 4.3.1
+    packaging_revision: 3
+    recipe_revision: e973009e3eb7bc949e546204441002d914aa8886
+  - version: 4.3.1
+    packaging_revision: 2
+    recipe_revision: 17850b6ba47c047dc7e2e55bdb6b2956521d424c
+  - version: 4.3.1
+    packaging_revision: 1
+    recipe_revision: be1a100ea4fa132b206c23d21515a721d933889c
+  - version: 4.3.1
+    recipe_revision: 37f045219c6b94d0f3df5aee1fa2ff22068e6ad1
+  - version: 4.3.2
     dependencies:
     - name: hdf5
     - name: netcdf-c
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/Unidata/netcdf-cxx4/archive/f8882188267488ef801691e69ad072e3eb217ad8.tar.gz
+    - url: https://github.com/Unidata/netcdf-cxx4/archive/v4.3.2.tar.gz
       checksums:
-      - sha512:9816acf221d196e21af19d4c3d85484934916e7c018e9b2c96aab9f5660b2f08c5db9cd8254ba3fa5f0aa5f5c5ad7bd3a3aaba559e5e640c5349d44e07a20ed3
-    recipe_revision: e923110ddc48818ad472b7b577823caabfb203ab
-  - version: 4.3.1
-    packaging_revision: 4
-    artifacts:
-    - url: https://github.com/Unidata/netcdf-cxx4/archive/f8882188267488ef801691e69ad072e3eb217ad8.tar.gz
-      checksums:
-      - sha512:9816acf221d196e21af19d4c3d85484934916e7c018e9b2c96aab9f5660b2f08c5db9cd8254ba3fa5f0aa5f5c5ad7bd3a3aaba559e5e640c5349d44e07a20ed3
-    recipe_revision: 58540066d5e44f206328ac7cc9744153dbd39a68
-  - version: 4.3.1
-    packaging_revision: 3
-    artifacts:
-    - url: https://github.com/Unidata/netcdf-cxx4/archive/f8882188267488ef801691e69ad072e3eb217ad8.tar.gz
-      checksums:
-      - sha512:9816acf221d196e21af19d4c3d85484934916e7c018e9b2c96aab9f5660b2f08c5db9cd8254ba3fa5f0aa5f5c5ad7bd3a3aaba559e5e640c5349d44e07a20ed3
-    recipe_revision: e973009e3eb7bc949e546204441002d914aa8886
-  - version: 4.3.1
-    packaging_revision: 2
-    artifacts:
-    - url: https://github.com/Unidata/netcdf-cxx4/archive/f8882188267488ef801691e69ad072e3eb217ad8.tar.gz
-      checksums:
-      - sha512:9816acf221d196e21af19d4c3d85484934916e7c018e9b2c96aab9f5660b2f08c5db9cd8254ba3fa5f0aa5f5c5ad7bd3a3aaba559e5e640c5349d44e07a20ed3
-    recipe_revision: 17850b6ba47c047dc7e2e55bdb6b2956521d424c
-  - version: 4.3.1
-    packaging_revision: 1
-    artifacts:
-    - url: https://github.com/Unidata/netcdf-cxx4/archive/f8882188267488ef801691e69ad072e3eb217ad8.tar.gz
-      checksums:
-      - sha512:9816acf221d196e21af19d4c3d85484934916e7c018e9b2c96aab9f5660b2f08c5db9cd8254ba3fa5f0aa5f5c5ad7bd3a3aaba559e5e640c5349d44e07a20ed3
-    recipe_revision: be1a100ea4fa132b206c23d21515a721d933889c
-  - version: 4.3.1
-    artifacts:
-    - url: https://github.com/Unidata/netcdf-cxx4/archive/f8882188267488ef801691e69ad072e3eb217ad8.tar.gz
-      checksums:
-      - sha512:9816acf221d196e21af19d4c3d85484934916e7c018e9b2c96aab9f5660b2f08c5db9cd8254ba3fa5f0aa5f5c5ad7bd3a3aaba559e5e640c5349d44e07a20ed3
-    recipe_revision: 37f045219c6b94d0f3df5aee1fa2ff22068e6ad1
+      - sha512:b24ad8f4e6cbf6f75d53b1b45ac71d87160e37dddba0ff78a56cb601c27f485ce026f88abbd57b3ff3bf9ebdb5b0eb94fd1107de3d8526c77f124620f386448d
+    recipe_revision: f438a6a957c953e6ed6259fb1d2cf9a7788ed060
   recipe_path: ports/netcdf-cxx4/vcpkg.json
 - id: vcpkg:netcpp
   registry: vcpkg
@@ -124023,7 +124143,6 @@ packages:
   dependencies:
   - assimp
   - bullet3
-  - freeimage
   - freetype
   - imgui
   - ogre
@@ -124040,7 +124159,6 @@ packages:
   - bullet
   - csharp
   - d3d9
-  - freeimage
   - java
   - openexr
   - overlay
@@ -124051,7 +124169,6 @@ packages:
   - zziplib
   default_options:
     assimp: enabled
-    freeimage: enabled
     overlay: enabled
     zip: enabled
   versions:
@@ -124174,10 +124291,10 @@ packages:
   - version: 14.5.0
     recipe_revision: 71dfe3a5c10e8a6751770c22f7f34388c948a7d6
   - version: 14.5.2
+    packaging_revision: 1
     dependencies:
     - name: assimp
     - name: bullet3
-    - name: freeimage
     - name: freetype
     - name: imgui
     - name: ogre
@@ -124199,9 +124316,6 @@ packages:
       description: Build csharp bindings
     - name: d3d9
       description: Build Direct3D9 RenderSystem
-    - name: freeimage
-      description: Build with FreeImage support (no effect for Emscripten)
-      default: enabled
     - name: java
       description: Build Java (JNI) bindings
     - name: openexr
@@ -124226,6 +124340,12 @@ packages:
     - url: https://github.com/OGRECave/ogre/archive/v14.5.2.tar.gz
       checksums:
       - sha512:74c83cd4248bce7c8ee603845e753acde0fe2efaa8edb5f3f0205bc43534d9334acd3e16c0f3836888aa77fc0ed43f739184181548509c59389aac494dac722b
+    recipe_revision: 5f3189b69e3b96bdea0105b977fb26ae64e68556
+  - version: 14.5.2
+    artifacts:
+    - url: https://github.com/OGRECave/ogre/archive/v14.5.2.tar.gz
+      checksums:
+      - sha512:74c83cd4248bce7c8ee603845e753acde0fe2efaa8edb5f3f0205bc43534d9334acd3e16c0f3836888aa77fc0ed43f739184181548509c59389aac494dac722b
     recipe_revision: 834ab93af959205e383513becf095fde76882022
   recipe_path: ports/ogre/vcpkg.json
 - id: vcpkg:ogre-next
@@ -124239,10 +124359,10 @@ packages:
   platforms:
   - '!emscripten & !uwp & !xbox'
   dependencies:
-  - freeimage
   - freetype
   - glslang
   - rapidjson
+  - stb
   - tinyxml
   - vcpkg-cmake
   - vcpkg-cmake-config
@@ -124298,11 +124418,12 @@ packages:
   - version: 2019-10-20-1
     recipe_revision: d8a84a70373caadf837280fe2873d5d286d2c770
   - version: 3.0.0
+    packaging_revision: 1
     dependencies:
-    - name: freeimage
     - name: freetype
     - name: glslang
     - name: rapidjson
+    - name: stb
     - name: tinyxml
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -124326,6 +124447,12 @@ packages:
       default: enabled
     compatibility:
     - '!emscripten & !uwp & !xbox'
+    artifacts:
+    - url: https://github.com/OGRECave/ogre-next/archive/v3.0.0.tar.gz
+      checksums:
+      - sha512:2ef8f16517c96cc7ddb31986857e4d0002e33c2eeff845b4af0b8e5848c3e92289dc3b10ededbe66fb63ef6234cbee88ed513466182bd4e70d710d0507f98418
+    recipe_revision: 1e6f43b674f3b17c9655eca35a838f427c115066
+  - version: 3.0.0
     artifacts:
     - url: https://github.com/OGRECave/ogre-next/archive/v3.0.0.tar.gz
       checksums:
@@ -124883,7 +125010,7 @@ packages:
   - version: 1.31.0
     recipe_revision: 20877f507eb8fdf0cb4715e9353d4279ce318f38
   - version: 1.31.1
-    packaging_revision: 1
+    packaging_revision: 2
     dependencies:
     - name: abseil
     - name: boost-config
@@ -124932,10 +125059,26 @@ packages:
     - url: https://github.com/microsoft/onnxruntime/archive/v1.31.1.tar.gz
       checksums:
       - sha512:7fa5cb459c4d7d3146974db2ddae084f8c689e6b22dca3aad031aaf33b013dfa7b1ad1b116ec7a675a8c42ad6dd73873759d2129dab1301a5d885b1e34bf9568
+    - url: https://github.com/microsoft/onnxruntime/pull/33456
+      checksums:
+      - sha512:7fa5cb459c4d7d3146974db2ddae084f8c689e6b22dca3aad031aaf33b013dfa7b1ad1b116ec7a675a8c42ad6dd73873759d2129dab1301a5d885b1e34bf9568
+    recipe_revision: 7f3cbab75a792f70ae752030c8a45f5efc137984
+  - version: 1.31.1
+    packaging_revision: 1
+    artifacts:
+    - url: https://github.com/microsoft/onnxruntime/archive/v1.31.1.tar.gz
+      checksums:
+      - sha512:7fa5cb459c4d7d3146974db2ddae084f8c689e6b22dca3aad031aaf33b013dfa7b1ad1b116ec7a675a8c42ad6dd73873759d2129dab1301a5d885b1e34bf9568
+    - url: https://github.com/microsoft/onnxruntime/pull/33456
+      checksums:
+      - sha512:7fa5cb459c4d7d3146974db2ddae084f8c689e6b22dca3aad031aaf33b013dfa7b1ad1b116ec7a675a8c42ad6dd73873759d2129dab1301a5d885b1e34bf9568
     recipe_revision: b87ca7974500664520a61f04fba56b2044b9f0d3
   - version: 1.31.1
     artifacts:
     - url: https://github.com/microsoft/onnxruntime/archive/v1.31.1.tar.gz
+      checksums:
+      - sha512:7fa5cb459c4d7d3146974db2ddae084f8c689e6b22dca3aad031aaf33b013dfa7b1ad1b116ec7a675a8c42ad6dd73873759d2129dab1301a5d885b1e34bf9568
+    - url: https://github.com/microsoft/onnxruntime/pull/33456
       checksums:
       - sha512:7fa5cb459c4d7d3146974db2ddae084f8c689e6b22dca3aad031aaf33b013dfa7b1ad1b116ec7a675a8c42ad6dd73873759d2129dab1301a5d885b1e34bf9568
     recipe_revision: 74b0e92008c5c0daded569c0a411d8ff64624961
@@ -125535,7 +125678,6 @@ packages:
   dependencies:
   - angle
   - fontconfig
-  - freeimage
   - freetype
   - opengl
   - rapidjson
@@ -125544,7 +125686,6 @@ packages:
   - vcpkg-cmake-config
   - vtk
   options:
-  - freeimage
   - freetype
   - rapidjson
   - tbb
@@ -125637,10 +125778,10 @@ packages:
   - version: 8.0.0
     recipe_revision: 380113d2be95b9e41f2eb1740d809769edf41769
   - version: 8.0.1
+    packaging_revision: 1
     dependencies:
     - name: angle
     - name: fontconfig
-    - name: freeimage
     - name: freetype
     - name: opengl
     - name: rapidjson
@@ -125649,8 +125790,6 @@ packages:
     - name: vcpkg-cmake-config
     - name: vtk
     features:
-    - name: freeimage
-      description: Enable optional usage of freeimage
     - name: freetype
       description: Use of freetype
       default: enabled
@@ -125662,6 +125801,11 @@ packages:
       description: Enable optional usage of vtk
     compatibility:
     - '!xbox'
+    artifacts:
+    - checksums:
+      - sha512:bbe7099071cbf5397940ebc6e66ec05f8023d5e5aae6142870e14b93aa6f8f94c30980ef421e717f0fbfbc23b3520c3ccfe8a939c4caba3ccbf325060e26eb52
+    recipe_revision: b05bed318d28f193afd7aa3f6f1ef558ff1d7925
+  - version: 8.0.1
     artifacts:
     - checksums:
       - sha512:bbe7099071cbf5397940ebc6e66ec05f8023d5e5aae6142870e14b93aa6f8f94c30980ef421e717f0fbfbc23b3520c3ccfe8a939c4caba3ccbf325060e26eb52
@@ -128025,6 +128169,8 @@ packages:
   - version: 0.23.4
     recipe_revision: 4ca55592d3c91df3d3860a22e3d4a612f80e1504
   - version: 0.25.0
+    recipe_revision: 2f2a4a2f0a090d0c8048202d504335c3bf4277f0
+  - version: 0.27.0
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -128032,10 +128178,10 @@ packages:
     - name: tools
       description: Build the open_htj2k_dec and open_htj2k_enc command-line tools
     artifacts:
-    - url: https://github.com/osamu620/OpenHTJ2K/archive/v0.25.0.tar.gz
+    - url: https://github.com/osamu620/OpenHTJ2K/archive/v0.27.0.tar.gz
       checksums:
-      - sha512:68927462c0603809acd5cf35e8efc647fc33cea410aec8079e74a7931a167a7752408a8a5dffb264d461c8020b11283e3a116a889f469044f0bcf2294a4666a4
-    recipe_revision: 2f2a4a2f0a090d0c8048202d504335c3bf4277f0
+      - sha512:b9f43dc9a36e24fd26b4e4200557a45905055859418cfd18e8f950c6fb269265397dff4f6518ac7cd415e04f13b094c00165d699c9503cea0d6f119f66d85fdb
+    recipe_revision: 1760b8487cf8dcba3cbe7624ed3c5ffece4d506d
   recipe_path: ports/openhtj2k/vcpkg.json
 - id: vcpkg:openigtlink
   registry: vcpkg
@@ -132468,6 +132614,34 @@ packages:
   - version: 2.2.9
     recipe_revision: 327083ea56e25eaae20a58af3e6d4d86afa743ec
   recipe_path: ports/outcome/vcpkg.json
+- id: vcpkg:oxygen-icons
+  registry: vcpkg
+  name: oxygen-icons
+  summary: Oxygen icon theme
+  licenses:
+  - LGPL-3.0-or-later AND CC0-1.0
+  homepage: https://invent.kde.org/frameworks/oxygen-icons
+  repository_url: https://github.com/KDE/oxygen-icons
+  platforms:
+  - '!android & !windows'
+  dependencies:
+  - ecm
+  - qtbase
+  - vcpkg-cmake
+  versions:
+  - version: 6.31.0
+    dependencies:
+    - name: ecm
+    - name: qtbase
+    - name: vcpkg-cmake
+    compatibility:
+    - '!android & !windows'
+    artifacts:
+    - url: https://github.com/KDE/oxygen-icons/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:0db56dced7cb47c6f983bd5d97a3610ca54f78679f661f241e9128e3fe159fad8d71d69b4799040a91838ad702541d590ff77ade1e8635d6c81dba576ad2243c
+    recipe_revision: a0a233762fd17ce7f06d1d25767aef5d043213b2
+  recipe_path: ports/oxygen-icons/vcpkg.json
 - id: vcpkg:p-ranav-csv
   registry: vcpkg
   name: p-ranav-csv
@@ -138381,6 +138555,7 @@ packages:
   - zxing
   versions:
   - version: 6.31.0
+    packaging_revision: 1
     dependencies:
     - name: ecm
     - name: libdmtx
@@ -138403,6 +138578,12 @@ packages:
       description: Build the QML module of the scanner
     - name: zxing
       description: PDF417 barcode generation, and the barcode decoding used by the scanner
+    artifacts:
+    - url: https://github.com/KDE/prison/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:ff3ed91426bcfece8e812d988997f3d9020e2988072519f53b7ee2483d2bfc93f6d2e0e7937838f984740e9f67f6ad8a2ff13265e1807184743d68bb1ecdadd1
+    recipe_revision: 7be26375eda22abf0ae1b204c29aba258154392d
+  - version: 6.31.0
     artifacts:
     - url: https://github.com/KDE/prison/archive/v6.31.0.tar.gz
       checksums:
@@ -146582,6 +146763,7 @@ packages:
   - version: 6.11.2
     recipe_revision: afa1f0a738df218e1e206f7de5dce8f2296a68a9
   - version: 6.11.3
+    packaging_revision: 1
     dependencies:
     - name: brotli
     - name: dbus
@@ -146749,6 +146931,8 @@ packages:
       default: enabled
     compatibility:
     - '!uwp'
+    recipe_revision: 3ec12f28ebb2de67ae625b33e06ca97dbafb3327
+  - version: 6.11.3
     recipe_revision: dde91d0dd2ca524a80c3f7f10f9932c26ff437c8
   - version: 6.2.0
     packaging_revision: 2
@@ -148264,6 +148448,10 @@ packages:
     recipe_revision: 4ae7e39857c4652e28924bae5146cd5362936c2f
   - version: 0.17.0
     packaging_revision: 1
+    recipe_revision: 5a2e34fff082fdd11a9603cbb6fb73d25448f645
+  - version: 0.17.0
+    recipe_revision: fad5eb51a1f64b77923dda274d902f172a602855
+  - version: 0.18.0
     dependencies:
     - name: libsecret
     - name: qt5-base
@@ -148275,16 +148463,10 @@ packages:
       description: Build qtkeychain translations
       default: enabled
     artifacts:
-    - url: https://github.com/frankosterfeld/qtkeychain/archive/0.17.0.tar.gz
+    - url: https://github.com/frankosterfeld/qtkeychain/archive/0.18.0.tar.gz
       checksums:
-      - sha512:7a9c6a4f5b19c36283c18b426ee057e08250266411eaa7012af54d2453b9a91edcfba17be2508405fab9b42732bc33202fc708cc59f2ee9e650d978782e49703
-    recipe_revision: 5a2e34fff082fdd11a9603cbb6fb73d25448f645
-  - version: 0.17.0
-    artifacts:
-    - url: https://github.com/frankosterfeld/qtkeychain/archive/0.17.0.tar.gz
-      checksums:
-      - sha512:7a9c6a4f5b19c36283c18b426ee057e08250266411eaa7012af54d2453b9a91edcfba17be2508405fab9b42732bc33202fc708cc59f2ee9e650d978782e49703
-    recipe_revision: fad5eb51a1f64b77923dda274d902f172a602855
+      - sha512:a6372738e857d5f352b2dfca7737789c129b2e5be9dd5636cd913f1a0bee998cdadd6df319697ac0d307182fa17fe0415825e522babb7ef17b141bf047a3c57c
+    recipe_revision: 4c0190c472b03af45138bbe1e234ad4ac219ea75
   - version: v0.9.1
     upstream_version: 0.9.1
     recipe_revision: 891122d489d2a434d81298d41c8a881095fa57bd
@@ -148326,6 +148508,10 @@ packages:
     recipe_revision: 0f1eccb793a59b60f7fea5541a3aea7461a85233
   - version: 0.17.0
     packaging_revision: 1
+    recipe_revision: 272c06cbbe85ef3d3882bab050e8d9c94f3be5e8
+  - version: 0.17.0
+    recipe_revision: e014adef86b9f96158f89385f2c234ba5bd22272
+  - version: 0.18.0
     dependencies:
     - name: libsecret
     - name: qtbase
@@ -148333,16 +148519,10 @@ packages:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/frankosterfeld/qtkeychain/archive/0.17.0.tar.gz
+    - url: https://github.com/frankosterfeld/qtkeychain/archive/0.18.0.tar.gz
       checksums:
-      - sha512:7a9c6a4f5b19c36283c18b426ee057e08250266411eaa7012af54d2453b9a91edcfba17be2508405fab9b42732bc33202fc708cc59f2ee9e650d978782e49703
-    recipe_revision: 272c06cbbe85ef3d3882bab050e8d9c94f3be5e8
-  - version: 0.17.0
-    artifacts:
-    - url: https://github.com/frankosterfeld/qtkeychain/archive/0.17.0.tar.gz
-      checksums:
-      - sha512:7a9c6a4f5b19c36283c18b426ee057e08250266411eaa7012af54d2453b9a91edcfba17be2508405fab9b42732bc33202fc708cc59f2ee9e650d978782e49703
-    recipe_revision: e014adef86b9f96158f89385f2c234ba5bd22272
+      - sha512:a6372738e857d5f352b2dfca7737789c129b2e5be9dd5636cd913f1a0bee998cdadd6df319697ac0d307182fa17fe0415825e522babb7ef17b141bf047a3c57c
+    recipe_revision: 37f0d789d1cdc68fa47bc84f3c52c048d4914416
   recipe_path: ports/qtkeychain-qt6/vcpkg.json
 - id: vcpkg:qtlanguageserver
   registry: vcpkg
@@ -148774,6 +148954,7 @@ packages:
   - version: 6.11.2
     recipe_revision: f27d57989bcc7eb72adaa5cd0cd1749f42d52952
   - version: 6.11.3
+    packaging_revision: 1
     dependencies:
     - name: egl
     - name: ffmpeg
@@ -148802,6 +148983,8 @@ packages:
     - name: widgets
       description: Build Multimedia Widgets
       default: enabled
+    recipe_revision: 5a0e2c7c94ba0c99c1067d5ba0c1ab769c89002e
+  - version: 6.11.3
     recipe_revision: f2b179508e6c23e08e1fb78fcdcc0c9c72ab4424
   - version: 6.2.0
     packaging_revision: 1
@@ -152585,6 +152768,38 @@ packages:
   - version: '2021-11-02'
     recipe_revision: 78edaab693f001b38b155c3ef35a85036fd938ae
   recipe_path: ports/range-v3/vcpkg.json
+- id: vcpkg:rapidai-rapidocronnx
+  registry: vcpkg
+  name: rapidai-rapidocronnx
+  summary: OCR library running PaddleOCR detection, classification and recognition models with ONNX Runtime
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/RapidAI/RapidOcrOnnx
+  repository_url: https://github.com/RapidAI/RapidOcrOnnx
+  platforms:
+  - '!uwp & !xbox'
+  dependencies:
+  - onnxruntime
+  - opencv4
+  - polyclipping
+  - vcpkg-cmake
+  - vcpkg-cmake-config
+  versions:
+  - version: '2026-10-04'
+    dependencies:
+    - name: onnxruntime
+    - name: opencv4
+    - name: polyclipping
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    compatibility:
+    - '!uwp & !xbox'
+    artifacts:
+    - url: https://github.com/RapidAI/RapidOcrOnnx/archive/675e73fe4c8b9e1d0be558bb5959a1b37696ed90.tar.gz
+      checksums:
+      - sha512:b126aa3906c05a14eec596a543893554f241356bf426e864e320944fd5526f5d21677ca91f6115065e6ed6116b30516ecc02e20888747c51e5b5cffb54cedb67
+    recipe_revision: acd8770234fba20dea2b22a89ec36e661d4027ba
+  recipe_path: ports/rapidai-rapidocronnx/vcpkg.json
 - id: vcpkg:rapidcheck
   registry: vcpkg
   name: rapidcheck
@@ -155965,7 +156180,7 @@ packages:
   name: rocksdb
   summary: A library that provides an embeddable, persistent key-value store for fast storage
   licenses:
-  - (GPL-2.0-only OR Apache-2.0) AND BSD-3-Clause
+  - (GPL-2.0-only OR Apache-2.0) AND BSD-3-Clause AND BSD-2-Clause
   homepage: https://github.com/meta/rocksdb
   repository_url: https://github.com/meta/rocksdb
   platforms:
@@ -156016,6 +156231,8 @@ packages:
   - version: 11.1.2
     recipe_revision: 0f521bb354b45a386750c959dd1facf21d9b7619
   - version: '11.12'
+    recipe_revision: 545f4f16ae9aed4db9488e59c2e24a81801fa4c4
+  - version: 11.13.2
     dependencies:
     - name: bzip2
     - name: liburing
@@ -156045,10 +156262,10 @@ packages:
     compatibility:
     - '!uwp & !(arm & !arm64 & android)'
     artifacts:
-    - url: https://github.com/meta/rocksdb/archive/v11.12.tar.gz
+    - url: https://github.com/meta/rocksdb/archive/v11.13.2.tar.gz
       checksums:
-      - sha512:94658fea825a5cbe95ab9bf6ff6945a0f57353f3ce69ac77f045e737a53860c9ba380c25954af312cf9783275bd016fdb6ee7a56a10a2d634f50477029cc7f4d
-    recipe_revision: 545f4f16ae9aed4db9488e59c2e24a81801fa4c4
+      - sha512:5293a41d9d3a05b58306899c1c2cf36d4c7562d956fb12b4357c2559d944ecda052cd7eb22f8da5b100130198d3febcd4b62c035928b90cc1c35ae84ef348e12
+    recipe_revision: ab1fff8ad5cdf1cf110553a8b12068b24c3c4370
   - version: 11.8.1
     recipe_revision: 3a9fa2b5a8a64af04487a9ee8235ff389b17c12d
   - version: 2017-06-28-18c63af6ef2b9f014c404b88488ae52e6fead03c
@@ -157214,7 +157431,7 @@ packages:
   summary: Ruckig generates trajectories on-the-fly, allowing robots and machines to react instantaneously to sensor input.
   licenses:
   - MIT
-  homepage: https://ruckig.com/
+  homepage: https://ruckig.com
   repository_url: https://github.com/pantor/ruckig
   dependencies:
   - cpp-httplib
@@ -157232,6 +157449,8 @@ packages:
   - version: 0.15.3
     recipe_revision: 634f7ae551de76541aa80a69eb408245c8a86ca3
   - version: 0.17.3
+    recipe_revision: b057b43abeb8d1ab3e5dbb1cad4312bc94c09fb5
+  - version: 0.19.4
     dependencies:
     - name: cpp-httplib
     - name: eigen3
@@ -157243,10 +157462,13 @@ packages:
       description: Build cloud client to calculate Ruckig Pro trajectories remotely
       default: enabled
     artifacts:
-    - url: https://github.com/pantor/ruckig/archive/v0.17.3.tar.gz
+    - url: https://github.com/pantor/ruckig/archive/v0.19.4.tar.gz
       checksums:
-      - sha512:357b78a39b0ed0dde959aa7629af036d66e77ba3c0c4d0edb1f8fe3a6de4afca91bd4aecd316edd26d8b35a00e739f395850671374cd0f46743d4fe9a088f14b
-    recipe_revision: b057b43abeb8d1ab3e5dbb1cad4312bc94c09fb5
+      - sha512:f6008fa5d883d25841fd0264c58100775804388cecb4cf7706277c99d00e95b189c62e45c538595f525981ec95c99ccdf33d5a0bda2722a85832875e19b52952
+    - url: https://github.com/pantor/ruckig/pull/3
+      checksums:
+      - sha512:f6008fa5d883d25841fd0264c58100775804388cecb4cf7706277c99d00e95b189c62e45c538595f525981ec95c99ccdf33d5a0bda2722a85832875e19b52952
+    recipe_revision: 507967a83bce0bfb75fd269c42314ca3a28af456
   recipe_path: ports/ruckig/vcpkg.json
 - id: vcpkg:rxcpp
   registry: vcpkg
@@ -161298,7 +161520,7 @@ packages:
   - zlib
   versions:
   - version: 1.3.10
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: apr
     - name: apr-util
@@ -161306,6 +161528,13 @@ packages:
     - name: zlib
     compatibility:
     - '!uwp & !staticcrt & !arm'
+    artifacts:
+    - url: https://dlcdn.apache.org/serf/serf-1.3.10.tar.bz2
+      checksums:
+      - sha512:19165274d35c694935cda33f99ef92a7663a5d9c540fb7fd6792aa0efe39941b2fa87ff8b61afd060c6676baec634fd33dc2e9d34ecbee45ed99dfaed077802c
+    recipe_revision: 2149bb00f7af120c154d24c53a131704c9c15aa9
+  - version: 1.3.10
+    packaging_revision: 2
     artifacts:
     - url: https://dlcdn.apache.org/serf/serf-1.3.10.tar.bz2
       checksums:
@@ -161774,15 +162003,17 @@ packages:
   - version: '2026.20'
     recipe_revision: fdfc89341fa0df21bb69dccec63096dc123b544b
   - version: '2026.21'
+    recipe_revision: 1f5d13de8c3b2e19600161b724ce010ea9596f85
+  - version: '2026.22'
     dependencies:
     - name: vcpkg-cmake-config
     compatibility:
     - (arm64 | x64) & (linux | osx | windows) & !uwp & !(static & staticcrt)
     artifacts:
-    - url: https://github.com/shader-slang/slang/releases/download/v2026.21/slang-2026.21-windows-x86_64.zip
+    - url: https://github.com/shader-slang/slang/releases/download/v2026.22/slang-2026.22-windows-x86_64.zip
       checksums:
-      - sha512:7004f40dfa6474647a2cc17ac5c25ba7871634c2d2761dfab0efb64d5862da61c2df7e857d1c378e2528b40fc7bbcacf9613b31e642582c2c11f068dbcb0b370
-    recipe_revision: 1f5d13de8c3b2e19600161b724ce010ea9596f85
+      - sha512:cac45e9f659ae31cd9a4dbdd3be5c062bf97c1e354fb99212742c3e77866bc519326e63b392a067d74829d3faaabc28271efe615129e5acf8386edd863ba363e
+    recipe_revision: dc87307b672117d956f0d00db7430f30b3db27c4
   - version: '2026.5'
     recipe_revision: 75e9a3385f1047740dad18a1a2efe1d2c15301ea
   - version: 2026.7.1
@@ -163884,7 +164115,7 @@ packages:
 - id: vcpkg:slick-queue
   registry: vcpkg
   name: slick-queue
-  summary: A C++ Lock-Free MPMC queue - header-only library for high throughput concurrent messaging with optional shared memory support
+  summary: A C++ Lock-Free MPMC and SPSC queue - header-only library for high throughput concurrent messaging with optional shared memory support
   licenses:
   - MIT
   homepage: https://github.com/SlickQuant/slick-queue
@@ -163919,6 +164150,8 @@ packages:
   - version: 2.1.0
     recipe_revision: e0c7c3bdce9416902a8a8bf7e8ab201e37b556e7
   - version: 2.3.0
+    recipe_revision: 581c2984a4d97dea418f0fb32d0b34137e1099e4
+  - version: 2.4.0
     dependencies:
     - name: slick-shm
     - name: vcpkg-cmake
@@ -163926,10 +164159,10 @@ packages:
     compatibility:
     - '!uwp'
     artifacts:
-    - url: https://github.com/SlickQuant/slick-queue/archive/v2.3.0.tar.gz
+    - url: https://github.com/SlickQuant/slick-queue/archive/v2.4.0.tar.gz
       checksums:
-      - sha512:427865965798e8d02047f8cc3cda29b7b384e0cc6cebe5d5cd77faca290d6380d494a48dc354740804d53c94227938af684b26b2a3f64f91a288a0be41849b09
-    recipe_revision: 581c2984a4d97dea418f0fb32d0b34137e1099e4
+      - sha512:a56ab94dac8d0c26e8fd014f42cf6a91f231476811d4c748bf4f2b964e696ca2b0c24f9e08aac00b36107c643ddcc1a5fee56971ef0dac9efd6d005fee0c91c0
+    recipe_revision: f0d15daf7533720fbc178efe87583420bef6d45e
   recipe_path: ports/slick-queue/vcpkg.json
 - id: vcpkg:slick-shm
   registry: vcpkg
@@ -163989,6 +164222,8 @@ packages:
   - version: 1.2.0
     recipe_revision: b44fafe034907a4d1be397c37f0bb5e4c2f8fd7d
   - version: 1.3.0
+    recipe_revision: 8a1be563e1482f20105556f4f744f2fa1fa3e365
+  - version: 1.4.0
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
@@ -163996,10 +164231,10 @@ packages:
     compatibility:
     - windows | linux | osx
     artifacts:
-    - url: https://github.com/SlickQuant/slick-socket/archive/v1.3.0.tar.gz
+    - url: https://github.com/SlickQuant/slick-socket/archive/v1.4.0.tar.gz
       checksums:
-      - sha512:2f9aeec062e3b15c57f25116d6f00e81faac4a4240d897ac275c2bfae06c1e7e23d28d4b4f0998ef770b54a10d041e43a30c101280c6797aa4f3e12bf649d664
-    recipe_revision: 8a1be563e1482f20105556f4f744f2fa1fa3e365
+      - sha512:42f9848c6487957a9c24bb89259a9ca7e67bde1fe89c6a7ada32e03f23c6de378a35ede3917e9719564b5baa8b8f6fc26056f9768ec67d5773df6d4648b3ab19
+    recipe_revision: 9965fbebc3bc70578a76ea4939c66512520ca512
   recipe_path: ports/slick-socket/vcpkg.json
 - id: vcpkg:slick-stream-buffer
   registry: vcpkg
@@ -165332,7 +165567,7 @@ packages:
     hunspell: enabled
   versions:
   - version: 6.31.0
-    packaging_revision: 1
+    packaging_revision: 2
     dependencies:
     - name: ecm
     - name: hunspell
@@ -165352,6 +165587,13 @@ packages:
       description: Build the QML module
     - name: translations
       description: Build and install translation files
+    artifacts:
+    - url: https://github.com/KDE/sonnet/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:2d06bc82d692741ef8438303309616fb9c9fbd5a86ed453d52b1e04ec7c73f43edae76c679002c0af05bd46266be68b0fd81c7acdef24dd5eb720c548d1a8ca6
+    recipe_revision: 56c13c140a78aa448b785a3e9e556976869aab50
+  - version: 6.31.0
+    packaging_revision: 1
     artifacts:
     - url: https://github.com/KDE/sonnet/archive/v6.31.0.tar.gz
       checksums:
@@ -170889,10 +171131,12 @@ packages:
   dependencies:
   - ecm
   - qtbase
+  - qtdeclarative
   - qttools
   - vcpkg-cmake
   - vcpkg-cmake-config
   options:
+  - qml
   - translations
   versions:
   - version: 6.25.0
@@ -170908,18 +171152,28 @@ packages:
   - version: 6.30.0
     recipe_revision: f0864807dbf6c581db24acfcae889e187ebc1baa
   - version: 6.31.0
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: ecm
     - name: qtbase
+    - name: qtdeclarative
     - name: qttools
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     features:
+    - name: qml
+      description: Build the QML module
     - name: translations
       description: Build and install translation files
     compatibility:
     - '!android & !(windows & arm64)'
+    artifacts:
+    - url: https://github.com/KDE/syntax-highlighting/archive/v6.31.0.tar.gz
+      checksums:
+      - sha512:e64a1140239496dc8680fa01e6e61ca4f3aa33db0cb75ee3fdec4fb48cb64e1885779c2625cf6875828640d675a4a44d51689b2a8f68e13f651bbd79927b22d5
+    recipe_revision: 9936913644e1edcee85a236fc26a64311fe4baf4
+  - version: 6.31.0
+    packaging_revision: 2
     artifacts:
     - url: https://github.com/KDE/syntax-highlighting/archive/v6.31.0.tar.gz
       checksums:
@@ -171086,6 +171340,8 @@ packages:
   - vcpkg-cmake-config
   versions:
   - version: 1.1.0
+    recipe_revision: 25fb348381afcf146107d3b4481f7c7549fbabff
+  - version: 1.2.1
     dependencies:
     - name: boost-algorithm
     - name: boost-asio
@@ -171103,10 +171359,10 @@ packages:
     compatibility:
     - '!emscripten'
     artifacts:
-    - url: https://github.com/rjahanbakhshi/boost.taar/archive/v1.1.0.tar.gz
+    - url: https://github.com/rjahanbakhshi/boost.taar/archive/v1.2.1.tar.gz
       checksums:
-      - sha512:2a9719736b67dc561c92ad165f645d5b1bcedd4f715fed07d631b61680fed6f67cd0823e6e10370e4a38f2cda2a11caa98dcfe46518318554da24043eec7639f
-    recipe_revision: 25fb348381afcf146107d3b4481f7c7549fbabff
+      - sha512:b512e0f3c11e95ea6e0d9aa197ef2d380ba51fe2ea4a712bad18e0c5740c9470f6038a0bfcf695f137aa82e181c6479c30388056c8dfc740fee7f02542cfdd75
+    recipe_revision: a223d70b328d28bfdd7aed189e19058ecfe510d8
   recipe_path: ports/taar/vcpkg.json
 - id: vcpkg:tabulate
   registry: vcpkg
@@ -171683,7 +171939,7 @@ packages:
   - version: 8.6.5
     recipe_revision: 7d0a483ed75781d1e21412e915556bdfabc54c94
   - version: 9.0.3
-    packaging_revision: 2
+    packaging_revision: 3
     dependencies:
     - name: libtommath
     - name: minizip
@@ -171698,6 +171954,13 @@ packages:
       description: Use the thread allocator (shared global free pool).
     - name: time64bit
       description: Force 64-bit time_t.
+    artifacts:
+    - url: https://sourceforge.net/projects/tcl/files/Tcl/9.0.3/tcl9.0.3-src.tar.gz/download
+      checksums:
+      - sha512:a899333fd96f139d92ad74ee42cc402428677ab2cab8ed3eb1e6e7cb35c7ca7d39aac89b7755b2fb1786512c857c79486d71f49a7821470f669fb9e544dba532
+    recipe_revision: 3a7f535141528cab2aecbadd122fa7af3442baf1
+  - version: 9.0.3
+    packaging_revision: 2
     artifacts:
     - url: https://sourceforge.net/projects/tcl/files/Tcl/9.0.3/tcl9.0.3-src.tar.gz/download
       checksums:
@@ -171833,6 +172096,8 @@ packages:
   - version: 1.8.68
     recipe_revision: 1b9250d5c2015fa5dd86ad162e6e2174d4402599
   - version: 1.8.69
+    recipe_revision: 0f0e65170d02f941409fb5c990238c5f58e53c6b
+  - version: 1.8.70
     dependencies:
     - name: gperf
     - name: openssl
@@ -171844,10 +172109,10 @@ packages:
     - name: tools
       description: Install source-generator executables (tl-parser, generate_mtproto, etc.) required for cross-compilation
     artifacts:
-    - url: https://github.com/tdlib/td/archive/0e88653dcbf4e44c73cb655a05b58cd749a91169.tar.gz
+    - url: https://github.com/tdlib/td/archive/23383aef218a3123f02b744bfa91bde21056a814.tar.gz
       checksums:
-      - sha512:ec5a675e942468a0cf165867efe127e8487f46882c82354a83757964fa28193827890977ce8a82ca23742bd179065f781da7ba328c7ea2e5191d7104968bd1e8
-    recipe_revision: 0f0e65170d02f941409fb5c990238c5f58e53c6b
+      - sha512:3e1b73d9ead53868905d33fc3739a94885dd7a3c24df169a3d93f49a114642a0458db2e651894786b21b3566641c08a6574ad923709482549c1b7680b8d02902
+    recipe_revision: 20a4feda1ed21617603ac46cc275f7ba923c0100
   recipe_path: ports/tdlib/vcpkg.json
 - id: vcpkg:tdscpp
   registry: vcpkg
@@ -175048,14 +175313,16 @@ packages:
   - version: 1.0.0
     recipe_revision: ca6ebeda0ee3996867907f8948cb722480696a04
   - version: 1.0.1
+    recipe_revision: 2c09eb0b6940aab4fc613778fe49ac639a428194
+  - version: 1.0.2
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/tomwillow/tomsolver/archive/1.0.1.tar.gz
+    - url: https://github.com/tomwillow/tomsolver/archive/1.0.2.tar.gz
       checksums:
-      - sha512:00e1b961b1e6730bf74209622a44f932b5221c15995c53bcea9de5b84ba7d75549c095658bcb5729d4a38bf60104b5c5a8fa97015f13977341fcdd62643f35c2
-    recipe_revision: 2c09eb0b6940aab4fc613778fe49ac639a428194
+      - sha512:18a58288c313f2abb8f356ef3868fa7d1eb9e06df4096108ca08aae06ebebfd618b6b6b5e3e629432082d9267224f772af38641a26960154503554317e6e818e
+    recipe_revision: 832837f9b428222f4178cb4a5ea480046695bc65
   recipe_path: ports/tomsolver/vcpkg.json
 - id: vcpkg:toomanycooks
   registry: vcpkg
@@ -175155,7 +175422,7 @@ packages:
   name: tracy
   summary: A real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.
   licenses:
-  - BSD-3-Clause
+  - BSD-3-Clause AND BSD-2-Clause AND MIT
   homepage: https://github.com/wolfpld/tracy
   repository_url: https://github.com/wolfpld/tracy
   platforms:
@@ -175213,6 +175480,10 @@ packages:
     recipe_revision: b32705c81bb91643cf374d4e676e669f8fbc444c
   - version: 0.14.1
     packaging_revision: 1
+    recipe_revision: 8cbe9bf2ca2077f3b157a8841087605f204f8d97
+  - version: 0.14.1
+    recipe_revision: 8db33cade2a5672f5d94942c02a01753798f5fbf
+  - version: 0.15.0
     dependencies:
     - name: aklomp-base64
     - name: capstone
@@ -175248,16 +175519,10 @@ packages:
     compatibility:
     - '!(windows & (arm | uwp))'
     artifacts:
-    - url: https://github.com/wolfpld/tracy/archive/v0.14.1.tar.gz
+    - url: https://github.com/wolfpld/tracy/archive/v0.15.0.tar.gz
       checksums:
-      - sha512:53912d7563e595812b37bc55fd40508cfd8e5c42d48d957a73b6b7d18bf1287b3f795c10c9a986bf7b906d5b5bebe13b02216e563e794d0a82b2783e8ce5510b
-    recipe_revision: 8cbe9bf2ca2077f3b157a8841087605f204f8d97
-  - version: 0.14.1
-    artifacts:
-    - url: https://github.com/wolfpld/tracy/archive/v0.14.1.tar.gz
-      checksums:
-      - sha512:53912d7563e595812b37bc55fd40508cfd8e5c42d48d957a73b6b7d18bf1287b3f795c10c9a986bf7b906d5b5bebe13b02216e563e794d0a82b2783e8ce5510b
-    recipe_revision: 8db33cade2a5672f5d94942c02a01753798f5fbf
+      - sha512:a274fbb62ec25ab9b6025eeeb6e0458ba282fe61509dcd0daf824bdbcf3215c25eb992271d33cc88544068f83e00d791833e980eed7c8f4a1cd3ef71841cf38e
+    recipe_revision: a39e86c040ab7912b86f448966e2bcd83c3d6292
   - version: 0.7.8
     packaging_revision: 2
     recipe_revision: 4495b1e35b5ce98b10a2a6f28eebdda0088903e2
@@ -175566,14 +175831,16 @@ packages:
   - version: 0.26.9
     recipe_revision: 8f46c97705b02513ddb68a254918735406748d72
   - version: 0.27.1
+    recipe_revision: ff4cfc7abb513eb3af2896a225c4228922c3ea4a
+  - version: 0.27.2
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/tree-sitter/tree-sitter/archive/v0.27.1.tar.gz
+    - url: https://github.com/tree-sitter/tree-sitter/archive/v0.27.2.tar.gz
       checksums:
-      - sha512:e88861271bcd504f79636811c43c0de94483071f1c6f0f57cc590a2e10f921ca24b87ec631bee4d94d1f124a03a4b74f93c4e5fb8653f62bf484517753882cef
-    recipe_revision: ff4cfc7abb513eb3af2896a225c4228922c3ea4a
+      - sha512:6df0885813d9f3e7d1e71703dec2eb223c15eb4ec360e9d8eb1458dc12d0ba582db8d164fb39d1bcadbe6c8d38ce3bb26895208afe6affe6d697640831ace333
+    recipe_revision: 62a96e30e0838e2833a141c10dceb761a2d13593
   recipe_path: ports/tree-sitter/vcpkg.json
 - id: vcpkg:tree-sitter-c
   registry: vcpkg
@@ -178538,14 +178805,16 @@ packages:
   - version: 1.1.2
     recipe_revision: dc6b03bab086d6c53eb43c185f8579587feb47ac
   - version: 1.1.3
+    recipe_revision: e8d0d9f7a98c58cfa0fd00c6bb4091e0701d0376
+  - version: 1.1.4
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/tristanpenman/valijson/archive/v1.1.3.tar.gz
+    - url: https://github.com/tristanpenman/valijson/archive/v1.1.4.tar.gz
       checksums:
-      - sha512:bca797e9198a230476788b008c759115ce36f7a5301d8d87afd7160f6207c9a2dbd769f60ad9baaf87983ee08f772a16d01fee1944e053a602b716907e7a7d7b
-    recipe_revision: e8d0d9f7a98c58cfa0fd00c6bb4091e0701d0376
+      - sha512:fa58f4325bebd93c5fdaa9144fe5bc2ec91c5f4f6d6a42f61da8b06190a9c8b0a1c36ba198fd13a773cd93f7fff0c99386f235f3ddb559879e1f03f00435af2a
+    recipe_revision: dcf927009784b498e396f6b1b1be11ff5a6c6e97
   - version: '2018-11-17'
     packaging_revision: 2
     recipe_revision: c40f3039f56bbe5301d45b0bf0430b4852907608
@@ -179419,10 +179688,17 @@ packages:
   - version: '0.63'
     recipe_revision: bee0cb6c5edf45133ebc9643b86c9c775ab36cfe
   - version: 1.12.1
+    packaging_revision: 1
     dependencies:
     - name: vcpkg-cmake-get-vars
     compatibility:
     - native
+    artifacts:
+    - url: https://raw.githubusercontent.com/mesonbuild/meson/70598bb7825f0f804fb31ec2795de5e79e7692a0/COPYING
+      checksums:
+      - sha512:98f6b79b778f7b0a15415bd750c3a8a097d650511cb4ec8115188e115c47053fe700f578895c097051c9bc3dfb6197c2b13a15de203273e1a3218884f86e90e8
+    recipe_revision: 34011b4de78c914a8aac081326ff24ba070c2023
+  - version: 1.12.1
     artifacts:
     - url: https://raw.githubusercontent.com/mesonbuild/meson/70598bb7825f0f804fb31ec2795de5e79e7692a0/COPYING
       checksums:
@@ -179686,6 +179962,12 @@ packages:
   versions:
   - version: 5.4.12
     packaging_revision: 1
+    recipe_revision: f4646a6fc92549991bf0d88e997c9aca440c28cd
+  - version: 5.4.12
+    recipe_revision: 270483f40e6971ca7272a14bf14715ae671f91e6
+  - version: 5.4.13
+    recipe_revision: e7172397e9d67f772ca2063830762d8cb2d157bb
+  - version: 5.4.14
     dependencies:
     - name: boost-array
     - name: boost-chrono
@@ -179718,16 +180000,10 @@ packages:
     compatibility:
     - '!windows & !(x64 | x86) & !android'
     artifacts:
-    - url: https://github.com/VectorCamp/vectorscan/archive/vectorscan/5.4.12.tar.gz
+    - url: https://github.com/VectorCamp/vectorscan/archive/vectorscan/5.4.14.tar.gz
       checksums:
-      - sha512:b9e750cb53a109ebed6e472cccbd280434c4a8e6a9217acfd30c10cc88381712de2444d31794a1f0bebc0b5ca0def21c031234bc1706f4029d51d2830f0cb5ac
-    recipe_revision: f4646a6fc92549991bf0d88e997c9aca440c28cd
-  - version: 5.4.12
-    artifacts:
-    - url: https://github.com/VectorCamp/vectorscan/archive/vectorscan/5.4.12.tar.gz
-      checksums:
-      - sha512:b9e750cb53a109ebed6e472cccbd280434c4a8e6a9217acfd30c10cc88381712de2444d31794a1f0bebc0b5ca0def21c031234bc1706f4029d51d2830f0cb5ac
-    recipe_revision: 270483f40e6971ca7272a14bf14715ae671f91e6
+      - sha512:32938f0350c253ea786457747586d054e1a1f0eb45e57013903e69d4e43786ffa1eb04d69e4b98e9df43cfc182705d5f9b10cc123b8483d75aa75f10bcbe2b2b
+    recipe_revision: b6c08f17fcf94cd2b1315eeb17cac80e42b0d659
   recipe_path: ports/vectorscan/vcpkg.json
 - id: vcpkg:veigar
   registry: vcpkg
@@ -183164,6 +183440,10 @@ packages:
     recipe_revision: 5fa30fbeedf5ef0d7e469980095b23aa09cffb08
   - version: '1.49'
     packaging_revision: 1
+    recipe_revision: fabaa2e27657428307b19e6c725b70437d7e8f06
+  - version: '1.49'
+    recipe_revision: 2b65ca5bb85a8eed3faa7bfa6041edc9cab70439
+  - version: '1.50'
     dependencies:
     - name: vcpkg-tool-meson
     - name: wayland
@@ -183176,14 +183456,8 @@ packages:
     artifacts:
     - url: https://gitlab.freedesktop.org
       checksums:
-      - sha512:f1095a667305dce9490b7fc2dddd263e50d90f505c7b2a281ff3a9f77f211589ec45c5124c07805f9d577484c80bf13f71b2dff6e0ae677fbb1bffdde60aec48
-    recipe_revision: fabaa2e27657428307b19e6c725b70437d7e8f06
-  - version: '1.49'
-    artifacts:
-    - url: https://gitlab.freedesktop.org
-      checksums:
-      - sha512:f1095a667305dce9490b7fc2dddd263e50d90f505c7b2a281ff3a9f77f211589ec45c5124c07805f9d577484c80bf13f71b2dff6e0ae677fbb1bffdde60aec48
-    recipe_revision: 2b65ca5bb85a8eed3faa7bfa6041edc9cab70439
+      - sha512:fa26b76b3e75bb52d56d924e66bf1d684bc6704b1b08b2801a0f9f376995e358f08f1bfaeaa9095c4a6e91c085ea87536beae9cfd43e350f60891601cb2a9d98
+    recipe_revision: 2e39e998f63feeefb52d656d46f584a25088432b
   recipe_path: ports/wayland-protocols/vcpkg.json
 - id: vcpkg:wcslib
   registry: vcpkg
@@ -185791,16 +186065,18 @@ packages:
   - vcpkg-cmake-config
   versions:
   - version: 2.1.0
+    recipe_revision: 085ae97be19e38126cce5f1ba298243189ec3f4f
+  - version: 2.2.0
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     compatibility:
     - '!mingw'
     artifacts:
-    - url: https://github.com/auto-differentiation/xad/archive/v2.1.0.tar.gz
+    - url: https://github.com/auto-differentiation/xad/archive/v2.2.0.tar.gz
       checksums:
-      - sha512:e2e3a847d975dc9fcbd7be8277e93fb417d263aec566f2e46a809135460860caba966980823afb66d764bb0b2eb4d8d24765a8aadadb730aeb743a36b399fbde
-    recipe_revision: 085ae97be19e38126cce5f1ba298243189ec3f4f
+      - sha512:c1da2a795f7eb9b690b2b3bda072b7231b8672b8eec489a31324c42796d36cae791cb34a8119d1ca9d3b42cef6036b7c198538c9b3a80232f6eca1356abf1ce5
+    recipe_revision: 8e7fe39304fbd03851edc8b2c6d636fbc6f5860e
   recipe_path: ports/xad/vcpkg.json
 - id: vcpkg:xapian
   registry: vcpkg
@@ -186887,11 +187163,13 @@ packages:
   - version: '2021-10-23'
     recipe_revision: 37ea1ae54d689346b2edbf358f950e1939a9c66d
   - version: '2021-11-20'
-    artifacts:
-    - url: https://github.com/JustasMasiulis/xorstr/archive/066c64eea5104f4e3cfbc49e39031400e086425a.tar.gz
-      checksums:
-      - sha512:b28895c3d51089820ef9bf2dd80b1af5eda2f8463c8374d39bc3b54c4928ecd787977cfd4e207f56cd58e3ec0360e428a52c4b813a8f380258cf29914e32ff50
     recipe_revision: a74d9d1380133abaf94355f2ee2a3eb1d7a29569
+  - version: '2026-11-08'
+    artifacts:
+    - url: https://github.com/JustasMasiulis/xorstr/archive/7cd289998f4da2c8bc2362befb3090b851f2490a.tar.gz
+      checksums:
+      - sha512:a0016fa1f1d6306826afa1e5ef68dd59e2b65239592a5869e0f9a28e3e78d45d89241896cd48071236d4555cd2fe2c95ec8f4943047beef0a9d3002b4e59601f
+    recipe_revision: bf84fff709d3d29edcc3cf1fb8482b9f22e0ef5b
   recipe_path: ports/xorstr/vcpkg.json
 - id: vcpkg:xpack
   registry: vcpkg
@@ -187178,6 +187456,8 @@ packages:
   - version: 0.27.0
     recipe_revision: 43291e36aaad6a1ec14605cbb7eb6059f3c4ccec
   - version: 0.27.1
+    recipe_revision: b780dfb77f45d45a844650e567178fb1229055c6
+  - version: 0.27.2
     dependencies:
     - name: nlohmann-json
     - name: tbb
@@ -187191,10 +187471,10 @@ packages:
     - name: xsimd
       description: xtensor with xsimd support
     artifacts:
-    - url: https://github.com/xtensor-stack/xtensor/archive/0.27.1.tar.gz
+    - url: https://github.com/xtensor-stack/xtensor/archive/0.27.2.tar.gz
       checksums:
-      - sha512:3f3fe2391df91518cfef4983ff66bf3b79940136582bb99c6270f87481bf9d2cc15605b13f9b70b6ee9a7a89b389037dd2b26362fcae0fdc49f5204872ee5291
-    recipe_revision: b780dfb77f45d45a844650e567178fb1229055c6
+      - sha512:8671859e831c4eab9aff91273fb71deca1380f4e4cb64ce69aa8937464166906f259d3cd27aa5ddd969d7ced136f3306b6ce7daf8d09486bf0d45f299e8a7061
+    recipe_revision: 0c0b2281bb524c8c069372c3f6789cbff7c3ee2a
   - version: '2019-01-20'
     recipe_revision: be639cb43ae34308a3970da60d73c856d8e3708e
   recipe_path: ports/xtensor/vcpkg.json
@@ -189027,34 +189307,24 @@ packages:
     recipe_revision: 3f05e04b9aededb96786a911a16193cdb711f0c9
   - version: 1.3.2
     packaging_revision: 3
+    recipe_revision: ee4b8b348dabe4261e6bfbe2dc537fa49ca5e613
+  - version: 1.3.2
+    packaging_revision: 2
+    recipe_revision: f4f43a5a505cda1a0d1ff056be1fdba9e566242e
+  - version: 1.3.2
+    packaging_revision: 1
+    recipe_revision: f49b05c666425471a7f6dc8b6156e9b3675a3c90
+  - version: 1.3.2
+    recipe_revision: e2a9ce8cf8f5d07e489e14c256eefdd58cd535c1
+  - version: '1.4'
     dependencies:
     - name: vcpkg-cmake
     - name: vcpkg-cmake-config
     artifacts:
-    - url: https://github.com/madler/zlib/archive/v1.3.2.tar.gz
+    - url: https://github.com/madler/zlib/archive/v1.4.tar.gz
       checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    recipe_revision: ee4b8b348dabe4261e6bfbe2dc537fa49ca5e613
-  - version: 1.3.2
-    packaging_revision: 2
-    artifacts:
-    - url: https://github.com/madler/zlib/archive/v1.3.2.tar.gz
-      checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    recipe_revision: f4f43a5a505cda1a0d1ff056be1fdba9e566242e
-  - version: 1.3.2
-    packaging_revision: 1
-    artifacts:
-    - url: https://github.com/madler/zlib/archive/v1.3.2.tar.gz
-      checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    recipe_revision: f49b05c666425471a7f6dc8b6156e9b3675a3c90
-  - version: 1.3.2
-    artifacts:
-    - url: https://github.com/madler/zlib/archive/v1.3.2.tar.gz
-      checksums:
-      - sha512:16fea4df307a68cf0035858abe2fd550250618a97590e202037acd18a666f57afc10f8836cbbd472d54a0e76539d0e558cb26f059d53de52ff90634bbf4f47d4
-    recipe_revision: e2a9ce8cf8f5d07e489e14c256eefdd58cd535c1
+      - sha512:67f3ce120210a69aa05cece6f76d5f45b50d947c095169f0d699732d0182d7d04aec1af56a3fc6bbcc2af91a57e099cd73980b17f7d96ad90aeabbeaafbf1cbc
+    recipe_revision: 318707972085eef7ea54f533c69040b05e3bf6b6
   recipe_path: ports/zlib/vcpkg.json
 - id: vcpkg:zlib-ng
   registry: vcpkg
@@ -189807,7 +190077,7 @@ packages:
   name: zxc
   summary: High-performance asymmetric lossless compression library
   licenses:
-  - BSD-3-Clause AND MIT
+  - BSD-3-Clause
   homepage: https://github.com/hellobertrand/zxc
   repository_url: https://github.com/hellobertrand/zxc
   dependencies:
@@ -189836,17 +190106,6 @@ packages:
   - version: 0.14.1
     recipe_revision: a0a38c5cbf9c53563c229aebd91f6bf20f2fabb9
   - version: 0.15.0
-    dependencies:
-    - name: rapidhash
-    - name: vcpkg-cmake
-    - name: vcpkg-cmake-config
-    features:
-    - name: util
-      description: Build the command-line interface
-    artifacts:
-    - url: https://github.com/hellobertrand/zxc/archive/v0.15.0.tar.gz
-      checksums:
-      - sha512:b674a8602c9fe26f279d913adf75b8c6d936727324a68c3e5f8a70f8cf8b499dc6c4182f324c9bb104af8c10349a74a6be3783f9a792eb75dfdcc5b857645608
     recipe_revision: c108e69069d0ced7fabff99b86164dfebc08485b
   - version: 0.7.3
     recipe_revision: a099a90d13c01059b3ad62b6e2df180a2320091f
@@ -189861,6 +190120,19 @@ packages:
     recipe_revision: 0b84dd5ccc4769de5eec8b4be5c5329a1e95a1bb
   - version: 0.9.1
     recipe_revision: 85a7f307fc667ef2e3729ea0baaf4c72f6f0cc5a
+  - version: 1.0.0
+    dependencies:
+    - name: rapidhash
+    - name: vcpkg-cmake
+    - name: vcpkg-cmake-config
+    features:
+    - name: util
+      description: Build the command-line interface
+    artifacts:
+    - url: https://github.com/hellobertrand/zxc/archive/v1.0.0.tar.gz
+      checksums:
+      - sha512:1a2f9fc240e6d16eb4eb9480704b01da28af83403901ae2412458a7fcd052fe1348de2f90de3e2c0d446cf4908c3bdfb80ac4fe82aae953ef371b98629792842
+    recipe_revision: c73df366daf2d1c2d579730966eb0b403cbd9418
   recipe_path: ports/zxc/vcpkg.json
 - id: vcpkg:zycore
   registry: vcpkg

@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: cppget
 repository: https://pkg.cppget.org/1/
-revision: 17a3f834a774f4039130c4b54d9186e36c044e5d42edb586c2372b2dd43261c1
+revision: fb6737f069ecc78cca2ba078f9b0ec4158554bb5dd7929c1f88fdea3559e89db
 packages:
 - id: cppget:Eigen
   registry: cppget
@@ -3139,6 +3139,37 @@ packages:
       checksums:
       - sha256:1378d66e0483f6427688b23aea2e13d36a17d26f959c55220997f905f5f84dbd
   recipe_url: https://cppget.org/fakeit
+- id: cppget:fcpp
+  registry: cppget
+  name: fcpp
+  summary: Frexx C preprocessor executable
+  description: <p>Frexx CPP (C Preprocessor)</p><p>Copyright (c) by Daniel Stenberg 1993 - 2011</p>
+  description_format: html
+  licenses:
+  - BSD-3-Clause
+  homepage: https://daniel.haxx.se/projects/fcpp/
+  repository_url: https://github.com/bagder/fcpp
+  topics:
+  - C, preprocessor
+  languages:
+  - c
+  dependencies:
+  - bpkg
+  - build2
+  - libfcpp
+  versions:
+  - version: 1.5.1
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libfcpp
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/fcpp/fcpp-1.5.1.tar.gz
+      checksums:
+      - sha256:ae91bc7c9f321399f0856774eccc76b3192456fe73e8f9ff3ab111c0a3055dc3
+  recipe_url: https://cppget.org/fcpp
 - id: cppget:fmt
   registry: cppget
   name: fmt
@@ -19185,6 +19216,35 @@ packages:
       checksums:
       - sha256:94e35bc8e1e794aa335a9161b44510a3aee0c74104ca5cc117d3260e864c8221
   recipe_url: https://cppget.org/libcereal-tests
+- id: cppget:libcgltf
+  registry: cppget
+  name: libcgltf
+  summary: glTF 2.0 loader and writer C library
+  description: '<p>Single-file/stb-style C glTF loader and writer</p><p>Used in: bgfx, Filament, gltfpack, raylib,\ [Unigine](https://developer.unigine.com/en/docs/2.14.1/third_party?rlang=cpp\</p>'
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/jkuhlmann/cgltf
+  repository_url: https://github.com/jkuhlmann/cgltf
+  topics:
+  - glTF, 3D, graphics, parser
+  languages:
+  - c
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.15.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/cgltf/libcgltf-1.15.0.tar.gz
+      checksums:
+      - sha256:d1e0bdb67de818ef7bbfcdba25b81bd4efa0c428e803284c7f2d4c5fab436203
+  recipe_url: https://cppget.org/libcgltf
 - id: cppget:libchaiscript
   registry: cppget
   name: libchaiscript
@@ -20252,6 +20312,38 @@ packages:
       checksums:
       - sha256:5260e861f9e27600691299cdf6ca46957a8240673a3a0f2697bb94548bcd8c0f
   recipe_url: https://cppget.org/libdouble-conversion
+- id: cppget:libdrm-uapi-helper
+  registry: cppget
+  name: libdrm-uapi-helper
+  summary: Linux DRM uAPI C headers with the Intel PRELIM i915 extensions
+  description: <p>Intel® GPGPU Documents and Releases.</p><p>Intel® DGPU Linux Kernel Source Reference</p>
+  description_format: html
+  licenses:
+  - 'GPL-2.0-only WITH Linux-syscall-note, MIT; Most are MIT, rest
+
+    GPL-2.0.'
+  homepage: https://github.com/intel-gpu/drm-uapi-helper
+  repository_url: https://github.com/intel-gpu/drm-uapi-helper
+  topics:
+  - drm, i915, intel gpu, linux kernel, uapi
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 2.0.0-b.27
+    channel: beta
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/beta/intel-drm-uapi-helper/libdrm-uapi-helper-2.0.0-b.27.tar.gz
+      checksums:
+      - sha256:d01e5a6dd9f130a44db18670d1d17f9495c3364717cd226e1df04dee8f4ab422
+  recipe_url: https://cppget.org/libdrm-uapi-helper
 - id: cppget:libdwarf
   registry: cppget
   name: libdwarf
@@ -20530,6 +20622,35 @@ packages:
       checksums:
       - sha256:734669ca15b2dfa1050fa58be298cf3fddc813196cb6b051547d68d8cc2e460f
   recipe_url: https://cppget.org/libexpat
+- id: cppget:libfcpp
+  registry: cppget
+  name: libfcpp
+  summary: Frexx C preprocessor library
+  description: <p>Frexx CPP (C Preprocessor)</p><p>Copyright (c) by Daniel Stenberg 1993 - 2011</p>
+  description_format: html
+  licenses:
+  - BSD-3-Clause
+  homepage: https://daniel.haxx.se/projects/fcpp/
+  repository_url: https://github.com/bagder/fcpp
+  topics:
+  - C, preprocessor
+  languages:
+  - c
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.5.1
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/fcpp/libfcpp-1.5.1.tar.gz
+      checksums:
+      - sha256:04f0d9b9b670473879c56ab35896f3812f8810be184f21e94892db8aa3d71e83
+  recipe_url: https://cppget.org/libfcpp
 - id: cppget:libfineftp-server
   registry: cppget
   name: libfineftp-server
@@ -21489,6 +21610,257 @@ packages:
       checksums:
       - sha256:fb93e3d6cab0dce107f55287a92090a7072326bcd5f155c018b233c4f542c4ff
   recipe_url: https://cppget.org/libglslang
+- id: cppget:libgpuopen-adl
+  registry: cppget
+  name: libgpuopen-adl
+  summary: AMD Display Library SDK C library
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-LibrariesAndSDKs/display-library
+  repository_url: https://github.com/gpuopen-librariesandsdks/display-library
+  documentation_url: https://gpuopen-librariesandsdks.github.io/adl/
+  topics:
+  - amd, adl, gpu, display, graphics driver
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 18.0.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-adl-18.0.0.tar.gz
+      checksums:
+      - sha256:74bf63d14398ef2bf7a218d7bbb15bfab4a2603cd02d08411a103810a597efc4
+  recipe_url: https://cppget.org/libgpuopen-adl
+- id: cppget:libgpuopen-ags
+  registry: cppget
+  name: libgpuopen-ags
+  summary: AMD GPU Services (AGS) C++ library (prebuilt)
+  description: <p>The AMD GPU Services (AGS) library provides software developers with the\ ability to query AMD GPU software and hardware state information that is not\ normally available through standard operating systems or graphics APIs. If\ you are serious about getting the most from your AMD GPU, then AGS can help\ you harness that power.</p><p>AGS includes support for querying graphics driver version info, GPU hardware\ info, performance metrics, shader extensions and additional extensions\ supported in the AMD drivers for DirectX 11 and DirectX 12. AGS also\ provides CrossfireTM (AMD's multi-GPU rendering technology) support and\ Eyefinity (AMD's multi-display rendering technology) configuration info.</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-LibrariesAndSDKs/AGS_SDK
+  repository_url: https://github.com/gpuopen-librariesandsdks/ags_sdk
+  documentation_url: https://gpuopen-librariesandsdks.github.io/ags/
+  topics:
+  - amd, ags, gpu, graphics driver, direct3d
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  - libgpuopen-ags-headers
+  versions:
+  - version: 6.3.1
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libgpuopen-ags-headers
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-ags-6.3.1.tar.gz
+      checksums:
+      - sha256:f9b3e89fcb7b08ebb9b718db4ca6927cc8a69c0cb267e5ed32db568b272129e0
+  recipe_url: https://cppget.org/libgpuopen-ags
+- id: cppget:libgpuopen-ags-headers
+  registry: cppget
+  name: libgpuopen-ags-headers
+  summary: AMD GPU Services (AGS) C++ API headers
+  description: <p>The AMD GPU Services (AGS) library provides software developers with the\ ability to query AMD GPU software and hardware state information that is not\ normally available through standard operating systems or graphics APIs. If\ you are serious about getting the most from your AMD GPU, then AGS can help\ you harness that power.</p><p>AGS includes support for querying graphics driver version info, GPU hardware\ info, performance metrics, shader extensions and additional extensions\ supported in the AMD drivers for DirectX 11 and DirectX 12. AGS also\ provides CrossfireTM (AMD's multi-GPU rendering technology) support and\ Eyefinity (AMD's multi-display rendering technology) configuration info.</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-LibrariesAndSDKs/AGS_SDK
+  repository_url: https://github.com/gpuopen-librariesandsdks/ags_sdk
+  documentation_url: https://gpuopen-librariesandsdks.github.io/ags/
+  topics:
+  - amd, ags, gpu, graphics driver, direct3d
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 6.3.1
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-ags-headers-6.3.1.tar.gz
+      checksums:
+      - sha256:4e44d362d7d5add2ac9570cdca69f34b9778c1c7ab7ff08b0e29c98dcaa348af
+  recipe_url: https://cppget.org/libgpuopen-ags-headers
+- id: cppget:libgpuopen-amddxext
+  registry: cppget
+  name: libgpuopen-amddxext
+  summary: AMD Direct3D driver extension C++ API headers
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-Tools/gpu_performance_api
+  repository_url: https://github.com/gpuopen-tools/gpu_performance_api
+  topics:
+  - amd, gpu, driver, direct3d
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 4.4.103
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-amddxext-4.4.103.tar.gz
+      checksums:
+      - sha256:b57f42ecc7f220e31238ab0d632e449ecdc18217a1a9e54ae8b2612db8fdf3de
+  recipe_url: https://cppget.org/libgpuopen-amddxext
+- id: cppget:libgpuopen-amddxgsa
+  registry: cppget
+  name: libgpuopen-amddxgsa
+  summary: AMD Direct3D 11 GSA shader compile extension C++ headers
+  description: '<p>Radeon GPU Analyzer is a compiler and code analysis tool for Vulkan®,\ DirectX®, OpenGL® and OpenCLTM. Using this product, you can compile\ high-level source code for a variety of AMD GPU and APU architectures, independent of the type of GPU/APU that is physically installed on your\ system.</p><p>You can use RGA to produce the following output: * RDNATM and GCN ISA disassembly * Intermediate language disassembly: AMDIL, DXIL and DXBC for DirectX, SPIR-V\ for Vulkan, LLVM IR for Offline OpenCL * Hardware resource usage statistics, such as register consumption, static\ memory allocation and more * Compiled binaries * Live register analysis (see this article for more info) * Control flow graphs * Build errors and warnings</p>'
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-Tools/radeon_gpu_analyzer
+  repository_url: https://github.com/gpuopen-tools/radeon_gpu_analyzer
+  topics:
+  - amd, gpu, driver, direct3d, shader compiler
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 2.15.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-amddxgsa-2.15.0.tar.gz
+      checksums:
+      - sha256:d7780acf7d8932f4331270261490b0496d01a011c2d22d5d58d1c9b07ecc9b1a
+  recipe_url: https://cppget.org/libgpuopen-amddxgsa
+- id: cppget:libgpuopen-devdriverapi
+  registry: cppget
+  name: libgpuopen-devdriverapi
+  summary: AMD Developer Driver API (DevDriverAPI) C++ library
+  description: <p>The Radeon Developer Tools consist of 2 main components :</p><p>The Radeon Developer Service(RDS) - a component of the developer mode\ driver to enable developer features.</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-Tools/dev_driver_tools
+  repository_url: https://github.com/gpuopen-tools/dev_driver_tools
+  topics:
+  - amd, gpu, profiling, radeon gpu profiler, rgp
+  languages:
+  - c++
+  dependencies:
+  - bpkg
+  - build2
+  - libgpuopen-adl
+  - libgpuopen-devdriverapi-headers
+  - libmetrohash
+  - librapidjson
+  versions:
+  - version: 1.7.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libgpuopen-adl
+    - name: libgpuopen-devdriverapi-headers
+    - name: libmetrohash
+    - name: librapidjson
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-devdriverapi-1.7.0.tar.gz
+      checksums:
+      - sha256:b6dbad336f0cd2823f0bdcf8109bca3cd0a2698d98c80b49003b062775f6ddb8
+  recipe_url: https://cppget.org/libgpuopen-devdriverapi
+- id: cppget:libgpuopen-devdriverapi-headers
+  registry: cppget
+  name: libgpuopen-devdriverapi-headers
+  summary: AMD Developer Driver API (DevDriverAPI) C++ header
+  description: <p>The Radeon Developer Tools consist of 2 main components :</p><p>The Radeon Developer Service(RDS) - a component of the developer mode\ driver to enable developer features.</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-Tools/dev_driver_tools
+  repository_url: https://github.com/gpuopen-tools/dev_driver_tools
+  topics:
+  - amd, gpu, profiling, radeon gpu profiler, rgp
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.7.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-devdriverapi-headers-1.7.0.tar.gz
+      checksums:
+      - sha256:1e5f167296aa6c5ca866113ebd9913548eaf5d3dc0cf1bd7d64a2d0ec7dc8e63
+  recipe_url: https://cppget.org/libgpuopen-devdriverapi-headers
+- id: cppget:libgpuopen-gpuperfapi-headers
+  registry: cppget
+  name: libgpuopen-gpuperfapi-headers
+  summary: AMD GPU Performance API (GPUPerfAPI) C++ headers
+  description: <p>The AMD GPU Performance API (GPUPerfAPI, or GPA) is a powerful library which\ provides access to GPU Performance Counters. It can help analyze the performance and execution characteristics of\ applications using an AMD RadeonTM GPU. This library is used by AMD Radeon GPU Profiler as well as several third-party tools.</p><p>Downloads</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/GPUOpen-Tools/gpu_performance_api
+  repository_url: https://github.com/gpuopen-tools/gpu_performance_api
+  documentation_url: https://gpuopen.com/manuals/gpu_performance_api_manual/
+  topics:
+  - amd, gpa, gpu, performance counters, profiling
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  - libvulkan-headers
+  versions:
+  - version: 4.4.103
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libvulkan-headers
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/gpuopen/libgpuopen-gpuperfapi-headers-4.4.103.tar.gz
+      checksums:
+      - sha256:2506eefb911df5257d705d898273d4f4c752566b773163904fe758b140b9606a
+  recipe_url: https://cppget.org/libgpuopen-gpuperfapi-headers
 - id: cppget:libhalf
   registry: cppget
   name: libhalf
@@ -26410,6 +26782,129 @@ packages:
       checksums:
       - sha256:02125d1eff355511f3a9d9b242e2ba03d54a8edb496470e8a1fbd2a022eb23a5
   recipe_url: https://cppget.org/libmetal-cpp
+- id: cppget:libmetrics-discovery
+  registry: cppget
+  name: libmetrics-discovery
+  summary: Intel Metrics Discovery API (MDAPI) C++ library
+  description: <p>This software is a user mode library that provides access to GPU performance\ data.</p><p>The library has OS abstraction layer that allows for interoperability in\ different environments.</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/intel/metrics-discovery
+  repository_url: https://github.com/intel/metrics-discovery
+  topics:
+  - intel gpu, performance counters, profiling, mdapi
+  languages:
+  - c
+  - c++
+  dependencies:
+  - bpkg
+  - build2
+  - libdrm-uapi-helper
+  - libmetrics-discovery-headers
+  versions:
+  - version: 1.16.197
+    channel: beta
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libdrm-uapi-helper
+    - name: libmetrics-discovery-headers
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/beta/intel-metrics-discovery/libmetrics-discovery-1.16.197.tar.gz
+      checksums:
+      - sha256:ade142aab354a6d4693358894fa3d95cc123d645044f5c82a6e77a6e4f4c4986
+  recipe_url: https://cppget.org/libmetrics-discovery
+- id: cppget:libmetrics-discovery-headers
+  registry: cppget
+  name: libmetrics-discovery-headers
+  summary: Intel Metrics Discovery API (MDAPI) C++ header
+  description: <p>This software is a user mode library that provides access to GPU performance\ data.</p><p>The library has OS abstraction layer that allows for interoperability in\ different environments.</p>
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/intel/metrics-discovery
+  repository_url: https://github.com/intel/metrics-discovery
+  topics:
+  - intel gpu, performance counters, profiling, mdapi
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.16.197
+    channel: beta
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/beta/intel-metrics-discovery/libmetrics-discovery-headers-1.16.197.tar.gz
+      checksums:
+      - sha256:943a983f49a051edfdf922d1ead83f042f955834a85f39c4d982118db9b10d7c
+  recipe_url: https://cppget.org/libmetrics-discovery-headers
+- id: cppget:libmetrohash
+  registry: cppget
+  name: libmetrohash
+  summary: MetroHash non-cryptographic hash functions C++ library
+  description: <p>MetroHash is a set of state-of-the-art hash functions for non-cryptographic\ use cases. They are notable for being algorithmically generated in addition\ to their exceptional performance. The set of published hash functions may be\ expanded in the future, having been selected from a very large set of hash\ functions that have been constructed this way.</p><p>Fastest general-purpose functions for bulk hashing.</p>
+  description_format: html
+  licenses:
+  - Apache-2.0; Apache License 2.0.
+  homepage: https://github.com/jandrewrogers/MetroHash
+  repository_url: https://github.com/jandrewrogers/metrohash
+  topics:
+  - hash, hash function, non-cryptographic hash
+  languages:
+  - c++
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 1.1.3
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/metrohash/libmetrohash-1.1.3.tar.gz
+      checksums:
+      - sha256:22f838987732b07584d05d4d9540bb6588074cc9315867988356c2e16956b0f4
+  recipe_url: https://cppget.org/libmetrohash
+- id: cppget:libmicrosoft-pdb
+  registry: cppget
+  name: libmicrosoft-pdb
+  summary: Microsoft PDB and CodeView debug information C++ headers
+  description: '<p>Update: This repo has moved to archive. Currently we are not planning\ any new updates nor are we taking PRs. Please add any new requests related\ to debugging and PDB format to Visual Studio Feedback.</p><p>This repo contains information from Microsoft about the PDB (Program\ Database) Symbol File format.</p>'
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/microsoft/microsoft-pdb
+  repository_url: https://github.com/microsoft/microsoft-pdb
+  topics:
+  - pdb, codeview, debug information, microsoft
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 2023.4.27
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/microsoft-pdb/libmicrosoft-pdb-2023.4.27.tar.gz
+      checksums:
+      - sha256:845d4dc4f14dbe1cf29c663c011b32d924457b7247bbea94193e0feffd4d93a1
+  recipe_url: https://cppget.org/libmicrosoft-pdb
 - id: cppget:libminhook
   registry: cppget
   name: libminhook
@@ -26747,6 +27242,97 @@ packages:
       checksums:
       - sha256:dd89b6d1c12435ec7c7a6918bf8e3027658583bee92137361f27906f87c5ccb7
   recipe_url: https://cppget.org/libnode-api-headers
+- id: cppget:libnvapi
+  registry: cppget
+  name: libnvapi
+  summary: The C library stubs for NVAPI, NVIDIA's API for GPU and driver features
+  description: '<p>NVAPI is NVIDIA''s API for accessing GPU and driver features on systems with\ NVIDIA hardware. This repository contains the public, open-source components\ of the NVAPI SDK: headers, interface definitions, and libraries (nvapi.lib /\ nvapi64.lib / nvapia64.lib / nvapia64ec.lib ) for building applications that\ use NVAPI. The actual NVAPI implementation is provided by the NVIDIA GPU\ driver installed on the system.</p><p>For detailed information on NVAPI features and usage, see the documentation\ in the docs folder.</p>'
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/NVIDIA/nvapi
+  repository_url: https://github.com/nvidia/nvapi
+  topics:
+  - nvidia, nvapi, gpu, driver, c
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  - libnvapi-headers
+  versions:
+  - version: 615.0.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    - name: libnvapi-headers
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/nvidia-nvapi/libnvapi-615.0.0.tar.gz
+      checksums:
+      - sha256:28363f2b3a62bd30dcbedfef7377dd63c73a8f17a945ed3d90cce5a7a42ede01
+  recipe_url: https://cppget.org/libnvapi
+- id: cppget:libnvapi-headers
+  registry: cppget
+  name: libnvapi-headers
+  summary: The C headers for NVAPI, NVIDIA's API for GPU and driver features
+  description: '<p>NVAPI is NVIDIA''s API for accessing GPU and driver features on systems with\ NVIDIA hardware. This repository contains the public, open-source components\ of the NVAPI SDK: headers, interface definitions, and libraries (nvapi.lib /\ nvapi64.lib / nvapia64.lib / nvapia64ec.lib ) for building applications that\ use NVAPI. The actual NVAPI implementation is provided by the NVIDIA GPU\ driver installed on the system.</p><p>For detailed information on NVAPI features and usage, see the documentation\ in the docs folder.</p>'
+  description_format: html
+  licenses:
+  - MIT; MIT License.
+  homepage: https://github.com/NVIDIA/nvapi
+  repository_url: https://github.com/nvidia/nvapi
+  topics:
+  - nvidia, nvapi, gpu, driver, c
+  languages:
+  - c
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 615.0.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/nvidia-nvapi/libnvapi-headers-615.0.0.tar.gz
+      checksums:
+      - sha256:1ff137816daa0d5f44f446ba0bb909c1ad25f094c9c2710e81467ad98b6ee5b9
+  recipe_url: https://cppget.org/libnvapi-headers
+- id: cppget:libnvperf
+  registry: cppget
+  name: libnvperf
+  summary: NVIDIA Nsight Perf SDK GPU performance metrics library
+  licenses:
+  - 'other: NVIDIA Nsight Perf SDK License, Apache-2.0; NVIDIA Nsight
+
+    Perf SDK License for the SDK, Apache License 2.0 for NvPerfUtility.'
+  homepage: https://developer.nvidia.com/nsight-perf-sdk
+  topics:
+  - nvidia, nsight, gpu, profiling, performance counters
+  languages:
+  - c++
+  package_type: lib,binless
+  dependencies:
+  - bpkg
+  - build2
+  versions:
+  - version: 2026.3.0
+    channel: testing
+    dependencies:
+    - name: bpkg
+    - name: build2
+    artifacts:
+    - kind: registry_package
+      url: https://pkg.cppget.org/1/testing/nvidia-nsight-perf-sdk/libnvperf-2026.3.0.tar.gz
+      checksums:
+      - sha256:23ed3278646aa5621ca59d04d14c38b365983d288fe3cc67ff0e4c23fd774148
+  recipe_url: https://cppget.org/libnvperf
 - id: cppget:libnvvm
   registry: cppget
   name: libnvvm
@@ -29050,16 +29636,18 @@ packages:
   - bpkg
   - build2
   versions:
-  - version: 1.15.104
+  - version: 1.15.104+1
+    upstream_version: 1.15.104
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
     - name: build2
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/libsquish/libsquish-1.15.104.tar.gz
+      url: https://pkg.cppget.org/1/testing/libsquish/libsquish-1.15.104+1.tar.gz
       checksums:
-      - sha256:b43837d132d17751bdc54d2e6c32125a3cb7a2c143728ba290db6e89c756bf03
+      - sha256:d3a2a626fc6d5c23684de86b28608ebf62477cd6456a0a0bf29cb612188a3ec9
   recipe_url: https://cppget.org/libsquish
 - id: cppget:libssl
   registry: cppget
@@ -33677,16 +34265,18 @@ packages:
   - bpkg
   - build2
   versions:
-  - version: 1.15.104
+  - version: 1.15.104+1
+    upstream_version: 1.15.104
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
     - name: build2
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/libsquish/squish-gen-1.15.104.tar.gz
+      url: https://pkg.cppget.org/1/testing/libsquish/squish-gen-1.15.104+1.tar.gz
       checksums:
-      - sha256:117ec91fa813ebd74e88e6a4528ed3477efb40481210953ab1f29aea3b5a6674
+      - sha256:7abc95d653861f3b0cec498ddbe5ff989e9b341598f00b31d0a352ac579f18ae
   recipe_url: https://cppget.org/squish-gen
 - id: cppget:squish-png
   registry: cppget
@@ -33709,7 +34299,9 @@ packages:
   - libpng
   - libsquish
   versions:
-  - version: 1.15.104
+  - version: 1.15.104+1
+    upstream_version: 1.15.104
+    packaging_revision: '1'
     channel: testing
     dependencies:
     - name: bpkg
@@ -33718,9 +34310,9 @@ packages:
     - name: libsquish
     artifacts:
     - kind: registry_package
-      url: https://pkg.cppget.org/1/testing/libsquish/squish-png-1.15.104.tar.gz
+      url: https://pkg.cppget.org/1/testing/libsquish/squish-png-1.15.104+1.tar.gz
       checksums:
-      - sha256:aab9d03acdda4a92b4a1d7cef706522a831ffaec4ac721a42d0d9df5005db695
+      - sha256:20b8667177187a231284fad16195dbdb57b518230a10787c44b8e5ed323cfe4e
   recipe_url: https://cppget.org/squish-png
 - id: cppget:stb_c_lexer
   registry: cppget

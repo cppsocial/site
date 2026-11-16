@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: meson
 repository: https://github.com/mesonbuild/wrapdb
-revision: cb21768447ab48bb5f5401683a04a1fd028cc658
+revision: cc81edad31940dce5d9595905529a5899a4319b4
 packages:
 - id: meson:abseil-cpp
   registry: meson
@@ -3473,6 +3473,112 @@ packages:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/abseil-cpp_20250127.1-1/abseil-cpp.wrap
   - version: '20250814.1'
+    packaging_revision: '2'
+    capabilities:
+    - absl_algorithm_container
+    - absl_any_invocable
+    - absl_bad_any_cast_impl
+    - absl_bad_optional_access
+    - absl_bad_variant_access
+    - absl_base
+    - absl_bind_front
+    - absl_city
+    - absl_civil_time
+    - absl_cleanup
+    - absl_container
+    - absl_cord
+    - absl_cord_internal
+    - absl_cordz_functions
+    - absl_cordz_handle
+    - absl_cordz_info
+    - absl_cordz_sample_token
+    - absl_core_headers
+    - absl_crc
+    - absl_crc32c
+    - absl_debugging
+    - absl_debugging_internal
+    - absl_demangle_internal
+    - absl_die_if_null
+    - absl_examine_stack
+    - absl_exponential_biased
+    - absl_failure_signal_handler
+    - absl_flags
+    - absl_flags_commandlineflag
+    - absl_flags_commandlineflag_internal
+    - absl_flags_config
+    - absl_flags_internal
+    - absl_flags_marshalling
+    - absl_flags_parse
+    - absl_flags_private_handle_accessor
+    - absl_flags_program_name
+    - absl_flags_reflection
+    - absl_flags_usage
+    - absl_flags_usage_internal
+    - absl_flat_hash_map
+    - absl_flat_hash_set
+    - absl_function_ref
+    - absl_graphcycles_internal
+    - absl_hash
+    - absl_hashtablez_sampler
+    - absl_inlined_vector
+    - absl_int128
+    - absl_leak_check
+    - absl_log
+    - absl_log_initialize
+    - absl_log_internal_check_op
+    - absl_log_internal_message
+    - absl_log_severity
+    - absl_low_level_hash
+    - absl_memory
+    - absl_numeric
+    - absl_optional
+    - absl_periodic_sampler
+    - absl_profiling
+    - absl_random
+    - absl_random_bit_gen_ref
+    - absl_random_distributions
+    - absl_random_internal_distribution_test_util
+    - absl_random_internal_platform
+    - absl_random_internal_pool_urbg
+    - absl_random_internal_randen
+    - absl_random_internal_randen_hwaes
+    - absl_random_internal_randen_hwaes_impl
+    - absl_random_internal_randen_slow
+    - absl_random_internal_seed_material
+    - absl_random_random
+    - absl_random_seed_gen_exception
+    - absl_random_seed_sequences
+    - absl_raw_hash_set
+    - absl_raw_logging_internal
+    - absl_scoped_set_env
+    - absl_span
+    - absl_spinlock_wait
+    - absl_stacktrace
+    - absl_status
+    - absl_statusor
+    - absl_str_format
+    - absl_str_format_internal
+    - absl_strerror
+    - absl_string_view
+    - absl_strings
+    - absl_strings_internal
+    - absl_symbolize
+    - absl_synchronization
+    - absl_throw_delegate
+    - absl_time
+    - absl_time_zone
+    - absl_type_traits
+    - absl_types
+    - absl_utility
+    - absl_variant
+    artifacts:
+    - url: https://github.com/abseil/abseil-cpp/releases/download/20250814.1/abseil-cpp-20250814.1.tar.gz
+      checksums:
+      - sha256:1692f77d1739bacf3f94337188b78583cf09bab7e420d2dc6c5605a4f86785a1
+      filename: abseil-cpp-20250814.1.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/abseil-cpp_20250814.1-2/abseil-cpp.wrap
+  - version: '20250814.1'
     packaging_revision: '1'
     capabilities:
     - absl_algorithm_container
@@ -6069,12 +6175,26 @@ packages:
     capabilities:
     - cpp-httplib
     artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.64.0.tar.gz
-      checksums:
-      - sha256:1ada413782af5e67e80452c39b7c90beb6fa4fc8341e18c0896bf95684b9a620
-      filename: cpp-httplib-0.64.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.64.0-1/cpp-httplib.wrap
+  - version: 0.65.0
+    packaging_revision: '1'
+    capabilities:
+    - cpp-httplib
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.65.0-1/cpp-httplib.wrap
+  - version: 0.66.0
+    packaging_revision: '1'
+    capabilities:
+    - cpp-httplib
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.66.0.tar.gz
+      checksums:
+      - sha256:537a77cdb96d3b4ad64d0b7103971de52eac75cd4ee03a2fdb84417b0d742459
+      filename: cpp-httplib-0.66.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.66.0-1/cpp-httplib.wrap
   - version: 0.8.9
     packaging_revision: '2'
     capabilities:
@@ -6301,12 +6421,19 @@ packages:
     capabilities:
     - cpr
     artifacts:
-    - url: https://github.com/libcpr/cpr/archive/1.14.2.tar.gz
-      checksums:
-      - sha256:b9b529b47083bfe80bba855ca5308d12d767ae7c7b629aef5ef018c4343cf62b
-      filename: cpr-1.14.2.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpr_1.14.2-1/cpr.wrap
+  - version: 1.15.1
+    packaging_revision: '1'
+    capabilities:
+    - cpr
+    artifacts:
+    - url: https://github.com/libcpr/cpr/archive/1.15.1.tar.gz
+      checksums:
+      - sha256:c2fc62a030c4ca5d7c3517e8068531297f938bf4ab52bf951d4fc9bbc9222716
+      filename: cpr-1.15.1.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpr_1.15.1-1/cpr.wrap
   - version: 1.3.0
     packaging_revision: '1'
     capabilities:
@@ -19166,6 +19293,17 @@ packages:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/nanobind_2.9.2-1/nanobind.wrap
   - version: 3.1.0
+    packaging_revision: '2'
+    capabilities:
+    - nanobind
+    artifacts:
+    - url: https://github.com/wjakob/nanobind/archive/refs/tags/v3.1.0.tar.gz
+      checksums:
+      - sha256:39659890a112e84e7263e4a263c71dd2621f866f7a4386ce95ef410e6c0e5c2f
+      filename: nanobind-3.1.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/nanobind_3.1.0-2/nanobind.wrap
+  - version: 3.1.0
     packaging_revision: '1'
     capabilities:
     - nanobind
@@ -23826,12 +23964,19 @@ packages:
     capabilities:
     - sparkcli
     artifacts:
-    - url: https://github.com/antoniovazquezblanco/sparkcli/archive/refs/tags/v0.0.7.tar.gz
-      checksums:
-      - sha256:6f334f681354756587bd34206a022811ec89a157768eea277c1f0c1a0be5920b
-      filename: sparkcli-0.0.7.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/sparkcli_0.0.7-1/sparkcli.wrap
+  - version: 0.0.8
+    packaging_revision: '1'
+    capabilities:
+    - sparkcli
+    artifacts:
+    - url: https://github.com/antoniovazquezblanco/sparkcli/archive/refs/tags/v0.0.8.tar.gz
+      checksums:
+      - sha256:ce8671bf4e48df50560ffbfac4554eac2f58f4eb276abbebcc56dfdaaa94ae73
+      filename: sparkcli-0.0.8.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/sparkcli_0.0.8-1/sparkcli.wrap
   recipe_path: subprojects/sparkcli.wrap
 - id: meson:sparrow
   registry: meson

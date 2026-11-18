@@ -72,20 +72,21 @@
   rating: 2.5
   rating_count: 2
 '9780321992789':
-  title: 'Programming: Principles and Practice Using C++ (2nd Edition)'
+  title: Programming
   authors:
   - Bjarne Stroustrup
+  subtitle: Principles and Practice Using C++
   isbn_13: '9780321992789'
   isbn_10: 0321992784
   publisher: Addison-Wesley Professional
-  publish_date: May 25, 2014
+  publish_date: '2014-05-25'
   pages: 1312
   cover_url: https://covers.openlibrary.org/b/id/8514159-L.jpg
-  url: https://openlibrary.org/books/OL26838293M/Programming_Principles_and_Practice_Using_C_(2nd_Edition)
+  url: https://openlibrary.org/books/OL26838293M/Programming
   work_key: /works/OL19547723W
   subjects:
-  - C plus plus (computer program language)
-  - C++ (Computer program language)
+  - C++
+  - programming
   rating: 4.0
   rating_count: 2
 '9781491903995':
@@ -99,7 +100,7 @@
   publish_date: Dec 05, 2014
   pages: 334
   cover_url: https://covers.openlibrary.org/b/id/8513620-L.jpg
-  url: https://openlibrary.org/books/OL26837982M/Effective_Modern_C_42_Specific_Ways_to_Improve_Your_Use_of_C_11_and_C_14
+  url: https://openlibrary.org/books/OL26837982M/Effective_Modern_C
   work_key: /works/OL19547402W
   subjects:
   - Application software

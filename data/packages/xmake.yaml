@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: xmake
 repository: https://github.com/xmake-io/xmake-repo
-revision: 511a3c4536a12318e7c1effa012dc8d7b5637526
+revision: 0d4d4ef2fcaced81971e1a480c61ffa979c9fd93
 packages:
 - id: xmake:11zip
   registry: xmake
@@ -2001,6 +2001,35 @@ packages:
     - url: https://github.com/lucocozz/Argus.git
     - url: https://github.com/lucocozz/Argus/archive/refs/tags/v0.3.0.tar.gz
   recipe_path: packages/a/argus/xmake.lua
+- id: xmake:argy
+  registry: xmake
+  name: argy
+  summary: A lightweight, header-only command-line argument parsing library for C++17
+  licenses:
+  - MIT
+  homepage: https://github.com/mshenoda/argy
+  repository_url: https://github.com/mshenoda/argy
+  package_type: library
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  versions:
+  - version: v0.6.0
+    upstream_version: 0.6.0
+    artifacts:
+    - url: https://github.com/mshenoda/argy.git
+    - url: https://github.com/mshenoda/argy/archive/refs/tags/v0.6.0.tar.gz
+  recipe_path: packages/a/argy/xmake.lua
 - id: xmake:argz
   registry: xmake
   name: argz
@@ -3844,6 +3873,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-auth.git
     - url: https://github.com/awslabs/aws-c-auth/archive/refs/tags/v1.0.1.tar.gz
+  - version: v1.0.3
+    upstream_version: 1.0.3
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-auth.git
+    - url: https://github.com/awslabs/aws-c-auth/archive/refs/tags/v1.0.3.tar.gz
   recipe_path: packages/a/aws-c-auth/xmake.lua
 - id: xmake:aws-c-cal
   registry: xmake
@@ -4973,6 +5007,11 @@ packages:
     artifacts:
     - url: https://github.com/awslabs/aws-c-s3.git
     - url: https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.3.1.tar.gz
+  - version: v1.5.2
+    upstream_version: 1.5.2
+    artifacts:
+    - url: https://github.com/awslabs/aws-c-s3.git
+    - url: https://github.com/awslabs/aws-c-s3/archive/refs/tags/v1.5.2.tar.gz
   recipe_path: packages/a/aws-c-s3/xmake.lua
 - id: xmake:aws-c-sdkutils
   registry: xmake
@@ -10110,6 +10149,10 @@ packages:
     artifacts:
     - url: https://github.com/artem-ogre/CDT.git
     - url: https://github.com/artem-ogre/CDT/archive/refs/tags/2.0.1.tar.gz
+  - version: 2.0.2
+    artifacts:
+    - url: https://github.com/artem-ogre/CDT.git
+    - url: https://github.com/artem-ogre/CDT/archive/refs/tags/2.0.2.tar.gz
   recipe_path: packages/c/cdt/xmake.lua
 - id: xmake:cef
   registry: xmake
@@ -10706,6 +10749,11 @@ packages:
     artifacts:
     - url: https://github.com/recp/cglm.git
     - url: https://github.com/recp/cglm/archive/refs/tags/v0.9.6.tar.gz
+  - version: v0.9.7
+    upstream_version: 0.9.7
+    artifacts:
+    - url: https://github.com/recp/cglm.git
+    - url: https://github.com/recp/cglm/archive/refs/tags/v0.9.7.tar.gz
   recipe_path: packages/c/cglm/xmake.lua
 - id: xmake:cgltf
   registry: xmake
@@ -11790,6 +11838,11 @@ packages:
     artifacts:
     - url: https://github.com/daniele77/cli.git
     - url: https://github.com/daniele77/cli/archive/refs/tags/v2.2.0.tar.gz
+  - version: v2.3.0
+    upstream_version: 2.3.0
+    artifacts:
+    - url: https://github.com/daniele77/cli.git
+    - url: https://github.com/daniele77/cli/archive/refs/tags/v2.3.0.tar.gz
   recipe_path: packages/c/cli/xmake.lua
 - id: xmake:cli11
   registry: xmake
@@ -14027,6 +14080,10 @@ packages:
     artifacts:
     - url: https://github.com/yhirose/cpp-peglib.git
     - url: https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.22.0.tar.gz
+  - version: 1.31.0
+    artifacts:
+    - url: https://github.com/yhirose/cpp-peglib.git
+    - url: https://github.com/yhirose/cpp-peglib/archive/refs/tags/v1.31.0.tar.gz
   - version: 1.8.3
     artifacts:
     - url: https://github.com/yhirose/cpp-peglib.git
@@ -15971,6 +16028,11 @@ packages:
     artifacts:
     - url: https://github.com/p-ranav/csv2.git
     - url: https://github.com/p-ranav/csv2/archive/refs/tags/v0.1.tar.gz
+  - version: v0.2
+    upstream_version: '0.2'
+    artifacts:
+    - url: https://github.com/p-ranav/csv2.git
+    - url: https://github.com/p-ranav/csv2/archive/refs/tags/v0.2.tar.gz
   recipe_path: packages/c/csv2/xmake.lua
 - id: xmake:csvparser
   registry: xmake
@@ -16271,7 +16333,7 @@ packages:
     default: 'false'
   - name: utils
     description: Enabled cuda utilities.
-    default: 'table: 0x561873604300'
+    default: 'table: 0x630a5b249720'
   recipe_path: packages/c/cuda/xmake.lua
 - id: xmake:cuda-samples
   registry: xmake
@@ -16713,6 +16775,11 @@ packages:
     artifacts:
     - url: https://github.com/NVIDIA/cutlass.git
     - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.8.0.tar.gz
+  - version: v4.8.1
+    upstream_version: 4.8.1
+    artifacts:
+    - url: https://github.com/NVIDIA/cutlass.git
+    - url: https://github.com/NVIDIA/cutlass/archive/refs/tags/v4.8.1.tar.gz
   recipe_path: packages/c/cutlass/xmake.lua
 - id: xmake:cwt-cucumber
   registry: xmake
@@ -20911,6 +20978,10 @@ packages:
     artifacts:
     - url: https://github.com/SpartanJ/efsw.git
     - url: https://github.com/SpartanJ/efsw/archive/refs/tags/1.7.2.tar.gz
+  - version: 1.7.3
+    artifacts:
+    - url: https://github.com/SpartanJ/efsw.git
+    - url: https://github.com/SpartanJ/efsw/archive/refs/tags/1.7.3.tar.gz
   recipe_path: packages/e/efsw/xmake.lua
 - id: xmake:egl-headers
   registry: xmake
@@ -21480,6 +21551,10 @@ packages:
     artifacts:
     - url: https://github.com/emscripten-core/emsdk.git
     - url: https://github.com/emscripten-core/emsdk/archive/refs/tags/6.0.0.tar.gz
+  - version: 7.0.0
+    artifacts:
+    - url: https://github.com/emscripten-core/emsdk.git
+    - url: https://github.com/emscripten-core/emsdk/archive/refs/tags/7.0.0.tar.gz
   recipe_path: packages/e/emscripten/xmake.lua
 - id: xmake:emscripten-glfw
   registry: xmake
@@ -21517,6 +21592,36 @@ packages:
     - url: https://github.com/pongasoft/emscripten-glfw.git
     - url: https://github.com/pongasoft/emscripten-glfw/archive/refs/tags/v3.4.0.20240907.tar.gz
   recipe_path: packages/e/emscripten-glfw/xmake.lua
+- id: xmake:enchantum
+  registry: xmake
+  name: enchantum
+  summary: Faster enum reflection for C++17 since I don't want to wait for C++26 reflection.
+  licenses:
+  - MIT
+  homepage: https://github.com/ZXShady/enchantum
+  repository_url: https://github.com/zxshady/enchantum
+  package_type: library
+  platforms:
+  - android
+  - bsd
+  - cross
+  - default
+  - harmony
+  - iphoneos
+  - linux
+  - macosx
+  - mingw
+  - msys
+  - wasm
+  - windows
+  dependencies:
+  - cmake
+  versions:
+  - version: 0.5.0
+    artifacts:
+    - url: https://github.com/ZXShady/enchantum.git
+    - url: https://github.com/ZXShady/enchantum/archive/refs/tags/0.5.0.tar.gz
+  recipe_path: packages/e/enchantum/xmake.lua
 - id: xmake:enet
   registry: xmake
   name: enet
@@ -24195,7 +24300,7 @@ packages:
     default: 'false'
   - name: optimizations
     description: Optimization options enabled for each precision target.
-    default: 'table: 0x561865959500'
+    default: 'table: 0x630a47527f80'
   - name: precision
     description: Float number precision. (deprecated)
     values:
@@ -24205,7 +24310,7 @@ packages:
     - quad
   - name: precisions
     description: The floating point precision to enable. (float|double|quad|long)
-    default: 'table: 0x56186595ab30'
+    default: 'table: 0x630a475295e0'
   - name: simd
     description: SIMD instruction sets used. (deprecated)
     values:
@@ -26395,6 +26500,11 @@ packages:
     artifacts:
     - url: https://github.com/Dobiasd/frugally-deep.git
     - url: https://github.com/Dobiasd/frugally-deep/archive/refs/tags/v0.20.0.tar.gz
+  - version: v0.21.1
+    upstream_version: 0.21.1
+    artifacts:
+    - url: https://github.com/Dobiasd/frugally-deep.git
+    - url: https://github.com/Dobiasd/frugally-deep/archive/refs/tags/v0.21.1.tar.gz
   recipe_path: packages/f/frugally-deep/xmake.lua
 - id: xmake:fruit
   registry: xmake
@@ -28582,6 +28692,11 @@ packages:
     artifacts:
     - url: https://github.com/stephenberry/glaze.git
     - url: https://github.com/stephenberry/glaze/archive/refs/tags/v7.9.0.tar.gz
+  - version: v9.1.0
+    upstream_version: 9.1.0
+    artifacts:
+    - url: https://github.com/stephenberry/glaze.git
+    - url: https://github.com/stephenberry/glaze/archive/refs/tags/v9.1.0.tar.gz
   recipe_path: packages/g/glaze/xmake.lua
 - id: xmake:glbinding
   registry: xmake
@@ -29907,6 +30022,11 @@ packages:
     - url: https://go.dev/dl/go1.26.10.linux-amd64.tar.gz
       checksums:
       - sha256:ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5
+  - version: 1.26.11
+    artifacts:
+    - url: https://go.dev/dl/go1.26.11.linux-amd64.tar.gz
+      checksums:
+      - sha256:9849f4e04ee35303714e34fbc3ac8ab44ea3e448a95aa182f91e3b9b79c710ec
   - version: 1.26.2
     artifacts:
     - url: https://go.dev/dl/go1.26.2.linux-amd64.tar.gz
@@ -29957,6 +30077,11 @@ packages:
     - url: https://go.dev/dl/go1.27.3.linux-amd64.tar.gz
       checksums:
       - sha256:65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40
+  - version: 1.27.4
+    artifacts:
+    - url: https://go.dev/dl/go1.27.4.linux-amd64.tar.gz
+      checksums:
+      - sha256:7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840
   recipe_path: packages/g/go/xmake.lua
 - id: xmake:gobject-introspection
   registry: xmake
@@ -30122,7 +30247,7 @@ packages:
     default: 'true'
   - name: libraries
     description: 'Enable subset of the libraries (default: google_cloud_cpp_common)'
-    default: 'table: 0x561864079940'
+    default: 'table: 0x630a4e09b280'
   versions:
   - version: v2.33.0
     upstream_version: 2.33.0
@@ -32600,7 +32725,7 @@ packages:
   features:
   - name: utils
     description: Enabled Houdini utilities.
-    default: 'table: 0x56185e3f35a0'
+    default: 'table: 0x630a48460330'
   recipe_path: packages/h/houdini/xmake.lua
 - id: xmake:hpsocket
   registry: xmake
@@ -32843,6 +32968,11 @@ packages:
     artifacts:
     - url: https://github.com/vcrhonek/hwdata.git
     - url: https://github.com/vcrhonek/hwdata/archive/refs/tags/v0.409.tar.gz
+  - version: v0.413
+    upstream_version: '0.413'
+    artifacts:
+    - url: https://github.com/vcrhonek/hwdata.git
+    - url: https://github.com/vcrhonek/hwdata/archive/refs/tags/v0.413.tar.gz
   recipe_path: packages/h/hwdata/xmake.lua
 - id: xmake:hwinfo
   registry: xmake
@@ -36041,6 +36171,10 @@ packages:
     artifacts:
     - url: https://github.com/jemalloc/jemalloc.git
     - url: https://github.com/jemalloc/jemalloc/releases/download/5.3.1/jemalloc-5.3.1.tar.bz2
+  - version: 5.4.0
+    artifacts:
+    - url: https://github.com/jemalloc/jemalloc.git
+    - url: https://github.com/jemalloc/jemalloc/releases/download/5.4.0/jemalloc-5.4.0.tar.bz2
   recipe_path: packages/j/jemalloc/xmake.lua
 - id: xmake:jerryscript
   registry: xmake
@@ -36526,6 +36660,11 @@ packages:
     artifacts:
     - url: https://github.com/JSBSim-Team/jsbsim.git
     - url: https://github.com/JSBSim-Team/jsbsim/archive/refs/tags/v1.3.1.tar.gz
+  - version: v1.3.3
+    upstream_version: 1.3.3
+    artifacts:
+    - url: https://github.com/JSBSim-Team/jsbsim.git
+    - url: https://github.com/JSBSim-Team/jsbsim/archive/refs/tags/v1.3.3.tar.gz
   recipe_path: packages/j/jsbsim/xmake.lua
 - id: xmake:jsmn
   registry: xmake
@@ -40441,6 +40580,11 @@ packages:
     artifacts:
     - url: https://github.com/ebiggers/libdeflate.git
     - url: https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.25.tar.gz
+  - version: v1.26
+    upstream_version: '1.26'
+    artifacts:
+    - url: https://github.com/ebiggers/libdeflate.git
+    - url: https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.26.tar.gz
   - version: v1.8
     upstream_version: '1.8'
     artifacts:
@@ -43545,6 +43689,11 @@ packages:
     artifacts:
     - url: https://github.com/kmod-project/kmod.git
     - url: https://github.com/kmod-project/kmod/archive/refs/tags/v34.2.tar.gz
+  - version: v34.3
+    upstream_version: '34.3'
+    artifacts:
+    - url: https://github.com/kmod-project/kmod.git
+    - url: https://github.com/kmod-project/kmod/archive/refs/tags/v34.3.tar.gz
   recipe_path: packages/l/libkmod/xmake.lua
 - id: xmake:liblas
   registry: xmake
@@ -45515,6 +45664,10 @@ packages:
     artifacts:
     - url: https://github.com/pganalyze/libpg_query.git
     - url: https://github.com/pganalyze/libpg_query/archive/refs/tags/18.0.0.tar.gz
+  - version: 18.1.0
+    artifacts:
+    - url: https://github.com/pganalyze/libpg_query.git
+    - url: https://github.com/pganalyze/libpg_query/archive/refs/tags/18.1.0.tar.gz
   recipe_path: packages/l/libpg_query/xmake.lua
 - id: xmake:libplist
   registry: xmake
@@ -50113,6 +50266,11 @@ packages:
     artifacts:
     - url: https://github.com/libvips/libvips.git
     - url: https://github.com/libvips/libvips/archive/refs/tags/v8.18.6.tar.gz
+  - version: v8.18.7
+    upstream_version: 8.18.7
+    artifacts:
+    - url: https://github.com/libvips/libvips.git
+    - url: https://github.com/libvips/libvips/archive/refs/tags/v8.18.7.tar.gz
   recipe_path: packages/l/libvips/xmake.lua
 - id: xmake:libvorbis
   registry: xmake
@@ -53996,6 +54154,11 @@ packages:
     artifacts:
     - url: https://github.com/litespeedtech/lsquic.git
     - url: https://github.com/litespeedtech/lsquic/archive/refs/tags/v4.0.9.tar.gz
+  - version: v4.11.1
+    upstream_version: 4.11.1
+    artifacts:
+    - url: https://github.com/litespeedtech/lsquic.git
+    - url: https://github.com/litespeedtech/lsquic/archive/refs/tags/v4.11.1.tar.gz
   - version: v4.2.0
     upstream_version: 4.2.0
     artifacts:
@@ -57807,6 +57970,11 @@ packages:
     artifacts:
     - url: https://github.com/microsoft/GSL.git
     - url: https://github.com/microsoft/GSL/archive/refs/tags/v5.0.0.tar.gz
+  - version: v5.0.1
+    upstream_version: 5.0.1
+    artifacts:
+    - url: https://github.com/microsoft/GSL.git
+    - url: https://github.com/microsoft/GSL/archive/refs/tags/v5.0.1.tar.gz
   recipe_path: packages/m/microsoft-gsl/xmake.lua
 - id: xmake:microsoft-kuku
   registry: xmake
@@ -58375,10 +58543,10 @@ packages:
     default: 'true'
   - name: disabled_backends
     description: Disabled backends (none if empty)
-    default: 'table: 0x561869be72f0'
+    default: 'table: 0x630a513ba880'
   - name: enabled_backends
     description: Enabled backends (all if empty)
-    default: 'table: 0x561869be7d70'
+    default: 'table: 0x630a513bb300'
   - name: encoding
     description: Enable encoding APIs
     default: 'true'
@@ -60246,6 +60414,11 @@ packages:
     artifacts:
     - url: https://github.com/Chlumsky/msdfgen.git
     - url: https://github.com/Chlumsky/msdfgen/archive/refs/tags/v1.13.tar.gz
+  - version: v1.13.1
+    upstream_version: 1.13.1
+    artifacts:
+    - url: https://github.com/Chlumsky/msdfgen.git
+    - url: https://github.com/Chlumsky/msdfgen/archive/refs/tags/v1.13.1.tar.gz
   recipe_path: packages/m/msdfgen/xmake.lua
 - id: xmake:msgpack-c
   registry: xmake
@@ -61295,6 +61468,10 @@ packages:
     artifacts:
     - url: https://github.com/Neargye/nameof.git
     - url: https://github.com/Neargye/nameof/archive/refs/tags/v0.10.5.tar.gz
+  - version: 0.11.0
+    artifacts:
+    - url: https://github.com/Neargye/nameof.git
+    - url: https://github.com/Neargye/nameof/archive/refs/tags/v0.11.0.tar.gz
   recipe_path: packages/n/nameof/xmake.lua
 - id: xmake:nana
   registry: xmake
@@ -61672,6 +61849,10 @@ packages:
     artifacts:
     - url: https://github.com/nanomsg/nanomsg.git
     - url: https://github.com/nanomsg/nanomsg/archive/refs/tags/1.2.5.tar.gz
+  - version: 1.3.0
+    artifacts:
+    - url: https://github.com/nanomsg/nanomsg.git
+    - url: https://github.com/nanomsg/nanomsg/archive/refs/tags/1.3.0.tar.gz
   recipe_path: packages/n/nanomsg/xmake.lua
 - id: xmake:nanopb
   registry: xmake
@@ -69179,6 +69360,11 @@ packages:
     artifacts:
     - url: https://github.com/osqp/osqp.git
     - url: https://github.com/osqp/osqp/releases/download/v0.6.3/osqp-v0.6.3-src.tar.gz
+  - version: v1.0.0
+    upstream_version: 1.0.0
+    artifacts:
+    - url: https://github.com/osqp/osqp.git
+    - url: https://github.com/osqp/osqp/releases/download/v1.0.0/osqp-v1.0.0-src.tar.gz
   recipe_path: packages/o/osqp/xmake.lua
 - id: xmake:out_ptr
   registry: xmake
@@ -77343,6 +77529,11 @@ packages:
     artifacts:
     - url: https://github.com/getml/reflect-cpp.git
     - url: https://github.com/getml/reflect-cpp/archive/refs/tags/v0.25.0.tar.gz
+  - version: v0.27.1
+    upstream_version: 0.27.1
+    artifacts:
+    - url: https://github.com/getml/reflect-cpp.git
+    - url: https://github.com/getml/reflect-cpp/archive/refs/tags/v0.27.1.tar.gz
   recipe_path: packages/r/reflect-cpp/xmake.lua
 - id: xmake:remotery
   registry: xmake
@@ -78712,6 +78903,11 @@ packages:
     artifacts:
     - url: https://github.com/nfrechette/rtm.git
     - url: https://github.com/nfrechette/rtm/archive/refs/tags/v2.3.1.tar.gz
+  - version: v2.4.0
+    upstream_version: 2.4.0
+    artifacts:
+    - url: https://github.com/nfrechette/rtm.git
+    - url: https://github.com/nfrechette/rtm/archive/refs/tags/v2.4.0.tar.gz
   recipe_path: packages/r/rtm/xmake.lua
 - id: xmake:rtmidi
   registry: xmake
@@ -80111,6 +80307,10 @@ packages:
     artifacts:
     - url: https://github.com/getsentry/sentry-native.git
     - url: https://github.com/getsentry/sentry-native/releases/download/0.17.1/sentry-native.zip
+  - version: 0.17.6
+    artifacts:
+    - url: https://github.com/getsentry/sentry-native.git
+    - url: https://github.com/getsentry/sentry-native/releases/download/0.17.6/sentry-native.zip
   - version: 0.6.3
     artifacts:
     - url: https://github.com/getsentry/sentry-native.git
@@ -81459,6 +81659,10 @@ packages:
     artifacts:
     - url: https://github.com/danmar/simplecpp.git
     - url: https://github.com/danmar/simplecpp/archive/refs/tags/1.7.0.tar.gz
+  - version: 1.9.1
+    artifacts:
+    - url: https://github.com/danmar/simplecpp.git
+    - url: https://github.com/danmar/simplecpp/archive/refs/tags/1.9.1.tar.gz
   recipe_path: packages/s/simplecpp/xmake.lua
 - id: xmake:simpleini
   registry: xmake
@@ -87643,7 +87847,7 @@ packages:
     default: 'false'
   - name: engines
     description: Enable Rasterizer Engine in thorvg
-    default: 'table: 0x5618878c0050'
+    default: 'table: 0x630a6f890260'
   - name: extra
     description: Enable support for exceptionally advanced features
   - name: loaders
@@ -87871,6 +88075,11 @@ packages:
     artifacts:
     - url: https://github.com/apache/thrift.git
     - url: https://github.com/apache/thrift/archive/refs/tags/v0.24.0.tar.gz
+  - version: v0.25.0
+    upstream_version: 0.25.0
+    artifacts:
+    - url: https://github.com/apache/thrift.git
+    - url: https://github.com/apache/thrift/archive/refs/tags/v0.25.0.tar.gz
   recipe_path: packages/t/thrift/xmake.lua
 - id: xmake:thrust
   registry: xmake
@@ -90667,7 +90876,7 @@ packages:
   features:
   - name: archs
     description: Enabled unicorn architectures
-    default: 'table: 0x56186b552180'
+    default: 'table: 0x630a4cc04fc0'
   - name: logging
     description: Enable logging
     default: 'false'
@@ -90925,6 +91134,11 @@ packages:
     artifacts:
     - url: https://github.com/martinus/unordered_dense.git
     - url: https://github.com/martinus/unordered_dense/archive/refs/tags/v4.8.1.tar.gz
+  - version: v5.3.3
+    upstream_version: 5.3.3
+    artifacts:
+    - url: https://github.com/martinus/unordered_dense.git
+    - url: https://github.com/martinus/unordered_dense/archive/refs/tags/v5.3.3.tar.gz
   recipe_path: packages/u/unordered_dense/xmake.lua
 - id: xmake:unqlite
   registry: xmake
@@ -94343,7 +94557,7 @@ packages:
     default: 'true'
   - name: utils
     description: Enabled vulkan utilities.
-    default: 'table: 0x561870353c60'
+    default: 'table: 0x630a57a34550'
   recipe_path: packages/v/vulkansdk/xmake.lua
 - id: xmake:vvenc
   registry: xmake
@@ -99075,7 +99289,7 @@ packages:
   features:
   - name: symbologies
     description: Select symbologies to compile
-    default: 'table: 0x56185eb0f620'
+    default: 'table: 0x630a46b97490'
   versions:
   - version: 0.23.93
     artifacts:

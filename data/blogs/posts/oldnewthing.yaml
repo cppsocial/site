@@ -1,5 +1,55 @@
 # Maintained by meta-updater blogs. Manual edits are preserved.
 # Set hidden: true and retain only post_id to suppress an item.
+- post_id: 3VSV7I_tCMLXbjH1
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: How can I make it easier to use the helper class that lets me pass more than one parameter to co_await?
+  url: https://devblogs.microsoft.com/oldnewthing/20261113-00/?p=112856/
+  published: 2026-11-13 15:00:00+00:00
+  description: Remove the need to have to type out the name of the helper. The post How can I make it easier to use the helper class that lets me pass more than one parameter to <CODE>co_await</CODE>? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: 2SI0h2UeLE9SyDWd
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: How can I pass more than one parameter to co_await?
+  url: https://devblogs.microsoft.com/oldnewthing/20261112-00/?p=112851/
+  published: 2026-11-12 15:00:00+00:00
+  description: The co_await operator takes only one parameter, but it can be a big parameter. The post How can I pass more than one parameter to <CODE>co_await</CODE>? appeared first on The Old New Thing .
+  tags:
+  - Code
+  - Old New Thing
+- post_id: lv-Ww7jxqw_4myCG
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: I didn’t write a program with emoji, but I did use a control character
+  url: https://devblogs.microsoft.com/oldnewthing/20261111-00/?p=112848/
+  published: 2026-11-11 15:00:00+00:00
+  description: My program was a fairly simple one. The post I didn’t write a program with emoji, but I did use a control character appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: U9yIuXJDtb69tiYS
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: Microsoft employee price list from 1987
+  url: https://devblogs.microsoft.com/oldnewthing/20261110-00/?p=112843/
+  published: 2026-11-10 15:00:00+00:00
+  description: The Microsoft product catalog. The post Microsoft employee price list from 1987 appeared first on The Old New Thing .
+  tags:
+  - History
+  - Old New Thing
+- post_id: RLUq-vRDqtP-Qbfg
+  source_id: oldnewthing
+  source_title: The Old New Thing
+  title: If the Windows Update hot patcher checks that the function hasn’t already been patched, does that mean you can’t install two hot-patches?
+  url: https://devblogs.microsoft.com/oldnewthing/20261109-00/?p=112841/
+  published: 2026-11-09 15:00:00+00:00
+  description: It knows what it did. The post If the Windows Update hot patcher checks that the function hasn’t already been patched, does that mean you can’t install two hot-patches? appeared first on The Old New Thing .
+  tags:
+  - Old New Thing
+  - Other
 - post_id: 9-t3-esN1EeZegNu
   source_id: oldnewthing
   source_title: The Old New Thing

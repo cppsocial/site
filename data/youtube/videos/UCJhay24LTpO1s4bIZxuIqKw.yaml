@@ -1,5 +1,156 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: vW-xgQM0iwk
+  title: The Performance Mindset - Mathieu Ropert - ACCU 2026
+  url: https://www.youtube.com/watch?v=vW-xgQM0iwk
+  published: 2026-11-21 16:10:25+00:00
+  updated: 2026-11-23 07:15:23+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    The Performance Mindset - Mathieu Ropert - ACCU 2026
+
+    ---
+
+
+    Software performance doesn''t happen on accident, nor can it be an afterthought. Through my career I have found that with the right combination of factors most non-trivial codebases can achieve significant performance improvements.
+
+
+    I will illustrate this idea through the story of a 2x performance patch I made for a game as a side project by explaining not just what was done, but more importantly how and why it was possible to achieve in the first place.
+
+
+    While we will show some code and explain how it was made faster, this talk will put a strong emphasis on a wider spectrum such as profiling, learning, planning, curiosity and personal motivation.
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Mathieu Ropert
+
+
+    French C++ consultant and trainer with a passion for game development and performance. Past speaker at CppCon, Meeting C++, ACCU and code::dive. Used to run the Paris C++ User Group. Currently lives in Sweden. Still thinks your build should be destroyed.
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i3.ytimg.com/vi/vW-xgQM0iwk/hqdefault.jpg
+- video_id: udHksfcEaoQ
+  title: How to Properly Implement Code Quality Gates in your Development Process - Paul Jansen - ACCU 2026
+  url: https://www.youtube.com/watch?v=udHksfcEaoQ
+  published: 2026-11-19 15:37:42+00:00
+  updated: 2026-11-20 19:16:10+00:00
+  description: 'ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    ---
+
+
+    How to Properly Implement Code Quality Gates in your Development Process - Paul Jansen - ACCU 2026
+
+    ---
+
+
+    Using Quality Gates in your development process is a great way to encourage software quality improvements. However, bad quality gates cause a lot of frustration in organizations, so you should carefully consider how you implement them.
+
+
+    We have implemented quality gates for thousands of industrial software projects (mostly C and C++), and during this talk we share our insights and best practises. We will answer questions like:
+
+
+    - Which quality metrics should you gate?
+
+    - Where in the process should you put your gates?
+
+    - Should gates be absolute (no violations allowed) or relative (no violations compared to the previous analysis)?
+
+
+    Slides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026
+
+    ---
+
+
+    Paul Jansen
+
+
+    Paul Jansen (1967) graduated from the University of Amsterdam in computing science and philosophy (both cum laude). At Philips Research he was a computer scientist in the field of compiler construction and domain-specific languages. After a brief stay at Atos Origin and QA Systems, he founded TIOBE Software in 2000. Paul Jansen is the driving force behind the definition of the TIOBE Quality Indicator (TQI) and the famous TIOBE index that is published every month.
+
+    Video Sponsored By JetBrains, Bloomberg Engineering & HRT
+
+    ---
+
+
+    The ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is ''Professionalism in Programming'', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference, like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.
+
+    Discounted rates for members.
+
+    ACCU Membership: https://tinyurl.com/ydnfkcyn
+
+    2026 Program: https://accuonsea.uk/2026/schedule/index.html
+
+    https://accu.org
+
+    https://www.accuconference.org/
+
+    https://mastodon.social/@ACCUConf
+
+    https://www.linkedin.com/showcase/accu-conference/
+
+    https://bsky.app/profile/accuconf.bsky.social
+
+    https://www.facebook.com/accuorg
+
+    https://www.reddit.com/r/ACCUConf/
+
+    ---
+
+
+    YouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk
+
+
+    #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/udHksfcEaoQ/hqdefault.jpg
+- video_id: 2XvLjFQFx9M
+  title: Constraining Templates Before and After C++20 - The What, the How, and the Why - Johannes Kalmbach
+  url: https://www.youtube.com/watch?v=2XvLjFQFx9M
+  published: 2026-11-16 13:35:58+00:00
+  updated: 2026-11-20 21:13:50+00:00
+  description: "ACCU Membership: https://tinyurl.com/ydnfkcyn\n---\n\nConstraining Templates Before and After C++20 - The What, the How, and the Why - Johannes Kalmbach - ACCU 2026\n---\n\nThe simplest template declaration template ＜typename T＞ class C {...}; is often misleading. Most templates, both classes and functions, do not accept arbitrary types but impose additional constraints on their template arguments. When these constraints are absent from the template declaration, the compiler leaks implementation details through often-unreadable error messages when template instantiation fails because of invalid template arguments. This talk provides a comprehensive overview of constraint techniques available in C++17 and earlier (particularly SFINAE-based approaches like std::enable_if and std::void_t) as well as concepts and requires clauses that have revolutionized template constraints since C++20. We will also explore how to effectively use macros to bridge both approaches with a unified\
+    \ syntax, gaining the improved ergonomics of C++20 concepts while maintaining compatibility with older standards. \n\nSlides: https://github.com/Digital-Medium/ACCU-On-Sea-Slides-2026\n---\n\nJohannes Kalmbach\n\nI am a researcher and PhD candidate at the University of Freiburg where I use modern C++ to build QLever, a highly efficient RDF graph database for knowledge graphs with hundreds of billions of statements. I have recently cofounded QLeverize AG which provides commercial support for QLever\nVideo Sponsored By JetBrains, Bloomberg Engineering & HRT\n---\n\nThe ACCU Conference is the annual conference of the ACCU membership, but is open to any and all who wish to attend. The tagline for the ACCU is 'Professionalism in Programming', which captures the whole spectrum of programming languages, tools, techniques and processes involved in advancing our craft. While there remains a core of C and C++ - with many members participating in respective ISO standards bodies - the conference,\
+    \ like the organisation, embraces other language ecosystems and you should expect to see sessions on C#, D, F#, Go, Javascript, Haskell, Java, Kotlin, Lisp, Python, Ruby, Rust, Swift and more.The ACCU Conference is a conference by programmers for programmers about programming.\nDiscounted rates for members.\nACCU Membership: https://tinyurl.com/ydnfkcyn\n2026 Program: https://accuonsea.uk/2026/schedule/index.html\nhttps://accu.org\nhttps://www.accuconference.org/\nhttps://mastodon.social/@ACCUConf\nhttps://www.linkedin.com/showcase/accu-conference/\nhttps://bsky.app/profile/accuconf.bsky.social\nhttps://www.facebook.com/accuorg\nhttps://www.reddit.com/r/ACCUConf/\n---\n\nYouTube Videos Filmed, Edited & Optimised by Digital Medium: https://events.digital-medium.co.uk\n\n#cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i3.ytimg.com/vi/2XvLjFQFx9M/hqdefault.jpg
 - video_id: -FP6tLlCxWE
   title: Fearless Concurrency in C++ - Tristan Brindle - ACCU 2026
   url: https://www.youtube.com/watch?v=-FP6tLlCxWE

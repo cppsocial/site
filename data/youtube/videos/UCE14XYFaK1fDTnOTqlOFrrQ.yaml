@@ -1,5 +1,63 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: AQHriD4Q2DI
+  title: 'Which C++ Best Practices Change When Writing Code with AI :: Amir Kirsh'
+  url: https://www.youtube.com/watch?v=AQHriD4Q2DI
+  published: 2026-11-22 12:32:36+00:00
+  updated: 2026-11-22 12:32:37+00:00
+  description: 'Presented at Core C++ 2026 conference, Tel Aviv.
+
+
+    Generative AI is shifting the C++ developer’s primary role from author to reviewer and architect. In this talk, we want to address the question: which C++ language features and best practices become more important, and which lose importance, when AI becomes the main coder.
+
+
+    We examine whether there are features that primarily aided the human coder and are now less critical, whether certain knowledge that was once important has become less crucial, and which features and practices have become essential for C++ developers working with AI.
+
+
+    Attendees will leave with:
+
+
+    A practical taxonomy of C++ feature categories whose relative importance changes in an AI-centric workflow.
+
+    A set of code-review principles that prioritize enforcement and maintainability.
+
+    Concrete guidance on how to evolve our C++ focus so that AI accelerates delivery without eroding maintainability or correctness.
+
+
+    =====
+
+
+    Amir Kirsh
+
+
+    Amir Kirsh is a C++ lecturer at the Academic College of Tel-Aviv-Yaffo and Tel-Aviv University, previously the Chief Programmer at Comverse, after being CTO and VP R&D at a startup acquired by Comverse. Amir is also co-organizer of the annual Core C++ conference and the Core C++ meetup group.'
+  thumbnail_url: https://i2.ytimg.com/vi/AQHriD4Q2DI/hqdefault.jpg
+- video_id: AKO5A1bdwuM
+  title: 'C++26 Uncovered: Everything You Need to Know About the New Standard :: Inbal Levi'
+  url: https://www.youtube.com/watch?v=AKO5A1bdwuM
+  published: 2026-11-16 16:10:41+00:00
+  updated: 2026-11-19 21:51:58+00:00
+  description: 'Presented at Core C++ 2026 conference, Tel Aviv.
+
+    C++26 is here, bringing one of the most feature-rich standards in the history of the language. This talk will uncover everything you need to know about the new standard from within—spanning core language improvements, powerful compile-time capabilities, safer programming models, and major library additions.
+
+
+    From compile-time reflection and design-by-contract to saturating arithmetic, SIMD, linear algebra, async execution, and new debugging tools, this talk explores the features shaping the next generation of C++. During our journey, we’ll examine not just what these features are, but why they were added, how they fit into the evolving design of modern C++, and the real-world problems they solve.
+
+
+    Whether you write performance-critical code, maintain large systems, or simply want to stay at the forefront of the language, you''ll leave with a picture of the changes in C++26 and how to apply them effectively in your own projects!
+
+    =====
+
+
+    Inbal Levi
+
+
+    Inbal Levi is a Lead Software Engineer with an interest in code readability, compilers, language and software design. She is an active member of the ISO C++ Standards Committee as Library Evolution Work Group Chair, and as the ISO C++ Israeli NB Chair.
+
+
+    Inbal is also a director at ISO C++ Foundation and the Boost Foundation and puts effort into evolving both the local and international C++ communities, as an organizer of the CoreC++ conference and meetup group, and as the program chair of C++Now.'
+  thumbnail_url: https://i2.ytimg.com/vi/AKO5A1bdwuM/hqdefault.jpg
 - video_id: 9yk--hL0Tco
   title: 'The Future of C++ in a Heterogeneous World: Lessons from Android OS at Scale :: Dori Exterman'
   url: https://www.youtube.com/watch?v=9yk--hL0Tco

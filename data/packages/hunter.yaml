@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: hunter
 repository: https://github.com/cpp-pm/hunter
-revision: 997fab148b96896c5276cf1bfc0190da80dd5129
+revision: d7f9d8b99de0aba7041806d7ae8dc399a8b86477
 packages:
 - id: hunter:ARM_NEON_2_x86_SSE
   registry: hunter
@@ -12064,6 +12064,24 @@ packages:
   default_version: 1.0.4
   recipe_path: cmake/projects/soil/hunter.cmake
   native_url: https://hunter.readthedocs.io/en/latest/packages/pkg/soil.html
+- id: hunter:soralog
+  registry: hunter
+  name: soralog
+  repository_url: https://github.com/xdimon/soralog
+  versions:
+  - version: 0.3.2
+    artifacts:
+    - url: https://github.com/xDimon/soralog/archive/refs/tags/v0.3.2.tar.gz
+      checksums:
+      - sha1:d8c9e4de276367f04e9d334953947a141e011a2e
+  - version: 0.4.0
+    artifacts:
+    - url: https://github.com/xDimon/soralog/archive/refs/tags/v0.4.0.tar.gz
+      checksums:
+      - sha1:37ead569826d16f3bf03989a1934475d12d4b528
+  default_version: 0.4.0
+  recipe_path: cmake/projects/soralog/hunter.cmake
+  native_url: https://hunter.readthedocs.io/en/latest/packages/pkg/soralog.html
 - id: hunter:sources_for_android_sdk_packer
   registry: hunter
   name: sources_for_android_sdk_packer

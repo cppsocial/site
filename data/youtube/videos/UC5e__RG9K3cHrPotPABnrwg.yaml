@@ -1,5 +1,135 @@
 # Maintained by meta-updater youtube. Manual edits are preserved.
 # Set hidden: true and retain only video_id to suppress an item.
+- video_id: QsVTEYVO230
+  title: 'Lightning Talk: Generative C++ - Alon Wolf - C++Now 2026'
+  url: https://www.youtube.com/watch?v=QsVTEYVO230
+  published: 2026-11-22 16:00:10+00:00
+  updated: 2026-11-22 16:00:12+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: Generative C++ - Alon Wolf - C++Now 2026
+
+    ---
+
+
+    Generate C++ classes, reflection meta data, interfaces, and other software components which will be compiled as part of the current project - all at compile-time by using template metaprogramming, constexpr functions, and C++20''s modules.
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Alon Wolf
+
+
+    Alon is a Senior Software Engineer at Medtronic specializing in 3D and computer graphics with a passion for high performance. He has developed many custom simulation and rendering engines for different platforms using modern C++. He also writes a C++ technical blog and participates in game jams.
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/QsVTEYVO230/hqdefault.jpg
+- video_id: QdD4-cPlG5c
+  title: 'Lightning Talk: The Unanticipated Allocator - Jeff Trull - C++Now 2026'
+  url: https://www.youtube.com/watch?v=QdD4-cPlG5c
+  published: 2026-11-20 16:00:35+00:00
+  updated: 2026-11-22 05:22:45+00:00
+  description: 'https://www.cppnow.org
+
+    ---
+
+
+    Lightning Talk: The Unanticipated Allocator - Jeff Trull - C++Now 2026
+
+    ---
+
+
+    Contemporary memory allocators struggle when faced with many small requests of different sizes. Jeff will describe a programming task with those characteristics, show what he learned, and propose one solution.
+
+    ---
+
+
+    think-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech
+
+    ---
+
+
+    Jeff Trull
+
+
+    Jeff began his professional career as a microprocessor hardware designer and has progressed through CAD and finally into embedded software development. He is a consultant and available for work!
+
+    ---
+
+
+    C++Now is an annual onsite international C++ programming and coding conference held in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.
+
+    Annual CppNow Conference - https://www.cppnow.org
+
+    https://www.linkedin.com/company/cppnow
+
+    https://twitter.com/cppnow
+
+    https://www.facebook.com/CppNow
+
+    https://www.reddit.com/r/CppNow
+
+    https://mastodon.social/@cppnow
+
+    Video Sponsors: Bloomberg
+
+    ---
+
+
+    Videos Filmed & Edited By Bash Films: https://bashfilms.com/
+
+    YouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk
+
+    ---
+
+
+    #boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk'
+  thumbnail_url: https://i2.ytimg.com/vi/QdD4-cPlG5c/hqdefault.jpg
+- video_id: qlDhEPgE94g
+  title: 'Lightning Talk: Organic Evolution of Reflection in Apache Thrift  - Shai Szulanski - C++Now 2026'
+  url: https://www.youtube.com/watch?v=qlDhEPgE94g
+  published: 2026-11-17 16:15:21+00:00
+  updated: 2026-11-19 07:41:26+00:00
+  description: "https://www.cppnow.org\n---\n\nLightning Talk: Organic Evolution of Reflection in Apache Thrift  - Shai Szulanski - C++Now 2026\n---\n\nPresents some patterns produced by our users that hint towards language level reflection and how we generalized them, as a sort of desiderata for things to be built once C++26 is available. \n---\n\nShai Szulanski\n\nShai is a software engineer at Meta where he works on the Thrift RPC and serialization library, covering a variety of performance and usability topics. He also contributes to the folly::coro coroutine library. \n---\n\nthink-cell develops one of the world’s leading PowerPoint applications, with C++ at the core of everything we build, from layout algorithms to deep integration with Microsoft Office. Interested in working on challenging C++ problems with real-world impact? Explore our open roles: https://www.think-cell.com/en/career/tech\n---\n\nC++Now is an annual onsite international C++ programming and coding conference held\
+    \ in Aspen, Colarado. For all C++ developers, C++ software engineers and those involved with the C++ language, CppNow provides an indepth and technical content provided by the best and brightest C++ experts of the C++ world.\nAnnual CppNow Conference - https://www.cppnow.org\nhttps://www.linkedin.com/company/cppnow\nhttps://twitter.com/cppnow\nhttps://www.facebook.com/CppNow\nhttps://www.reddit.com/r/CppNow\nhttps://mastodon.social/@cppnow\nVideo Sponsors: Bloomberg\n---\n\nVideos Filmed & Edited By Bash Films: https://bashfilms.com/\nYouTube Channel Managed & Optimized By Digital Medium Ltd: https://events.digital-medium.co.uk\n---\n\n#boost #cpp #cplusplus #programming #coding #softwareengineering #softwaredeveloper #code #cplusplusprogramming #cplusplustutorial #cplus #softwaredevelopment #coder #talk"
+  thumbnail_url: https://i2.ytimg.com/vi/qlDhEPgE94g/hqdefault.jpg
 - video_id: degCN1CSd5w
   title: 'Lightning Talk: Our Most Treacherous Adversary - James McNellis - C++Now 2026'
   url: https://www.youtube.com/watch?v=degCN1CSd5w

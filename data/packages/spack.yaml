@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: spack
 repository: https://github.com/spack/spack-packages
-revision: fd2cb2fda34c312377cd79beb27756a9928b5d9c
+revision: 89d93b22576e8961cf892acaeb030f81fe7e458e
 packages:
 - id: spack:3dtk
   registry: spack
@@ -3351,6 +3351,7 @@ packages:
   - automake
   - c
   - exmcutils
+  - gnuconfig
   - libtool
   - m4
   - mpi
@@ -3375,6 +3376,9 @@ packages:
   - name: exmcutils
     constraint: exmcutils
     condition: '@0.9.1:'
+  - name: gnuconfig
+    constraint: gnuconfig
+    kind: build
   - name: libtool
     constraint: libtool
     kind: build
@@ -5187,549 +5191,37 @@ packages:
 - id: spack:amdblis
   registry: spack
   name: amdblis
-  summary: AMD Optimized BLIS. BLIS is a portable software framework for instantiating high-performance BLAS-like dense linear algebra libraries. The framework was...
-  description: <p>AMD Optimized BLIS.</p><p>BLIS is a portable software framework for instantiating high-performance BLAS-like dense linear algebra libraries. The framework was designed to isolate essential kernels of computation that, when optimized, immediately enable optimized implementations of most of its commonly used and computationally intensive operations.</p>
+  summary: AMD Optimized BLIS. This package has been renamed to aocl-blas to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so existing...
+  description: <p>AMD Optimized BLIS.</p><p>This package has been renamed to aocl-blas to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so existing specs that reference amdblis continue to resolve. Build logic is inherited from :class:AoclBlas; use aocl-blas for new work.</p>
   description_format: html
-  licenses:
-  - BSD-3-Clause
-  homepage: https://www.amd.com/en/developer/aocl/blis.html
-  repository_url: https://github.com/amd/blis
-  maintainers:
-  - amd-toolchain-support
-  dependencies:
-  - c
-  - cxx
-  - fortran
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
-    kind: build
-  options:
-  - aocl_gemm
-  - ilp64
-  - logging
-  - suphandling
-  - tracing
-  default_options:
-    aocl_gemm: 'false'
-    ilp64: 'false'
-    logging: 'false'
-    suphandling: 'true'
-    tracing: 'false'
-  features:
-  - name: aocl_gemm
-    description: aocl_gemm support
-    default: 'false'
-    condition: '@4.1:'
-  - name: ilp64
-    description: ILP64 support
-    default: 'false'
-    condition: '@3.0.1:'
-  - name: logging
-    description: Enable AOCL DTL Logging
-    default: 'false'
-  - name: suphandling
-    description: Small Unpacked Kernel handling
-    default: 'true'
-  - name: tracing
-    description: Enable AOCL DTL Tracing
-    default: 'false'
-  versions:
-  - version: '2.2'
-    artifacts:
-    - checksums:
-      - sha256:e1feb60ac919cf6d233c43c424f6a8a11eab2c62c2c6e3f2652c15ee9063c0c9
-  - version: '3.0'
-    artifacts:
-    - checksums:
-      - sha256:ac848c040cd6c3550fe49148dbdf109216cad72d3235763ee7ee8134e1528517
-  - version: 3.0.1
-    artifacts:
-    - checksums:
-      - sha256:dff643e6ef946846e91e8f81b75ff8fe21f1f2d227599aecd654d184d9beff3e
-  - version: '3.1'
-    artifacts:
-    - checksums:
-      - sha256:2891948925b9db99eec02a1917d9887a7bee9ad2afc5421c9ba58602a620f2bf
-  - version: '3.2'
-    artifacts:
-    - checksums:
-      - sha256:5a400ee4fc324e224e12f73cc37b915a00f92b400443b15ce3350278ad46fff6
-  - version: '4.0'
-    artifacts:
-    - checksums:
-      - sha256:cddd31176834a932753ac0fc4c76332868feab3e9ac607fa197d8b44c1e74a41
-  - version: '4.1'
-    artifacts:
-    - checksums:
-      - sha256:a05c6c7d359232580d1d599696053ad0beeedf50f3b88d5d22ee7d34375ab577
-  - version: '4.2'
-    artifacts:
-    - checksums:
-      - sha256:0e1baf850ba0e6f99e79f64bbb0a59fcb838ddb5028e24527f52b407c3c62963
-  - version: '5.0'
-    artifacts:
-    - checksums:
-      - sha256:5abb34972b88b2839709d0af8785662bc651c7806ccfa41d386d93c900169bc2
-  - version: '5.1'
-    artifacts:
-    - checksums:
-      - sha256:4ab210cea8753f4be9646a3ad8e6b42c7d19380084a66312497c97278b8c76a4
-  - version: '5.2'
-    artifacts:
-    - checksums:
-      - sha256:c553bd543eedc87920df9b82634ae4c02662145ed737f51fdf4c9bca5e588028
-  - version: '5.3'
-    artifacts:
-    - checksums:
-      - sha256:0d456548174a5a71df1225b5648d802d53d0351187ae2f829ecf5122f3aeab9e
   recipe_path: repos/spack_repo/builtin/packages/amdblis/package.py
 - id: spack:amdfftw
   registry: spack
   name: amdfftw
-  summary: FFTW (AMD Optimized version) is a comprehensive collection of fast C routines for computing the Discrete Fourier Transform (DFT) and various special cases...
-  description: <p>FFTW (AMD Optimized version) is a comprehensive collection of fast C routines for computing the Discrete Fourier Transform (DFT) and various special cases thereof.</p><p>It is an open-source implementation of the Fast Fourier transform algorithm. It can compute transforms of real and complex-values arrays of arbitrary size and dimension. AMD Optimized FFTW is the optimized FFTW implementation targeted for AMD CPUs.</p>
+  summary: FFTW (AMD Optimized version). This package has been renamed to aocl-fftw to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so...
+  description: <p>FFTW (AMD Optimized version).</p><p>This package has been renamed to aocl-fftw to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so existing specs that reference amdfftw continue to resolve. Build logic is inherited from :class:AoclFftw; use aocl-fftw for new work.</p>
   description_format: html
-  licenses:
-  - GPL-2.0-only
-  homepage: https://www.amd.com/en/developer/aocl/fftw.html
-  repository_url: https://github.com/amd/amd-fftw
-  maintainers:
-  - amd-toolchain-support
-  dependencies:
-  - c
-  - fortran
-  - texinfo
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: fortran
-    constraint: fortran
-    kind: build
-  - name: texinfo
-    constraint: texinfo
-  options:
-  - amd-app-opt
-  - amd-dynamic-dispatcher
-  - amd-fast-planner
-  - amd-mpi-vader-limit
-  - amd-top-n-planner
-  - amd-trans
-  - debug
-  - openmp
-  - shared
-  - static
-  - threads
-  default_options:
-    amd-app-opt: 'false'
-    amd-dynamic-dispatcher: 'false'
-    amd-fast-planner: 'false'
-    amd-mpi-vader-limit: 'false'
-    amd-top-n-planner: 'false'
-    amd-trans: 'false'
-    debug: 'false'
-    openmp: 'true'
-    shared: 'true'
-    static: 'false'
-    threads: 'false'
-  features:
-  - name: amd-app-opt
-    description: Build with amd-app-opt suppport
-    default: 'false'
-    condition: '@3.1: ~mpi'
-  - name: amd-dynamic-dispatcher
-    description: Single portable optimized library to execute on different x86 CPU architectures
-    default: 'false'
-    condition: '@4.1: %aocc@4.1.0:'
-  - name: amd-dynamic-dispatcher
-    description: Single portable optimized library to execute on different x86 CPU architectures
-    default: 'false'
-    condition: '@3.2: %gcc'
-  - name: amd-fast-planner
-    description: Option to reduce the planning time without much tradeoff in the performance. It is supported for float and double precisions only.
-    default: 'false'
-    condition: '@3.0:'
-  - name: amd-mpi-vader-limit
-    description: Build with amd-mpi-vader-limit support
-    default: 'false'
-    condition: '@3.0.1:'
-  - name: amd-top-n-planner
-    description: Build with amd-top-n-planner support
-    default: 'false'
-    condition: '@3.0.1: ~amd-fast-planner ~mpi ~openmp ~threads'
-  - name: amd-trans
-    description: Build with amd-trans suppport
-    default: 'false'
-    condition: ~mpi ~openmp ~threads
-  - name: debug
-    description: Builds a debug version of the library
-    default: 'false'
-  - name: openmp
-    description: Enable OpenMP support
-    default: 'true'
-  - name: shared
-    description: Builds a shared version of the library
-    default: 'true'
-  - name: static
-    description: Build with static suppport
-    default: 'false'
-  - name: threads
-    description: Enable SMP threads support
-    default: 'false'
-  versions:
-  - version: '2.2'
-    artifacts:
-    - checksums:
-      - sha256:de9d777236fb290c335860b458131678f75aa0799c641490c644c843f0e246f8
-  - version: '3.0'
-    artifacts:
-    - checksums:
-      - sha256:a69deaf45478a59a69f77c4f7e9872967f1cfe996592dd12beb6318f18ea0bcd
-  - version: 3.0.1
-    artifacts:
-    - checksums:
-      - sha256:87030c6bbb9c710f0a64f4f306ba6aa91dc4b182bb804c9022b35aef274d1a4c
-  - version: '3.1'
-    artifacts:
-    - checksums:
-      - sha256:3e777f3acef13fa1910db097e818b1d0d03a6a36ef41186247c6ab1ab0afc132
-  - version: '3.2'
-    artifacts:
-    - checksums:
-      - sha256:31cab17a93e03b5b606e88dd6116a1055b8f49542d7d0890dbfcca057087b8d0
-  - version: '4.0'
-    artifacts:
-    - checksums:
-      - sha256:5f02cb05f224bd86bd88ec6272b294c26dba3b1d22c7fb298745fd7b9d2271c0
-  - version: '4.1'
-    artifacts:
-    - checksums:
-      - sha256:f1cfecfcc0729f96a5bd61c6b26f3fa43bb0662d3fff370d4f73490c60cf4e59
-  - version: '4.2'
-    artifacts:
-    - checksums:
-      - sha256:391ef7d933e696762e3547a35b58ab18d22a6cf3e199c74889bcf25a1d1fc89b
-  - version: '5.0'
-    artifacts:
-    - checksums:
-      - sha256:bead6c08309a206f8a6258971272affcca07f11eb57b5ecd8496e2e7e3ead877
-  - version: '5.1'
-    artifacts:
-    - checksums:
-      - sha256:4cc0d6985afc5ce14cafc195ad46d9876ac4f35b959861b41a3b681385d7320d
-  - version: '5.2'
-    artifacts:
-    - checksums:
-      - sha256:143c7a936fd197a94551aa1c67d7ae7cbf7d96338947aa21d3007df7aea46c78
-  - version: '5.3'
-    artifacts:
-    - checksums:
-      - sha256:175a426dbbe9ba332416adeead59af364177016c7c3057c597a26c0159c83c43
   recipe_path: repos/spack_repo/builtin/packages/amdfftw/package.py
 - id: spack:amdlibflame
   registry: spack
   name: amdlibflame
-  summary: libFLAME (AMD Optimized version) is a portable library for dense matrix computations, providing much of the functionality present in Linear Algebra Package...
-  description: <p>libFLAME (AMD Optimized version) is a portable library for dense matrix computations, providing much of the functionality present in Linear Algebra Package (LAPACK). It includes a compatibility layer, FLAPACK, which includes complete LAPACK implementation.</p><p>The library provides scientific and numerical computing communities with a modern, high-performance dense linear algebra library that is extensible, easy to use, and available under an open source license. libFLAME is a C-only implementation and does not depend on any external FORTRAN libraries including LAPACK. There is an optional backward compatibility layer, lapack2flame that maps LAPACK routine invocations to their corresponding native C implementations in libFLAME. This allows legacy applications to start taking advantage of libFLAME with virtually no changes to their source code.</p>
+  summary: libFLAME (AMD Optimized version). This package has been renamed to aocl-lapack to match the upstream AOCL naming. It is kept as a thin, fully deprecated...
+  description: <p>libFLAME (AMD Optimized version).</p><p>This package has been renamed to aocl-lapack to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so existing specs that reference amdlibflame continue to resolve. Build logic is inherited from :class:AoclLapack; use aocl-lapack for new work.</p>
   description_format: html
-  licenses:
-  - BSD-3-Clause
-  homepage: https://www.amd.com/en/developer/aocl/blis.html#libflame
-  repository_url: https://github.com/amd/amdlibflame
-  maintainers:
-  - amd-toolchain-support
-  dependencies:
-  - c
-  - cxx
-  - fortran
-  - gmake
-  - python
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
-    kind: build
-  - name: gmake
-    constraint: 'gmake@4:'
-    kind: build
-    condition: '@3.0.1,3.1:'
-  - name: python
-    constraint: python+pythoncmd
-    kind: build
-  options:
-  - ilp64
-  - logging
-  - static
-  - tracing
-  - vectorization
-  default_options:
-    ilp64: 'false'
-    logging: 'False'
-    static: 'false'
-    tracing: 'False'
-    vectorization: auto
-  features:
-  - name: ilp64
-    description: Build with ILP64 support
-    default: 'false'
-    condition: '@3.0.1: '
-  - name: logging
-    description: Enable AOCL DTL Logging
-    default: 'False'
-  - name: static
-    description: Build static library
-    default: 'false'
-    condition: '@4.2:'
-  - name: tracing
-    description: Enable AOCL DTL Tracing
-    default: 'False'
-  - name: vectorization
-    description: Use hardware vectorization support
-    values:
-    - auto
-    - avx2
-    - avx512
-    - none
-    default: auto
-    condition: '@4.2:'
-  versions:
-  - version: '2.2'
-    artifacts:
-    - checksums:
-      - sha256:12b9c1f92d2c2fa637305aaa15cf706652406f210eaa5cbc17aaea9fcfa576dc
-  - version: '3.0'
-    artifacts:
-    - checksums:
-      - sha256:d94e08b688539748571e6d4c1ec1ce42732eac18bd75de989234983c33f01ced
-  - version: 3.0.1
-    artifacts:
-    - checksums:
-      - sha256:5859e7b39ffbe73115dd598b035f212d36310462cf3a45e555a5087301710776
-  - version: '3.1'
-    artifacts:
-    - checksums:
-      - sha256:4520fb93fcc89161f65a40810cae0fa1f87cecb242da4a69655f502545a53426
-  - version: '3.2'
-    artifacts:
-    - checksums:
-      - sha256:6b5337fb668b82d0ed0a4ab4b5af4e2f72e4cedbeeb4a8b6eb9a3ef057fb749a
-  - version: '4.0'
-    artifacts:
-    - checksums:
-      - sha256:bcb05763aa1df1e88f0da5e43ff86d956826cbea1d9c5ff591d78a3e091c66a4
-  - version: '4.1'
-    artifacts:
-    - checksums:
-      - sha256:8aed69c60d11cc17e058cabcb8a931cee4f343064ade3e73d3392b7214624b61
-  - version: '4.2'
-    artifacts:
-    - checksums:
-      - sha256:93a433c169528ffba74a99df0ba3ce3d5b1fab9bf06ce8d2fd72ee84768ed84c
-  - version: '5.0'
-    artifacts:
-    - checksums:
-      - sha256:3bee3712459a8c5bd728a521d8a4c8f46735730bf35d48c878d2fc45fc000918
-  - version: '5.1'
-    artifacts:
-    - checksums:
-      - sha256:25524ba78b5952303369fa0859d217e44071144fd122a9dc3f72ed0bd73e3b2d
-  - version: '5.2'
-    artifacts:
-    - checksums:
-      - sha256:fb5fe5128f718050c9911443fcf7ed91b60538a40d57084ed0124bb91afabb9b
-  - version: '5.3'
-    artifacts:
-    - checksums:
-      - sha256:ecb74c879b4d6bb33e159300304a9b48206d2c2b546dceb7d097b339eb127b9c
   recipe_path: repos/spack_repo/builtin/packages/amdlibflame/package.py
 - id: spack:amdlibm
   registry: spack
   name: amdlibm
-  summary: AMD LibM is a software library containing a collection of basic math functions optimized for x86-64 processor-based machines. It provides many routines from...
-  description: '<p>AMD LibM is a software library containing a collection of basic math functions optimized for x86-64 processor-based machines. It provides many routines from the list of standard C99 math functions. Applications can link into AMD LibM library and invoke math functions instead of compiler''s math functions for better accuracy and performance.</p><p>LICENSING INFORMATION: By downloading, installing and using this software, you agree to the terms and conditions of the AMD AOCL-FFTW license agreement. You may obtain a copy of this license agreement from https://www.amd.com/en/developer/aocl/libm/eula/libm-4-2-eula.html https://www.amd.com/en/developer/aocl/libm/libm-eula.html</p>'
+  summary: AMD LibM (AMD Optimized math library). This package has been renamed to aocl-libm to match the upstream AOCL naming. It is kept as a thin, fully deprecated...
+  description: <p>AMD LibM (AMD Optimized math library).</p><p>This package has been renamed to aocl-libm to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so existing specs that reference amdlibm continue to resolve. Build logic is inherited from :class:AoclLibm; use aocl-libm for new work.</p>
   description_format: html
-  licenses:
-  - BSD-3-Clause
-  homepage: https://www.amd.com/en/developer/aocl/libm.html
-  repository_url: https://github.com/amd/aocl-libm-ose
-  maintainers:
-  - amd-toolchain-support
-  dependencies:
-  - c
-  - cmake
-  - cxx
-  - mpfr
-  - python
-  - scons
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cmake
-    constraint: cmake@3.26:3.30.6
-    kind: build
-    condition: build_system=cmake
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: mpfr
-    constraint: mpfr
-    kind: link
-  - name: python
-    constraint: 'python@3.6.1:'
-    kind: build,run
-  - name: scons
-    constraint: scons@3.1.2:4.8.1
-    kind: build
-  options:
-  - verbose
-  default_options:
-    verbose: 'false'
-  features:
-  - name: verbose
-    description: Building with verbosity
-    default: 'false'
-    condition: '@:4.1'
-  versions:
-  - version: '2.2'
-  - version: '3.0'
-    artifacts:
-    - checksums:
-      - sha256:eb26b5e174f43ce083928d0d8748a6d6d74853333bba37d50057aac2bef7c7aa
-  - version: '3.1'
-    artifacts:
-    - checksums:
-      - sha256:dee487cc2d89c2dc93508be2c67592670ffc1d02776c017e8907317003f48845
-  - version: '3.2'
-    artifacts:
-    - checksums:
-      - sha256:c75b287c38a3ce997066af1f5c8d2b19fc460d5e56678ea81f3ac33eb79ec890
-  - version: '4.0'
-    artifacts:
-    - checksums:
-      - sha256:038c1eab544be77598eccda791b26553d3b9e2ee4ab3f5ad85fdd2a77d015a7d
-  - version: '4.1'
-    artifacts:
-    - checksums:
-      - sha256:5bbbbc6bc721d9a775822eab60fbc11eb245e77d9f105b4fcb26a54d01456122
-  - version: '4.2'
-    artifacts:
-    - checksums:
-      - sha256:58847b942e998b3f52eb41ae26403c7392d244fcafa707cbf23165aac24edd9e
-  - version: '5.0'
-    artifacts:
-    - checksums:
-      - sha256:ba1d50c068938c9a927e37e5630f683b6149d7d5a95efffeb76e7c9a8bcb2b5e
-  - version: '5.1'
-    artifacts:
-    - checksums:
-      - sha256:7acf2c98469353b60a59fad167a98e1ae689055a3faf8352a254832145c9d59e
-  - version: '5.2'
-    artifacts:
-    - checksums:
-      - sha256:5cec8d30dc1083923c332c80808eda637ebd385b02a0cebf65ce72b5c8cbc029
-  - version: '5.3'
-    artifacts:
-    - checksums:
-      - sha256:bbd97cbb3745afbeb203f6cdddadb410ea32f2fbcac807bcd0c27e6b7d1133e4
   recipe_path: repos/spack_repo/builtin/packages/amdlibm/package.py
 - id: spack:amdscalapack
   registry: spack
   name: amdscalapack
-  summary: ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. It depends on external libraries including BLAS...
-  description: <p>ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. It depends on external libraries including BLAS and LAPACK for Linear Algebra computations.</p><p>AMD's optimized version of ScaLAPACK enables using BLIS and LibFLAME library that have optimized dense matrix functions and solvers for AMD EPYC processor family CPUs.</p>
+  summary: ScaLAPACK (AMD Optimized version). This package has been renamed to aocl-scalapack to match the upstream AOCL naming. It is kept as a thin, fully deprecated...
+  description: <p>ScaLAPACK (AMD Optimized version).</p><p>This package has been renamed to aocl-scalapack to match the upstream AOCL naming. It is kept as a thin, fully deprecated alias so existing specs that reference amdscalapack continue to resolve. Build logic is inherited from :class:AoclScalapack; use aocl-scalapack for new work.</p>
   description_format: html
-  licenses:
-  - BSD-3-Clause-Open-MPI
-  homepage: https://www.amd.com/en/developer/aocl/scalapack.html
-  repository_url: https://github.com/amd/aocl-scalapack
-  maintainers:
-  - amd-toolchain-support
-  topics:
-  - e4s
-  dependencies:
-  - amdblis
-  - amdlibflame
-  - c
-  - fortran
-  dependency_details:
-  - name: amdblis
-    constraint: amdblis
-    condition: ^[virtuals=blas] amdblis
-  - name: amdlibflame
-    constraint: amdlibflame
-    condition: ^[virtuals=lapack] amdlibflame
-  - name: c
-    constraint: c
-    kind: build
-  - name: fortran
-    constraint: fortran
-    kind: build
-  options:
-  - ilp64
-  default_options:
-    ilp64: 'false'
-  features:
-  - name: ilp64
-    description: Build with ILP64 support
-    default: 'false'
-  versions:
-  - version: '2.2'
-    artifacts:
-    - checksums:
-      - sha256:2d64926864fc6d12157b86e3f88eb1a5205e7fc157bf67e7577d0f18b9a7484c
-  - version: '3.0'
-    artifacts:
-    - checksums:
-      - sha256:6e6f3578f44a8e64518d276e7580530599ecfa8729f568303ed2590688e7096f
-  - version: '3.1'
-    artifacts:
-    - checksums:
-      - sha256:4c2ee2c44644a0feec0c6fc1b1a413fa9028f14d7035d43a398f5afcfdbacb98
-  - version: '3.2'
-    artifacts:
-    - checksums:
-      - sha256:9e00979bb1be39d627bdacb01774bc043029840d542fafc934d16fec3e3b0892
-  - version: '4.0'
-    artifacts:
-    - checksums:
-      - sha256:f02913b5984597b22cdb9a36198ed61039a1bf130308e778dc31b2a7eb88b33b
-  - version: '4.1'
-    artifacts:
-    - checksums:
-      - sha256:b2e51c3604e5869d1faaef2e52c92071fcb3de1345aebb2ea172206622067ad9
-  - version: '4.2'
-    artifacts:
-    - checksums:
-      - sha256:c6e9a846c05cdc05252b0b5f264164329812800bf13f9d97c77114dc138e6ccb
-  - version: '5.0'
-    artifacts:
-    - checksums:
-      - sha256:a33cf16c51cfd65c7acb5fbdb8884a5c147cdefea73931b07863c56d54f812cc
-  - version: '5.1'
-    artifacts:
-    - checksums:
-      - sha256:92f6f6b2081e27731c8b9e96c742203777cc7f2a848b96ca7511f4d259142b37
-  - version: '5.2'
-    artifacts:
-    - checksums:
-      - sha256:ff01f0f39c9e6d44fa493e1c68d9862d2600f425e9caaec1fe5179c10debf1d9
-  - version: '5.3'
-    artifacts:
-    - checksums:
-      - sha256:2bd0ef1d8bbd9990a8bc7b33ad7c32db788f39b9730b110d15737837111eacff
   recipe_path: repos/spack_repo/builtin/packages/amdscalapack/package.py
 - id: spack:amdsmi
   registry: spack
@@ -8364,6 +7856,112 @@ packages:
   - name: license-agreed
     default: 'false'
   recipe_path: repos/spack_repo/builtin/packages/aocc/package.py
+- id: spack:aocl-blas
+  registry: spack
+  name: aocl-blas
+  summary: 'AOCL-BLAS: AMD Optimized BLIS. BLIS is a portable software framework for instantiating high-performance BLAS-like dense linear algebra libraries. The...'
+  description: '<p>AOCL-BLAS: AMD Optimized BLIS.</p><p>BLIS is a portable software framework for instantiating high-performance BLAS-like dense linear algebra libraries. The framework was designed to isolate essential kernels of computation that, when optimized, immediately enable optimized implementations of most of its commonly used and computationally intensive operations.</p>'
+  description_format: html
+  licenses:
+  - BSD-3-Clause
+  homepage: https://www.amd.com/en/developer/aocl/blis.html
+  repository_url: https://github.com/amd/blis
+  maintainers:
+  - amd-toolchain-support
+  dependencies:
+  - c
+  - cxx
+  - fortran
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: fortran
+    constraint: fortran
+    kind: build
+  options:
+  - aocl_gemm
+  - ilp64
+  - logging
+  - suphandling
+  - tracing
+  default_options:
+    aocl_gemm: 'false'
+    ilp64: 'false'
+    logging: 'false'
+    suphandling: 'true'
+    tracing: 'false'
+  features:
+  - name: aocl_gemm
+    description: aocl_gemm support
+    default: 'false'
+    condition: '@4.1:'
+  - name: ilp64
+    description: ILP64 support
+    default: 'false'
+    condition: '@3.0.1:'
+  - name: logging
+    description: Enable AOCL DTL Logging
+    default: 'false'
+  - name: suphandling
+    description: Small Unpacked Kernel handling
+    default: 'true'
+  - name: tracing
+    description: Enable AOCL DTL Tracing
+    default: 'false'
+  versions:
+  - version: '2.2'
+    artifacts:
+    - checksums:
+      - sha256:e1feb60ac919cf6d233c43c424f6a8a11eab2c62c2c6e3f2652c15ee9063c0c9
+  - version: '3.0'
+    artifacts:
+    - checksums:
+      - sha256:ac848c040cd6c3550fe49148dbdf109216cad72d3235763ee7ee8134e1528517
+  - version: 3.0.1
+    artifacts:
+    - checksums:
+      - sha256:dff643e6ef946846e91e8f81b75ff8fe21f1f2d227599aecd654d184d9beff3e
+  - version: '3.1'
+    artifacts:
+    - checksums:
+      - sha256:2891948925b9db99eec02a1917d9887a7bee9ad2afc5421c9ba58602a620f2bf
+  - version: '3.2'
+    artifacts:
+    - checksums:
+      - sha256:5a400ee4fc324e224e12f73cc37b915a00f92b400443b15ce3350278ad46fff6
+  - version: '4.0'
+    artifacts:
+    - checksums:
+      - sha256:cddd31176834a932753ac0fc4c76332868feab3e9ac607fa197d8b44c1e74a41
+  - version: '4.1'
+    artifacts:
+    - checksums:
+      - sha256:a05c6c7d359232580d1d599696053ad0beeedf50f3b88d5d22ee7d34375ab577
+  - version: '4.2'
+    artifacts:
+    - checksums:
+      - sha256:0e1baf850ba0e6f99e79f64bbb0a59fcb838ddb5028e24527f52b407c3c62963
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:5abb34972b88b2839709d0af8785662bc651c7806ccfa41d386d93c900169bc2
+  - version: '5.1'
+    artifacts:
+    - checksums:
+      - sha256:4ab210cea8753f4be9646a3ad8e6b42c7d19380084a66312497c97278b8c76a4
+  - version: '5.2'
+    artifacts:
+    - checksums:
+      - sha256:c553bd543eedc87920df9b82634ae4c02662145ed737f51fdf4c9bca5e588028
+  - version: '5.3'
+    artifacts:
+    - checksums:
+      - sha256:0d456548174a5a71df1225b5648d802d53d0351187ae2f829ecf5122f3aeab9e
+  recipe_path: repos/spack_repo/builtin/packages/aocl_blas/package.py
 - id: spack:aocl-compression
   registry: spack
   name: aocl-compression
@@ -8564,10 +8162,10 @@ packages:
   maintainers:
   - amd-toolchain-support
   dependencies:
-  - amdblis threads=none
-  - amdblis threads=openmp
-  - amdlibflame threads=none
-  - amdlibflame threads=openmp
+  - aocl-blas threads=none
+  - aocl-blas threads=openmp
+  - aocl-lapack threads=none
+  - aocl-lapack threads=openmp
   - aocl-sparse
   - boost
   - c
@@ -8575,17 +8173,17 @@ packages:
   - cxx
   - fortran
   dependency_details:
-  - name: amdblis threads=none
-    constraint: amdblis threads=none
+  - name: aocl-blas threads=none
+    constraint: aocl-blas threads=none
     condition: ~openmp
-  - name: amdblis threads=openmp
-    constraint: amdblis threads=openmp
+  - name: aocl-blas threads=openmp
+    constraint: aocl-blas threads=openmp
     condition: +openmp
-  - name: amdlibflame threads=none
-    constraint: amdlibflame threads=none
+  - name: aocl-lapack threads=none
+    constraint: aocl-lapack threads=none
     condition: ~openmp
-  - name: amdlibflame threads=openmp
-    constraint: amdlibflame threads=openmp
+  - name: aocl-lapack threads=openmp
+    constraint: aocl-lapack threads=openmp
     condition: +openmp
   - name: 'aocl-sparse '
     constraint: aocl-sparse +openmp
@@ -8740,6 +8338,361 @@ packages:
     - checksums:
       - sha256:103607ba75a84f623d8ad1a2164ea100a0ce925f75c9dfdb65933cf3982ecb29
   recipe_path: repos/spack_repo/builtin/packages/aocl_dlp/package.py
+- id: spack:aocl-fftw
+  registry: spack
+  name: aocl-fftw
+  summary: FFTW (AMD Optimized version) is a comprehensive collection of fast C routines for computing the Discrete Fourier Transform (DFT) and various special cases...
+  description: <p>FFTW (AMD Optimized version) is a comprehensive collection of fast C routines for computing the Discrete Fourier Transform (DFT) and various special cases thereof.</p><p>It is an open-source implementation of the Fast Fourier transform algorithm. It can compute transforms of real and complex-values arrays of arbitrary size and dimension. AMD Optimized FFTW is the optimized FFTW implementation targeted for AMD CPUs.</p>
+  description_format: html
+  licenses:
+  - GPL-2.0-only
+  homepage: https://www.amd.com/en/developer/aocl/fftw.html
+  repository_url: https://github.com/amd/amd-fftw
+  maintainers:
+  - amd-toolchain-support
+  dependencies:
+  - c
+  - fortran
+  - texinfo
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: fortran
+    constraint: fortran
+    kind: build
+  - name: texinfo
+    constraint: texinfo
+  options:
+  - amd-app-opt
+  - amd-dynamic-dispatcher
+  - amd-fast-planner
+  - amd-mpi-vader-limit
+  - amd-top-n-planner
+  - amd-trans
+  - debug
+  - openmp
+  - shared
+  - static
+  - threads
+  default_options:
+    amd-app-opt: 'false'
+    amd-dynamic-dispatcher: 'false'
+    amd-fast-planner: 'false'
+    amd-mpi-vader-limit: 'false'
+    amd-top-n-planner: 'false'
+    amd-trans: 'false'
+    debug: 'false'
+    openmp: 'true'
+    shared: 'true'
+    static: 'false'
+    threads: 'false'
+  features:
+  - name: amd-app-opt
+    description: Build with amd-app-opt suppport
+    default: 'false'
+    condition: '@3.1: ~mpi'
+  - name: amd-dynamic-dispatcher
+    description: Single portable optimized library to execute on different x86 CPU architectures
+    default: 'false'
+    condition: '@4.1: %aocc@4.1.0:'
+  - name: amd-dynamic-dispatcher
+    description: Single portable optimized library to execute on different x86 CPU architectures
+    default: 'false'
+    condition: '@3.2: %gcc'
+  - name: amd-fast-planner
+    description: Option to reduce the planning time without much tradeoff in the performance. It is supported for float and double precisions only.
+    default: 'false'
+    condition: '@3.0:'
+  - name: amd-mpi-vader-limit
+    description: Build with amd-mpi-vader-limit support
+    default: 'false'
+    condition: '@3.0.1:'
+  - name: amd-top-n-planner
+    description: Build with amd-top-n-planner support
+    default: 'false'
+    condition: '@3.0.1: ~amd-fast-planner ~mpi ~openmp ~threads'
+  - name: amd-trans
+    description: Build with amd-trans suppport
+    default: 'false'
+    condition: ~mpi ~openmp ~threads
+  - name: debug
+    description: Builds a debug version of the library
+    default: 'false'
+  - name: openmp
+    description: Enable OpenMP support
+    default: 'true'
+  - name: shared
+    description: Builds a shared version of the library
+    default: 'true'
+  - name: static
+    description: Build with static suppport
+    default: 'false'
+  - name: threads
+    description: Enable SMP threads support
+    default: 'false'
+  versions:
+  - version: '2.2'
+    artifacts:
+    - checksums:
+      - sha256:de9d777236fb290c335860b458131678f75aa0799c641490c644c843f0e246f8
+  - version: '3.0'
+    artifacts:
+    - checksums:
+      - sha256:a69deaf45478a59a69f77c4f7e9872967f1cfe996592dd12beb6318f18ea0bcd
+  - version: 3.0.1
+    artifacts:
+    - checksums:
+      - sha256:87030c6bbb9c710f0a64f4f306ba6aa91dc4b182bb804c9022b35aef274d1a4c
+  - version: '3.1'
+    artifacts:
+    - checksums:
+      - sha256:3e777f3acef13fa1910db097e818b1d0d03a6a36ef41186247c6ab1ab0afc132
+  - version: '3.2'
+    artifacts:
+    - checksums:
+      - sha256:31cab17a93e03b5b606e88dd6116a1055b8f49542d7d0890dbfcca057087b8d0
+  - version: '4.0'
+    artifacts:
+    - checksums:
+      - sha256:5f02cb05f224bd86bd88ec6272b294c26dba3b1d22c7fb298745fd7b9d2271c0
+  - version: '4.1'
+    artifacts:
+    - checksums:
+      - sha256:f1cfecfcc0729f96a5bd61c6b26f3fa43bb0662d3fff370d4f73490c60cf4e59
+  - version: '4.2'
+    artifacts:
+    - checksums:
+      - sha256:391ef7d933e696762e3547a35b58ab18d22a6cf3e199c74889bcf25a1d1fc89b
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:bead6c08309a206f8a6258971272affcca07f11eb57b5ecd8496e2e7e3ead877
+  - version: '5.1'
+    artifacts:
+    - checksums:
+      - sha256:4cc0d6985afc5ce14cafc195ad46d9876ac4f35b959861b41a3b681385d7320d
+  - version: '5.2'
+    artifacts:
+    - checksums:
+      - sha256:143c7a936fd197a94551aa1c67d7ae7cbf7d96338947aa21d3007df7aea46c78
+  - version: '5.3'
+    artifacts:
+    - checksums:
+      - sha256:175a426dbbe9ba332416adeead59af364177016c7c3057c597a26c0159c83c43
+  recipe_path: repos/spack_repo/builtin/packages/aocl_fftw/package.py
+- id: spack:aocl-lapack
+  registry: spack
+  name: aocl-lapack
+  summary: 'AOCL-LAPACK: libFLAME (AMD Optimized version) is a portable library for dense matrix computations, providing much of the functionality present in Linear...'
+  description: '<p>AOCL-LAPACK: libFLAME (AMD Optimized version) is a portable library for dense matrix computations, providing much of the functionality present in Linear Algebra Package (LAPACK). It includes a compatibility layer, FLAPACK, which includes complete LAPACK implementation.</p><p>The library provides scientific and numerical computing communities with a modern, high-performance dense linear algebra library that is extensible, easy to use, and available under an open source license. libFLAME is a C-only implementation and does not depend on any external FORTRAN libraries including LAPACK. There is an optional backward compatibility layer, lapack2flame that maps LAPACK routine invocations to their corresponding native C implementations in libFLAME. This allows legacy applications to start taking advantage of libFLAME with virtually no changes to their source code.</p>'
+  description_format: html
+  licenses:
+  - BSD-3-Clause
+  homepage: https://www.amd.com/en/developer/aocl/blis.html#libflame
+  repository_url: https://github.com/amd/libflame
+  maintainers:
+  - amd-toolchain-support
+  dependencies:
+  - c
+  - cxx
+  - fortran
+  - gmake
+  - python
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: fortran
+    constraint: fortran
+    kind: build
+  - name: gmake
+    constraint: 'gmake@4:'
+    kind: build
+    condition: '@3.0.1,3.1:'
+  - name: python
+    constraint: python+pythoncmd
+    kind: build
+  options:
+  - ilp64
+  - logging
+  - static
+  - tracing
+  - vectorization
+  default_options:
+    ilp64: 'false'
+    logging: 'false'
+    static: 'false'
+    tracing: 'false'
+    vectorization: auto
+  features:
+  - name: ilp64
+    description: Build with ILP64 support
+    default: 'false'
+    condition: '@3.0.1:'
+  - name: logging
+    description: Enable AOCL DTL Logging
+    default: 'false'
+  - name: static
+    description: Build static library
+    default: 'false'
+    condition: '@4.2:'
+  - name: tracing
+    description: Enable AOCL DTL Tracing
+    default: 'false'
+  - name: vectorization
+    description: Use hardware vectorization support
+    values:
+    - auto
+    - avx2
+    - avx512
+    - none
+    default: auto
+    condition: '@4.2:'
+  versions:
+  - version: '2.2'
+    artifacts:
+    - checksums:
+      - sha256:12b9c1f92d2c2fa637305aaa15cf706652406f210eaa5cbc17aaea9fcfa576dc
+  - version: '3.0'
+    artifacts:
+    - checksums:
+      - sha256:d94e08b688539748571e6d4c1ec1ce42732eac18bd75de989234983c33f01ced
+  - version: 3.0.1
+    artifacts:
+    - checksums:
+      - sha256:5859e7b39ffbe73115dd598b035f212d36310462cf3a45e555a5087301710776
+  - version: '3.1'
+    artifacts:
+    - checksums:
+      - sha256:4520fb93fcc89161f65a40810cae0fa1f87cecb242da4a69655f502545a53426
+  - version: '3.2'
+    artifacts:
+    - checksums:
+      - sha256:6b5337fb668b82d0ed0a4ab4b5af4e2f72e4cedbeeb4a8b6eb9a3ef057fb749a
+  - version: '4.0'
+    artifacts:
+    - checksums:
+      - sha256:bcb05763aa1df1e88f0da5e43ff86d956826cbea1d9c5ff591d78a3e091c66a4
+  - version: '4.1'
+    artifacts:
+    - checksums:
+      - sha256:8aed69c60d11cc17e058cabcb8a931cee4f343064ade3e73d3392b7214624b61
+  - version: '4.2'
+    artifacts:
+    - checksums:
+      - sha256:93a433c169528ffba74a99df0ba3ce3d5b1fab9bf06ce8d2fd72ee84768ed84c
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:3bee3712459a8c5bd728a521d8a4c8f46735730bf35d48c878d2fc45fc000918
+  - version: '5.1'
+    artifacts:
+    - checksums:
+      - sha256:25524ba78b5952303369fa0859d217e44071144fd122a9dc3f72ed0bd73e3b2d
+  - version: '5.2'
+    artifacts:
+    - checksums:
+      - sha256:fb5fe5128f718050c9911443fcf7ed91b60538a40d57084ed0124bb91afabb9b
+  - version: '5.3'
+    artifacts:
+    - checksums:
+      - sha256:ecb74c879b4d6bb33e159300304a9b48206d2c2b546dceb7d097b339eb127b9c
+  recipe_path: repos/spack_repo/builtin/packages/aocl_lapack/package.py
+- id: spack:aocl-libm
+  registry: spack
+  name: aocl-libm
+  summary: AMD LibM is a software library containing a collection of basic math functions optimized for x86-64 processor-based machines. It provides many routines from...
+  description: '<p>AMD LibM is a software library containing a collection of basic math functions optimized for x86-64 processor-based machines. It provides many routines from the list of standard C99 math functions. Applications can link into AMD LibM library and invoke math functions instead of compiler''s math functions for better accuracy and performance.</p><p>LICENSING INFORMATION: By downloading, installing and using this software, you agree to the terms and conditions of the AMD AOCL-LibM license agreement. You may obtain a copy of this license agreement from https://www.amd.com/en/developer/aocl/libm/eula/libm-4-2-eula.html https://www.amd.com/en/developer/aocl/libm/libm-eula.html</p>'
+  description_format: html
+  licenses:
+  - BSD-3-Clause
+  homepage: https://www.amd.com/en/developer/aocl/libm.html
+  repository_url: https://github.com/amd/aocl-libm-ose
+  maintainers:
+  - amd-toolchain-support
+  dependencies:
+  - c
+  - cmake
+  - cxx
+  - mpfr
+  - python
+  - scons
+  dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+  - name: cmake
+    constraint: cmake@3.26:3.30.6
+    kind: build
+    condition: build_system=cmake
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: mpfr
+    constraint: mpfr
+    kind: link
+  - name: python
+    constraint: 'python@3.6.1:'
+    kind: build,run
+  - name: scons
+    constraint: scons@3.1.2:4.8.1
+    kind: build
+  options:
+  - verbose
+  default_options:
+    verbose: 'false'
+  features:
+  - name: verbose
+    description: Building with verbosity
+    default: 'false'
+    condition: '@:4.1'
+  versions:
+  - version: '2.2'
+  - version: '3.0'
+    artifacts:
+    - checksums:
+      - sha256:eb26b5e174f43ce083928d0d8748a6d6d74853333bba37d50057aac2bef7c7aa
+  - version: '3.1'
+    artifacts:
+    - checksums:
+      - sha256:dee487cc2d89c2dc93508be2c67592670ffc1d02776c017e8907317003f48845
+  - version: '3.2'
+    artifacts:
+    - checksums:
+      - sha256:c75b287c38a3ce997066af1f5c8d2b19fc460d5e56678ea81f3ac33eb79ec890
+  - version: '4.0'
+    artifacts:
+    - checksums:
+      - sha256:038c1eab544be77598eccda791b26553d3b9e2ee4ab3f5ad85fdd2a77d015a7d
+  - version: '4.1'
+    artifacts:
+    - checksums:
+      - sha256:5bbbbc6bc721d9a775822eab60fbc11eb245e77d9f105b4fcb26a54d01456122
+  - version: '4.2'
+    artifacts:
+    - checksums:
+      - sha256:58847b942e998b3f52eb41ae26403c7392d244fcafa707cbf23165aac24edd9e
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:ba1d50c068938c9a927e37e5630f683b6149d7d5a95efffeb76e7c9a8bcb2b5e
+  - version: '5.1'
+    artifacts:
+    - checksums:
+      - sha256:7acf2c98469353b60a59fad167a98e1ae689055a3faf8352a254832145c9d59e
+  - version: '5.2'
+    artifacts:
+    - checksums:
+      - sha256:5cec8d30dc1083923c332c80808eda637ebd385b02a0cebf65ce72b5c8cbc029
+  - version: '5.3'
+    artifacts:
+    - checksums:
+      - sha256:bbd97cbb3745afbeb203f6cdddadb410ea32f2fbcac807bcd0c27e6b7d1133e4
+  recipe_path: repos/spack_repo/builtin/packages/aocl_libm/package.py
 - id: spack:aocl-libmem
   registry: spack
   name: aocl-libmem
@@ -8834,6 +8787,100 @@ packages:
     - checksums:
       - sha256:15ca49e5874d84a039f680dfc0cef849c983cbc982c321161ce8b2c4fd359be6
   recipe_path: repos/spack_repo/builtin/packages/aocl_libmem/package.py
+- id: spack:aocl-scalapack
+  registry: spack
+  name: aocl-scalapack
+  summary: ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. It depends on external libraries including BLAS...
+  description: <p>ScaLAPACK is a library of high-performance linear algebra routines for parallel distributed memory machines. It depends on external libraries including BLAS and LAPACK for Linear Algebra computations.</p><p>AMD's optimized version of ScaLAPACK enables using BLIS and LibFLAME library that have optimized dense matrix functions and solvers for AMD EPYC processor family CPUs.</p>
+  description_format: html
+  licenses:
+  - BSD-3-Clause-Open-MPI
+  homepage: https://www.amd.com/en/developer/aocl/scalapack.html
+  repository_url: https://github.com/amd/aocl-scalapack
+  maintainers:
+  - amd-toolchain-support
+  topics:
+  - e4s
+  dependencies:
+  - amdblis
+  - amdlibflame
+  - aocl-blas
+  - aocl-lapack
+  - c
+  - fortran
+  dependency_details:
+  - name: amdblis
+    constraint: amdblis
+    condition: ^[virtuals=blas] amdblis
+  - name: amdlibflame
+    constraint: amdlibflame
+    condition: ^[virtuals=lapack] amdlibflame
+  - name: aocl-blas
+    constraint: aocl-blas
+    condition: ^[virtuals=blas] aocl-blas
+  - name: aocl-lapack
+    constraint: aocl-lapack
+    condition: ^[virtuals=lapack] aocl-lapack
+  - name: c
+    constraint: c
+    kind: build
+  - name: fortran
+    constraint: fortran
+    kind: build
+  options:
+  - ilp64
+  default_options:
+    ilp64: 'false'
+  features:
+  - name: ilp64
+    description: Build with ILP64 support
+    default: 'false'
+  versions:
+  - version: '2.2'
+    artifacts:
+    - checksums:
+      - sha256:2d64926864fc6d12157b86e3f88eb1a5205e7fc157bf67e7577d0f18b9a7484c
+  - version: '3.0'
+    artifacts:
+    - checksums:
+      - sha256:6e6f3578f44a8e64518d276e7580530599ecfa8729f568303ed2590688e7096f
+  - version: '3.1'
+    artifacts:
+    - checksums:
+      - sha256:4c2ee2c44644a0feec0c6fc1b1a413fa9028f14d7035d43a398f5afcfdbacb98
+  - version: '3.2'
+    artifacts:
+    - checksums:
+      - sha256:9e00979bb1be39d627bdacb01774bc043029840d542fafc934d16fec3e3b0892
+  - version: '4.0'
+    artifacts:
+    - checksums:
+      - sha256:f02913b5984597b22cdb9a36198ed61039a1bf130308e778dc31b2a7eb88b33b
+  - version: '4.1'
+    artifacts:
+    - checksums:
+      - sha256:b2e51c3604e5869d1faaef2e52c92071fcb3de1345aebb2ea172206622067ad9
+  - version: '4.2'
+    artifacts:
+    - checksums:
+      - sha256:c6e9a846c05cdc05252b0b5f264164329812800bf13f9d97c77114dc138e6ccb
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:a33cf16c51cfd65c7acb5fbdb8884a5c147cdefea73931b07863c56d54f812cc
+  - version: '5.1'
+    artifacts:
+    - checksums:
+      - sha256:92f6f6b2081e27731c8b9e96c742203777cc7f2a848b96ca7511f4d259142b37
+  - version: '5.2'
+    artifacts:
+    - checksums:
+      - sha256:ff01f0f39c9e6d44fa493e1c68d9862d2600f425e9caaec1fe5179c10debf1d9
+  - version: '5.3'
+    artifacts:
+    - checksums:
+      - sha256:2bd0ef1d8bbd9990a8bc7b33ad7c32db788f39b9730b110d15737837111eacff
+  recipe_path: repos/spack_repo/builtin/packages/aocl_scalapack/package.py
 - id: spack:aocl-sparse
   registry: spack
   name: aocl-sparse
@@ -8847,26 +8894,26 @@ packages:
   maintainers:
   - amd-toolchain-support
   dependencies:
-  - amdblis threads=none
-  - amdblis threads=openmp
-  - amdlibflame threads=none
-  - amdlibflame threads=openmp
+  - aocl-blas threads=none
+  - aocl-blas threads=openmp
+  - aocl-lapack threads=none
+  - aocl-lapack threads=openmp
   - boost
   - c
   - cmake
   - cxx
   dependency_details:
-  - name: amdblis threads=none
-    constraint: amdblis threads=none
+  - name: aocl-blas threads=none
+    constraint: aocl-blas threads=none
     condition: ~openmp
-  - name: amdblis threads=openmp
-    constraint: amdblis threads=openmp
+  - name: aocl-blas threads=openmp
+    constraint: aocl-blas threads=openmp
     condition: +openmp
-  - name: amdlibflame threads=none
-    constraint: amdlibflame threads=none
+  - name: aocl-lapack threads=none
+    constraint: aocl-lapack threads=none
     condition: ~openmp
-  - name: amdlibflame threads=openmp
-    constraint: amdlibflame threads=openmp
+  - name: aocl-lapack threads=openmp
+    constraint: aocl-lapack threads=openmp
     condition: +openmp
   - name: boost
     constraint: boost
@@ -18124,6 +18171,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2574404ada2d6dbbda58b02aa88b17c479763790e18cb875078c40c849cf6710
+  - version: 9.3.2
+    artifacts:
+    - checksums:
+      - sha256:53a1cc021ac515b667ab8bf2114b50184fbfc492cd35ff4584b40617a64c7413
   recipe_path: repos/spack_repo/builtin/packages/bazel/package.py
 - id: spack:bbcp
   registry: spack
@@ -22510,7 +22561,7 @@ packages:
 - id: spack:blis
   registry: spack
   name: blis
-  summary: Base class for building BLIS, shared with the AMD optimized version of the library in the 'amdblis' package.
+  summary: Base class for building BLIS, shared with the AMD optimized version of the library in the 'aocl-blas' package ('amdblis' is a deprecated alias).
   maintainers:
   - jeffhammond
   dependencies:
@@ -25269,6 +25320,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:933de2e4d1b2211a638be463eb6e8616891bfba73aef5d38060bd8319baeefc6
+  - version: 1.4.8
+    artifacts:
+    - checksums:
+      - sha256:67e07c21b770a6d884c5e50ba1d2cfc90732ea57459367d8732ec7ecbeb3be5f
   recipe_path: repos/spack_repo/builtin/packages/btop/package.py
 - id: spack:bubblewrap
   registry: spack
@@ -29582,10 +29637,12 @@ packages:
   - cxxstd
   - pic
   - shared
+  - threadsafe
   default_options:
     cxxstd: '17'
     pic: 'true'
     shared: 'false'
+    threadsafe: 'false'
   features:
   - name: cxxstd
     description: C++ standard
@@ -29603,6 +29660,10 @@ packages:
     description: Build shared library
     default: 'false'
     condition: '@3:'
+  - name: threadsafe
+    description: Enable thread-safe assertion and message reporting
+    default: 'false'
+    condition: '@3.9:'
   versions:
   - version: 1.10.0
     artifacts:
@@ -29880,6 +29941,46 @@ packages:
     artifacts:
     - checksums:
       - sha256:2106bccfec18c8ce673623d56780220e38527dd8f283ccba26aa4b8758737d0e
+  - version: 3.10.0
+    artifacts:
+    - checksums:
+      - sha256:fc4303a5c2738beaa727066e126b5a28837a812230a3c5826caa38e7ab99ca48
+  - version: 3.11.0
+    artifacts:
+    - checksums:
+      - sha256:82fa1cb59dc28bab220935923f7469b997b259eb192fb9355db62da03c2a3137
+  - version: 3.12.0
+    artifacts:
+    - checksums:
+      - sha256:e077079f214afc99fee940d91c14cf1a8c1d378212226bb9f50efff75fe07b23
+  - version: 3.13.0
+    artifacts:
+    - checksums:
+      - sha256:650795f6501af514f806e78c554729847b98db6935e69076f36bb03ed2e985ef
+  - version: 3.14.0
+    artifacts:
+    - checksums:
+      - sha256:ba2a939efead3c833c499cf487e185762f419a71d30158cd1b43c6079c586490
+  - version: 3.15.0
+    artifacts:
+    - checksums:
+      - sha256:9650c55e497759cc39b977e45524bc8acb15256061c112080916ab6cb0b1ea66
+  - version: 3.15.1
+    artifacts:
+    - checksums:
+      - sha256:be23a52b85cf04cd9587612147a10b023d59ed9757fa1843cc99e615d6c0893c
+  - version: 3.15.2
+    artifacts:
+    - checksums:
+      - sha256:acfae120892c2b67a74142d36d060c0caa96f1c3aaa8aabd96e19961163d0420
+  - version: 3.15.3
+    artifacts:
+    - checksums:
+      - sha256:b0299ae552918220a7a6e21e7de5b714777f4e8c883fb70c4bb23fe01df8c6e3
+  - version: 3.16.0
+    artifacts:
+    - checksums:
+      - sha256:0957cae5821b17ce07f0833aaa52b5137643a8382203221f363a8303c109af34
   - version: 3.2.0
     artifacts:
     - checksums:
@@ -31821,12 +31922,18 @@ packages:
   options:
   - 64_bit_index
   - boost
+  - callbacks
   - compiled
+  - no_exceptions
+  - precise_constructions
   - shared
   default_options:
     64_bit_index: 'false'
     boost: 'false'
+    callbacks: 'false'
     compiled: 'false'
+    no_exceptions: 'false'
+    precise_constructions: 'false'
     shared: 'true'
   features:
   - name: 64_bit_index
@@ -31835,9 +31942,21 @@ packages:
   - name: boost
     description: Use Boost as a fallback for features missing in C++98 and performance tweaks
     default: 'false'
+  - name: callbacks
+    description: Enable user callbacks during triangulation
+    default: 'false'
+    condition: '@1.4.2:'
   - name: compiled
     description: Instantiate templates for float and double and compiled into a library
     default: 'false'
+  - name: no_exceptions
+    description: 'Disable exceptions: instead of throwing the library will terminate'
+    default: 'false'
+    condition: '@1.4.2:'
+  - name: precise_constructions
+    description: Disable fast-math and floating-point contraction in constructions
+    default: 'false'
+    condition: '@2.0.0:'
   - name: shared
     description: Compile as a shared library
     default: 'true'
@@ -31874,6 +31993,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:5e3c45715e55b5f2d4390082c8c1ac026f635ddee233516fdcf94b197954367d
+  - version: 2.0.2
+    artifacts:
+    - checksums:
+      - sha256:43e22918907f354a300674222d63595afe121ec16ced8f6d2bac90a3db88892b
   recipe_path: repos/spack_repo/builtin/packages/cdt/package.py
 - id: spack:ceed
   registry: spack
@@ -32976,6 +33099,34 @@ packages:
     - checksums:
       - sha256:fad44fff274fdda5ffcc0c0fff3bc3c596362722b9292fc8944db91187813600
   recipe_path: repos/spack_repo/builtin/packages/cfitsio/package.py
+- id: spack:cfp
+  registry: spack
+  name: cfp
+  summary: The Command File Processor (CFP) runs command files in parallel with MPI.
+  homepage: https://github.com/NOAA-MDL/cfp
+  repository_url: https://github.com/noaa-mdl/cfp
+  maintainers:
+  - EricEngle-NOAA
+  dependencies:
+  - cmake
+  - fortran
+  - mpi
+  dependency_details:
+  - name: cmake
+    constraint: 'cmake@3.18:'
+    kind: build
+  - name: fortran
+    constraint: fortran
+    kind: build
+  - name: mpi
+    constraint: mpi
+  versions:
+  - version: 2.1.0
+    artifacts:
+    - checksums:
+      - sha256:89f512fe1c8ab73f859a6458efa174552fdf0a2706f69cce0185e85b07c58945
+  - version: main
+  recipe_path: repos/spack_repo/builtin/packages/cfp/package.py
 - id: spack:cgal
   registry: spack
   name: cgal
@@ -36835,6 +36986,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:af961e4e8122b9e1fa325ae20c98f0a17b2087e2c777832ae6e47025ec921331
+  - version: 5.8.3
+    artifacts:
+    - checksums:
+      - sha256:25d22cc25f95a8e7a8bac94cbe24b812574de9320250bdcb9d7f7e9e58c2a0d0
   - version: develop
   - version: master
   - version: spack
@@ -37312,6 +37467,66 @@ packages:
     - checksums:
       - sha256:b02109be54e2c9c6babc9480c242b2c3c7499368cfca8c0430f74782a694a49f
   recipe_path: repos/spack_repo/builtin/packages/clp/package.py
+- id: spack:cluestering
+  registry: spack
+  name: cluestering
+  summary: Header-only density-based weighted clustering library based on alpaka.
+  licenses:
+  - MPL-2.0
+  homepage: https://github.com/cms-patatrack/CLUEstering
+  repository_url: https://github.com/cms-patatrack/cluestering
+  maintainers:
+  - sbaldu
+  dependencies:
+  - alpaka
+  - cmake
+  - cxx
+  dependency_details:
+  - name: alpaka
+    constraint: alpaka
+  - name: alpaka
+    constraint: alpaka@2.2:2
+    condition: '@2.13:'
+  - name: alpaka
+    constraint: alpaka@2.1:2
+    condition: '@:2.12'
+  - name: cmake
+    constraint: 'cmake@3.16:'
+    kind: build
+  - name: cxx
+    constraint: cxx
+    kind: build
+  versions:
+  - version: 2.10.0
+    artifacts:
+    - checksums:
+      - sha256:98217630d40c71cd78074c9afc0fdefc017783804039e2f3815587fb472047a8
+  - version: 2.11.0
+    artifacts:
+    - checksums:
+      - sha256:92212857bfbedb2673896862bcd3d312495c89df20690ca2774a55418320817f
+  - version: 2.12.0
+    artifacts:
+    - checksums:
+      - sha256:16b1e44c4e5389c95e1b638a32b10105842fee568692cc1e3c3895d016b01299
+  - version: 2.13.0
+    artifacts:
+    - checksums:
+      - sha256:8d8b4b9c6e9fbd77464571ee3268f7fad66d3dbe6557ba342e64bd2fc3646b1b
+  - version: 2.14.0
+    artifacts:
+    - checksums:
+      - sha256:21e7b8b44a4c8e151573a7783497754f72e1a1b6f39b223b6060be4adbd60f30
+  - version: 2.14.2
+    artifacts:
+    - checksums:
+      - sha256:ff95fac879eac511170f07f289b96bbfea447f5592ad9f0f418e709022f535ae
+  - version: 2.9.0
+    artifacts:
+    - checksums:
+      - sha256:00e0c228f75f9d140896fcc91a0741f958985769dd09618e7effef339f2e2f6a
+  - version: main
+  recipe_path: repos/spack_repo/builtin/packages/cluestering/package.py
 - id: spack:clustal-omega
   registry: spack
   name: clustal-omega
@@ -37586,14 +37801,18 @@ packages:
     artifacts:
     - checksums:
       - sha256:f1fbcf2756029e14fb4ff37b4582d6c81a51f43d5ffa7b0849fccbf53cf39bf9
-  - version: 4.3.5
+  - version: 4.3.6
     artifacts:
     - checksums:
-      - sha256:24fc974191ef48da4ff309671fdb5989f43e07ecde0e2589eaf9d72672d8612b
-  - version: 4.4.4
+      - sha256:52203d4b31fdb20e8b8b630b98f6381f1d037fd2c1eb758d4271455f132d1eed
+  - version: 4.4.5
     artifacts:
     - checksums:
-      - sha256:bd24c30d80a7744ae84b845ff080cc8453b06c622ef01066564108e9cefc44cf
+      - sha256:a0c54c88abb8078dd8eccadb717fc6bb194bf18e7d44c86309910288886e04e2
+  - version: 4.5.0
+    artifacts:
+    - checksums:
+      - sha256:424352d6133e8455e020da787008e8dc67abb18820af3532572ab35657e49213
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/cmake/package.py
 - id: spack:cmaq
@@ -47729,6 +47948,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:76eac5a3ff556476ef8df53aa61851756bf6dcab59f5b92bb307abfdcbcd7f36
+  - version: 3.6.0
+    artifacts:
+    - checksums:
+      - sha256:8a06f5f033d410ee4f845e70038a78bdd69a38dbd6ae622e87b7a719d7b0aaa6
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/darshan_runtime/package.py
 - id: spack:darshan-util
@@ -47907,6 +48130,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:76eac5a3ff556476ef8df53aa61851756bf6dcab59f5b92bb307abfdcbcd7f36
+  - version: 3.6.0
+    artifacts:
+    - checksums:
+      - sha256:8a06f5f033d410ee4f845e70038a78bdd69a38dbd6ae622e87b7a719d7b0aaa6
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/darshan_util/package.py
 - id: spack:dash
@@ -50404,7 +50631,6 @@ packages:
   homepage: https://lonero.readthedocs.io
   repository_url: https://github.com/lonero-team/decentralized-internet
   maintainers:
-  - Lonero-Team
   - Mentors4edu
   dependencies:
   - c
@@ -59653,6 +59879,7 @@ packages:
   - hypre
   - lapack
   - lua
+  - mmg
   - mpi
   - mumps
   - netcdf-fortran
@@ -59686,6 +59913,9 @@ packages:
   - name: lua
     constraint: lua@5.1.5
     condition: +lua
+  - name: mmg
+    constraint: mmg+shared
+    condition: +mmg
   - name: mpi
     constraint: mpi
   - name: mumps
@@ -59721,6 +59951,7 @@ packages:
   - gui
   - hypre
   - lua
+  - mmg
   - mpi
   - mumps
   - openmp
@@ -59731,6 +59962,7 @@ packages:
     gui: 'false'
     hypre: 'false'
     lua: 'false'
+    mmg: 'false'
     mpi: 'true'
     mumps: 'false'
     openmp: 'true'
@@ -59747,6 +59979,10 @@ packages:
   - name: lua
     description: Enable Lua support.
     default: 'false'
+  - name: mmg
+    description: Enable MMG mesh adaptation.
+    default: 'false'
+    condition: '@26:,ice,devel'
   - name: mpi
     description: Enable MPI support.
     default: 'true'
@@ -64029,6 +64265,7 @@ packages:
   - autoconf
   - automake
   - c
+  - gnuconfig
   - libtool
   - m4
   dependency_details:
@@ -64040,6 +64277,9 @@ packages:
     condition: '@master'
   - name: c
     constraint: c
+    kind: build
+  - name: gnuconfig
+    constraint: gnuconfig
     kind: build
   - name: libtool
     constraint: libtool
@@ -66727,6 +66967,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:33940eaa0c6d972194225060d6ab95361e3664f685578855fe6f5da4cfad926e
+  - version: 3.1.0
+    artifacts:
+    - checksums:
+      - sha256:2717bcc34a1ac03d8aca0b266f5d041d814102c5994f31dbfedd8538a3e172f6
   recipe_path: repos/spack_repo/builtin/packages/fastloess_cpp/package.py
 - id: spack:fastlowess-cpp
   registry: spack
@@ -66775,6 +67019,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:5aaddb050b08d9efa5493c4181dc2d59d02c5a87320dd95b415b726df1884007
+  - version: 5.1.0
+    artifacts:
+    - checksums:
+      - sha256:83fa88b80b065cbb8e907808e0a9969258cffa6dc4edea78180e13e9cfcd5a2b
   recipe_path: repos/spack_repo/builtin/packages/fastlowess_cpp/package.py
 - id: spack:fastmath
   registry: spack
@@ -69249,7 +69497,7 @@ packages:
 - id: spack:fftw
   registry: spack
   name: fftw
-  summary: Base class for building Fftw, shared with the AMD optimized version of the library in the 'amdfftw' package.
+  summary: Base class for building Fftw, shared with the AMD optimized version of the library in the 'aocl-fftw' package ('amdfftw' is a deprecated alias).
   dependencies:
   - llvm-openmp
   - mpi
@@ -76551,15 +76799,24 @@ packages:
   maintainers:
   - d-torrance
   dependencies:
+  - c
   - cxx
   - gmp
   dependency_details:
+  - name: c
+    constraint: c
+    kind: build
+    condition: build_system=autotools
   - name: cxx
     constraint: cxx
     kind: build
   - name: gmp
-    constraint: gmp
+    constraint: gmp+cxx
   versions:
+  - version: 0.10.0
+    artifacts:
+    - checksums:
+      - sha256:5baf2133fa47c77fd87728d77b0a26e0a0e1de4a20fddab22619fe69a210ef34
   - version: 0.9.5
   - version: 0.9.7
     artifacts:
@@ -79271,6 +79528,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:fb70f509cc85b0d5311b70246e141ffdd47abf9b175cf95aa0fd1b75edae616e
+  - version: 1.0.8
+    artifacts:
+    - checksums:
+      - sha256:8a5800defa90aaaee2cd96af901e8e166c548eae98f911ef6d9618784a3038c4
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/g4vg/package.py
 - id: spack:gadap
@@ -99921,6 +100182,7 @@ packages:
   - llvm
   - pil
   - py-imageio
+  - py-nanobind
   - py-numpy
   - py-pybind11
   - py-scikit-build
@@ -99989,6 +100251,10 @@ packages:
     kind: link,run
     condition: '@21.0.0:21'
   - name: llvm
+    constraint: llvm@21.0.0:23
+    kind: link,run
+    condition: '@22.0.0:22'
+  - name: llvm
     constraint: llvm+llvm_dylib
     kind: link,run
     condition: +sharedllvm
@@ -100000,6 +100266,10 @@ packages:
     constraint: py-imageio
     kind: build,run
     condition: +python
+  - name: py-nanobind
+    constraint: 'py-nanobind@2.11:'
+    kind: build
+    condition: '@22:+python'
   - name: py-numpy
     constraint: py-numpy
     kind: build,run
@@ -100015,7 +100285,7 @@ packages:
   - name: py-pybind11
     constraint: 'py-pybind11@2.11.1:'
     kind: build
-    condition: '@21:+python'
+    condition: '@21.0.0:21+python'
   - name: py-scikit-build
     constraint: py-scikit-build
     kind: build
@@ -100040,6 +100310,10 @@ packages:
     constraint: 'python@3.9:'
     kind: build,link,run
     condition: '@21:+python'
+  - name: python
+    constraint: 'python@3.12:'
+    kind: build,link,run
+    condition: '@22:+python'
   options:
   - autoschedulers
   - build_type
@@ -100152,6 +100426,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:aa6b6f5e89709ca6bc754ce72b8b13b2abce0d6b001cb2516b1c6f518f910141
+  - version: 22.1.0
+    artifacts:
+    - checksums:
+      - sha256:35b59f91be6189645abf33078b1954740a434d97aaeaeaf5f15d162d86b74f6e
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/halide/package.py
 - id: spack:hama
@@ -103711,7 +103989,6 @@ packages:
   maintainers:
   - mhaseeb123
   - nessiecancode
-  - pcdslab
   dependencies:
   - boost
   - cmake
@@ -107018,7 +107295,7 @@ packages:
   topics:
   - rocm
   dependencies:
-  - amdblis
+  - aocl-blas
   - c
   - cmake
   - cxx
@@ -107037,8 +107314,8 @@ packages:
   - python
   - python-venv
   dependency_details:
-  - name: amdblis
-    constraint: amdblis
+  - name: aocl-blas
+    constraint: aocl-blas
     kind: test
     condition: '@7.2:'
   - name: c
@@ -108724,10 +109001,14 @@ packages:
   description_format: html
   homepage: https://www.netlib.org/benchmark/hpl/
   dependencies:
+  - aocl-libm
   - blas
   - c
   - mpi
   dependency_details:
+  - name: aocl-libm
+    constraint: aocl-libm
+    condition: '@2.3: %aocc@3:'
   - name: blas
     constraint: blas
   - name: c
@@ -115040,6 +115321,10 @@ packages:
     constraint: patchelf@:0.17
     kind: build
     condition: '@:2024.1'
+  - name: patchelf
+    constraint: patchelf
+    kind: build
+    condition: '@2025.0:2025.0.4'
   options:
   - amd
   - fix_rt_linkage
@@ -121777,6 +122062,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:40a2d3725480523ffebb762669cafe2b0135a00383946eec3d47adf5e9be6345
+  - version: 1.59.0
+    artifacts:
+    - checksums:
+      - sha256:20f876880851f1cc67fc7eb7589c7f7ccaa7612d827feac75797cf4a6ed729aa
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/just/package.py
 - id: spack:justbuild
@@ -124132,6 +124421,66 @@ packages:
       - sha256:d6557aaef39302282a15f9c770433d1fcdf4e961dfd6d9ed726b9d0d0f546b9f
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/kokkos/package.py
+- id: spack:kokkos-comm
+  registry: spack
+  name: kokkos-comm
+  summary: Kokkos Comm is an experimental performance portable explicit communication interface for the Kokkos ecosystem.
+  licenses:
+  - Apache-2.0 WITH LLVM-exception
+  homepage: https://github.com/kokkos/kokkos-comm
+  repository_url: https://github.com/kokkos/kokkos-comm
+  maintainers:
+  - cedricchevalier19
+  - cwpearson
+  - dssgabriel
+  dependencies:
+  - cmake
+  - cuda
+  - cxx
+  - kokkos
+  - mpi
+  - nccl
+  dependency_details:
+  - name: cmake
+    constraint: 'cmake@3.25:'
+    kind: build
+  - name: cuda
+    constraint: cuda
+    condition: +nccl
+  - name: cxx
+    constraint: cxx
+    kind: build
+  - name: kokkos
+    constraint: 'kokkos@4.7:'
+  - name: 'kokkos '
+    constraint: kokkos +cuda
+    condition: +nccl
+  - name: mpi
+    constraint: 'mpi@3:'
+    condition: +mpi
+  - name: nccl
+    constraint: 'nccl@2.20:'
+    condition: +nccl
+  options:
+  - mpi
+  - nccl
+  default_options:
+    mpi: 'true'
+    nccl: 'false'
+  features:
+  - name: mpi
+    description: Enable MPI backend
+    default: 'true'
+  - name: nccl
+    description: Enable NCCL backend
+    default: 'false'
+  versions:
+  - version: 0.1.0
+    artifacts:
+    - checksums:
+      - sha256:59f4b953a795adb62f306e0861c7e69ee60c8cd2a6f1bd58eb4623b9ab774d45
+  - version: develop
+  recipe_path: repos/spack_repo/builtin/packages/kokkos_comm/package.py
 - id: spack:kokkos-fft
   registry: spack
   name: kokkos-fft
@@ -124248,6 +124597,7 @@ packages:
     artifacts:
     - checksums:
       - sha256:f2c1f7b848e68aa214f2dea7820c22e729564167a4d4010170b01c81ad3a0714
+  - version: main
   recipe_path: repos/spack_repo/builtin/packages/kokkos_fft/package.py
 - id: spack:kokkos-kernels
   registry: spack
@@ -134846,6 +135196,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:63e8bd632e55f4b99dbaa3e905cdcd3c5dbc17aefdca1391b855f34a792bb29a
+  - version: 0.1.1
+    artifacts:
+    - checksums:
+      - sha256:4364282dc8043817e7404541a347350c6d5089ea91a70ad993a7b73ca7924577
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/libfci/package.py
 - id: spack:libffi
@@ -138133,20 +138487,6 @@ packages:
   repository_url: https://github.com/libjpeg-turbo/libjpeg-turbo
   maintainers:
   - AlexanderRichert-NOAA
-  dependencies:
-  - c
-  - cxx
-  - nasm
-  dependency_details:
-  - name: c
-    constraint: c
-    kind: build
-  - name: cxx
-    constraint: cxx
-    kind: build
-  - name: nasm
-    constraint: nasm
-    kind: build
   options:
   - jpeg8
   - libs
@@ -138251,6 +138591,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3a13a5ba767dc8264bc40b185e41368a80d5d5f945944d1dbaa4b2fb0099f4e5
+  - version: 3.2.1
+    artifacts:
+    - checksums:
+      - sha256:6f5819c51649bce2571a23b1b0cd41eae2f57fc3f8908c7ec9e7047efb65ca13
   recipe_path: repos/spack_repo/builtin/packages/libjpeg_turbo/package.py
 - id: spack:libjson
   registry: spack
@@ -142128,6 +142472,15 @@ packages:
   - name: sz3
     constraint: 'sz3@3.1.8:'
     condition: '@0.98.1: +sz3'
+  - name: sz3
+    constraint: sz3@:3.2.0
+    condition: '@:0.99 +sz3'
+  - name: sz3
+    constraint: sz3@:3.2
+    condition: '@1.0.0:1.0.4 +sz3'
+  - name: sz3
+    constraint: 'sz3@3.3:'
+    condition: '@1.0.5: +sz3'
   - name: szauto
     constraint: szauto
     condition: +szauto
@@ -145223,6 +145576,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:dbd0db40a1179a382fbb8cc930837671b973d722ba106a3dee2aad0fd858e2c4
+  - version: 2.63.4
+    artifacts:
+    - checksums:
+      - sha256:31f07d9350dad3f8964fd613c31309ac160fdef13dfac59df6fd082de78d6e8f
   recipe_path: repos/spack_repo/builtin/packages/librsvg/package.py
 - id: spack:librtlsdr
   registry: spack
@@ -147608,6 +147965,50 @@ packages:
     artifacts:
     - checksums:
       - sha256:ca43bf261d4d392cff20dfae440836603bf009fce24fdc9b2697d837a2239d4f
+  - version: 0.14.1
+    artifacts:
+    - checksums:
+      - sha256:231acb13dc6ec023e836a0f0666f6aab47dc621ecb1d2cd9d9c22f922678abc0
+  - version: 0.14.2
+    artifacts:
+    - checksums:
+      - sha256:1337c49658367ca6df3c09a7c02303f752e2d964aa98518f4593f7781ad7aac2
+  - version: 0.14.3
+    artifacts:
+    - checksums:
+      - sha256:bdcbf18ed37911f489851aa80e98b8d5bc565b329ee2fb66c11ee7a019f43aa0
+  - version: 0.15.0
+    artifacts:
+    - checksums:
+      - sha256:4f2d839af67905ad396d6d53ba5649b66113d90840dcbc89941e0da64bccd38c
+  - version: 0.15.1
+    artifacts:
+    - checksums:
+      - sha256:98d66cc12f2c5881879b976f0c55d10d311401513be254e3bd28cf3811fb50c8
+  - version: 0.15.2
+    artifacts:
+    - checksums:
+      - sha256:59f36f2b8bda1b7620a7eced2634f26c549444818a8313025a3bb09c0766a61d
+  - version: 0.15.3
+    artifacts:
+    - checksums:
+      - sha256:26687ec84e3e114759454c884a08abeaf79dec09b041895ddf4c45ec150acb6d
+  - version: 0.15.4
+    artifacts:
+    - checksums:
+      - sha256:11a14a7660ac9ba9c0bbd3b2d81718523d27dc6c8a9dfabd5e401b406673ee3a
+  - version: 0.15.5
+    artifacts:
+    - checksums:
+      - sha256:b2f787a8a83512c32599e71cdabcc5131464947b82014896bd11413b2d782de1
+  - version: 0.15.6
+    artifacts:
+    - checksums:
+      - sha256:850b192096eb11ebf2c70e8f97bc7da7479ee41da1bebeb44e3986908bac414f
+  - version: 0.15.7
+    artifacts:
+    - checksums:
+      - sha256:2556b83adc0f9b3ac8024e613e17d014d04c4c49110604ce55fcb14eae32edd3
   recipe_path: repos/spack_repo/builtin/packages/liburcu/package.py
 - id: spack:liburing
   registry: spack
@@ -156633,7 +157034,7 @@ packages:
   description_format: html
   licenses:
   - GPL-2.0-only
-  homepage: http://cgm.cs.mcgill.ca/~avis/C/lrs.html
+  homepage: https://cgm.cs.mcgill.ca/~avis/C/lrs.html
   dependencies:
   - c
   - gmake
@@ -156676,6 +157077,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:c49a4ebd856183473d1d5a62785fcdfe1057d5d671d4b96f3a1250eb1afe4e83
+  - version: 7.3a
+    artifacts:
+    - checksums:
+      - sha256:7fb16ad5c2b7380ef8deaecbfaf53599eef074fd225012aa431b76ee0bded6a6
   recipe_path: repos/spack_repo/builtin/packages/lrslib/package.py
 - id: spack:lrzip
   registry: spack
@@ -160992,6 +161397,14 @@ packages:
     constraint: pcre
   - name: zlib-api
     constraint: zlib-api
+  options:
+  - static_plugins
+  default_options:
+    static_plugins: 'false'
+  features:
+  - name: static_plugins
+    description: Build the authentication plugins that MySQL 8 uses into the library, so that a program that links the static library does not need the plugin modules
+    default: 'false'
   versions:
   - version: 2.1.0
     artifacts:
@@ -161419,6 +161832,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:337f303eeab2f834ee21973fc69ab862f9d6b8976887e4b5e2371759298abe2c
+  - version: '1.7'
+    artifacts:
+    - checksums:
+      - sha256:99e55dba14db57e327abcac02c2c495cf7b02411eb85dc0d58b514fbaa358d8b
   recipe_path: repos/spack_repo/builtin/packages/mathic/package.py
 - id: spack:mathicgb
   registry: spack
@@ -166951,6 +167368,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3e93f8dbe3a4265e4205d9a2a7fe96358b6d7988969b47999ec175a660a9bdee
+  - version: 01-01-04
+    artifacts:
+    - checksums:
+      - sha256:1dd7c97719b7badbc0d4185d5fdddd8d482b76aed4ee65851b6ca8f032d7623d
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/mille/package.py
 - id: spack:millepede
@@ -175661,6 +176082,7 @@ packages:
   - int64
   - metis
   - mpi
+  - mpi_in_place
   - openmp
   - parmetis
   - pkgconfig
@@ -175676,6 +176098,7 @@ packages:
     int64: 'false'
     metis: 'false'
     mpi: 'true'
+    mpi_in_place: 'true'
     openmp: 'true'
     parmetis: 'false'
     pkgconfig: 'false'
@@ -175706,6 +176129,10 @@ packages:
   - name: mpi
     description: Compile MUMPS with MPI support
     default: 'true'
+  - name: mpi_in_place
+    description: Enable MPI_IN_PLACE optimization (Not supported by some MPI environments)
+    default: 'true'
+    condition: '@5.6.2: +mpi'
   - name: openmp
     description: Compile MUMPS with OpenMP support
     default: 'true'
@@ -177740,6 +178167,7 @@ packages:
   - jcphill
   dependencies:
   - amdfftw
+  - aocl-fftw
   - c
   - charmpp
   - cuda
@@ -177752,6 +178180,9 @@ packages:
   - name: amdfftw
     constraint: amdfftw
     condition: fftw=amdfftw
+  - name: aocl-fftw
+    constraint: aocl-fftw
+    condition: fftw=aocl-fftw
   - name: c
     constraint: c
     kind: build
@@ -177818,11 +178249,12 @@ packages:
     default: 'false'
     condition: 'target=x86_64_v4: @2.15:'
   - name: fftw
-    description: Enable the use of FFTW/FFTW3/MKL FFT/AMDFFTW
+    description: Enable the use of FFTW/FFTW3/MKL FFT/AOCL-FFTW (amdfftw is the deprecated alias of the preferred aocl-fftw)
     values:
     - '2'
     - '3'
     - amdfftw
+    - aocl-fftw
     - mkl
     - none
     default: '3'
@@ -178255,10 +178687,13 @@ packages:
   - windows
   dependencies:
   - c
+  - zlib-api
   dependency_details:
   - name: c
     constraint: c
     kind: build
+  - name: zlib-api
+    constraint: zlib-api
   versions:
   - version: 2.11.06
     artifacts:
@@ -182299,7 +182734,7 @@ packages:
 - id: spack:netlib-scalapack
   registry: spack
   name: netlib-scalapack
-  summary: Base class for building ScaLAPACK, shared with the AMD optimized version of the library in the 'amdscalapack' package.
+  summary: Base class for building ScaLAPACK, shared with the AMD optimized version of the library in the 'aocl-scalapack' package ('amdscalapack' is a deprecated alias).
   dependencies:
   - blas
   - cmake
@@ -192799,8 +193234,13 @@ packages:
   - ripgrep
   dependency_details:
   - name: bun
-    constraint: bun@1.3.14:1
+    constraint: bun@1.4.4:1
     kind: build
+    condition: '@2:'
+  - name: bun
+    constraint: bun@1.3.14:1.3
+    kind: build
+    condition: '@:1'
   - name: node-js
     constraint: 'node-js@22.12:'
     kind: build
@@ -192812,6 +193252,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:494041aedd7407079f91fd694de355f4ff022ba6bf876e09ff30983bbdc70ae1
+  - version: 2.2.5
+    artifacts:
+    - checksums:
+      - sha256:04621edf6c47c2c7a36982ef39914d482c16977708fbd7b779f49f928bdc4fba
   recipe_path: repos/spack_repo/builtin/packages/opencode/package.py
 - id: spack:opencolorio
   registry: spack
@@ -201262,6 +201706,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3d0ba671bdf9ed408ac410c054e67ad93d46cd8690113f1fd34ab133a1658467
+  - version: 4.0.2
+    artifacts:
+    - checksums:
+      - sha256:526d12936eb995e2a70b8b4f42ad57ca017705a748a9f3909815ceb6e6053e03
   - version: 4.0.3
     artifacts:
     - checksums:
@@ -201270,6 +201718,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:5e0ae85eae9ed4b04018104ab920c4259c6f17a582fd105ff75e85e34ff43ecc
+  - version: 5.2.0
+    artifacts:
+    - checksums:
+      - sha256:a811e51bb2baa44cd39c4b327dd75f25db9c6ad34d0a9e278aba640a67b31da7
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/pandoramonitoring/package.py
 - id: spack:pandorapfa
@@ -201374,6 +201826,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ed52c05e70452548ca97015ea255437698c9b97637c2da6a7d452bc2d16b980b
+  - version: 4.16.2
+    artifacts:
+    - checksums:
+      - sha256:a04630b8c03517833e7605f2ac64dfb244efc22bd7700f44ec33f313fabbacf7
   - version: 4.16.3
     artifacts:
     - checksums:
@@ -201382,6 +201838,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:c8c35258cb447372ddb17b8647b4a7ce912e74ee9b0cbad470daadf669888393
+  - version: 4.17.5
+    artifacts:
+    - checksums:
+      - sha256:740818e9162ba9f795906315029a2f066d55651855672d200cbd8c36acb8d86b
+  - version: 4.19.3
+    artifacts:
+    - checksums:
+      - sha256:18d36a33f150ebfe7ffbc3521a86b50c470040d87b9267f126234ebf7c5de983
   - version: 4.2.0
     artifacts:
     - checksums:
@@ -201402,10 +201866,50 @@ packages:
     artifacts:
     - checksums:
       - sha256:2f4757a6ed2e10d3effc300b330f67ba13c499dbf21ba720b29b50527332fcdb
+  - version: 5.0.0
+    artifacts:
+    - checksums:
+      - sha256:e9da3afacad52f29dc2170adad8065cde109ff1a5b3755a93a41e7448e1d7b42
+  - version: 5.1.0
+    artifacts:
+    - checksums:
+      - sha256:458dbbe227766746ed2cc10ea142cea4682c8e176f9cd57b16afd84efa39d1da
+  - version: 5.2.0
+    artifacts:
+    - checksums:
+      - sha256:a010550db9f64d693038096ba3e54f5305a8f71f34648be550123cd3def64760
+  - version: 5.2.1
+    artifacts:
+    - checksums:
+      - sha256:e6083d57c8ead7ab4188869f53843c63cf2e56e0327754737670b3bc7fa0123b
   - version: 5.3.0
     artifacts:
     - checksums:
       - sha256:87d5af118cff21ced26ad5338da5ce09ce55e0795d3fe8beb30c7e6ae81245d6
+  - version: 5.4.0
+    artifacts:
+    - checksums:
+      - sha256:03ffaa4270e211abe928ce9e0a55a4dcedd629aec5b501ccbc07312b8122a9d1
+  - version: 5.5.0
+    artifacts:
+    - checksums:
+      - sha256:f6d40c2703cb425f0e727fc9a1e596343918b371831c3ce96763fe5c338a9335
+  - version: 5.6.0
+    artifacts:
+    - checksums:
+      - sha256:4a982ee1383b617fee9b164643167e1218d6211b4bb426af342fec5e10ecb35c
+  - version: 5.7.0
+    artifacts:
+    - checksums:
+      - sha256:c4e6290fef0c8757c41d44ee06f5c0a4c428bf4129ab4a275a4e813608933373
+  - version: 5.8.0
+    artifacts:
+    - checksums:
+      - sha256:686917984d6b61af2b90d8843a902b7f2c35c89b5bd21e24625064f30b292a42
+  - version: 5.9.0
+    artifacts:
+    - checksums:
+      - sha256:dfafee8fe28641c360bd954fe5eae80994a1ddad59ca2836303162ca1d86e38b
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/pandorapfa/package.py
 - id: spack:pandorasdk
@@ -201481,6 +201985,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:d4f57bd5d9aa8a2a588816fc1da2b78e0704405b48674ae18d597d99769c0142
+  - version: 5.1.0
+    artifacts:
+    - checksums:
+      - sha256:67f7d1d32e132bbbeb11716bae3ffcab437642ef2914e8bb0f7f396cff2941bb
+  - version: 5.2.0
+    artifacts:
+    - checksums:
+      - sha256:dbdc0a62b76a0dea0c7e53f2420849d621c042a8bd509cfd1d7dc02ebe43873e
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/pandorasdk/package.py
 - id: spack:pango
@@ -205150,17 +205662,33 @@ packages:
     kind: run
     condition: +python
   - name: py-pybind11
-    constraint: py-pybind11@2.9.1:2
+    constraint: py-pybind11@2.9.1:3
     kind: link
     condition: '@1.10.0: +python'
   - name: py-pybind11
-    constraint: py-pybind11@2.4.3:2
+    constraint: py-pybind11@2.4.3:3
     kind: link
     condition: +python
   - name: py-setuptools
     constraint: py-setuptools
-    kind: build,link
+    kind: build
     condition: '@1.8.3: +python^python@3.12:'
+  - name: python
+    constraint: python@3.10:3
+    kind: build
+    condition: '@1.10.0: +fortran'
+  - name: python
+    constraint: python@3.10:3
+    kind: build
+    condition: '@1.10.0: +docs'
+  - name: python
+    constraint: python@3
+    kind: build
+    condition: +fortran
+  - name: python
+    constraint: python@3
+    kind: build
+    condition: +docs
   - name: python
     constraint: python@3.10.6:3
     kind: build,link,run
@@ -205196,6 +205724,7 @@ packages:
   - name: benchs
     description: Build benchmarks
     default: 'false'
+    condition: '@:1.12'
   - name: docs
     description: Build documentation
     default: 'false'
@@ -205215,13 +205744,32 @@ packages:
     - checksums:
       - sha256:8bda1ed83bdb152a047a45a48f896466e7ebf5163030405c15dbfa4e2e788143
   - version: 1.10.1
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:f2409611310255360867e3c74d44e055f45c87071ef8881665ff30a7940e1449
   - version: 1.11.0
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:a3e5ed6f890a8599d67e1666a14a6c5b1084a0cbb8a748bf40fc53df47d39410
+  - version: 1.11.1
+    lifecycle: deprecated
+    artifacts:
+    - checksums:
+      - sha256:31570353930424ebc471e6c4639b0c5207991f8f05ea817821fbddc854af6db5
+  - version: 1.11.2
+    artifacts:
+    - checksums:
+      - sha256:0334134e2f3c8b4663529e2d71843bb3d996f9d5a4494e7144d107467510d4a8
+  - version: 1.12.0
+    artifacts:
+    - checksums:
+      - sha256:f0d2f63fb1b384e39e72cf48389edadf34c92efea22d88b18acae8df492c43aa
+  - version: 1.13.0
+    artifacts:
+    - checksums:
+      - sha256:77b3e71ff2cf92db30f849d7c4a49d68ab4fa8ef590d81b658eab8ac251be988
   - version: 1.8.0
     lifecycle: deprecated
     artifacts:
@@ -205258,6 +205806,7 @@ packages:
     - checksums:
       - sha256:0430d5898980435e5602b67188264621a27f71969ff886efaa2e6d43a45caac4
   - version: 1.9.3
+    lifecycle: deprecated
     artifacts:
     - checksums:
       - sha256:ab390e51e3b7298d6b09484a443dc267651aed5978c711f8804848b19ab1527e
@@ -205282,6 +205831,7 @@ packages:
   - fortran
   - hdf5
   - mpi
+  - pdi
   - pkgconfig
   dependency_details:
   - name: c
@@ -205300,13 +205850,13 @@ packages:
   - name: fortran
     constraint: fortran
     kind: build
-    condition: +fortran
+    condition: +fortran +tests
   - name: hdf5
-    constraint: hdf5@1.10.7:1 +shared
+    constraint: hdf5@1.10.7:2 +shared
     kind: build,link,run
     condition: '@1.10.0:'
   - name: hdf5
-    constraint: hdf5@1.10.4:1 +shared
+    constraint: hdf5@1.10.4:2 +shared
     kind: build,link,run
   - name: 'hdf5 '
     constraint: hdf5 +mpi
@@ -205315,6 +205865,10 @@ packages:
   - name: mpi
     constraint: mpi
     condition: +mpi
+  - name: 'pdi '
+    constraint: pdi +fortran
+    kind: link,run
+    condition: +fortran +tests
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
@@ -205345,7 +205899,7 @@ packages:
 - id: spack:pdiplugin-decl-netcdf
   registry: spack
   name: pdiplugin-decl-netcdf
-  summary: The trace plugin is intended to generate a trace of what happens in PDI "data store".
+  summary: The Decl'NetCDF plugin for the PDI library reads from and writes to NetCDF files in a declarative way.
   licenses:
   - BSD-3-Clause
   homepage: https://pdi.dev
@@ -205418,7 +205972,9 @@ packages:
   - c
   - cmake
   - cxx
+  - fortran
   - mpi
+  - pdi
   - pkgconfig
   dependency_details:
   - name: c
@@ -205434,17 +205990,30 @@ packages:
   - name: cxx
     constraint: cxx
     kind: build
+  - name: fortran
+    constraint: fortran
+    kind: build
+    condition: +fortran +tests
   - name: mpi
     constraint: mpi
     kind: build,link,run
+  - name: 'pdi '
+    constraint: pdi +fortran
+    kind: link,run
+    condition: +fortran +tests
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
   options:
+  - fortran
   - tests
   default_options:
+    fortran: 'true'
     tests: 'false'
   features:
+  - name: fortran
+    description: Enable Fortran (for tests only)
+    default: 'true'
   - name: tests
     description: Build tests
     default: 'false'
@@ -205464,7 +206033,9 @@ packages:
   - cmake
   - cxx
   - pkgconfig
+  - py-pybind11
   - py-setuptools
+  - python
   dependency_details:
   - name: c
     constraint: c
@@ -205482,10 +206053,24 @@ packages:
   - name: pkgconfig
     constraint: pkgconfig
     kind: build
+  - name: py-pybind11
+    constraint: 'py-pybind11@2.9:'
+    kind: build,link
+    condition: '@1.10.0:'
+  - name: py-pybind11
+    constraint: 'py-pybind11@2.4.3:'
+    kind: build,link
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
     condition: '@1.8.3: ^python@3.12:'
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,link,run
+    condition: '@1.10.0:'
+  - name: python
+    constraint: 'python@3.8.2:'
+    kind: build,link,run
   options:
   - tests
   default_options:
@@ -205498,7 +206083,7 @@ packages:
 - id: spack:pdiplugin-serialize
   registry: spack
   name: pdiplugin-serialize
-  summary: The trace plugin is intended to generate a trace of what happens in PDI "data store".
+  summary: 'The Serialize plugin for the PDI library serializes shared data: it converts arrays from sparse to dense and dereferences pointers.'
   licenses:
   - BSD-3-Clause
   homepage: https://pdi.dev
@@ -205539,7 +206124,7 @@ packages:
 - id: spack:pdiplugin-set-value
   registry: spack
   name: pdiplugin-set-value
-  summary: The trace plugin is intended to generate a trace of what happens in PDI "data store".
+  summary: The Set_value plugin for the PDI library sets the values of data and metadata descriptors from the YAML configuration.
   licenses:
   - BSD-3-Clause
   homepage: https://pdi.dev
@@ -205629,7 +206214,7 @@ packages:
 - id: spack:pdiplugin-user-code
   registry: spack
   name: pdiplugin-user-code
-  summary: The user-code plugin for the PDI librarie enables one to call a user-defined function when a specified event occur or certain data becomes available
+  summary: The user-code plugin for the PDI library enables one to call a user-defined function when a specified event occurs or certain data becomes available
   licenses:
   - BSD-3-Clause
   homepage: https://pdi.dev
@@ -221307,17 +221892,12 @@ packages:
     constraint: c
     kind: build
   - name: cmake
-    constraint: cmake@3.12:3
-    kind: build
-    condition: '@:4.11'
-  - name: cmake
-    constraint: 'cmake@3.12:'
-    kind: build
-    condition: '@4.12'
-  - name: cmake
     constraint: 'cmake@3.24:'
     kind: build
-    condition: '@4.13:'
+  - name: cmake
+    constraint: cmake@:3
+    kind: build
+    condition: '@:4.11'
   - name: doxygen
     constraint: doxygen
     kind: build
@@ -221499,6 +222079,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8e4f9d55289cc0cf01a49a948131106ecbf2c4c94c419de29d3b9fe02f081553
+  - version: 4.22.0
+    artifacts:
+    - checksums:
+      - sha256:8ef0d95690a2d4f376a2c6e741ae5f833adceb49093ed54dcaa9917d427bfc44
   - version: 4.3.0
     artifacts:
     - checksums:
@@ -236903,6 +237487,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2ea980955530499865225eff917b649b39fd014b53f8c6461b6348c1d8b866f1
+  - version: 0.2.7
+    artifacts:
+    - checksums:
+      - sha256:87bd0f5664e641333c8878352987a7e7fadd225252279ac9f37c0ca185de3147
   recipe_path: repos/spack_repo/builtin/packages/py_archspec/package.py
 - id: spack:py-arcp
   registry: spack
@@ -248271,6 +248859,34 @@ packages:
     - checksums:
       - sha256:8c50a71829525835ca3c849c7ed2511610c972b4dddfcd41a4a5447222beb4b0
   recipe_path: repos/spack_repo/builtin/packages/py_boltons/package.py
+- id: spack:py-boolean-py
+  registry: spack
+  name: py-boolean-py
+  summary: boolean.py is a small library implementing a boolean algebra. It defines two base elements, TRUE and FALSE, and a Symbol class that can take on one of these...
+  description: boolean.py is a small library implementing a boolean algebra. It defines two base elements, TRUE and FALSE, and a Symbol class that can take on one of these two values. Calculations are done in terms of AND, OR and NOT - other compositions like XOR and NAND are not implemented but can be emulated with AND or and NOT. Expressions are constructed from parsed strings or in Python.
+  description_format: html
+  licenses:
+  - BSD-2-Clause
+  homepage: https://github.com/bastikr/boolean.py
+  repository_url: https://github.com/bastikr/boolean.py
+  maintainers:
+  - ebagrenrut
+  dependencies:
+  - py-setuptools
+  - python
+  dependency_details:
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+  - name: python
+    constraint: 'python@3.6:'
+    kind: build,run
+  versions:
+  - version: '5.0'
+    artifacts:
+    - checksums:
+      - sha256:60cbc4bad079753721d32649545505362c754e121570ada4658b852a3a318d95
+  recipe_path: repos/spack_repo/builtin/packages/py_boolean_py/package.py
 - id: spack:py-boom-boot-manager
   registry: spack
   name: py-boom-boot-manager
@@ -256845,6 +257461,7 @@ packages:
   homepage: https://github.com/pyca/cryptography
   repository_url: https://github.com/pyca/cryptography
   dependencies:
+  - c
   - git
   - openssl
   - pkgconfig
@@ -256855,6 +257472,9 @@ packages:
   - python
   - rust
   dependency_details:
+  - name: c
+    constraint: c
+    kind: build
   - name: git
     constraint: git
     kind: build
@@ -259291,6 +259911,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:84226ecd313b233da27dc2eb3601b4f222b8209c3a7216d8733b031da1dc64e6
+  - version: 3.3.0
+    artifacts:
+    - checksums:
+      - sha256:eed0d93fbca7087f143b42c34b05a825849bdf17f101572c2105acfa49aa88b8
+  - version: 3.3.1
+    artifacts:
+    - checksums:
+      - sha256:e0e45989e821bef6aa9ae15c7d583ab5e055f7406c4b3624e49e06d24e90375a
   recipe_path: repos/spack_repo/builtin/packages/py_cython/package.py
 - id: spack:py-cython-bbox
   registry: spack
@@ -259891,6 +260519,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:4b2214bd715d261a7d37e54a5aedd6b38b9990aaee61bb55d741cb795b728020
+  - version: 3.6.0
+    artifacts:
+    - checksums:
+      - sha256:4689346ec12e242362e41fede0519a0478b9984774f4a721c87cb5b10dcab198
   recipe_path: repos/spack_repo/builtin/packages/py_darshan/package.py
 - id: spack:py-dasbus
   registry: spack
@@ -262598,6 +263230,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:87743c0a9e33c0b2cb6251dac12e3b879406a2ba0f0613ee0c1f48bdad02792f
+  - version: 0.7.1
+    artifacts:
+    - checksums:
+      - sha256:3bd09971cea5e58c745a4101e81c943e7e3167806835ddafe8d6a4072d50f336
   recipe_path: repos/spack_repo/builtin/packages/py_deisa_dask/package.py
 - id: spack:py-deisa-ray
   registry: spack
@@ -279737,8 +280373,13 @@ packages:
     constraint: 'py-cython@0.29:'
     kind: build
   - name: py-numpy
-    constraint: 'py-numpy@1.7:'
+    constraint: py-numpy@1.7:1.26
     kind: build,run
+    condition: '@:1.13'
+  - name: py-numpy
+    constraint: 'py-numpy@2:'
+    kind: build,run
+    condition: '@1.14:'
   - name: py-paramz
     constraint: 'py-paramz@0.9.0:'
     kind: build,run
@@ -279776,6 +280417,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:a38256b4dda536a5b5e6134a3924b42d454e987ee801fb6fc8b55a922da27920
+  - version: 1.14.2
+    artifacts:
+    - checksums:
+      - sha256:3c6a102cd0939ca62aab27038acc7c9970559fbda653dbdccc5d8ad02bd1dbad
+  - version: 1.15.0
+    artifacts:
+    - checksums:
+      - sha256:5f47700d7a1d6154367bad3f84c0482b8817713d94d5c128495aa9180d7349ec
   - version: 1.9.9
     artifacts:
     - checksums:
@@ -283732,23 +284381,20 @@ packages:
   - c
   - cmake
   - cxx
-  - fortran
   - py-numpy
   - py-pybind11
   - py-scikit-build-core
+  - py-typing-extensions
   - python
   dependency_details:
   - name: c
     constraint: c
     kind: build
   - name: cmake
-    constraint: cmake@3.15:3.27
+    constraint: 'cmake@3.15:'
     kind: build
   - name: cxx
     constraint: cxx
-    kind: build
-  - name: fortran
-    constraint: fortran
     kind: build
   - name: py-numpy
     constraint: py-numpy
@@ -283759,14 +284405,30 @@ packages:
   - name: py-scikit-build-core
     constraint: 'py-scikit-build-core@0.3.3:'
     kind: build
+  - name: py-scikit-build-core
+    constraint: 'py-scikit-build-core@0.11:'
+    kind: build
+    condition: '@1.15:'
+  - name: py-typing-extensions
+    constraint: py-typing-extensions
+    kind: build,run
+    condition: '@1.15: ^python@:3.9'
   - name: python
     constraint: 'python@3.8:'
     kind: build,run
+  - name: python
+    constraint: 'python@3.9:'
+    kind: build,run
+    condition: '@1.15:'
   versions:
   - version: 1.13.1
     artifacts:
     - checksums:
       - sha256:7888873501c6ca3e0fa19fee960c8b3cb1c64132c5a9b514903cc7e259b5b0c7
+  - version: 1.15.1
+    artifacts:
+    - checksums:
+      - sha256:20ed2fbf1cb64bf3044ee6632364b7e2653d93e6901e2b19fd3d5df10702e8c5
   recipe_path: repos/spack_repo/builtin/packages/py_highspy/package.py
 - id: spack:py-hiredis
   registry: spack
@@ -286290,6 +286952,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:ca962446ea538f7092a95e057da437618e886f4d349216d2b1e294abfdb65fdc
+  - version: '3.20'
+    artifacts:
+    - checksums:
+      - sha256:a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44
   recipe_path: repos/spack_repo/builtin/packages/py_idna/package.py
 - id: spack:py-idna-ssl
   registry: spack
@@ -286881,6 +287547,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:bbb37efbfc4c400fcd534b367b91fcd66d5da639aaa138034431a1c5e0a41451
+  - version: 2.38.2
+    artifacts:
+    - checksums:
+      - sha256:62e338ea5c19a5547521b3b590a8a9ed1177e5d6c3fd1df076029053eacc73ca
   - version: 2.4.1
     artifacts:
     - checksums:
@@ -286942,15 +287612,10 @@ packages:
   repository_url: https://github.com/shibukawa/imagesize_py
   dependencies:
   - py-setuptools
-  - python
   dependency_details:
   - name: py-setuptools
     constraint: py-setuptools
     kind: build
-  - name: python
-    constraint: python@3.10:3.14
-    kind: build,run
-    condition: '@2:'
   versions:
   - version: 0.7.1
     artifacts:
@@ -286972,6 +287637,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8e8358c4a05c304f1fccf7ff96f036e7243a189e9e42e90851993c558cfe9ee3
+  - version: 2.0.1
+    artifacts:
+    - checksums:
+      - sha256:b2ba6a4dea487a7ebcd53248d3476aca449d30db12a2dde5e0c5ca9624fd77e5
   recipe_path: repos/spack_repo/builtin/packages/py_imagesize/package.py
 - id: spack:py-imaug
   registry: spack
@@ -287453,6 +288122,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:90bb658cdbbf6d1735b6341ce708fc7024a3e14e99ffdc5783edea9f9b077f83
+  - version: 10.2.0
+    artifacts:
+    - checksums:
+      - sha256:9413a2029fd9ca5669d27f1386071bbfe3c7ebca0545692ec975088241fe1d79
   - version: 2.0.0
     artifacts:
     - checksums:
@@ -287948,6 +288621,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:7b46327ded20d8544bfe2d8561618bbcd12d88e7e3645333af1ed141d8bc1bfe
+  - version: 1.1.0
+    artifacts:
+    - checksums:
+      - sha256:f55f5728ff61d3dd54dbc5a397cf3f7307cb64b180c20b72afbebf01c9e2c8a0
   recipe_path: repos/spack_repo/builtin/packages/py_installer/package.py
 - id: spack:py-instrain
   registry: spack
@@ -288318,36 +288995,6 @@ packages:
   - MIT
   homepage: https://github.com/matthewwardrop/interface_meta
   repository_url: https://github.com/matthewwardrop/interface_meta
-  dependencies:
-  - py-poetry-core
-  - py-poetry-dynamic-versioning
-  - py-setupmeta
-  - py-setuptools
-  - python
-  dependency_details:
-  - name: py-poetry-core
-    constraint: 'py-poetry-core@1:'
-    kind: build
-    condition: '@1.3:'
-  - name: py-poetry-dynamic-versioning
-    constraint: py-poetry-dynamic-versioning
-    kind: build
-    condition: '@1.3:'
-  - name: py-setupmeta
-    constraint: py-setupmeta
-    kind: build
-    condition: '@:1.2'
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-    condition: '@:1.2'
-  - name: python
-    constraint: python@3.7:3
-    kind: build,run
-    condition: '@1.3:'
-  - name: python
-    constraint: 'python@3.4:'
-    kind: build,run
   versions:
   - version: 1.2.4
     artifacts:
@@ -288357,6 +289004,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:8a4493f8bdb73fb9655dcd5115bc897e207319e36c8835f39c516a2d7e9d79a1
+  - version: 2.0.1
+    artifacts:
+    - checksums:
+      - sha256:902bd9a95a12f195f15753a1080075d4eca7a2cb934fac7ac03c9e362b50796a
   recipe_path: repos/spack_repo/builtin/packages/py_interface_meta/package.py
 - id: spack:py-interlap
   registry: spack
@@ -289173,29 +289824,6 @@ packages:
   - BSD-3-Clause
   homepage: https://ipython.readthedocs.org/
   repository_url: https://github.com/ipython/ipython
-  dependencies:
-  - python
-  dependency_details:
-  - name: python
-    constraint: 'python@3.12:'
-    kind: build,run
-    condition: '@9.11:'
-  - name: python
-    constraint: 'python@3.11:'
-    kind: build,run
-    condition: '@9:'
-  - name: python
-    constraint: 'python@3.10:'
-    kind: build,run
-    condition: '@8.19:'
-  - name: python
-    constraint: 'python@3.9:'
-    kind: build,run
-    condition: '@8.13.1:'
-  - name: python
-    constraint: 'python@3.8: +sqlite3'
-    kind: build,run
-    condition: '@8:'
   versions:
   - version: 5.1.0
     artifacts:
@@ -289313,6 +289941,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:01daa83f504b693ba523b5a407246cabde4eb4513285a3c6acaff11a66735ee4
+  - version: 9.18.1
+    artifacts:
+    - checksums:
+      - sha256:6319c0f5372c196397899479e6db1783dd7937abae06815d1317e8d5d51aaaaf
   - version: 9.5.0
     artifacts:
     - checksums:
@@ -289544,88 +290176,6 @@ packages:
   - BSD-3-Clause
   homepage: https://github.com/ipython/ipywidgets
   repository_url: https://github.com/ipython/ipywidgets
-  dependencies:
-  - py-ipykernel
-  - py-ipython
-  - py-ipython-genutils
-  - py-jupyterlab-widgets
-  - py-nbformat
-  - py-setuptools
-  - py-traitlets
-  - py-widgetsnbextension
-  - python
-  dependency_details:
-  - name: py-ipykernel
-    constraint: 'py-ipykernel@4.2.2:'
-    kind: build,run
-  - name: py-ipykernel
-    constraint: 'py-ipykernel@4.5.1:'
-    kind: build,run
-    condition: '@6:'
-  - name: py-ipython
-    constraint: 'py-ipython@4:'
-    kind: build,run
-  - name: py-ipython
-    constraint: 'py-ipython@6.1.0:'
-    kind: build,run
-    condition: '@8.0.2:'
-  - name: py-ipython-genutils
-    constraint: py-ipython-genutils@0.2.0:0.2
-    kind: build,run
-    condition: '@7.6.4:7'
-  - name: py-jupyterlab-widgets
-    constraint: 'py-jupyterlab-widgets@1.0.0:'
-    kind: build,run
-    condition: '@:7'
-  - name: py-jupyterlab-widgets
-    constraint: py-jupyterlab-widgets@3.0:3
-    kind: build,run
-    condition: '@8.0.2:'
-  - name: py-nbformat
-    constraint: 'py-nbformat@4.2.0:'
-    kind: build,run
-    condition: '@6:7'
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: py-setuptools
-    constraint: 'py-setuptools@40.8.0:'
-    kind: build
-    condition: '@8.0.2:'
-  - name: py-traitlets
-    constraint: 'py-traitlets@4.2.1:'
-    kind: build,run
-  - name: py-traitlets
-    constraint: 'py-traitlets@4.3.1:'
-    kind: build,run
-    condition: '@6:'
-  - name: py-widgetsnbextension
-    constraint: py-widgetsnbextension@1.2.6:1.9
-    kind: build,run
-    condition: '@5.2.2'
-  - name: py-widgetsnbextension
-    constraint: py-widgetsnbextension@3.4.0:3.4
-    kind: build,run
-    condition: '@7.4.2'
-  - name: py-widgetsnbextension
-    constraint: py-widgetsnbextension@3.5.0:3.5
-    kind: build,run
-    condition: '@7.5.1:7.6.5'
-  - name: py-widgetsnbextension
-    constraint: py-widgetsnbextension@3.6
-    kind: build,run
-    condition: '@7.7:7'
-  - name: py-widgetsnbextension
-    constraint: py-widgetsnbextension@4.0:4
-    kind: build,run
-    condition: '@8.0.2:'
-  - name: python
-    constraint: 'python@2.7:2.8,3.3:'
-    kind: build,run
-  - name: python
-    constraint: 'python@3.7:'
-    kind: build,run
-    condition: '@8.0.2:'
   versions:
   - version: 5.2.2
     artifacts:
@@ -289655,6 +290205,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:08cb75c6e0a96836147cbfdc55580ae04d13e05d26ffbc377b4e1c68baa28b1f
+  - version: 8.1.9
+    artifacts:
+    - checksums:
+      - sha256:bcccba38a6ec3253f7a39c943cea5b9ad01999ce071396171adbc51c6a6a8613
   recipe_path: repos/spack_repo/builtin/packages/py_ipywidgets/package.py
 - id: spack:py-irpf90
   registry: spack
@@ -290458,6 +291012,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:320f52f19953fc08d224e9993632ac16b5ba2e5cfce926a30a253a7bee45e22a
+  - version: 0.12.1
+    artifacts:
+    - checksums:
+      - sha256:34b04d0df57f7ce81aacb3ee2c969d7a18e5b729ea5f0bf37969f5c5e010f4a8
   - version: 0.4.10
     artifacts:
     - checksums:
@@ -290766,6 +291324,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:341203199c5f331beefb73ecb3a8eec239b44e58aca63c5fdf85b0c97a638b1d
+  - version: 0.12.1
+    artifacts:
+    - checksums:
+      - sha256:be61de89ec651bd896544cab1bfb458286625c1749a73b0d143971eb5291d96a
   - version: 0.4.11
     artifacts:
     - checksums:
@@ -291890,6 +292452,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b3f492fad9f6cdbced8b7d40b28b9b1c9701c5f561bef0d33b81c2ff433fefcb
+  - version: 0.17.3
+    artifacts:
+    - checksums:
+      - sha256:8d0278ad34ebaa9c3af76d9519274811830224a2d1cd5af156dbd067f461b8a4
   - version: 0.9.10
     artifacts:
     - checksums:
@@ -292137,17 +292703,6 @@ packages:
   - BSD-3-Clause
   homepage: https://github.com/stefankoegl/python-json-pointer
   repository_url: https://github.com/stefankoegl/python-json-pointer
-  dependencies:
-  - py-setuptools
-  - python
-  dependency_details:
-  - name: py-setuptools
-    constraint: py-setuptools
-    kind: build
-  - name: python
-    constraint: 'python@3.7:'
-    kind: build
-    condition: '@3:'
   versions:
   - version: '1.9'
     artifacts:
@@ -292161,6 +292716,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2b2d729f2091522d61c3b31f82e11870f60b68f43fbc705cb76bf4b832af59ef
+  - version: '3.12'
+    artifacts:
+    - checksums:
+      - sha256:7a3dcc11b64053eaa9c549e85e413f8d40a075215f793a331bed9182a14251ae
   recipe_path: repos/spack_repo/builtin/packages/py_jsonpointer/package.py
 - id: spack:py-jsonref
   registry: spack
@@ -293688,6 +294247,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:45fa36d9c6422cf2559198e4db481aa243c7a32d9926b500781c830c80f7ecf8
+  - version: 3.0.17
+    artifacts:
+    - checksums:
+      - sha256:40ac1e9955acf116c4d995d9bfa082d86ad9ec6d91c4f134827cf5e0a5eb75e0
   - version: 3.0.3
     artifacts:
     - checksums:
@@ -295096,6 +295659,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:eafd7171319c28a9adca242df0f7d77853ca989bde3ba77cda9e26e89c450936
+  - version: 0.9.2
+    artifacts:
+    - checksums:
+      - sha256:d94362a4f57d4d86eb4ae656c6cef4911f577bfe09b098e8c3c69da43b45445b
   recipe_path: repos/spack_repo/builtin/packages/py_kornia/package.py
 - id: spack:py-kornia-rs
   registry: spack
@@ -296142,6 +296709,20 @@ packages:
     - checksums:
       - sha256:cb3d8612aa895a48afe8f08860573ba8ef5ee4fdbe1b3cd606c5f50a16152186
   recipe_path: repos/spack_repo/builtin/packages/py_lazy/package.py
+- id: spack:py-lazy-importer
+  registry: spack
+  name: py-lazy-importer
+  summary: A context manager for portable, opt-in lazy imports.
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/pganssle/lazy_importer
+  repository_url: https://github.com/pganssle/lazy_importer
+  versions:
+  - version: 0.1.0
+    artifacts:
+    - checksums:
+      - sha256:b2e296716ce015c0cd80e57b940e52727c5b934b34b8656d5ce06bdd0ee5fbdd
+  recipe_path: repos/spack_repo/builtin/packages/py_lazy_importer/package.py
 - id: spack:py-lazy-loader
   registry: spack
   name: py-lazy-loader
@@ -297298,6 +297879,22 @@ packages:
       - sha256:321878f28c7d64a65683443f832dfa2f21ff8ed69e700d2dde62ccb5f87d4525
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_libsonata/package.py
+- id: spack:py-license-expression
+  registry: spack
+  name: py-license-expression
+  summary: A comprehensive utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/aboutcode-org/license-expression
+  repository_url: https://github.com/aboutcode-org/license-expression
+  maintainers:
+  - ebagrenrut
+  versions:
+  - version: 30.4.4
+    artifacts:
+    - checksums:
+      - sha256:73448f0aacd8d0808895bdc4b2c8e01a8d67646e4188f887375398c761f340fd
+  recipe_path: repos/spack_repo/builtin/packages/py_license_expression/package.py
 - id: spack:py-lifelines
   registry: spack
   name: py-lifelines
@@ -318505,6 +319102,45 @@ packages:
     - checksums:
       - sha256:adda18b28f01f0b1e6fbaf927fec9b8cf07c86f1b74185bed2a624e8a4597578
   recipe_path: repos/spack_repo/builtin/packages/py_pacifica_uploader/package.py
+- id: spack:py-packageurl-python
+  registry: spack
+  name: py-packageurl-python
+  summary: Python library to parse and build "purl" a.k.a. Package URLs.
+  licenses:
+  - MIT
+  homepage: https://github.com/package-url/packageurl-python
+  repository_url: https://github.com/package-url/packageurl-python
+  maintainers:
+  - ebagrenrut
+  dependencies:
+  - py-setuptools
+  - python
+  dependency_details:
+  - name: py-setuptools
+    constraint: py-setuptools
+    kind: build
+  - name: python
+    constraint: 'python@3.8:'
+    kind: build,run
+  options:
+  - django
+  - sqlalchemy
+  default_options:
+    django: 'false'
+    sqlalchemy: 'false'
+  features:
+  - name: django
+    description: Enable Django abstract model mixin to use Package URLs in Django
+    default: 'false'
+  - name: sqlalchemy
+    description: Enable SQLAlchemy declarative mixin to use Package URLs in SQLAlchemy models
+    default: 'false'
+  versions:
+  - version: 0.17.6
+    artifacts:
+    - checksums:
+      - sha256:1252ce3a102372ca6f86eb968e16f9014c4ba511c5c37d95a7f023e2ca6e5c25
+  recipe_path: repos/spack_repo/builtin/packages/py_packageurl_python/package.py
 - id: spack:py-packaging
   registry: spack
   name: py-packaging
@@ -326300,6 +326936,10 @@ packages:
     constraint: 'py-virtualenv@15.2:'
     kind: build,run
   - name: python
+    constraint: 'python@3.11:'
+    kind: build,run
+    condition: '@4.7:'
+  - name: python
     constraint: 'python@3.10:'
     kind: build,run
     condition: '@4.4:'
@@ -326388,6 +327028,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:718d2208cef53fdc38206e40524a6d4d9576d103eb16f0fec11c875e7716e9d9
+  - version: 4.7.0
+    artifacts:
+    - checksums:
+      - sha256:1f3deee12b914c8fa184bd2b5953391c2e4f36763e403d4a23dc9983fa7c6e86
   recipe_path: repos/spack_repo/builtin/packages/py_pre_commit/package.py
 - id: spack:py-pre-commit-hooks
   registry: spack
@@ -334625,6 +335269,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:b6656f6348f5245606cf15ea48c384c7f05156c75ead206c1b246c80a22fb585
+  - version: 3.58.1
+    artifacts:
+    - checksums:
+      - sha256:4c80598ade17fbaa7798e01a25d0bf29ce109740786026a074c5c62bb3e79d23
   recipe_path: repos/spack_repo/builtin/packages/py_pygobject/package.py
 - id: spack:py-pygps
   registry: spack
@@ -338781,6 +339429,30 @@ packages:
     artifacts:
     - checksums:
       - sha256:112fccfbb223eb8df341221531f89943a14f75ee1e44dfb3276ebb38f21047de
+  - version: 3.2.0
+    artifacts:
+    - checksums:
+      - sha256:01847e7922b3c473c50d8c8cc48985aa468a2ab351e92093b5d73c11b32cbb1b
+  - version: 3.2.1
+    artifacts:
+    - checksums:
+      - sha256:6e1d5097bb895e40f437ad36b2a6e0ee34770ad617cb9e4e96a6ad84f7bbfa3e
+  - version: 3.3.0
+    artifacts:
+    - checksums:
+      - sha256:a6134aef935877ef6a6db84e94dad93fade136e1c7b81212feb7273311583e6c
+  - version: 3.3.1
+    artifacts:
+    - checksums:
+      - sha256:7ac05da395cab9549a6c87a858cd4bc4776ca55190bc37007c10e5814d22fc57
+  - version: 3.4.0
+    artifacts:
+    - checksums:
+      - sha256:074b2a3a5072b786ec70ba9b2c6c403d07c8592ff80fdb2b5836b32b441b6a68
+  - version: 3.5.0
+    artifacts:
+    - checksums:
+      - sha256:10f95debb97f6008676fb1b106a3c01af752ce3658ba31d58288dccc458f4b16
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/py_pyprecice/package.py
 - id: spack:py-pyprof2html
@@ -355659,6 +356331,7 @@ packages:
   - c
   - cxx
   - fortran
+  - py-fastjsonschema
   - py-hatch-vcs
   - py-hatchling
   dependency_details:
@@ -355671,6 +356344,10 @@ packages:
   - name: fortran
     constraint: fortran
     kind: build
+  - name: py-fastjsonschema
+    constraint: 'py-fastjsonschema@2.16.2:'
+    kind: test
+    condition: '@0.12:'
   - name: py-hatch-vcs
     constraint: 'py-hatch-vcs@0.4:'
     kind: build,test
@@ -355694,55 +356371,19 @@ packages:
     description: Enable pyproject.toml support
     default: 'false'
   versions:
-  - version: 0.10.7
-    artifacts:
-    - checksums:
-      - sha256:04cbb59fe795202a7eeede1849112ee9dcbf3469feebd9b8b36aa541336ac4f8
-  - version: 0.11.1
-    artifacts:
-    - checksums:
-      - sha256:4e5988df5cd33f0bdb9967b72663ca99f50383c9bc21d8b24fa40c0661ae72b7
-  - version: 0.11.5
-    artifacts:
-    - checksums:
-      - sha256:8f0a1edb86cb087876f3c699d2a2682012efd8867b390ed37355f13949d0628e
-  - version: 0.11.6
-    artifacts:
-    - checksums:
-      - sha256:5982ccd839735be99cfd3b92a8847c6c196692f476c215da84b79d2ad12f9f1b
   - version: 0.12.2
     preferred: true
     artifacts:
     - checksums:
       - sha256:562e0bbc9de1a354c87825ccf732080268d6582a0200f648e8c4a2dcb1e3736d
-  - version: 0.2.0
-    artifacts:
-    - checksums:
-      - sha256:d2a76d9447a412038dc5e25dd259b03c25278661a0c7c3da766bb971c1a9acd2
-  - version: 0.6.0
-    artifacts:
-    - checksums:
-      - sha256:1bea5ed83610b367f3446badd996f2356690548188d6d38e5b93152df311a7ae
-  - version: 0.6.1
-    artifacts:
-    - checksums:
-      - sha256:392254a4ca7235c27a4be98cc24cd708f563171961ce37cff66120ebfda20b7a
-  - version: 0.7.1
-    artifacts:
-    - checksums:
-      - sha256:565f33e15f5aa4514248c508ce3ce40fb6f406f8c3983e891561757b1c9f78ab
-  - version: 0.8.2
-    artifacts:
-    - checksums:
-      - sha256:50ec24b9568c9aa6e27233deeb2978932bc79856212b30575cbfa4049655c436
-  - version: 0.9.5
-    artifacts:
-    - checksums:
-      - sha256:2a4cb119cc968fe87ae05582979657cc0e7be45655798446eabbe490e61ce072
   - version: 1.0.3
     artifacts:
     - checksums:
       - sha256:a4d7a05978ee37975c37743510c8991e2debce7ef83afb0a07c0c576fd4f16e8
+  - version: 1.1.2
+    artifacts:
+    - checksums:
+      - sha256:7893709119c5ab1be75cd10442383132c9433b9f104dacef5185949efbea7974
   recipe_path: repos/spack_repo/builtin/packages/py_scikit_build_core/package.py
 - id: spack:py-scikit-fmm
   registry: spack
@@ -356995,6 +357636,38 @@ packages:
     - checksums:
       - sha256:7206a2ad27ca031d693d65cbcbcfc661498f3983838079a66579bcc784b25293
   recipe_path: repos/spack_repo/builtin/packages/py_scs/package.py
+- id: spack:py-scverse-misc
+  registry: spack
+  name: py-scverse-misc
+  summary: Miscellaneous utility code used by scverse packages
+  licenses:
+  - BSD-3-Clause
+  homepage: https://github.com/scverse/scverse-misc
+  repository_url: https://github.com/scverse/scverse-misc
+  dependencies:
+  - python
+  dependency_details:
+  - name: python
+    constraint: 'python@3.12:'
+    kind: build,run
+  options:
+  - settings
+  default_options:
+    settings: 'false'
+  features:
+  - name: settings
+    description: Adds pydantic-settings support
+    default: 'false'
+  versions:
+  - version: 0.1.6
+    artifacts:
+    - checksums:
+      - sha256:2310c2a0d2159311f1b44759cbd2f83b543362556396d93cb70cff01647ec835
+  - version: 0.1.8
+    artifacts:
+    - checksums:
+      - sha256:1a96d1ea0e6f4baf0d1d4cc1688727613bac5227f91268d19c0e0aa1202792ec
+  recipe_path: repos/spack_repo/builtin/packages/py_scverse_misc/package.py
 - id: spack:py-sdnotify
   registry: spack
   name: py-sdnotify
@@ -362898,6 +363571,30 @@ packages:
       - sha256:b8d3732839850da414a47e91547ee1246f0690cb83f43f11a1fbaec40b7b968c
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_spdlog/package.py
+- id: spack:py-spdx-tools
+  registry: spack
+  name: py-spdx-tools
+  summary: Python library to parse, validate and create SPDX documents.
+  licenses:
+  - Apache-2.0
+  homepage: https://github.com/spdx/tools-python
+  repository_url: https://github.com/spdx/tools-python
+  maintainers:
+  - ebagrenrut
+  options:
+  - viz
+  default_options:
+    viz: 'false'
+  features:
+  - name: viz
+    description: Support graph generation via networkx and pygraphviz
+    default: 'false'
+  versions:
+  - version: 0.8.5
+    artifacts:
+    - checksums:
+      - sha256:be600beb2f762f0116025e05490d399e724f668bef84025a7c421bb266688bdb
+  recipe_path: repos/spack_repo/builtin/packages/py_spdx_tools/package.py
 - id: spack:py-spectra
   registry: spack
   name: py-spectra
@@ -370870,9 +371567,13 @@ packages:
     constraint: pkgconfig
     kind: build
   - name: py-huggingface-hub
+    constraint: py-huggingface-hub@0.16.4:2
+    kind: build,run
+    condition: '@0.23.3:'
+  - name: py-huggingface-hub
     constraint: py-huggingface-hub@0.16.4:1
     kind: build,run
-    condition: '@0.22.1:'
+    condition: '@0.22.1:0.23.1'
   - name: py-huggingface-hub
     constraint: py-huggingface-hub@0.16.4:0
     kind: build,run
@@ -370889,6 +371590,10 @@ packages:
     constraint: py-setuptools-rust
     kind: build
     condition: '@:0.13'
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+    condition: '@0.23.3:'
   - name: python
     constraint: 'python@3.9:'
     kind: build,run
@@ -370938,6 +371643,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:1feeeadf865a7915adc25445dea30e9933e593c31bb96c277cee36de227c8bfa
+  - version: 0.23.3
+    artifacts:
+    - checksums:
+      - sha256:cded33237c77caeef62944d32aa9a7ef42bdce2b3497e18d137e072a8c4be438
   - version: main
   recipe_path: repos/spack_repo/builtin/packages/py_tokenizers/package.py
 - id: spack:py-toml
@@ -374434,6 +375143,26 @@ packages:
     - checksums:
       - sha256:c5132b4b61a829d11cfbd2d72e97f20a45ed6edb95e45c5efdeb5e00836b2745
   recipe_path: repos/spack_repo/builtin/packages/py_trove_classifiers/package.py
+- id: spack:py-truststore
+  registry: spack
+  name: py-truststore
+  summary: Verify certificates using native system trust stores
+  licenses:
+  - MIT
+  homepage: https://github.com/sethmlarson/truststore
+  repository_url: https://github.com/sethmlarson/truststore
+  dependencies:
+  - python
+  dependency_details:
+  - name: python
+    constraint: 'python@3.10:'
+    kind: build,run
+  versions:
+  - version: 0.10.5
+    artifacts:
+    - checksums:
+      - sha256:30d36967ccaded5cbb38d602c433f53600036c79d502f4533a49b60a03bbefcd
+  recipe_path: repos/spack_repo/builtin/packages/py_truststore/package.py
 - id: spack:py-trx-python
   registry: spack
   name: py-trx-python
@@ -377079,6 +377808,30 @@ packages:
     - checksums:
       - sha256:4346edfc5c3b79f694bccd6d6099a322bbeb628dbf2cd86eea55a456ce5124f0
   recipe_path: repos/spack_repo/builtin/packages/py_uritemplate/package.py
+- id: spack:py-uritools
+  registry: spack
+  name: py-uritools
+  summary: Provides RFC 3986 compliant functions for parsing, classifying and composing URIs and URI references, largely replacing the Python Standard Library's...
+  description: Provides RFC 3986 compliant functions for parsing, classifying and composing URIs and URI references, largely replacing the Python Standard Library's urllib.parse module.
+  description_format: html
+  licenses:
+  - MIT
+  homepage: https://github.com/tkem/uritools/
+  repository_url: https://github.com/tkem/uritools
+  maintainers:
+  - ebagrenrut
+  dependencies:
+  - python
+  dependency_details:
+  - name: python
+    constraint: 'python@3.11:'
+    kind: build,run
+  versions:
+  - version: 7.0.1
+    artifacts:
+    - checksums:
+      - sha256:abf09f899b925fad05407d7f39061318c6be62cce065db727a024daadf96eebf
+  recipe_path: repos/spack_repo/builtin/packages/py_uritools/package.py
 - id: spack:py-url-normalize
   registry: spack
   name: py-url-normalize
@@ -377446,6 +378199,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:574fbc07e87ace45c01d55967ad3b864871257b98ff5b8ac87c261227ac8db5b
+  - version: 0.14.1
+    artifacts:
+    - checksums:
+      - sha256:8642db686ce5c50417035e7a257ac73b7e5c3a7a32c33e45bd7e36ba22eeb648
   recipe_path: repos/spack_repo/builtin/packages/py_uv_dynamic_versioning/package.py
 - id: spack:py-uvicorn
   registry: spack
@@ -381061,6 +381818,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:de8610639996f1567952d763a5a41af8af37f2575a41f9852a38f947eb82a3b9
+  - version: 4.0.16
+    artifacts:
+    - checksums:
+      - sha256:adeea0ae78f0856ee4945f413299801b82a0a01416303301f39a704282a37b73
   - version: 4.0.3
     artifacts:
     - checksums:
@@ -382273,6 +383034,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:3df91e6c671869bd2a6b2a8883fa3476dbe2ba763bd2a7646cf848a9eba71b70
+  - version: '1.6'
+    artifacts:
+    - checksums:
+      - sha256:ebddefc3e3aa9fd8b2e2ed884ed844043f843428b79dccda831803add55cc51d
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/py_xdot/package.py
 - id: spack:py-xenv
@@ -413702,6 +414467,24 @@ packages:
     kind: build,run
     condition: '@1.12.0:'
   recipe_path: repos/spack_repo/builtin/packages/r_glmgampoi/package.py
+- id: spack:r-glmmtmb
+  registry: spack
+  name: r-glmmtmb
+  summary: Generalized Linear Mixed Models using Template Model Builder.
+  licenses:
+  - AGPL-3.0-only
+  dependencies:
+  - cxx
+  dependency_details:
+  - name: cxx
+    constraint: cxx
+    kind: build
+  versions:
+  - version: 1.1.15.2
+    artifacts:
+    - checksums:
+      - sha256:bee86a0e504a5e42dc6f7e44877ea5081fb0afe50c3a43b041247d6c5339e7d5
+  recipe_path: repos/spack_repo/builtin/packages/r_glmmtmb/package.py
 - id: spack:r-glmnet
   registry: spack
   name: r-glmnet
@@ -441268,6 +442051,24 @@ packages:
     - checksums:
       - sha256:e40686b869acd4f71fdb1e8e7a6c64cd6792fc9d52a78f9e559a7176ab84e21e
   recipe_path: repos/spack_repo/builtin/packages/r_rsvd/package.py
+- id: spack:r-rtmb
+  registry: spack
+  name: r-rtmb
+  summary: '''R'' Bindings for ''TMB''.'
+  licenses:
+  - GPL-2.0-or-later
+  dependencies:
+  - cxx
+  dependency_details:
+  - name: cxx
+    constraint: cxx
+    kind: build
+  versions:
+  - version: '2.0'
+    artifacts:
+    - checksums:
+      - sha256:a87b21eb5b30071c702b6b45866dfd2ee2aee51d78da0cbf4fdab5d7c1454635
+  recipe_path: repos/spack_repo/builtin/packages/r_rtmb/package.py
 - id: spack:r-rtracklayer
   registry: spack
   name: r-rtracklayer
@@ -452617,6 +453418,18 @@ packages:
     - checksums:
       - sha256:fe9b1098a2d1d4722f8a7657a9244afcd3d6b7f4f112fc6a92c2fb75da07de59
   recipe_path: repos/spack_repo/builtin/packages/r_tinytiger/package.py
+- id: spack:r-tmb
+  registry: spack
+  name: r-tmb
+  summary: 'Template Model Builder: A General Random Effect Tool Inspired by ''ADMB''.'
+  licenses:
+  - GPL-2.0-only
+  versions:
+  - version: 1.9.25
+    artifacts:
+    - checksums:
+      - sha256:cf9663b29949cd5eaccb32e11900c9e07caec7d6ac4f17cfd938317dc33acff2
+  recipe_path: repos/spack_repo/builtin/packages/r_tmb/package.py
 - id: spack:r-tmixclust
   registry: spack
   name: r-tmixclust
@@ -462805,7 +463618,6 @@ packages:
   maintainers:
   - k-tokunaga
   - kgoto
-  - tuna
   dependencies:
   - c
   - cxx
@@ -464521,7 +465333,7 @@ packages:
   topics:
   - rocm
   dependencies:
-  - amdblis
+  - aocl-blas
   - c
   - cmake
   - cxx
@@ -464529,8 +465341,8 @@ packages:
   - googletest
   - python
   dependency_details:
-  - name: amdblis
-    constraint: amdblis
+  - name: aocl-blas
+    constraint: aocl-blas
     kind: test
   - name: c
     constraint: c
@@ -470184,7 +470996,7 @@ packages:
   maintainers:
   - rsoutelino
   dependencies:
-  - amdlibm
+  - aocl-libm
   - c
   - curl
   - fortran
@@ -470194,8 +471006,8 @@ packages:
   - netcdf-fortran
   - zlib-api
   dependency_details:
-  - name: amdlibm
-    constraint: amdlibm
+  - name: aocl-libm
+    constraint: aocl-libm
     condition: '%aocc'
   - name: c
     constraint: c
@@ -474321,11 +475133,6 @@ packages:
     condition: '@4:'
   - name: cxxstd
     description: C++ standard
-    values:
-    - '11'
-    - '14'
-    - '17'
-    - '20'
     default: '20'
     condition: '@4:'
   - name: debug
@@ -474463,6 +475270,14 @@ packages:
     artifacts:
     - checksums:
       - sha256:1209a5be43d4aecfc2761f821f311cd54c9def45286edca3f4f0cc19dd8ba2ee
+  - version: 4.6.0
+    artifacts:
+    - checksums:
+      - sha256:4dd69d648d9fd1d948fa33d9be1ea29d40e3df04ac3ff6f485501a9d19ec32f2
+  - version: 4.6.1
+    artifacts:
+    - checksums:
+      - sha256:0ad6f49672f09d01c1d6c500af09613b25519185f01ac4fa406c13b530c5b106
   recipe_path: repos/spack_repo/builtin/packages/samrai/package.py
 - id: spack:samtools
   registry: spack
@@ -477937,6 +478752,9 @@ packages:
   - name: fmt
     constraint: 'fmt@10:'
     condition: '@2024-08-15:'
+  - name: fmt
+    constraint: fmt@:12.1
+    condition: '@2024-08-15:2025-08-28'
   - name: fmt
     constraint: fmt@10.2.1:10
     condition: '@2024-03-11:2024-07-10'
@@ -483432,6 +484250,7 @@ packages:
   - toxa81
   dependencies:
   - amdblis threads=openmp
+  - aocl-blas threads=openmp
   - blas
   - blis threads=openmp
   - c
@@ -483475,6 +484294,9 @@ packages:
   - name: amdblis threads=openmp
     constraint: amdblis threads=openmp
     condition: +openmp ^[virtuals=blas] amdblis
+  - name: aocl-blas threads=openmp
+    constraint: aocl-blas threads=openmp
+    condition: +openmp ^[virtuals=blas] aocl-blas
   - name: blas
     constraint: blas
   - name: blis threads=openmp
@@ -485835,6 +486657,9 @@ packages:
     constraint: 'python@3:'
     kind: build,link,run
     condition: +python
+  - name: root
+    constraint: root+python
+    condition: +root +python
   - name: root
     constraint: 'root@5.18: cxxstd=17'
     kind: build,link,run
@@ -492744,8 +493569,10 @@ packages:
   - dyninst
   - fast-global-file-status
   - fortran
+  - glib
   - graphlib
   - graphviz
+  - gtkplus
   - launchmon
   - libtool
   - mpi
@@ -492783,11 +493610,19 @@ packages:
   - name: fortran
     constraint: fortran
     kind: build
+  - name: glib
+    constraint: glib
+    kind: build,run
+    condition: +gui
   - name: graphlib
     constraint: graphlib@3.0.0
   - name: graphviz
     constraint: graphviz
     kind: build,link,run
+  - name: gtkplus
+    constraint: gtkplus
+    kind: build,run
+    condition: +gui
   - name: launchmon
     constraint: 'launchmon@1.2.0:'
   - name: libtool
@@ -492800,17 +493635,33 @@ packages:
     constraint: mrnet
   - name: pango
     constraint: pango
+    kind: run
     condition: +gui
   - name: py-pygments
     constraint: py-pygments
+    kind: run
     condition: +gui
   - name: py-xdot
+    constraint: 'py-xdot@1.6:'
+    kind: run
+    condition: '+gui @4.3.0:'
+  - name: py-xdot
     constraint: py-xdot@1.0
-    condition: +gui
+    kind: run
+    condition: +gui @:4.2.3
+  - name: python
+    constraint: python
+    condition: '@4.3.0:'
   - name: python
     constraint: python@:3.11
+    condition: '@:4.2.3'
+  - name: swig
+    constraint: 'swig@4.0:'
+    kind: build
+    condition: '^python@3.12:'
   - name: swig
     constraint: swig
+    kind: build
   options:
   - dysect
   - examples
@@ -492859,6 +493710,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:cec7824e43d4c1f2cd24bdf074ef27b47d89ce9abda2b5bc37eed6396c4adf37
+  - version: 4.3.0
+    artifacts:
+    - checksums:
+      - sha256:896a3dacad612f93090d0dc4ab2c453ee2ca4dd3c47e396186727d9ad0519ef5
   - version: develop
   recipe_path: repos/spack_repo/builtin/packages/stat/package.py
 - id: spack:stata
@@ -497585,12 +498440,14 @@ packages:
   homepage: https://github.com/szcompressor/SZ3
   repository_url: https://github.com/szcompressor/sz3
   maintainers:
+  - ayzk
   - disheng222
   - robertu94
   topics:
   - e4s
   dependencies:
   - c
+  - cmake
   - cxx
   - gsl
   - hdf5
@@ -497600,16 +498457,26 @@ packages:
   - name: c
     constraint: c
     kind: build
+  - name: cmake
+    constraint: 'cmake@3.18:'
+    kind: build
+  - name: cmake
+    constraint: 'cmake@3.19:'
+    kind: build
+    condition: '@3.4:'
   - name: cxx
     constraint: cxx
     kind: build
   - name: gsl
     constraint: gsl
+    condition: '@:3.3'
   - name: hdf5
     constraint: hdf5
     condition: +hdf5
   - name: pkgconfig
     constraint: pkgconfig
+    kind: build
+    condition: '@:3.3'
   - name: zstd
     constraint: zstd
   options:
@@ -497633,6 +498500,10 @@ packages:
   - version: 3.1.7
   - version: 3.1.8
   - version: 3.2.0
+  - version: 3.2.1
+  - version: 3.3.0
+  - version: 3.3.2
+  - version: 3.4.0
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/sz3/package.py
 - id: spack:szauto
@@ -508934,6 +509805,7 @@ packages:
   - rdmacm
   - rocm
   - simd
+  - stats
   - thread_multiple
   - ucg
   - ud
@@ -508967,6 +509839,7 @@ packages:
     rc: 'false'
     rdmacm: 'false'
     rocm: 'false'
+    stats: 'false'
     thread_multiple: 'false'
     ucg: 'false'
     ud: 'false'
@@ -509062,6 +509935,9 @@ packages:
     default: 'false'
   - name: simd
     description: SIMD features
+  - name: stats
+    description: Enable statistics counters (UCS_STATS)
+    default: 'false'
   - name: thread_multiple
     description: Enable thread support in UCP and UCT
     default: 'false'
@@ -509181,6 +510057,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:2374d2fcf3186fbfd5e27633ab153aabaeb6b4f503a88563d2aca67cf51ed2c1
+  - version: 1.21.1
+    artifacts:
+    - checksums:
+      - sha256:54f0d5471b0bbee28bb1dc10f72023d155026cefa2edcb8a36a282cfb26e93bd
   - version: 1.22.0
     artifacts:
     - checksums:
@@ -511462,6 +512342,62 @@ packages:
     artifacts:
     - checksums:
       - sha256:b810481f0c859a5859d82e23eddd2856b410802009f94663d64c330dc2f4403e
+  - version: 0.13.2
+    artifacts:
+    - checksums:
+      - sha256:312d95376e76068b8cc70347676f1570f4f20b3014862f729dc538a316593824
+  - version: 0.13.3
+    artifacts:
+    - checksums:
+      - sha256:2752d58f05859e8d1c458c6d162f03625dcd51c28e65c54fb419f4074bb07a65
+  - version: 0.14.0
+    artifacts:
+    - checksums:
+      - sha256:42fb5129a3fffe5a4b790dfe1ea3a734c69ee095fefbf649326269bba94c262d
+  - version: 0.14.1
+    artifacts:
+    - checksums:
+      - sha256:d8f883c774e1be4fecb216e0ed594fb595ecb04a15720db876ae29a41e198437
+  - version: 0.14.2
+    artifacts:
+    - checksums:
+      - sha256:be1e6db564b4f8a889526f5bb632883cd0f7bc87a9f0df28455ca13e0f845898
+  - version: 0.14.3
+    artifacts:
+    - checksums:
+      - sha256:e0e52c687fc3c0e832e1b52ca81d9af818df1a0bc8b2610895300012f4b3dac5
+  - version: 0.15.0
+    artifacts:
+    - checksums:
+      - sha256:e3e1b2c1828d7dbeeb9291c9a9cfdaad8f1fda436d24fc08f654ad2c01b01f92
+  - version: 0.15.1
+    artifacts:
+    - checksums:
+      - sha256:5dc719a6cd59ea90543c731da1c31ebc8172cabee1c8bee0e7a7ab236eb0ef8f
+  - version: 0.15.2
+    artifacts:
+    - checksums:
+      - sha256:83aea81e4b8f7ea9087d655afb40a7d6228daae8cdde0c70c8b84f9dee657159
+  - version: 0.15.3
+    artifacts:
+    - checksums:
+      - sha256:b9b3516b4a403e96fe6be471a52df672dfd89249b8b27b19bc9ef4cc7cb40275
+  - version: 0.15.4
+    artifacts:
+    - checksums:
+      - sha256:530e10617a09cce5cd8ac1f3351b8caba5244247bdafb3baed61f1f7980592db
+  - version: 0.15.5
+    artifacts:
+    - checksums:
+      - sha256:46d276662de37c2be46675be7b5ab418b0a7ef308fe92ec7fbc0cc4436ee8c38
+  - version: 0.15.6
+    artifacts:
+    - checksums:
+      - sha256:15c341ce8b93d3b70bec120c1df90b2b02a219d65593cddeb4b52521a950e45e
+  - version: 0.15.7
+    artifacts:
+    - checksums:
+      - sha256:a5d37ac56d984b36f8a1ec0831fd5137aa73dfe16be6d716f76ae16125024ac9
   - version: 0.9.6
     artifacts:
     - checksums:
@@ -512796,6 +513732,8 @@ packages:
   dependencies:
   - amdblis threads=openmp
   - amdfftw
+  - aocl-blas threads=openmp
+  - aocl-fftw
   - blas
   - c
   - cxx
@@ -512821,6 +513759,12 @@ packages:
   - name: amdfftw
     constraint: amdfftw+openmp
     condition: +openmp ^[virtuals=fftw-api] amdfftw
+  - name: aocl-blas threads=openmp
+    constraint: aocl-blas threads=openmp
+    condition: +openmp ^[virtuals=blas] aocl-blas
+  - name: aocl-fftw
+    constraint: aocl-fftw+openmp
+    condition: +openmp ^[virtuals=fftw-api] aocl-fftw
   - name: blas
     constraint: blas
   - name: c
@@ -513821,6 +514765,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:30ea70145669adfa0bf6e3354e3f38011e0c1ead4344066e26ee73b0409d7bf5
+  - version: 1.31.0
+    artifacts:
+    - checksums:
+      - sha256:21a260f69b9a049300ba64f77060963eae61dbeaf2ecaf1c4eaa9ac6158d69e6
   - version: 1.4.0
     artifacts:
     - checksums:
@@ -517283,6 +518231,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:14443661c7b095d05b4e376fb3f40613f173e34fc9d4658234e9ec1d624a618f
+  - version: 9.6.2
+    artifacts:
+    - checksums:
+      - sha256:aed12cec12a9609179bf66329070266627ca64244a10856a452b2a17ffb04a1d
   - version: 9.7.0
     artifacts:
     - checksums:
@@ -520603,6 +521555,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:11186188b033d26332e31769c1f7aff9349406920a7f72eeb256d5881f7223f4
+  - version: 4.8.0
+    artifacts:
+    - checksums:
+      - sha256:f3b997266379e1719d186c92471a8f44f8185e976244abde82145a7fddeaf418
   recipe_path: repos/spack_repo/builtin/packages/wrf/package.py
 - id: spack:wrf-io
   registry: spack
@@ -521172,6 +522128,10 @@ packages:
     artifacts:
     - checksums:
       - sha256:110729586b1a097c9e4a7ec34c48e60f3aec7ec61ef192a417ce0774cc32be43
+  - version: 2.2.0
+    artifacts:
+    - checksums:
+      - sha256:56fea3b124b3f2dc182029e73fb93ea61f44b75d93621e32b88dafce301c5d69
   recipe_path: repos/spack_repo/builtin/packages/xad/package.py
 - id: spack:xalan-c
   registry: spack
@@ -527877,6 +528837,22 @@ packages:
     artifacts:
     - checksums:
       - sha256:8460113f2678dcb23220af17b734f1221af302f42126bb54e3ae356530933b85
+  - version: 6.6.1
+    artifacts:
+    - checksums:
+      - sha256:de0b8d4515f3c878456d9f0f83d4922a55f2b4cbb9c56fe68df559ecd284ff86
+  - version: 6.7.0
+    artifacts:
+    - checksums:
+      - sha256:d2d4b8bf26a1896bceed7aa69f227583c2f7fb532c8cb12c4a661186c1bac995
+  - version: 6.7.1
+    artifacts:
+    - checksums:
+      - sha256:79a2a2f50091b3b941e5139c1b38a53203d5d2e9ba496a7ad505d8c31ccd6013
+  - version: 6.8.0
+    artifacts:
+    - checksums:
+      - sha256:12a91ba662eb88d966febd2bb9936e20fa19c8e0258ba0d8a75efb02a1c6bcc6
   recipe_path: repos/spack_repo/builtin/packages/xtb/package.py
 - id: spack:xtcdata
   registry: spack
@@ -530600,6 +531576,7 @@ packages:
   - version: '0.68'
   - version: '0.69'
   - version: '0.70'
+  - version: '0.71'
   - version: master
   recipe_path: repos/spack_repo/builtin/packages/yosys/package.py
 - id: spack:yq
@@ -531340,6 +532317,9 @@ packages:
     constraint: git
     kind: build
   - name: llvm
+    constraint: llvm@22
+    condition: '@0.17'
+  - name: llvm
     constraint: llvm@21
     condition: '@0.16'
   - name: llvm
@@ -531375,8 +532355,8 @@ packages:
     - Release
     default: Release
   versions:
-  - version: 0.15.2
   - version: 0.16.0
+  - version: 0.17.1
   recipe_path: repos/spack_repo/builtin/packages/zig/package.py
 - id: spack:zip
   registry: spack

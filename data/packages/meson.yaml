@@ -2,7 +2,7 @@
 # Normalized from package registry repositories; regenerate instead of editing.
 registry: meson
 repository: https://github.com/mesonbuild/wrapdb
-revision: cc81edad31940dce5d9595905529a5899a4319b4
+revision: 7b3c93faeb56ba25ace849aa3975db068bdd2f14
 packages:
 - id: meson:abseil-cpp
   registry: meson
@@ -6189,12 +6189,19 @@ packages:
     capabilities:
     - cpp-httplib
     artifacts:
-    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.66.0.tar.gz
-      checksums:
-      - sha256:537a77cdb96d3b4ad64d0b7103971de52eac75cd4ee03a2fdb84417b0d742459
-      filename: cpp-httplib-0.66.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.66.0-1/cpp-httplib.wrap
+  - version: 0.67.0
+    packaging_revision: '1'
+    capabilities:
+    - cpp-httplib
+    artifacts:
+    - url: https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.67.0.tar.gz
+      checksums:
+      - sha256:be711ddaf7a3655d8f23aa5655709250b24d247aedd4b2629989d18b6164e5be
+      filename: cpp-httplib-0.67.0.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/cpp-httplib_0.67.0-1/cpp-httplib.wrap
   - version: 0.8.9
     packaging_revision: '2'
     capabilities:
@@ -15190,12 +15197,19 @@ packages:
     capabilities:
     - libnpupnp
     artifacts:
-    - url: https://www.lesbonscomptes.com/upmpdcli/downloads/libnpupnp-6.3.0.tar.gz
-      checksums:
-      - sha256:082d999178291ed45ae24c3fd9e781120d3ec94d61d11121e5bac90c69365cda
-      filename: libnpupnp-6.3.0.tar.gz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libnpupnp_6.3.0-1/libnpupnp.wrap
+  - version: 6.3.1
+    packaging_revision: '1'
+    capabilities:
+    - libnpupnp
+    artifacts:
+    - url: https://www.lesbonscomptes.com/upmpdcli/downloads/libnpupnp-6.3.1.tar.gz
+      checksums:
+      - sha256:1e6271dd2e641a5b095d994be6976031e5f6b32a22df3bb1988636f51b0f52b7
+      filename: libnpupnp-6.3.1.tar.gz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/libnpupnp_6.3.1-1/libnpupnp.wrap
   recipe_path: subprojects/libnpupnp.wrap
 - id: meson:libobsd
   registry: meson
@@ -16051,6 +16065,13 @@ packages:
     artifacts:
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/libsrtp2_2.8.1-1/libsrtp2.wrap
+  - version: 2.8.2
+    packaging_revision: '1'
+    capabilities:
+    - libsrtp2
+    artifacts:
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/libsrtp2_2.8.2-1/libsrtp2.wrap
   recipe_path: subprojects/libsrtp2.wrap
 - id: meson:libssh2
   registry: meson
@@ -21133,12 +21154,19 @@ packages:
     capabilities:
     - libpkgconf
     artifacts:
-    - url: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.10.tar.xz
-      checksums:
-      - sha256:9371b2f6372da574d4c6dc96fe9b1463037bcf6afcb6671c1555afde7b17e2de
-      filename: pkgconf-3.0.10.tar.xz
     - kind: registry_package
       url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.10-1/pkgconf.wrap
+  - version: 3.0.11
+    packaging_revision: '1'
+    capabilities:
+    - libpkgconf
+    artifacts:
+    - url: https://distfiles.ariadne.space/pkgconf/pkgconf-3.0.11.tar.xz
+      checksums:
+      - sha256:d0cd841bc8e55b9da888106c00dc256d05b7d1d8e5a46f4be4eb4c5125bd2dc4
+      filename: pkgconf-3.0.11.tar.xz
+    - kind: registry_package
+      url: https://wrapdb.mesonbuild.com/v2/pkgconf_3.0.11-1/pkgconf.wrap
   - version: 3.0.3
     packaging_revision: '1'
     capabilities:

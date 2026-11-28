@@ -418,6 +418,11 @@ entities:
   aliases: []
   packages:
   - hunter:aglet
+- id: agoodkind-periphery
+  name: agoodkind-periphery
+  aliases: []
+  packages:
+  - bazel:agoodkind-periphery
 - id: agrep
   name: agrep
   aliases: []
@@ -468,6 +473,7 @@ entities:
   aliases:
   - base64
   packages:
+  - bazel:base64
   - conan:base64
   - meson:aklomp-base64
   - vcpkg:aklomp-base64
@@ -535,6 +541,7 @@ entities:
   name: aliyun-oss-cpp-sdk
   aliases: []
   packages:
+  - bazel:aliyun-oss-cpp-sdk
   - vcpkg:aliyun-oss-cpp-sdk
 - id: all-library
   name: all-library
@@ -1081,6 +1088,11 @@ entities:
   aliases: []
   packages:
   - spack:aocc
+- id: aocl-blas
+  name: aocl-blas
+  aliases: []
+  packages:
+  - spack:aocl-blas
 - id: aocl-compression
   name: aocl-compression
   aliases: []
@@ -1101,11 +1113,31 @@ entities:
   aliases: []
   packages:
   - spack:aocl-dlp
+- id: aocl-fftw
+  name: aocl-fftw
+  aliases: []
+  packages:
+  - spack:aocl-fftw
+- id: aocl-lapack
+  name: aocl-lapack
+  aliases: []
+  packages:
+  - spack:aocl-lapack
+- id: aocl-libm
+  name: aocl-libm
+  aliases: []
+  packages:
+  - spack:aocl-libm
 - id: aocl-libmem
   name: aocl-libmem
   aliases: []
   packages:
   - spack:aocl-libmem
+- id: aocl-scalapack
+  name: aocl-scalapack
+  aliases: []
+  packages:
+  - spack:aocl-scalapack
 - id: aocl-sparse
   name: aocl-sparse
   aliases: []
@@ -2240,6 +2272,11 @@ entities:
   aliases: []
   packages:
   - spack:autogen
+- id: autoload-rules-godot
+  name: autoload_rules_godot
+  aliases: []
+  packages:
+  - bazel:autoload_rules_godot
 - id: automaded
   name: automaded
   aliases: []
@@ -6478,6 +6515,11 @@ entities:
   - spack:cfitsio
   - vcpkg:cfitsio
   - xmake:cfitsio
+- id: cfp
+  name: cfp
+  aliases: []
+  packages:
+  - spack:cfp
 - id: cgal
   name: cgal
   aliases: []
@@ -7210,6 +7252,7 @@ entities:
   aliases: []
   packages:
   - conan:cluestering
+  - spack:cluestering
 - id: clustal-omega
   name: clustal-omega
   aliases: []
@@ -9740,6 +9783,7 @@ entities:
   name: dbus
   aliases: []
   packages:
+  - bazel:dbus
   - conan:dbus
   - hunter:dbus
   - spack:dbus
@@ -12460,6 +12504,7 @@ entities:
   name: fastgltf
   aliases: []
   packages:
+  - bazel:fastgltf
   - conan:fastgltf
   - vcpkg:fastgltf
   - xmake:fastgltf
@@ -12940,6 +12985,11 @@ entities:
   aliases: []
   packages:
   - spack:filebench
+- id: filmil-upspin
+  name: filmil_upspin
+  aliases: []
+  packages:
+  - bazel:filmil_upspin
 - id: filo
   name: filo
   aliases: []
@@ -15017,6 +15067,7 @@ entities:
   name: gl2ps
   aliases: []
   packages:
+  - conan:gl2ps
   - spack:gl2ps
   - vcpkg:gl2ps
   - xmake:gl2ps
@@ -15374,6 +15425,7 @@ entities:
   - glslang-tools
   - libglslang
   packages:
+  - bazel:glslang
   - conan:glslang
   - cppget:glslang-tools
   - cppget:libglslang
@@ -16909,6 +16961,16 @@ entities:
   aliases: []
   packages:
   - spack:hdfview
+- id: hdlf-rules-kicad
+  name: hdlf_rules_kicad
+  aliases: []
+  packages:
+  - bazel:hdlf_rules_kicad
+- id: hdlf-texlive-packages
+  name: hdlf_texlive_packages
+  aliases: []
+  packages:
+  - bazel:hdlf_texlive_packages
 - id: hdrhistogram-c
   name: hdrhistogram_c
   aliases:
@@ -16957,6 +17019,11 @@ entities:
   aliases: []
   packages:
   - spack:heffte
+- id: hegel-cpp
+  name: hegel-cpp
+  aliases: []
+  packages:
+  - bazel:hegel-cpp
 - id: heimdall
   name: heimdall
   aliases: []
@@ -18368,6 +18435,7 @@ entities:
   name: iniparser
   aliases: []
   packages:
+  - conan:iniparser
   - spack:iniparser
   - vcpkg:iniparser
   - xmake:iniparser
@@ -20166,6 +20234,11 @@ entities:
   packages:
   - spack:kineto
   - vcpkg:kineto
+- id: kio
+  name: kio
+  aliases: []
+  packages:
+  - vcpkg:kio
 - id: kirigami
   name: kirigami
   aliases: []
@@ -20304,6 +20377,11 @@ entities:
   - conan:kokkos
   - spack:kokkos
   - xmake:kokkos
+- id: kokkos-comm
+  name: kokkos-comm
+  aliases: []
+  packages:
+  - spack:kokkos-comm
 - id: kokkos-fft
   name: kokkos-fft
   aliases:
@@ -22372,6 +22450,7 @@ entities:
   name: libglvnd
   aliases: []
   packages:
+  - bazel:libglvnd
   - conan:libglvnd
   - xmake:libglvnd
 - id: libgme
@@ -22617,6 +22696,7 @@ entities:
   name: libice
   aliases: []
   packages:
+  - bazel:libice
   - spack:libice
   - vcpkg:libice
   - xmake:libice
@@ -24373,6 +24453,11 @@ entities:
   aliases: []
   packages:
   - xmake:librime
+- id: librist
+  name: librist
+  aliases: []
+  packages:
+  - conan:librist
 - id: libristra
   name: libristra
   aliases: []
@@ -25233,8 +25318,10 @@ entities:
   - xmake:libunwind
 - id: liburcu
   name: liburcu
-  aliases: []
+  aliases:
+  - userspace_rcu
   packages:
+  - bazel:userspace_rcu
   - spack:liburcu
   - vcpkg:liburcu
 - id: liburing
@@ -25408,6 +25495,7 @@ entities:
   name: libvterm
   aliases: []
   packages:
+  - bazel:libvterm
   - spack:libvterm
 - id: libvulkan-headers
   name: libvulkan-headers
@@ -26356,6 +26444,13 @@ entities:
   - spack:llhttp
   - vcpkg:llhttp
   - xmake:llhttp
+- id: mattbusel-llm-cpp
+  name: llm-cpp
+  aliases:
+  - mattbusel-llm-cpp
+  packages:
+  - bazel:mattbusel-llm-cpp
+  - xmake:llm-cpp
 - id: llnl-units
   name: llnl-units
   aliases:
@@ -27478,6 +27573,11 @@ entities:
   - conan:matchit
   - vcpkg:matchit
   - xmake:matchit
+- id: mateopedersen-betacalendars-calendar-layout
+  name: mateopedersen-betacalendars-calendar-layout
+  aliases: []
+  packages:
+  - vcpkg:mateopedersen-betacalendars-calendar-layout
 - id: materialx
   name: materialx
   aliases: []
@@ -27562,11 +27662,6 @@ entities:
   packages:
   - meson:libmatroska
   - vcpkg:matroska
-- id: mattbusel-llm-cpp
-  name: mattbusel-llm-cpp
-  aliases: []
-  packages:
-  - bazel:mattbusel-llm-cpp
 - id: matx
   name: matx
   aliases: []
@@ -31943,11 +32038,6 @@ entities:
   - spack:py-onnxruntime
   - vcpkg:onnxruntime
   - xmake:onnxruntime
-- id: onnxruntime-gpu
-  name: onnxruntime-gpu
-  aliases: []
-  packages:
-  - vcpkg:onnxruntime-gpu
 - id: onnxruntime-prebuilt
   name: onnxruntime_prebuilt
   aliases: []
@@ -32630,6 +32720,11 @@ entities:
   aliases: []
   packages:
   - spack:openpmd-api
+- id: openqmc
+  name: openqmc
+  aliases: []
+  packages:
+  - bazel:openqmc
 - id: openradioss-engine
   name: openradioss-engine
   aliases: []
@@ -32767,6 +32862,11 @@ entities:
   packages:
   - bazel:opentelemetry-proto
   - conan:opentelemetry-proto
+- id: opentimelineio
+  name: opentimelineio
+  aliases: []
+  packages:
+  - conan:opentimelineio
 - id: opentracing-cpp
   name: opentracing-cpp
   aliases:
@@ -37339,6 +37439,7 @@ entities:
   name: plutovg
   aliases: []
   packages:
+  - bazel:plutovg
   - conan:plutovg
   - vcpkg:plutovg
   - xmake:plutovg
@@ -38954,11 +39055,6 @@ entities:
   aliases: []
   packages:
   - spack:py-apache-libcloud
-- id: py-apache-tvm-ffi
-  name: py-apache-tvm-ffi
-  aliases: []
-  packages:
-  - spack:py-apache-tvm-ffi
 - id: py-apebench
   name: py-apebench
   aliases: []
@@ -40301,6 +40397,11 @@ entities:
   aliases: []
   packages:
   - spack:py-boltons
+- id: py-boolean-py
+  name: py-boolean-py
+  aliases: []
+  packages:
+  - spack:py-boolean-py
 - id: py-boom-boot-manager
   name: py-boom-boot-manager
   aliases: []
@@ -45173,6 +45274,11 @@ entities:
   aliases: []
   packages:
   - spack:py-lazy
+- id: py-lazy-importer
+  name: py-lazy-importer
+  aliases: []
+  packages:
+  - spack:py-lazy-importer
 - id: py-lazy-loader
   name: py-lazy-loader
   aliases: []
@@ -45280,6 +45386,11 @@ entities:
   aliases: []
   packages:
   - spack:py-libsonata
+- id: py-license-expression
+  name: py-license-expression
+  aliases: []
+  packages:
+  - spack:py-license-expression
 - id: py-lifelines
   name: py-lifelines
   aliases: []
@@ -47297,6 +47408,11 @@ entities:
   aliases: []
   packages:
   - spack:py-pacifica-uploader
+- id: py-packageurl-python
+  name: py-packageurl-python
+  aliases: []
+  packages:
+  - spack:py-packageurl-python
 - id: py-packaging
   name: py-packaging
   aliases: []
@@ -51237,6 +51353,11 @@ entities:
   aliases: []
   packages:
   - spack:py-scs
+- id: py-scverse-misc
+  name: py-scverse-misc
+  aliases: []
+  packages:
+  - spack:py-scverse-misc
 - id: py-sdnotify
   name: py-sdnotify
   aliases: []
@@ -51824,6 +51945,11 @@ entities:
   aliases: []
   packages:
   - spack:py-spdlog
+- id: py-spdx-tools
+  name: py-spdx-tools
+  aliases: []
+  packages:
+  - spack:py-spdx-tools
 - id: py-spectra
   name: py-spectra
   aliases: []
@@ -53036,6 +53162,11 @@ entities:
   aliases: []
   packages:
   - spack:py-trove-classifiers
+- id: py-truststore
+  name: py-truststore
+  aliases: []
+  packages:
+  - spack:py-truststore
 - id: py-trx-python
   name: py-trx-python
   aliases: []
@@ -53341,6 +53472,11 @@ entities:
   aliases: []
   packages:
   - spack:py-uritemplate
+- id: py-uritools
+  name: py-uritools
+  aliases: []
+  packages:
+  - spack:py-uritools
 - id: py-url-normalize
   name: py-url-normalize
   aliases: []
@@ -57565,6 +57701,11 @@ entities:
   aliases: []
   packages:
   - spack:r-glmgampoi
+- id: r-glmmtmb
+  name: r-glmmtmb
+  aliases: []
+  packages:
+  - spack:r-glmmtmb
 - id: r-glmnet
   name: r-glmnet
   aliases: []
@@ -60160,6 +60301,11 @@ entities:
   aliases: []
   packages:
   - spack:r-rsvd
+- id: r-rtmb
+  name: r-rtmb
+  aliases: []
+  packages:
+  - spack:r-rtmb
 - id: r-rtracklayer
   name: r-rtracklayer
   aliases: []
@@ -60970,6 +61116,11 @@ entities:
   aliases: []
   packages:
   - spack:r-tinytiger
+- id: r-tmb
+  name: r-tmb
+  aliases: []
+  packages:
+  - spack:r-tmb
 - id: r-tmixclust
   name: r-tmixclust
   aliases: []
@@ -63752,6 +63903,16 @@ entities:
   aliases: []
   packages:
   - bazel:rules_helm
+- id: rules-helm-img
+  name: rules_helm_img
+  aliases: []
+  packages:
+  - bazel:rules_helm_img
+- id: rules-helm-oci
+  name: rules_helm_oci
+  aliases: []
+  packages:
+  - bazel:rules_helm_oci
 - id: rules-idb
   name: rules_idb
   aliases: []
@@ -63847,6 +64008,11 @@ entities:
   aliases: []
   packages:
   - bazel:rules_kotlin
+- id: rules-kubectl
+  name: rules_kubectl
+  aliases: []
+  packages:
+  - bazel:rules_kubectl
 - id: rules-kustomize
   name: rules_kustomize
   aliases: []
@@ -66733,6 +66899,12 @@ entities:
   packages:
   - spack:soqt
   - vcpkg:soqt
+- id: soralog
+  name: soralog
+  aliases: []
+  packages:
+  - hunter:soralog
+  - vcpkg:soralog
 - id: sord
   name: sord
   aliases: []
@@ -69392,6 +69564,7 @@ entities:
   name: tidy-html5
   aliases: []
   packages:
+  - bazel:tidy-html5
   - conan:tidy-html5
   - spack:tidy-html5
   - vcpkg:tidy-html5
@@ -69550,6 +69723,11 @@ entities:
   aliases: []
   packages:
   - conan:tinyalsa
+- id: tinybvh
+  name: tinybvh
+  aliases: []
+  packages:
+  - bazel:tinybvh
 - id: tinycbor
   name: tinycbor
   aliases:
@@ -69582,7 +69760,6 @@ entities:
   aliases: []
   packages:
   - conan:tinycthread
-  - vcpkg:tinycthread
   - xmake:tinycthread
 - id: tinycthreadpool
   name: tinycthreadpool
@@ -70007,6 +70184,11 @@ entities:
   aliases: []
   packages:
   - xmake:tomlcpp
+- id: tomlkit11
+  name: tomlkit11
+  aliases: []
+  packages:
+  - xmake:tomlkit11
 - id: tomlplusplus
   name: tomlplusplus
   aliases:
@@ -70085,6 +70267,11 @@ entities:
   aliases: []
   packages:
   - bazel:toolchains_riscv_gnu
+- id: toolchains-zig-cc
+  name: toolchains_zig_cc
+  aliases: []
+  packages:
+  - bazel:toolchains_zig_cc
 - id: tools-android
   name: tools_android
   aliases: []
@@ -70157,6 +70344,11 @@ entities:
   aliases: []
   packages:
   - spack:tpp
+- id: tpp-telemetry-cpp
+  name: tpp_telemetry.cpp
+  aliases: []
+  packages:
+  - bazel:tpp_telemetry.cpp
 - id: tqdm-cpp
   name: tqdm-cpp
   aliases: []
@@ -70601,6 +70793,13 @@ entities:
   aliases: []
   packages:
   - hunter:tvm
+- id: py-apache-tvm-ffi
+  name: tvm-ffi
+  aliases:
+  - py-apache-tvm-ffi
+  packages:
+  - spack:py-apache-tvm-ffi
+  - vcpkg:tvm-ffi
 - id: tweag-credential-helper
   name: tweag-credential-helper
   aliases: []
@@ -71019,6 +71218,7 @@ entities:
   name: unzip
   aliases: []
   packages:
+  - bazel:unzip
   - spack:unzip
   - xmake:unzip
 - id: upa-url
@@ -71125,11 +71325,6 @@ entities:
   packages:
   - conan:userspace-rcu
   - spack:userspace-rcu
-- id: userspace-rcu-0ded7fcf
-  name: userspace_rcu
-  aliases: []
-  packages:
-  - bazel:userspace_rcu
 - id: usockets
   name: usockets
   aliases: []
@@ -72120,8 +72315,10 @@ entities:
   - cppget:vulkan-loader-asm-offset
 - id: vulkan-memory-allocator
   name: vulkan-memory-allocator
-  aliases: []
+  aliases:
+  - vulkan_memory_allocator
   packages:
+  - bazel:vulkan_memory_allocator
   - conan:vulkan-memory-allocator
   - meson:vulkan-memory-allocator
   - vcpkg:vulkan-memory-allocator
@@ -73105,8 +73302,10 @@ entities:
   - vcpkg:xcb-render-util
 - id: xcb-util
   name: xcb-util
-  aliases: []
+  aliases:
+  - libxcb-util
   packages:
+  - bazel:libxcb-util
   - spack:xcb-util
   - vcpkg:xcb-util
   - xmake:xcb-util
@@ -73125,8 +73324,10 @@ entities:
   - xmake:xcb-util-errors
 - id: xcb-util-image
   name: xcb-util-image
-  aliases: []
+  aliases:
+  - libxcb-image
   packages:
+  - bazel:libxcb-image
   - spack:xcb-util-image
   - xmake:xcb-util-image
 - id: xcb-util-keysyms
@@ -73142,14 +73343,18 @@ entities:
   - vcpkg:xcb-util-m4
 - id: xcb-util-renderutil
   name: xcb-util-renderutil
-  aliases: []
+  aliases:
+  - libxcb-render-util
   packages:
+  - bazel:libxcb-render-util
   - spack:xcb-util-renderutil
   - xmake:xcb-util-renderutil
 - id: xcb-util-wm
   name: xcb-util-wm
-  aliases: []
+  aliases:
+  - libxcb-wm
   packages:
+  - bazel:libxcb-wm
   - spack:xcb-util-wm
   - vcpkg:xcb-util-wm
   - xmake:xcb-util-wm
